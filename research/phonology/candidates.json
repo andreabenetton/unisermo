@@ -1,0 +1,37 @@
+{
+  "schema": "glottodelta/phoneme-candidates@1",
+  "candidates": {
+    "current_simple_21": {
+      "description": "Current language inventory excluding the three affricate/complex units ts, c=/tʃ/, j=/dʒ/, which the current 111-cell GlottoDelta chart cannot score as standalone segments.",
+      "targets": ["a", "e", "i", "o", "u", "schwa", "p", "b", "t", "d", "k", "g", "m", "n", "f", "v", "s", "z", "sh", "l", "r"]
+    },
+    "no_schwa_20": {
+      "description": "Current simple inventory with contrastive schwa removed.",
+      "targets": ["a", "e", "i", "o", "u", "p", "b", "t", "d", "k", "g", "m", "n", "f", "v", "s", "z", "sh", "l", "r"]
+    },
+    "latin17": {
+      "description": "Five-vowel Latin-compatible base without /v z ʃ/ and without complex affricates.",
+      "targets": ["a", "e", "i", "o", "u", "p", "b", "t", "d", "k", "g", "m", "n", "f", "s", "l", "r"]
+    },
+    "latin17_yw": {
+      "description": "Latin-compatible base plus the two globally common glides /j w/.",
+      "targets": ["a", "e", "i", "o", "u", "p", "b", "t", "d", "k", "g", "m", "n", "f", "s", "l", "r", "y", "w"]
+    },
+    "lexical22_yw": {
+      "description": "Five vowels, current simple consonants, plus /j w/; intended for soft-contrast production experiment.",
+      "targets": ["a", "e", "i", "o", "u", "p", "b", "t", "d", "k", "g", "m", "n", "f", "v", "s", "z", "sh", "l", "r", "y", "w"]
+    },
+    "grammar6": {
+      "description": "Statistical micro-core candidate for grammar-critical material.",
+      "targets": ["a", "i", "u", "m", "s", "y"]
+    },
+    "grammar8": {
+      "description": "More useful grammar-critical core while retaining very high coverage.",
+      "targets": ["a", "i", "u", "p", "k", "m", "s", "y"]
+    },
+    "grammar10": {
+      "description": "Larger grammar-critical candidate, still restricted to robust targets.",
+      "targets": ["a", "i", "u", "p", "k", "m", "n", "s", "r", "y"]
+    }
+  }
+}

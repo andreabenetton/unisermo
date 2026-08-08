@@ -1,0 +1,43 @@
+{
+  "schema": "glottodelta/phoneme-targets@1",
+  "method_note": "Target families are deliberately broad but disjoint where possible. They model acceptable canonical realizations for auxiliary-language design, not phonological equivalence claims.",
+  "targets": {
+    "a": {"canonical": "a", "family": ["a", "ɑ", "ɐ"], "class": "vowel"},
+    "e": {"canonical": "e", "family": ["e", "ɛ"], "class": "vowel"},
+    "i": {"canonical": "i", "family": ["i", "ɪ"], "class": "vowel"},
+    "o": {"canonical": "o", "family": ["o", "ɔ"], "class": "vowel"},
+    "u": {"canonical": "u", "family": ["u", "ʊ"], "class": "vowel"},
+    "schwa": {"canonical": "ə", "family": ["ə", "ʌ", "ɘ", "ɜ"], "class": "vowel", "note": "ɐ is reserved for the /a/ family to keep target families disjoint."},
+
+    "p": {"canonical": "p", "family": ["p"], "class": "consonant"},
+    "b": {"canonical": "b", "family": ["b"], "class": "consonant"},
+    "t": {"canonical": "t", "family": ["t", "ʈ"], "class": "consonant", "note": "Broad coronal stop tolerance."},
+    "d": {"canonical": "d", "family": ["d", "ɖ"], "class": "consonant", "note": "Broad coronal stop tolerance."},
+    "k": {"canonical": "k", "family": ["k"], "class": "consonant"},
+    "g": {"canonical": "ɡ", "family": ["ɡ"], "class": "consonant"},
+    "m": {"canonical": "m", "family": ["m"], "class": "consonant"},
+    "n": {"canonical": "n", "family": ["n", "ɳ"], "class": "consonant"},
+    "f": {"canonical": "f", "family": ["f", "ɸ"], "class": "consonant"},
+    "v": {"canonical": "v", "family": ["v", "ʋ", "β"], "class": "consonant"},
+    "s": {"canonical": "s", "family": ["s"], "class": "consonant"},
+    "z": {"canonical": "z", "family": ["z"], "class": "consonant"},
+    "sh": {"canonical": "ʃ", "family": ["ʃ", "ɕ", "ʂ"], "class": "consonant"},
+    "l": {"canonical": "l", "family": ["l", "ɭ", "ʎ", "ʟ"], "class": "consonant"},
+    "r": {"canonical": "r", "family": ["r", "ɾ", "ɹ", "ʁ", "ʀ", "ɽ", "ɻ"], "class": "consonant", "note": "One rhotic category; exact rhotic realization is not prescribed."},
+    "y": {"canonical": "j", "family": ["j", "ɰ"], "class": "glide", "note": "Canonical IPA /j/; future orthographic grapheme intentionally undecided."},
+    "w": {"canonical": "w", "family": ["w"], "class": "glide"},
+    "h": {"canonical": "h", "family": ["h", "ɦ"], "class": "consonant"},
+    "ng": {"canonical": "ŋ", "family": ["ŋ", "ɴ"], "class": "consonant"}
+  },
+  "soft_mergers": {
+    "b": ["p"],
+    "d": ["t"],
+    "g": ["k"],
+    "v": ["f", "w"],
+    "z": ["s"],
+    "sh": ["s"],
+    "l": ["r"],
+    "r": ["l"]
+  },
+  "soft_merger_note": "These fallbacks are an accent-tolerance experiment only. A merger is acceptable only if grammar and protected core vocabulary do not rely on the merged contrast."
+}
