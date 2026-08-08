@@ -1,0 +1,200 @@
+{
+  "schema": "glottodelta/affricate-study@1",
+  "method": {
+    "warning": "Whole-base figures are component-availability proxies, not direct affricate prevalence. Direct affricate figures use only curated profiles and have their own denominator.",
+    "speaker_base": 8786359971.0,
+    "language_base": 2122
+  },
+  "component_proxies": {
+    "ts_components": {
+      "parts": [
+        "t",
+        "s"
+      ],
+      "L_component_pct": 63.10084825636192,
+      "P_component_pct": 86.27254888280288
+    },
+    "tsh_components": {
+      "parts": [
+        "t",
+        "sh"
+      ],
+      "L_component_pct": 32.79924599434496,
+      "P_component_pct": 78.41478238702132
+    },
+    "dzh_components": {
+      "parts": [
+        "d",
+        "zh"
+      ],
+      "L_component_pct": 12.818096135721017,
+      "P_component_pct": 37.68188996271207
+    },
+    "tj_components": {
+      "parts": [
+        "t",
+        "j"
+      ],
+      "L_component_pct": 74.17530631479737,
+      "P_component_pct": 86.21896496391565
+    },
+    "dj_components": {
+      "parts": [
+        "d",
+        "j"
+      ],
+      "L_component_pct": 51.60226201696513,
+      "P_component_pct": 64.03130286681946
+    }
+  },
+  "curated_profiles": {
+    "profile_language_count": 77,
+    "weighted_profile_language_count": 75,
+    "profiled_population_base": 7970721928.0,
+    "targets": {
+      "ts": {
+        "profile_language_count": 22,
+        "P_within_profiled_pct": 25.587892469757225,
+        "profiled_population_weight": 2039539756.0,
+        "profiled_isos": [
+          "als",
+          "ces",
+          "cmn",
+          "deu",
+          "ell",
+          "fin",
+          "heb",
+          "hrv",
+          "hun",
+          "hye",
+          "ita",
+          "lit",
+          "nan",
+          "pbu",
+          "plt",
+          "pol",
+          "ron",
+          "rus",
+          "slk",
+          "srp",
+          "ukr",
+          "yue"
+        ]
+      },
+      "tsh": {
+        "profile_language_count": 30,
+        "P_within_profiled_pct": 51.51155826396055,
+        "profiled_population_weight": 4105843070.0,
+        "profiled_isos": [
+          "als",
+          "azj",
+          "ben",
+          "ces",
+          "deu",
+          "eng",
+          "fuv",
+          "guj",
+          "hin",
+          "hrv",
+          "hun",
+          "hye",
+          "ibo",
+          "ind",
+          "ita",
+          "jav",
+          "lit",
+          "pbu",
+          "pcm",
+          "pes",
+          "ron",
+          "slk",
+          "spa",
+          "srp",
+          "sun",
+          "swh",
+          "tur",
+          "ukr",
+          "urd",
+          "uzn"
+        ]
+      },
+      "dzh": {
+        "profile_language_count": 29,
+        "P_within_profiled_pct": 47.93305137868059,
+        "profiled_population_weight": 3820610237.0,
+        "profiled_isos": [
+          "als",
+          "arb",
+          "azj",
+          "ben",
+          "eng",
+          "fuv",
+          "guj",
+          "hin",
+          "hrv",
+          "hun",
+          "hye",
+          "ibo",
+          "ind",
+          "ita",
+          "jav",
+          "kat",
+          "pbu",
+          "pcm",
+          "pes",
+          "ron",
+          "slk",
+          "srp",
+          "sun",
+          "swh",
+          "tur",
+          "ukr",
+          "urd",
+          "uzn",
+          "yor"
+        ]
+      }
+    }
+  },
+  "recommendations": {
+    "ts": {
+      "status": "sequence",
+      "underlying": [
+        "t",
+        "s"
+      ],
+      "surface": [
+        "ts"
+      ],
+      "new_phoneme": false,
+      "reason": "Both components are already core candidates; treating /ts/ as a sequence preserves the sound without a new contrast."
+    },
+    "tsh": {
+      "status": "coalescent_sequence",
+      "underlying": [
+        "t",
+        "j"
+      ],
+      "surface": [
+        "tj",
+        "tʃ"
+      ],
+      "new_phoneme": false,
+      "reason": "With /j/ retained, /tj/ can remain transparent or coalesce to [tʃ]. This avoids requiring a separate affricate category."
+    },
+    "dzh": {
+      "status": "coalescent_sequence",
+      "underlying": [
+        "d",
+        "j"
+      ],
+      "surface": [
+        "dj",
+        "dʒ"
+      ],
+      "new_phoneme": false,
+      "reason": "With /j/ retained, /dj/ can remain transparent or coalesce to [dʒ]. The underlying /d/ is already a soft lexical contrast, so this must not carry critical grammar."
+    },
+    "j_assumption": "Treat canonical /j/ as retained. /w/ is also carried forward as the default lexical candidate unless later evidence overturns it."
+  }
+}

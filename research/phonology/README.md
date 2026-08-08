@@ -16,6 +16,8 @@ semantics.
 - `phoneme_selection.md` — generated human-readable working report.
 - `person_marker_study.md` — selected person/number morphology and rationale.
 - `person_number_results.json` — generated person/number coverage and layout metrics.
+- `affricate_study.md` — decision study for /ts tʃ dʒ/ as complex segments/sequences.
+- `affricate_results.json` — generated component and curated-profile evidence for the affricate study.
 
 ## Reproduce
 
@@ -23,6 +25,8 @@ semantics.
 python3 scripts/analyze_phoneme_inventory.py --write
 python3 scripts/analyze_person_number.py
 python3 scripts/test_person_number.py
+python3 scripts/analyze_affricates.py
+python3 scripts/test_affricates.py
 ```
 
 The analyzer reads only the frozen `baseline/original.html`. It does not alter
@@ -47,6 +51,6 @@ phonologically identical. PHOIBLE is a convenience sample. The CLDR-derived
 population universe is a weighting base and may overlap L1/L2 populations.
 The current root seed is unweighted and deliberately small. Family/macroarea
 balance is not yet calculated because the normalized GlottoDelta snapshot does
-not carry a Glottolog genealogy/area table. Affricates `/ts tʃ dʒ/` also require
-separate complex-segment treatment rather than being silently priced as one
-simple chart cell.
+not carry a Glottolog genealogy/area table. Affricates `/ts tʃ dʒ/` have now been
+resolved as sequences/coalescent surface realizations rather than independent
+phonemes; see `affricate_study.md`.

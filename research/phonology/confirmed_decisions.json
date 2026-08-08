@@ -13,7 +13,7 @@
     },
     {
       "id": "glides",
-      "decision": "Admit canonical /j/ and /w/ to the lexical candidate inventory. Orthographic graphemes remain a separate decision."
+      "decision": "Retain canonical /j/ as a lexical glide. Carry /w/ forward as the strong default lexical glide candidate; its final freeze remains pending the remaining inventory-wide checks. Orthographic graphemes remain a separate decision."
     },
     {
       "id": "rhotic",
@@ -24,8 +24,8 @@
       "decision": "Retain /b d ɡ v z ʃ/ as lexical candidates subject to protected-minimal-pair rules; do not rely on their fragile merger contrasts for critical grammar."
     },
     {
-      "id": "affricates_deferred",
-      "decision": "Keep /ts tʃ dʒ/ undecided until complex-segment timing, coverage, and root-preservation analysis is complete."
+      "id": "affricates_as_sequences",
+      "decision": "Do not assign independent phoneme status to /ts tʃ dʒ/. Represent [ts] from /t+s/; allow /t+j/ to surface as [tj ~ tʃ] and /d+j/ as [dj ~ dʒ]. The transparent sequence pronunciation remains valid, and none of these coalescences may carry grammar-critical contrasts."
     },
     {
       "id": "person_number_paradigm",
