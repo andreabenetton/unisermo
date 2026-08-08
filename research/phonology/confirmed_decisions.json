@@ -1,0 +1,31 @@
+{
+  "schema": "glottodelta/phoneme-confirmed-decisions@1",
+  "confirmed_on": "2026-08-08",
+  "status": "confirmed_design_constraints_not_full_inventory_freeze",
+  "decisions": [
+    {
+      "id": "schwa_noncontrastive",
+      "decision": "Drop contrastive /ə/. Allow [ə] only as a non-contrastive reduction or accent realization where identity is preserved."
+    },
+    {
+      "id": "vowel_architecture",
+      "decision": "Use lexical /a e i o u/. Prefer /a i u/ for grammar-critical contrasts where practical."
+    },
+    {
+      "id": "glides",
+      "decision": "Admit canonical /j/ and /w/ to the lexical candidate inventory. Orthographic graphemes remain a separate decision."
+    },
+    {
+      "id": "rhotic",
+      "decision": "Use one rhotic category /r/ with broad acceptable rhotic realizations; do not prescribe trill, tap, approximant, or uvular realization."
+    },
+    {
+      "id": "soft_lexical_contrasts",
+      "decision": "Retain /b d ɡ v z ʃ/ as lexical candidates subject to protected-minimal-pair rules; do not rely on their fragile merger contrasts for critical grammar."
+    },
+    {
+      "id": "affricates_deferred",
+      "decision": "Keep /ts tʃ dʒ/ undecided until complex-segment timing, coverage, and root-preservation analysis is complete."
+    }
+  ]
+}

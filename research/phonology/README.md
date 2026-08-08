@@ -1,12 +1,13 @@
 # Phonology research workspace
 
-This directory is intentionally **non-canonical**. It exists on the local
-`phoneme-study` branch while phoneme choices are being evaluated. Confirmed
-choices may later be merged into local `main`; unconfirmed experiments must not
-change GlottoDelta production semantics or the auxiliary-language specification.
+This directory contains both confirmed design constraints and continuing phoneme
+research. The first decision batch was confirmed on 2026-08-08 and is recorded in
+`confirmed_decisions.json`. Unconfirmed experiments remain on research branches and
+must not change GlottoDelta production semantics or the auxiliary-language specification.
 
 ## Files
 
+- `confirmed_decisions.json` — project-owner-confirmed phonological design constraints.
 - `phoneme_targets.json` — canonical target labels plus acceptable-realization
   families used by the analysis.
 - `candidates.json` — inventory candidates under comparison.

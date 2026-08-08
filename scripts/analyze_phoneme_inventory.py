@@ -316,7 +316,7 @@ def generate_report(results, roots_meta):
     lines = []
     lines.append("# Phoneme selection study — working report")
     lines.append("")
-    lines.append("> **Status:** research branch only. No phoneme choice in this document is canonical until explicitly confirmed and merged into local `main`.")
+    lines.append("> **Status:** decisions 1–6 below were confirmed by the project owner on 2026-08-08. The full phoneme inventory is not yet frozen because the affricate and family/macroarea studies remain open.")
     lines.append("")
     lines.append("## Method")
     lines.append("")
@@ -433,7 +433,7 @@ def generate_report(results, roots_meta):
     lines.append("The current GlottoDelta chart dataset has 111 standalone IPA chart symbols and does not represent the language's `ts`, `c=/tʃ/`, `j=/dʒ/` as directly comparable standalone cells. They therefore are **not silently scored as if one affricate were one cheap timing unit**. They remain an open sub-study: compare them as segment sequences/complex articulations, measure root-preservation value, and estimate actual duration before deciding whether they are phonemes, permitted sequences, or removed from the core.")
 
     lines.append("")
-    lines.append("## Decisions ready for confirmation")
+    lines.append("## Confirmed design constraints — 2026-08-08")
     lines.append("")
     lines.append("1. **Schwa:** drop contrastive /ə/; allow [ə] only as a non-contrastive reduction/allophone.")
     lines.append("2. **Vowel architecture:** lexical /a e i o u/; reserve /a i u/ as the safest pool for grammar-critical endings/particles where practical.")
@@ -444,9 +444,9 @@ def generate_report(results, roots_meta):
     lines.append("")
     lines.append("## Still required before final phoneme freeze")
     lines.append("")
-    lines.append("Two dimensions are intentionally still open: **Glottolog family/macroarea dispersion (F)**, because the normalized local snapshot does not contain genealogy/area tables, and a **complex-segment study for /ts tʃ dʒ/**. The recommendations above can be confirmed as a first batch, but the full inventory should not be frozen until these two checks are complete.")
+    lines.append("Two dimensions are intentionally still open: **Glottolog family/macroarea dispersion (F)**, because the normalized local snapshot does not contain genealogy/area tables, and a **complex-segment study for /ts tʃ dʒ/**. The first six design constraints are confirmed, but the full inventory should not be frozen until these two checks are complete.")
     lines.append("")
-    lines.append("Nothing above changes the production GlottoDelta app or the language specification yet.")
+    lines.append("These confirmed constraints are recorded in the local repository, but they do not alter GlottoDelta's production L/P semantics. Synchronization into the separate auxiliary-language specification remains a distinct step.")
     return "\n".join(lines) + "\n"
 
 
