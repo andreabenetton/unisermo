@@ -1,0 +1,37 @@
+{
+  "schema": "glottodelta/person-marker-candidates@1",
+  "status": "research_recommendation_not_confirmed",
+  "person_vowels": {
+    "recommended": {
+      "first": "i",
+      "second": "u",
+      "third": "a",
+      "rationale": "global deictic-iconicity prior plus language-neutral internal mnemonic"
+    },
+    "alternative": {
+      "first": "a",
+      "second": "u",
+      "third": "i",
+      "rationale": "partial English phonetic mnemonic"
+    }
+  },
+  "plural": {
+    "architecture": "append one invariant consonantal number marker after the person vowel",
+    "leading_candidate": "n",
+    "confirmed": false,
+    "variants_to_test": [
+      {
+        "id": "strict_n",
+        "canonical": "n",
+        "allowed_realizations": ["n"]
+      },
+      {
+        "id": "final_nasal_category",
+        "written": "n",
+        "canonical": "n",
+        "allowed_realizations": ["n", "m", "ŋ", "ɴ"],
+        "constraint": "realization variation must never encode or erase another grammatical contrast"
+      }
+    ]
+  }
+}
