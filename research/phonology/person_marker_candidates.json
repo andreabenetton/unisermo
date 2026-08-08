@@ -1,12 +1,13 @@
 {
   "schema": "glottodelta/person-marker-candidates@1",
-  "status": "research_recommendation_not_confirmed",
+  "status": "selected_after_analysis",
   "person_vowels": {
     "recommended": {
       "first": "i",
       "second": "u",
       "third": "a",
-      "rationale": "global deictic-iconicity prior plus language-neutral internal mnemonic"
+      "rationale": "global deictic-iconicity prior plus language-neutral internal mnemonic",
+      "confirmed": true
     },
     "alternative": {
       "first": "a",
@@ -16,22 +17,26 @@
     }
   },
   "plural": {
-    "architecture": "append one invariant consonantal number marker after the person vowel",
-    "leading_candidate": "n",
-    "confirmed": false,
-    "variants_to_test": [
-      {
-        "id": "strict_n",
-        "canonical": "n",
-        "allowed_realizations": ["n"]
-      },
-      {
-        "id": "final_nasal_category",
-        "written": "n",
-        "canonical": "n",
-        "allowed_realizations": ["n", "m", "ŋ", "ɴ"],
-        "constraint": "realization variation must never encode or erase another grammatical contrast"
-      }
-    ]
+    "architecture": "append one invariant final nasal morphophoneme after the person vowel",
+    "selected": "N",
+    "written": "n",
+    "default_realization": "n",
+    "allowed_realizations": [
+      "n",
+      "ɳ",
+      "m",
+      "ŋ",
+      "ɴ"
+    ],
+    "forms": {
+      "1SG": "i",
+      "2SG": "u",
+      "3SG": "a",
+      "1PL": "in",
+      "2PL": "un",
+      "3PL": "an"
+    },
+    "confirmed_by_analysis": true,
+    "evidence_file": "person_number_results.json"
   }
 }

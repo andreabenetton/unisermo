@@ -1,0 +1,226 @@
+{
+  "schema": "glottodelta/person-number-study@1",
+  "dataset": {
+    "languages": 2122,
+    "demographic_languages": 384,
+    "speaker_base": 8786359971.0
+  },
+  "person_mapping": {
+    "1": "i",
+    "2": "u",
+    "3": "a"
+  },
+  "person_vowel_subsystem": {
+    "P0_attested_pct": 98.70334109487852,
+    "L0_pct": 91.1875589066918
+  },
+  "plural_candidates": {
+    "strict_n": {
+      "family": [
+        "n",
+        "ɳ"
+      ],
+      "L_pct": 85.86239396795476,
+      "P_attested_pct": 93.30219342318817,
+      "L0_pct": 78.46371347785109,
+      "P0_attested_pct": 92.55763015448619
+    },
+    "final_nasal_N_written_n": {
+      "family": [
+        "m",
+        "n",
+        "ŋ",
+        "ɳ",
+        "ɴ"
+      ],
+      "L_pct": 97.73798303487276,
+      "P_attested_pct": 99.97033657841698,
+      "L0_pct": 88.97266729500471,
+      "P0_attested_pct": 98.6736776732955
+    },
+    "fixed_m": {
+      "family": [
+        "m"
+      ],
+      "L_pct": 96.98397737983035,
+      "P_attested_pct": 99.95108391854892,
+      "L0_pct": 88.45428840716305,
+      "P0_attested_pct": 98.65442501342744
+    },
+    "fixed_s": {
+      "family": [
+        "s"
+      ],
+      "L_pct": 71.44203581526861,
+      "P_attested_pct": 97.36594837038461,
+      "L0_pct": 64.98586239396795,
+      "P0_attested_pct": 96.7574490694629
+    },
+    "fixed_t": {
+      "family": [
+        "t",
+        "ʈ"
+      ],
+      "L_pct": 80.25447690857682,
+      "P_attested_pct": 86.67422434472893,
+      "L0_pct": 74.03393025447691,
+      "P0_attested_pct": 86.3907319874591
+    },
+    "fixed_k": {
+      "family": [
+        "k"
+      ],
+      "L_pct": 92.41281809613572,
+      "P_attested_pct": 94.35568664797651,
+      "L0_pct": 84.82563619227145,
+      "P0_attested_pct": 93.16044812660226
+    },
+    "fixed_r": {
+      "family": [
+        "r",
+        "ɹ",
+        "ɻ",
+        "ɽ",
+        "ɾ",
+        "ʀ",
+        "ʁ"
+      ],
+      "L_pct": 75.21206409048068,
+      "P_attested_pct": 96.89265598153126,
+      "L0_pct": 68.66163996229972,
+      "P0_attested_pct": 95.724880664578
+    }
+  },
+  "layout_pressure": {
+    "contexts": 444,
+    "tam_contexts": [
+      "",
+      "d",
+      "f",
+      "n",
+      "b",
+      "m"
+    ],
+    "VN_person_then_plural": {
+      "marker_induced_CC": 0,
+      "marker_induced_CC_pct": 0.0,
+      "shape": "stem + person-vowel + N",
+      "examples": [
+        "...iN",
+        "...uN",
+        "...aN"
+      ]
+    },
+    "NV_plural_then_person": {
+      "marker_induced_CC": 440,
+      "marker_induced_CC_pct": 99.09909909909909,
+      "shape": "stem + N + person-vowel",
+      "examples_requiring_cluster_or_coda_repair": [
+        {
+          "stem": "act",
+          "VN": "actin",
+          "NV": "actni"
+        },
+        {
+          "stem": "actd",
+          "VN": "actdin",
+          "NV": "actdni"
+        },
+        {
+          "stem": "actf",
+          "VN": "actfin",
+          "NV": "actfni"
+        },
+        {
+          "stem": "actn",
+          "VN": "actnin",
+          "NV": "actnni"
+        },
+        {
+          "stem": "actb",
+          "VN": "actbin",
+          "NV": "actbni"
+        },
+        {
+          "stem": "actm",
+          "VN": "actmin",
+          "NV": "actmni"
+        },
+        {
+          "stem": "audid",
+          "VN": "audidin",
+          "NV": "audidni"
+        },
+        {
+          "stem": "audif",
+          "VN": "audifin",
+          "NV": "audifni"
+        },
+        {
+          "stem": "audin",
+          "VN": "audinin",
+          "NV": "audinni"
+        },
+        {
+          "stem": "audib",
+          "VN": "audibin",
+          "NV": "audibni"
+        },
+        {
+          "stem": "audim",
+          "VN": "audimin",
+          "NV": "audimni"
+        },
+        {
+          "stem": "bid",
+          "VN": "bidin",
+          "NV": "bidni"
+        }
+      ]
+    }
+  },
+  "external_phonotactic_evidence": {
+    "wals": {
+      "sample_languages": 486,
+      "simple_CV_only": 61,
+      "moderately_complex": 274,
+      "complex": 151,
+      "note": "CV is reported as the syllable type occurring in every language; final C is a step up in complexity."
+    },
+    "kramer_zec_2020": {
+      "restricted_word_final_coda_systems": 97,
+      "nasals_allowed_pct": 97.9,
+      "nasals_only_pct": 24.7,
+      "note": "In their restricted-coda sample, nasals are overwhelmingly the most permissive final consonant class."
+    }
+  },
+  "decision": {
+    "person": {
+      "first": "i",
+      "second": "u",
+      "third": "a"
+    },
+    "plural": {
+      "morphophoneme": "N",
+      "written": "n",
+      "default_realization": "n",
+      "accepted_place_realizations": [
+        "n",
+        "ɳ",
+        "m",
+        "ŋ",
+        "ɴ"
+      ],
+      "position": "after person vowel",
+      "forms": {
+        "1SG": "i",
+        "2SG": "u",
+        "3SG": "a",
+        "1PL": "in",
+        "2PL": "un",
+        "3PL": "an"
+      },
+      "reason": "near-zero demographic inventory penalty under place-tolerant nasal production, exceptional coda typology, and zero marker-induced CC clusters in the tested suffix architecture"
+    }
+  }
+}

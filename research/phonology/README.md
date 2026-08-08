@@ -1,9 +1,9 @@
 # Phonology research workspace
 
 This directory contains both confirmed design constraints and continuing phoneme
-research. The first decision batch was confirmed on 2026-08-08 and is recorded in
-`confirmed_decisions.json`. Unconfirmed experiments remain on research branches and
-must not change GlottoDelta production semantics or the auxiliary-language specification.
+research. Confirmed design decisions are recorded in `confirmed_decisions.json`. Research experiments
+remain separated until selected, and none of this tooling changes GlottoDelta production
+semantics.
 
 ## Files
 
@@ -14,11 +14,15 @@ must not change GlottoDelta production semantics or the auxiliary-language speci
 - `latin_roots_seed.json` — provisional Latin/international root pressure test.
 - `results.json` — generated quantitative results.
 - `phoneme_selection.md` — generated human-readable working report.
+- `person_marker_study.md` — selected person/number morphology and rationale.
+- `person_number_results.json` — generated person/number coverage and layout metrics.
 
 ## Reproduce
 
 ```bash
 python3 scripts/analyze_phoneme_inventory.py --write
+python3 scripts/analyze_person_number.py
+python3 scripts/test_person_number.py
 ```
 
 The analyzer reads only the frozen `baseline/original.html`. It does not alter

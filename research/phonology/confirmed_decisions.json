@@ -26,6 +26,10 @@
     {
       "id": "affricates_deferred",
       "decision": "Keep /ts tʃ dʒ/ undecided until complex-segment timing, coverage, and root-preservation analysis is complete."
+    },
+    {
+      "id": "person_number_paradigm",
+      "decision": "Use i/u/a for first/second/third person. Mark plural with a final nasal morphophoneme /N/ written n after the person vowel: i, u, a; in, un, an. Default [n]; accent-tolerant place realizations [n ~ ɳ ~ m ~ ŋ ~ ɴ] are non-contrastive and may not be deleted."
     }
   ]
 }

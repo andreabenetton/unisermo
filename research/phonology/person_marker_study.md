@@ -1,66 +1,99 @@
-# Person-marker vowel study
+# Person and number marker study
 
-> **Status:** research recommendation, not yet project-owner-confirmed. The six previously confirmed phoneme constraints are already on local `main`; this study remains on `phoneme-study` until confirmed.
+> **Status:** design decision selected after GlottoDelta inventory testing and cross-linguistic phonotactic review. The research branch contains the evidence; once merged, the compact person/number paradigm is canonical for subsequent grammar experiments.
 
-## Question
+## Decision
 
-Compare the two maximally simple mappings proposed for singular person marking:
+Use a three-vowel person system and one invariant final nasal number marker:
 
-| Person | Option A | Option B |
+| Person | Singular | Plural |
 |---|---:|---:|
-| 1st | `i` | `a` |
-| 2nd | `u` | `u` |
-| 3rd | `a` | `i` |
+| 1st | `i` | `in` |
+| 2nd | `u` | `un` |
+| 3rd | `a` | `an` |
 
-Both options use the same robust three-vowel subsystem `/a i u/`, so GlottoDelta inventory coverage and segment discriminability are identical. The decision therefore depends on learnability/iconicity rather than phoneme availability.
+Interpretation:
 
-## Recommendation: Option A — `i / u / a`
+- `i` = first person
+- `u` = second person
+- `a` = third person
+- final written `n` = plural
 
-Use:
+The plural marker is best analysed as a final nasal **morphophoneme /N/**, written consistently as `n`, with default realization [n]. Place variation `[n ~ ɳ ~ m ~ ŋ ~ ɴ]` is accent-tolerant and never grammatical: it may not create a number or person contrast.
 
-- 1st person: `i`
-- 2nd person: `u`
-- 3rd person: `a`
+This avoids requiring six contrastive person vowels and keeps number orthogonal to person.
 
-### Why
+## Why `i / u / a`
 
-1. **Deictic iconicity gives `i` and `a` a non-English rationale.** Cross-linguistic work on demonstratives reports a recurrent tendency for high/front vowels, especially `/i/`, to mark proximal reference and low/back vowels, especially `/a/`, to mark distal reference. The speaker is the deictic center; third person is outside the speaker–addressee pair. This makes `i → 1st` and `a → 3rd` a plausible iconic mapping rather than an arbitrary mnemonic.
-2. **`u → 2nd` is strong in both proposals.** It has useful mnemonic support in English `you` and many familiar `tu/du/u`-type second-person forms, while remaining maximally separated from `/i/` and `/a/` in vowel space.
-3. **The English advantage of `a/u/i` is weaker than it first appears.** Spoken English `I` is a diphthong rather than `/a/`, while written `I` directly supports `i → 1st`; `/i/ → 3rd` fits `he/she` but not the full English third-person set (`it/they`). The project goal is global learnability, so this partial English mnemonic should not override a broader deictic pattern.
-4. **The mapping forms an interpretable vowel triangle:** front/high `i` = speaker/proximal, back/high `u` = addressee, low/open `a` = external/third. This gives the system an internal explanation that can be taught without reference to any one source language.
+The two candidate assignments `i/u/a` and `a/u/i` have identical GlottoDelta inventory coverage because they use the same three phonemes. The choice is therefore mnemonic/structural rather than availability-driven.
 
-### Evidence note
+`i/u/a` is retained because it gives a language-independent internal map: high/front `i` for the speaker/deictic centre, back/high `u` for the addressee, and open `a` for the external third person. The English mnemonic for `a/u/i` is partial and is not strong enough to dominate a global design.
 
-Relevant sources for the deictic sound-symbolism rationale:
+## Inventory result for the three person vowels
 
-- Hartmut Traunmüller, *Sound symbolism in deictic words* (2000), Stockholm University. The study examines demonstratives and first/second-person pronouns and reports systematic sound-symbolic tendencies.
-- Sonja Dahlgren & Seppo Kittilä, *A phonological typology of demonstratives: a study in iconicity* (Linguistics, 2026). The typology reports front/high vowels as common in proximal demonstratives and back/low vowels as common in distal demonstratives, continuing earlier findings by Woodworth and Traunmüller.
+Using the broad, disjoint vowel families in `phoneme_targets.json`, the complete `/a i u/` subsystem is available to:
 
-This evidence is a design prior, not proof that grammatical person itself universally maps to these vowels.
+- **98.70%** of the demographic speaker base (`P_attested`)
+- **91.19%** of the 2,122 source-attested languages (`L0`)
 
-## Plural marker — next decision
+This is an exceptionally robust grammatical subsystem.
 
-The proposed architecture is one plural consonant shared by all persons:
+## Why plural `n` should be a place-tolerant /N/
 
-- 1SG `i`
-- 2SG `u`
-- 3SG `a`
-- 1PL `i + C`
-- 2PL `u + C`
-- 3PL `a + C`
+A strictly alveolar `n` is good but leaves unnecessary coverage on the table:
 
-`n` is the leading candidate for `C`, but it is **not confirmed yet**.
+| plural production target | P_attested | L | P0 with `/a i u/` | L0 with `/a i u/` |
+|---|---:|---:|---:|---:|
+| strict `n` (`n ~ ɳ`) | 93.30% | 85.86% | 92.56% | 78.46% |
+| **final nasal /N/, written `n`** | **99.97%** | **97.74%** | **98.67%** | **88.97%** |
+| fixed `m` | 99.95% | 96.98% | 98.65% | 88.45% |
+| fixed `s` | 97.37% | 71.44% | 96.76% | 64.99% |
+| fixed `k` | 94.36% | 92.41% | 93.16% | 84.83% |
 
-Why `n` leads:
+The place-tolerant nasal loses only **0.03 percentage points** of demographic P0 compared with the three-vowel person subsystem alone. In practical inventory-familiarity terms, plural marking is almost free.
 
-- nasals are cross-linguistically unusually permissive in codas;
-- restricted word-final coda systems frequently preserve a nasal even when they exclude obstruents;
-- an alveolar nasal is a plausible written/canonical target while allowing a deliberately broad final-nasal accent realization if testing supports it;
-- it keeps number orthogonal to person: one invariant plural feature appended to all three vowels.
+A fixed `m` is statistically close, but /N/ is preferable because its grammatical identity is *nasality*, not place. That lets speakers preserve the plural feature using the native final-nasal realization their phonology already supports while the orthography remains invariant `n`.
 
-Before confirmation, test two implementations:
+## Why `in / un / an`, not `ni / nu / na`
 
-1. **strict `/n/`**: canonical and required alveolar nasal;
-2. **final nasal category `/N/` written `n`**: canonical `[n]`, but accent-tolerant `[n ~ m ~ ŋ ~ ɴ]` where no grammatical contrast is lost.
+The universal attraction of CV syllables is real. WALS notes that CV is the syllable type found in every language and that adding a final consonant is an increase in syllable complexity. However, this grammar does not attach person markers to an empty string: they follow lexical/TAM material, which very often ends in a consonant.
 
-The second may be substantially more universal and compatible with languages whose only native final consonant is a placeless or assimilating nasal.
+Under the current suffix architecture:
+
+- `stem + person vowel + N` gives `...iN / ...uN / ...aN` and introduces **zero new consonant-consonant boundaries**;
+- `stem + N + person vowel` gives `...Ni / ...Nu / ...Na` and, on the 74-root Latin/international seed across present plus the five existing consonantal TAM contexts, creates a C+N boundary in **440 of 444 contexts (99.10%)**.
+
+Examples:
+
+- `act + iN` vs `act + Ni`
+- `actd + iN` vs `actd + Ni`
+- `movf + uN` vs `movf + Nu`
+
+So `VN` accepts one highly privileged final coda but protects the morphology from internal clusters. `NV` keeps an open final syllable only by pushing a cluster/coda problem to the preceding boundary in almost every tested context.
+
+For this morphology, **person first, plural second** is the safer ordering.
+
+## External phonotactic evidence
+
+WALS, Ian Maddieson, *Syllable Structure*, Chapter 12: CV is reported as the syllable type occurring in every language; 61/486 sampled languages are classified as simple, 274 as moderately complex, and 151 as complex. Source: https://wals.info/chapter/12
+
+Martin Krämer & Draga Zec (2020), *Nasal consonants, sonority and syllable phonotactics: the dual nasal hypothesis*, *Phonology* 37(1), DOI 10.1017/S0952675720000032: in their restricted-coda survey, nasals occur in **97.9%** of the word-final coda inventories; **24.7%** of those systems allow nasals as the only word-final consonant class. The authors characterize nasals as the most phonotactically versatile consonants in their cross-linguistic study. Source: https://doi.org/10.1017/S0952675720000032
+
+These typological numbers are evidence about phonotactic class behaviour, not a claim that every individual speaker can produce every final nasal without adaptation.
+
+## Accent policy for plural /N/
+
+Canonical pronunciation is [n]. Accepted place realizations are `[n ~ ɳ ~ m ~ ŋ ~ ɴ]` when they preserve the plural category. They are not separate phonemes and must never distinguish lexical items or grammatical forms.
+
+No deletion of /N/ is accepted, because deletion would neutralize singular/plural. If later speaker testing shows that open-syllable repair is necessary for some populations, a non-contrastive release vowel can be tested separately; it is not part of the canonical morphology at this stage.
+
+## Reproducibility
+
+Run:
+
+```bash
+python3 scripts/analyze_person_number.py
+python3 scripts/test_person_number.py
+```
+
+Machine-readable results are in `research/phonology/person_number_results.json`.
