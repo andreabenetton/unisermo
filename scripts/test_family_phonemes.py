@@ -19,7 +19,7 @@ def main():
     assert by_target["e"]["strict_language_count"] == 1
     assert by_target["v"]["strict_language_count"] == 2
     assert by_target["v"]["strict_plus_soft_language_count"] == 3
-    assert abkh["analysis_order"]["rank"] == 23
+    assert abkh["analysis_order"]["rank"] == 24
 
     indo = analyze("indo1319")
     assert indo["unit"]["family_name"] == "Indo-European"
@@ -53,6 +53,50 @@ def main():
     assert sino_targets["f"]["strict_language_count"] == 32
     assert sino_targets["v"]["strict_plus_soft_language_count"] == 87
     assert sino_targets["g"]["strict_plus_soft_language_count"] == 96
+
+    afro = analyze("afro1255")
+    assert afro["unit"]["family_name"] == "Afro-Asiatic"
+    assert afro["sample"]["distinct_language_count"] == 104
+    assert afro["analysis_order"]["rank"] == 3
+    afro_targets = {x["target"]: x for x in afro["target_support"]}
+    assert afro_targets["a"]["strict_language_count"] == 100
+    assert afro_targets["i"]["strict_language_count"] == 92
+    assert afro_targets["u"]["strict_language_count"] == 92
+    assert afro_targets["e"]["strict_language_count"] == 77
+    assert afro_targets["o"]["strict_language_count"] == 68
+
+    aust = analyze("aust1307")
+    assert aust["unit"]["family_name"] == "Austronesian"
+    assert aust["sample"]["distinct_language_count"] == 109
+    assert aust["analysis_order"]["rank"] == 4
+    aust_targets = {x["target"]: x for x in aust["target_support"]}
+    assert aust_targets["a"]["strict_language_count"] == 108
+    assert aust_targets["i"]["strict_language_count"] == 109
+    assert aust_targets["u"]["strict_language_count"] == 106
+    assert aust_targets["z"]["strict_language_count"] == 12
+    assert aust_targets["sh"]["strict_language_count"] == 14
+
+    atla = analyze("atla1278")
+    assert atla["unit"]["family_name"] == "Atlantic-Congo"
+    assert atla["sample"]["source_record_count"] == 408
+    assert atla["sample"]["distinct_language_count"] == 406
+    assert atla["analysis_order"]["rank"] == 5
+    atla_targets = {x["target"]: x for x in atla["target_support"]}
+    assert atla_targets["a"]["strict_language_count"] == 402
+    assert atla_targets["i"]["strict_language_count"] == 405
+    assert atla_targets["u"]["strict_language_count"] == 404
+    assert atla_targets["schwa"]["strict_language_count"] == 118
+
+    drav = analyze("drav1251")
+    assert drav["unit"]["family_name"] == "Dravidian"
+    assert drav["sample"]["distinct_language_count"] == 32
+    assert drav["analysis_order"]["rank"] == 6
+    drav_targets = {x["target"]: x for x in drav["target_support"]}
+    for target in ["a", "i", "u", "m", "p", "t", "k", "b", "d", "g", "r", "l"]:
+        assert drav_targets[target]["strict_language_count"] == 32, target
+    assert drav_targets["e"]["strict_language_count"] == 31
+    assert drav_targets["o"]["strict_language_count"] == 30
+
     print("family-phoneme regression checks: OK")
 
 
