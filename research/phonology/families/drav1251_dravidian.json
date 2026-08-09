@@ -5,7 +5,7 @@
     "genealogical_unit": "top-level Glottolog 5.3 family/isolate from family_inventory.json",
     "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
     "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
-    "cross_family_F": "not defined or calculated by this script",
+    "cross_family_F": "calculated separately as a population-weighted aggregate of this unweighted within-family support",
     "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
     "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart"
   },
@@ -28,7 +28,7 @@
     "speaker_estimate_coverage_pct": 28.125,
     "languages_with_speaker_estimate": 9,
     "sample_distinct_language_count": 32,
-    "note": "analysis order only; not a genealogical F weight"
+    "note": "used for analysis order and cross-family population weight; not used inside the unweighted within-family support denominator"
   },
   "sample": {
     "source_record_count": 32,

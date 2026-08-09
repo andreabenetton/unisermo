@@ -1,6 +1,6 @@
 # Family analysis order by speaker exposure
 
-> **Status:** research ordering only. This ranking does not define or alter genealogical weighting.
+> **Status:** research demographic layer. This ranking supplies both analysis order and population weights for the cross-family `F` diagnostic.
 
 ## Method
 
@@ -9,7 +9,7 @@
 - Population ordering uses **all** frozen speaker-estimate ISO entries that map into a represented family, not only PHOIBLE-sampled languages.
 - `languages.csv` is used only to index ISO codes to Glottocodes; top-level genealogy comes from the pinned official Glottolog 5.3 Newick forest.
 - CLDR-style fluent-speaker estimates can include L1 and L2 populations and overlap across languages. Therefore the cumulative percentage below is a **speaker-exposure proxy**, not unique-human coverage, and can exceed 100%.
-- Population affects **analysis order only**. It must not determine the eventual genealogical `F` weight.
+- Population affects both **analysis order** and the cross-family `F` weight. Within-family phoneme support remains an unweighted share of distinct sampled languages so one very large language cannot erase internal family diversity.
 - Units with no available frozen estimate remain explicitly unranked rather than receiving guessed values.
 
 ## 95% operational stop rule

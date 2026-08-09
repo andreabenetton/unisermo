@@ -1,14 +1,14 @@
 {
-  "schema": "glottodelta/family-population-order@2",
-  "status": "research_ordering_only_not_genealogical_weight",
+  "schema": "glottodelta/family-population-order@3",
+  "status": "research_ordering_and_population_weight_source",
   "methodology": {
     "genealogy": "top-level Glottolog 5.3 units from the official pinned Newick forest",
     "speaker_source": "frozen baseline SPEAKER_ESTIMATES (CLDR-derived)",
     "speaker_measure": "sum of all frozen CLDR-derived fluent-speaker estimates whose ISO codes map through Glottolog 5.3 into the represented unit; L1/L2 may overlap",
     "speaker_genealogy_mapping": "languages.csv supplies ISO-to-Glottocode indexing; top-level assignment comes from the pinned official Glottolog 5.3 Newick forest",
     "sample_independence": "population ordering uses all frozen speaker-estimate entries, not only languages present in the PHOIBLE/GlottoDelta sample",
-    "purpose": "analysis order and a pragmatic 95%-of-world-population exposure stop rule only",
-    "not_a_weight": "the eventual genealogical F score must not inherit these population magnitudes as family weights",
+    "purpose": "analysis order, pragmatic exposure stop rules, and family population weights for the cross-family F diagnostic",
+    "F_weight_rule": "cross-family F may weight each genealogical unit by this speaker-exposure estimate, while within-family support remains an unweighted share of distinct sampled languages",
     "world_population_caveat": "the cumulative percentage is an exposure proxy, not unique-human coverage, because fluent-speaker estimates may include L2 speakers and overlap across languages; it may exceed 100%",
     "missing_data_rule": "represented units with no frozen estimate are explicitly unranked rather than assigned invented values"
   },

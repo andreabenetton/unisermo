@@ -3,7 +3,8 @@
 
 This is research tooling. It reads the frozen GlottoDelta source inventories and
 the already-built Glottolog 5.3 family inventory. It does not alter production
-GlottoDelta semantics and it does not define the eventual cross-family F score.
+GlottoDelta semantics. Cross-family population-weighted F is calculated separately
+from these within-family support results.
 
 For a selected top-level family or isolate, the script reports descriptive
 within-sample support: how many distinct relevant source languages attest each
@@ -236,7 +237,7 @@ def analyze(unit_id: str) -> dict:
                 "speaker_estimate_coverage_pct": order_row.get("sample_speaker_estimate_coverage_pct", order_row.get("speaker_estimate_coverage_pct")),
                 "languages_with_speaker_estimate": order_row.get("sample_languages_with_speaker_estimate", order_row.get("languages_with_speaker_estimate")),
                 "sample_distinct_language_count": order_row.get("sample_distinct_language_count"),
-                "note": "analysis order only; not a genealogical F weight",
+                "note": "used for analysis order and cross-family population weight; not used inside the unweighted within-family support denominator",
             }
 
     candidate_results = {
@@ -251,7 +252,7 @@ def analyze(unit_id: str) -> dict:
             "genealogical_unit": "top-level Glottolog 5.3 family/isolate from family_inventory.json",
             "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
             "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
-            "cross_family_F": "not defined or calculated by this script",
+            "cross_family_F": "calculated separately as a population-weighted aggregate of this unweighted within-family support",
             "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
             "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart",
         },
@@ -296,10 +297,10 @@ def render_markdown(result: dict) -> str:
         *((["- Source records excluded from the distinct-language denominator because Glottolog 5.3 does not normalize them to language level: " + ", ".join(f"{x['name']} (`{x['glottocode']}`, level `{x.get('source_glottolog_level') or 'unknown'}`)" for x in sample['non_language_source_records']) + "."] if sample['non_language_source_records'] else [])),
         f"- Glottolog 5.3 language-member coverage: **{sample['represented_glottolog_language_member_count']}/{sample['glottolog_language_member_count']} = {fmt_pct(sample['glottolog_language_member_coverage_pct'])}**.",
         *(([f"- Population-based analysis order: **rank {order['rank']}**; frozen CLDR speaker-exposure proxy **{order['speaker_exposure_estimate']:,.0f}** with **{fmt_pct(order['speaker_estimate_coverage_pct'])}** of sampled languages carrying an estimate."] if order and order.get("rank") is not None else ["- Population-based analysis order: **unranked** because the frozen CLDR-derived sample has no usable speaker estimate for this unit."]) if order else []),
-        "- Population rank controls **analysis order only**; it does not determine genealogical `F` weight.",
+        "- Population exposure controls **analysis order and cross-family `F` weight**. The support percentages in this family report remain unweighted across distinct sampled languages.",
         "- Target support below is the unweighted share of sampled distinct languages attesting the target realization family.",
         "- `strict+soft` additionally allows only the soft-merger fallbacks already defined in `phoneme_targets.json`.",
-        "- This report deliberately **does not define or calculate the eventual cross-family F score**.",
+        "- This report deliberately **does not calculate cross-family `F` itself**; it preserves the within-family support that the population-weighted aggregate consumes.",
         "- The frozen baseline contains **111 tracked phoneme cells**, not complete upstream PHOIBLE inventories; an absent match may therefore reflect a nearby segment outside the tracked chart.",
         "",
         "## Family membership coverage",
@@ -373,7 +374,7 @@ def render_markdown(result: dict) -> str:
         "- Lowest strict-support targets in this family sample: " + ", ".join(f"`{x['target']}` {x['strict_language_count']}/{sample['distinct_language_count']} ({fmt_pct(x['strict_language_pct'])})" for x in weakest) + ".",
         "- Vowel subsystem: " + ", ".join(f"`{x['target']}` {x['strict_language_count']}/{sample['distinct_language_count']}" for x in vowels) + ".",
         "- This is a **dispersion warning, not an automatic veto**. The project-wide P/L evidence and already-confirmed design constraints remain separate evidence, and the 111-cell baseline does not enumerate every upstream PHOIBLE segment or producible allophone.",
-        "- Before turning this family result into the final cross-family `F` metric, the aggregation rule should be fixed consistently for all families; this report intentionally preserves the raw within-family evidence needed for that choice.",
+        "- The cross-family aggregate weights this raw within-family evidence by family speaker exposure; keeping this report unweighted internally prevents a single very large language from standing in for its whole family.",
         "",
     ])
     return "\n".join(lines)

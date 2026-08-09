@@ -10,10 +10,10 @@
 - Frozen GlottoDelta sample: **109** distinct relevant languages from **109** source records.
 - Glottolog 5.3 language-member coverage: **109/1276 = 8.5%**.
 - Population-based analysis order: **rank 4**; frozen CLDR speaker-exposure proxy **487,578,528** with **31.2%** of sampled languages carrying an estimate.
-- Population rank controls **analysis order only**; it does not determine genealogical `F` weight.
+- Population exposure controls **analysis order and cross-family `F` weight**. The support percentages in this family report remain unweighted across distinct sampled languages.
 - Target support below is the unweighted share of sampled distinct languages attesting the target realization family.
 - `strict+soft` additionally allows only the soft-merger fallbacks already defined in `phoneme_targets.json`.
-- This report deliberately **does not define or calculate the eventual cross-family F score**.
+- This report deliberately **does not calculate cross-family `F` itself**; it preserves the within-family support that the population-weighted aggregate consumes.
 - The frozen baseline contains **111 tracked phoneme cells**, not complete upstream PHOIBLE inventories; an absent match may therefore reflect a nearby segment outside the tracked chart.
 
 ## Family membership coverage
@@ -191,4 +191,4 @@ Mean missing target categories per sampled language. The tolerant column applies
 - Lowest strict-support targets in this family sample: `z` 12/109 (11.0%), `sh` 14/109 (12.8%), `v` 35/109 (32.1%), `schwa` 41/109 (37.6%), `f` 45/109 (41.3%).
 - Vowel subsystem: `a` 108/109, `e` 89/109, `i` 109/109, `o` 90/109, `u` 106/109, `schwa` 41/109.
 - This is a **dispersion warning, not an automatic veto**. The project-wide P/L evidence and already-confirmed design constraints remain separate evidence, and the 111-cell baseline does not enumerate every upstream PHOIBLE segment or producible allophone.
-- Before turning this family result into the final cross-family `F` metric, the aggregation rule should be fixed consistently for all families; this report intentionally preserves the raw within-family evidence needed for that choice.
+- The cross-family aggregate weights this raw within-family evidence by family speaker exposure; keeping this report unweighted internally prevents a single very large language from standing in for its whole family.

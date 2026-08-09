@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Order represented Glottolog genealogical units by frozen CLDR speaker exposure.
 
-This is an *analysis-order* aid only. It does not define genealogical weights or
-change GlottoDelta semantics. Speaker estimates come from the frozen baseline's
-CLDR-derived SPEAKER_ESTIMATES mapping and therefore may include both L1 and L2
-speakers and overlap across languages.
+This provides the population exposure used both for analysis order and for the
+population-weighted cross-family F diagnostic. It does not change GlottoDelta
+semantics. Speaker estimates come from the frozen baseline's CLDR-derived
+SPEAKER_ESTIMATES mapping and therefore may include both L1 and L2 speakers and
+overlap across languages.
 """
 from __future__ import annotations
 
@@ -187,16 +188,16 @@ def build_order() -> dict:
         row["analysis_order_rank"] = None
 
     return {
-        "schema": "glottodelta/family-population-order@2",
-        "status": "research_ordering_only_not_genealogical_weight",
+        "schema": "glottodelta/family-population-order@3",
+        "status": "research_ordering_and_population_weight_source",
         "methodology": {
             "genealogy": "top-level Glottolog 5.3 units from the official pinned Newick forest",
             "speaker_source": "frozen baseline SPEAKER_ESTIMATES (CLDR-derived)",
             "speaker_measure": "sum of all frozen CLDR-derived fluent-speaker estimates whose ISO codes map through Glottolog 5.3 into the represented unit; L1/L2 may overlap",
             "speaker_genealogy_mapping": "languages.csv supplies ISO-to-Glottocode indexing; top-level assignment comes from the pinned official Glottolog 5.3 Newick forest",
             "sample_independence": "population ordering uses all frozen speaker-estimate entries, not only languages present in the PHOIBLE/GlottoDelta sample",
-            "purpose": "analysis order and a pragmatic 95%-of-world-population exposure stop rule only",
-            "not_a_weight": "the eventual genealogical F score must not inherit these population magnitudes as family weights",
+            "purpose": "analysis order, pragmatic exposure stop rules, and family population weights for the cross-family F diagnostic",
+            "F_weight_rule": "cross-family F may weight each genealogical unit by this speaker-exposure estimate, while within-family support remains an unweighted share of distinct sampled languages",
             "world_population_caveat": "the cumulative percentage is an exposure proxy, not unique-human coverage, because fluent-speaker estimates may include L2 speakers and overlap across languages; it may exceed 100%",
             "missing_data_rule": "represented units with no frozen estimate are explicitly unranked rather than assigned invented values",
         },
@@ -225,7 +226,7 @@ def render_markdown(result: dict) -> str:
     lines = [
         "# Family analysis order by speaker exposure",
         "",
-        "> **Status:** research ordering only. This ranking does not define or alter genealogical weighting.",
+        "> **Status:** research demographic layer. This ranking supplies both analysis order and population weights for the cross-family `F` diagnostic.",
         "",
         "## Method",
         "",
@@ -234,7 +235,7 @@ def render_markdown(result: dict) -> str:
         "- Population ordering uses **all** frozen speaker-estimate ISO entries that map into a represented family, not only PHOIBLE-sampled languages.",
         "- `languages.csv` is used only to index ISO codes to Glottocodes; top-level genealogy comes from the pinned official Glottolog 5.3 Newick forest.",
         "- CLDR-style fluent-speaker estimates can include L1 and L2 populations and overlap across languages. Therefore the cumulative percentage below is a **speaker-exposure proxy**, not unique-human coverage, and can exceed 100%.",
-        "- Population affects **analysis order only**. It must not determine the eventual genealogical `F` weight.",
+        "- Population affects both **analysis order** and the cross-family `F` weight. Within-family phoneme support remains an unweighted share of distinct sampled languages so one very large language cannot erase internal family diversity.",
         "- Units with no available frozen estimate remain explicitly unranked rather than receiving guessed values.",
         "",
         "## 95% operational stop rule",
