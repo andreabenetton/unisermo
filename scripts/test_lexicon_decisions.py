@@ -14,26 +14,31 @@ PHONOLOGY = ROOT / "research" / "phonology" / "confirmed_decisions.json"
 def main() -> None:
     data = json.loads(LEXICON.read_text(encoding="utf-8"))
     entries = {item["form"]: item for item in data["entries"]}
-    assert {"kin", "fak", "major", "dik"} <= entries.keys()
+    expected = {
+        "ager", "kad", "kap", "sentrum", "sert", "sirkul", "siv", "klar",
+        "kom", "kred", "kur", "dek", "dik", "dirig", "dots", "fak",
+        "lok", "spets", "stru", "vok", "kin", "nation", "major",
+    }
+    assert expected <= entries.keys(), expected - entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
-    assert "facere" in entries["fak"]["source"]
+    assert entries["fak"]["source"] == "Latin facere"
     assert "/ma.jor/" in entries["major"]["decision"]
-    assert "dicere" in entries["dik"]["source"]
+    assert entries["dik"]["source"] == "Latin dicere"
     assert "dikit" in entries["dik"]["decision"]
-
-    seed = json.loads(ROOT_SEED.read_text(encoding="utf-8"))
-    c_roots = [item for item in seed["roots"] if "c" in item["root"]]
-    assert len(c_roots) == 20
+    assert "normalized to sirkul" in entries["sirkul"]["decision"]
 
     audit = AUDIT.read_text(encoding="utf-8")
-    for item in c_roots:
-        assert f"`{item['root']}`" in audit, item["root"]
-        latin_display = item["latin"].replace("/", " / ")
-        assert f"`{latin_display}`" in audit, item["latin"]
-    assert "`cin`" in audit and "`kin`" in audit
-    assert "`nacion`" in audit
-    assert "confirmed -> `fak`" in audit
-    assert "confirmed -> `dik`" in audit and "`dikit`" in audit
+    mapping = {
+        "act":"ager", "cad":"kad", "cap":"kap", "centr":"sentrum",
+        "cert":"sert", "circul":"sirkul", "civ":"siv", "clar":"klar",
+        "com":"kom", "cred":"kred", "cur":"kur", "dec":"dek",
+        "dict":"dik", "direct":"dirig", "doc":"dots", "fac":"fak",
+        "loc":"lok", "spec":"spets", "struct":"stru", "voc":"vok",
+        "cin":"kin", "nacion":"nation",
+    }
+    for old, newform in mapping.items():
+        assert f"`{old}`" in audit, old
+        assert f"`{newform}`" in audit, newform
 
     ph = json.loads(PHONOLOGY.read_text(encoding="utf-8"))
     decisions = {item["id"]: item["decision"] for item in ph["decisions"]}

@@ -16,7 +16,7 @@ comparisons should remain on research branches until selected.
 - `copula.md` — copula/existential root `es` updated to the current `i/u/a + N`
   person-number system.
 - `participles_and_resultatives.md` — productive participial/resultative `-it`;
-  records that legacy abstract `-it` is retired and keeps `-itat` only as an open proposal.
+  and productive abstract-quality `-itat`, with legacy abstract `-it` retired.
 
 The grammar follows an information-minimizing principle: categories that are
 recoverable from context need not be marked merely for agreement or redundancy.

@@ -35,6 +35,7 @@ def main() -> None:
         "copula_es_current_person_number",
         "participial_resultative_it",
         "abstract_it_retired",
+        "abstract_quality_itat",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -54,7 +55,8 @@ def main() -> None:
     assert "i->is" in decisions["personal_possessives_as_genitives"]
     assert "esi, esu, esa, esin, esun, esan" in decisions["copula_es_current_person_number"]
     assert "dik->dikit" in decisions["participial_resultative_it"]
-    assert "reserved for the participial/resultative" in decisions["abstract_it_retired"]
+    assert "confirmed -itat" in decisions["abstract_it_retired"]
+    assert "bon->bonitat" in decisions["abstract_quality_itat"]
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
@@ -94,7 +96,9 @@ def main() -> None:
     participles = PARTICIPLE_SPEC.read_text(encoding="utf-8")
     for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`"):
         assert form in participles, form
-    assert "not canonical" in participles.lower() and "`-itat`" in participles
+    assert "Productive abstract-quality suffix `-itat`" in participles
+    for form in ("`bonitat`", "`klaritat`", "`umanitat`"):
+        assert form in participles, form
 
     print("grammar decision checks passed")
 

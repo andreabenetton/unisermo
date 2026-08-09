@@ -69,7 +69,11 @@
     },
     {
       "id": "abstract_it_retired",
-      "decision": "Retire the legacy use of -it as an abstract quality/state suffix. In current GlottoDelta productive -it is reserved for the participial/resultative function; legacy abstract formations in -it must be migrated when a replacement abstract suffix is confirmed."
+      "decision": "Retire the legacy use of -it as an abstract quality/state suffix. Productive -it is reserved for participial/resultative forms; productive abstract qualities, states, and properties use confirmed -itat instead."
+    },
+    {
+      "id": "abstract_quality_itat",
+      "decision": "Use invariant suffix -itat productively to derive abstract qualities, states, and properties from suitable lexical bases. Canonical examples: bon->bonitat 'bonta', klar->klaritat 'chiarezza', uman->umanitat 'umanita'. The suffix is distinct from participial/resultative -it."
     }
   ]
 }
