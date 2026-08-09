@@ -1,0 +1,1652 @@
+{
+  "schema": "glottodelta/family-phoneme-study@1",
+  "status": "experimental_family_evidence_not_confirmed_design_decision",
+  "methodology": {
+    "genealogical_unit": "top-level Glottolog 5.3 family/isolate from family_inventory.json",
+    "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
+    "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
+    "cross_family_F": "not defined or calculated by this script",
+    "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
+    "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart"
+  },
+  "unit": {
+    "top_level_glottocode": "japo1237",
+    "family_name": "Japonic",
+    "unit_type": "family",
+    "macroareas": [
+      "Eurasia",
+      "Papunesia"
+    ],
+    "represented": true,
+    "source_record_count": 3,
+    "distinct_relevant_language_count": 3,
+    "non_language_source_record_count": 0,
+    "non_language_source_records": []
+  },
+  "analysis_order": {
+    "rank": 8,
+    "speaker_exposure_estimate": 121249490.0,
+    "speaker_estimate_coverage_pct": 33.333333333333336,
+    "languages_with_speaker_estimate": 1,
+    "sample_distinct_language_count": 3,
+    "note": "analysis order only; not a genealogical F weight"
+  },
+  "sample": {
+    "source_record_count": 3,
+    "distinct_language_count": 3,
+    "duplicate_language_records": [],
+    "non_language_source_records": [],
+    "glottolog_language_member_count": 17,
+    "represented_glottolog_language_member_count": 3,
+    "glottolog_language_member_coverage_pct": 17.647058823529413,
+    "represented_glottolog_language_members": [
+      {
+        "glottocode": "nucl1643",
+        "name": "Japanese",
+        "iso": "jpn"
+      },
+      {
+        "glottocode": "kuni1268",
+        "name": "Kunigami",
+        "iso": "xug"
+      },
+      {
+        "glottocode": "miya1259",
+        "name": "Miyako",
+        "iso": "mvi"
+      }
+    ],
+    "absent_glottolog_language_members": [
+      {
+        "glottocode": "hach1239",
+        "name": "Hachijo",
+        "iso": null
+      },
+      {
+        "glottocode": "yila1234",
+        "name": "Vernacular Atayalic Japanese",
+        "iso": "ycr"
+      },
+      {
+        "glottocode": "sats1241",
+        "name": "Kagoshima",
+        "iso": null
+      },
+      {
+        "glottocode": "oldj1239",
+        "name": "Old Japanese",
+        "iso": "ojp"
+      },
+      {
+        "glottocode": "tsug1237",
+        "name": "Tsugaru",
+        "iso": null
+      },
+      {
+        "glottocode": "kika1239",
+        "name": "Kikai",
+        "iso": "kzg"
+      },
+      {
+        "glottocode": "okin1246",
+        "name": "Oki-No-Erabu",
+        "iso": "okn"
+      },
+      {
+        "glottocode": "toku1246",
+        "name": "Toku-No-Shima",
+        "iso": "tkn"
+      },
+      {
+        "glottocode": "nort2935",
+        "name": "Northern Amami-Oshima",
+        "iso": "ryn"
+      },
+      {
+        "glottocode": "sout2954",
+        "name": "Southern Amami-Oshima",
+        "iso": "ams"
+      },
+      {
+        "glottocode": "yoro1243",
+        "name": "Yoron",
+        "iso": "yox"
+      },
+      {
+        "glottocode": "cent2126",
+        "name": "Central Okinawan",
+        "iso": "ryu"
+      },
+      {
+        "glottocode": "yaey1239",
+        "name": "Yaeyama",
+        "iso": "rys"
+      },
+      {
+        "glottocode": "yona1241",
+        "name": "Yonaguni",
+        "iso": "yoi"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "source_key": "i:xug",
+      "name": "Kunigami",
+      "iso": "xug",
+      "glottocode": "kuni1268",
+      "distinct_language_id": "kuni1268",
+      "inventory_symbol_count": 13,
+      "inventory_symbols": [
+        "b",
+        "h",
+        "i",
+        "j",
+        "kʼ",
+        "m",
+        "pʼ",
+        "s",
+        "u",
+        "w",
+        "z",
+        "ɡ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "r": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:mvi",
+      "name": "Miyako",
+      "iso": "mvi",
+      "glottocode": "miya1259",
+      "distinct_language_id": "miya1259",
+      "inventory_symbol_count": 7,
+      "inventory_symbols": [
+        "f",
+        "m",
+        "n",
+        "s",
+        "ɾ",
+        "ʊ",
+        "ʋ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʋ"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:jpn",
+      "name": "Japanese",
+      "iso": "jpn",
+      "glottocode": "nucl1643",
+      "distinct_language_id": "nucl1643",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "h",
+        "i",
+        "j",
+        "k",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "w",
+        "z",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɡ",
+        "ɯ",
+        "ɴ",
+        "ɾ",
+        "ʃ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ",
+            "ɴ"
+          ]
+        }
+      }
+    }
+  ],
+  "target_support": [
+    {
+      "target": "a",
+      "canonical": "a",
+      "class": "vowel",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "e",
+      "canonical": "e",
+      "class": "vowel",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "i",
+      "canonical": "i",
+      "class": "vowel",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Miyako"
+      ]
+    },
+    {
+      "target": "o",
+      "canonical": "o",
+      "class": "vowel",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "u",
+      "canonical": "u",
+      "class": "vowel",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Kunigami",
+        "Miyako",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "schwa",
+      "canonical": "ə",
+      "class": "vowel",
+      "strict_language_count": 0,
+      "strict_language_pct": 0.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 0,
+      "strict_plus_soft_language_pct": 0.0,
+      "strict_languages": [],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako",
+        "Japanese"
+      ]
+    },
+    {
+      "target": "p",
+      "canonical": "p",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "b",
+      "canonical": "b",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Miyako"
+      ]
+    },
+    {
+      "target": "t",
+      "canonical": "t",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "d",
+      "canonical": "d",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "k",
+      "canonical": "k",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    },
+    {
+      "target": "g",
+      "canonical": "ɡ",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Miyako"
+      ]
+    },
+    {
+      "target": "m",
+      "canonical": "m",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Kunigami",
+        "Miyako",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "n",
+      "canonical": "n",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Miyako",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami"
+      ]
+    },
+    {
+      "target": "f",
+      "canonical": "f",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Miyako"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Japanese"
+      ]
+    },
+    {
+      "target": "v",
+      "canonical": "v",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 2,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Miyako"
+      ],
+      "soft_only_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "s",
+      "canonical": "s",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Kunigami",
+        "Miyako",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "z",
+      "canonical": "z",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [
+        "Miyako"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "sh",
+      "canonical": "ʃ",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 2,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [
+        "Kunigami",
+        "Miyako"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "l",
+      "canonical": "l",
+      "class": "consonant",
+      "strict_language_count": 0,
+      "strict_language_pct": 0.0,
+      "soft_only_language_count": 2,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [],
+      "soft_only_languages": [
+        "Miyako",
+        "Japanese"
+      ],
+      "absent_languages": [
+        "Kunigami"
+      ]
+    },
+    {
+      "target": "r",
+      "canonical": "r",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Miyako",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami"
+      ]
+    },
+    {
+      "target": "y",
+      "canonical": "j",
+      "class": "glide",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Miyako"
+      ]
+    },
+    {
+      "target": "w",
+      "canonical": "w",
+      "class": "glide",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Miyako"
+      ]
+    },
+    {
+      "target": "h",
+      "canonical": "h",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Kunigami",
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Miyako"
+      ]
+    },
+    {
+      "target": "ng",
+      "canonical": "ŋ",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Japanese"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Kunigami",
+        "Miyako"
+      ]
+    }
+  ],
+  "candidate_support": {
+    "current_simple_21": {
+      "target_count": 21,
+      "mean_strict_missing": 10.666666666666666,
+      "mean_accent_tolerant_missing": 8.333333333333334,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "schwa",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "v",
+            "sh",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 14,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "schwa",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "schwa",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "z",
+            "sh",
+            "l"
+          ],
+          "strict_missing_count": 14,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "schwa",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [
+            "schwa",
+            "f",
+            "v",
+            "l"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "schwa",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 2
+        }
+      ]
+    },
+    "no_schwa_20": {
+      "target_count": 20,
+      "mean_strict_missing": 9.666666666666666,
+      "mean_accent_tolerant_missing": 7.333333333333333,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "v",
+            "sh",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "z",
+            "sh",
+            "l"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [
+            "f",
+            "v",
+            "l"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "f"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "latin17": {
+      "target_count": 17,
+      "mean_strict_missing": 8.0,
+      "mean_accent_tolerant_missing": 7.333333333333333,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "l"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [
+            "f",
+            "l"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "f"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "latin17_yw": {
+      "target_count": 19,
+      "mean_strict_missing": 8.666666666666666,
+      "mean_accent_tolerant_missing": 8.0,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "l",
+            "y",
+            "w"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "y",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [
+            "f",
+            "l"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "f"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "lexical22_yw": {
+      "target_count": 22,
+      "mean_strict_missing": 10.333333333333334,
+      "mean_accent_tolerant_missing": 8.0,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "v",
+            "sh",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "p",
+            "t",
+            "d",
+            "k",
+            "n",
+            "f",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "z",
+            "sh",
+            "l",
+            "y",
+            "w"
+          ],
+          "strict_missing_count": 15,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "y",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [
+            "f",
+            "v",
+            "l"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "f"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "grammar6": {
+      "target_count": 6,
+      "mean_strict_missing": 1.3333333333333333,
+      "mean_accent_tolerant_missing": 1.3333333333333333,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "a"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "i",
+            "y"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "a",
+            "i",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar8": {
+      "target_count": 8,
+      "mean_strict_missing": 2.6666666666666665,
+      "mean_accent_tolerant_missing": 2.6666666666666665,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "p",
+            "k"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "a",
+            "p",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "i",
+            "p",
+            "k",
+            "y"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "a",
+            "i",
+            "p",
+            "k",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar10": {
+      "target_count": 10,
+      "mean_strict_missing": 3.3333333333333335,
+      "mean_accent_tolerant_missing": 3.3333333333333335,
+      "per_language": [
+        {
+          "source_key": "i:xug",
+          "name": "Kunigami",
+          "strict_missing": [
+            "a",
+            "p",
+            "k",
+            "n",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "a",
+            "p",
+            "k",
+            "n",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:mvi",
+          "name": "Miyako",
+          "strict_missing": [
+            "a",
+            "i",
+            "p",
+            "k",
+            "y"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "a",
+            "i",
+            "p",
+            "k",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:jpn",
+          "name": "Japanese",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    }
+  }
+}
