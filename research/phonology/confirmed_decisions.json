@@ -1,19 +1,23 @@
 {
   "schema": "glottodelta/phoneme-confirmed-decisions@1",
-  "confirmed_on": "2026-08-08",
-  "status": "confirmed_design_constraints_not_full_inventory_freeze",
+  "confirmed_on": "2026-08-09",
+  "status": "confirmed_current_inventory_and_root_adaptation_rules",
   "decisions": [
     {
-      "id": "schwa_noncontrastive",
-      "decision": "Drop contrastive /ə/. Allow [ə] only as a non-contrastive reduction or accent realization where identity is preserved."
+      "id": "canonical_phoneme_inventory",
+      "decision": "Use the current canonical inventory /a e i o u p b t d k g m n f v s z l r j w/: five vowels and sixteen consonants/glides. The official letters are a e i o u p b t d k g m n f v s z l r j w."
+    },
+    {
+      "id": "excluded_independent_phonemes",
+      "decision": "Do not include independent /ʃ h ŋ ə ɲ/ phonemes. Schwa is absent from the canonical inventory and alphabet. [ʃ], [ŋ], and [ɲ] may arise only through the separately defined coalescent or assimilatory realizations of canonical sequences/morphophonemes; /h/ has no canonical letter or phoneme."
     },
     {
       "id": "vowel_architecture",
-      "decision": "Use lexical /a e i o u/. Prefer /a i u/ for grammar-critical contrasts where practical."
+      "decision": "Use lexical /a e i o u/. Use /a i u/ for the grammar-critical person subsystem; /e o/ remain lexical vowels and optional referential-specificity markers."
     },
     {
       "id": "glides",
-      "decision": "Retain canonical /j/ as a lexical glide. Carry /w/ forward as the strong default lexical glide candidate; its final freeze remains pending the remaining inventory-wide checks. Orthographic graphemes remain a separate decision."
+      "decision": "Retain canonical /j/ and /w/, written j and w. The letter j always represents the palatal glide /j/ and never the affricate /dʒ/; w always represents /w/."
     },
     {
       "id": "rhotic",
@@ -21,11 +25,23 @@
     },
     {
       "id": "soft_lexical_contrasts",
-      "decision": "Retain /b d ɡ v z ʃ/ as lexical candidates subject to protected-minimal-pair rules; do not rely on their fragile merger contrasts for critical grammar."
+      "decision": "Retain /b d ɡ v z/ as canonical lexical contrasts for international-root recognizability, while allowing the documented accent-tolerant mergers where unambiguous. Do not rely on these fragile merger contrasts for critical grammar or protected minimal pairs."
     },
     {
       "id": "affricates_as_sequences",
       "decision": "Do not assign independent phoneme status to /ts tʃ dʒ/. Represent [ts] from /t+s/; allow /t+j/ to surface as [tj ~ tʃ] and /d+j/ as [dj ~ dʒ]. The transparent sequence pronunciation remains valid, and none of these coalescences may carry grammar-critical contrasts."
+    },
+    {
+      "id": "gn_coalescence",
+      "decision": "Do not add independent /ɲ/. Canonical gn is the transparent sequence /g+n/; [ɲ] is an accepted coalescent realization where the sequence remains recoverable and no protected contrast is lost."
+    },
+    {
+      "id": "source_c_lexical_adaptation",
+      "decision": "The letter c is not part of the official GlottoDelta alphabet and has no automatic pronunciation. A source-form Latin/international c is adapted root by root to k, s, j, or tj according to international recognizability, population accessibility, genealogical dispersion, phonotactic simplicity, and lexical distinctness. Once selected, the GlottoDelta root spelling is fixed."
+    },
+    {
+      "id": "source_dzh_lexical_adaptation",
+      "decision": "A source /dʒ/ is not mapped mechanically. Root by root it may be represented as dj (/d+j/, with [dj ~ dʒ]), j (/j/), g (/g/), z (/z/), or an etymological/international form that avoids /dʒ/, whichever best balances recognizability, accessibility, genealogical dispersion, phonotactics, and lexical distinctness. This is a recurrent root-construction procedure for divergent Romance/international outcomes, not an exceptional pronunciation rule. The letter j itself always remains /j/."
     },
     {
       "id": "person_number_paradigm",
