@@ -1,0 +1,4847 @@
+{
+  "schema": "glottodelta/legacy-lexicon-audit@1",
+  "audit_date": "2026-08-09",
+  "source_archive": "language(1).zip",
+  "source_sha256": "78ea47efca711a183d5a0b4bdea9024dc1992caed7a7b1a2ef9278520ee66951",
+  "scope": "Top-level legacy grammar markdown files excluding phonology/README/CLAUDE; every token-like form found in inline code spans is audited, including inflected and illustrative GlottoDelta forms. core_inventory is a curated subset of lexical and grammatical base forms.",
+  "summary": {
+    "valid_orthography": 267,
+    "needs_revision": 65,
+    "valid_check_hiatus": 17,
+    "confirmed_replacement": 5,
+    "obsolete_person_value": 3,
+    "obsolete_morphology": 9,
+    "review_pronunciation": 3,
+    "collision": 3,
+    "confirmed_reinterpretation": 1
+  },
+  "core_summary": {
+    "valid_orthography": 70,
+    "valid_check_hiatus": 3,
+    "confirmed_replacement": 5,
+    "obsolete_person_value": 3,
+    "collision": 3,
+    "confirmed_reinterpretation": 1,
+    "obsolete_morphology": 1
+  },
+  "collisions": [
+    {
+      "legacy_form": "kom",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-'"
+      ],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kur",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure'"
+      ],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "un",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun"
+      ],
+      "sources": [
+        "articles.md"
+      ]
+    }
+  ],
+  "core_inventory": [
+    {
+      "legacy_form": "a",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ad",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "amik",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "anti",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "auto",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "bon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "copula.md",
+        "derivation.md",
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "cin",
+      "status": "confirmed_replacement",
+      "replacement": "kin",
+      "issues": [
+        "legacy form has a confirmed canonical replacement"
+      ],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "dan",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md"
+      ]
+    },
+    {
+      "legacy_form": "de",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "dek",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "doc",
+      "status": "confirmed_replacement",
+      "replacement": "dots",
+      "issues": [
+        "legacy form has a confirmed canonical replacement"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "dom",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "articles.md",
+        "comparison.md",
+        "copula.md",
+        "demonstratives.md",
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "duo",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "adjectives.md",
+        "noun_number_system.md",
+        "numerals.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "e",
+      "status": "obsolete_person_value",
+      "replacement": "u",
+      "issues": [
+        "legacy person value is obsolete; current corresponding form is u"
+      ],
+      "sources": [
+        "copula.md",
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ekual",
+      "status": "confirmed_replacement",
+      "replacement": "ekwal",
+      "issues": [
+        "legacy comparison word replaced by ekwal /e.kwal/"
+      ],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "es",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "copula.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "et",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "fac",
+      "status": "confirmed_replacement",
+      "replacement": "fak",
+      "issues": [
+        "legacy form has a confirmed canonical replacement"
+      ],
+      "sources": [
+        "derivation.md",
+        "negation.md",
+        "noun_case_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "for",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "gran",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "derivation.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "i",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md",
+        "word_order.md"
+      ]
+    },
+    {
+      "legacy_form": "if",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "in",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "noun_case_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ka",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kal",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kan",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kis",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "klar",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "ko",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kom",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-'"
+      ],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "komer",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "kos",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kot",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kud",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kur",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure'"
+      ],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "lib",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "ma",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "major",
+      "status": "confirmed_reinterpretation",
+      "replacement": null,
+      "issues": [
+        "confirmed spelling; current pronunciation /ma.jor/"
+      ],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "makro",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "man",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "masim",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "med",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "mikro",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mil",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "milit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "minor",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "minus",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mov",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "negation.md",
+        "noun_number_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "mult",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "multi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "nacion",
+      "status": "confirmed_replacement",
+      "replacement": "nation",
+      "issues": [
+        "legacy form has a confirmed canonical replacement",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "neo",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "nin",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "no",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "copula.md",
+        "derivation.md",
+        "negation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "questions.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "nul",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "o",
+      "status": "obsolete_person_value",
+      "replacement": "un",
+      "issues": [
+        "legacy person value is obsolete; current corresponding form is un"
+      ],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "or",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "oto",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "per",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "person",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "pos",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "posib",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "pre",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "re",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "relig",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "sek",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "semi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "sen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "ses",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "set",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "si",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sistem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "sub",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "super",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "tan",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "comparison.md",
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "ter",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md",
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "tes",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "tik",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "articles.md",
+        "comparison.md",
+        "demonstratives.md",
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "u",
+      "status": "obsolete_person_value",
+      "replacement": "in",
+      "issues": [
+        "legacy person value is obsolete; current corresponding form is in"
+      ],
+      "sources": [
+        "comparison.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "un",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun"
+      ],
+      "sources": [
+        "articles.md"
+      ]
+    },
+    {
+      "legacy_form": "uno",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "vel",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "vid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "vir",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "ə",
+      "status": "obsolete_morphology",
+      "replacement": "an",
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology",
+        "legacy person value is obsolete; current corresponding form is an"
+      ],
+      "sources": [
+        "copula.md",
+        "noun_number_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    }
+  ],
+  "all_forms": [
+    {
+      "legacy_form": "a",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ad",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "al",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "amik",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "amiken",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "amiks",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "anti",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "antibon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "antifacal",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "antimilit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "antirelig",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "antisistem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "as",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "auto",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "autofac",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "autofacor",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "automov",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "autovid",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "b",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ba",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "bag",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "bak",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "bon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "copula.md",
+        "derivation.md",
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "bonit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "c",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "noun_case_system.md",
+        "numerals.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "capital",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "ch",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c, h"
+      ],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "cin",
+      "status": "confirmed_replacement",
+      "replacement": "kin",
+      "issues": [
+        "legacy form has a confirmed canonical replacement"
+      ],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "d",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "dan",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md"
+      ]
+    },
+    {
+      "legacy_form": "db",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "de",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "decades",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "defac",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "dek",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "dekon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "demov",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "digit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "dm",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "dn",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "doc",
+      "status": "confirmed_replacement",
+      "replacement": "dots",
+      "issues": [
+        "legacy form has a confirmed canonical replacement"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "docer",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "docia",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "dom",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "articles.md",
+        "comparison.md",
+        "copula.md",
+        "demonstratives.md",
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "dom-en",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domad",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domal",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "domde",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domdue",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "demonstratives.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "word_order.md"
+      ]
+    },
+    {
+      "legacy_form": "domen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "copula.md",
+        "demonstratives.md",
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "domende",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domenem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "demonstratives.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "domenes",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "domenin",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domens",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domfin",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domin",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "demonstratives.md",
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domko",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "dommod",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domper",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "dompro",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "doms",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md",
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "domtem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "due",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "duo",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "adjectives.md",
+        "noun_number_system.md",
+        "numerals.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "e",
+      "status": "obsolete_person_value",
+      "replacement": "u",
+      "issues": [
+        "legacy person value is obsolete; current corresponding form is u"
+      ],
+      "sources": [
+        "copula.md",
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "e-s",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "ekual",
+      "status": "confirmed_replacement",
+      "replacement": "ekwal",
+      "issues": [
+        "legacy comparison word replaced by ekwal /e.kwal/"
+      ],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "em",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md",
+        "word_order.md"
+      ]
+    },
+    {
+      "legacy_form": "en",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "copula.md",
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "numerals.md",
+        "questions.md",
+        "stress.md",
+        "verb_specification.md",
+        "word_order.md"
+      ]
+    },
+    {
+      "legacy_form": "en-em",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "er",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "es",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "copula.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "esa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esda",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esde",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esdi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esdnə",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esdo",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esdu",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esdə",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "ese",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfbi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfe",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfo",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfu",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esfə",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esmi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "eso",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esu",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "esə",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "copula.md"
+      ]
+    },
+    {
+      "legacy_form": "et",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "f",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "fa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "fac",
+      "status": "confirmed_replacement",
+      "replacement": "fak",
+      "issues": [
+        "legacy form has a confirmed canonical replacement"
+      ],
+      "sources": [
+        "derivation.md",
+        "negation.md",
+        "noun_case_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "fac-er",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "faca",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facal",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "facbi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "negation.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facdbi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facdi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "questions.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "facdmi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facdni",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "face",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facen",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facer",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "facerem",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "faceren",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "facerenem",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "facerens",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "facerin",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "facerko",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "facers",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "faces",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "facfbi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facfi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facfmi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facfni",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "faci",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "negation.md",
+        "noun_number_system.md",
+        "questions.md",
+        "stress.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facia",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "facmi",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facni",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "faco",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facor",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "facs",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "facu",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "facə",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c, ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "fb",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "fin",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "fm",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "fn",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "for",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "frakt",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "g",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "gran",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "derivation.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "granit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "h",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h"
+      ],
+      "sources": [
+        "demonstratives.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "hic",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c, h"
+      ],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "hundreds",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h"
+      ],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "i",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md",
+        "word_order.md"
+      ]
+    },
+    {
+      "legacy_form": "ia",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "ic",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "ien",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "if",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ik",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "ile",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "ille",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "in",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "noun_case_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "is",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "ist",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "iste",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "it",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "j",
+      "status": "review_pronunciation",
+      "replacement": null,
+      "issues": [
+        "j is now /j/, not legacy /dzh/; verify intended pronunciation"
+      ],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "k",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "copula.md",
+        "questions.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ka",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kal",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kan",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kidem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kis",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "klar",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "klarit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "ko",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kofac",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "kom",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-'"
+      ],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "komer",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "komeria",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "komov",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "kon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "kos",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kot",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kovid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "ks",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ku",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md"
+      ]
+    },
+    {
+      "legacy_form": "kua",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "comparison.md"
+      ]
+    },
+    {
+      "legacy_form": "kud",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "kur",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure'"
+      ],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "l",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "la",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "letters",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "lib",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "liben",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "m",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ma",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "major",
+      "status": "confirmed_reinterpretation",
+      "replacement": null,
+      "issues": [
+        "confirmed spelling; current pronunciation /ma.jor/"
+      ],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "makro",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "makrodom",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "makrosistem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "mala",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "malla",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "man",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "manen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "manper",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "marker",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "masim",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mators",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "med",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "media",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "mikro",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mikrodom",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "mikrosistem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mil",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "milit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "minor",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "minus",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mo",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mo-vi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mod",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "mof",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "mov",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "negation.md",
+        "noun_number_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "mova",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "movbi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movdbi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movdi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "negation.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "movdmi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movdni",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "move",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "moven",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "mover",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "movfbi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "movfi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "negation.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movfmi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movfni",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "negation.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "movmi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movni",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "movo",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "movor",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "movu",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "movə",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "mult",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "multi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "multidom",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "multifacal",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "multiperson",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "n",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "nacion",
+      "status": "confirmed_replacement",
+      "replacement": "nation",
+      "issues": [
+        "legacy form has a confirmed canonical replacement",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "nacional",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "neo",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "neodom",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "neonacion",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c",
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "neosistem",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "ng",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "nin",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "no",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "copula.md",
+        "derivation.md",
+        "negation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "questions.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "nobon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "nofacal",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "noklar",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "noposib",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "novid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "nul",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "o",
+      "status": "obsolete_person_value",
+      "replacement": "un",
+      "issues": [
+        "legacy person value is obsolete; current corresponding form is un"
+      ],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "objektem",
+      "status": "review_pronunciation",
+      "replacement": null,
+      "issues": [
+        "j is now /j/, not legacy /dzh/; verify intended pronunciation"
+      ],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "objektenem",
+      "status": "review_pronunciation",
+      "replacement": null,
+      "issues": [
+        "j is now /j/, not legacy /dzh/; verify intended pronunciation"
+      ],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "or",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "stress.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "os",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "oto",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "pa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "part",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "per",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "person",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "noun_number_system.md",
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "personal",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "personen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "ph",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h"
+      ],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "port",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "pos",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "posfac",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "posib",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "posvid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "pr",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "pre",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "prefac",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "presek",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "previd",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "pro",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "psa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "q",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): q"
+      ],
+      "sources": [
+        "comparison.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "r",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ra",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "rad",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "rat",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "re",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "refac",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "refacer",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "relig",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "remov",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "revid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "root",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "s",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "copula.md",
+        "noun_case_system.md",
+        "noun_number_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sat",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sc",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): c"
+      ],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sek",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "sekor",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "semi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "semibon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "semigran",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "semiklar",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "sen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "sena",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ses",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "set",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "sh",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h",
+        "legacy sh=/sh/ phoneme is obsolete; current postalveolar realization uses sj -> [sj~sh]"
+      ],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sha",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h",
+        "legacy sh=/sh/ phoneme is obsolete; current postalveolar realization uses sj -> [sj~sh]"
+      ],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "shas",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h",
+        "legacy sh=/sh/ phoneme is obsolete; current postalveolar realization uses sj -> [sj~sh]"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "shases",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h",
+        "legacy sh=/sh/ phoneme is obsolete; current postalveolar realization uses sj -> [sj~sh]"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "shashs",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h",
+        "legacy sh=/sh/ phoneme is obsolete; current postalveolar realization uses sj -> [sj~sh]"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "si",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sistem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "sklon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "st",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "strak",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "sub",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "subbon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "subgran",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "super",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "superbon",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "supergran",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "supervel",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "t",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ta",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "tako",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "tan",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "comparison.md",
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "te",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "tem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "ter",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md",
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "tes",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "th",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): h"
+      ],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ti",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "tik",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "adjectives.md",
+        "articles.md",
+        "comparison.md",
+        "demonstratives.md",
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "tr",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "tri",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "ts",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "tsa",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "tsen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "tsenes",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "tsens",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "tspen",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "u",
+      "status": "obsolete_person_value",
+      "replacement": "in",
+      "issues": [
+        "legacy person value is obsolete; current corresponding form is in"
+      ],
+      "sources": [
+        "comparison.md",
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ue",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "uen",
+      "status": "valid_check_hiatus",
+      "replacement": null,
+      "issues": [
+        "adjacent vowels are canonical hiatus unless j/w is written"
+      ],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "un",
+      "status": "collision",
+      "replacement": null,
+      "issues": [
+        "collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun"
+      ],
+      "sources": [
+        "articles.md"
+      ]
+    },
+    {
+      "legacy_form": "units",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "numerals.md"
+      ]
+    },
+    {
+      "legacy_form": "uno",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "articles.md",
+        "numerals.md",
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "us",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    },
+    {
+      "legacy_form": "v",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "va",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "vel",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "velit",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "vi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "stress.md"
+      ]
+    },
+    {
+      "legacy_form": "vid",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "viddi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "vide",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "questions.md"
+      ]
+    },
+    {
+      "legacy_form": "vider",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "viderem",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "vidi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_number_system.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "vidor",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "derivation.md"
+      ]
+    },
+    {
+      "legacy_form": "vir",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "demonstratives.md"
+      ]
+    },
+    {
+      "legacy_form": "vowel",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "verb_specification.md"
+      ]
+    },
+    {
+      "legacy_form": "w",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "comparison.md",
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "x",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): x"
+      ],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "y",
+      "status": "needs_revision",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): y"
+      ],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "z",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "noun_case_system.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "zad",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "zi",
+      "status": "valid_orthography",
+      "replacement": null,
+      "issues": [],
+      "sources": [
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "ə",
+      "status": "obsolete_morphology",
+      "replacement": "an",
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology",
+        "legacy person value is obsolete; current corresponding form is an"
+      ],
+      "sources": [
+        "copula.md",
+        "noun_number_system.md",
+        "stress.md",
+        "verb_specification.md",
+        "vocabulary_design_rules.md"
+      ]
+    },
+    {
+      "legacy_form": "əen",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "noun_number_system.md"
+      ]
+    },
+    {
+      "legacy_form": "əs",
+      "status": "obsolete_morphology",
+      "replacement": null,
+      "issues": [
+        "non-canonical character(s): ə",
+        "contains retired schwa / legacy six-person morphology"
+      ],
+      "sources": [
+        "noun_case_system.md"
+      ]
+    }
+  ]
+}

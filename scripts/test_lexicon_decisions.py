@@ -17,7 +17,7 @@ def main() -> None:
     expected = {
         "ager", "kad", "kap", "sentrum", "sert", "sirkul", "siv", "klar",
         "kom", "kred", "kur", "dek", "dik", "dirig", "dots", "fak",
-        "lok", "spets", "stru", "vok", "kin", "nation", "major",
+        "lok", "spets", "stru", "vok", "kin", "nation", "major", "ekwal",
     }
     assert expected <= entries.keys(), expected - entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
@@ -26,6 +26,7 @@ def main() -> None:
     assert entries["dik"]["source"] == "Latin dicere"
     assert "dikit" in entries["dik"]["decision"]
     assert "normalized to sirkul" in entries["sirkul"]["decision"]
+    assert "/e.kwal/" in entries["ekwal"]["decision"]
 
     audit = AUDIT.read_text(encoding="utf-8")
     mapping = {
@@ -39,6 +40,13 @@ def main() -> None:
     for old, newform in mapping.items():
         assert f"`{old}`" in audit, old
         assert f"`{newform}`" in audit, newform
+
+    full_audit = json.loads((ROOT / "research" / "lexicon" / "legacy_full_lexicon_audit.json").read_text(encoding="utf-8"))
+    collisions = {item["legacy_form"] for item in full_audit["collisions"]}
+    assert {"kom", "kur", "un"} <= collisions
+    all_forms = {item["legacy_form"]: item for item in full_audit["all_forms"]}
+    assert all_forms["ekual"]["replacement"] == "ekwal"
+    assert all_forms["cin"]["replacement"] == "kin"
 
     ph = json.loads(PHONOLOGY.read_text(encoding="utf-8"))
     decisions = {item["id"]: item["decision"] for item in ph["decisions"]}

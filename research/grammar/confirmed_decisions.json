@@ -74,6 +74,10 @@
     {
       "id": "abstract_quality_itat",
       "decision": "Use invariant suffix -itat productively to derive abstract qualities, states, and properties from suitable lexical bases. Canonical examples: bon->bonitat 'bonta', klar->klaritat 'chiarezza', uman->umanitat 'umanita'. The suffix is distinct from participial/resultative -it."
+    },
+    {
+      "id": "finite_verb_morphotactics",
+      "decision": "Every ordinary finite verb has the canonical morphotactic order root + TAM + person vowel + optional plural N. Person vowels are i (first), u (second), a (third); the plural morphophoneme N follows the person vowel when the subject is plural, yielding in, un, an. TAM material, when present, always precedes the person vowel and N."
     }
   ]
 }
