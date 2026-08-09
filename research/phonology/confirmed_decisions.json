@@ -29,7 +29,11 @@
     },
     {
       "id": "person_number_paradigm",
-      "decision": "Use i/u/a for first/second/third person. Mark plural with a final nasal morphophoneme /N/ written n after the person vowel: i, u, a; in, un, an. Default [n]; accent-tolerant place realizations [n ~ ɳ ~ m ~ ŋ ~ ɴ] are non-contrastive and may not be deleted."
+      "decision": "Use i/u/a for first/second/third person. Mark plural with a nasal morphophoneme /N/ written n after the person vowel: i, u, a; in, un, an. In neutral forms /N/ is normally word-final; it may be medial specifically before the optional referential-specificity suffixes -o/-e, yielding forms such as ano/ane. Default [n]; accent-tolerant place realizations [n ~ ɳ ~ m ~ ŋ ~ ɴ] are non-contrastive and may not be deleted."
+    },
+    {
+      "id": "referential_specificity_markers",
+      "decision": "Keep grammatical gender neutral by default with zero marking. Optionally mark masculine/male-specific reference with -o and feminine/female-specific reference with -e; these are semantic/referential specificity markers, not grammatical gender classes, and never trigger obligatory agreement. The neutral form always remains valid. Third person is a/ao/ae in the singular and an/ano/ane in the plural, with morphological order person + plural N + optional specificity marker. Accent-tolerant realizations may raise canonical -e toward [i] and -o toward [u] where mid vowels are unstable, but the front/back distinction must remain recoverable and the two markers may not collapse when the distinction is intended; otherwise use the neutral form or lexical paraphrase."
     }
   ]
 }

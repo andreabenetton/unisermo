@@ -16,6 +16,7 @@ semantics.
 - `phoneme_selection.md` — generated human-readable working report.
 - `person_marker_study.md` — selected person/number morphology and rationale.
 - `person_number_results.json` — generated person/number coverage and layout metrics.
+- `optional_gender_study.md` — confirmed optional masculine/feminine referential-specificity study and `ano/ane` resolution.
 - `affricate_study.md` — decision study for /ts tʃ dʒ/ as complex segments/sequences.
 - `affricate_results.json` — generated component and curated-profile evidence for the affricate study.
 

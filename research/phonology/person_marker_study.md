@@ -4,7 +4,7 @@
 
 ## Decision
 
-Use a three-vowel person system and one invariant final nasal number marker:
+Use a three-vowel person system and one nasal number morphophoneme. In the neutral paradigm it is final:
 
 | Person | Singular | Plural |
 |---|---:|---:|
@@ -17,9 +17,9 @@ Interpretation:
 - `i` = first person
 - `u` = second person
 - `a` = third person
-- final written `n` = plural
+- written `n` = plural morphophoneme /N/
 
-The plural marker is best analysed as a final nasal **morphophoneme /N/**, written consistently as `n`, with default realization [n]. Place variation `[n ~ ɳ ~ m ~ ŋ ~ ɴ]` is accent-tolerant and never grammatical: it may not create a number or person contrast.
+The plural marker is best analysed as a nasal **morphophoneme /N/**, written consistently as `n`, with default realization [n]. In neutral person/number forms it is word-final. Place variation `[n ~ ɳ ~ m ~ ŋ ~ ɴ]` is accent-tolerant and never grammatical: it may not create a number or person contrast. A later confirmed referential-specificity suffix may follow /N/, so /N/ can be medial specifically in forms such as `ano` and `ane`; see `optional_gender_study.md`.
 
 This avoids requiring six contrastive person vowels and keeps number orthogonal to person.
 
@@ -28,6 +28,17 @@ This avoids requiring six contrastive person vowels and keeps number orthogonal 
 The two candidate assignments `i/u/a` and `a/u/i` have identical GlottoDelta inventory coverage because they use the same three phonemes. The choice is therefore mnemonic/structural rather than availability-driven.
 
 `i/u/a` is retained because it gives a language-independent internal map: high/front `i` for the speaker/deictic centre, back/high `u` for the addressee, and open `a` for the external third person. The English mnemonic for `a/u/i` is partial and is not strong enough to dominate a global design.
+
+
+## Interaction with optional referential specificity
+
+A later confirmed design choice adds optional semantic/referential specificity suffixes without introducing grammatical gender:
+
+- neutral / unspecified: zero marking;
+- masculine or male-specific reference: `-o`;
+- feminine or female-specific reference: `-e`.
+
+These suffixes follow person and number. Thus third person is `a / ao / ae` in the singular and `an / ano / ane` in the plural. The ordering is **person + plural N + optional specificity marker**. This is the sole confirmed context in which the plural /N/ is intentionally medial. The neutral forms remain valid in all contexts, and no agreement is triggered elsewhere in the grammar.
 
 ## Inventory result for the three person vowels
 
