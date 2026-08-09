@@ -35,6 +35,24 @@ def main():
     assert indo_targets["schwa"]["strict_language_count"] == 71
     assert indo_targets["ng"]["strict_language_count"] == 71
     assert "111 tracked phoneme cells" in indo["methodology"]["source_inventory_limit"]
+
+    sino = analyze("sino1245")
+    assert sino["unit"]["family_name"] == "Sino-Tibetan"
+    assert sino["sample"]["source_record_count"] == 98
+    assert sino["sample"]["distinct_language_count"] == 97
+    assert sino["sample"]["glottolog_language_member_count"] == 519
+    assert sino["sample"]["represented_glottolog_language_member_count"] == 97
+    assert sino["analysis_order"]["rank"] == 2
+    assert [x["name"] for x in sino["sample"]["non_language_source_records"]] == ["Caodeng rGyalrong"]
+    sino_targets = {x["target"]: x for x in sino["target_support"]}
+    assert sino_targets["u"]["strict_language_count"] == 97
+    assert sino_targets["i"]["strict_language_count"] == 96
+    assert sino_targets["p"]["strict_language_count"] == 96
+    assert sino_targets["m"]["strict_language_count"] == 96
+    assert sino_targets["v"]["strict_language_count"] == 29
+    assert sino_targets["f"]["strict_language_count"] == 32
+    assert sino_targets["v"]["strict_plus_soft_language_count"] == 87
+    assert sino_targets["g"]["strict_plus_soft_language_count"] == 96
     print("family-phoneme regression checks: OK")
 
 

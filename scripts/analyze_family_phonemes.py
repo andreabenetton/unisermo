@@ -293,6 +293,7 @@ def render_markdown(result: dict) -> str:
         f"- Unit type: **{unit['unit_type']}**.",
         f"- Macroarea metadata: **{', '.join(unit['macroareas'])}** (descriptive only; it does not determine weighting).",
         f"- Frozen GlottoDelta sample: **{sample['distinct_language_count']}** distinct relevant languages from **{sample['source_record_count']}** source records.",
+        *((["- Source records excluded from the distinct-language denominator because Glottolog 5.3 does not normalize them to language level: " + ", ".join(f"{x['name']} (`{x['glottocode']}`, level `{x.get('source_glottolog_level') or 'unknown'}`)" for x in sample['non_language_source_records']) + "."] if sample['non_language_source_records'] else [])),
         f"- Glottolog 5.3 language-member coverage: **{sample['represented_glottolog_language_member_count']}/{sample['glottolog_language_member_count']} = {fmt_pct(sample['glottolog_language_member_coverage_pct'])}**.",
         *(([f"- Population-based analysis order: **rank {order['rank']}**; frozen CLDR speaker-exposure proxy **{order['speaker_exposure_estimate']:,.0f}** with **{fmt_pct(order['speaker_estimate_coverage_pct'])}** of sampled languages carrying an estimate."] if order and order.get("rank") is not None else ["- Population-based analysis order: **unranked** because the frozen CLDR-derived sample has no usable speaker estimate for this unit."]) if order else []),
         "- Population rank controls **analysis order only**; it does not determine genealogical `F` weight.",
