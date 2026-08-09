@@ -1,0 +1,7634 @@
+{
+  "schema": "glottodelta/family-phoneme-study@1",
+  "status": "experimental_family_evidence_not_confirmed_design_decision",
+  "methodology": {
+    "genealogical_unit": "top-level Glottolog 5.3 family/isolate from family_inventory.json",
+    "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
+    "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
+    "cross_family_F": "not defined or calculated by this script",
+    "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
+    "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart"
+  },
+  "unit": {
+    "top_level_glottocode": "turk1311",
+    "family_name": "Turkic",
+    "unit_type": "family",
+    "macroareas": [
+      "Eurasia"
+    ],
+    "represented": true,
+    "source_record_count": 21,
+    "distinct_relevant_language_count": 21,
+    "non_language_source_record_count": 0,
+    "non_language_source_records": []
+  },
+  "analysis_order": {
+    "rank": 7,
+    "speaker_exposure_estimate": 157553241.0,
+    "speaker_estimate_coverage_pct": 66.66666666666667,
+    "languages_with_speaker_estimate": 14,
+    "sample_distinct_language_count": 21,
+    "note": "analysis order only; not a genealogical F weight"
+  },
+  "sample": {
+    "source_record_count": 21,
+    "distinct_language_count": 21,
+    "duplicate_language_records": [],
+    "non_language_source_records": [],
+    "glottolog_language_member_count": 43,
+    "represented_glottolog_language_member_count": 21,
+    "glottolog_language_member_coverage_pct": 48.83720930232558,
+    "represented_glottolog_language_members": [
+      {
+        "glottocode": "chuv1255",
+        "name": "Chuvash",
+        "iso": "chv"
+      },
+      {
+        "glottocode": "bash1264",
+        "name": "Bashkir",
+        "iso": "bak"
+      },
+      {
+        "glottocode": "tata1255",
+        "name": "Tatar",
+        "iso": "tat"
+      },
+      {
+        "glottocode": "kara1464",
+        "name": "Karaim",
+        "iso": "kdr"
+      },
+      {
+        "glottocode": "kumy1244",
+        "name": "Kumyk",
+        "iso": "kum"
+      },
+      {
+        "glottocode": "kirg1245",
+        "name": "Kirghiz",
+        "iso": "kir"
+      },
+      {
+        "glottocode": "kara1467",
+        "name": "Kara-Kalpak",
+        "iso": "kaa"
+      },
+      {
+        "glottocode": "uigh1240",
+        "name": "Uighur",
+        "iso": "uig"
+      },
+      {
+        "glottocode": "nort2690",
+        "name": "Northern Uzbek",
+        "iso": "uzn"
+      },
+      {
+        "glottocode": "nort2697",
+        "name": "North Azerbaijani",
+        "iso": "azj"
+      },
+      {
+        "glottocode": "sout2697",
+        "name": "South Azerbaijani",
+        "iso": "azb"
+      },
+      {
+        "glottocode": "turk1304",
+        "name": "Turkmen",
+        "iso": "tuk"
+      },
+      {
+        "glottocode": "gaga1249",
+        "name": "Gagauz",
+        "iso": "gag"
+      },
+      {
+        "glottocode": "nucl1301",
+        "name": "Turkish",
+        "iso": "tur"
+      },
+      {
+        "glottocode": "sala1264",
+        "name": "Salar",
+        "iso": "slr"
+      },
+      {
+        "glottocode": "dolg1241",
+        "name": "Dolgan",
+        "iso": "dlg"
+      },
+      {
+        "glottocode": "yaku1245",
+        "name": "Sakha",
+        "iso": "sah"
+      },
+      {
+        "glottocode": "nort2686",
+        "name": "Northern Altai",
+        "iso": "atv"
+      },
+      {
+        "glottocode": "kara1462",
+        "name": "Taiga Sayan Turkic",
+        "iso": "kim"
+      },
+      {
+        "glottocode": "tuvi1240",
+        "name": "Tuvinian",
+        "iso": "tyv"
+      },
+      {
+        "glottocode": "khak1248",
+        "name": "Khakas",
+        "iso": "kjh"
+      }
+    ],
+    "absent_glottolog_language_members": [
+      {
+        "glottocode": "bolg1250",
+        "name": "Bolgarian",
+        "iso": "xbo"
+      },
+      {
+        "glottocode": "turk1303",
+        "name": "Khalaj Turkic",
+        "iso": "klj"
+      },
+      {
+        "glottocode": "sibe1250",
+        "name": "Siberian Tatar",
+        "iso": "sty"
+      },
+      {
+        "glottocode": "crim1257",
+        "name": "Crimean Tatar",
+        "iso": "crh"
+      },
+      {
+        "glottocode": "krym1236",
+        "name": "Krymchak",
+        "iso": "jct"
+      },
+      {
+        "glottocode": "urum1249",
+        "name": "Kipchak Urum",
+        "iso": "uum"
+      },
+      {
+        "glottocode": "kara1465",
+        "name": "Karachay-Balkar",
+        "iso": "krc"
+      },
+      {
+        "glottocode": "sout2694",
+        "name": "Southern Altai",
+        "iso": "alt"
+      },
+      {
+        "glottocode": "kaza1248",
+        "name": "Kazakh",
+        "iso": "kaz"
+      },
+      {
+        "glottocode": "noga1249",
+        "name": "Nogai",
+        "iso": "nog"
+      },
+      {
+        "glottocode": "pech1242",
+        "name": "Pecheneg",
+        "iso": "xpc"
+      },
+      {
+        "glottocode": "chag1247",
+        "name": "Chagatai",
+        "iso": "chg"
+      },
+      {
+        "glottocode": "ainu1251",
+        "name": "Ainu {China}",
+        "iso": "aib"
+      },
+      {
+        "glottocode": "ilit1241",
+        "name": "Ili Turki",
+        "iso": "ili"
+      },
+      {
+        "glottocode": "sout2699",
+        "name": "Southern Uzbek",
+        "iso": "uzs"
+      },
+      {
+        "glottocode": "khor1269",
+        "name": "Khorasan Turkic",
+        "iso": "kmz"
+      },
+      {
+        "glottocode": "qash1240",
+        "name": "Qashqa'i",
+        "iso": "qxq"
+      },
+      {
+        "glottocode": "balk1254",
+        "name": "Rumelian Turkish",
+        "iso": "bgx"
+      },
+      {
+        "glottocode": "oldu1238",
+        "name": "Old Turkic",
+        "iso": "oui"
+      },
+      {
+        "glottocode": "chul1246",
+        "name": "Lower Chulym Turkic",
+        "iso": "clw"
+      },
+      {
+        "glottocode": "shor1247",
+        "name": "Mrassu Shor-Tutal",
+        "iso": "cjs"
+      },
+      {
+        "glottocode": "west2402",
+        "name": "West Yugur",
+        "iso": "ybe"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "source_key": "i:bak",
+      "name": "Bashkir",
+      "iso": "bak",
+      "glottocode": "bash1264",
+      "distinct_language_id": "bash1264",
+      "inventory_symbol_count": 42,
+      "inventory_symbols": [
+        "b",
+        "c",
+        "d",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "æ",
+        "ð",
+        "ø",
+        "ŋ",
+        "ɑ",
+        "ɒ",
+        "ɔ",
+        "ə",
+        "ɛ",
+        "ɟ",
+        "ɡ",
+        "ɨ",
+        "ʁ",
+        "ʂ",
+        "ʃ",
+        "ʊ",
+        "ʐ",
+        "ʒ",
+        "ʔ",
+        "θ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u",
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʂ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:chv",
+      "name": "CHUVASH",
+      "iso": "chv",
+      "glottocode": "chuv1255",
+      "distinct_language_id": "chuv1255",
+      "inventory_symbol_count": 25,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "f",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "w",
+        "x",
+        "y",
+        "z",
+        "ç",
+        "ɑ",
+        "ɕ",
+        "ɡ",
+        "ɯ",
+        "ʃ",
+        "ʒ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:dlg",
+      "name": "Dolgan",
+      "iso": "dlg",
+      "glottocode": "dolg1241",
+      "distinct_language_id": "dolg1241",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "b",
+        "c",
+        "d",
+        "h",
+        "i",
+        "j",
+        "m",
+        "n",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "y",
+        "ŋ",
+        "œ",
+        "ɑ",
+        "ɔ",
+        "ɛ",
+        "ɟ",
+        "ɡ",
+        "ɢ",
+        "ɬ",
+        "ɯ",
+        "ɲ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:gag",
+      "name": "Gagauz",
+      "iso": "gag",
+      "glottocode": "gaga1249",
+      "distinct_language_id": "gaga1249",
+      "inventory_symbol_count": 23,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "v",
+        "x",
+        "y",
+        "z",
+        "æ",
+        "ɕ",
+        "ɡ",
+        "ʊ",
+        "ʑ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:kim",
+      "name": "Tofa",
+      "iso": "kim",
+      "glottocode": "kara1462",
+      "distinct_language_id": "kara1462",
+      "inventory_symbol_count": 18,
+      "inventory_symbols": [
+        "a",
+        "i",
+        "j",
+        "l",
+        "m",
+        "n",
+        "r",
+        "u",
+        "v",
+        "ħ",
+        "ŋ",
+        "ɛ",
+        "ɣ",
+        "ɪ",
+        "ɲ",
+        "ʀ",
+        "ʉ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i",
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʀ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:kdr",
+      "name": "Karaim",
+      "iso": "kdr",
+      "glottocode": "kara1464",
+      "distinct_language_id": "kara1464",
+      "inventory_symbol_count": 19,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "e",
+        "i",
+        "j",
+        "l",
+        "m",
+        "n",
+        "s",
+        "u",
+        "w",
+        "y",
+        "z",
+        "ø",
+        "ɑ",
+        "ɡ",
+        "ɯ",
+        "ɾ",
+        "ʃ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:kaa",
+      "name": "Karakalpak",
+      "iso": "kaa",
+      "glottocode": "kara1467",
+      "distinct_language_id": "kara1467",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "v",
+        "w",
+        "y",
+        "z",
+        "æ",
+        "ŋ",
+        "ɡ",
+        "ʁ",
+        "ʃ",
+        "ʒ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:kjh",
+      "name": "Khakas",
+      "iso": "kjh",
+      "glottocode": "khak1248",
+      "distinct_language_id": "khak1248",
+      "inventory_symbol_count": 27,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "y",
+        "z",
+        "ŋ",
+        "œ",
+        "ɑ",
+        "ɔ",
+        "ɛ",
+        "ɡ",
+        "ɯ",
+        "ʁ",
+        "ʃ",
+        "ʒ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:kir",
+      "name": "Kyrgyz",
+      "iso": "kir",
+      "glottocode": "kirg1245",
+      "distinct_language_id": "kirg1245",
+      "inventory_symbol_count": 33,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "f",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "x",
+        "y",
+        "z",
+        "ø",
+        "ŋ",
+        "ɑ",
+        "ɛ",
+        "ɡ",
+        "ɢ",
+        "ɪ",
+        "ɯ",
+        "ɴ",
+        "ʃ",
+        "ʊ",
+        "β",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a",
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i",
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u",
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v",
+            "β"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ",
+            "ɴ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:kum",
+      "name": "Kumyk",
+      "iso": "kum",
+      "glottocode": "kumy1244",
+      "distinct_language_id": "kumy1244",
+      "inventory_symbol_count": 29,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "d",
+        "f",
+        "h",
+        "i",
+        "j",
+        "l",
+        "m",
+        "n",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "w",
+        "y",
+        "z",
+        "ŋ",
+        "œ",
+        "ɔ",
+        "ɛ",
+        "ɡ",
+        "ɨ",
+        "ʁ",
+        "ʃ",
+        "ʒ",
+        "ʕ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:atv",
+      "name": "Northern Altai",
+      "iso": "atv",
+      "glottocode": "nort2686",
+      "distinct_language_id": "nort2686",
+      "inventory_symbol_count": 18,
+      "inventory_symbols": [
+        "c",
+        "m",
+        "n",
+        "p",
+        "q",
+        "t",
+        "ŋ",
+        "ɑ",
+        "ɒ",
+        "ɕ",
+        "ɛ",
+        "ɞ",
+        "ɣ",
+        "ɪ",
+        "ɲ",
+        "ɵ",
+        "ɶ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ"
+          ]
+        },
+        "l": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "r": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "y": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:uzn",
+      "name": "UZBEK",
+      "iso": "uzn",
+      "glottocode": "nort2690",
+      "distinct_language_id": "nort2690",
+      "inventory_symbol_count": 24,
+      "inventory_symbols": [
+        "b",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "p",
+        "q",
+        "s",
+        "z",
+        "æ",
+        "ŋ",
+        "ɒ",
+        "ɡ",
+        "ɵ",
+        "ɸ",
+        "ɾ",
+        "ʁ",
+        "ʃ",
+        "ʉ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f",
+            "ɸ"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "ɸ"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:azj",
+      "name": "AZERBAIJANI",
+      "iso": "azj",
+      "glottocode": "nort2697",
+      "distinct_language_id": "nort2697",
+      "inventory_symbol_count": 36,
+      "inventory_symbols": [
+        "b",
+        "c",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "x",
+        "y",
+        "z",
+        "æ",
+        "ø",
+        "ɑ",
+        "ɛ",
+        "ɟ",
+        "ɡ",
+        "ɣ",
+        "ɪ",
+        "ɯ",
+        "ɾ",
+        "ʁ",
+        "ʃ",
+        "ʊ",
+        "ʏ",
+        "ʒ",
+        "ʔ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i",
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u",
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:tur",
+      "name": "Turkish",
+      "iso": "tur",
+      "glottocode": "nucl1301",
+      "distinct_language_id": "nucl1301",
+      "inventory_symbol_count": 37,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "u",
+        "v",
+        "y",
+        "z",
+        "æ",
+        "œ",
+        "ɛ",
+        "ɟ",
+        "ɡ",
+        "ɣ",
+        "ɪ",
+        "ɯ",
+        "ɾ",
+        "ʃ",
+        "ʊ",
+        "ʋ",
+        "ʎ",
+        "ʏ",
+        "ʒ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i",
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u",
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v",
+            "ʋ"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l",
+            "ʎ"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:slr",
+      "name": "Salar",
+      "iso": "slr",
+      "glottocode": "sala1264",
+      "distinct_language_id": "sala1264",
+      "inventory_symbol_count": 18,
+      "inventory_symbols": [
+        "f",
+        "h",
+        "i",
+        "l",
+        "m",
+        "n",
+        "r",
+        "u",
+        "v",
+        "x",
+        "y",
+        "æ",
+        "ŋ",
+        "ɑ",
+        "ɕ",
+        "ɯ",
+        "ʂ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ",
+            "ʂ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:azb",
+      "name": "South Azerbaijani",
+      "iso": "azb",
+      "glottocode": "sout2697",
+      "distinct_language_id": "sout2697",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "b",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "o",
+        "p",
+        "s",
+        "u",
+        "v",
+        "x",
+        "y",
+        "z",
+        "æ",
+        "œ",
+        "ɑ",
+        "ɡ",
+        "ɣ",
+        "ɯ",
+        "ɾ",
+        "ʃ",
+        "ʒ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:tat",
+      "name": "Tatar",
+      "iso": "tat",
+      "glottocode": "tata1255",
+      "distinct_language_id": "tata1255",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "f",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "p",
+        "q",
+        "r",
+        "u",
+        "v",
+        "ŋ",
+        "ɒ",
+        "ɔ",
+        "ɕ",
+        "ɛ",
+        "ɡ",
+        "ɨ",
+        "ʁ",
+        "ʃ",
+        "ʉ",
+        "ʑ",
+        "ʒ",
+        "ʔ",
+        "β",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v",
+            "β"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:tuk",
+      "name": "Turkmen",
+      "iso": "tuk",
+      "glottocode": "turk1304",
+      "distinct_language_id": "turk1304",
+      "inventory_symbol_count": 22,
+      "inventory_symbols": [
+        "b",
+        "h",
+        "i",
+        "j",
+        "k",
+        "m",
+        "u",
+        "w",
+        "x",
+        "y",
+        "ð",
+        "ŋ",
+        "œ",
+        "ɑ",
+        "ɔ",
+        "ɛ",
+        "ɡ",
+        "ɯ",
+        "ɾ",
+        "ʃ",
+        "ʒ",
+        "θ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:tyv",
+      "name": "Tuvan",
+      "iso": "tyv",
+      "glottocode": "tuvi1240",
+      "distinct_language_id": "tuvi1240",
+      "inventory_symbol_count": 38,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "x",
+        "y",
+        "z",
+        "ø",
+        "ŋ",
+        "œ",
+        "ɑ",
+        "ɔ",
+        "ɛ",
+        "ɡ",
+        "ɣ",
+        "ɤ",
+        "ɯ",
+        "ɾ",
+        "ʃ",
+        "ʋ",
+        "ʒ",
+        "β",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a",
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v",
+            "ʋ",
+            "β"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:uig",
+      "name": "Uyghur",
+      "iso": "uig",
+      "glottocode": "uigh1240",
+      "distinct_language_id": "uigh1240",
+      "inventory_symbol_count": 29,
+      "inventory_symbols": [
+        "b",
+        "e",
+        "f",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "v",
+        "w",
+        "x",
+        "z",
+        "ø",
+        "ŋ",
+        "ɑ",
+        "ɛ",
+        "ɡ",
+        "ɪ",
+        "ʁ",
+        "ʃ",
+        "ʊ",
+        "ʏ",
+        "ʒ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɑ"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:sah",
+      "name": "Sakha",
+      "iso": "sah",
+      "glottocode": "yaku1245",
+      "distinct_language_id": "yaku1245",
+      "inventory_symbol_count": 33,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "d",
+        "f",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "y",
+        "z",
+        "ħ",
+        "ŋ",
+        "œ",
+        "ɔ",
+        "ɛ",
+        "ɡ",
+        "ɪ",
+        "ɯ",
+        "ɲ",
+        "ʁ",
+        "ʃ",
+        "ʊ",
+        "ʏ",
+        "ʒ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i",
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u",
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    }
+  ],
+  "target_support": [
+    {
+      "target": "a",
+      "canonical": "a",
+      "class": "vowel",
+      "strict_language_count": 18,
+      "strict_language_pct": 85.71428571428571,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 85.71428571428571,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Tofa",
+        "Karaim",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Gagauz",
+        "Karakalpak",
+        "UZBEK"
+      ]
+    },
+    {
+      "target": "e",
+      "canonical": "e",
+      "class": "vowel",
+      "strict_language_count": 17,
+      "strict_language_pct": 80.95238095238095,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 17,
+      "strict_plus_soft_language_pct": 80.95238095238095,
+      "strict_languages": [
+        "Bashkir",
+        "Dolgan",
+        "Tofa",
+        "Karaim",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "CHUVASH",
+        "Gagauz",
+        "Karakalpak",
+        "Salar"
+      ]
+    },
+    {
+      "target": "i",
+      "canonical": "i",
+      "class": "vowel",
+      "strict_language_count": 19,
+      "strict_language_pct": 90.47619047619048,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 90.47619047619048,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Khakas",
+        "Tatar"
+      ]
+    },
+    {
+      "target": "o",
+      "canonical": "o",
+      "class": "vowel",
+      "strict_language_count": 13,
+      "strict_language_pct": 61.904761904761905,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 13,
+      "strict_plus_soft_language_pct": 61.904761904761905,
+      "strict_languages": [
+        "Bashkir",
+        "Dolgan",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "CHUVASH",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Northern Altai",
+        "UZBEK",
+        "Salar"
+      ]
+    },
+    {
+      "target": "u",
+      "canonical": "u",
+      "class": "vowel",
+      "strict_language_count": 18,
+      "strict_language_pct": 85.71428571428571,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 85.71428571428571,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Karakalpak",
+        "Northern Altai",
+        "UZBEK"
+      ]
+    },
+    {
+      "target": "schwa",
+      "canonical": "ə",
+      "class": "vowel",
+      "strict_language_count": 1,
+      "strict_language_pct": 4.761904761904762,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 4.761904761904762,
+      "strict_languages": [
+        "Bashkir"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ]
+    },
+    {
+      "target": "p",
+      "canonical": "p",
+      "class": "consonant",
+      "strict_language_count": 17,
+      "strict_language_pct": 80.95238095238095,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 17,
+      "strict_plus_soft_language_pct": 80.95238095238095,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Tofa",
+        "Karaim",
+        "Salar",
+        "Turkmen"
+      ]
+    },
+    {
+      "target": "b",
+      "canonical": "b",
+      "class": "consonant",
+      "strict_language_count": 18,
+      "strict_language_pct": 85.71428571428571,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 90.47619047619048,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [
+        "Northern Altai"
+      ],
+      "absent_languages": [
+        "Tofa",
+        "Salar"
+      ]
+    },
+    {
+      "target": "t",
+      "canonical": "t",
+      "class": "consonant",
+      "strict_language_count": 12,
+      "strict_language_pct": 57.142857142857146,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 12,
+      "strict_plus_soft_language_pct": 57.142857142857146,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "AZERBAIJANI",
+        "Tuvan",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Tofa",
+        "Karaim",
+        "UZBEK",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Uyghur"
+      ]
+    },
+    {
+      "target": "d",
+      "canonical": "d",
+      "class": "consonant",
+      "strict_language_count": 10,
+      "strict_language_pct": 47.61904761904762,
+      "soft_only_language_count": 4,
+      "strict_plus_soft_language_count": 14,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kumyk",
+        "Turkish",
+        "Sakha"
+      ],
+      "soft_only_languages": [
+        "Kyrgyz",
+        "Northern Altai",
+        "AZERBAIJANI",
+        "Tuvan"
+      ],
+      "absent_languages": [
+        "Tofa",
+        "UZBEK",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Uyghur"
+      ]
+    },
+    {
+      "target": "k",
+      "canonical": "k",
+      "class": "consonant",
+      "strict_language_count": 15,
+      "strict_language_pct": 71.42857142857143,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 15,
+      "strict_plus_soft_language_pct": 71.42857142857143,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Gagauz",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Dolgan",
+        "Tofa",
+        "Karaim",
+        "Kumyk",
+        "Northern Altai",
+        "Salar"
+      ]
+    },
+    {
+      "target": "g",
+      "canonical": "ɡ",
+      "class": "consonant",
+      "strict_language_count": 18,
+      "strict_language_pct": 85.71428571428571,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 85.71428571428571,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Tofa",
+        "Northern Altai",
+        "Salar"
+      ]
+    },
+    {
+      "target": "m",
+      "canonical": "m",
+      "class": "consonant",
+      "strict_language_count": 21,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 21,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "n",
+      "canonical": "n",
+      "class": "consonant",
+      "strict_language_count": 16,
+      "strict_language_pct": 76.19047619047619,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 76.19047619047619,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "Tuvan",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "UZBEK",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Uyghur"
+      ]
+    },
+    {
+      "target": "f",
+      "canonical": "f",
+      "class": "consonant",
+      "strict_language_count": 16,
+      "strict_language_pct": 76.19047619047619,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 76.19047619047619,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Gagauz",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Dolgan",
+        "Tofa",
+        "Karaim",
+        "Northern Altai",
+        "Turkmen"
+      ]
+    },
+    {
+      "target": "v",
+      "canonical": "v",
+      "class": "consonant",
+      "strict_language_count": 14,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 5,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 90.47619047619048,
+      "strict_languages": [
+        "Bashkir",
+        "Gagauz",
+        "Tofa",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [
+        "CHUVASH",
+        "Karaim",
+        "Kumyk",
+        "UZBEK",
+        "Turkmen"
+      ],
+      "absent_languages": [
+        "Dolgan",
+        "Northern Altai"
+      ]
+    },
+    {
+      "target": "s",
+      "canonical": "s",
+      "class": "consonant",
+      "strict_language_count": 16,
+      "strict_language_pct": 76.19047619047619,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 76.19047619047619,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Tofa",
+        "Northern Altai",
+        "Salar",
+        "Tatar",
+        "Turkmen"
+      ]
+    },
+    {
+      "target": "z",
+      "canonical": "z",
+      "class": "consonant",
+      "strict_language_count": 15,
+      "strict_language_pct": 71.42857142857143,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 76.19047619047619,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Gagauz",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [
+        "Dolgan"
+      ],
+      "absent_languages": [
+        "Tofa",
+        "Northern Altai",
+        "Salar",
+        "Tatar",
+        "Turkmen"
+      ]
+    },
+    {
+      "target": "sh",
+      "canonical": "ʃ",
+      "class": "consonant",
+      "strict_language_count": 19,
+      "strict_language_pct": 90.47619047619048,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 20,
+      "strict_plus_soft_language_pct": 95.23809523809524,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Gagauz",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [
+        "Dolgan"
+      ],
+      "absent_languages": [
+        "Tofa"
+      ]
+    },
+    {
+      "target": "l",
+      "canonical": "l",
+      "class": "consonant",
+      "strict_language_count": 18,
+      "strict_language_pct": 85.71428571428571,
+      "soft_only_language_count": 2,
+      "strict_plus_soft_language_count": 20,
+      "strict_plus_soft_language_pct": 95.23809523809524,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [
+        "Dolgan",
+        "Turkmen"
+      ],
+      "absent_languages": [
+        "Northern Altai"
+      ]
+    },
+    {
+      "target": "r",
+      "canonical": "r",
+      "class": "consonant",
+      "strict_language_count": 20,
+      "strict_language_pct": 95.23809523809524,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 20,
+      "strict_plus_soft_language_pct": 95.23809523809524,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Northern Altai"
+      ]
+    },
+    {
+      "target": "y",
+      "canonical": "j",
+      "class": "glide",
+      "strict_language_count": 19,
+      "strict_language_pct": 90.47619047619048,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 90.47619047619048,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Karaim",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Northern Altai",
+        "Salar"
+      ]
+    },
+    {
+      "target": "w",
+      "canonical": "w",
+      "class": "glide",
+      "strict_language_count": 7,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 7,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Bashkir",
+        "CHUVASH",
+        "Karaim",
+        "Karakalpak",
+        "Kumyk",
+        "Turkmen",
+        "Uyghur"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Dolgan",
+        "Gagauz",
+        "Tofa",
+        "Khakas",
+        "Kyrgyz",
+        "Northern Altai",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Tuvan",
+        "Sakha"
+      ]
+    },
+    {
+      "target": "h",
+      "canonical": "h",
+      "class": "consonant",
+      "strict_language_count": 14,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 14,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Bashkir",
+        "Dolgan",
+        "Gagauz",
+        "Karakalpak",
+        "Kumyk",
+        "UZBEK",
+        "AZERBAIJANI",
+        "Turkish",
+        "Salar",
+        "South Azerbaijani",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "CHUVASH",
+        "Tofa",
+        "Karaim",
+        "Khakas",
+        "Kyrgyz",
+        "Northern Altai",
+        "Sakha"
+      ]
+    },
+    {
+      "target": "ng",
+      "canonical": "ŋ",
+      "class": "consonant",
+      "strict_language_count": 15,
+      "strict_language_pct": 71.42857142857143,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 15,
+      "strict_plus_soft_language_pct": 71.42857142857143,
+      "strict_languages": [
+        "Bashkir",
+        "Dolgan",
+        "Tofa",
+        "Karakalpak",
+        "Khakas",
+        "Kyrgyz",
+        "Kumyk",
+        "Northern Altai",
+        "UZBEK",
+        "Salar",
+        "Tatar",
+        "Turkmen",
+        "Tuvan",
+        "Uyghur",
+        "Sakha"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "CHUVASH",
+        "Gagauz",
+        "Karaim",
+        "AZERBAIJANI",
+        "Turkish",
+        "South Azerbaijani"
+      ]
+    }
+  ],
+  "candidate_support": {
+    "current_simple_21": {
+      "target_count": 21,
+      "mean_strict_missing": 5.238095238095238,
+      "mean_accent_tolerant_missing": 4.571428571428571,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [
+            "e",
+            "o",
+            "schwa",
+            "v"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "schwa",
+            "k",
+            "f",
+            "v",
+            "z",
+            "sh",
+            "l"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "schwa",
+            "k",
+            "f",
+            "v"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "schwa"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "o",
+            "schwa",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "o",
+            "schwa",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "z",
+            "sh"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "o",
+            "schwa",
+            "p",
+            "t",
+            "k",
+            "f",
+            "v"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "o",
+            "schwa",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "u",
+            "schwa"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "u",
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i",
+            "schwa"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [
+            "schwa",
+            "d"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "schwa",
+            "k",
+            "v"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "schwa",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "o",
+            "u",
+            "schwa",
+            "b",
+            "d",
+            "k",
+            "g",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "o",
+            "u",
+            "schwa",
+            "k",
+            "g",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "o",
+            "u",
+            "schwa",
+            "t",
+            "d",
+            "n",
+            "v"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "a",
+            "o",
+            "u",
+            "schwa",
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [
+            "schwa",
+            "d"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [
+            "schwa",
+            "t"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "schwa",
+            "t"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "e",
+            "o",
+            "schwa",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "z"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "schwa",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [
+            "schwa",
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "schwa",
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "schwa",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "i",
+            "schwa",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "schwa",
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "schwa",
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [
+            "schwa",
+            "d"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [
+            "schwa",
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "schwa",
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [
+            "schwa"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "no_schwa_20": {
+      "target_count": 20,
+      "mean_strict_missing": 4.285714285714286,
+      "mean_accent_tolerant_missing": 3.619047619047619,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [
+            "e",
+            "o",
+            "v"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "e",
+            "o"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "k",
+            "f",
+            "v",
+            "z",
+            "sh",
+            "l"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "k",
+            "f",
+            "v"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a",
+            "e",
+            "o"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "z",
+            "sh"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f",
+            "v"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "i"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "k",
+            "v"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "o",
+            "u",
+            "b",
+            "d",
+            "k",
+            "g",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "o",
+            "u",
+            "k",
+            "g",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n",
+            "v"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [
+            "t"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "t"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "z"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "latin17": {
+      "target_count": 17,
+      "mean_strict_missing": 3.5714285714285716,
+      "mean_accent_tolerant_missing": 3.238095238095238,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [
+            "e",
+            "o"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "e",
+            "o"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "k",
+            "f",
+            "l"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "k",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a",
+            "e",
+            "o"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "i"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "k"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "o",
+            "u",
+            "b",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "o",
+            "u",
+            "k",
+            "g",
+            "f",
+            "s",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [
+            "t"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "t"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s",
+            "l"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "latin17_yw": {
+      "target_count": 19,
+      "mean_strict_missing": 4.333333333333333,
+      "mean_accent_tolerant_missing": 4.0,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [
+            "e",
+            "o"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "e",
+            "o"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "k",
+            "f",
+            "l",
+            "w"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "k",
+            "f",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "w"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "w"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [
+            "d",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "k"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "o",
+            "u",
+            "b",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "l",
+            "r",
+            "y",
+            "w"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "o",
+            "u",
+            "k",
+            "g",
+            "f",
+            "s",
+            "l",
+            "r",
+            "y",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [
+            "d",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [
+            "t",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "t",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "y",
+            "w"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "y",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s",
+            "w"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s",
+            "l"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [
+            "d",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [
+            "w"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "lexical22_yw": {
+      "target_count": 22,
+      "mean_strict_missing": 5.0476190476190474,
+      "mean_accent_tolerant_missing": 4.380952380952381,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [
+            "e",
+            "o",
+            "v"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "e",
+            "o"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "k",
+            "f",
+            "v",
+            "z",
+            "sh",
+            "l",
+            "w"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "k",
+            "f",
+            "v",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "w"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "z",
+            "sh",
+            "w"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "f",
+            "s",
+            "z",
+            "sh",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f",
+            "v"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "o",
+            "p",
+            "t",
+            "k",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [
+            "d",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "k",
+            "v"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "o",
+            "u",
+            "b",
+            "d",
+            "k",
+            "g",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r",
+            "y",
+            "w"
+          ],
+          "strict_missing_count": 14,
+          "accent_tolerant_missing": [
+            "o",
+            "u",
+            "k",
+            "g",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r",
+            "y",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n",
+            "v",
+            "w"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "a",
+            "o",
+            "u",
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [
+            "d",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [
+            "t",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "t",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "z",
+            "y",
+            "w"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "p",
+            "b",
+            "t",
+            "d",
+            "k",
+            "g",
+            "s",
+            "z",
+            "y",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 12
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "w"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "i",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "v",
+            "s",
+            "z",
+            "l"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "p",
+            "t",
+            "d",
+            "n",
+            "f",
+            "s",
+            "z"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [
+            "d",
+            "w"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [
+            "w"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "w"
+          ],
+          "accent_tolerant_missing_count": 1
+        }
+      ]
+    },
+    "grammar6": {
+      "target_count": 6,
+      "mean_strict_missing": 0.7142857142857143,
+      "mean_accent_tolerant_missing": 0.7142857142857143,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "a"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "s"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "i"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "u",
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "u",
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "s"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "s"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar8": {
+      "target_count": 8,
+      "mean_strict_missing": 1.1904761904761905,
+      "mean_accent_tolerant_missing": 1.1904761904761905,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "k"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "a"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "p",
+            "k",
+            "s"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "p",
+            "k",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "p",
+            "k"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "p",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "i"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "k"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "u",
+            "k",
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "u",
+            "k",
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "p",
+            "k",
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "p",
+            "k",
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "s"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "p",
+            "s"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "p",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar10": {
+      "target_count": 10,
+      "mean_strict_missing": 1.4761904761904763,
+      "mean_accent_tolerant_missing": 1.4761904761904763,
+      "per_language": [
+        {
+          "source_key": "i:bak",
+          "name": "Bashkir",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:chv",
+          "name": "CHUVASH",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:dlg",
+          "name": "Dolgan",
+          "strict_missing": [
+            "k"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:gag",
+          "name": "Gagauz",
+          "strict_missing": [
+            "a"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "a"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kim",
+          "name": "Tofa",
+          "strict_missing": [
+            "p",
+            "k",
+            "s"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "p",
+            "k",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kdr",
+          "name": "Karaim",
+          "strict_missing": [
+            "p",
+            "k"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "p",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kaa",
+          "name": "Karakalpak",
+          "strict_missing": [
+            "a",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kjh",
+          "name": "Khakas",
+          "strict_missing": [
+            "i"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "i"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:kir",
+          "name": "Kyrgyz",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:kum",
+          "name": "Kumyk",
+          "strict_missing": [
+            "k"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "k"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:atv",
+          "name": "Northern Altai",
+          "strict_missing": [
+            "u",
+            "k",
+            "s",
+            "r",
+            "y"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "u",
+            "k",
+            "s",
+            "r",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:uzn",
+          "name": "UZBEK",
+          "strict_missing": [
+            "a",
+            "u",
+            "n"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "a",
+            "u",
+            "n"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:azj",
+          "name": "AZERBAIJANI",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tur",
+          "name": "Turkish",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:slr",
+          "name": "Salar",
+          "strict_missing": [
+            "p",
+            "k",
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "p",
+            "k",
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:azb",
+          "name": "South Azerbaijani",
+          "strict_missing": [
+            "n"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "n"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tat",
+          "name": "Tatar",
+          "strict_missing": [
+            "i",
+            "n",
+            "s"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "i",
+            "n",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:tuk",
+          "name": "Turkmen",
+          "strict_missing": [
+            "p",
+            "n",
+            "s"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "p",
+            "n",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:tyv",
+          "name": "Tuvan",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:uig",
+          "name": "Uyghur",
+          "strict_missing": [
+            "n"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "n"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:sah",
+          "name": "Sakha",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    }
+  }
+}
