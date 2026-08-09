@@ -78,6 +78,18 @@
     {
       "id": "finite_verb_morphotactics",
       "decision": "Every ordinary finite verb has the canonical morphotactic order root + TAM + person vowel + optional plural N. Person vowels are i (first), u (second), a (third); the plural morphophoneme N follows the person vowel when the subject is plural, yielding in, un, an. TAM material, when present, always precedes the person vowel and N."
+    },
+    {
+      "id": "derivational_place_field_ia",
+      "decision": "Keep invariant derivational suffix -ia for PLACE / INSTITUTION / FIELD / DOMAIN associated with a lexical base. Under current phonology it is canonically pronounced /i.a/ as hiatus, never /ja/ unless j is explicitly written. Examples are formed productively from current roots; legacy facia/docia are obsolete because their roots were replaced, not because -ia is invalid."
+    },
+    {
+      "id": "indefinite_singular_uno",
+      "decision": "There are no obligatory articles. When explicit indefinite singularity is useful, reuse the cardinal numeral uno directly as the optional pre-nominal indefinite determiner: uno dom = 'one house / a house'. No separate apocopated article un is canonical; bare nouns remain valid when definiteness/singularity is contextually clear."
+    },
+    {
+      "id": "question_words_kom_ker",
+      "decision": "Use kom as the canonical WH-word HOW and ker as the canonical WH-word WHY. The earlier WHY form kur is retired. This keeps kom available for the question system because the Latin cum/com- lexical root is now kun, while the Latin cura lexical root is now kurar."
     }
   ]
 }

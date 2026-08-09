@@ -16,7 +16,7 @@ def main() -> None:
     entries = {item["form"]: item for item in data["entries"]}
     expected = {
         "ager", "kad", "kap", "sentrum", "sert", "sirkul", "siv", "klar",
-        "kom", "kred", "kur", "dek", "dik", "dirig", "dots", "fak",
+        "kun", "kom", "ker", "kred", "kurar", "dek", "dik", "dirig", "dots", "fak",
         "lok", "spets", "stru", "vok", "kin", "nation", "major", "ekwal",
     }
     assert expected <= entries.keys(), expected - entries.keys()
@@ -32,7 +32,7 @@ def main() -> None:
     mapping = {
         "act":"ager", "cad":"kad", "cap":"kap", "centr":"sentrum",
         "cert":"sert", "circul":"sirkul", "civ":"siv", "clar":"klar",
-        "com":"kom", "cred":"kred", "cur":"kur", "dec":"dek",
+        "com":"kun", "cred":"kred", "cur":"kurar", "dec":"dek",
         "dict":"dik", "direct":"dirig", "doc":"dots", "fac":"fak",
         "loc":"lok", "spec":"spets", "struct":"stru", "voc":"vok",
         "cin":"kin", "nacion":"nation",
@@ -42,9 +42,11 @@ def main() -> None:
         assert f"`{newform}`" in audit, newform
 
     full_audit = json.loads((ROOT / "research" / "lexicon" / "legacy_full_lexicon_audit.json").read_text(encoding="utf-8"))
-    collisions = {item["legacy_form"] for item in full_audit["collisions"]}
-    assert {"kom", "kur", "un"} <= collisions
+    assert full_audit["collisions"] == []
     all_forms = {item["legacy_form"]: item for item in full_audit["all_forms"]}
+    assert all_forms["kom"]["status"] == "valid_orthography"
+    assert all_forms["kur"]["replacement"] == "ker"
+    assert all_forms["un"]["replacement"] == "uno"
     assert all_forms["ekual"]["replacement"] == "ekwal"
     assert all_forms["cin"]["replacement"] == "kin"
 

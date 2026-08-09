@@ -5,60 +5,26 @@
   "source_sha256": "78ea47efca711a183d5a0b4bdea9024dc1992caed7a7b1a2ef9278520ee66951",
   "scope": "Top-level legacy grammar markdown files excluding phonology/README/CLAUDE; every token-like form found in inline code spans is audited, including inflected and illustrative GlottoDelta forms. core_inventory is a curated subset of lexical and grammatical base forms.",
   "summary": {
-    "valid_orthography": 267,
+    "valid_orthography": 268,
     "needs_revision": 65,
     "valid_check_hiatus": 17,
-    "confirmed_replacement": 5,
+    "confirmed_replacement": 6,
     "obsolete_person_value": 3,
     "obsolete_morphology": 9,
     "review_pronunciation": 3,
-    "collision": 3,
-    "confirmed_reinterpretation": 1
+    "confirmed_reinterpretation": 1,
+    "obsolete_legacy_reference": 1
   },
   "core_summary": {
-    "valid_orthography": 70,
+    "valid_orthography": 71,
     "valid_check_hiatus": 3,
-    "confirmed_replacement": 5,
+    "confirmed_replacement": 6,
     "obsolete_person_value": 3,
-    "collision": 3,
     "confirmed_reinterpretation": 1,
+    "obsolete_legacy_reference": 1,
     "obsolete_morphology": 1
   },
-  "collisions": [
-    {
-      "legacy_form": "kom",
-      "status": "collision",
-      "replacement": null,
-      "issues": [
-        "collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-'"
-      ],
-      "sources": [
-        "questions.md"
-      ]
-    },
-    {
-      "legacy_form": "kur",
-      "status": "collision",
-      "replacement": null,
-      "issues": [
-        "collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure'"
-      ],
-      "sources": [
-        "questions.md"
-      ]
-    },
-    {
-      "legacy_form": "un",
-      "status": "collision",
-      "replacement": null,
-      "issues": [
-        "collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun"
-      ],
-      "sources": [
-        "articles.md"
-      ]
-    }
-  ],
+  "collisions": [],
   "core_inventory": [
     {
       "legacy_form": "a",
@@ -407,10 +373,10 @@
     },
     {
       "legacy_form": "kom",
-      "status": "collision",
+      "status": "valid_orthography",
       "replacement": null,
       "issues": [
-        "collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-'"
+        "canonical WH-word HOW retained; Latin cum/com- lexical root moved to kun"
       ],
       "sources": [
         "questions.md"
@@ -455,10 +421,10 @@
     },
     {
       "legacy_form": "kur",
-      "status": "collision",
-      "replacement": null,
+      "status": "confirmed_replacement",
+      "replacement": "ker",
       "issues": [
-        "collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure'"
+        "legacy WH-word WHY replaced by ker; Latin cura lexical root is kurar"
       ],
       "sources": [
         "questions.md"
@@ -927,10 +893,10 @@
     },
     {
       "legacy_form": "un",
-      "status": "collision",
-      "replacement": null,
+      "status": "obsolete_legacy_reference",
+      "replacement": "uno",
       "issues": [
-        "collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun"
+        "no separate indefinite article un is canonical; optional indefinite singular determiner is uno; un remains 2PL person form"
       ],
       "sources": [
         "articles.md"
@@ -2801,10 +2767,10 @@
     },
     {
       "legacy_form": "kom",
-      "status": "collision",
+      "status": "valid_orthography",
       "replacement": null,
       "issues": [
-        "collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-'"
+        "canonical WH-word HOW retained; Latin cum/com- lexical root moved to kun"
       ],
       "sources": [
         "questions.md"
@@ -2917,10 +2883,10 @@
     },
     {
       "legacy_form": "kur",
-      "status": "collision",
-      "replacement": null,
+      "status": "confirmed_replacement",
+      "replacement": "ker",
       "issues": [
-        "collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure'"
+        "legacy WH-word WHY replaced by ker; Latin cura lexical root is kurar"
       ],
       "sources": [
         "questions.md"
@@ -4569,10 +4535,10 @@
     },
     {
       "legacy_form": "un",
-      "status": "collision",
-      "replacement": null,
+      "status": "obsolete_legacy_reference",
+      "replacement": "uno",
       "issues": [
-        "collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun"
+        "no separate indefinite article un is canonical; optional indefinite singular determiner is uno; un remains 2PL person form"
       ],
       "sources": [
         "articles.md"
