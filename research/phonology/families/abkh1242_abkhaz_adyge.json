@@ -6,7 +6,8 @@
     "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
     "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
     "cross_family_F": "not defined or calculated by this script",
-    "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability"
+    "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
+    "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart"
   },
   "unit": {
     "top_level_glottocode": "abkh1242",
@@ -20,6 +21,14 @@
     "distinct_relevant_language_count": 3,
     "non_language_source_record_count": 0,
     "non_language_source_records": []
+  },
+  "analysis_order": {
+    "rank": 23,
+    "speaker_exposure_estimate": 1573826.0,
+    "speaker_estimate_coverage_pct": 100.0,
+    "languages_with_speaker_estimate": 3,
+    "sample_distinct_language_count": 3,
+    "note": "analysis order only; not a genealogical F weight"
   },
   "sample": {
     "source_record_count": 3,

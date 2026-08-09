@@ -9,9 +9,12 @@
 - Macroarea metadata: **Eurasia** (descriptive only; it does not determine weighting).
 - Frozen GlottoDelta sample: **3** distinct relevant languages from **3** source records.
 - Glottolog 5.3 language-member coverage: **3/5 = 60.0%**.
+- Population-based analysis order: **rank 23**; frozen CLDR speaker-exposure proxy **1,573,826** with **100.0%** of sampled languages carrying an estimate.
+- Population rank controls **analysis order only**; it does not determine genealogical `F` weight.
 - Target support below is the unweighted share of sampled distinct languages attesting the target realization family.
 - `strict+soft` additionally allows only the soft-merger fallbacks already defined in `phoneme_targets.json`.
 - This report deliberately **does not define or calculate the eventual cross-family F score**.
+- The frozen baseline contains **111 tracked phoneme cells**, not complete upstream PHOIBLE inventories; an absent match may therefore reflect a nearby segment outside the tracked chart.
 
 ## Family membership coverage
 
@@ -76,9 +79,10 @@ Mean missing target categories per sampled language. The tolerant column applies
 
 ## Reading for GlottoDelta auxiliary-language design
 
-- Strictly universal in this three-language sample: **b, d, m, n, f, s, z, sh, r, y, w**.
+- Strictly universal in this sampled family set: **b, d, m, n, f, s, z, sh, r, y, w**.
 - Partial strict support: **a, e, schwa, p, t, k, g, v, l, h**.
 - Zero strict support: **i, o, u, ng**.
-- The strongest local warning is the vowel subsystem: `a` 2/3, `e` 1/3, `i` 0/3, `o` 0/3, `u` 0/3, `schwa` 2/3.
-- This is a **dispersion warning, not an automatic veto**. The project-wide P/L evidence and already-confirmed design constraints remain separate evidence, and phoneme inventories do not enumerate every producible allophone.
+- Lowest strict-support targets in this family sample: `i` 0/3 (0.0%), `ng` 0/3 (0.0%), `o` 0/3 (0.0%), `u` 0/3 (0.0%), `e` 1/3 (33.3%).
+- Vowel subsystem: `a` 2/3, `e` 1/3, `i` 0/3, `o` 0/3, `u` 0/3, `schwa` 2/3.
+- This is a **dispersion warning, not an automatic veto**. The project-wide P/L evidence and already-confirmed design constraints remain separate evidence, and the 111-cell baseline does not enumerate every upstream PHOIBLE segment or producible allophone.
 - Before turning this family result into the final cross-family `F` metric, the aggregation rule should be fixed consistently for all families; this report intentionally preserves the raw within-family evidence needed for that choice.

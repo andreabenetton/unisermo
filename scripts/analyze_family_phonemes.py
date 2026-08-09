@@ -25,6 +25,7 @@ TARGETS_PATH = RESEARCH / "phoneme_targets.json"
 CANDIDATES_PATH = RESEARCH / "candidates.json"
 TREE_PATH = RESEARCH / "vendor" / "glottolog-5.3" / "tree_glottolog_newick.txt"
 FAMILIES_DIR = RESEARCH / "families"
+POPULATION_ORDER = RESEARCH / "family_population_order.json"
 
 LANGUAGE_LABEL_RE = re.compile(
     r"'((?:[^']|'')+?) \[([a-z0-9]{8})\](?:\[([a-z0-9]{3})\])?-l-'"
@@ -216,6 +217,28 @@ def analyze(unit_id: str) -> dict:
     represented_members = [m for m in members if m["glottocode"] in represented_language_ids]
     absent_members = [m for m in members if m["glottocode"] not in represented_language_ids]
 
+    analysis_order = None
+    if POPULATION_ORDER.exists():
+        order_payload = load_json(POPULATION_ORDER)
+        order_row = next(
+            (x for x in order_payload.get("ranked_units", []) if x["top_level_glottocode"] == unit_id),
+            None,
+        )
+        if order_row is None:
+            order_row = next(
+                (x for x in order_payload.get("unranked_units", []) if x["top_level_glottocode"] == unit_id),
+                None,
+            )
+        if order_row is not None:
+            analysis_order = {
+                "rank": order_row.get("analysis_order_rank"),
+                "speaker_exposure_estimate": order_row.get("speaker_exposure_estimate"),
+                "speaker_estimate_coverage_pct": order_row.get("speaker_estimate_coverage_pct"),
+                "languages_with_speaker_estimate": order_row.get("languages_with_speaker_estimate"),
+                "sample_distinct_language_count": order_row.get("sample_distinct_language_count"),
+                "note": "analysis order only; not a genealogical F weight",
+            }
+
     candidate_results = {
         name: candidate_metrics(meta["targets"], language_rows, inventories, targets, soft_mergers)
         for name, meta in candidates.items()
@@ -230,8 +253,10 @@ def analyze(unit_id: str) -> dict:
             "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
             "cross_family_F": "not defined or calculated by this script",
             "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
+            "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart",
         },
         "unit": unit,
+        "analysis_order": analysis_order,
         "sample": {
             "source_record_count": len(mappings),
             "distinct_language_count": len(language_rows),
@@ -256,6 +281,7 @@ def fmt_pct(value: float) -> str:
 def render_markdown(result: dict) -> str:
     unit = result["unit"]
     sample = result["sample"]
+    order = result.get("analysis_order")
     lines = [
         f"# Family phoneme study — {unit['family_name']}",
         "",
@@ -268,9 +294,12 @@ def render_markdown(result: dict) -> str:
         f"- Macroarea metadata: **{', '.join(unit['macroareas'])}** (descriptive only; it does not determine weighting).",
         f"- Frozen GlottoDelta sample: **{sample['distinct_language_count']}** distinct relevant languages from **{sample['source_record_count']}** source records.",
         f"- Glottolog 5.3 language-member coverage: **{sample['represented_glottolog_language_member_count']}/{sample['glottolog_language_member_count']} = {fmt_pct(sample['glottolog_language_member_coverage_pct'])}**.",
+        *(([f"- Population-based analysis order: **rank {order['rank']}**; frozen CLDR speaker-exposure proxy **{order['speaker_exposure_estimate']:,.0f}** with **{fmt_pct(order['speaker_estimate_coverage_pct'])}** of sampled languages carrying an estimate."] if order and order.get("rank") is not None else ["- Population-based analysis order: **unranked** because the frozen CLDR-derived sample has no usable speaker estimate for this unit."]) if order else []),
+        "- Population rank controls **analysis order only**; it does not determine genealogical `F` weight.",
         "- Target support below is the unweighted share of sampled distinct languages attesting the target realization family.",
         "- `strict+soft` additionally allows only the soft-merger fallbacks already defined in `phoneme_targets.json`.",
         "- This report deliberately **does not define or calculate the eventual cross-family F score**.",
+        "- The frozen baseline contains **111 tracked phoneme cells**, not complete upstream PHOIBLE inventories; an absent match may therefore reflect a nearby segment outside the tracked chart.",
         "",
         "## Family membership coverage",
         "",
@@ -328,16 +357,21 @@ def render_markdown(result: dict) -> str:
     zero = [x["target"] for x in result["target_support"] if x["strict_language_count"] == 0]
     partial = [x["target"] for x in result["target_support"] if 0 < x["strict_language_count"] < sample["distinct_language_count"]]
     vowels = [x for x in result["target_support"] if x["class"] == "vowel"]
+    weakest = sorted(
+        result["target_support"],
+        key=lambda x: (x["strict_language_pct"], x["target"]),
+    )[:5]
 
     lines.extend([
         "",
         "## Reading for GlottoDelta auxiliary-language design",
         "",
-        f"- Strictly universal in this three-language sample: **{', '.join(full) or 'none'}**.",
+        f"- Strictly universal in this sampled family set: **{', '.join(full) or 'none'}**.",
         f"- Partial strict support: **{', '.join(partial) or 'none'}**.",
         f"- Zero strict support: **{', '.join(zero) or 'none'}**.",
-        "- The strongest local warning is the vowel subsystem: " + ", ".join(f"`{x['target']}` {x['strict_language_count']}/{sample['distinct_language_count']}" for x in vowels) + ".",
-        "- This is a **dispersion warning, not an automatic veto**. The project-wide P/L evidence and already-confirmed design constraints remain separate evidence, and phoneme inventories do not enumerate every producible allophone.",
+        "- Lowest strict-support targets in this family sample: " + ", ".join(f"`{x['target']}` {x['strict_language_count']}/{sample['distinct_language_count']} ({fmt_pct(x['strict_language_pct'])})" for x in weakest) + ".",
+        "- Vowel subsystem: " + ", ".join(f"`{x['target']}` {x['strict_language_count']}/{sample['distinct_language_count']}" for x in vowels) + ".",
+        "- This is a **dispersion warning, not an automatic veto**. The project-wide P/L evidence and already-confirmed design constraints remain separate evidence, and the 111-cell baseline does not enumerate every upstream PHOIBLE segment or producible allophone.",
         "- Before turning this family result into the final cross-family `F` metric, the aggregation rule should be fixed consistently for all families; this report intentionally preserves the raw within-family evidence needed for that choice.",
         "",
     ])
