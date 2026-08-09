@@ -1,19 +1,21 @@
 # Phonology research workspace
 
 This directory contains both confirmed design constraints and continuing phoneme
-research. Confirmed design decisions are recorded in `confirmed_decisions.json`. Research experiments
-remain separated until selected, and none of this tooling changes GlottoDelta production
-semantics.
+research. Confirmed design decisions are recorded in `confirmed_decisions.json`, and the
+current normative sound-system specification is `alphabet_and_phonology_revised.md`.
+Research experiments remain separated until selected, and none of this tooling changes
+GlottoDelta production semantics.
 
 ## Files
 
 - `confirmed_decisions.json` — project-owner-confirmed phonological design constraints.
+- `alphabet_and_phonology_revised.md` — current normative alphabet, canonical phonemes, accent/coalescence rules, and root-adaptation policy.
 - `phoneme_targets.json` — canonical target labels plus acceptable-realization
   families used by the analysis.
 - `candidates.json` — inventory candidates under comparison.
 - `latin_roots_seed.json` — provisional Latin/international root pressure test.
 - `results.json` — generated quantitative results.
-- `phoneme_selection.md` — generated human-readable working report.
+- `phoneme_selection.md` — generated historical/working quantitative report; its investigated candidates may include sounds later excluded by `confirmed_decisions.json`.
 - `person_marker_study.md` — selected person/number morphology and rationale.
 - `person_number_results.json` — generated person/number coverage and layout metrics.
 - `optional_gender_study.md` — confirmed optional masculine/feminine referential-specificity study and `ano/ane` resolution.
