@@ -44,18 +44,19 @@ participial/resultative function above.
 Existing legacy examples of abstract `-it` must therefore be migrated when the
 abstract-derivation system is finalized.
 
-## 4. Open proposal for abstract nouns: `-itat`
+## 4. Productive abstract-quality suffix `-itat`
 
-This section is **not canonical**. A strong candidate for the displaced
-abstract-quality suffix is **`-itat`**, based on Latin `-itas, -itatis` and its
-Romance descendants.
+GlottoDelta uses invariant **`-itat`** to derive abstract qualities, states, and
+properties from suitable lexical bases. The form continues the Latin
+`-itas, -itatis` family and its Romance descendants while remaining clearly
+distinct from participial/resultative `-it`.
 
-Possible examples:
+Canonical examples:
 
 - `bon` -> `bonitat` = bonta / goodness
 - `klar` -> `klaritat` = chiarezza / clarity
 - `uman` -> `umanitat` = umanita / humanity
 
-Advantages of `-itat` are that it is clearly distinct from participial `-it`,
-retains strong Neo-Latin recognizability, and gives abstract nouns a uniform
-shape. It remains a proposal until explicitly confirmed.
+The division of labor is therefore fixed: **`-it` = participial/resultative**,
+while **`-itat` = abstract quality/state/property**. This also makes forms such
+as `umanitat` fully regular rather than lexical exceptions.

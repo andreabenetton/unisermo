@@ -4,12 +4,124 @@
   "status": "confirmed_core_lexicon",
   "entries": [
     {
-      "form": "kin",
-      "category": "numeral",
-      "meaning_it": "cinque",
-      "meaning_en": "five",
-      "source": "Latin quinque / Romance cinque-cinq family",
-      "decision": "Canonical numeral 5. Replaces legacy cin, which depended on removed letter c."
+      "form": "ager",
+      "category": "root",
+      "meaning_it": "agire",
+      "meaning_en": "act; do",
+      "source": "Latin agere",
+      "decision": "Canonical replacement for legacy act."
+    },
+    {
+      "form": "kad",
+      "category": "root",
+      "meaning_it": "cadere",
+      "meaning_en": "fall",
+      "source": "Latin cadere",
+      "decision": "Canonical replacement for legacy cad."
+    },
+    {
+      "form": "kap",
+      "category": "root",
+      "meaning_it": "prendere; catturare",
+      "meaning_en": "take; capture",
+      "source": "Latin capere",
+      "decision": "Canonical replacement for legacy cap."
+    },
+    {
+      "form": "sentrum",
+      "category": "root",
+      "meaning_it": "centro; centrale",
+      "meaning_en": "center; central",
+      "source": "Latin centrum",
+      "decision": "Canonical replacement for legacy centr."
+    },
+    {
+      "form": "sert",
+      "category": "root",
+      "meaning_it": "certo; certezza",
+      "meaning_en": "certain; certainty",
+      "source": "Latin certus",
+      "decision": "Canonical replacement for legacy cert."
+    },
+    {
+      "form": "sirkul",
+      "category": "root",
+      "meaning_it": "cerchio; circolare",
+      "meaning_en": "circle; circular",
+      "source": "Latin circulus",
+      "decision": "Canonical replacement for legacy circul. User-supplied sircul is normalized to sirkul because c is not in the canonical alphabet."
+    },
+    {
+      "form": "siv",
+      "category": "root",
+      "meaning_it": "cittadino; civile",
+      "meaning_en": "citizen; civic",
+      "source": "Latin civis",
+      "decision": "Canonical replacement for legacy civ."
+    },
+    {
+      "form": "klar",
+      "category": "root",
+      "meaning_it": "chiaro; chiarezza",
+      "meaning_en": "clear; clarity",
+      "source": "Latin clarus",
+      "decision": "Canonical replacement for legacy clar."
+    },
+    {
+      "form": "kom",
+      "category": "root",
+      "meaning_it": "con-; insieme",
+      "meaning_en": "with; together",
+      "source": "Latin cum / com-",
+      "decision": "Canonical replacement for legacy com."
+    },
+    {
+      "form": "kred",
+      "category": "root",
+      "meaning_it": "credere; credito",
+      "meaning_en": "believe; credit",
+      "source": "Latin credere",
+      "decision": "Canonical replacement for legacy cred."
+    },
+    {
+      "form": "kur",
+      "category": "root",
+      "meaning_it": "cura; curare",
+      "meaning_en": "care; cure",
+      "source": "Latin cura",
+      "decision": "Canonical replacement for legacy cur."
+    },
+    {
+      "form": "dek",
+      "category": "root",
+      "meaning_it": "dieci; decimale",
+      "meaning_en": "ten; decimal",
+      "source": "Latin decem",
+      "decision": "Canonical replacement for legacy dec."
+    },
+    {
+      "form": "dik",
+      "category": "root",
+      "meaning_it": "dire; esprimere",
+      "meaning_en": "say; tell; express",
+      "source": "Latin dicere",
+      "decision": "Canonical verbal root replacing legacy dict; regular participial/resultative dikit."
+    },
+    {
+      "form": "dirig",
+      "category": "root",
+      "meaning_it": "dirigere",
+      "meaning_en": "direct; guide",
+      "source": "Latin dirigere",
+      "decision": "Canonical replacement for legacy direct."
+    },
+    {
+      "form": "dots",
+      "category": "root",
+      "meaning_it": "insegnare; docente",
+      "meaning_en": "teach",
+      "source": "Latin docere",
+      "decision": "Canonical replacement for legacy doc."
     },
     {
       "form": "fak",
@@ -17,7 +129,55 @@
       "meaning_it": "fare; creare; produrre",
       "meaning_en": "do; make",
       "source": "Latin facere",
-      "decision": "Canonical FAC- family root. Replaces legacy fac-. Legacy forms built on fac- must use the confirmed fak- root when their derivational morphology is retained; the derivational suffix inventory is reviewed separately."
+      "decision": "Canonical replacement for legacy fac."
+    },
+    {
+      "form": "lok",
+      "category": "root",
+      "meaning_it": "luogo; locale",
+      "meaning_en": "place; location",
+      "source": "Latin locus",
+      "decision": "Canonical replacement for legacy loc."
+    },
+    {
+      "form": "spets",
+      "category": "root",
+      "meaning_it": "guardare; osservare; aspetto",
+      "meaning_en": "look; observe; aspect",
+      "source": "Latin specere",
+      "decision": "Canonical replacement for legacy spec."
+    },
+    {
+      "form": "stru",
+      "category": "root",
+      "meaning_it": "costruire; struttura",
+      "meaning_en": "build; structure",
+      "source": "Latin struere",
+      "decision": "Canonical replacement for legacy struct."
+    },
+    {
+      "form": "vok",
+      "category": "root",
+      "meaning_it": "voce; chiamare",
+      "meaning_en": "voice; call",
+      "source": "Latin vox",
+      "decision": "Canonical replacement for legacy voc."
+    },
+    {
+      "form": "kin",
+      "category": "numeral",
+      "meaning_it": "cinque",
+      "meaning_en": "five",
+      "source": "Latin quinque / Romance cinque-cinq family",
+      "decision": "Canonical numeral 5 replacing legacy cin."
+    },
+    {
+      "form": "nation",
+      "category": "root",
+      "meaning_it": "nazione",
+      "meaning_en": "nation",
+      "source": "Latin natio, nationis",
+      "decision": "Canonical replacement for legacy nacion."
     },
     {
       "form": "major",
@@ -26,14 +186,6 @@
       "meaning_en": "more; comparative marker",
       "source": "Latin maior",
       "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/."
-    },
-    {
-      "form": "dik",
-      "category": "root",
-      "meaning_it": "dire; esprimere",
-      "meaning_en": "say; tell; express",
-      "source": "Latin dicere / DIC- family",
-      "decision": "Canonical verbal root for 'dire'. The regular participial/resultative is dikit via productive -it; legacy dict is not the verbal root."
     }
   ]
 }
