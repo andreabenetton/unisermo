@@ -1,0 +1,31 @@
+{
+  "schema": "glottodelta/confirmed-lexicon@1",
+  "confirmed_on": "2026-08-09",
+  "status": "confirmed_core_lexicon",
+  "entries": [
+    {
+      "form": "kin",
+      "category": "numeral",
+      "meaning_it": "cinque",
+      "meaning_en": "five",
+      "source": "Latin quinque / Romance cinque-cinq family",
+      "decision": "Canonical numeral 5. Replaces legacy cin, which depended on removed letter c."
+    },
+    {
+      "form": "fak",
+      "category": "root",
+      "meaning_it": "fare; creare; produrre",
+      "meaning_en": "do; make",
+      "source": "Latin facere",
+      "decision": "Canonical FAC- family root. Replaces legacy fac-. Legacy forms built on fac- must use the confirmed fak- root when their derivational morphology is retained; the derivational suffix inventory is reviewed separately."
+    },
+    {
+      "form": "major",
+      "category": "function_word",
+      "meaning_it": "piu; comparativo di maggioranza",
+      "meaning_en": "more; comparative marker",
+      "source": "Latin maior",
+      "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/."
+    }
+  ]
+}
