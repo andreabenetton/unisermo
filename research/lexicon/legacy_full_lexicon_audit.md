@@ -10,23 +10,21 @@ The machine audit scans all top-level legacy grammar documents (excluding the ob
 
 ## Summary
 
-- `collision`: 3
-- `confirmed_reinterpretation`: 1
-- `confirmed_replacement`: 5
-- `needs_revision`: 65
-- `obsolete_morphology`: 9
-- `obsolete_person_value`: 3
-- `review_pronunciation`: 3
-- `valid_check_hiatus`: 17
-- `valid_orthography`: 267
+The original machine audit found three lexical collisions. All three are now resolved by canonical decisions:
+
+- `kom` remains **HOW**; Latin `cum/com-` is `kun`.
+- legacy `kur` **WHY** becomes `ker`; Latin `cura` is `kurar`.
+- there is no indefinite article `un`; optional indefinite singularity uses the full numeral/determiner `uno`, while `un` remains the 2PL person form.
+
+The machine-readable JSON has been updated with these resolutions while preserving the remaining phonology/morphology flags.
 
 ## High-priority findings
 
-### Lexical collisions
+### Resolved lexical collisions
 
-- `kom`: legacy question word **HOW** collides with confirmed root `kom` from Latin `cum/com-` (**with / together / com-**). Requires a future lexical decision; neither sense is silently reassigned here.
-- `kur`: legacy question word **WHY** collides with confirmed root `kur` from Latin `cura` (**care / cure**). Requires a future lexical decision.
-- `un`: legacy article material uses `un`, while current `un` is the second-person plural pronoun. The old article system is already non-canonical, but the form must not be re-imported with that meaning.
+- `kom` is canonical **HOW**; the lexical root from Latin `cum/com-` is now `kun`.
+- `ker` is canonical **WHY**; legacy `kur` with that meaning is retired, and the Latin `cura` lexical family uses `kurar`.
+- `uno` is both numeral **ONE** and optional indefinite-singular determiner. There is no separate article `un`; `un` remains 2PL.
 
 ### Confirmed migrations detected
 
@@ -58,13 +56,13 @@ Adjacent vowel letters are valid but are read as hiatus. Thus legacy `-ia` remai
 | `e` | obsolete_person_value | `u` | legacy person value is obsolete; current corresponding form is u |
 | `ekual` | confirmed_replacement | `ekwal` | legacy comparison word replaced by ekwal /e.kwal/ |
 | `fac` | confirmed_replacement | `fak` | legacy form has a confirmed canonical replacement |
-| `kom` | collision | `—` | collision: legacy kom = 'how'; confirmed lexical root kom = 'with/together, com-' |
-| `kur` | collision | `—` | collision: legacy kur = 'why'; confirmed lexical root kur = 'care/cure' |
+| `kom` | valid_orthography | `—` | canonical HOW retained; lexical com-family moved to `kun` |
+| `kur` | confirmed_replacement | `ker` | legacy WHY replaced by `ker`; care/cure root is `kurar` |
 | `major` | confirmed_reinterpretation | `—` | confirmed spelling; current pronunciation /ma.jor/ |
 | `nacion` | confirmed_replacement | `nation` | legacy form has a confirmed canonical replacement; adjacent vowels are canonical hiatus unless j/w is written |
 | `o` | obsolete_person_value | `un` | legacy person value is obsolete; current corresponding form is un |
 | `u` | obsolete_person_value | `in` | legacy person value is obsolete; current corresponding form is in |
-| `un` | collision | `—` | collision: legacy un appears in article/indefinite discussion, while current un is the second-person plural pronoun |
+| `un` | obsolete_legacy_reference | `uno` | no article `un`; optional indefinite determiner is `uno`; `un` remains 2PL |
 | `ə` | obsolete_morphology | `an` | non-canonical character(s): ə; contains retired schwa / legacy six-person morphology; legacy person value is obsolete; current corresponding form is an |
 
 ## Full machine-readable inventory
@@ -76,5 +74,5 @@ See `legacy_full_lexicon_audit.json` for every extracted form, source documents,
 - `valid_orthography` means only that the spelling uses the current alphabet; it does **not** canonize the word or preserve its old semantics.
 - `valid_check_hiatus` means the spelling is legal but adjacent vowels now have the explicit hiatus interpretation.
 - `confirmed_replacement` is already resolved by a current lexical decision.
-- `collision` needs a lexical decision because two meanings currently compete for the same form.
+- `obsolete_legacy_reference` marks a stale legacy form/reference superseded by an already confirmed current form.
 - `needs_revision`, `review_pronunciation`, and `obsolete_morphology` identify forms that cannot simply be imported unchanged.

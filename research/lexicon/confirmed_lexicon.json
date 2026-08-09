@@ -68,12 +68,12 @@
       "decision": "Canonical replacement for legacy clar."
     },
     {
-      "form": "kom",
+      "form": "kun",
       "category": "root",
       "meaning_it": "con-; insieme",
       "meaning_en": "with; together",
       "source": "Latin cum / com-",
-      "decision": "Canonical replacement for legacy com."
+      "decision": "Canonical replacement for legacy/source com from Latin cum/com-. Chosen as kun to avoid collision with canonical question word kom = HOW."
     },
     {
       "form": "kred",
@@ -84,12 +84,12 @@
       "decision": "Canonical replacement for legacy cred."
     },
     {
-      "form": "kur",
+      "form": "kurar",
       "category": "root",
       "meaning_it": "cura; curare",
       "meaning_en": "care; cure",
       "source": "Latin cura",
-      "decision": "Canonical replacement for legacy cur."
+      "decision": "Canonical replacement for legacy/source cur from Latin cura. Chosen as kurar to avoid collision with the former WHY question word; WHY is now ker."
     },
     {
       "form": "dek",
@@ -194,6 +194,22 @@
       "meaning_en": "equal; equally; as ... as",
       "source": "Latin aequalis / international equal family",
       "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/."
+    },
+    {
+      "form": "kom",
+      "category": "function_word",
+      "meaning_it": "come?",
+      "meaning_en": "how?",
+      "source": "legacy GlottoDelta question system",
+      "decision": "Canonical WH-word HOW. Retained after moving Latin cum/com- lexical root to kun."
+    },
+    {
+      "form": "ker",
+      "category": "function_word",
+      "meaning_it": "perche?",
+      "meaning_en": "why?",
+      "source": "revised GlottoDelta question system",
+      "decision": "Canonical WH-word WHY, replacing legacy kur to avoid collision with the care/cure lexical family."
     }
   ]
 }

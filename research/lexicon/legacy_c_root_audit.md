@@ -17,9 +17,9 @@ global conversion rule.
 | `circul` | `sirkul` | cerchio; circolare | `circulus` |
 | `civ` | `siv` | cittadino; civile | `civis` |
 | `clar` | `klar` | chiaro; chiarezza | `clarus` |
-| `com` | `kom` | con-; insieme | `cum / com-` |
+| `com` | `kun` | con-; insieme | `cum / com-` |
 | `cred` | `kred` | credere; credito | `credere` |
-| `cur` | `kur` | cura; curare | `cura` |
+| `cur` | `kurar` | cura; curare | `cura` |
 | `dec` | `dek` | dieci; decimale | `decem` |
 | `dict` | `dik` | dire; detto; dettare | `dicere` |
 | `direct` | `dirig` | dirigere; diretto | `dirigere` |
