@@ -62,6 +62,14 @@
     {
       "id": "copula_es_current_person_number",
       "decision": "Keep copula/existential root es. In the current person-number system its present explicit forms are esi, esu, esa, esin, esun, esan. Present-simple adjectival, nominal, and locative predicates may use zero copula; explicit es is available for emphasis/existence and supplies the verbal carrier when TAM is required. Existing TAM markers precede the current person vowel plus optional plural N, e.g. esdi/esdu/esda/esdin/esdun/esdan for simple past and esfi/esfu/esfa/esfin/esfun/esfan for simple future."
+    },
+    {
+      "id": "participial_resultative_it",
+      "decision": "Use invariant suffix -it productively on verbal roots to form the ordinary participial/resultative stem: dik->dikit 'detto', mov->movit 'mosso', vid->vidit 'visto', fak->fakit 'fatto/creato'. The /i/ is part of the suffix and avoids difficult root+t clusters. The syntax of compound tenses and passive constructions remains a separate decision."
+    },
+    {
+      "id": "abstract_it_retired",
+      "decision": "Retire the legacy use of -it as an abstract quality/state suffix. In current GlottoDelta productive -it is reserved for the participial/resultative function; legacy abstract formations in -it must be migrated when a replacement abstract suffix is confirmed."
     }
   ]
 }

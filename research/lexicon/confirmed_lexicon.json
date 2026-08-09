@@ -26,6 +26,14 @@
       "meaning_en": "more; comparative marker",
       "source": "Latin maior",
       "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/."
+    },
+    {
+      "form": "dik",
+      "category": "root",
+      "meaning_it": "dire; esprimere",
+      "meaning_en": "say; tell; express",
+      "source": "Latin dicere / DIC- family",
+      "decision": "Canonical verbal root for 'dire'. The regular participial/resultative is dikit via productive -it; legacy dict is not the verbal root."
     }
   ]
 }

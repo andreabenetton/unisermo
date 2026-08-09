@@ -10,6 +10,7 @@ NOMINAL_SPEC = ROOT / "research" / "grammar" / "nominal_number_and_quantificatio
 POLARITY_SPEC = ROOT / "research" / "grammar" / "polarity_and_focus_clitics.md"
 CASE_SPEC = ROOT / "research" / "grammar" / "case_and_possession.md"
 COPULA_SPEC = ROOT / "research" / "grammar" / "copula.md"
+PARTICIPLE_SPEC = ROOT / "research" / "grammar" / "participles_and_resultatives.md"
 
 
 def main() -> None:
@@ -32,6 +33,8 @@ def main() -> None:
         "genitive_allomorph_s_es",
         "personal_possessives_as_genitives",
         "copula_es_current_person_number",
+        "participial_resultative_it",
+        "abstract_it_retired",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -50,6 +53,8 @@ def main() -> None:
     assert "s, z, sj, tj, or dj" in decisions["genitive_allomorph_s_es"]
     assert "i->is" in decisions["personal_possessives_as_genitives"]
     assert "esi, esu, esa, esin, esun, esan" in decisions["copula_es_current_person_number"]
+    assert "dik->dikit" in decisions["participial_resultative_it"]
+    assert "reserved for the participial/resultative" in decisions["abstract_it_retired"]
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
@@ -85,6 +90,11 @@ def main() -> None:
     for form in ("`esi`", "`esu`", "`esa`", "`esin`", "`esun`", "`esan`", "`esdi`", "`esdan`"):
         assert form in copula, form
     assert "schwa" in copula.lower() and "No schwa form exists" in copula
+
+    participles = PARTICIPLE_SPEC.read_text(encoding="utf-8")
+    for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`"):
+        assert form in participles, form
+    assert "not canonical" in participles.lower() and "`-itat`" in participles
 
     print("grammar decision checks passed")
 
