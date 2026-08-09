@@ -21,6 +21,7 @@ semantics.
 - `affricate_results.json` — generated component and curated-profile evidence for the affricate study.
 - `family_inventory.json` — generated Glottolog 5.3 top-level genealogical inventory for the frozen source sample.
 - `family_inventory.md` — human-readable represented/absent family and isolate report, with pseudo-category diagnostics.
+- `families/` — experimental per-family phoneme evidence; currently starts with Abkhaz-Adyge (`abkh1242`).
 - `vendor/glottolog-5.3/` — pinned Glottolog 5.3 research inputs; the Newick forest is the primary genealogy source.
 
 ## Reproduce
@@ -33,6 +34,8 @@ python3 scripts/analyze_affricates.py
 python3 scripts/test_affricates.py
 python3 scripts/analyze_family_inventory.py
 python3 scripts/test_family_inventory.py
+python3 scripts/analyze_family_phonemes.py --unit abkh1242 --write
+python3 scripts/test_family_phonemes.py
 ```
 
 The phoneme/person/affricate analyzers read the frozen `baseline/original.html`;

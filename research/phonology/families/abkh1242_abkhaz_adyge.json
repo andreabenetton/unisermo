@@ -1,0 +1,1587 @@
+{
+  "schema": "glottodelta/family-phoneme-study@1",
+  "status": "experimental_family_evidence_not_confirmed_design_decision",
+  "methodology": {
+    "genealogical_unit": "top-level Glottolog 5.3 family/isolate from family_inventory.json",
+    "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
+    "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
+    "cross_family_F": "not defined or calculated by this script",
+    "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability"
+  },
+  "unit": {
+    "top_level_glottocode": "abkh1242",
+    "family_name": "Abkhaz-Adyge",
+    "unit_type": "family",
+    "macroareas": [
+      "Eurasia"
+    ],
+    "represented": true,
+    "source_record_count": 3,
+    "distinct_relevant_language_count": 3,
+    "non_language_source_record_count": 0,
+    "non_language_source_records": []
+  },
+  "sample": {
+    "source_record_count": 3,
+    "distinct_language_count": 3,
+    "duplicate_language_records": [],
+    "non_language_source_records": [],
+    "glottolog_language_member_count": 5,
+    "represented_glottolog_language_member_count": 3,
+    "glottolog_language_member_coverage_pct": 60.0,
+    "represented_glottolog_language_members": [
+      {
+        "glottocode": "abkh1244",
+        "name": "Abkhaz",
+        "iso": "abk"
+      },
+      {
+        "glottocode": "kaba1278",
+        "name": "Kabardian",
+        "iso": "kbd"
+      },
+      {
+        "glottocode": "adyg1241",
+        "name": "West Circassian",
+        "iso": "ady"
+      }
+    ],
+    "absent_glottolog_language_members": [
+      {
+        "glottocode": "abaz1241",
+        "name": "Abaza",
+        "iso": "abq"
+      },
+      {
+        "glottocode": "ubyk1235",
+        "name": "Ubykh",
+        "iso": "uby"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "source_key": "i:abk",
+      "name": "Abkhaz",
+      "iso": "abk",
+      "glottocode": "abkh1244",
+      "distinct_language_id": "abkh1244",
+      "inventory_symbol_count": 24,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "kʼ",
+        "l",
+        "m",
+        "n",
+        "pʼ",
+        "r",
+        "s",
+        "tʼ",
+        "v",
+        "w",
+        "z",
+        "ħ",
+        "ɡ",
+        "ɨ",
+        "ʁ",
+        "ʂ",
+        "ʃ",
+        "ʐ",
+        "ʒ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʂ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:ady",
+      "name": "Adyghe",
+      "iso": "ady",
+      "glottocode": "adyg1241",
+      "distinct_language_id": "adyg1241",
+      "inventory_symbol_count": 31,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʼ",
+        "m",
+        "n",
+        "p",
+        "pʼ",
+        "q",
+        "r",
+        "s",
+        "t",
+        "tʼ",
+        "w",
+        "x",
+        "z",
+        "ɕ",
+        "ə",
+        "ɣ",
+        "ɬ",
+        "ɮ",
+        "ʁ",
+        "ʃ",
+        "ʑ",
+        "ʒ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e"
+          ]
+        },
+        "i": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:kbd",
+      "name": "Kabardian",
+      "iso": "kbd",
+      "glottocode": "kaba1278",
+      "distinct_language_id": "kaba1278",
+      "inventory_symbol_count": 40,
+      "inventory_symbols": [
+        "b",
+        "d",
+        "f",
+        "h",
+        "j",
+        "kʼ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʼ",
+        "q",
+        "r",
+        "s",
+        "t",
+        "tʼ",
+        "v",
+        "w",
+        "x",
+        "z",
+        "ç",
+        "ħ",
+        "ɐ",
+        "ɕ",
+        "ə",
+        "ɜ",
+        "ɣ",
+        "ɦ",
+        "ɨ",
+        "ɬ",
+        "ɮ",
+        "ɾ",
+        "ʁ",
+        "ʃ",
+        "ʑ",
+        "ʒ",
+        "ʔ",
+        "ʕ",
+        "ʝ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɐ"
+          ]
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə",
+            "ɜ"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "g": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r",
+            "ɾ",
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h",
+            "ɦ"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    }
+  ],
+  "target_support": [
+    {
+      "target": "a",
+      "canonical": "a",
+      "class": "vowel",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz"
+      ]
+    },
+    {
+      "target": "e",
+      "canonical": "e",
+      "class": "vowel",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Adyghe"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz",
+        "Kabardian"
+      ]
+    },
+    {
+      "target": "i",
+      "canonical": "i",
+      "class": "vowel",
+      "strict_language_count": 0,
+      "strict_language_pct": 0.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 0,
+      "strict_plus_soft_language_pct": 0.0,
+      "strict_languages": [],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ]
+    },
+    {
+      "target": "o",
+      "canonical": "o",
+      "class": "vowel",
+      "strict_language_count": 0,
+      "strict_language_pct": 0.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 0,
+      "strict_plus_soft_language_pct": 0.0,
+      "strict_languages": [],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ]
+    },
+    {
+      "target": "u",
+      "canonical": "u",
+      "class": "vowel",
+      "strict_language_count": 0,
+      "strict_language_pct": 0.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 0,
+      "strict_plus_soft_language_pct": 0.0,
+      "strict_languages": [],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ]
+    },
+    {
+      "target": "schwa",
+      "canonical": "ə",
+      "class": "vowel",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz"
+      ]
+    },
+    {
+      "target": "p",
+      "canonical": "p",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz"
+      ]
+    },
+    {
+      "target": "b",
+      "canonical": "b",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "t",
+      "canonical": "t",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz"
+      ]
+    },
+    {
+      "target": "d",
+      "canonical": "d",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "k",
+      "canonical": "k",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 1,
+      "strict_plus_soft_language_pct": 33.333333333333336,
+      "strict_languages": [
+        "Adyghe"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz",
+        "Kabardian"
+      ]
+    },
+    {
+      "target": "g",
+      "canonical": "ɡ",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 33.333333333333336,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Abkhaz"
+      ],
+      "soft_only_languages": [
+        "Adyghe"
+      ],
+      "absent_languages": [
+        "Kabardian"
+      ]
+    },
+    {
+      "target": "m",
+      "canonical": "m",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "n",
+      "canonical": "n",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "f",
+      "canonical": "f",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "v",
+      "canonical": "v",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Kabardian"
+      ],
+      "soft_only_languages": [
+        "Adyghe"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "s",
+      "canonical": "s",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "z",
+      "canonical": "z",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "sh",
+      "canonical": "ʃ",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "l",
+      "canonical": "l",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 1,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Kabardian"
+      ],
+      "soft_only_languages": [
+        "Adyghe"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "r",
+      "canonical": "r",
+      "class": "consonant",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "y",
+      "canonical": "j",
+      "class": "glide",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "w",
+      "canonical": "w",
+      "class": "glide",
+      "strict_language_count": 3,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 3,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "h",
+      "canonical": "h",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 66.66666666666667,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 2,
+      "strict_plus_soft_language_pct": 66.66666666666667,
+      "strict_languages": [
+        "Adyghe",
+        "Kabardian"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz"
+      ]
+    },
+    {
+      "target": "ng",
+      "canonical": "ŋ",
+      "class": "consonant",
+      "strict_language_count": 0,
+      "strict_language_pct": 0.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 0,
+      "strict_plus_soft_language_pct": 0.0,
+      "strict_languages": [],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Abkhaz",
+        "Adyghe",
+        "Kabardian"
+      ]
+    }
+  ],
+  "candidate_support": {
+    "current_simple_21": {
+      "target_count": 21,
+      "mean_strict_missing": 7.0,
+      "mean_accent_tolerant_missing": 6.0,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "schwa",
+            "p",
+            "t",
+            "k"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "schwa",
+            "p",
+            "t",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "o",
+            "u",
+            "g",
+            "v",
+            "l"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "i",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 6
+        }
+      ]
+    },
+    "no_schwa_20": {
+      "target_count": 20,
+      "mean_strict_missing": 6.666666666666667,
+      "mean_accent_tolerant_missing": 5.666666666666667,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "o",
+            "u",
+            "g",
+            "v",
+            "l"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "i",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 6
+        }
+      ]
+    },
+    "latin17": {
+      "target_count": 17,
+      "mean_strict_missing": 6.333333333333333,
+      "mean_accent_tolerant_missing": 5.666666666666667,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "o",
+            "u",
+            "g",
+            "l"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "i",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 6
+        }
+      ]
+    },
+    "latin17_yw": {
+      "target_count": 19,
+      "mean_strict_missing": 6.333333333333333,
+      "mean_accent_tolerant_missing": 5.666666666666667,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "o",
+            "u",
+            "g",
+            "l"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "i",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 6
+        }
+      ]
+    },
+    "lexical22_yw": {
+      "target_count": 22,
+      "mean_strict_missing": 6.666666666666667,
+      "mean_accent_tolerant_missing": 5.666666666666667,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "p",
+            "t",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "o",
+            "u",
+            "g",
+            "v",
+            "l"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "i",
+            "o",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "e",
+            "i",
+            "o",
+            "u",
+            "k",
+            "g"
+          ],
+          "accent_tolerant_missing_count": 6
+        }
+      ]
+    },
+    "grammar6": {
+      "target_count": 6,
+      "mean_strict_missing": 2.3333333333333335,
+      "mean_accent_tolerant_missing": 2.3333333333333335,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "i",
+            "u"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "a",
+            "i",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "i",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        }
+      ]
+    },
+    "grammar8": {
+      "target_count": 8,
+      "mean_strict_missing": 3.3333333333333335,
+      "mean_accent_tolerant_missing": 3.3333333333333335,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "i",
+            "u",
+            "p",
+            "k"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "a",
+            "i",
+            "u",
+            "p",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "i",
+            "u",
+            "k"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "i",
+            "u",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 3
+        }
+      ]
+    },
+    "grammar10": {
+      "target_count": 10,
+      "mean_strict_missing": 3.3333333333333335,
+      "mean_accent_tolerant_missing": 3.3333333333333335,
+      "per_language": [
+        {
+          "source_key": "i:abk",
+          "name": "Abkhaz",
+          "strict_missing": [
+            "a",
+            "i",
+            "u",
+            "p",
+            "k"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "a",
+            "i",
+            "u",
+            "p",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 5
+        },
+        {
+          "source_key": "i:ady",
+          "name": "Adyghe",
+          "strict_missing": [
+            "i",
+            "u"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "i",
+            "u"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:kbd",
+          "name": "Kabardian",
+          "strict_missing": [
+            "i",
+            "u",
+            "k"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "i",
+            "u",
+            "k"
+          ],
+          "accent_tolerant_missing_count": 3
+        }
+      ]
+    }
+  }
+}
