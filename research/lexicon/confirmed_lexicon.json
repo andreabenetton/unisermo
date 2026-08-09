@@ -186,6 +186,14 @@
       "meaning_en": "more; comparative marker",
       "source": "Latin maior",
       "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/."
+    },
+    {
+      "form": "ekwal",
+      "category": "function_word",
+      "meaning_it": "uguale; ugualmente; come ... come",
+      "meaning_en": "equal; equally; as ... as",
+      "source": "Latin aequalis / international equal family",
+      "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/."
     }
   ]
 }

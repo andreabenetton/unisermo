@@ -36,6 +36,7 @@ def main() -> None:
         "participial_resultative_it",
         "abstract_it_retired",
         "abstract_quality_itat",
+        "finite_verb_morphotactics",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -57,6 +58,7 @@ def main() -> None:
     assert "dik->dikit" in decisions["participial_resultative_it"]
     assert "confirmed -itat" in decisions["abstract_it_retired"]
     assert "bon->bonitat" in decisions["abstract_quality_itat"]
+    assert "root + TAM + person vowel + optional plural N" in decisions["finite_verb_morphotactics"]
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
@@ -92,6 +94,10 @@ def main() -> None:
     for form in ("`esi`", "`esu`", "`esa`", "`esin`", "`esun`", "`esan`", "`esdi`", "`esdan`"):
         assert form in copula, form
     assert "schwa" in copula.lower() and "No schwa form exists" in copula
+
+    finite = (ROOT / "research" / "grammar" / "finite_verb_structure.md").read_text(encoding="utf-8")
+    for form in ("`movi`", "`movu`", "`mova`", "`movin`", "`movun`", "`movan`", "`movdi`", "`movdin`"):
+        assert form in finite, form
 
     participles = PARTICIPLE_SPEC.read_text(encoding="utf-8")
     for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`"):
