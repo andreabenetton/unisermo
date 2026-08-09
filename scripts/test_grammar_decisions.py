@@ -6,7 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "research" / "grammar" / "confirmed_decisions.json"
-SPEC = ROOT / "research" / "grammar" / "nominal_number_and_quantification.md"
+NOMINAL_SPEC = ROOT / "research" / "grammar" / "nominal_number_and_quantification.md"
+POLARITY_SPEC = ROOT / "research" / "grammar" / "polarity_and_focus_clitics.md"
 
 
 def main() -> None:
@@ -17,29 +18,56 @@ def main() -> None:
         "nominal_number_default",
         "optional_nominal_plural_wi",
         "plural_redundancy",
+        "zero_quantifier_nul",
         "universal_quantifier_omni",
         "integral_totality_tot",
         "modifier_order_demonstrative_quantifier_noun",
         "mi_unassigned",
+        "polar_responses_si_no",
+        "additive_focus_clitic_si",
+        "negative_additive_focus_clitic_no",
+        "focus_clitic_scope",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
     assert "wi" in decisions["optional_nominal_plural_wi"]
+    assert "ZERO / NO quantity" in decisions["zero_quantifier_nul"]
     assert "ALL / EVERY" in decisions["universal_quantifier_omni"]
     assert "WHOLE / ENTIRE" in decisions["integral_totality_tot"]
     assert "tik omni om" in decisions["modifier_order_demonstrative_quantifier_noun"]
     assert "tan omni om" in decisions["modifier_order_demonstrative_quantifier_noun"]
     assert "currently has no canonical meaning" in decisions["mi_unassigned"]
+    assert "YES" in decisions["polar_responses_si_no"]
+    assert "NO" in decisions["polar_responses_si_no"]
+    assert "-si" in decisions["additive_focus_clitic_si"]
+    assert "-no" in decisions["negative_additive_focus_clitic_no"]
+    assert "additional pre-verbal no is not required" in decisions["negative_additive_focus_clitic_no"]
 
-    text = SPEC.read_text(encoding="utf-8")
+    nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
         "`wi om`",
+        "`nul om`",
         "`omni om`",
         "`tot dom`",
         "`tik omni om`",
         "`tan omni om`",
     ):
-        assert example in text, example
+        assert example in nominal, example
+
+    polarity = POLARITY_SPEC.read_text(encoding="utf-8")
+    for example in (
+        "`si.`",
+        "`no.`",
+        "`i-si vidi`",
+        "`i-no vidi`",
+        "`dom-no ...`",
+        "`tik omni om-si`",
+        "`tik omni om-no`",
+    ):
+        assert example in polarity, example
+
+    assert "additional pre-verbal `no`" not in polarity
+    assert "A second pre-verbal `no` is therefore not" in polarity
 
     print("grammar decision checks passed")
 

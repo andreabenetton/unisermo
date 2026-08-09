@@ -1,7 +1,7 @@
 {
   "schema": "glottodelta/grammar-confirmed-decisions@1",
   "confirmed_on": "2026-08-09",
-  "status": "confirmed_nominal_number_and_quantification",
+  "status": "confirmed_core_grammar",
   "decisions": [
     {
       "id": "nominal_number_default",
@@ -30,6 +30,26 @@
     {
       "id": "mi_unassigned",
       "decision": "Keep mi unassigned for now. It is reserved as a strong phonological form for a possible future grammatical function, but currently has no canonical meaning."
+    },
+    {
+      "id": "zero_quantifier_nul",
+      "decision": "Use invariant pre-nominal nul for ZERO / NO quantity. It means that the set contains no referents: nul om 'no person / nobody'; nul omo 'no man'; nul ome 'no woman'; nul dom 'no house'. Because nul already fixes quantity at zero, wi is not used with it."
+    },
+    {
+      "id": "polar_responses_si_no",
+      "decision": "Use invariant free si for YES and no for NO. The same free form no also serves as the pre-verbal sentential negator NOT; ka remains the separate polar-question marker."
+    },
+    {
+      "id": "additive_focus_clitic_si",
+      "decision": "Use hyphenated enclitic -si for additive focus ALSO / TOO (Italian anche / pure). It attaches to the right edge of the focused constituent: i-si 'I too'; tik om-si 'this person too'. Free si 'YES' and bound -si are distinguished by syntax and orthography."
+    },
+    {
+      "id": "negative_additive_focus_clitic_no",
+      "decision": "Use hyphenated enclitic -no for negative-additive focus NEITHER / NOT EVEN / NOT ... EITHER (Italian neanche / nemmeno). It attaches to the right edge of the focused constituent: i-no vidi 'not even I see'; dom-no 'not even the house'. Bound -no itself supplies clause-negative polarity for this ordinary reading, so an additional pre-verbal no is not required."
+    },
+    {
+      "id": "focus_clitic_scope",
+      "decision": "The focus enclitics -si and -no scope over the constituent whose right edge hosts them. In multiword nominal constituents the clitic is written on the final word: tik omni om-si 'all these people too'; tik omni om-no 'not even all these people'."
     }
   ]
 }
