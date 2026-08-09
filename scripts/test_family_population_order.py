@@ -16,6 +16,12 @@ def main() -> None:
         ranked[i]["speaker_exposure_estimate"] >= ranked[i + 1]["speaker_exposure_estimate"]
         for i in range(len(ranked) - 1)
     )
+    assert c["frozen_speaker_estimate_entries"] == 384
+    assert c["frozen_speaker_estimate_entries_mapped_to_glottolog"] == 384
+    assert r["threshold_95pct"]["rank"] == 6
+    assert r["threshold_95pct"]["top_level_glottocode"] == "drav1251"
+    assert ranked[4]["cumulative_world_population_proxy_pct"] < 95.0
+    assert ranked[5]["cumulative_world_population_proxy_pct"] >= 95.0
     abkh = next(x for x in ranked if x["top_level_glottocode"] == "abkh1242")
     assert abkh["analysis_order_rank"] > 1
     print("family-population-order regression checks: OK")

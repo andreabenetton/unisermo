@@ -9,7 +9,7 @@
 - Macroarea metadata: **Africa, Australia, Eurasia, North America, Papunesia, South America** (descriptive only; it does not determine weighting).
 - Frozen GlottoDelta sample: **140** distinct relevant languages from **144** source records.
 - Glottolog 5.3 language-member coverage: **140/586 = 23.9%**.
-- Population-based analysis order: **rank 1**; frozen CLDR speaker-exposure proxy **4,958,269,053** with **70.0%** of sampled languages carrying an estimate.
+- Population-based analysis order: **rank 1**; frozen CLDR speaker-exposure proxy **4,967,111,343** with **70.0%** of sampled languages carrying an estimate.
 - Population rank controls **analysis order only**; it does not determine genealogical `F` weight.
 - Target support below is the unweighted share of sampled distinct languages attesting the target realization family.
 - `strict+soft` additionally allows only the soft-merger fallbacks already defined in `phoneme_targets.json`.

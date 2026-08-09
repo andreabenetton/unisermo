@@ -233,8 +233,8 @@ def analyze(unit_id: str) -> dict:
             analysis_order = {
                 "rank": order_row.get("analysis_order_rank"),
                 "speaker_exposure_estimate": order_row.get("speaker_exposure_estimate"),
-                "speaker_estimate_coverage_pct": order_row.get("speaker_estimate_coverage_pct"),
-                "languages_with_speaker_estimate": order_row.get("languages_with_speaker_estimate"),
+                "speaker_estimate_coverage_pct": order_row.get("sample_speaker_estimate_coverage_pct", order_row.get("speaker_estimate_coverage_pct")),
+                "languages_with_speaker_estimate": order_row.get("sample_languages_with_speaker_estimate", order_row.get("languages_with_speaker_estimate")),
                 "sample_distinct_language_count": order_row.get("sample_distinct_language_count"),
                 "note": "analysis order only; not a genealogical F weight",
             }
