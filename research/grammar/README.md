@@ -8,7 +8,9 @@ comparisons should remain on research branches until selected.
 
 - `confirmed_decisions.json` — machine-readable confirmed grammar decisions.
 - `nominal_number_and_quantification.md` — normative specification for nominal
-  number, the optional plural particle `wi`, and the `omni` / `tot` distinction.
+  number, `nul`, the optional plural particle `wi`, and the `omni` / `tot` distinction.
+- `polarity_and_focus_clitics.md` — normative specification for `si` / `no`
+  polarity and the additive/negative-additive enclitics `-si` / `-no`.
 
 The grammar follows an information-minimizing principle: categories that are
 recoverable from context need not be marked merely for agreement or redundancy.

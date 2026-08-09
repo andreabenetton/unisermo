@@ -56,7 +56,22 @@ om` over redundant `omni wi om`.
 This is an economy rule, not noun-quantifier agreement: the noun itself remains
 number-neutral.
 
-## 4. Universal quantifier: `omni`
+
+## 4. Zero quantifier: `nul`
+
+`nul` is the invariant pre-nominal quantifier **ZERO / NO quantity**. It states
+that the relevant set contains no referents.
+
+- `nul om` — no person / nobody
+- `nul omo` — no man
+- `nul ome` — no woman
+- `nul dom` — no house
+
+Because `nul` already fixes quantity at zero, `wi` is not used with it. `nul`
+is a nominal quantifier and remains distinct from the sentential negation
+particle `no`.
+
+## 5. Universal quantifier: `omni`
 
 `omni` is the invariant universal quantifier **ALL / EVERY**. It quantifies the
 members of a set rather than describing the physical or temporal entirety of a
@@ -82,7 +97,7 @@ Demonstratives precede `omni`, and `omni` precedes the noun:
 
 Because `omni` already entails universal quantity, `wi` is normally absent.
 
-## 5. Integral totality: `tot`
+## 6. Integral totality: `tot`
 
 `tot` is the invariant marker **WHOLE / ENTIRE**. It presents one referent,
 mass, interval, or collective entity as complete in its extent. It is distinct
@@ -100,7 +115,7 @@ The core contrast is:
 For ordinary plural count nouns, use `omni`, not `tot`, when the intended
 meaning is "all of the members".
 
-## 6. Modifier order
+## 7. Modifier order
 
 The confirmed order relevant here is:
 
@@ -118,7 +133,7 @@ phrase grammar is consolidated; the examples confirmed so far are `wi om`,
 `wi omo`, `wi ome`, and demonstrative + quantity constructions where `wi` is
 redundant and therefore omitted.
 
-## 7. Reserved form `mi`
+## 8. Reserved form `mi`
 
 `mi` remains deliberately unassigned. Its strong phonological profile makes it
 a useful candidate for a future high-frequency grammatical function, but no
