@@ -1,0 +1,35 @@
+{
+  "schema": "glottodelta/grammar-confirmed-decisions@1",
+  "confirmed_on": "2026-08-09",
+  "status": "confirmed_nominal_number_and_quantification",
+  "decisions": [
+    {
+      "id": "nominal_number_default",
+      "decision": "A bare noun is grammatically number-neutral by default. It may denote one or more referents when context supplies the intended number. Nominal plural marking is optional and informative rather than obligatory."
+    },
+    {
+      "id": "optional_nominal_plural_wi",
+      "decision": "Use the invariant pre-nominal particle wi as the optional explicit nominal plural marker. Canonical form /wi/; accepted accent-tolerant realization [u̯i] may be used where /w/ is not stable. Wi marks plurality only: it does not mark definiteness, gender, or agreement."
+    },
+    {
+      "id": "plural_redundancy",
+      "decision": "Normally omit wi when plurality or quantity is already explicit through a numeral or quantifier. Thus ter om means three people and omni om means all/every person or all people; redundant wi is not required."
+    },
+    {
+      "id": "universal_quantifier_omni",
+      "decision": "Use invariant pre-nominal omni for universal quantification over members of a set: ALL / EVERY. It may receive collective or distributive interpretation from context. Examples: omni om 'all people / every person'; tik omni om 'all these people'; tan omni om 'all those people'."
+    },
+    {
+      "id": "integral_totality_tot",
+      "decision": "Use invariant pre-nominal tot for the total integrity or entirety of one referent or mass: WHOLE / ENTIRE. It is not the ordinary set-universal quantifier. Examples: tot dom 'the whole house'; tot dia 'the whole day'; tot mund 'the whole world'."
+    },
+    {
+      "id": "modifier_order_demonstrative_quantifier_noun",
+      "decision": "When a demonstrative and a quantifier co-occur, the demonstrative precedes the quantifier, which precedes the noun: tik omni om; tes omni om; tan omni om."
+    },
+    {
+      "id": "mi_unassigned",
+      "decision": "Keep mi unassigned for now. It is reserved as a strong phonological form for a possible future grammatical function, but currently has no canonical meaning."
+    }
+  ]
+}
