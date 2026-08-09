@@ -50,6 +50,18 @@
     {
       "id": "focus_clitic_scope",
       "decision": "The focus enclitics -si and -no scope over the constituent whose right edge hosts them. In multiword nominal constituents the clitic is written on the final word: tik omni om-si 'all these people too'; tik omni om-no 'not even all these people'."
+    },
+    {
+      "id": "genitive_allomorph_s_es",
+      "decision": "Use genitive -s by default and -es after stems ending in s, z, sj, tj, or dj. A stem ending in ts is covered by the final-s trigger. The support vowel preserves pronounceability for canonical sibilant edges and for sj/tj/dj when they surface coalescently as [sh]/[tsh]/[dzh]. Plain final j is the glide /j/ and does not by itself trigger -es."
+    },
+    {
+      "id": "personal_possessives_as_genitives",
+      "decision": "Form personal possessives productively as genitives of the confirmed personal pronouns: i->is, u->us, a->as, in->ins, un->uns, an->ans. They are invariant and do not agree with the possessed noun. Optional third-person referential specificity remains inside the pronoun before genitive -s: ao->aos, ae->aes, ano->anos, ane->anes; neutral as/ans always remain valid."
+    },
+    {
+      "id": "copula_es_current_person_number",
+      "decision": "Keep copula/existential root es. In the current person-number system its present explicit forms are esi, esu, esa, esin, esun, esan. Present-simple adjectival, nominal, and locative predicates may use zero copula; explicit es is available for emphasis/existence and supplies the verbal carrier when TAM is required. Existing TAM markers precede the current person vowel plus optional plural N, e.g. esdi/esdu/esda/esdin/esdun/esdan for simple past and esfi/esfu/esfa/esfin/esfun/esfan for simple future."
     }
   ]
 }

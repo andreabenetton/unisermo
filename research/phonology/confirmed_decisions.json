@@ -32,6 +32,10 @@
       "decision": "Do not assign independent phoneme status to /ts tʃ dʒ/. Represent [ts] from /t+s/; allow /t+j/ to surface as [tj ~ tʃ] and /d+j/ as [dj ~ dʒ]. The transparent sequence pronunciation remains valid, and none of these coalescences may carry grammar-critical contrasts."
     },
     {
+      "id": "sj_coalescence",
+      "decision": "Canonical sj is the transparent sequence /s+j/. Speakers may realize it as [sj] or coalescent [\u0283] where the sequence remains recoverable and no grammar-critical contrast depends on the difference. Independent /ʃ/ remains excluded."
+    },
+    {
       "id": "gn_coalescence",
       "decision": "Do not add independent /ɲ/. Canonical gn is the transparent sequence /g+n/; [ɲ] is an accepted coalescent realization where the sequence remains recoverable and no protected contrast is lost."
     },

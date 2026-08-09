@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "research" / "grammar" / "confirmed_decisions.json"
 NOMINAL_SPEC = ROOT / "research" / "grammar" / "nominal_number_and_quantification.md"
 POLARITY_SPEC = ROOT / "research" / "grammar" / "polarity_and_focus_clitics.md"
+CASE_SPEC = ROOT / "research" / "grammar" / "case_and_possession.md"
+COPULA_SPEC = ROOT / "research" / "grammar" / "copula.md"
 
 
 def main() -> None:
@@ -27,6 +29,9 @@ def main() -> None:
         "additive_focus_clitic_si",
         "negative_additive_focus_clitic_no",
         "focus_clitic_scope",
+        "genitive_allomorph_s_es",
+        "personal_possessives_as_genitives",
+        "copula_es_current_person_number",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -42,6 +47,9 @@ def main() -> None:
     assert "-si" in decisions["additive_focus_clitic_si"]
     assert "-no" in decisions["negative_additive_focus_clitic_no"]
     assert "additional pre-verbal no is not required" in decisions["negative_additive_focus_clitic_no"]
+    assert "s, z, sj, tj, or dj" in decisions["genitive_allomorph_s_es"]
+    assert "i->is" in decisions["personal_possessives_as_genitives"]
+    assert "esi, esu, esa, esin, esun, esan" in decisions["copula_es_current_person_number"]
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
@@ -68,6 +76,15 @@ def main() -> None:
 
     assert "additional pre-verbal `no`" not in polarity
     assert "A second pre-verbal `no` is therefore not" in polarity
+
+    case_spec = CASE_SPEC.read_text(encoding="utf-8")
+    for form in ("`doms`", "`faks`", "`vises`", "`...sjes`", "`...tjes`", "`...djes`", "`is`", "`us`", "`as`", "`ins`", "`uns`", "`ans`"):
+        assert form in case_spec, form
+
+    copula = COPULA_SPEC.read_text(encoding="utf-8")
+    for form in ("`esi`", "`esu`", "`esa`", "`esin`", "`esun`", "`esan`", "`esdi`", "`esdan`"):
+        assert form in copula, form
+    assert "schwa" in copula.lower() and "No schwa form exists" in copula
 
     print("grammar decision checks passed")
 
