@@ -1,0 +1,6993 @@
+{
+  "schema": "glottodelta/family-phoneme-study@1",
+  "status": "experimental_family_evidence_not_confirmed_design_decision",
+  "methodology": {
+    "genealogical_unit": "top-level Glottolog 5.3 family/isolate from family_inventory.json",
+    "within_family_measure": "unweighted share of distinct relevant GlottoDelta languages in this unit attesting each target realization family",
+    "soft_measure": "strict support plus the already-defined accent-tolerant soft-merger fallbacks",
+    "cross_family_F": "not defined or calculated by this script",
+    "warning": "phonemic inventory attestation is evidence about phonological category familiarity, not a complete model of allophonic production ability or learnability",
+    "source_inventory_limit": "the frozen baseline exposes 111 tracked phoneme cells rather than complete upstream PHOIBLE inventories; absence can therefore include a nearby realization outside the tracked chart"
+  },
+  "unit": {
+    "top_level_glottocode": "taik1256",
+    "family_name": "Tai-Kadai",
+    "unit_type": "family",
+    "macroareas": [
+      "Eurasia"
+    ],
+    "represented": true,
+    "source_record_count": 20,
+    "distinct_relevant_language_count": 19,
+    "non_language_source_record_count": 0,
+    "non_language_source_records": []
+  },
+  "analysis_order": {
+    "rank": 10,
+    "speaker_exposure_estimate": 84083291.0,
+    "speaker_estimate_coverage_pct": 42.10526315789474,
+    "languages_with_speaker_estimate": 8,
+    "sample_distinct_language_count": 19,
+    "note": "analysis order only; not a genealogical F weight"
+  },
+  "sample": {
+    "source_record_count": 20,
+    "distinct_language_count": 19,
+    "duplicate_language_records": [
+      {
+        "distinct_language_id": "taid1248",
+        "chosen_source_key": "i:nyw",
+        "all_source_keys": [
+          "i:nyw",
+          "i:tyj"
+        ]
+      }
+    ],
+    "non_language_source_records": [],
+    "glottolog_language_member_count": 95,
+    "represented_glottolog_language_member_count": 19,
+    "glottolog_language_member_coverage_pct": 20.0,
+    "represented_glottolog_language_members": [
+      {
+        "glottocode": "qaua1234",
+        "name": "Central Gelao-Qau",
+        "iso": "gqu"
+      },
+      {
+        "glottocode": "nung1283",
+        "name": "Nung {Viet Nam}",
+        "iso": "nut"
+      },
+      {
+        "glottocode": "taid1249",
+        "name": "Tai Daeng-Meuay",
+        "iso": "tyr"
+      },
+      {
+        "glottocode": "taid1248",
+        "name": "Tai Do-Mene-Yo",
+        "iso": "tyj"
+      },
+      {
+        "glottocode": "shan1277",
+        "name": "Shan",
+        "iso": "shn"
+      },
+      {
+        "glottocode": "nort2740",
+        "name": "Northern Thai",
+        "iso": "nod"
+      },
+      {
+        "glottocode": "luuu1242",
+        "name": "Lü",
+        "iso": "khb"
+      },
+      {
+        "glottocode": "tain1252",
+        "name": "Tai Nüa",
+        "iso": "tdd"
+      },
+      {
+        "glottocode": "laoo1244",
+        "name": "Lao",
+        "iso": "lao"
+      },
+      {
+        "glottocode": "nort2741",
+        "name": "Northeastern Thai",
+        "iso": "tts"
+      },
+      {
+        "glottocode": "sout2746",
+        "name": "Southern Thai",
+        "iso": "sou"
+      },
+      {
+        "glottocode": "thai1261",
+        "name": "Thai",
+        "iso": "tha"
+      },
+      {
+        "glottocode": "phut1244",
+        "name": "Phu Thai",
+        "iso": "pht"
+      },
+      {
+        "glottocode": "bouy1240",
+        "name": "Bouyei",
+        "iso": "pcc"
+      },
+      {
+        "glottocode": "guib1244",
+        "name": "Guibian Zhuang",
+        "iso": "zgn"
+      },
+      {
+        "glottocode": "saek1240",
+        "name": "Saek",
+        "iso": "skb"
+      },
+      {
+        "glottocode": "nort2735",
+        "name": "Northern Dong",
+        "iso": "doc"
+      },
+      {
+        "glottocode": "suii1243",
+        "name": "Sui",
+        "iso": "swi"
+      },
+      {
+        "glottocode": "lakk1238",
+        "name": "Lakkia",
+        "iso": "lbc"
+      }
+    ],
+    "absent_glottolog_language_members": [
+      {
+        "glottocode": "jiam1236",
+        "name": "Jiamao",
+        "iso": "jio"
+      },
+      {
+        "glottocode": "cunn1236",
+        "name": "Cun-Nadou",
+        "iso": "cuq"
+      },
+      {
+        "glottocode": "hlai1239",
+        "name": "Hlai",
+        "iso": "lic"
+      },
+      {
+        "glottocode": "emab1235",
+        "name": "E'ma Buyang",
+        "iso": "yzg"
+      },
+      {
+        "glottocode": "ennn1243",
+        "name": "En",
+        "iso": "enc"
+      },
+      {
+        "glottocode": "lang1316",
+        "name": "Langnian Buyang",
+        "iso": "yln"
+      },
+      {
+        "glottocode": "yero1238",
+        "name": "Yerong-Southern Buyang",
+        "iso": "yrn"
+      },
+      {
+        "glottocode": "qabi1235",
+        "name": "Pubiao-Qabiao",
+        "iso": "laq"
+      },
+      {
+        "glottocode": "baha1256",
+        "name": "Baha Buyang",
+        "iso": "yha"
+      },
+      {
+        "glottocode": "laha1250",
+        "name": "Laha {Viet Nam}",
+        "iso": "lha"
+      },
+      {
+        "glottocode": "gauu1234",
+        "name": "Gau",
+        "iso": null
+      },
+      {
+        "glottocode": "aoua1234",
+        "name": "A'ou",
+        "iso": "aou"
+      },
+      {
+        "glottocode": "redg1235",
+        "name": "Red Gelao",
+        "iso": "gir"
+      },
+      {
+        "glottocode": "gela1264",
+        "name": "Gelao Mulao",
+        "iso": "giu"
+      },
+      {
+        "glottocode": "whit1267",
+        "name": "Duoluo Gelao",
+        "iso": "giw"
+      },
+      {
+        "glottocode": "gree1278",
+        "name": "Hagei Gelao",
+        "iso": "giq"
+      },
+      {
+        "glottocode": "lach1248",
+        "name": "Lachi",
+        "iso": "lbt"
+      },
+      {
+        "glottocode": "whit1266",
+        "name": "White Lachi",
+        "iso": "lwh"
+      },
+      {
+        "glottocode": "jizh1234",
+        "name": "Jizhao",
+        "iso": null
+      },
+      {
+        "glottocode": "qion1238",
+        "name": "Eastern Ong-Be",
+        "iso": null
+      },
+      {
+        "glottocode": "ling1262",
+        "name": "Western Ong-Be",
+        "iso": "onb"
+      },
+      {
+        "glottocode": "minz1236",
+        "name": "Minz Zhuang",
+        "iso": "zgm"
+      },
+      {
+        "glottocode": "nong1247",
+        "name": "Nong Zhuang",
+        "iso": "zhn"
+      },
+      {
+        "glottocode": "yang1286",
+        "name": "Yang Zhuang",
+        "iso": "zyg"
+      },
+      {
+        "glottocode": "caol1238",
+        "name": "Cao Lan",
+        "iso": "mlc"
+      },
+      {
+        "glottocode": "daiz1235",
+        "name": "Dai Zhuang",
+        "iso": "zhd"
+      },
+      {
+        "glottocode": "taid1247",
+        "name": "Tai Dam",
+        "iso": "blt"
+      },
+      {
+        "glottocode": "thai1259",
+        "name": "Thai Song",
+        "iso": "soa"
+      },
+      {
+        "glottocode": "taip1250",
+        "name": "Tai Pao",
+        "iso": "tpo"
+      },
+      {
+        "glottocode": "tayt1241",
+        "name": "Tày Tac",
+        "iso": "tyt"
+      },
+      {
+        "glottocode": "padi1241",
+        "name": "Pa Di",
+        "iso": "pdi"
+      },
+      {
+        "glottocode": "taid1250",
+        "name": "Tai Dón",
+        "iso": "twh"
+      },
+      {
+        "glottocode": "tait1248",
+        "name": "Tai Thanh",
+        "iso": "tmm"
+      },
+      {
+        "glottocode": "kuan1246",
+        "name": "Kuan",
+        "iso": "uan"
+      },
+      {
+        "glottocode": "taih1246",
+        "name": "Tai Hongjin",
+        "iso": "tiz"
+      },
+      {
+        "glottocode": "taiy1242",
+        "name": "Tai Ya",
+        "iso": "cuu"
+      },
+      {
+        "glottocode": "khun1259",
+        "name": "Khün",
+        "iso": "kkh"
+      },
+      {
+        "glottocode": "ahom1240",
+        "name": "Ahom",
+        "iso": "aho"
+      },
+      {
+        "glottocode": "kham1290",
+        "name": "Khamti",
+        "iso": "kht"
+      },
+      {
+        "glottocode": "kham1291",
+        "name": "Khamyang",
+        "iso": "ksu"
+      },
+      {
+        "glottocode": "aito1238",
+        "name": "Aiton",
+        "iso": "aio"
+      },
+      {
+        "glottocode": "phak1238",
+        "name": "Phake",
+        "iso": "phk"
+      },
+      {
+        "glottocode": "tail1248",
+        "name": "Tai Laing",
+        "iso": "tjl"
+      },
+      {
+        "glottocode": "yong1277",
+        "name": "Yong",
+        "iso": "yno"
+      },
+      {
+        "glottocode": "turu1249",
+        "name": "Turung",
+        "iso": "try"
+      },
+      {
+        "glottocode": "tayk1238",
+        "name": "Tay Khang",
+        "iso": "tnu"
+      },
+      {
+        "glottocode": "yoyy1238",
+        "name": "Yoy",
+        "iso": "yoy"
+      },
+      {
+        "glottocode": "phua1239",
+        "name": "Phuan",
+        "iso": "phu"
+      },
+      {
+        "glottocode": "tays1238",
+        "name": "Tày Sa Pa",
+        "iso": "tys"
+      },
+      {
+        "glottocode": "tsun1242",
+        "name": "Ts'ün-Lao",
+        "iso": "tsl"
+      },
+      {
+        "glottocode": "tayy1238",
+        "name": "Tày",
+        "iso": "tyz"
+      },
+      {
+        "glottocode": "guib1245",
+        "name": "Guibei Zhuang",
+        "iso": "zgb"
+      },
+      {
+        "glottocode": "liuq1235",
+        "name": "Liuqian Zhuang",
+        "iso": "zlq"
+      },
+      {
+        "glottocode": "cent2009",
+        "name": "Central Hongshuihe Zhuang",
+        "iso": "zch"
+      },
+      {
+        "glottocode": "east2363",
+        "name": "Eastern Hongshuihe Zhuang",
+        "iso": "zeh"
+      },
+      {
+        "glottocode": "lian1252",
+        "name": "Lianshan Zhuang",
+        "iso": "zln"
+      },
+      {
+        "glottocode": "liuj1238",
+        "name": "Liujiang Zhuang",
+        "iso": "zlj"
+      },
+      {
+        "glottocode": "eeee1240",
+        "name": "E",
+        "iso": "eee"
+      },
+      {
+        "glottocode": "qiub1238",
+        "name": "Qiubei Zhuang",
+        "iso": "zqe"
+      },
+      {
+        "glottocode": "youj1238",
+        "name": "Youjiang Zhuang",
+        "iso": "zyj"
+      },
+      {
+        "glottocode": "yong1276",
+        "name": "Yongbei Zhuang",
+        "iso": "zyb"
+      },
+      {
+        "glottocode": "yong1275",
+        "name": "Yongnan Zhuang",
+        "iso": "zyn"
+      },
+      {
+        "glottocode": "zuoj1238",
+        "name": "Zuojiang Zhuang",
+        "iso": "zzj"
+      },
+      {
+        "glottocode": "lian1256",
+        "name": "Lianmin Yao",
+        "iso": null
+      },
+      {
+        "glottocode": "caom1238",
+        "name": "Cao Miao",
+        "iso": "cov"
+      },
+      {
+        "glottocode": "naxi1247",
+        "name": "Nuoxi Yao",
+        "iso": null
+      },
+      {
+        "glottocode": "sout2741",
+        "name": "Southern Dong",
+        "iso": "kmc"
+      },
+      {
+        "glottocode": "mula1253",
+        "name": "Mulam",
+        "iso": "mlm"
+      },
+      {
+        "glottocode": "aich1238",
+        "name": "Ai-Cham",
+        "iso": "aih"
+      },
+      {
+        "glottocode": "makc1235",
+        "name": "Mak {China}",
+        "iso": "mkg"
+      },
+      {
+        "glottocode": "chad1240",
+        "name": "Chadong",
+        "iso": "cdy"
+      },
+      {
+        "glottocode": "maon1241",
+        "name": "Maonan",
+        "iso": "mmd"
+      },
+      {
+        "glottocode": "tenn1245",
+        "name": "T'en",
+        "iso": "tct"
+      },
+      {
+        "glottocode": "daga1277",
+        "name": "Dagang-Baoshan-Liangcun",
+        "iso": null
+      },
+      {
+        "glottocode": "biao1253",
+        "name": "Shidong Biao",
+        "iso": "byk"
+      },
+      {
+        "glottocode": "yong1283",
+        "name": "Yonggu Biao",
+        "iso": null
+      }
+    ]
+  },
+  "languages": [
+    {
+      "source_key": "i:pcc",
+      "name": "YAY",
+      "iso": "pcc",
+      "glottocode": "bouy1240",
+      "distinct_language_id": "bouy1240",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ə",
+        "ɛ",
+        "ɡ",
+        "ɯ",
+        "ɲ",
+        "ʔ",
+        "θ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:zgn",
+      "name": "PO-AI",
+      "iso": "zgn",
+      "glottocode": "guib1244",
+      "distinct_language_id": "guib1244",
+      "inventory_symbol_count": 18,
+      "inventory_symbols": [
+        "a",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "m",
+        "p",
+        "u",
+        "v",
+        "ŋ",
+        "ɔ",
+        "ə",
+        "ɛ",
+        "ɨ",
+        "ʃ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "r": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:lbc",
+      "name": "LAKKIA",
+      "iso": "lbc",
+      "glottocode": "lakk1238",
+      "distinct_language_id": "lakk1238",
+      "inventory_symbol_count": 22,
+      "inventory_symbols": [
+        "a",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "t",
+        "u",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɥ",
+        "ɬ",
+        "ʍ",
+        "ʔ",
+        "θ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:lao",
+      "name": "Lao",
+      "iso": "lao",
+      "glottocode": "laoo1244",
+      "distinct_language_id": "laoo1244",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ə",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:khb",
+      "name": "Lue",
+      "iso": "khb",
+      "glottocode": "luuu1242",
+      "distinct_language_id": "luuu1242",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:doc",
+      "name": "KAM",
+      "iso": "doc",
+      "glottocode": "nort2735",
+      "distinct_language_id": "nort2735",
+      "inventory_symbol_count": 20,
+      "inventory_symbols": [
+        "a",
+        "c",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "s",
+        "t",
+        "u",
+        "w",
+        "ç",
+        "ŋ",
+        "ɐ",
+        "ə",
+        "ɲ",
+        "ʔ",
+        "χ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a",
+            "ɐ"
+          ]
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:nod",
+      "name": "Northern Thai",
+      "iso": "nod",
+      "glottocode": "nort2740",
+      "distinct_language_id": "nort2740",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:tts",
+      "name": "Northeastern Thai",
+      "iso": "tts",
+      "glottocode": "nort2741",
+      "distinct_language_id": "nort2741",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "y",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:nut",
+      "name": "LUNGCHOW",
+      "iso": "nut",
+      "glottocode": "nung1283",
+      "distinct_language_id": "nung1283",
+      "inventory_symbol_count": 13,
+      "inventory_symbols": [
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "m",
+        "p",
+        "u",
+        "w",
+        "ŋ",
+        "ɯ",
+        "ʃ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "r": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:pht",
+      "name": "Phu Tai",
+      "iso": "pht",
+      "glottocode": "phut1244",
+      "distinct_language_id": "phut1244",
+      "inventory_symbol_count": 27,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:gqu",
+      "name": "GELAO",
+      "iso": "gqu",
+      "glottocode": "qaua1234",
+      "distinct_language_id": "qaua1234",
+      "inventory_symbol_count": 17,
+      "inventory_symbols": [
+        "a",
+        "f",
+        "h",
+        "i",
+        "k",
+        "m",
+        "p",
+        "q",
+        "u",
+        "v",
+        "w",
+        "x",
+        "ŋ",
+        "ɒ",
+        "ɕ",
+        "ɲ",
+        "ʑ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "d": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "z": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ"
+          ]
+        },
+        "l": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "r": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "y": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:skb",
+      "name": "Saek",
+      "iso": "skb",
+      "glottocode": "saek1240",
+      "distinct_language_id": "saek1240",
+      "inventory_symbol_count": 28,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:shn",
+      "name": "Shan",
+      "iso": "shn",
+      "glottocode": "shan1277",
+      "distinct_language_id": "shan1277",
+      "inventory_symbol_count": 30,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɰ",
+        "ɲ",
+        "ʑ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j",
+            "ɰ"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:sou",
+      "name": "Southern Tai",
+      "iso": "sou",
+      "glottocode": "sout2746",
+      "distinct_language_id": "sout2746",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "r"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:swi",
+      "name": "Sui",
+      "iso": "swi",
+      "glottocode": "suii1243",
+      "distinct_language_id": "suii1243",
+      "inventory_symbol_count": 33,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "z",
+        "ŋ",
+        "ɕ",
+        "ə",
+        "ɜ",
+        "ɡ",
+        "ɢ",
+        "ɣ",
+        "ɲ",
+        "ɸ",
+        "ʁ",
+        "ʃ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ə",
+            "ɜ"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɡ"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f",
+            "ɸ"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "strict",
+          "matched_symbols": [
+            "z"
+          ]
+        },
+        "sh": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɕ",
+            "ʃ"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ʁ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:nyw",
+      "name": "Nyaw",
+      "iso": "nyw",
+      "glottocode": "nyaw1245",
+      "distinct_language_id": "taid1248",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "w",
+        "ŋ",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:tyr",
+      "name": "Tay Daeng",
+      "iso": "tyr",
+      "glottocode": "taid1249",
+      "distinct_language_id": "taid1249",
+      "inventory_symbol_count": 23,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "ŋ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    },
+    {
+      "source_key": "i:tdd",
+      "name": "Tai Nuea",
+      "iso": "tdd",
+      "glottocode": "tain1252",
+      "distinct_language_id": "tain1252",
+      "inventory_symbol_count": 26,
+      "inventory_symbols": [
+        "a",
+        "c",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "ɔ",
+        "ɛ",
+        "ɤ",
+        "ɯ",
+        "ɰ",
+        "ɲ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u"
+          ]
+        },
+        "schwa": {
+          "status": "absent",
+          "matched_symbols": []
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "strict",
+          "matched_symbols": [
+            "v"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j",
+            "ɰ"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "absent",
+          "matched_symbols": []
+        }
+      }
+    },
+    {
+      "source_key": "i:tha",
+      "name": "Thai",
+      "iso": "tha",
+      "glottocode": "thai1261",
+      "distinct_language_id": "thai1261",
+      "inventory_symbol_count": 30,
+      "inventory_symbols": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "w",
+        "æ",
+        "ŋ",
+        "ɔ",
+        "ɘ",
+        "ɛ",
+        "ɤ",
+        "ɨ",
+        "ɪ",
+        "ɯ",
+        "ɾ",
+        "ʊ",
+        "ʔ"
+      ],
+      "targets": {
+        "a": {
+          "status": "strict",
+          "matched_symbols": [
+            "a"
+          ]
+        },
+        "e": {
+          "status": "strict",
+          "matched_symbols": [
+            "e",
+            "ɛ"
+          ]
+        },
+        "i": {
+          "status": "strict",
+          "matched_symbols": [
+            "i",
+            "ɪ"
+          ]
+        },
+        "o": {
+          "status": "strict",
+          "matched_symbols": [
+            "o",
+            "ɔ"
+          ]
+        },
+        "u": {
+          "status": "strict",
+          "matched_symbols": [
+            "u",
+            "ʊ"
+          ]
+        },
+        "schwa": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɘ"
+          ]
+        },
+        "p": {
+          "status": "strict",
+          "matched_symbols": [
+            "p"
+          ]
+        },
+        "b": {
+          "status": "strict",
+          "matched_symbols": [
+            "b"
+          ]
+        },
+        "t": {
+          "status": "strict",
+          "matched_symbols": [
+            "t"
+          ]
+        },
+        "d": {
+          "status": "strict",
+          "matched_symbols": [
+            "d"
+          ]
+        },
+        "k": {
+          "status": "strict",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "g": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "k"
+          ]
+        },
+        "m": {
+          "status": "strict",
+          "matched_symbols": [
+            "m"
+          ]
+        },
+        "n": {
+          "status": "strict",
+          "matched_symbols": [
+            "n"
+          ]
+        },
+        "f": {
+          "status": "strict",
+          "matched_symbols": [
+            "f"
+          ]
+        },
+        "v": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "f",
+            "w"
+          ]
+        },
+        "s": {
+          "status": "strict",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "z": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "sh": {
+          "status": "soft_only",
+          "matched_symbols": [
+            "s"
+          ]
+        },
+        "l": {
+          "status": "strict",
+          "matched_symbols": [
+            "l"
+          ]
+        },
+        "r": {
+          "status": "strict",
+          "matched_symbols": [
+            "ɾ"
+          ]
+        },
+        "y": {
+          "status": "strict",
+          "matched_symbols": [
+            "j"
+          ]
+        },
+        "w": {
+          "status": "strict",
+          "matched_symbols": [
+            "w"
+          ]
+        },
+        "h": {
+          "status": "strict",
+          "matched_symbols": [
+            "h"
+          ]
+        },
+        "ng": {
+          "status": "strict",
+          "matched_symbols": [
+            "ŋ"
+          ]
+        }
+      }
+    }
+  ],
+  "target_support": [
+    {
+      "target": "a",
+      "canonical": "a",
+      "class": "vowel",
+      "strict_language_count": 18,
+      "strict_language_pct": 94.73684210526316,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "LUNGCHOW"
+      ]
+    },
+    {
+      "target": "e",
+      "canonical": "e",
+      "class": "vowel",
+      "strict_language_count": 16,
+      "strict_language_pct": 84.21052631578948,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "KAM",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "i",
+      "canonical": "i",
+      "class": "vowel",
+      "strict_language_count": 19,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "o",
+      "canonical": "o",
+      "class": "vowel",
+      "strict_language_count": 16,
+      "strict_language_pct": 84.21052631578948,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "KAM",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "u",
+      "canonical": "u",
+      "class": "vowel",
+      "strict_language_count": 19,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "schwa",
+      "canonical": "ə",
+      "class": "vowel",
+      "strict_language_count": 6,
+      "strict_language_pct": 31.57894736842105,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 6,
+      "strict_plus_soft_language_pct": 31.57894736842105,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "Lao",
+        "KAM",
+        "Sui",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "LAKKIA",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea"
+      ]
+    },
+    {
+      "target": "p",
+      "canonical": "p",
+      "class": "consonant",
+      "strict_language_count": 19,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "b",
+      "canonical": "b",
+      "class": "consonant",
+      "strict_language_count": 13,
+      "strict_language_pct": 68.42105263157895,
+      "soft_only_language_count": 6,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Thai"
+      ],
+      "soft_only_languages": [
+        "PO-AI",
+        "LAKKIA",
+        "KAM",
+        "LUNGCHOW",
+        "GELAO",
+        "Tai Nuea"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "t",
+      "canonical": "t",
+      "class": "consonant",
+      "strict_language_count": 16,
+      "strict_language_pct": 84.21052631578948,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "PO-AI",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "d",
+      "canonical": "d",
+      "class": "consonant",
+      "strict_language_count": 12,
+      "strict_language_pct": 63.1578947368421,
+      "soft_only_language_count": 4,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Nyaw",
+        "Tay Daeng",
+        "Thai"
+      ],
+      "soft_only_languages": [
+        "LAKKIA",
+        "KAM",
+        "Sui",
+        "Tai Nuea"
+      ],
+      "absent_languages": [
+        "PO-AI",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "k",
+      "canonical": "k",
+      "class": "consonant",
+      "strict_language_count": 19,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "g",
+      "canonical": "ɡ",
+      "class": "consonant",
+      "strict_language_count": 2,
+      "strict_language_pct": 10.526315789473685,
+      "soft_only_language_count": 17,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "Sui"
+      ],
+      "soft_only_languages": [
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "m",
+      "canonical": "m",
+      "class": "consonant",
+      "strict_language_count": 19,
+      "strict_language_pct": 100.0,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": []
+    },
+    {
+      "target": "n",
+      "canonical": "n",
+      "class": "consonant",
+      "strict_language_count": 16,
+      "strict_language_pct": 84.21052631578948,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "PO-AI",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "f",
+      "canonical": "f",
+      "class": "consonant",
+      "strict_language_count": 18,
+      "strict_language_pct": 94.73684210526316,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "KAM"
+      ]
+    },
+    {
+      "target": "v",
+      "canonical": "v",
+      "class": "consonant",
+      "strict_language_count": 13,
+      "strict_language_pct": 68.42105263157895,
+      "soft_only_language_count": 6,
+      "strict_plus_soft_language_count": 19,
+      "strict_plus_soft_language_pct": 100.0,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Sui",
+        "Tay Daeng",
+        "Tai Nuea"
+      ],
+      "soft_only_languages": [
+        "LAKKIA",
+        "KAM",
+        "LUNGCHOW",
+        "Southern Tai",
+        "Nyaw",
+        "Thai"
+      ],
+      "absent_languages": []
+    },
+    {
+      "target": "s",
+      "canonical": "s",
+      "class": "consonant",
+      "strict_language_count": 15,
+      "strict_language_pct": 78.94736842105263,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 15,
+      "strict_plus_soft_language_pct": 78.94736842105263,
+      "strict_languages": [
+        "YAY",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "PO-AI",
+        "LAKKIA",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "z",
+      "canonical": "z",
+      "class": "consonant",
+      "strict_language_count": 1,
+      "strict_language_pct": 5.2631578947368425,
+      "soft_only_language_count": 14,
+      "strict_plus_soft_language_count": 15,
+      "strict_plus_soft_language_pct": 78.94736842105263,
+      "strict_languages": [
+        "Sui"
+      ],
+      "soft_only_languages": [
+        "YAY",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "absent_languages": [
+        "PO-AI",
+        "LAKKIA",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "sh",
+      "canonical": "ʃ",
+      "class": "consonant",
+      "strict_language_count": 4,
+      "strict_language_pct": 21.05263157894737,
+      "soft_only_language_count": 14,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "PO-AI",
+        "LUNGCHOW",
+        "GELAO",
+        "Sui"
+      ],
+      "soft_only_languages": [
+        "YAY",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "absent_languages": [
+        "LAKKIA"
+      ]
+    },
+    {
+      "target": "l",
+      "canonical": "l",
+      "class": "consonant",
+      "strict_language_count": 16,
+      "strict_language_pct": 84.21052631578948,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "PO-AI",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "r",
+      "canonical": "r",
+      "class": "consonant",
+      "strict_language_count": 6,
+      "strict_language_pct": 31.57894736842105,
+      "soft_only_language_count": 10,
+      "strict_plus_soft_language_count": 16,
+      "strict_plus_soft_language_pct": 84.21052631578948,
+      "strict_languages": [
+        "YAY",
+        "Lue",
+        "Saek",
+        "Southern Tai",
+        "Sui",
+        "Thai"
+      ],
+      "soft_only_languages": [
+        "LAKKIA",
+        "Lao",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "Phu Tai",
+        "Shan",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea"
+      ],
+      "absent_languages": [
+        "PO-AI",
+        "LUNGCHOW",
+        "GELAO"
+      ]
+    },
+    {
+      "target": "y",
+      "canonical": "j",
+      "class": "glide",
+      "strict_language_count": 18,
+      "strict_language_pct": 94.73684210526316,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "GELAO"
+      ]
+    },
+    {
+      "target": "w",
+      "canonical": "w",
+      "class": "glide",
+      "strict_language_count": 18,
+      "strict_language_pct": 94.73684210526316,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "YAY",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "PO-AI"
+      ]
+    },
+    {
+      "target": "h",
+      "canonical": "h",
+      "class": "consonant",
+      "strict_language_count": 18,
+      "strict_language_pct": 94.73684210526316,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Tai Nuea",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "KAM"
+      ]
+    },
+    {
+      "target": "ng",
+      "canonical": "ŋ",
+      "class": "consonant",
+      "strict_language_count": 18,
+      "strict_language_pct": 94.73684210526316,
+      "soft_only_language_count": 0,
+      "strict_plus_soft_language_count": 18,
+      "strict_plus_soft_language_pct": 94.73684210526316,
+      "strict_languages": [
+        "YAY",
+        "PO-AI",
+        "LAKKIA",
+        "Lao",
+        "Lue",
+        "KAM",
+        "Northern Thai",
+        "Northeastern Thai",
+        "LUNGCHOW",
+        "Phu Tai",
+        "GELAO",
+        "Saek",
+        "Shan",
+        "Southern Tai",
+        "Sui",
+        "Nyaw",
+        "Tay Daeng",
+        "Thai"
+      ],
+      "soft_only_languages": [],
+      "absent_languages": [
+        "Tai Nuea"
+      ]
+    }
+  ],
+  "candidate_support": {
+    "current_simple_21": {
+      "target_count": 21,
+      "mean_strict_missing": 6.105263157894737,
+      "mean_accent_tolerant_missing": 2.3684210526315788,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "schwa",
+            "b",
+            "d",
+            "g",
+            "v",
+            "s",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "schwa",
+            "s",
+            "z",
+            "sh"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "d",
+            "g",
+            "f",
+            "v",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "schwa",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 14,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "schwa",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 11
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "e",
+            "o",
+            "schwa",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "schwa",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "v",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "v",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [
+            "schwa",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [
+            "schwa",
+            "b",
+            "d",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "schwa"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "no_schwa_20": {
+      "target_count": 20,
+      "mean_strict_missing": 5.421052631578948,
+      "mean_accent_tolerant_missing": 1.6842105263157894,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "v",
+            "s",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "s",
+            "z",
+            "sh"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "d",
+            "g",
+            "f",
+            "v",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "latin17": {
+      "target_count": 17,
+      "mean_strict_missing": 3.3684210526315788,
+      "mean_accent_tolerant_missing": 1.4210526315789473,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 6
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "s",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "d",
+            "g",
+            "f",
+            "r"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "latin17_yw": {
+      "target_count": 19,
+      "mean_strict_missing": 3.473684210526316,
+      "mean_accent_tolerant_missing": 1.5263157894736843,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "l",
+            "r",
+            "w"
+          ],
+          "strict_missing_count": 9,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "s",
+            "l",
+            "r",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 7
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "s",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "d",
+            "g",
+            "f",
+            "r"
+          ],
+          "strict_missing_count": 7,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "l",
+            "r",
+            "y"
+          ],
+          "strict_missing_count": 11,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "l",
+            "r",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 9
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [
+            "g"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "lexical22_yw": {
+      "target_count": 22,
+      "mean_strict_missing": 5.526315789473684,
+      "mean_accent_tolerant_missing": 1.7894736842105263,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r",
+            "w"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r",
+            "w"
+          ],
+          "accent_tolerant_missing_count": 8
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "v",
+            "s",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 8,
+          "accent_tolerant_missing": [
+            "s",
+            "z",
+            "sh"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "d",
+            "g",
+            "f",
+            "v",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 10,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "f"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "v",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "strict_missing_count": 13,
+          "accent_tolerant_missing": [
+            "a",
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "e",
+            "o",
+            "b",
+            "t",
+            "d",
+            "g",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r",
+            "y"
+          ],
+          "strict_missing_count": 12,
+          "accent_tolerant_missing": [
+            "e",
+            "o",
+            "t",
+            "d",
+            "n",
+            "s",
+            "z",
+            "l",
+            "r",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 10
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [
+            "d"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 5,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [
+            "b",
+            "d",
+            "g",
+            "z",
+            "sh",
+            "r"
+          ],
+          "strict_missing_count": 6,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [
+            "g",
+            "v",
+            "z",
+            "sh"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar6": {
+      "target_count": 6,
+      "mean_strict_missing": 0.3157894736842105,
+      "mean_accent_tolerant_missing": 0.3157894736842105,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "s"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "s"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "s"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar8": {
+      "target_count": 8,
+      "mean_strict_missing": 0.3157894736842105,
+      "mean_accent_tolerant_missing": 0.3157894736842105,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "s"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "s"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "s"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "a",
+            "s"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "s",
+            "y"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "s",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 2
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    },
+    "grammar10": {
+      "target_count": 10,
+      "mean_strict_missing": 1.1578947368421053,
+      "mean_accent_tolerant_missing": 0.631578947368421,
+      "per_language": [
+        {
+          "source_key": "i:pcc",
+          "name": "YAY",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:zgn",
+          "name": "PO-AI",
+          "strict_missing": [
+            "n",
+            "s",
+            "r"
+          ],
+          "strict_missing_count": 3,
+          "accent_tolerant_missing": [
+            "n",
+            "s",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 3
+        },
+        {
+          "source_key": "i:lbc",
+          "name": "LAKKIA",
+          "strict_missing": [
+            "s",
+            "r"
+          ],
+          "strict_missing_count": 2,
+          "accent_tolerant_missing": [
+            "s"
+          ],
+          "accent_tolerant_missing_count": 1
+        },
+        {
+          "source_key": "i:lao",
+          "name": "Lao",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:khb",
+          "name": "Lue",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:doc",
+          "name": "KAM",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nod",
+          "name": "Northern Thai",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tts",
+          "name": "Northeastern Thai",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nut",
+          "name": "LUNGCHOW",
+          "strict_missing": [
+            "a",
+            "n",
+            "s",
+            "r"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "a",
+            "n",
+            "s",
+            "r"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:pht",
+          "name": "Phu Tai",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:gqu",
+          "name": "GELAO",
+          "strict_missing": [
+            "n",
+            "s",
+            "r",
+            "y"
+          ],
+          "strict_missing_count": 4,
+          "accent_tolerant_missing": [
+            "n",
+            "s",
+            "r",
+            "y"
+          ],
+          "accent_tolerant_missing_count": 4
+        },
+        {
+          "source_key": "i:skb",
+          "name": "Saek",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:shn",
+          "name": "Shan",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:sou",
+          "name": "Southern Tai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:swi",
+          "name": "Sui",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:nyw",
+          "name": "Nyaw",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tyr",
+          "name": "Tay Daeng",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tdd",
+          "name": "Tai Nuea",
+          "strict_missing": [
+            "r"
+          ],
+          "strict_missing_count": 1,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        },
+        {
+          "source_key": "i:tha",
+          "name": "Thai",
+          "strict_missing": [],
+          "strict_missing_count": 0,
+          "accent_tolerant_missing": [],
+          "accent_tolerant_missing_count": 0
+        }
+      ]
+    }
+  }
+}
