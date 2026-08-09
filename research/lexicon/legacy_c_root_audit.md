@@ -22,7 +22,7 @@ recorded in that seed.
 | `cred` | credere; credito | `credere` | open |
 | `cur` | cura; curare | `cura` | open |
 | `dec` | dieci; decimale | `decem` | open |
-| `dict` | dire; detto; dettare | `dicere / dictus` | open |
+| `dict` | dire; detto; dettare | `dicere / dictus` | **verb confirmed -> `dik`; participial/resultative -> `dikit`** |
 | `direct` | dirigere; diretto | `dirigere / directus` | open |
 | `doc` | insegnare; docente | `docere` | open |
 | `fac` | fare; creare | `facere` | **confirmed -> `fak`** |

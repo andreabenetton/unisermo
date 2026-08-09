@@ -14,10 +14,12 @@ PHONOLOGY = ROOT / "research" / "phonology" / "confirmed_decisions.json"
 def main() -> None:
     data = json.loads(LEXICON.read_text(encoding="utf-8"))
     entries = {item["form"]: item for item in data["entries"]}
-    assert {"kin", "fak", "major"} <= entries.keys()
+    assert {"kin", "fak", "major", "dik"} <= entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
     assert "facere" in entries["fak"]["source"]
     assert "/ma.jor/" in entries["major"]["decision"]
+    assert "dicere" in entries["dik"]["source"]
+    assert "dikit" in entries["dik"]["decision"]
 
     seed = json.loads(ROOT_SEED.read_text(encoding="utf-8"))
     c_roots = [item for item in seed["roots"] if "c" in item["root"]]
@@ -31,6 +33,7 @@ def main() -> None:
     assert "`cin`" in audit and "`kin`" in audit
     assert "`nacion`" in audit
     assert "confirmed -> `fak`" in audit
+    assert "confirmed -> `dik`" in audit and "`dikit`" in audit
 
     ph = json.loads(PHONOLOGY.read_text(encoding="utf-8"))
     decisions = {item["id"]: item["decision"] for item in ph["decisions"]}
