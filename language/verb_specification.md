@@ -43,8 +43,11 @@ the verbal ending makes the subject recoverable.
 Every ordinary finite verb has the fixed order:
 
 ```text
-root + TAM + person vowel + optional N
+root + time + aspect + person vowel + optional N
 ```
+
+The time and aspect slots are distinct. A finite verb contains at most one time
+marker and at most one aspect marker.
 
 Examples with `mov`:
 
@@ -58,19 +61,59 @@ The ordering rule is canonical even if the inventory or semantics of individual
 TAM markers are reviewed later. TAM never follows the person marker, and plural
 `N` never precedes the person vowel.
 
-## 4. Current TAM material
+## 4. Canonical 3×3 tense-aspect system
 
-The inherited specification currently supplies the following TAM material:
+Finite inflection distinguishes three times and three aspects.
 
-- zero — simple/present
+### 4.1 Time slot
+
+- zero — present / temporally unmarked simple present
 - `d` — past
 - `f` — future
-- `n` — ongoing/progressive
-- `b` — completed/perfective
-- `m` — potential/ability
 
-Their **position** is confirmed by §3. Their exact semantic inventory remains
-separately reviewable and should not be expanded without an explicit decision.
+### 4.2 Aspect slot
+
+- zero — simple
+- `n` — ongoing / progressive
+- `b` — completed / perfect
+
+Time precedes aspect. The nine regular combinations are therefore:
+
+| Time / Aspect | Simple | Progressive | Completed / perfect |
+|---|---|---|---|
+| present | `Ø` | `n` | `b` |
+| past | `d` | `dn` | `db` |
+| future | `f` | `fn` | `fb` |
+
+Examples with `dik` in first-person singular:
+
+- `diki` — I say
+- `dikni` — I am saying
+- `dikbi` — I have said / the saying is completed
+- `dikdi` — I said
+- `dikdni` — I was saying
+- `dikdbi` — I had said
+- `dikfi` — I will say
+- `dikfni` — I will be saying
+- `dikfbi` — I will have said
+
+The former synthetic marker `m` for ability/potential is retired from the TAM
+paradigm. Ability, obligation, volition, learned capacity and related modal or
+servile meanings are expressed by an ordinary finite servile verb followed by
+the bare infinitive/root of the lexical verb. The servile verb carries time,
+aspect, person and number; the dependent infinitive remains uninflected.
+
+Schematic examples (the lexical roots for individual servile meanings are
+decided separately):
+
+```text
+[SERVILE]-i dik      = I can/must/want/know-how-to say
+[SERVILE]-di dik     = I could/had-to/wanted/knew-how-to say
+[SERVILE]-fin dik    = we will be able/obliged/willing to say
+```
+
+This construction is productive: no special synthetic suffix is added to the
+lexical verb for modal meanings.
 
 ## 5. Participial/resultative `-it`
 

@@ -6,7 +6,7 @@ lang = root / 'language'
 
 checks = {
     'alphabet_and_phonology.md': ['21 official written units', '`j` represents the glide **/j/**', '`w` represents the glide **/w/**'],
-    'verb_specification.md': ['root + TAM + person vowel + optional N', '`in`', '`un`', '`an`'],
+    'verb_specification.md': ['root + time + aspect + person vowel + optional N', 'Canonical 3×3 tense-aspect system', 'synthetic marker `m`', 'bare infinitive/root', '`in`', '`un`', '`an`'],
     'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete', '`uman`', '`wi umano`', '`wi umane`'],
     'articles.md': ['cardinal numeral\n`uno`', 'no separate apocopated article `un`'],
     'questions.md': ['`kom` | wh | how', '`ker` | wh | why'],

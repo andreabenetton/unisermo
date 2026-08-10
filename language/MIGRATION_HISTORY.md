@@ -34,3 +34,5 @@ originals, or compare a live file directly with its immutable counterpart under
   (female person/woman); explicit plural is `wi uman`; the regular abstract is
   `umanitat` via `-itat`. All live examples and machine-readable decisions were
   migrated accordingly. The immutable legacy snapshot was not modified.
+
+- 2026-08-10 — finite verb TAM closed as a 3×3 time-aspect system: time `Ø/d/f` × aspect `Ø/n/b`. The inherited synthetic modal `m` was retired; ability, obligation, volition, learned capacity and related servile meanings now use a finite servile verb + bare infinitive.
