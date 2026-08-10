@@ -106,6 +106,10 @@
     {
       "id": "modal_m_retired",
       "decision": "Retire the inherited synthetic m ability/potential marker from finite TAM. Modal/servile meanings are not a fourth aspect and are expressed through finite servile verb + bare infinitive instead."
+    },
+    {
+      "id": "nominalized_participle_it",
+      "decision": "A participial/resultative form in -it may be zero-nominalized and head a noun phrase without any additional nominalizer. In nominal use it denotes a result or resulting entity and follows ordinary noun grammar: bare fakit is number-neutral, wi fakit is explicitly plural, duo fakit is two facts/things done, and wi is omitted with numerals/quantity quantifiers. No special plural suffix is added to -it; ordinary nominal case marking remains available. Passive-clause syntax is a separate decision."
     }
   ]
 }

@@ -126,6 +126,17 @@ lexical verb for modal meanings.
 
 `-it` is not the abstract-quality suffix. Abstract qualities use `-itat`.
 
+A participial/resultative form may also function directly as a noun without an
+extra nominalizer. In nominal use it denotes a result or resulting entity and
+follows ordinary noun grammar:
+
+- `fakit` — fact / thing done, number unspecified
+- `wi fakit` — facts / things done, explicitly plural
+- `duo fakit` — two facts / two things done
+
+No plural suffix is added to `-it`; `wi` is omitted when a numeral or quantifier
+already expresses quantity. Passive-clause syntax is specified separately.
+
 ## 6. Imperative
 
 The bare verb root serves as the ordinary imperative:
