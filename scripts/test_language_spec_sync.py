@@ -7,7 +7,7 @@ lang = root / 'language'
 checks = {
     'alphabet_and_phonology.md': ['21 official written units', '`j` represents the glide **/j/**', '`w` represents the glide **/w/**'],
     'verb_specification.md': ['root + TAM + person vowel + optional N', '`in`', '`un`', '`an`'],
-    'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete'],
+    'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete', '`uman`', '`wi umano`', '`wi umane`'],
     'articles.md': ['cardinal numeral\n`uno`', 'no separate apocopated article `un`'],
     'questions.md': ['`kom` | wh | how', '`ker` | wh | why'],
     'comparison.md': ['`ekwal`', '/ma.jor/', '/e.kwal/'],
@@ -35,3 +35,10 @@ for fn in ['questions.md','comparison.md','copula.md','derivation.md','numerals.
         assert old not in text, f'{fn}: retired form {old}'
 
 print('language specification sync checks passed')
+
+for p in lang.glob('*.md'):
+    if p.name == 'MIGRATION_HISTORY.md':
+        continue
+    text=p.read_text()
+    for old in ['`om`','`omo`','`ome`']:
+        assert old not in text, f'{p.name}: retired human form {old}'

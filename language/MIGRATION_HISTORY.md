@@ -26,3 +26,11 @@ specification without fabricating retroactive commits.
 Use `git diff c7b9f16 -- language/` to inspect the evolution from the imported
 originals, or compare a live file directly with its immutable counterpart under
 `legacy/original-language/`.
+
+## Subsequent tracked changes
+
+- 2026-08-10 — canonical human/person root changed from `om` to `uman`.
+  Referential specificity now gives `umano` (male person/man) and `umane`
+  (female person/woman); explicit plural is `wi uman`; the regular abstract is
+  `umanitat` via `-itat`. All live examples and machine-readable decisions were
+  migrated accordingly. The immutable legacy snapshot was not modified.

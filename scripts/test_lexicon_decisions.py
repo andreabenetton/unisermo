@@ -17,7 +17,7 @@ def main() -> None:
     expected = {
         "ager", "kad", "kap", "sentrum", "sert", "sirkul", "siv", "klar",
         "kun", "kom", "ker", "kred", "kurar", "dek", "dik", "dirig", "dots", "fak",
-        "lok", "spets", "stru", "vok", "kin", "nation", "major", "ekwal",
+        "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal",
     }
     assert expected <= entries.keys(), expected - entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
@@ -27,6 +27,10 @@ def main() -> None:
     assert "dikit" in entries["dik"]["decision"]
     assert "normalized to sirkul" in entries["sirkul"]["decision"]
     assert "/e.kwal/" in entries["ekwal"]["decision"]
+    assert entries["uman"]["meaning_it"] == "persona; essere umano"
+    assert "umano" in entries["uman"]["decision"]
+    assert "umane" in entries["uman"]["decision"]
+    assert "umanitat" in entries["uman"]["decision"]
 
     audit = AUDIT.read_text(encoding="utf-8")
     mapping = {

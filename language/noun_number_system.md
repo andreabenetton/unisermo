@@ -8,7 +8,7 @@ numeral/quantifier.
 
 Examples:
 
-- `om` — person / people, number unspecified
+- `uman` — person / people, number unspecified
 - `dom` — house / houses, number unspecified
 
 ## 2. Optional explicit plural particle `wi`
@@ -16,9 +16,9 @@ Examples:
 When explicit nominal plurality is useful, place the invariant particle `wi`
 before the noun or noun phrase.
 
-- `wi om` — people, explicitly plural
-- `wi omo` — men
-- `wi ome` — women
+- `wi uman` — people, explicitly plural
+- `wi umano` — men
+- `wi umane` — women
 
 Canonical pronunciation is `/wi/`; `[u̯i]` is an accepted accent-tolerant
 realization.
@@ -34,7 +34,7 @@ When a numeral or a quantity-encoding quantifier already expresses number,
 - `ter dom` — three houses
 - `multi dom` — many houses
 - `nul dom` — no house
-- `omni om` — all/every person
+- `omni uman` — all/every person
 
 ## 4. Verb number without noun marking
 

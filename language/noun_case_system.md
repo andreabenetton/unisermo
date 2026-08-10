@@ -34,8 +34,8 @@ The immutable historical version is preserved under
 The nominative is the unmarked base form. The accusative `-em` marks an explicit
 direct object.
 
-- `om vida` — the person sees
-- `om vida domem` — the person sees the house
+- `uman vida` — the person sees
+- `uman vida domem` — the person sees the house
 
 ## 3. Attachment
 
