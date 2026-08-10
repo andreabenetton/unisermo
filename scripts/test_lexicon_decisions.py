@@ -28,6 +28,8 @@ def main() -> None:
     assert "normalized to sirkul" in entries["sirkul"]["decision"]
     assert "/e.kwal/" in entries["ekwal"]["decision"]
     assert entries["uman"]["meaning_it"] == "persona; essere umano"
+    assert entries["pel"]["meaning_en"] == "push"
+    assert entries["trak"]["meaning_en"] == "pull; draw; drag"
     assert "umano" in entries["uman"]["decision"]
     assert "umane" in entries["uman"]["decision"]
     assert "umanitat" in entries["uman"]["decision"]

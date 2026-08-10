@@ -150,6 +150,10 @@
     {
       "id": "explicit_state_transition_traes",
       "decision": "Canonize traes as the explicit two-pole state-transition verb. Canonical frame: traes DEST-ad SOURCE-de. The destination state/role takes existing dative/allative -ad and the source state/role takes existing ablative -de. Example: traes solidad likwidde = pass from liquid to solid; traes doktorad studentde = pass from student to doctor. This is distinct from ades X, which means simply become X and leaves the source state unspecified. No new transition case or relator is introduced. Canonize a second transitive causative frame: Y-NOM traes X-em RESULT-da, where X-em is the transformed entity and RESULT-da is the resulting predicative state/role/class/property. Example: Y traes akwaem solidda = Y transforms the water, making it solid. -da is distinct from allative -ad and is not used for ordinary copular predication."
+    },
+    {
+      "id": "motion_force_roots_pel_trak",
+      "decision": "Canonize pel = push and trak = pull/draw as independent force/manner verbal roots. Y-NOM pel X-em means Y pushes X; Y-NOM trak X-em means Y pulls X. These verbs describe the force/manner relation and do not by themselves entail that X actually changes position. Successful caused displacement remains Y-NOM mov X-em (optionally DEST-ad), while admov/inmov/demov/remov retain their phase meanings."
     }
   ]
 }

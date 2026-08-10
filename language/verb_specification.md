@@ -184,3 +184,16 @@ This valency alternation is inherited by `admov`, `inmov`, `demov`, and `remov`:
 transitive `admov` sets an object in motion, `inmov` keeps it in motion, `demov`
 stops it, and `remov` sets it in motion again. `inmov` is not lexical "push" or
 "pull"; those notions require their own manner/force semantics.
+## 9. Force/manner verbs: `pel` and `trak`
+
+Two independent canonical roots describe the physical manner/force relation without
+collapsing it into the `mov` phase family:
+
+- `Y pel X-em` — Y pushes X
+- `Y trak X-em` — Y pulls / draws X
+
+`pel` and `trak` do not by themselves entail successful displacement. A speaker may
+push or pull an object that does not move. Actual caused displacement is expressed
+with transitive `mov`, optionally with a destination in `-ad`. Thus force/manner and
+resulting motion remain semantically distinct.
+

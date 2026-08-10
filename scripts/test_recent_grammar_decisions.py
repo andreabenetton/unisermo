@@ -21,3 +21,4 @@ assert 'traes DEST-ad SOURCE-de' in d['explicit_state_transition_traes'] and 'ad
 assert 'Y-NOM traes X-em RESULT-da' in d['explicit_state_transition_traes'] and 'akwaem solidda' in d['explicit_state_transition_traes']
 assert '-da resultative predicative/transformative' in d['nominal_case_inventory_seven']
 print('recent grammar decision checks passed')
+assert 'pel = push' in d['motion_force_roots_pel_trak'] and 'trak = pull/draw' in d['motion_force_roots_pel_trak']

@@ -274,6 +274,22 @@
       "meaning_en": "in the manner of",
       "source": "legacy GlottoDelta extended case system",
       "decision": "Canonical invariant free manner relator. Former suffix -mod is retired."
+    },
+    {
+      "form": "pel",
+      "category": "root",
+      "meaning_it": "spingere",
+      "meaning_en": "push",
+      "source": "Latin pellere / international propel-repel family",
+      "decision": "Canonical force/manner verb for push. It describes exerting force in a pushing relation and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame."
+    },
+    {
+      "form": "trak",
+      "category": "root",
+      "meaning_it": "tirare; trascinare",
+      "meaning_en": "pull; draw; drag",
+      "source": "Latin trahere / tract-; international traction-tractor family",
+      "decision": "Canonical force/manner verb for pull. It describes traction/pulling and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame."
     }
   ]
 }
