@@ -83,3 +83,35 @@ When the copula is needed explicitly, the current person-number form is used:
 
 Because nominal number is now optionally marked with `wi`, the old nominal
 plural suffix `-en` is not part of the copula system.
+
+## 5. State-phase family built on `es`
+
+The copular/existential root `es` is also the base of a canonical family of
+state-phase verbs. These are fused written forms with no hyphen:
+
+| Form | Analysis | Core meaning |
+|---|---|---|
+| `es` | `es` | be / exist / hold state X |
+| `ines` | `in-` + `es` | remain / continue to be X |
+| `ades` | `ad-` + `es` | become X / enter state X |
+| `dees` | `de-` + `es` | cease to be X / leave state X |
+| `rees` | `re-` + `es` | return to being X / become X again |
+
+The contrasts are semantic, not stylistic. `es X` simply predicates X;
+`ines X` adds persistence; `ades X` marks entry into X; `dees X` marks exit
+from X without implying entry into the lexical opposite; and `rees X` marks
+restoration of a previously held state.
+
+Examples with a qualitative predicate `san` "healthy":
+
+- `es san` — be healthy
+- `ines san` — remain / stay healthy
+- `ades san` — become healthy
+- `dees san` — cease to be healthy
+- `rees san` — become healthy again / recover
+
+`ades` is deliberately distinct from `aes`, which is already the canonical
+genitive/possessive form of the specific third-person pronoun `ae`.
+
+These prefixed forms are ordinary verbal roots for finite TAM and person-number
+inflection. The prefixes themselves do not replace the finite aspect system.

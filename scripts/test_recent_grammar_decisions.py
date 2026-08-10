@@ -11,4 +11,8 @@ assert 'kom' in d['question_words_kom_ker'] and 'ker' in d['question_words_kom_k
 assert '-or' in d['derivational_person_agent_or'] and 'Historical agentive -er is retired' in d['derivational_person_agent_or']
 assert '-il' in d['derivational_instrument_device_il'] and 'Historical instrumental -or is retired' in d['derivational_instrument_device_il']
 assert 'per + NP' in d['derivational_instrument_device_il']
+assert 'ines' in d['state_phase_family_es'] and 'ades' in d['state_phase_family_es'] and 'dees' in d['state_phase_family_es'] and 'rees' in d['state_phase_family_es']
+assert 'aes is already the canonical genitive/possessive of ae' in d['state_phase_family_es']
+assert 'inmov' in d['phase_prefix_family'] and 'admov' in d['phase_prefix_family'] and 'demov' in d['phase_prefix_family'] and 'remov' in d['phase_prefix_family']
+assert 'do not replace finite aspect' in d['phase_prefix_family']
 print('recent grammar decision checks passed')

@@ -36,3 +36,11 @@ agentive association of `-or` and giving a clear formal contrast `-or` / `-il`.
 
 Examples: `fak` → `fakil`; `vid` → `vidil`. The syntactic means/instrument
 relation remains analytic with free relator `per + NP`.
+
+## Canonical phase prefixes
+
+The fused prefixes `in-`, `ad-`, `de-`, and `re-` form a restricted productive
+phase family: remain/continue, enter/begin, leave/cease, and return/resume.
+Canonical examples are `ines`, `ades`, `dees`, `rees` from `es`, and `inmov`,
+`admov`, `demov`, `remov` from `mov`. They are lexical phase derivation and do
+not replace finite aspect `Ø/e/o`.

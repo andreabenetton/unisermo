@@ -134,6 +134,14 @@
     {
       "id": "derivational_instrument_device_il",
       "decision": "Use invariant productive suffix -il for TOOL / INSTRUMENT / DEVICE: an artifact, tool, machine, or device whose characteristic function is to perform, facilitate, or enable the action expressed by the canonical base. Historical instrumental -or is retired from this function. Examples: fak->fakil making tool/device; vid->vidil viewing/observation instrument. Syntactic means remains analytic with free relator per + NP."
+    },
+    {
+      "id": "state_phase_family_es",
+      "decision": "Build the canonical state-phase family on es with fused prefixes and no hyphen: es = be/exist/hold state X; ines = remain/continue to be X; ades = become/enter state X; dees = cease to be/leave state X; rees = return to being X/become X again. dees does not imply becoming the lexical opposite. ades is used instead of aes because aes is already the canonical genitive/possessive of ae."
+    },
+    {
+      "id": "phase_prefix_family",
+      "decision": "Canonize fused phase prefixes in-, ad-, de-, re- with invariant relations REMAIN/CONTINUE, ENTER/BEGIN, LEAVE/CEASE, RETURN/RESUME. They may combine compositionally with suitable verbal/predicative roots. With mov: inmov = continue moving, admov = begin moving, demov = cease moving, remov = resume moving. These prefixes are derivational/lexical phase operators and do not replace finite aspect Ø/e/o."
     }
   ]
 }

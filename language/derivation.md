@@ -92,6 +92,27 @@ collision requires a root-specific revision:
 Examples must use current roots, e.g. `refak`, `defak`, `autofak`, not obsolete
 `refac`, `defac`, `autofac`.
 
+
+### Canonical phase prefixes
+
+A restricted, semantically compositional phase family is canonical with the
+prefixes `in-`, `ad-`, `de-`, and `re-`. The prefix and root are written as one
+word, without a hyphen. Their invariant phase meanings are:
+
+- `in-` — remain / continue in the base event or state
+- `ad-` — enter / begin the base event or state
+- `de-` — leave / cease the base event or state
+- `re-` — return / resume the base event or state
+
+With `es`, this yields `ines`, `ades`, `dees`, `rees`. With `mov`, the same
+architecture yields `inmov`, `admov`, `demov`, `remov`: continue moving, begin
+moving, cease moving, and resume moving. The exact lexical translation depends
+on the semantic type of the base, but the phase relation contributed by the
+prefix remains constant.
+
+These phase prefixes do not encode progressive/perfect aspect. Finite aspect
+remains the separate canonical `Ø/e/o` slot.
+
 ## 8. Inflection after derivation
 
 Case suffixes follow the fully derived lexical word:
