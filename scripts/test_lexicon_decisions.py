@@ -15,8 +15,8 @@ def main() -> None:
     data = json.loads(LEXICON.read_text(encoding="utf-8"))
     entries = {item["form"]: item for item in data["entries"]}
     expected = {
-        "ager", "kad", "kap", "sentrum", "sert", "sirkul", "siv", "klar",
-        "kun", "kom", "ker", "per", "pro", "due", "fin", "tem", "mod", "kred", "kurar", "dek", "dik", "dirig", "dots", "fak",
+        "ager", "kad", "kap", "sentr", "sert", "sirkul", "siv", "klar",
+        "kun", "kom", "ker", "per", "pro", "due", "fin", "tem", "mod", "kred", "kurar", "dek", "dik", "dirig", "dok", "fak",
         "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal",
     }
     assert expected <= entries.keys(), expected - entries.keys()
@@ -38,10 +38,10 @@ def main() -> None:
 
     audit = AUDIT.read_text(encoding="utf-8")
     mapping = {
-        "act":"ager", "cad":"kad", "cap":"kap", "centr":"sentrum",
+        "act":"ager", "cad":"kad", "cap":"kap", "centr":"sentr",
         "cert":"sert", "circul":"sirkul", "civ":"siv", "clar":"klar",
         "com":"kun", "cred":"kred", "cur":"kurar", "dec":"dek",
-        "dict":"dik", "direct":"dirig", "doc":"dots", "fac":"fak",
+        "dict":"dik", "direct":"dirig", "doc":"dok", "fac":"fak",
         "loc":"lok", "spec":"spets", "struct":"stru", "voc":"vok",
         "cin":"kin", "nacion":"nation",
     }

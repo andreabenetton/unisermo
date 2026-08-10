@@ -14,7 +14,7 @@ Quantitative studies and design evidence live under `../research/`.
 - `noun_number_system.md` — number-neutral nouns and optional plural `wi`
 - `noun_case_system.md` — six synthetic cases plus analytic relators such as `kun`
 - `articles.md` — no obligatory articles; optional indefinite `uno`
-- `derivation.md` — `-er`, `-or`, `-ia`, `-it`, `-itat`, `-al` and prefixes
+- `derivation.md` — `-or`, `-il`, `-ia`, `-it`, `-itat`, `-al` and prefixes
 - `numerals.md` — cardinal numeral system including `kin` = 5
 - `questions.md` — `ka` and the wh series, including `kom` = how and `ker` = why
 - `negation.md` — `si/no` and focus enclitics `-si/-no`

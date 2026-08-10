@@ -29,7 +29,7 @@ The machine-readable JSON has been updated with these resolutions while preservi
 ### Confirmed migrations detected
 
 - `cin` -> `kin`
-- `doc` -> `dots`
+- `doc` -> `dok`
 - `ekual` -> `ekwal`
 - `fac` -> `fak`
 - `nacion` -> `nation`
@@ -52,7 +52,7 @@ Adjacent vowel letters are valid but are read as hiatus. Thus legacy `-ia` remai
 | Legacy form | Status | Canonical/replacement | Notes |
 |---|---|---|---|
 | `cin` | confirmed_replacement | `kin` | legacy form has a confirmed canonical replacement |
-| `doc` | confirmed_replacement | `dots` | legacy form has a confirmed canonical replacement |
+| `doc` | confirmed_replacement | `dok` | legacy form has a confirmed canonical replacement |
 | `e` | obsolete_person_value | `u` | legacy person value is obsolete; current corresponding form is u |
 | `ekual` | confirmed_replacement | `ekwal` | legacy comparison word replaced by ekwal /e.kwal/ |
 | `fac` | confirmed_replacement | `fak` | legacy form has a confirmed canonical replacement |

@@ -8,4 +8,7 @@ assert '/i.a/' in d['derivational_place_field_ia']
 assert 'uno dom' in d['indefinite_singular_uno']
 assert 'No separate apocopated article un' in d['indefinite_singular_uno']
 assert 'kom' in d['question_words_kom_ker'] and 'ker' in d['question_words_kom_ker']
+assert '-or' in d['derivational_person_agent_or'] and 'Historical agentive -er is retired' in d['derivational_person_agent_or']
+assert '-il' in d['derivational_instrument_device_il'] and 'Historical instrumental -or is retired' in d['derivational_instrument_device_il']
+assert 'per + NP' in d['derivational_instrument_device_il']
 print('recent grammar decision checks passed')

@@ -1,6 +1,6 @@
 # Current derivational morphology
 
-> **Status:** canonical where explicitly marked below. Updated 2026-08-09.
+> **Status:** canonical where explicitly marked below. Updated 2026-08-10.
 
 ## `-ia` — place / institution / field / domain
 
@@ -12,6 +12,27 @@ Legacy examples such as `facia` and `docia` are obsolete because the roots `fac`
 
 ## Related productive suffixes
 
+- `-or` — person/agent
+- `-il` — tool/instrument/device
 - `-it` — participial/resultative
 - `-itat` — abstract quality/state/property
 - `-ia` — place/institution/field/domain, pronounced /i.a/
+
+## `-or` — person / agent
+
+**Canonical.** `-or` derives a person characterized by performing the action of
+the base. It replaces historical agentive `-er`. This aligns the internal
+derivation with internationally transparent agent forms such as the Latin
+`doctor` family while keeping parsing dependent on a valid canonical base.
+
+Examples: `fak` → `fakor`; `dok` → `dokor`.
+
+## `-il` — tool / instrument / device
+
+**Canonical.** `-il` derives an artifact, tool, machine, or device whose
+characteristic function is to perform, facilitate, or enable the base action.
+It replaces historical instrumental `-or`, avoiding the strong international
+agentive association of `-or` and giving a clear formal contrast `-or` / `-il`.
+
+Examples: `fak` → `fakil`; `vid` → `vidil`. The syntactic means/instrument
+relation remains analytic with free relator `per + NP`.

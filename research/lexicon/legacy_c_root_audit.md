@@ -12,7 +12,7 @@ global conversion rule.
 | `act` | `ager` | agire; atto; azione | `agere` |
 | `cad` | `kad` | cadere | `cadere` |
 | `cap` | `kap` | prendere; catturare | `capere` |
-| `centr` | `sentrum` | centro; centrale | `centrum` |
+| `centr` | `sentr` | centro; centrale | `centrum` |
 | `cert` | `sert` | certo; certezza | `certus` |
 | `circul` | `sirkul` | cerchio; circolare | `circulus` |
 | `civ` | `siv` | cittadino; civile | `civis` |
@@ -23,7 +23,7 @@ global conversion rule.
 | `dec` | `dek` | dieci; decimale | `decem` |
 | `dict` | `dik` | dire; detto; dettare | `dicere` |
 | `direct` | `dirig` | dirigere; diretto | `dirigere` |
-| `doc` | `dots` | insegnare; docente | `docere` |
+| `doc` | `dok` | insegnare; docente | `docere` |
 | `fac` | `fak` | fare; creare | `facere` |
 | `loc` | `lok` | luogo; locale | `locus` |
 | `spec` | `spets` | guardare; osservare; aspetto | `specere` |

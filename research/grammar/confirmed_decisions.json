@@ -1,6 +1,6 @@
 {
   "schema": "glottodelta/grammar-confirmed-decisions@1",
-  "confirmed_on": "2026-08-09",
+  "confirmed_on": "2026-08-10",
   "status": "confirmed_core_grammar",
   "decisions": [
     {
@@ -126,6 +126,14 @@
     {
       "id": "extended_case_suffixes_retired",
       "decision": "Retire -per, -pro, -due, -fin, -tem, and -mod as productive case suffixes. Preserve their meanings as invariant free pre-nominal relators: per instrumental/perlative, pro benefactive, due causal, fin purposive, tem temporal, mod manner. Canonical structure is RELATOR + NP, normally with the complement in base form."
+    },
+    {
+      "id": "derivational_person_agent_or",
+      "decision": "Use invariant productive suffix -or for PERSON / AGENT: a person whose characteristic role or activity is to perform the action expressed by the canonical base. Historical agentive -er is retired. Parsing requires a valid canonical base; words that merely end in -or are not automatically segmented, so major and minor remain indivisible comparison words. Examples: fak->fakor maker/doer; dok->dokor teacher."
+    },
+    {
+      "id": "derivational_instrument_device_il",
+      "decision": "Use invariant productive suffix -il for TOOL / INSTRUMENT / DEVICE: an artifact, tool, machine, or device whose characteristic function is to perform, facilitate, or enable the action expressed by the canonical base. Historical instrumental -or is retired from this function. Examples: fak->fakil making tool/device; vid->vidil viewing/observation instrument. Syntactic means remains analytic with free relator per + NP."
     }
   ]
 }

@@ -28,12 +28,12 @@
       "decision": "Canonical replacement for legacy cap."
     },
     {
-      "form": "sentrum",
+      "form": "sentr",
       "category": "root",
       "meaning_it": "centro; centrale",
       "meaning_en": "center; central",
-      "source": "Latin centrum",
-      "decision": "Canonical replacement for legacy centr."
+      "source": "Latin centrum / international centr- family",
+      "decision": "Canonical replacement for legacy centr. The bare root sentr is preferred over former sentrum to preserve a compact derivational base and avoid an unnecessary nominal ending."
     },
     {
       "form": "sert",
@@ -116,12 +116,12 @@
       "decision": "Canonical replacement for legacy direct."
     },
     {
-      "form": "dots",
+      "form": "dok",
       "category": "root",
-      "meaning_it": "insegnare; docente",
+      "meaning_it": "insegnare",
       "meaning_en": "teach",
       "source": "Latin docere",
-      "decision": "Canonical replacement for legacy doc."
+      "decision": "Canonical replacement for legacy doc and former dots. Source Latin docere means teach; Latin doctor is its agent noun. The k adaptation preserves the doc-/doct-/doctor family transparently under the canonical alphabet, giving regular dok + -or -> dokor (teacher)."
     },
     {
       "form": "fak",

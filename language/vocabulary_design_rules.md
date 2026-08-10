@@ -79,7 +79,7 @@ an accepted soft merger.
 | `act` | `ager` |
 | `cad` | `kad` |
 | `cap` | `kap` |
-| `centr` | `sentrum` |
+| `centr` | `sentr` |
 | `cert` | `sert` |
 | `circul` | `sirkul` |
 | `civ` | `siv` |
@@ -90,7 +90,7 @@ an accepted soft merger.
 | `dec` | `dek` |
 | `dict` | `dik` |
 | `direct` | `dirig` |
-| `doc` | `dots` |
+| `doc` | `dok` |
 | `fac` | `fak` |
 | `loc` | `lok` |
 | `spec` | `spets` |
