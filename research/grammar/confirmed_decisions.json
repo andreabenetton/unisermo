@@ -142,6 +142,10 @@
     {
       "id": "phase_prefix_family",
       "decision": "Canonize fused phase prefixes in-, ad-, de-, re- with invariant relations REMAIN/CONTINUE, ENTER/BEGIN, LEAVE/CEASE, RETURN/RESUME. They may combine compositionally with suitable verbal/predicative roots. With mov: inmov = continue moving, admov = begin moving, demov = cease moving, remov = resume moving. These prefixes are derivational/lexical phase operators and do not replace finite aspect Ø/e/o."
+    },
+    {
+      "id": "explicit_state_transition_traes",
+      "decision": "Canonize traes as the explicit two-pole state-transition verb. Canonical frame: traes DEST-ad SOURCE-de. The destination state/role takes existing dative/allative -ad and the source state/role takes existing ablative -de. Example: traes solidad likwidde = pass from liquid to solid; traes doktorad studentde = pass from student to doctor. This is distinct from ades X, which means simply become X and leaves the source state unspecified. No new transition case or relator is introduced."
     }
   ]
 }

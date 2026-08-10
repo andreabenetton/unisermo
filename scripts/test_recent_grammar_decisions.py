@@ -15,4 +15,5 @@ assert 'ines' in d['state_phase_family_es'] and 'ades' in d['state_phase_family_
 assert 'aes is already the canonical genitive/possessive of ae' in d['state_phase_family_es']
 assert 'inmov' in d['phase_prefix_family'] and 'admov' in d['phase_prefix_family'] and 'demov' in d['phase_prefix_family'] and 'remov' in d['phase_prefix_family']
 assert 'do not replace finite aspect' in d['phase_prefix_family']
+assert 'traes DEST-ad SOURCE-de' in d['explicit_state_transition_traes'] and 'ades X' in d['explicit_state_transition_traes']
 print('recent grammar decision checks passed')

@@ -115,3 +115,29 @@ genitive/possessive form of the specific third-person pronoun `ae`.
 
 These prefixed forms are ordinary verbal roots for finite TAM and person-number
 inflection. The prefixes themselves do not replace the finite aspect system.
+
+## 6. Explicit state transition with `traes`
+
+The canonical verb `traes` expresses an explicit transition between two
+predicative states, roles, classes, or conditions. It is distinct from simple
+`ades`: `ades X` only asserts entry into X, while `traes` profiles both the
+source and the destination of the transition.
+
+Canonical frame:
+
+```text
+traes DEST-ad SOURCE-de
+```
+
+The destination takes the existing dative/allative `-ad`; the source takes the
+existing ablative `-de`. No new transition case or free relator is introduced.
+
+Examples:
+
+- `traes solidad likwidde` — pass from liquid to solid
+- `traes doktorad studentde` — pass from student to doctor
+- `ades solid` — become solid, with no source state asserted
+
+`traes` is an ordinary verbal root for finite TAM and person-number inflection.
+The case-marked state expressions remain nominal/predicative complements; their
+case marking identifies destination and source.

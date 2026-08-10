@@ -113,6 +113,21 @@ prefix remains constant.
 These phase prefixes do not encode progressive/perfect aspect. Finite aspect
 remains the separate canonical `Ø/e/o` slot.
 
+
+### Explicit transition between states
+
+The canonical verb `traes` expresses transition from one explicitly named state
+to another. Its frame reuses the synthetic case system:
+
+```text
+traes DEST-ad SOURCE-de
+```
+
+Thus `traes solidad likwidde` means "pass from liquid to solid". This differs
+from `ades solid`, which simply means "become solid" and leaves the source state
+unspecified. `traes` does not create a new phase prefix and does not replace
+`ades`; it is the two-pole transition construction.
+
 ## 8. Inflection after derivation
 
 Case suffixes follow the fully derived lexical word:

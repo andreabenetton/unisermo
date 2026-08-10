@@ -41,6 +41,10 @@ The remaining spatial/argument cases are compact suffixes on the head noun:
 These suffixes express the core relation directly; no additional free relator
 is required.
 
+The same source/destination opposition is used for explicit state transitions:
+`traes DEST-ad SOURCE-de`, e.g. `traes solidad likwidde` "pass from liquid to
+solid". Here `-ad` marks the destination state and `-de` the source state.
+
 ## 4. Case attachment and noun-phrase structure
 
 A synthetic case suffix attaches to the **head noun**. In the canonical noun
