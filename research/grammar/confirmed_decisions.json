@@ -114,6 +114,18 @@
     {
       "id": "nominalized_participle_it",
       "decision": "A participial/resultative form in -it may be zero-nominalized and head a noun phrase without any additional nominalizer. In nominal use it denotes a result or resulting entity and follows ordinary noun grammar: bare fakit is number-neutral, wi fakit is explicitly plural, duo fakit is two facts/things done, and wi is omitted with numerals/quantity quantifiers. No special plural suffix is added to -it; ordinary nominal case marking remains available. Passive-clause syntax is a separate decision."
+    },
+    {
+      "id": "nominal_case_inventory_six",
+      "decision": "Close synthetic nominal case to six values: zero nominative/base, -em accusative, -s/-es genitive, -ad dative/allative, -de ablative, and -in locative. Synthetic case attaches to the head noun; modifiers remain invariant. Optional nominal plural wi is a separate pre-nominal particle."
+    },
+    {
+      "id": "comitative_kun_analytic",
+      "decision": "Retire the inherited comitative suffix -ko. Express comitative WITH / TOGETHER WITH analytically as invariant pre-nominal kun + noun phrase, e.g. kun uman, kun tik uman, kun wi uman."
+    },
+    {
+      "id": "extended_case_suffixes_retired",
+      "decision": "Retire -per, -pro, -due, -fin, -tem, and -mod as productive case suffixes. Preserve their meanings as invariant free pre-nominal relators: per instrumental/perlative, pro benefactive, due causal, fin purposive, tem temporal, mod manner. Canonical structure is RELATOR + NP, normally with the complement in base form."
     }
   ]
 }

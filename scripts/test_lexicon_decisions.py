@@ -16,7 +16,7 @@ def main() -> None:
     entries = {item["form"]: item for item in data["entries"]}
     expected = {
         "ager", "kad", "kap", "sentrum", "sert", "sirkul", "siv", "klar",
-        "kun", "kom", "ker", "kred", "kurar", "dek", "dik", "dirig", "dots", "fak",
+        "kun", "kom", "ker", "per", "pro", "due", "fin", "tem", "mod", "kred", "kurar", "dek", "dik", "dirig", "dots", "fak",
         "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal",
     }
     assert expected <= entries.keys(), expected - entries.keys()
@@ -31,6 +31,10 @@ def main() -> None:
     assert "umano" in entries["uman"]["decision"]
     assert "umane" in entries["uman"]["decision"]
     assert "umanitat" in entries["uman"]["decision"]
+    assert "kun + noun phrase" in entries["kun"]["decision"]
+    for rel in ("per", "pro", "due", "fin", "tem", "mod"):
+        assert entries[rel]["category"] == "function_word"
+        assert "Former suffix" in entries[rel]["decision"]
 
     audit = AUDIT.read_text(encoding="utf-8")
     mapping = {

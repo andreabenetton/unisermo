@@ -7,6 +7,7 @@ lang = root / 'language'
 checks = {
     'alphabet_and_phonology.md': ['21 official written units', '`j` represents the glide **/j/**', '`w` represents the glide **/w/**', 'Finite aspect vowels `e/o`', '`dikei` = `/dik.e.i/`'],
     'verb_specification.md': ['root + aspect + time + person vowel + optional N', 'Canonical 3×3 tense-aspect system', '`e` — ongoing / progressive', '`o` — completed / perfect', 'synthetic marker `m`', 'infinitive/root', '`in`', '`un`', '`an`'],
+    'noun_case_system.md': ['synthetic case inventory is closed to six values', '`-em`', '`-ad`', '`-de`', '`-in`', 'former comitative suffix `-ko` is retired', '`kun` | comitative', '`per` | instrumental / perlative', '`mod` | manner'],
     'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete', '`uman`', '`wi umano`', '`wi umane`', '`wi fakit`', '`duo fakit`'],
     'articles.md': ['cardinal numeral\n`uno`', 'no separate apocopated article `un`'],
     'questions.md': ['`kom` | wh | how', '`ker` | wh | why'],
@@ -43,3 +44,13 @@ for p in lang.glob('*.md'):
     text=p.read_text()
     for old in ['`om`','`omo`','`ome`']:
         assert old not in text, f'{p.name}: retired human form {old}'
+
+# Retired nominal morphology must not appear as current examples.
+for fn in ['adjectives.md','demonstratives.md','numerals.md']:
+    text=(lang/fn).read_text()
+    for old in ['`domen`','`domenem`']:
+        assert old not in text, f'{fn}: obsolete nominal plural example {old}'
+
+case_text=(lang/'noun_case_system.md').read_text()
+for retired in ['`-ko` | comitative', '`-per` |', '`-pro` |', '`-due` |', '`-fin` |', '`-tem` |', '`-mod` |']:
+    assert retired not in case_text, f'noun_case_system.md: retired suffix still listed as productive: {retired}'

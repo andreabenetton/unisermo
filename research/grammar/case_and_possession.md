@@ -67,3 +67,43 @@ the pronoun before genitive `-s` is added. For third person, for example:
 
 The neutral possessives `as` and `ans` always remain valid. No grammatical
 gender agreement is introduced.
+
+
+## 4. Canonical synthetic case inventory
+
+The synthetic nominal case inventory is closed to six values:
+
+- Ø nominative/base;
+- `-em` accusative;
+- `-s/-es` genitive;
+- `-ad` dative/allative;
+- `-de` ablative;
+- `-in` locative.
+
+Case suffixes attach to the head noun. Since canonical modifiers precede the
+head, the case suffix normally occurs at the right edge of the noun phrase.
+Optional nominal plural `wi` remains a separate pre-nominal particle; numerals
+and quantity quantifiers normally make `wi` redundant.
+
+The former comitative case suffix `-ko` is retired. Comitative meaning is
+expressed analytically as **`kun + noun phrase`**. The confirmed root/function
+word `kun` therefore covers WITH / TOGETHER WITH in addition to its lexical
+with-/together family. Canonical examples include `kun uman`, `kun tik uman`,
+and `kun wi uman`.
+
+## 5. Extended legacy cases become free relators
+
+The former extended suffixes are no longer case morphology. Their meanings are
+expressed by invariant pre-nominal relators:
+
+- `per` - instrumental/perlative, THROUGH / BY MEANS OF;
+- `pro` - benefactive, FOR THE BENEFIT OF;
+- `due` - causal, BECAUSE OF / DUE TO;
+- `fin` - purposive, FOR THE PURPOSE OF;
+- `tem` - temporal, AT / DURING;
+- `mod` - manner, IN THE MANNER OF.
+
+Canonical analytic structure is `RELATOR + NP`. The complement is normally in
+the base form because the relator itself encodes the relation. The retired
+forms `-ko/-per/-pro/-due/-fin/-tem/-mod` must not be productively attached as
+case suffixes.
