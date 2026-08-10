@@ -158,7 +158,7 @@ and the resulting predicative complement takes resultative/transformative
 
 Examples:
 
-- `Y traes akvaem solidda` — Y makes/transforms the water solid
+- `Y traes akwaem solidda` — Y makes/transforms the water solid
 - `Y traes umanem doktorda` — Y makes/transforms/trains the person into a doctor
 
 This frame is distinct from both `ades X` and the intransitive two-pole frame
@@ -166,7 +166,7 @@ This frame is distinct from both `ades X` and the intransitive two-pole frame
 
 - `ades solid` — become solid; source unspecified
 - `traes solidad likwidde` — pass from liquid to solid
-- `Y traes akvaem solidda` — Y transforms the water, making it solid
+- `Y traes akwaem solidda` — Y transforms the water, making it solid
 
 `-da` marks the **resulting predicate of the transformed object**; it is not an
 ordinary copular predicate marker and does not replace `-ad` or `-de`.

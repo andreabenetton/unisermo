@@ -145,7 +145,7 @@
     },
     {
       "id": "explicit_state_transition_traes",
-      "decision": "Canonize traes as the explicit two-pole state-transition verb. Canonical frame: traes DEST-ad SOURCE-de. The destination state/role takes existing dative/allative -ad and the source state/role takes existing ablative -de. Example: traes solidad likwidde = pass from liquid to solid; traes doktorad studentde = pass from student to doctor. This is distinct from ades X, which means simply become X and leaves the source state unspecified. No new transition case or relator is introduced. Canonize a second transitive causative frame: Y-NOM traes X-em RESULT-da, where X-em is the transformed entity and RESULT-da is the resulting predicative state/role/class/property. Example: Y traes akvaem solidda = Y transforms the water, making it solid. -da is distinct from allative -ad and is not used for ordinary copular predication."
+      "decision": "Canonize traes as the explicit two-pole state-transition verb. Canonical frame: traes DEST-ad SOURCE-de. The destination state/role takes existing dative/allative -ad and the source state/role takes existing ablative -de. Example: traes solidad likwidde = pass from liquid to solid; traes doktorad studentde = pass from student to doctor. This is distinct from ades X, which means simply become X and leaves the source state unspecified. No new transition case or relator is introduced. Canonize a second transitive causative frame: Y-NOM traes X-em RESULT-da, where X-em is the transformed entity and RESULT-da is the resulting predicative state/role/class/property. Example: Y traes akwaem solidda = Y transforms the water, making it solid. -da is distinct from allative -ad and is not used for ordinary copular predication."
     }
   ]
 }

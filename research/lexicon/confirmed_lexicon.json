@@ -12,6 +12,14 @@
       "decision": "Canonical replacement for legacy act."
     },
     {
+      "form": "akwa",
+      "category": "root",
+      "meaning_it": "acqua",
+      "meaning_en": "water",
+      "source": "Latin aqua / international aqua- family",
+      "decision": "Canonical water root. Chosen as akwa rather than akva or akua: w represents the canonical /w/ glide, preserving the international aqua /akwa/ shape without substituting /v/ or introducing a vowel hiatus."
+    },
+    {
       "form": "kad",
       "category": "root",
       "meaning_it": "cadere",

@@ -61,7 +61,7 @@ predicative complement.
 
 Examples:
 
-- `Y traes akvaem solidda` - Y transforms the water, making it solid
+- `Y traes akwaem solidda` - Y transforms the water, making it solid
 - `Y traes umanem doktorda` - Y transforms/trains the person into a doctor
 
 `-da` is not an allative destination. Compare `solidad` "toward/to the solid

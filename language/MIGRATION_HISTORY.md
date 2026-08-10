@@ -47,3 +47,8 @@ originals, or compare a live file directly with its immutable counterpart under
 - 2026-08-10 - `traes` was canonized as the explicit two-pole state-transition verb with frame `traes DEST-ad SOURCE-de`: destination uses existing dative/allative `-ad`, source uses existing ablative `-de`. `ades X` remains the simpler BECOME construction when no source state is asserted.
 
 - 2026-08-10 - synthetic nominal case was expanded from six to seven values by canonizing resultative/transformative `-da`. Canonical causative-transition frame: `Y-NOM traes X-em RESULT-da`, where `-em` marks the transformed entity and `-da` its resulting state/role/class/property. This remains distinct from `traes DEST-ad SOURCE-de` and ordinary copular predication.
+
+
+## Canonical lexical updates
+
+- Canonical water root: `akwa` = water, replacing example-only `akva`; canonical `w` preserves /w/ in the international aqua family.
