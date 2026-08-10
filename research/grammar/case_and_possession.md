@@ -71,19 +71,24 @@ gender agreement is introduced.
 
 ## 4. Canonical synthetic case inventory
 
-The synthetic nominal case inventory is closed to six values:
+The synthetic nominal case inventory is closed to seven values:
 
 - Ø nominative/base;
 - `-em` accusative;
 - `-s/-es` genitive;
 - `-ad` dative/allative;
 - `-de` ablative;
-- `-in` locative.
+- `-in` locative;
+- `-da` resultative predicative / transformative.
 
 Case suffixes attach to the head noun. Since canonical modifiers precede the
 head, the case suffix normally occurs at the right edge of the noun phrase.
 Optional nominal plural `wi` remains a separate pre-nominal particle; numerals
 and quantity quantifiers normally make `wi` redundant.
+
+The resultative/transformative `-da` is restricted to a resulting predicate of
+an explicitly transformed object, canonically `Y-NOM traes X-em RESULT-da`. It
+is distinct from allative `-ad` and from ordinary zero/copular predication.
 
 The former comitative case suffix `-ko` is retired. Comitative meaning is
 expressed analytically as **`kun + noun phrase`**. The confirmed root/function

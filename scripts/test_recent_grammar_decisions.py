@@ -16,4 +16,6 @@ assert 'aes is already the canonical genitive/possessive of ae' in d['state_phas
 assert 'inmov' in d['phase_prefix_family'] and 'admov' in d['phase_prefix_family'] and 'demov' in d['phase_prefix_family'] and 'remov' in d['phase_prefix_family']
 assert 'do not replace finite aspect' in d['phase_prefix_family']
 assert 'traes DEST-ad SOURCE-de' in d['explicit_state_transition_traes'] and 'ades X' in d['explicit_state_transition_traes']
+assert 'Y-NOM traes X-em RESULT-da' in d['explicit_state_transition_traes'] and 'akvaem solidda' in d['explicit_state_transition_traes']
+assert '-da resultative predicative/transformative' in d['nominal_case_inventory_seven']
 print('recent grammar decision checks passed')

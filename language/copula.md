@@ -141,3 +141,32 @@ Examples:
 `traes` is an ordinary verbal root for finite TAM and person-number inflection.
 The case-marked state expressions remain nominal/predicative complements; their
 case marking identifies destination and source.
+
+## 7. Causative transformation with `traes` and resultative `-da`
+
+`traes` also has a canonical transitive causative frame for an agent or cause
+that transforms an explicit object into a resulting state, role, class, or
+property:
+
+```text
+Y-NOM traes X-em RESULT-da
+```
+
+The causer Y is nominative/base, the transformed entity X is accusative `-em`,
+and the resulting predicative complement takes resultative/transformative
+`-da`.
+
+Examples:
+
+- `Y traes akvaem solidda` — Y makes/transforms the water solid
+- `Y traes umanem doktorda` — Y makes/transforms/trains the person into a doctor
+
+This frame is distinct from both `ades X` and the intransitive two-pole frame
+`traes DEST-ad SOURCE-de`. The three constructions therefore encode:
+
+- `ades solid` — become solid; source unspecified
+- `traes solidad likwidde` — pass from liquid to solid
+- `Y traes akvaem solidda` — Y transforms the water, making it solid
+
+`-da` marks the **resulting predicate of the transformed object**; it is not an
+ordinary copular predicate marker and does not replace `-ad` or `-de`.

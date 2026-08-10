@@ -7,7 +7,7 @@ lang = root / 'language'
 checks = {
     'alphabet_and_phonology.md': ['21 official written units', '`j` represents the glide **/j/**', '`w` represents the glide **/w/**', 'Finite aspect vowels `e/o`', '`dikei` = `/dik.e.i/`'],
     'verb_specification.md': ['root + aspect + time + person vowel + optional N', 'Canonical 3×3 tense-aspect system', '`e` — ongoing / progressive', '`o` — completed / perfect', 'synthetic marker `m`', 'infinitive/root', '`in`', '`un`', '`an`'],
-    'noun_case_system.md': ['synthetic case inventory is closed to six values', '`-em`', '`-ad`', '`-de`', '`-in`', 'former comitative suffix `-ko` is retired', '`kun` | comitative', '`per` | instrumental / perlative', '`mod` | manner'],
+    'noun_case_system.md': ['synthetic case inventory is closed to seven values', '`-em`', '`-ad`', '`-de`', '`-in`', '`-da`', 'former comitative suffix `-ko` is retired', '`kun` | comitative', '`per` | instrumental / perlative', '`mod` | manner'],
     'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete', '`uman`', '`wi umano`', '`wi umane`', '`wi fakit`', '`duo fakit`'],
     'articles.md': ['cardinal numeral\n`uno`', 'no separate apocopated article `un`'],
     'questions.md': ['`kom` | wh | how', '`ker` | wh | why'],

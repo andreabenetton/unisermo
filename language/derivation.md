@@ -128,6 +128,18 @@ from `ades solid`, which simply means "become solid" and leaves the source state
 unspecified. `traes` does not create a new phase prefix and does not replace
 `ades`; it is the two-pole transition construction.
 
+A second canonical `traes` frame is transitive and causative:
+
+```text
+Y-NOM traes X-em RESULT-da
+```
+
+Here `-em` marks the entity being transformed and resultative/transformative
+`-da` marks the state, role, class, or property produced by the transformation.
+For example, `Y traes akvaem solidda` means "Y transforms the water, making it
+solid". `-da` is a nominal case relation in this frame, not a derivational
+suffix and not a replacement for allative `-ad`.
+
 ## 8. Inflection after derivation
 
 Case suffixes follow the fully derived lexical word:

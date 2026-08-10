@@ -116,8 +116,8 @@
       "decision": "A participial/resultative form in -it may be zero-nominalized and head a noun phrase without any additional nominalizer. In nominal use it denotes a result or resulting entity and follows ordinary noun grammar: bare fakit is number-neutral, wi fakit is explicitly plural, duo fakit is two facts/things done, and wi is omitted with numerals/quantity quantifiers. No special plural suffix is added to -it; ordinary nominal case marking remains available. Passive-clause syntax is a separate decision."
     },
     {
-      "id": "nominal_case_inventory_six",
-      "decision": "Close synthetic nominal case to six values: zero nominative/base, -em accusative, -s/-es genitive, -ad dative/allative, -de ablative, and -in locative. Synthetic case attaches to the head noun; modifiers remain invariant. Optional nominal plural wi is a separate pre-nominal particle."
+      "id": "nominal_case_inventory_seven",
+      "decision": "Close synthetic nominal case to seven values: zero nominative/base, -em accusative, -s/-es genitive, -ad dative/allative, -de ablative, -in locative, and -da resultative predicative/transformative. -da marks the resulting state, role, class, or property of an explicitly transformed object, canonically Y-NOM traes X-em RESULT-da. Synthetic case attaches to the head noun; modifiers remain invariant. Optional nominal plural wi is a separate pre-nominal particle."
     },
     {
       "id": "comitative_kun_analytic",
@@ -145,7 +145,7 @@
     },
     {
       "id": "explicit_state_transition_traes",
-      "decision": "Canonize traes as the explicit two-pole state-transition verb. Canonical frame: traes DEST-ad SOURCE-de. The destination state/role takes existing dative/allative -ad and the source state/role takes existing ablative -de. Example: traes solidad likwidde = pass from liquid to solid; traes doktorad studentde = pass from student to doctor. This is distinct from ades X, which means simply become X and leaves the source state unspecified. No new transition case or relator is introduced."
+      "decision": "Canonize traes as the explicit two-pole state-transition verb. Canonical frame: traes DEST-ad SOURCE-de. The destination state/role takes existing dative/allative -ad and the source state/role takes existing ablative -de. Example: traes solidad likwidde = pass from liquid to solid; traes doktorad studentde = pass from student to doctor. This is distinct from ades X, which means simply become X and leaves the source state unspecified. No new transition case or relator is introduced. Canonize a second transitive causative frame: Y-NOM traes X-em RESULT-da, where X-em is the transformed entity and RESULT-da is the resulting predicative state/role/class/property. Example: Y traes akvaem solidda = Y transforms the water, making it solid. -da is distinct from allative -ad and is not used for ordinary copular predication."
     }
   ]
 }

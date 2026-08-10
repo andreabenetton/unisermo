@@ -11,7 +11,7 @@ comparisons should remain on research branches until selected.
   number, `nul`, the optional plural particle `wi`, and the `omni` / `tot` distinction.
 - `polarity_and_focus_clitics.md` — normative specification for `si` / `no`
   polarity and the additive/negative-additive enclitics `-si` / `-no`.
-- `case_and_possession.md` — six-case synthetic core, analytic relators, genitive `-s / -es`, and
+- `case_and_possession.md` — seven-case synthetic core, analytic relators, genitive `-s / -es`, and
   productive personal possessives (`is/us/as/ins/uns/ans`).
 - `copula.md` — copula/existential root `es` updated to the current `i/u/a + N`
   person-number system.

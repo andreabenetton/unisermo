@@ -7,7 +7,7 @@ The immutable historical version is preserved under
 
 ## 1. Canonical synthetic case inventory
 
-The synthetic case inventory is closed to six values:
+The synthetic case inventory is closed to seven values:
 
 | Suffix | Function | Meaning |
 |---|---|---|
@@ -17,6 +17,7 @@ The synthetic case inventory is closed to six values:
 | `-ad` | dative / allative | to / toward / recipient |
 | `-de` | ablative | from / source / origin |
 | `-in` | locative | in / at / location |
+| `-da` | resultative predicative / transformative | as / into the resulting state or role |
 
 The former comitative suffix `-ko` is retired. The former extended case
 suffixes `-per`, `-pro`, `-due`, `-fin`, `-tem`, and `-mod` are also retired as
@@ -45,7 +46,31 @@ The same source/destination opposition is used for explicit state transitions:
 `traes DEST-ad SOURCE-de`, e.g. `traes solidad likwidde` "pass from liquid to
 solid". Here `-ad` marks the destination state and `-de` the source state.
 
-## 4. Case attachment and noun-phrase structure
+## 4. Resultative predicative / transformative `-da`
+
+The suffix `-da` marks a state, role, class, or property assigned as the **result**
+of a transformation to an explicit object. Its canonical causative-transition frame is:
+
+```text
+Y-NOM traes X-em RESULT-da
+```
+
+Here Y is the causer/transformer in the nominative/base form, X is the entity
+undergoing transformation in accusative `-em`, and `RESULT-da` is the resulting
+predicative complement.
+
+Examples:
+
+- `Y traes akvaem solidda` - Y transforms the water, making it solid
+- `Y traes umanem doktorda` - Y transforms/trains the person into a doctor
+
+`-da` is not an allative destination. Compare `solidad` "toward/to the solid
+state" in the two-pole intransitive transition `traes solidad likwidde` with
+`solidda` "as/resulting solid" in the causative frame. It is also not used for
+ordinary copular predication: plain `X solid` or explicit `X esa solid` remains
+the normal way to say that X is solid.
+
+## 5. Case attachment and noun-phrase structure
 
 A synthetic case suffix attaches to the **head noun**. In the canonical noun
 phrase, modifiers precede the head noun, so the case suffix normally also
@@ -67,7 +92,7 @@ The same attachment rule applies to the other synthetic cases:
 - `wi umande` - from people, explicitly plural
 - `duo domin` - in two houses
 
-## 5. Genitive `-s / -es`
+## 6. Genitive `-s / -es`
 
 The genitive is `-s` by default. Use `-es` after a stem whose right edge is
 sibilant or may coalesce to a sibilant/affricate realization that makes direct
@@ -89,7 +114,7 @@ Examples:
 - `vis` -> `vises`
 - `spets` -> `spetses`
 
-## 6. Personal possessives
+## 7. Personal possessives
 
 Personal possessives are simply genitive pronouns:
 
@@ -105,9 +130,9 @@ Personal possessives are simply genitive pronouns:
 Optional referential specificity remains inside the pronoun before genitive
 `-s`: `ao->aos`, `ae->aes`, `ano->anos`, `ane->anes`.
 
-## 7. Free relational words
+## 8. Free relational words
 
-Relations that do not belong to the six-case synthetic core are expressed
+Relations that do not belong to the seven-case synthetic core are expressed
 analytically. The relator precedes an ordinary noun phrase and is invariant:
 
 ```text
@@ -142,9 +167,9 @@ The complement of a free relator is normally in the base form because the
 relator itself expresses the semantic relation. Synthetic case is not duplicated
 merely to repeat the same relation.
 
-## 8. Design principle
+## 9. Design principle
 
 Synthetic case is reserved for a small, frequent grammatical core. More
 specific semantic relations remain transparent free words. This avoids a long
 case paradigm while preserving compact marking for direct objects, possession,
-recipients/direction, source, and location.
+recipients/direction, source, location, and resultative predication.
