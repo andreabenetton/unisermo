@@ -113,7 +113,7 @@
     },
     {
       "id": "nominalized_participle_it",
-      "decision": "A participial/resultative form in -it may be zero-nominalized and head a noun phrase without any additional nominalizer. In nominal use it denotes a result or resulting entity and follows ordinary noun grammar: bare fakit is number-neutral, wi fakit is explicitly plural, duo fakit is two facts/things done, and wi is omitted with numerals/quantity quantifiers. No special plural suffix is added to -it; ordinary nominal case marking remains available. Passive-clause syntax is a separate decision."
+      "decision": "A participial/resultative form in -it may be zero-nominalized and head a noun phrase without any additional nominalizer. In nominal use it denotes a result or resulting entity and follows ordinary noun grammar: bare fakit is number-neutral, wi fakit is explicitly plural, bis fakit is two facts/things done, and wi is omitted with numerals/quantity quantifiers. No special plural suffix is added to -it; ordinary nominal case marking remains available. Passive-clause syntax is a separate decision."
     },
     {
       "id": "nominal_case_inventory_seven",
@@ -162,6 +162,10 @@
     {
       "id": "lexical_aer_plan_aerplan_frat",
       "decision": "Canonize aer = air, plan = plane/flat/level, aerplan = airplane/aeroplane as the transparent compound aer+plan, and frat = brother. aerplan is preferred over aeroplan. Instrumental travel uses the existing free relator per + NP, e.g. per aerplan = by airplane."
+    },
+    {
+      "id": "numeral_two_bis",
+      "decision": "Canonize bis as the cardinal numeral 2 throughout the GlottoDelta numeral system, replacing canonical duo. bis is used in ordinary counting, numeral compounds, quantified noun phrases, hundreds/thousands, and any productive construction based on the cardinal 2. Legacy duo remains historical/source material only and is not canonical."
     }
   ]
 }

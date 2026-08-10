@@ -146,7 +146,7 @@ follows ordinary noun grammar:
 
 - `fakit` — fact / thing done, number unspecified
 - `wi fakit` — facts / things done, explicitly plural
-- `duo fakit` — two facts / two things done
+- `bis fakit` — two facts / two things done
 
 No plural suffix is added to `-it`; `wi` is omitted when a numeral or quantifier
 already expresses quantity. Passive-clause syntax is specified separately.

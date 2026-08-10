@@ -75,7 +75,7 @@ Demonstratives can stack with adjectives and other modifiers, all of which sit b
 
 ```
 tik bon dom    — this good house
-tan duo dom    — those two houses
+tan bis dom    — those two houses
 ```
 
 ---

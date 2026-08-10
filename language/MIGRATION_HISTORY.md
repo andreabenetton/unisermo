@@ -1,4 +1,5 @@
 - 2026-08-10 - canonical lexical roots/compound established: `aer` = air, `plan` = plane/flat/level, `aerplan` = airplane/aeroplane (`aer` + `plan`), and `frat` = brother. Travel by airplane is expressed analytically as `per aerplan`.
+- 2026-08-10 — cardinal `2` changed globally from `duo` to `bis`; `bis` is the canonical numeral in all numeric compounds and quantified noun phrases. Legacy `duo` remains only in historical source material.
 - 2026-08-10 - canonical vertical motion axis established: `alt` = high/upper/up, `bas` = low/lower/down; `mov altad` / `mov basad` express upward/downward motion analytically, while transparent compounds `altmov` / `basmov` mean ascend/descend and remain distinct from phase `admov` / `demov`.
 - 2026-08-10 - canonical force/manner roots established: `pel` = push and `trak` = pull/draw. They remain semantically distinct from `mov`: pushing/pulling does not entail successful displacement.
 # Language specification migration history
@@ -41,7 +42,7 @@ originals, or compare a live file directly with its immutable counterpart under
 
 - 2026-08-10 — finite verb TAM closed as a 3×3 time-aspect system: time `Ø/d/f` × aspect `Ø/n/b`. The inherited synthetic modal `m` was retired; ability, obligation, volition, learned capacity and related servile meanings now use a finite servile verb + bare infinitive.
 
-- 2026-08-10 — participial/resultative `-it` confirmed as directly zero-nominalizable. A nominalized participle follows ordinary noun number: bare `fakit` is number-neutral, `wi fakit` explicitly plural, and `duo fakit` uses the numeral without `wi`. No special participial plural suffix is introduced.
+- 2026-08-10 — participial/resultative `-it` confirmed as directly zero-nominalizable. A nominalized participle follows ordinary noun number: bare `fakit` is number-neutral, `wi fakit` explicitly plural, and `bis fakit` uses the numeral without `wi`. No special participial plural suffix is introduced.
 - 2026-08-10 — finite aspect was revised after quantitative phonotactic testing. The consonantal aspect markers `n/b` were retired and replaced by vowel aspect `e/o`, ordered before time: `root + aspect + time + person + N`. Canonical aspect is now `Ø` simple, `e` progressive, `o` completed/perfect; time remains `Ø/d/f`. The nine TAM combinations are `Ø/e/o`, `d/ed/od`, `f/ef/of`. Present aspect-person vowel adjacency is canonical hiatus and may not coalesce if grammatical aspect would be lost.
 
 - 2026-08-10 - nominal case morphology was reduced to a six-case synthetic core: base/nominative zero, accusative `-em`, genitive `-s/-es`, dative/allative `-ad`, ablative `-de`, and locative `-in`. The former comitative `-ko` was retired in favor of analytic `kun + NP`. Former extended case suffixes `-per/-pro/-due/-fin/-tem/-mod` were retired as suffixes and retained as invariant free relators `per/pro/due/fin/tem/mod`. Stale live examples using obsolete nominal plural `-en` were corrected at the same time.

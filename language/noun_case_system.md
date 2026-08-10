@@ -90,7 +90,7 @@ The same attachment rule applies to the other synthetic cases:
 
 - `tik umanad` - to this person
 - `wi umande` - from people, explicitly plural
-- `duo domin` - in two houses
+- `bis domin` - in two houses
 
 ## 6. Genitive `-s / -es`
 

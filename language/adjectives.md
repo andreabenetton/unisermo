@@ -64,7 +64,7 @@ The adjective `bon` is invariant in all of these. Case attaches to the head noun
 | Form | Meaning |
 |---|---|
 | `tik bon dom` | this good house |
-| `duo bon dom` | two good houses |
+| `bis bon dom` | two good houses |
 | `amiks bon dom` | the friend's good house |
 
 **Order of stacked modifiers.** When several pre-nominal modifiers co-occur, their relative order is fixed:
@@ -75,8 +75,8 @@ The adjective `bon` is invariant in all of these. Case attaches to the head noun
 
 | Form | Meaning |
 |---|---|
-| `tik duo bon dom` | these two good houses |
-| `amiks tik duo bon dom` | the friend's these two good houses |
+| `tik bis bon dom` | these two good houses |
+| `amiks tik bis bon dom` | the friend's these two good houses |
 
 A genitive or possessive phrase, when present, sits at the very front of the noun phrase; the demonstrative, numeral, and adjective then follow in that order, with the head noun last. As always, synthetic case attaches only to the head noun; `wi` is a separate pre-nominal plural particle and is normally omitted when a numeral already gives quantity.
 

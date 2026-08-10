@@ -25,3 +25,13 @@ assert 'pel = push' in d['motion_force_roots_pel_trak'] and 'trak = pull/draw' i
 assert 'mov altad' in d['vertical_motion_alt_bas'] and 'mov basad' in d['vertical_motion_alt_bas']
 assert 'altmov = ascend/go up' in d['vertical_motion_alt_bas'] and 'basmov = descend/go down' in d['vertical_motion_alt_bas']
 assert 'admov remains begin moving' in d['vertical_motion_alt_bas'] and 'demov remains cease moving' in d['vertical_motion_alt_bas']
+
+
+def test_cardinal_two_is_bis_everywhere_canonical():
+    root = Path(__file__).resolve().parents[1]
+    numerals = (root / "language" / "numerals.md").read_text()
+    decisions = json.loads((root / "research" / "grammar" / "confirmed_decisions.json").read_text())
+    assert "| 2 | `bis` |" in numerals
+    assert "duo" not in numerals
+    entry = next(d for d in decisions["decisions"] if d["id"] == "numeral_two_bis")
+    assert "cardinal numeral 2" in entry["decision"]

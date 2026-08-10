@@ -8,11 +8,11 @@ checks = {
     'alphabet_and_phonology.md': ['21 official written units', '`j` represents the glide **/j/**', '`w` represents the glide **/w/**', 'The letter `x` is **not** part of the official alphabet.', 'Finite aspect vowels `e/o`', '`dikei` = `/dik.e.i/`'],
     'verb_specification.md': ['root + aspect + time + person vowel + optional N', 'Canonical 3×3 tense-aspect system', '`e` — ongoing / progressive', '`o` — completed / perfect', 'synthetic marker `m`', 'infinitive/root', '`in`', '`un`', '`an`'],
     'noun_case_system.md': ['synthetic case inventory is closed to seven values', '`-em`', '`-ad`', '`-de`', '`-in`', '`-da`', 'former comitative suffix `-ko` is retired', '`kun` | comitative', '`per` | instrumental / perlative', '`mod` | manner'],
-    'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete', '`uman`', '`wi umano`', '`wi umane`', '`wi fakit`', '`duo fakit`'],
+    'noun_number_system.md': ['plural particle `wi`', 'former optional nominal plural suffix `-en` is obsolete', '`uman`', '`wi umano`', '`wi umane`', '`wi fakit`', '`bis fakit`'],
     'articles.md': ['cardinal numeral\n`uno`', 'no separate apocopated article `un`'],
     'questions.md': ['`kom` | wh | how', '`ker` | wh | why'],
     'comparison.md': ['`ekwal`', '/ma.jor/', '/e.kwal/'],
-    'derivation.md': ['`-ia` remains canonical and is pronounced **/i.a/**', '`-it`', '`-itat`', '`wi fakit`', '`duo fakit`'],
+    'derivation.md': ['`-ia` remains canonical and is pronounced **/i.a/**', '`-it`', '`-itat`', '`wi fakit`', '`bis fakit`'],
     'stress.md': ['Finite aspect vowels `e/o`', '`MOV-e-i` is `/mov.e.i/`'],
 }
 for fn, needles in checks.items():

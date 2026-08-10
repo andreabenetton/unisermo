@@ -66,7 +66,7 @@ def main() -> None:
     assert "esi, esu, esa, esin, esun, esan" in decisions["copula_es_current_person_number"]
     assert "dik->dikit" in decisions["participial_resultative_it"]
     assert "wi fakit" in decisions["nominalized_participle_it"]
-    assert "duo fakit" in decisions["nominalized_participle_it"]
+    assert "bis fakit" in decisions["nominalized_participle_it"]
     assert "confirmed -itat" in decisions["abstract_it_retired"]
     assert "bon->bonitat" in decisions["abstract_quality_itat"]
     assert "root + aspect + time + person vowel + optional plural N" in decisions["finite_verb_morphotactics"]
@@ -124,7 +124,7 @@ def main() -> None:
         assert form in finite, form
 
     participles = PARTICIPLE_SPEC.read_text(encoding="utf-8")
-    for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`", "`wi fakit`", "`duo fakit`"):
+    for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`", "`wi fakit`", "`bis fakit`"):
         assert form in participles, form
     assert "Productive abstract-quality suffix `-itat`" in participles
     for form in ("`bonitat`", "`klaritat`", "`umanitat`"):

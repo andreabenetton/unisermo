@@ -48,7 +48,7 @@ Once nominalized, the form follows the ordinary noun-number system exactly:
 
 - bare `fakit` — fact / facts, number unspecified
 - `wi fakit` — facts / things done, explicitly plural
-- `duo fakit` — two facts / two things done
+- `bis fakit` — two facts / two things done
 - `nul fakit` — no facts / nothing done
 
 `wi` is omitted when a numeral or quantity-encoding quantifier already marks

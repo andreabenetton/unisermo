@@ -52,7 +52,7 @@ is nominal, it follows exactly the same number rules as any other noun:
 
 - `fakit` — fact / facts, number unspecified
 - `wi fakit` — facts, explicitly plural
-- `duo fakit` — two facts; no `wi`
+- `bis fakit` — two facts; no `wi`
 - `nul fakit` — no facts; no `wi`
 
 There is no special participial plural ending.

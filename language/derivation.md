@@ -63,7 +63,7 @@ Examples:
 
 The same `-it` form may be zero-nominalized as a result noun. Thus `fakit` can
 mean a fact / thing done when used nominally; `wi fakit` is the explicit plural
-and `duo fakit` means two facts / two things done. Nominalized participles take
+and `bis fakit` means two facts / two things done. Nominalized participles take
 ordinary noun number and case marking and do not receive a special plural
 suffix.
 

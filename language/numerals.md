@@ -29,7 +29,7 @@ The thirteen base numerals are:
 |---|---|---|
 | 0 | `nul` | null / nul |
 | 1 | `uno` | uno / un / one |
-| 2 | `duo` | duo / due |
+| 2 | `bis` | bis / due |
 | 3 | `ter` | three / tre / tri, but with no initial `tr` cluster |
 | 4 | `for` | four / for |
 | 5 | `kin` | quinque / kinque / kinq, adapted as `kin` |
@@ -54,7 +54,7 @@ Compound numerals are formed by concatenating the base forms in **big-endian ord
 | Value | Form |
 |---|---|
 | 11 | `dek uno` |
-| 12 | `dek duo` |
+| 12 | `dek bis` |
 | 13 | `dek ter` |
 | 19 | `dek nin` |
 
@@ -62,7 +62,7 @@ Compound numerals are formed by concatenating the base forms in **big-endian ord
 
 | Value | Form |
 |---|---|
-| 20 | `duo dek` |
+| 20 | `bis dek` |
 | 30 | `ter dek` |
 | 40 | `for dek` |
 | 90 | `nin dek` |
@@ -71,8 +71,8 @@ Compound numerals are formed by concatenating the base forms in **big-endian ord
 
 | Value | Form |
 |---|---|
-| 21 | `duo dek uno` |
-| 25 | `duo dek kin` |
+| 21 | `bis dek uno` |
+| 25 | `bis dek kin` |
 | 99 | `nin dek nin` |
 
 ### 3.4 Hundreds: `digit + sen`
@@ -82,7 +82,7 @@ The form for `100` is the bare word `sen` — `uno` is **not** prefixed.
 | Value | Form |
 |---|---|
 | 100 | `sen` |
-| 200 | `duo sen` |
+| 200 | `bis sen` |
 | 300 | `ter sen` |
 | 900 | `nin sen` |
 
@@ -92,7 +92,7 @@ Components combine in big-endian order:
 
 | Value | Form |
 |---|---|
-| 321 | `ter sen duo dek uno` |
+| 321 | `ter sen bis dek uno` |
 | 405 | `for sen kin` |
 | 999 | `nin sen nin dek nin` |
 
@@ -103,7 +103,7 @@ The form for `1000` is the bare word `mil` — `uno` is **not** prefixed.
 | Value | Form |
 |---|---|
 | 1000 | `mil` |
-| 2000 | `duo mil` |
+| 2000 | `bis mil` |
 | 9000 | `nin mil` |
 
 Larger compounds continue the same big-endian, linker-free pattern: `mil + (hundreds) + (decades) + (units)`.
@@ -115,21 +115,21 @@ Larger compounds continue the same big-endian, linker-free pattern: `mil + (hund
 The numeral **precedes the noun**. Because the numeral already conveys plurality, the noun normally remains in its bare (number-neutral) form (see [`noun_number_system.md`](noun_number_system.md) §7):
 
 ```
-duo dom        — two houses
+bis dom        — two houses
 ```
 
 The old plural suffix `-en` is obsolete. After a numeral the noun remains bare because quantity is already explicit; `wi` is normally omitted as redundant:
 
 ```
-duo dom        - two houses
+bis dom        - two houses
 ```
 
 When the noun phrase takes case, the case suffix attaches to the noun, which sits at the right edge of the phrase (see [`noun_case_system.md`](noun_case_system.md) §4):
 
 ```
-duo dom        — two houses
-duo domem      — two houses (as direct object)
-vidi duo domem — I see two houses
+bis dom        — two houses
+bis domem      — two houses (as direct object)
+vidi bis domem — I see two houses
 ```
 
 Numerals themselves do not inflect for case or number.
@@ -150,7 +150,7 @@ Numerals themselves do not inflect for case or number.
 ```
 nul  = 0
 uno  = 1
-duo  = 2
+bis  = 2
 ter  = 3
 for  = 4
 kin  = 5
