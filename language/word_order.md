@@ -6,7 +6,7 @@ A formal specification of the default constituent order of the synthetic languag
 
 - The verb's final person vowel encodes the subject and makes independent subject pronouns optional (pro-drop). See [`verb_specification.md`](verb_specification.md).
 - Case suffixes mark the grammatical role of each noun phrase, which is what enables word-order freedom. See [`noun_case_system.md`](noun_case_system.md).
-- The plural suffix `-en` and its interaction with case are defined in [`noun_number_system.md`](noun_number_system.md).
+- Optional nominal plurality with `wi` is defined in [`noun_number_system.md`](noun_number_system.md).
 
 This document introduces **no new morphemes** — only a syntactic rule.
 

@@ -5,7 +5,7 @@ A formal specification of how adjectives modify nouns in the synthetic language:
 ## Related documents
 
 - The rule that case suffixes attach to the noun and that modifiers do not agree is defined in [`noun_case_system.md`](noun_case_system.md) §5.
-- The plural suffix `-en` likewise attaches to the noun, not to modifiers; see [`noun_number_system.md`](noun_number_system.md).
+- The optional plural particle `wi` precedes the noun phrase and does not trigger modifier agreement; see [`noun_number_system.md`](noun_number_system.md).
 - The default constituent order (SVO) is in [`word_order.md`](word_order.md).
 - Other pre-nominal modifiers — determiners, genitives, numerals — follow the same modifier-before-head pattern documented here (see [`articles.md`](articles.md), [`numerals.md`](numerals.md), [`noun_case_system.md`](noun_case_system.md) §6.1).
 
