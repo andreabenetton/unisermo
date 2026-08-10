@@ -44,8 +44,8 @@ def main() -> None:
     assert "ZERO / NO quantity" in decisions["zero_quantifier_nul"]
     assert "ALL / EVERY" in decisions["universal_quantifier_omni"]
     assert "WHOLE / ENTIRE" in decisions["integral_totality_tot"]
-    assert "tik omni om" in decisions["modifier_order_demonstrative_quantifier_noun"]
-    assert "tan omni om" in decisions["modifier_order_demonstrative_quantifier_noun"]
+    assert "tik omni uman" in decisions["modifier_order_demonstrative_quantifier_noun"]
+    assert "tan omni uman" in decisions["modifier_order_demonstrative_quantifier_noun"]
     assert "currently has no canonical meaning" in decisions["mi_unassigned"]
     assert "YES" in decisions["polar_responses_si_no"]
     assert "NO" in decisions["polar_responses_si_no"]
@@ -62,12 +62,12 @@ def main() -> None:
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
-        "`wi om`",
-        "`nul om`",
-        "`omni om`",
+        "`wi uman`",
+        "`nul uman`",
+        "`omni uman`",
         "`tot dom`",
-        "`tik omni om`",
-        "`tan omni om`",
+        "`tik omni uman`",
+        "`tan omni uman`",
     ):
         assert example in nominal, example
 
@@ -78,8 +78,8 @@ def main() -> None:
         "`i-si vidi`",
         "`i-no vidi`",
         "`dom-no ...`",
-        "`tik omni om-si`",
-        "`tik omni om-no`",
+        "`tik omni uman-si`",
+        "`tik omni uman-no`",
     ):
         assert example in polarity, example
 

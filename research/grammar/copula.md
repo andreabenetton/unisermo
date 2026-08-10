@@ -65,7 +65,7 @@ In present-simple adjectival, nominal, and locative predicates, zero copula
 remains the compact default when no overt verb is required.
 
 - `dom bon` — the house is good
-- `om doktor` — the person is a doctor
+- `uman doktor` — the person is a doctor
 
 When the copula is needed explicitly, the current person-number form is used:
 

@@ -180,6 +180,14 @@
       "decision": "Canonical replacement for legacy nacion."
     },
     {
+      "form": "uman",
+      "category": "root",
+      "meaning_it": "persona; essere umano",
+      "meaning_en": "person; human being",
+      "source": "Latin humanus / homo family",
+      "decision": "Canonical human/person root replacing earlier om. Optional referential specificity gives umano (male person/man) and umane (female person/woman); explicit plural is wi uman. Abstract humanity is regularly umanitat via -itat."
+    },
+    {
       "form": "major",
       "category": "function_word",
       "meaning_it": "piu; comparativo di maggioranza",

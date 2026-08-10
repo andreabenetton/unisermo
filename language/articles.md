@@ -13,7 +13,7 @@ When explicit indefinite-singular precision is useful, the cardinal numeral
 `uno` is reused directly as a determiner:
 
 - `uno dom` — one house / a house
-- `uno om` — one person / a person
+- `uno uman` — one person / a person
 
 There is **no separate apocopated article `un`**. The form `un` belongs to the
 current second-person plural paradigm.

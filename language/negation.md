@@ -24,8 +24,8 @@ Examples:
 
 - `i-si vidi domem` — I too see the house
 - `i-no vidi domem` — not even I / I don't either see the house
-- `tik om-si` — also this person
-- `tik om-no` — not even this person
+- `tik uman-si` — also this person
+- `tik uman-no` — not even this person
 
 `-no` carries the negative force of the focused proposition. An additional
 preverbal `no` is not normally required: use `i-no vidi`, not ordinary

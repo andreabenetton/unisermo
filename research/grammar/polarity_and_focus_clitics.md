@@ -36,9 +36,9 @@ Examples:
 
 - `i-si vidi` — I too see / I also see.
 - `u-si vidi` — you too see / you also see.
-- `omo-si vida` — the man too sees / the man also sees.
-- `tik om-si vida` — this person too sees / this person also sees.
-- `omni om-si ...` — all people too / all the people also ...
+- `umano-si vida` — the man too sees / the man also sees.
+- `tik uman-si vida` — this person too sees / this person also sees.
+- `omni uman-si ...` — all people too / all the people also ...
 
 The free word `si` and the enclitic `-si` are distinguished by syntax and
 orthography: free `si` is an affirmative polarity word; bound `-si` marks
@@ -57,9 +57,9 @@ Examples:
 
 - `i-no vidi` — not even I see / neither do I see.
 - `u-no vidi` — not even you see / neither do you see.
-- `omo-no vida` — not even the man sees.
+- `umano-no vida` — not even the man sees.
 - `dom-no ...` — not even the house ...
-- `tik om-no vida` — not even this person sees.
+- `tik uman-no vida` — not even this person sees.
 
 ## 4. `-no` carries clause negation
 
@@ -98,10 +98,10 @@ alone or occupy their independent syntactic position.
 The enclitic scopes over the constituent to which it attaches. For a multiword
 nominal constituent it is written on the final word of that constituent:
 
-- `tik om-si` — this person too
-- `tik om-no` — not even this person
-- `tik omni om-si` — all these people too
-- `tik omni om-no` — not even all these people
+- `tik uman-si` — this person too
+- `tik uman-no` — not even this person
+- `tik omni uman-si` — all these people too
+- `tik omni uman-no` — not even all these people
 
 This right-edge rule keeps the focus domain visible without requiring agreement
 or inflection on the other words of the noun phrase.

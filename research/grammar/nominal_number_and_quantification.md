@@ -9,11 +9,11 @@ A bare noun does not obligatorily encode singular or plural. Number may be
 recovered from context, from verbal number, or from an explicit numeral or
 quantifier.
 
-Examples using `om` "person / human":
+Examples using `uman` "person / human":
 
-- `om` — person / people; number not specified by the noun itself
-- `omo` — male person / man; number not specified
-- `ome` — female person / woman; number not specified
+- `uman` — person / people; number not specified by the noun itself
+- `umano` — male person / man; number not specified
+- `umane` — female person / woman; number not specified
 
 The optional `-o` / `-e` referential-specificity markers remain independent of
 nominal number.
@@ -31,13 +31,13 @@ vowel sequence `ui` in the canonical orthography.
 
 Examples:
 
-- `wi om` — people, explicitly plural
-- `wi omo` — men
-- `wi ome` — women
+- `wi uman` — people, explicitly plural
+- `wi umano` — men
+- `wi umane` — women
 - `wi dom` — houses
 
 `wi` expresses **plurality only**. It is not a definite article and therefore
-`wi omo` may correspond to "men", "some men", or "the men" according to
+`wi umano` may correspond to "men", "some men", or "the men" according to
 context.
 
 ## 3. Avoid redundant plural marking
@@ -45,13 +45,13 @@ context.
 When a numeral or quantifier already makes quantity explicit, `wi` is normally
 omitted.
 
-- `uno om` — one person
-- `ter om` — three people
-- `multi om` — many people
-- `omni om` — all people / every person
+- `uno uman` — one person
+- `ter uman` — three people
+- `multi uman` — many people
+- `omni uman` — all people / every person
 
-The grammar therefore prefers `ter om` over redundant `ter wi om`, and `omni
-om` over redundant `omni wi om`.
+The grammar therefore prefers `ter uman` over redundant `ter wi uman`, and `omni
+uman` over redundant `omni wi uman`.
 
 This is an economy rule, not noun-quantifier agreement: the noun itself remains
 number-neutral.
@@ -62,9 +62,9 @@ number-neutral.
 `nul` is the invariant pre-nominal quantifier **ZERO / NO quantity**. It states
 that the relevant set contains no referents.
 
-- `nul om` — no person / nobody
-- `nul omo` — no man
-- `nul ome` — no woman
+- `nul uman` — no person / nobody
+- `nul umano` — no man
+- `nul umane` — no woman
 - `nul dom` — no house
 
 Because `nul` already fixes quantity at zero, `wi` is not used with it. `nul`
@@ -77,9 +77,9 @@ particle `no`.
 members of a set rather than describing the physical or temporal entirety of a
 single referent.
 
-- `omni om` — all people / every person
-- `omni omo` — all men / every man
-- `omni ome` — all women / every woman
+- `omni uman` — all people / every person
+- `omni umano` — all men / every man
+- `omni umane` — all women / every woman
 
 Collective versus distributive interpretation is supplied by context. The same
 form therefore covers both English-like "all people" and "every person" where
@@ -89,11 +89,11 @@ no contrast needs to be forced grammatically.
 
 Demonstratives precede `omni`, and `omni` precedes the noun:
 
-- `tik omni om` — all these people
-- `tes omni om` — all those people near the listener
-- `tan omni om` — all those people farther away
-- `tik omni omo` — all these men
-- `tan omni ome` — all those women
+- `tik omni uman` — all these people
+- `tes omni uman` — all those people near the listener
+- `tan omni uman` — all those people farther away
+- `tik omni umano` — all these men
+- `tan omni umane` — all those women
 
 Because `omni` already entails universal quantity, `wi` is normally absent.
 
@@ -123,14 +123,14 @@ The confirmed order relevant here is:
 
 Thus:
 
-- `tik omni om`
-- `tes omni om`
-- `tan omni om`
+- `tik omni uman`
+- `tes omni uman`
+- `tan omni uman`
 
 `wi`, when actually needed, is a pre-nominal number particle. Its exact ordering
 relative to every possible modifier class can be refined when the complete noun
-phrase grammar is consolidated; the examples confirmed so far are `wi om`,
-`wi omo`, `wi ome`, and demonstrative + quantity constructions where `wi` is
+phrase grammar is consolidated; the examples confirmed so far are `wi uman`,
+`wi umano`, `wi umane`, and demonstrative + quantity constructions where `wi` is
 redundant and therefore omitted.
 
 ## 8. Reserved form `mi`
