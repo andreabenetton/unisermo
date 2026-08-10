@@ -44,7 +44,20 @@ bare:
 - `dom mova` — a/the house moves
 - `dom movan` — houses move
 
-## 5. Removed legacy suffix `-en`
+
+## 5. Nominalized participles
+
+A participial/resultative form in `-it` may be used directly as a noun. When it
+is nominal, it follows exactly the same number rules as any other noun:
+
+- `fakit` — fact / facts, number unspecified
+- `wi fakit` — facts, explicitly plural
+- `duo fakit` — two facts; no `wi`
+- `nul fakit` — no facts; no `wi`
+
+There is no special participial plural ending.
+
+## 6. Removed legacy suffix `-en`
 
 The former optional nominal plural suffix `-en` is obsolete. It is not part of
 the current noun-number system and must not be added after numerals or case

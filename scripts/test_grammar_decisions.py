@@ -34,9 +34,14 @@ def main() -> None:
         "personal_possessives_as_genitives",
         "copula_es_current_person_number",
         "participial_resultative_it",
+        "nominalized_participle_it",
         "abstract_it_retired",
         "abstract_quality_itat",
         "finite_verb_morphotactics",
+        "finite_tense_inventory",
+        "finite_aspect_inventory",
+        "servile_verbs_analytic",
+        "modal_m_retired",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -56,9 +61,15 @@ def main() -> None:
     assert "i->is" in decisions["personal_possessives_as_genitives"]
     assert "esi, esu, esa, esin, esun, esan" in decisions["copula_es_current_person_number"]
     assert "dik->dikit" in decisions["participial_resultative_it"]
+    assert "wi fakit" in decisions["nominalized_participle_it"]
+    assert "duo fakit" in decisions["nominalized_participle_it"]
     assert "confirmed -itat" in decisions["abstract_it_retired"]
     assert "bon->bonitat" in decisions["abstract_quality_itat"]
-    assert "root + TAM + person vowel + optional plural N" in decisions["finite_verb_morphotactics"]
+    assert "root + time + aspect + person vowel + optional plural N" in decisions["finite_verb_morphotactics"]
+    assert "zero for present, d for past, and f for future" in decisions["finite_tense_inventory"]
+    assert "n ongoing/progressive" in decisions["finite_aspect_inventory"]
+    assert "finite servile verb followed by the bare infinitive/root" in decisions["servile_verbs_analytic"]
+    assert "synthetic m" in decisions["modal_m_retired"]
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
@@ -96,11 +107,11 @@ def main() -> None:
     assert "schwa" in copula.lower() and "No schwa form exists" in copula
 
     finite = (ROOT / "research" / "grammar" / "finite_verb_structure.md").read_text(encoding="utf-8")
-    for form in ("`movi`", "`movu`", "`mova`", "`movin`", "`movun`", "`movan`", "`movdi`", "`movdin`"):
+    for form in ("`diki`", "`dikni`", "`dikbi`", "`dikdi`", "`dikdni`", "`dikdbi`", "`dikfi`", "`dikfni`", "`dikfbi`"):
         assert form in finite, form
 
     participles = PARTICIPLE_SPEC.read_text(encoding="utf-8")
-    for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`"):
+    for form in ("`dikit`", "`movit`", "`vidit`", "`fakit`", "`wi fakit`", "`duo fakit`"):
         assert form in participles, form
     assert "Productive abstract-quality suffix `-itat`" in participles
     for form in ("`bonitat`", "`klaritat`", "`umanitat`"):

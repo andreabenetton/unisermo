@@ -35,6 +35,12 @@ Examples:
 - `vid` → `vidit` — seen
 - `fak` → `fakit` — done / made
 
+The same `-it` form may be zero-nominalized as a result noun. Thus `fakit` can
+mean a fact / thing done when used nominally; `wi fakit` is the explicit plural
+and `duo fakit` means two facts / two things done. Nominalized participles take
+ordinary noun number and case marking and do not receive a special plural
+suffix.
+
 ## 4. Abstract `-itat`
 
 `-itat` replaces the historical abstract use of `-it`:

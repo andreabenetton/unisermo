@@ -77,7 +77,7 @@
     },
     {
       "id": "finite_verb_morphotactics",
-      "decision": "Every ordinary finite verb has the canonical morphotactic order root + TAM + person vowel + optional plural N. Person vowels are i (first), u (second), a (third); the plural morphophoneme N follows the person vowel when the subject is plural, yielding in, un, an. TAM material, when present, always precedes the person vowel and N."
+      "decision": "Every ordinary finite verb has the canonical morphotactic order root + time + aspect + person vowel + optional plural N. Person vowels are i (first), u (second), a (third); plural N follows the person vowel, yielding in, un, an. Time precedes aspect, and both precede person and number."
     },
     {
       "id": "derivational_place_field_ia",
@@ -90,6 +90,26 @@
     {
       "id": "question_words_kom_ker",
       "decision": "Use kom as the canonical WH-word HOW and ker as the canonical WH-word WHY. The earlier WHY form kur is retired. This keeps kom available for the question system because the Latin cum/com- lexical root is now kun, while the Latin cura lexical root is now kurar."
+    },
+    {
+      "id": "finite_tense_inventory",
+      "decision": "The finite time slot is closed to three values: zero for present, d for past, and f for future."
+    },
+    {
+      "id": "finite_aspect_inventory",
+      "decision": "The finite aspect slot is closed to three values: zero simple, n ongoing/progressive, and b completed/perfect. Time precedes aspect, producing the 3×3 combinations Ø/n/b, d/dn/db, f/fn/fb."
+    },
+    {
+      "id": "servile_verbs_analytic",
+      "decision": "Ability, obligation, volition, learned capacity and related servile/modal meanings are expressed analytically by an ordinary finite servile verb followed by the bare infinitive/root of the lexical verb. The servile carries time, aspect, person and number; the dependent infinitive remains uninflected. Lexical roots for individual servile meanings are separate lexical decisions."
+    },
+    {
+      "id": "modal_m_retired",
+      "decision": "Retire the inherited synthetic m ability/potential marker from finite TAM. Modal/servile meanings are not a fourth aspect and are expressed through finite servile verb + bare infinitive instead."
+    },
+    {
+      "id": "nominalized_participle_it",
+      "decision": "A participial/resultative form in -it may be zero-nominalized and head a noun phrase without any additional nominalizer. In nominal use it denotes a result or resulting entity and follows ordinary noun grammar: bare fakit is number-neutral, wi fakit is explicitly plural, duo fakit is two facts/things done, and wi is omitted with numerals/quantity quantifiers. No special plural suffix is added to -it; ordinary nominal case marking remains available. Passive-clause syntax is a separate decision."
     }
   ]
 }

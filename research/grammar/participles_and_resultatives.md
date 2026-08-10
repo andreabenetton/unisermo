@@ -35,7 +35,31 @@ The exact syntax of compound tenses and passive constructions is a separate
 question. Confirming `-it` here does **not** by itself require a particular
 auxiliary or passive construction.
 
-## 3. `-it` is no longer an abstract-noun suffix
+
+## 3. Zero nominalization of participles
+
+A participial/resultative form in `-it` may serve directly as the head of a
+nominal phrase without any additional nominalizing suffix. In that use it
+denotes the resulting entity, event-result, or thing that has undergone the
+verb: `fakit` can therefore mean “done/made” as a participle or “the thing
+done / a fact” as a nominalized resultative, according to syntax and context.
+
+Once nominalized, the form follows the ordinary noun-number system exactly:
+
+- bare `fakit` — fact / facts, number unspecified
+- `wi fakit` — facts / things done, explicitly plural
+- `duo fakit` — two facts / two things done
+- `nul fakit` — no facts / nothing done
+
+`wi` is omitted when a numeral or quantity-encoding quantifier already marks
+number. No plural suffix is added to `-it`. The same nominalized form may take
+ordinary nominal case marking when required by syntax.
+
+This is distinct from a verbal noun naming the action itself: nominalized
+`-it` refers to a result or resulting entity, not simply to the activity. The
+syntax of passive clauses remains a separate decision.
+
+## 4. `-it` is no longer an abstract-noun suffix
 
 Legacy material assigned `-it` to abstract qualities/states. That assignment
 is retired. In current GlottoDelta, productive `-it` is reserved for the
@@ -44,7 +68,7 @@ participial/resultative function above.
 Existing legacy examples of abstract `-it` must therefore be migrated when the
 abstract-derivation system is finalized.
 
-## 4. Productive abstract-quality suffix `-itat`
+## 5. Productive abstract-quality suffix `-itat`
 
 GlottoDelta uses invariant **`-itat`** to derive abstract qualities, states, and
 properties from suitable lexical bases. The form continues the Latin
