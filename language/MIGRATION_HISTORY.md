@@ -1,3 +1,4 @@
+- 2026-08-10 - canonical lexical roots/compound established: `aer` = air, `plan` = plane/flat/level, `aerplan` = airplane/aeroplane (`aer` + `plan`), and `frat` = brother. Travel by airplane is expressed analytically as `per aerplan`.
 - 2026-08-10 - canonical vertical motion axis established: `alt` = high/upper/up, `bas` = low/lower/down; `mov altad` / `mov basad` express upward/downward motion analytically, while transparent compounds `altmov` / `basmov` mean ascend/descend and remain distinct from phase `admov` / `demov`.
 - 2026-08-10 - canonical force/manner roots established: `pel` = push and `trak` = pull/draw. They remain semantically distinct from `mov`: pushing/pulling does not entail successful displacement.
 # Language specification migration history

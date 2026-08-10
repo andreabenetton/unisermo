@@ -158,6 +158,10 @@
     {
       "id": "vertical_motion_alt_bas",
       "decision": "Canonize alt = high/upper/up and bas = low/lower/down as the vertical spatial axis. Directional motion may be expressed analytically as mov altad = move/go upward and mov basad = move/go downward, using canonical allative -ad. Canonize transparent compounds altmov = ascend/go up and basmov = descend/go down. altmov/basmov encode vertical direction, not phase: admov remains begin moving and demov remains cease moving. The ordinary mov-family intransitive/transitive valency alternation remains available for these compounds where semantically appropriate."
+    },
+    {
+      "id": "lexical_aer_plan_aerplan_frat",
+      "decision": "Canonize aer = air, plan = plane/flat/level, aerplan = airplane/aeroplane as the transparent compound aer+plan, and frat = brother. aerplan is preferred over aeroplan. Instrumental travel uses the existing free relator per + NP, e.g. per aerplan = by airplane."
     }
   ]
 }

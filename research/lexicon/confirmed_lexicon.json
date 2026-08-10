@@ -322,6 +322,38 @@
       "meaning_en": "descend; go down",
       "source": "productive compound bas + mov",
       "decision": "Canonical transparent motion compound bas+mov for downward motion/descending. Equivalent directional paraphrase: mov basad. It is distinct from phase-derived demov, which means cease moving."
+    },
+    {
+      "form": "aer",
+      "category": "root",
+      "meaning_it": "aria",
+      "meaning_en": "air",
+      "source": "Latin aer / Greek aer",
+      "decision": "Canonical root for air. Preserves the classical/international aer- family in canonical GlottoDelta spelling."
+    },
+    {
+      "form": "plan",
+      "category": "root",
+      "meaning_it": "piano; piatto; superficie piana",
+      "meaning_en": "plane; flat; level",
+      "source": "Latin planus / planum; international plan-/plane family",
+      "decision": "Canonical root for plane/flat/level. Used as the second component of transparent compound aerplan."
+    },
+    {
+      "form": "aerplan",
+      "category": "compound",
+      "meaning_it": "aeroplano; aereo",
+      "meaning_en": "airplane; aeroplane",
+      "source": "productive compound aer + plan; international aeroplane family",
+      "decision": "Canonical transparent compound aer+plan for airplane/aeroplane. Preferred over aeroplan; the lexical structure is explicitly aer + plan."
+    },
+    {
+      "form": "frat",
+      "category": "root",
+      "meaning_it": "fratello",
+      "meaning_en": "brother",
+      "source": "Latin frater / international fratern- family",
+      "decision": "Canonical kinship root for brother, based on Latin frater and the international fratern- family."
     }
   ]
 }
