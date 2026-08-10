@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-"""Compare current consonantal TAM morphology with a vowel-aspect proposal.
+"""Compare the retired consonantal TAM morphology with the canonical vowel-aspect system.
 
-The current canonical pattern is:
+The retired pre-change pattern is:
     root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)
 
-The proposal under study is:
+The confirmed canonical pattern is:
     root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)
 
-This script does not change the canonical grammar. It measures phonotactic load,
-hiatus, and surface collisions over two root samples.
+This script reproduces the phonotactic comparison that motivated the canonical change. It measures phonotactic load, hiatus, and surface collisions over two root samples.
 """
 
 from __future__ import annotations
@@ -22,7 +21,7 @@ VOWELS = set("aeiou")
 PERSONS = {"1": "i", "2": "u", "3": "a"}
 NUMBERS = {"sg": "", "pl": "n"}
 TIMES = {"present": "", "past": "d", "future": "f"}
-CURRENT_ASPECTS = {"simple": "", "progressive": "n", "perfect": "b"}
+FORMER_ASPECTS = {"simple": "", "progressive": "n", "perfect": "b"}
 VOWEL_ASPECTS = {"simple": "", "progressive": "e", "perfect": "o"}
 
 # Confirmed replacements that overlap the 74-root provisional seed.
@@ -103,7 +102,7 @@ def load_root_sets():
 
 
 def generate(roots, proposal):
-    aspects = VOWEL_ASPECTS if proposal else CURRENT_ASPECTS
+    aspects = VOWEL_ASPECTS if proposal else FORMER_ASPECTS
     rows = []
     for root in roots:
         for t_name, t in TIMES.items():
@@ -272,7 +271,7 @@ def summarize(rows, roots, proposal):
 
 def examples(root: str):
     out = []
-    for proposal, label in [(False, "current"), (True, "vowel_aspect")]:
+    for proposal, label in [(False, "former_consonantal"), (True, "canonical_vowel_aspect")]:
         rows = generate([root], proposal)
         selected = {}
         for r in rows:
@@ -286,10 +285,10 @@ def main():
     root_sets = load_root_sets()
     report = {
         "schema": "glottodelta/tam-phonotactics-study@1",
-        "status": "experimental_not_canonical",
+        "status": "confirmed_canonical_vowel_aspect",
         "systems": {
-            "current": "root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)",
-            "vowel_aspect": "root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)",
+            "former_consonantal": "root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)",
+            "canonical_vowel_aspect": "root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)",
         },
         "samples": {},
         "examples": {r: examples(r) for r in ["mov", "vid", "fak", "stru"]},
@@ -300,8 +299,8 @@ def main():
         after_rows = generate_vowel_after_time(roots)
         report["samples"][name] = {
             "roots": roots,
-            "current": summarize(current_rows, roots, False),
-            "vowel_aspect": summarize(proposed_rows, roots, True),
+            "former_consonantal": summarize(current_rows, roots, False),
+            "canonical_vowel_aspect": summarize(proposed_rows, roots, True),
             "vowel_aspect_after_time_control": summarize(after_rows, roots, False),
         }
 
@@ -309,8 +308,8 @@ def main():
     output.write_text(json.dumps(report, indent=2) + "\n")
     print(output)
     for sample, data in report["samples"].items():
-        print(f"\n[{sample}] roots={data['current']['root_count']} forms={data['current']['form_count']}")
-        for system in ["current", "vowel_aspect", "vowel_aspect_after_time_control"]:
+        print(f"\n[{sample}] roots={data['former_consonantal']['root_count']} forms={data['former_consonantal']['form_count']}")
+        for system in ["former_consonantal", "canonical_vowel_aspect", "vowel_aspect_after_time_control"]:
             m = data[system]["morphology_created_runs"]
             c = data[system]["collisions"]
             print(
@@ -319,7 +318,7 @@ def main():
                 f"V>=3 {m['V_ge_3']:4d} ({m['V_ge_3_pct']:5.1f}%) "
                 f"collisions {c['surface_collision_count']}"
             )
-        w = data["vowel_aspect"]["worst_case_mid_vowel_raising_plus_identical_hiatus_coalescence"]
+        w = data["canonical_vowel_aspect"]["worst_case_mid_vowel_raising_plus_identical_hiatus_coalescence"]
         print(f"  vowel worst-case accent/coalescence surfaces={w['collision_surface_count']} bundles={w['affected_bundle_count']}")
 
 

@@ -38,14 +38,15 @@ Examples:
 - `un esun` — you are, plural
 - `an esan` — they are
 
-## 3. Interaction with existing TAM markers
+## 3. Interaction with canonical TAM
 
-Where the existing TAM markers are used, `es` follows the same current finite
-architecture as other verbs: root + TAM material + person vowel + optional
-plural `N`.
+`es` follows the same finite architecture as every other verb:
 
-For the already-established past marker `d` and future marker `f`, the simple
-forms therefore include:
+```text
+root + aspect + time + person vowel + optional N
+```
+
+Simple past and future remain:
 
 | Person | Past | Future |
 |---|---|---|
@@ -56,8 +57,16 @@ forms therefore include:
 | 2 plural | `esdun` | `esfun` |
 | 3 plural | `esdan` | `esfan` |
 
-The same person-number ending applies to other TAM combinations. This document
-does not otherwise redesign the TAM inventory; that can be reviewed separately.
+The canonical aspect vowels occur before time just as with lexical verbs. First-person singular examples are:
+
+- `esei` — present progressive
+- `esoi` — present completed/perfect
+- `esedi` — past progressive
+- `esodi` — past completed/perfect
+- `esefi` — future progressive
+- `esofi` — future completed/perfect
+
+Present aspect-person vowel adjacency is canonical hiatus, so `esei` is parsed as `es-e-i`, not as a merged simple form.
 
 ## 4. Zero copula
 

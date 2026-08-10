@@ -42,6 +42,7 @@ def main() -> None:
         "finite_aspect_inventory",
         "servile_verbs_analytic",
         "modal_m_retired",
+        "finite_aspect_vowel_protection",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -65,9 +66,11 @@ def main() -> None:
     assert "duo fakit" in decisions["nominalized_participle_it"]
     assert "confirmed -itat" in decisions["abstract_it_retired"]
     assert "bon->bonitat" in decisions["abstract_quality_itat"]
-    assert "root + time + aspect + person vowel + optional plural N" in decisions["finite_verb_morphotactics"]
+    assert "root + aspect + time + person vowel + optional plural N" in decisions["finite_verb_morphotactics"]
     assert "zero for present, d for past, and f for future" in decisions["finite_tense_inventory"]
-    assert "n ongoing/progressive" in decisions["finite_aspect_inventory"]
+    assert "e ongoing/progressive" in decisions["finite_aspect_inventory"]
+    assert "o completed/perfect" in decisions["finite_aspect_inventory"]
+    assert "canonical hiatus" in decisions["finite_aspect_vowel_protection"]
     assert "finite servile verb followed by the bare infinitive/root" in decisions["servile_verbs_analytic"]
     assert "synthetic m" in decisions["modal_m_retired"]
 
@@ -102,12 +105,12 @@ def main() -> None:
         assert form in case_spec, form
 
     copula = COPULA_SPEC.read_text(encoding="utf-8")
-    for form in ("`esi`", "`esu`", "`esa`", "`esin`", "`esun`", "`esan`", "`esdi`", "`esdan`"):
+    for form in ("`esi`", "`esu`", "`esa`", "`esin`", "`esun`", "`esan`", "`esdi`", "`esdan`", "`esei`", "`esoi`", "`esedi`", "`esodi`", "`esefi`", "`esofi`"):
         assert form in copula, form
     assert "schwa" in copula.lower() and "No schwa form exists" in copula
 
     finite = (ROOT / "research" / "grammar" / "finite_verb_structure.md").read_text(encoding="utf-8")
-    for form in ("`diki`", "`dikni`", "`dikbi`", "`dikdi`", "`dikdni`", "`dikdbi`", "`dikfi`", "`dikfni`", "`dikfbi`"):
+    for form in ("`diki`", "`dikei`", "`dikoi`", "`dikdi`", "`dikedi`", "`dikodi`", "`dikfi`", "`dikefi`", "`dikofi`"):
         assert form in finite, form
 
     participles = PARTICIPLE_SPEC.read_text(encoding="utf-8")

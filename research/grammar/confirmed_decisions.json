@@ -61,7 +61,7 @@
     },
     {
       "id": "copula_es_current_person_number",
-      "decision": "Keep copula/existential root es. In the current person-number system its present explicit forms are esi, esu, esa, esin, esun, esan. Present-simple adjectival, nominal, and locative predicates may use zero copula; explicit es is available for emphasis/existence and supplies the verbal carrier when TAM is required. Existing TAM markers precede the current person vowel plus optional plural N, e.g. esdi/esdu/esda/esdin/esdun/esdan for simple past and esfi/esfu/esfa/esfin/esfun/esfan for simple future."
+      "decision": "Keep copula/existential root es. In the current person-number system its present explicit forms are esi, esu, esa, esin, esun, esan. Present-simple adjectival, nominal, and locative predicates may use zero copula; explicit es is available for emphasis/existence and supplies the verbal carrier when TAM is required. Copular TAM follows the canonical root + aspect + time + person + N order: simple past esdi/esdu/esda/esdin/esdun/esdan, simple future esfi/esfu/esfa/esfin/esfun/esfan, and aspectual examples esei/esoi, esedi/esodi, esefi/esofi."
     },
     {
       "id": "participial_resultative_it",
@@ -77,7 +77,7 @@
     },
     {
       "id": "finite_verb_morphotactics",
-      "decision": "Every ordinary finite verb has the canonical morphotactic order root + time + aspect + person vowel + optional plural N. Person vowels are i (first), u (second), a (third); plural N follows the person vowel, yielding in, un, an. Time precedes aspect, and both precede person and number."
+      "decision": "Every ordinary finite verb has the canonical morphotactic order root + aspect + time + person vowel + optional plural N. Person vowels are i (first), u (second), a (third); plural N follows the person vowel, yielding in, un, an. Aspect precedes time, and both precede person and number."
     },
     {
       "id": "derivational_place_field_ia",
@@ -97,11 +97,15 @@
     },
     {
       "id": "finite_aspect_inventory",
-      "decision": "The finite aspect slot is closed to three values: zero simple, n ongoing/progressive, and b completed/perfect. Time precedes aspect, producing the 3×3 combinations Ø/n/b, d/dn/db, f/fn/fb."
+      "decision": "The finite aspect slot is closed to three values: zero simple, e ongoing/progressive, and o completed/perfect. Aspect precedes time, producing the 3×3 combinations by time rows: Ø/e/o, d/ed/od, f/ef/of. The former finite aspect markers n and b are retired."
+    },
+    {
+      "id": "finite_aspect_vowel_protection",
+      "decision": "Finite aspect e/o are grammar-critical vowels. In present aspect-marked forms they form canonical hiatus before the person vowel i/u/a (e.g. dikei = /dik.e.i/). Accentual raising or vowel coalescence is not permitted when it would erase the aspect contrast; aspect e/o must remain recoverably distinct from person i/u/a."
     },
     {
       "id": "servile_verbs_analytic",
-      "decision": "Ability, obligation, volition, learned capacity and related servile/modal meanings are expressed analytically by an ordinary finite servile verb followed by the bare infinitive/root of the lexical verb. The servile carries time, aspect, person and number; the dependent infinitive remains uninflected. Lexical roots for individual servile meanings are separate lexical decisions."
+      "decision": "Ability, obligation, volition, learned capacity and related servile/modal meanings are expressed analytically by an ordinary finite servile verb followed by the bare infinitive/root of the lexical verb. The servile carries aspect, time, person and number; the dependent infinitive remains uninflected. Lexical roots for individual servile meanings are separate lexical decisions."
     },
     {
       "id": "modal_m_retired",

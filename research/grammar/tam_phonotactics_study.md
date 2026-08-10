@@ -1,20 +1,18 @@
 # TAM phonotactics study: consonantal aspect vs vowel aspect
 
-Status: **experimental, not canonical**.
+Status: **confirmed and canonicalized**. The vowel-aspect proposal in this study was accepted on 2026-08-10; references to the “current” consonantal system below describe the pre-change baseline at the time the experiment was run.
 
-This study compares the current finite-verb morphology with a proposed change
-that replaces consonantal aspect markers `n/b` with vowel markers `e/o` and
-moves aspect before time.
+This study originally compared the then-current finite-verb morphology with a proposed change that replaced consonantal aspect markers `n/b` with vowel markers `e/o` and moved aspect before time. The proposal was subsequently confirmed and is now canonical.
 
 ## Systems compared
 
-Current canonical system:
+Former canonical system (experimental baseline):
 
 ```text
 root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)
 ```
 
-Vowel-aspect proposal:
+Confirmed vowel-aspect system:
 
 ```text
 root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)
@@ -53,8 +51,8 @@ lexical runs internal to the root are not counted as morphology-created runs.
 
 | system | C>=2 | C>=3 | C>=4 | V>=2 | V>=3 | canonical collisions |
 |---|---:|---:|---:|---:|---:|---:|
-| current `T + n/b` | 87.1% | 48.0% | 5.3% | 0.4% | 0.0% | 0 |
-| proposed `e/o + T` | 21.3% | 2.7% | 0.0% | 24.4% | 0.9% | 0 |
+| former `T + n/b` | 87.1% | 48.0% | 5.3% | 0.4% | 0.0% | 0 |
+| canonical `e/o + T` | 21.3% | 2.7% | 0.0% | 24.4% | 0.9% | 0 |
 | control `T + e/o` | 64.0% | 8.0% | 0.0% | 67.1% | 0.9% | 0 |
 
 Moving vowel aspect before time reduces morphology-created C>=3 runs from
@@ -65,8 +63,8 @@ C>=4 run in this sample.
 
 | system | C>=2 | C>=3 | C>=4 | V>=2 | V>=3 | canonical collisions |
 |---|---:|---:|---:|---:|---:|---:|
-| current `T + n/b` | 85.9% | 52.3% | 10.8% | 0.8% | 0.0% | 0 |
-| proposed `e/o + T` | 20.7% | 5.4% | 0.0% | 26.0% | 1.5% | 0 |
+| former `T + n/b` | 85.9% | 52.3% | 10.8% | 0.8% | 0.0% | 0 |
+| canonical `e/o + T` | 20.7% | 5.4% | 0.0% | 26.0% | 1.5% | 0 |
 | control `T + e/o` | 65.0% | 16.2% | 0.0% | 67.4% | 1.5% | 0 |
 
 The larger seed confirms the same pattern. C>=3 runs fall from 52.3% to 5.4%,
@@ -104,7 +102,7 @@ This is why the control order has V>=2 in about 67% of all forms, versus only
 
 First-person singular `mov`:
 
-| time/aspect | current | vowel aspect before time |
+| time/aspect | former consonantal | canonical vowel aspect before time |
 |---|---|---|
 | present simple | `movi` | `movi` |
 | present progressive | `movni` | `movei` |
@@ -231,14 +229,10 @@ The quantitative result is asymmetric:
   raise into person vowels and then coalesce with those person vowels.
 
 Purely phonotactically, `root + aspect(e/o) + time(d/f) + person + number` is
-clearly superior to the current consonantal `root + time + aspect(n/b) + ...`
-system on the tested inventories.
+clearly superior to the former consonantal `root + time + aspect(n/b) + ...`
+system on the tested inventories. This result is now canonical.
 
-The remaining design question is not cluster complexity. It is whether
-GlottoDelta is willing to make the mid-vowel contrast `e/o` obligatory for
-aspect. If yes, the phonology should state that aspect `e/o` must remain
-recoverably distinct from person `i/u/a`, and aspect-person hiatus must not be
-lost through coalescence.
+The design question was resolved affirmatively: GlottoDelta makes the mid-vowel contrast `e/o` obligatory for finite aspect when overt. The phonology therefore requires aspect `e/o` to remain recoverably distinct from person `i/u/a`, and aspect-person hiatus may not be lost through coalescence when that would erase aspect.
 
 ## Reproduction
 

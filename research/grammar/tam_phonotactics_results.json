@@ -1,9 +1,9 @@
 {
   "schema": "glottodelta/tam-phonotactics-study@1",
-  "status": "experimental_not_canonical",
+  "status": "confirmed_canonical_vowel_aspect",
   "systems": {
-    "current": "root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)",
-    "vowel_aspect": "root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)"
+    "former_consonantal": "root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)",
+    "canonical_vowel_aspect": "root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)"
   },
   "samples": {
     "confirmed_plus_live": {
@@ -34,7 +34,7 @@
         "vid",
         "vok"
       ],
-      "current": {
+      "former_consonantal": {
         "root_count": 25,
         "form_count": 1350,
         "root_final_vowel_count": 1,
@@ -69,7 +69,7 @@
         },
         "e_o_root_shadow_pairs": []
       },
-      "vowel_aspect": {
+      "canonical_vowel_aspect": {
         "root_count": 25,
         "form_count": 1350,
         "root_final_vowel_count": 1,
@@ -236,7 +236,7 @@
         "viv",
         "vok"
       ],
-      "current": {
+      "former_consonantal": {
         "root_count": 74,
         "form_count": 3996,
         "root_final_vowel_count": 5,
@@ -271,7 +271,7 @@
         },
         "e_o_root_shadow_pairs": []
       },
-      "vowel_aspect": {
+      "canonical_vowel_aspect": {
         "root_count": 74,
         "form_count": 3996,
         "root_final_vowel_count": 5,
@@ -364,7 +364,7 @@
   },
   "examples": {
     "mov": {
-      "current": {
+      "former_consonantal": {
         "present_simple": "movi",
         "present_progressive": "movni",
         "present_perfect": "movbi",
@@ -375,7 +375,7 @@
         "future_progressive": "movfni",
         "future_perfect": "movfbi"
       },
-      "vowel_aspect": {
+      "canonical_vowel_aspect": {
         "present_simple": "movi",
         "present_progressive": "movei",
         "present_perfect": "movoi",
@@ -388,7 +388,7 @@
       }
     },
     "vid": {
-      "current": {
+      "former_consonantal": {
         "present_simple": "vidi",
         "present_progressive": "vidni",
         "present_perfect": "vidbi",
@@ -399,7 +399,7 @@
         "future_progressive": "vidfni",
         "future_perfect": "vidfbi"
       },
-      "vowel_aspect": {
+      "canonical_vowel_aspect": {
         "present_simple": "vidi",
         "present_progressive": "videi",
         "present_perfect": "vidoi",
@@ -412,7 +412,7 @@
       }
     },
     "fak": {
-      "current": {
+      "former_consonantal": {
         "present_simple": "faki",
         "present_progressive": "fakni",
         "present_perfect": "fakbi",
@@ -423,7 +423,7 @@
         "future_progressive": "fakfni",
         "future_perfect": "fakfbi"
       },
-      "vowel_aspect": {
+      "canonical_vowel_aspect": {
         "present_simple": "faki",
         "present_progressive": "fakei",
         "present_perfect": "fakoi",
@@ -436,7 +436,7 @@
       }
     },
     "stru": {
-      "current": {
+      "former_consonantal": {
         "present_simple": "strui",
         "present_progressive": "struni",
         "present_perfect": "strubi",
@@ -447,7 +447,7 @@
         "future_progressive": "strufni",
         "future_perfect": "strufbi"
       },
-      "vowel_aspect": {
+      "canonical_vowel_aspect": {
         "present_simple": "strui",
         "present_progressive": "struei",
         "present_perfect": "struoi",

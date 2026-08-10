@@ -2,7 +2,7 @@
 
 A formal specification of the alphabet and sound system of the synthetic language. This document defines the official written units, their canonical IPA values, acceptable pronunciation variants, **accentual and coalescent realizations**, accent-tolerant mergers, and the orthographic restrictions that preserve transparent reading and writing.
 
-This specification is designed to interoperate with the person/number system in which `i`, `u`, and `a` mark first, second, and third person, plural is marked by the nasal morphophoneme `/N/` written `n`, and optional referential specificity may be marked by `-o` or `-e`.
+This specification is designed to interoperate with the grammar in which `i`, `u`, and `a` mark first, second, and third person, plural is marked by the nasal morphophoneme `/N/` written `n`, finite aspect uses `e` (progressive) and `o` (completed/perfect), and optional referential specificity may also be marked by `-o` or `-e`.
 
 ---
 
@@ -63,9 +63,9 @@ Important notes:
 | Letter | Canonical IPA | Ordinary accepted variants | Accentual/non-contrastive possibilities | Constraint |
 |---|---|---|---|---|
 | `a` | /a/ | [a], [ä], [ɑ], [ɐ] | light centralization toward [ɐ] | Must remain recoverable as the low vowel, especially when grammar-critical. |
-| `e` | /e/ | [e], [ɛ] | moderate opening or accentual raising where identity remains recoverable | In the optional specificity suffix `-e`, accents without stable mid vowels may raise it toward [i]. |
+| `e` | /e/ | [e], [ɛ] | moderate opening or accentual raising where identity remains recoverable | Optional specificity `-e` may raise toward [i]; finite-aspect `e` must remain recoverably distinct from person `i/u/a`. |
 | `i` | /i/ | [i], [ɪ], [ɨ] | slight centralization | As a grammar-critical first-person marker it must remain distinct from `u` and `a`. |
-| `o` | /o/ | [o], [ɔ] | moderate opening or accentual raising where identity remains recoverable | In the optional specificity suffix `-o`, accents without stable mid vowels may raise it toward [u]. |
+| `o` | /o/ | [o], [ɔ] | moderate opening or accentual raising where identity remains recoverable | Optional specificity `-o` may raise toward [u]; finite-aspect `o` must remain recoverably distinct from person `i/u/a`. |
 | `u` | /u/ | [u], [ʊ], [ɯ] | slight loss of rounding | As a grammar-critical second-person marker it must remain distinct from `i` and `a`. |
 
 ### 3.1 Person, number, and optional referential specificity
@@ -105,6 +105,12 @@ The suffixes `-e` and `-o` are semantic/referential markers, not grammatical gen
 
 In accents without stable mid vowels, canonical `-e` may approach `[i]` and canonical `-o` may approach `[u]`. The front/back distinction must remain recoverable whenever specificity is intentionally expressed. If the two would collapse, the neutral form or a lexical paraphrase remains available.
 
+### 3.2 Finite aspect vowels `e/o`
+
+Finite verbs use `e` for ongoing/progressive aspect and `o` for completed/perfect aspect. These vowels precede the time slot and therefore also precede the person vowel. When time is zero, the aspect vowel and person vowel are adjacent and are pronounced as canonical hiatus, for example `dikei` = `/dik.e.i/` and `dikou` = `/dik.o.u/`.
+
+Unlike optional referential-specificity `-e/-o`, finite aspect `e/o` carries obligatory grammatical information whenever it is present. Accentual raising toward `[i]/[u]` or coalescence across the aspect-person boundary is acceptable only if the aspect value remains unambiguously recoverable. A pronunciation that collapses `dikei` into the simple form `diki`, or `dikou` into `diku`, is not a normative realization.
+
 ---
 
 ## 4. Consonant and Glide Inventory
@@ -138,7 +144,7 @@ The table distinguishes ordinary phonetic variation from **soft accent mergers**
 
 The canonical vowel system is `/a e i o u/`. These five vowels provide the complete vowel inventory for lexical and grammatical forms.
 
-The grammar reserves the highly robust `/i u a/` subsystem for person marking. Mid vowels `/e o/` remain useful for lexical transparency and for optional referential-specificity suffixes.
+The grammar reserves `/i u a/` for person marking and `/e o/` for finite aspect marking. Mid vowels also remain useful for lexical transparency and for optional referential-specificity suffixes. Because aspect `e/o` is grammar-critical, its contrast with person `i/u/a` is protected even where optional specificity `-e/-o` may admit broader accentual raising.
 
 ### 5.2 No independent /h/
 
@@ -337,6 +343,7 @@ Accent tolerance is broad, but not unlimited:
 - `/N/` may change place but may not disappear;
 - `i`, `u`, and `a` must remain recoverably distinct when they mark person;
 - optional `-e` and `-o` may raise toward `[i]` and `[u]`, but may not collapse with each other when specificity is intended;
+- finite-aspect `e` and `o` must remain recoverably distinct from person `i/u/a`; aspect-person hiatus may not coalesce if aspect would be lost;
 - coalescence may simplify a sequence phonetically, but spelling and underlying analysis remain unchanged;
 - the canonical lexicon should avoid protected minimal pairs that become indistinguishable under explicitly accepted soft mergers.
 
