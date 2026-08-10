@@ -113,6 +113,33 @@ prefix remains constant.
 These phase prefixes do not encode progressive/perfect aspect. Finite aspect
 remains the separate canonical `Ø/e/o` slot.
 
+### `mov` valency alternation
+
+The `mov` family has a canonical intransitive/transitive valency alternation.
+With no accusative object, the subject is the moving entity; with an accusative
+`X-em`, the subject is the external mover/causer and `X-em` is the entity whose
+motion is controlled.
+
+```text
+X-NOM mov                 = X moves
+Y-NOM mov X-em            = Y moves / displaces X
+Y-NOM mov X-em DEST-ad    = Y moves / displaces X toward DEST
+```
+
+The same alternation applies compositionally to the phase-derived members:
+
+- `X admov` = X begins moving; `Y admov X-em` = Y sets X in motion
+- `X inmov` = X continues moving; `Y inmov X-em` = Y keeps X in motion
+- `X demov` = X stops moving; `Y demov X-em` = Y stops X
+- `X remov` = X resumes moving; `Y remov X-em` = Y sets X moving again / restarts X's motion
+
+`inmov` does **not** mean "push" or "pull". It contributes only continuation
+of motion; the physical manner or force relation of pushing and pulling is a
+separate lexical matter. Likewise, this valency alternation does not replace
+finite aspect morphology: progressive `mov-e-...` means that motion is ongoing,
+whereas `inmov` presupposes an already established motion and asserts its
+continuation.
+
 
 ### Explicit transition between states
 

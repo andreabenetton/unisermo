@@ -1,4 +1,5 @@
 # Language specification migration history
+- 2026-08-10 - canonical `mov` valency alternation established: intransitive `X mov` = X moves; transitive `Y mov X-em` = Y moves/displaces X, optionally toward `DEST-ad`. The same alternation applies to `admov`, `inmov`, `demov`, `remov`; transitive `inmov` means keep X in motion, not push/pull.
 
 The files in this directory are the **live, editable language specification**.
 They were initialized verbatim from `language(1).zip` on 2026-08-10 so that

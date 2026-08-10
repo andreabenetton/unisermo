@@ -15,6 +15,8 @@ assert 'ines' in d['state_phase_family_es'] and 'ades' in d['state_phase_family_
 assert 'aes is already the canonical genitive/possessive of ae' in d['state_phase_family_es']
 assert 'inmov' in d['phase_prefix_family'] and 'admov' in d['phase_prefix_family'] and 'demov' in d['phase_prefix_family'] and 'remov' in d['phase_prefix_family']
 assert 'do not replace finite aspect' in d['phase_prefix_family']
+assert 'X-NOM mov = X moves' in d['motion_family_valency_mov'] and 'Y-NOM mov X-em = Y moves/displaces X' in d['motion_family_valency_mov']
+assert 'admov, inmov, demov, remov' in d['motion_family_valency_mov'] and 'does not lexicalize push or pull' in d['motion_family_valency_mov']
 assert 'traes DEST-ad SOURCE-de' in d['explicit_state_transition_traes'] and 'ades X' in d['explicit_state_transition_traes']
 assert 'Y-NOM traes X-em RESULT-da' in d['explicit_state_transition_traes'] and 'akwaem solidda' in d['explicit_state_transition_traes']
 assert '-da resultative predicative/transformative' in d['nominal_case_inventory_seven']

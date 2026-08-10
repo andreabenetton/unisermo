@@ -170,3 +170,17 @@ the historical snapshot.
 
 The old nominal plural suffix `-en` is also obsolete. It must not be inferred
 from this document's historical predecessors.
+
+## 8. Motion-family valency
+
+Canonical `mov` may be used intransitively or transitively without a separate
+causative derivation:
+
+- `X mov` — X moves
+- `Y mov X-em` — Y moves / displaces X
+- `Y mov X-em DEST-ad` — Y moves X toward DEST
+
+This valency alternation is inherited by `admov`, `inmov`, `demov`, and `remov`:
+transitive `admov` sets an object in motion, `inmov` keeps it in motion, `demov`
+stops it, and `remov` sets it in motion again. `inmov` is not lexical "push" or
+"pull"; those notions require their own manner/force semantics.
