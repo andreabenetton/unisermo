@@ -88,3 +88,15 @@ chart artwork CC BY‑SA 4.0; official IPA audio CC BY‑NC‑ND 4.0 (streamed, 
 redistributed); PHOIBLE CC BY‑SA 3.0; CLDR under the Unicode licence. The
 original editorial annotations remain under CC BY‑SA 4.0. Attribution and
 versions are listed in‑app.
+
+## Language specification history
+
+The user-provided original language Markdown is preserved verbatim under
+`legacy/original-language/`. The live, editable descendants are under
+`language/`; confirmed language changes must update those files so Git records
+the actual specification evolution. Quantitative studies and decision evidence
+remain under `research/`.
+
+Use `language/MIGRATION_HISTORY.md` for the migration note and
+`scripts/test_legacy_language_snapshot.py` to verify that the historical source
+snapshot has not been altered.

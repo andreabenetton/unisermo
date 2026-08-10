@@ -21,7 +21,7 @@ specification without fabricating retroactive commits.
 
 - `c7b9f16` — original Markdown imported verbatim and copied to `language/`
 - `04dad80` — current phonology, person/number, finite verb architecture and lexical adaptation applied
-- subsequent migration commit — remaining confirmed grammar and lexicon decisions applied
+- `8cacc4c` — remaining confirmed grammar and lexicon decisions applied
 
 Use `git diff c7b9f16 -- language/` to inspect the evolution from the imported
 originals, or compare a live file directly with its immutable counterpart under

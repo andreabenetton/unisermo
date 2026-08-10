@@ -311,3 +311,13 @@ is committed. If you change the data, run `build_data.py` and commit the result.
 `_headers` sets cache lifetimes. The app fetches the PHOIBLE click-family
 ValueTable and audio from external hosts at runtime; failures degrade
 gracefully (see the Runtime dependencies section of the provenance dialog).
+
+## Language specification — source vs live docs
+
+The original user-provided language Markdown is immutable under
+`legacy/original-language/`. The live specification is under `language/`.
+When a language-design decision is confirmed, update the corresponding live
+Markdown file in `language/` in the same Git change as the machine-readable
+research/decision records. Do not leave confirmed rules only under `research/`.
+Never edit `legacy/original-language/`; its hashes are guarded by
+`scripts/test_legacy_language_snapshot.py`.
