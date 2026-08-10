@@ -1,0 +1,463 @@
+{
+  "schema": "glottodelta/tam-phonotactics-study@1",
+  "status": "confirmed_canonical_vowel_aspect",
+  "systems": {
+    "former_consonantal": "root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)",
+    "canonical_vowel_aspect": "root + aspect(0/e/o) + time(0/d/f) + person(i/u/a) + number(0/n)"
+  },
+  "samples": {
+    "confirmed_plus_live": {
+      "roots": [
+        "ager",
+        "dek",
+        "dik",
+        "dirig",
+        "dots",
+        "es",
+        "fak",
+        "kad",
+        "kap",
+        "klar",
+        "kred",
+        "kun",
+        "kurar",
+        "lok",
+        "mov",
+        "nation",
+        "sentrum",
+        "sert",
+        "sirkul",
+        "siv",
+        "spets",
+        "stru",
+        "uman",
+        "vid",
+        "vok"
+      ],
+      "former_consonantal": {
+        "root_count": 25,
+        "form_count": 1350,
+        "root_final_vowel_count": 1,
+        "root_final_e_or_o_count": 0,
+        "root_final_e_or_o": [],
+        "morphology_created_runs": {
+          "C_ge_2": 1176,
+          "C_ge_2_pct": 87.11111111111111,
+          "C_ge_3": 648,
+          "C_ge_3_pct": 48.0,
+          "C_ge_4": 72,
+          "C_ge_4_pct": 5.333333333333333,
+          "max_C_run": 4,
+          "V_ge_2": 6,
+          "V_ge_2_pct": 0.4444444444444444,
+          "V_ge_3": 0,
+          "V_ge_3_pct": 0.0,
+          "V_ge_4": 0,
+          "V_ge_4_pct": 0.0,
+          "max_V_run": 2,
+          "forms_with_identical_adjacent_vowels": 2,
+          "forms_with_identical_adjacent_vowels_pct": 0.14814814814814814
+        },
+        "collisions": {
+          "surface_collision_count": 0,
+          "within_root_collision_count": 0,
+          "cross_root_collision_count": 0,
+          "examples": {
+            "within_root": [],
+            "cross_root": []
+          }
+        },
+        "e_o_root_shadow_pairs": []
+      },
+      "canonical_vowel_aspect": {
+        "root_count": 25,
+        "form_count": 1350,
+        "root_final_vowel_count": 1,
+        "root_final_e_or_o_count": 0,
+        "root_final_e_or_o": [],
+        "morphology_created_runs": {
+          "C_ge_2": 288,
+          "C_ge_2_pct": 21.333333333333332,
+          "C_ge_3": 36,
+          "C_ge_3_pct": 2.6666666666666665,
+          "C_ge_4": 0,
+          "C_ge_4_pct": 0.0,
+          "max_C_run": 3,
+          "V_ge_2": 330,
+          "V_ge_2_pct": 24.444444444444443,
+          "V_ge_3": 12,
+          "V_ge_3_pct": 0.8888888888888888,
+          "V_ge_4": 0,
+          "V_ge_4_pct": 0.0,
+          "max_V_run": 3,
+          "forms_with_identical_adjacent_vowels": 2,
+          "forms_with_identical_adjacent_vowels_pct": 0.14814814814814814
+        },
+        "collisions": {
+          "surface_collision_count": 0,
+          "within_root_collision_count": 0,
+          "cross_root_collision_count": 0,
+          "examples": {
+            "within_root": [],
+            "cross_root": []
+          }
+        },
+        "e_o_root_shadow_pairs": [],
+        "worst_case_mid_vowel_raising_plus_identical_hiatus_coalescence": {
+          "collision_surface_count": 100,
+          "affected_bundle_count": 200,
+          "examples": [
+            "ageri",
+            "agerin",
+            "ageru",
+            "agerun",
+            "deki",
+            "dekin",
+            "deku",
+            "dekun",
+            "diki",
+            "dikin",
+            "diku",
+            "dikun"
+          ],
+          "note": "Diagnostic only: e->i, o->u in the aspect slot plus coalescence of identical aspect/person vowels in present forms. This is not a canonical rule."
+        }
+      },
+      "vowel_aspect_after_time_control": {
+        "root_count": 25,
+        "form_count": 1350,
+        "root_final_vowel_count": 1,
+        "root_final_e_or_o_count": 0,
+        "root_final_e_or_o": [],
+        "morphology_created_runs": {
+          "C_ge_2": 864,
+          "C_ge_2_pct": 64.0,
+          "C_ge_3": 108,
+          "C_ge_3_pct": 8.0,
+          "C_ge_4": 0,
+          "C_ge_4_pct": 0.0,
+          "max_C_run": 3,
+          "V_ge_2": 906,
+          "V_ge_2_pct": 67.11111111111111,
+          "V_ge_3": 12,
+          "V_ge_3_pct": 0.8888888888888888,
+          "V_ge_4": 0,
+          "V_ge_4_pct": 0.0,
+          "max_V_run": 3,
+          "forms_with_identical_adjacent_vowels": 2,
+          "forms_with_identical_adjacent_vowels_pct": 0.14814814814814814
+        },
+        "collisions": {
+          "surface_collision_count": 0,
+          "within_root_collision_count": 0,
+          "cross_root_collision_count": 0,
+          "examples": {
+            "within_root": [],
+            "cross_root": []
+          }
+        },
+        "e_o_root_shadow_pairs": []
+      }
+    },
+    "currentized_seed74": {
+      "roots": [
+        "ager",
+        "audi",
+        "bi",
+        "bon",
+        "brev",
+        "dek",
+        "dik",
+        "dirig",
+        "div",
+        "dots",
+        "dur",
+        "equ",
+        "fak",
+        "fin",
+        "form",
+        "fort",
+        "gen",
+        "grad",
+        "grand",
+        "hab",
+        "kad",
+        "kap",
+        "klar",
+        "kred",
+        "kun",
+        "kurar",
+        "leg",
+        "liber",
+        "lin",
+        "lok",
+        "long",
+        "magn",
+        "man",
+        "medi",
+        "mem",
+        "min",
+        "mod",
+        "mort",
+        "mov",
+        "mult",
+        "nat",
+        "nov",
+        "numer",
+        "oper",
+        "part",
+        "port",
+        "prim",
+        "prob",
+        "reg",
+        "sentrum",
+        "sert",
+        "serv",
+        "sign",
+        "sim",
+        "sirkul",
+        "siv",
+        "sol",
+        "spets",
+        "stat",
+        "stru",
+        "temp",
+        "ten",
+        "termin",
+        "terr",
+        "trans",
+        "unit",
+        "val",
+        "ven",
+        "ver",
+        "vers",
+        "vid",
+        "vis",
+        "viv",
+        "vok"
+      ],
+      "former_consonantal": {
+        "root_count": 74,
+        "form_count": 3996,
+        "root_final_vowel_count": 5,
+        "root_final_e_or_o_count": 0,
+        "root_final_e_or_o": [],
+        "morphology_created_runs": {
+          "C_ge_2": 3432,
+          "C_ge_2_pct": 85.88588588588588,
+          "C_ge_3": 2088,
+          "C_ge_3_pct": 52.252252252252255,
+          "C_ge_4": 432,
+          "C_ge_4_pct": 10.81081081081081,
+          "max_C_run": 4,
+          "V_ge_2": 30,
+          "V_ge_2_pct": 0.7507507507507507,
+          "V_ge_3": 0,
+          "V_ge_3_pct": 0.0,
+          "V_ge_4": 0,
+          "V_ge_4_pct": 0.0,
+          "max_V_run": 2,
+          "forms_with_identical_adjacent_vowels": 10,
+          "forms_with_identical_adjacent_vowels_pct": 0.2502502502502503
+        },
+        "collisions": {
+          "surface_collision_count": 0,
+          "within_root_collision_count": 0,
+          "cross_root_collision_count": 0,
+          "examples": {
+            "within_root": [],
+            "cross_root": []
+          }
+        },
+        "e_o_root_shadow_pairs": []
+      },
+      "canonical_vowel_aspect": {
+        "root_count": 74,
+        "form_count": 3996,
+        "root_final_vowel_count": 5,
+        "root_final_e_or_o_count": 0,
+        "root_final_e_or_o": [],
+        "morphology_created_runs": {
+          "C_ge_2": 828,
+          "C_ge_2_pct": 20.72072072072072,
+          "C_ge_3": 216,
+          "C_ge_3_pct": 5.405405405405405,
+          "C_ge_4": 0,
+          "C_ge_4_pct": 0.0,
+          "max_C_run": 3,
+          "V_ge_2": 1038,
+          "V_ge_2_pct": 25.975975975975977,
+          "V_ge_3": 60,
+          "V_ge_3_pct": 1.5015015015015014,
+          "V_ge_4": 0,
+          "V_ge_4_pct": 0.0,
+          "max_V_run": 3,
+          "forms_with_identical_adjacent_vowels": 10,
+          "forms_with_identical_adjacent_vowels_pct": 0.2502502502502503
+        },
+        "collisions": {
+          "surface_collision_count": 0,
+          "within_root_collision_count": 0,
+          "cross_root_collision_count": 0,
+          "examples": {
+            "within_root": [],
+            "cross_root": []
+          }
+        },
+        "e_o_root_shadow_pairs": [],
+        "worst_case_mid_vowel_raising_plus_identical_hiatus_coalescence": {
+          "collision_surface_count": 296,
+          "affected_bundle_count": 592,
+          "examples": [
+            "ageri",
+            "agerin",
+            "ageru",
+            "agerun",
+            "audii",
+            "audiin",
+            "audiu",
+            "audiun",
+            "bii",
+            "biin",
+            "biu",
+            "biun"
+          ],
+          "note": "Diagnostic only: e->i, o->u in the aspect slot plus coalescence of identical aspect/person vowels in present forms. This is not a canonical rule."
+        }
+      },
+      "vowel_aspect_after_time_control": {
+        "root_count": 74,
+        "form_count": 3996,
+        "root_final_vowel_count": 5,
+        "root_final_e_or_o_count": 0,
+        "root_final_e_or_o": [],
+        "morphology_created_runs": {
+          "C_ge_2": 2484,
+          "C_ge_2_pct": 62.16216216216216,
+          "C_ge_3": 648,
+          "C_ge_3_pct": 16.216216216216218,
+          "C_ge_4": 0,
+          "C_ge_4_pct": 0.0,
+          "max_C_run": 3,
+          "V_ge_2": 2694,
+          "V_ge_2_pct": 67.41741741741741,
+          "V_ge_3": 60,
+          "V_ge_3_pct": 1.5015015015015014,
+          "V_ge_4": 0,
+          "V_ge_4_pct": 0.0,
+          "max_V_run": 3,
+          "forms_with_identical_adjacent_vowels": 10,
+          "forms_with_identical_adjacent_vowels_pct": 0.2502502502502503
+        },
+        "collisions": {
+          "surface_collision_count": 0,
+          "within_root_collision_count": 0,
+          "cross_root_collision_count": 0,
+          "examples": {
+            "within_root": [],
+            "cross_root": []
+          }
+        },
+        "e_o_root_shadow_pairs": []
+      }
+    }
+  },
+  "examples": {
+    "mov": {
+      "former_consonantal": {
+        "present_simple": "movi",
+        "present_progressive": "movni",
+        "present_perfect": "movbi",
+        "past_simple": "movdi",
+        "past_progressive": "movdni",
+        "past_perfect": "movdbi",
+        "future_simple": "movfi",
+        "future_progressive": "movfni",
+        "future_perfect": "movfbi"
+      },
+      "canonical_vowel_aspect": {
+        "present_simple": "movi",
+        "present_progressive": "movei",
+        "present_perfect": "movoi",
+        "past_simple": "movdi",
+        "past_progressive": "movedi",
+        "past_perfect": "movodi",
+        "future_simple": "movfi",
+        "future_progressive": "movefi",
+        "future_perfect": "movofi"
+      }
+    },
+    "vid": {
+      "former_consonantal": {
+        "present_simple": "vidi",
+        "present_progressive": "vidni",
+        "present_perfect": "vidbi",
+        "past_simple": "viddi",
+        "past_progressive": "viddni",
+        "past_perfect": "viddbi",
+        "future_simple": "vidfi",
+        "future_progressive": "vidfni",
+        "future_perfect": "vidfbi"
+      },
+      "canonical_vowel_aspect": {
+        "present_simple": "vidi",
+        "present_progressive": "videi",
+        "present_perfect": "vidoi",
+        "past_simple": "viddi",
+        "past_progressive": "videdi",
+        "past_perfect": "vidodi",
+        "future_simple": "vidfi",
+        "future_progressive": "videfi",
+        "future_perfect": "vidofi"
+      }
+    },
+    "fak": {
+      "former_consonantal": {
+        "present_simple": "faki",
+        "present_progressive": "fakni",
+        "present_perfect": "fakbi",
+        "past_simple": "fakdi",
+        "past_progressive": "fakdni",
+        "past_perfect": "fakdbi",
+        "future_simple": "fakfi",
+        "future_progressive": "fakfni",
+        "future_perfect": "fakfbi"
+      },
+      "canonical_vowel_aspect": {
+        "present_simple": "faki",
+        "present_progressive": "fakei",
+        "present_perfect": "fakoi",
+        "past_simple": "fakdi",
+        "past_progressive": "fakedi",
+        "past_perfect": "fakodi",
+        "future_simple": "fakfi",
+        "future_progressive": "fakefi",
+        "future_perfect": "fakofi"
+      }
+    },
+    "stru": {
+      "former_consonantal": {
+        "present_simple": "strui",
+        "present_progressive": "struni",
+        "present_perfect": "strubi",
+        "past_simple": "strudi",
+        "past_progressive": "strudni",
+        "past_perfect": "strudbi",
+        "future_simple": "strufi",
+        "future_progressive": "strufni",
+        "future_perfect": "strufbi"
+      },
+      "canonical_vowel_aspect": {
+        "present_simple": "strui",
+        "present_progressive": "struei",
+        "present_perfect": "struoi",
+        "past_simple": "strudi",
+        "past_progressive": "struedi",
+        "past_perfect": "struodi",
+        "future_simple": "strufi",
+        "future_progressive": "struefi",
+        "future_perfect": "struofi"
+      }
+    }
+  }
+}

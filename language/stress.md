@@ -7,7 +7,7 @@ prefixes and suffixes do not move it.
 
 Examples:
 
-- `MOV-i`, `MOV-din`
+- `MOV-i`, `MOV-din`, `MOV-e-di`, `MOV-o-fi`
 - `FAK-er`, `FAK-it`, `FAK-itat`
 - `KLAR-itat`
 - `U-man-itat` when the lexical root is `uman`
@@ -20,7 +20,9 @@ the stress assigned by their own root structure.
 Unstressed vowels do not reduce to a phonemic schwa. The canonical vowel system
 is `/a e i o u/`, and grammatical endings must remain recoverable.
 
-## Person/number endings
+## TAM and person/number endings
+
+Finite aspect vowels `e/o`, time consonants `d/f`, the person vowel, and optional plural `n` do not move lexical stress. Aspect and person vowels remain fully audible even when adjacent: `MOV-e-i` is `/mov.e.i/`, not a reduced or fused form.
 
 The person vowel and optional plural `n` are unstressed but audible:
 
