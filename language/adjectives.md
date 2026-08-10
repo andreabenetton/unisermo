@@ -4,7 +4,7 @@ A formal specification of how adjectives modify nouns in the synthetic language:
 
 ## Related documents
 
-- The rule that case suffixes attach to the noun and that modifiers do not agree is defined in [`noun_case_system.md`](noun_case_system.md) §5.
+- The rule that case suffixes attach to the noun and that modifiers do not agree is defined in [`noun_case_system.md`](noun_case_system.md) §4.
 - The optional plural particle `wi` precedes the noun phrase and does not trigger modifier agreement; see [`noun_number_system.md`](noun_number_system.md).
 - The default constituent order (SVO) is in [`word_order.md`](word_order.md).
 - Other pre-nominal modifiers — determiners, genitives, numerals — follow the same modifier-before-head pattern documented here (see [`articles.md`](articles.md), [`numerals.md`](numerals.md), [`noun_case_system.md`](noun_case_system.md) §6.1).
@@ -47,24 +47,24 @@ This matches the order used in English, Mandarin, Turkish, Japanese, and German,
 
 ## 4. Interaction with Case and Plural
 
-Case is marked once at the right edge of the noun phrase; optional plural `wi` precedes the phrase. Adjectives **do not agree** with the noun in case or number.
+A synthetic case suffix attaches once to the head noun; optional plural `wi` precedes the phrase. Adjectives **do not agree** with the noun in case or number.
 
 | Form | Meaning |
 |---|---|
 | `bon dom` | a good house / the good house |
 | `bon domem` | a good house (direct object) |
-| `bon domen` | good houses |
-| `bon domenem` | good houses (direct object) |
+| `wi bon dom` | good houses, explicitly plural |
+| `wi bon domem` | good houses (direct object), explicitly plural |
 | `bon domin` | in the good house |
 
-The adjective `bon` is invariant in all of these. The case and number information appears once, at the right edge of the noun phrase, in line with the attachment rule of [`noun_case_system.md`](noun_case_system.md) §5.
+The adjective `bon` is invariant in all of these. Case attaches to the head noun, while explicit nominal plural is the separate pre-nominal particle `wi`.
 
 **Stacking modifiers.** When more than one modifier appears, all of them sit before the noun and none of them inflect; case still applies once at the noun-phrase edge, while optional plural `wi` precedes the phrase:
 
 | Form | Meaning |
 |---|---|
 | `tik bon dom` | this good house |
-| `duo bon domen` | two good houses |
+| `duo bon dom` | two good houses |
 | `amiks bon dom` | the friend's good house |
 
 **Order of stacked modifiers.** When several pre-nominal modifiers co-occur, their relative order is fixed:
@@ -75,10 +75,10 @@ The adjective `bon` is invariant in all of these. The case and number informatio
 
 | Form | Meaning |
 |---|---|
-| `tik duo bon domen` | these two good houses |
-| `amiks tik duo bon domen` | the friend's these two good houses |
+| `tik duo bon dom` | these two good houses |
+| `amiks tik duo bon dom` | the friend's these two good houses |
 
-A genitive or possessive phrase, when present, sits at the very front of the noun phrase; the demonstrative, numeral, and adjective then follow in that order, with the head noun last. As always, the plural and case suffixes attach only to the head noun.
+A genitive or possessive phrase, when present, sits at the very front of the noun phrase; the demonstrative, numeral, and adjective then follow in that order, with the head noun last. As always, synthetic case attaches only to the head noun; `wi` is a separate pre-nominal plural particle and is normally omitted when a numeral already gives quantity.
 
 ---
 

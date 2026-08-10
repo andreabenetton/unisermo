@@ -73,7 +73,7 @@
       "meaning_it": "con-; insieme",
       "meaning_en": "with; together",
       "source": "Latin cum / com-",
-      "decision": "Canonical replacement for legacy/source com from Latin cum/com-. Chosen as kun to avoid collision with canonical question word kom = HOW."
+      "decision": "Canonical replacement for legacy/source com from Latin cum/com-. Chosen as kun to avoid collision with canonical question word kom = HOW. Also canonical invariant free comitative relator in kun + noun phrase; the former comitative suffix -ko is retired."
     },
     {
       "form": "kred",
@@ -218,6 +218,54 @@
       "meaning_en": "why?",
       "source": "revised GlottoDelta question system",
       "decision": "Canonical WH-word WHY, replacing legacy kur to avoid collision with the care/cure lexical family."
+    },
+    {
+      "form": "per",
+      "category": "function_word",
+      "meaning_it": "per; attraverso; per mezzo di",
+      "meaning_en": "through; by means of",
+      "source": "legacy GlottoDelta extended case system",
+      "decision": "Canonical invariant free instrumental/perlative relator. Former suffix -per is retired."
+    },
+    {
+      "form": "pro",
+      "category": "function_word",
+      "meaning_it": "a favore di; per il beneficio di",
+      "meaning_en": "for the benefit of",
+      "source": "legacy GlottoDelta extended case system",
+      "decision": "Canonical invariant free benefactive relator. Former suffix -pro is retired."
+    },
+    {
+      "form": "due",
+      "category": "function_word",
+      "meaning_it": "a causa di; dovuto a",
+      "meaning_en": "because of; due to",
+      "source": "legacy GlottoDelta extended case system",
+      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired."
+    },
+    {
+      "form": "fin",
+      "category": "function_word",
+      "meaning_it": "allo scopo di",
+      "meaning_en": "for the purpose of",
+      "source": "legacy GlottoDelta extended case system",
+      "decision": "Canonical invariant free purposive relator. Former suffix -fin is retired."
+    },
+    {
+      "form": "tem",
+      "category": "function_word",
+      "meaning_it": "durante; nel tempo di",
+      "meaning_en": "during; at the time of",
+      "source": "legacy GlottoDelta extended case system",
+      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired."
+    },
+    {
+      "form": "mod",
+      "category": "function_word",
+      "meaning_it": "nel modo di; alla maniera di",
+      "meaning_en": "in the manner of",
+      "source": "legacy GlottoDelta extended case system",
+      "decision": "Canonical invariant free manner relator. Former suffix -mod is retired."
     }
   ]
 }

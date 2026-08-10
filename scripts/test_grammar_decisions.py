@@ -43,6 +43,9 @@ def main() -> None:
         "servile_verbs_analytic",
         "modal_m_retired",
         "finite_aspect_vowel_protection",
+        "nominal_case_inventory_six",
+        "comitative_kun_analytic",
+        "extended_case_suffixes_retired",
     }
     assert required <= decisions.keys(), required - decisions.keys()
 
@@ -73,6 +76,11 @@ def main() -> None:
     assert "canonical hiatus" in decisions["finite_aspect_vowel_protection"]
     assert "finite servile verb followed by the bare infinitive/root" in decisions["servile_verbs_analytic"]
     assert "synthetic m" in decisions["modal_m_retired"]
+    assert "-em accusative" in decisions["nominal_case_inventory_six"]
+    assert "-in locative" in decisions["nominal_case_inventory_six"]
+    assert "kun + noun phrase" in decisions["comitative_kun_analytic"]
+    assert "-ko" in decisions["comitative_kun_analytic"]
+    assert "RELATOR + NP" in decisions["extended_case_suffixes_retired"]
 
     nominal = NOMINAL_SPEC.read_text(encoding="utf-8")
     for example in (
@@ -101,7 +109,7 @@ def main() -> None:
     assert "A second pre-verbal `no` is therefore not" in polarity
 
     case_spec = CASE_SPEC.read_text(encoding="utf-8")
-    for form in ("`doms`", "`faks`", "`vises`", "`...sjes`", "`...tjes`", "`...djes`", "`is`", "`us`", "`as`", "`ins`", "`uns`", "`ans`"):
+    for form in ("`doms`", "`faks`", "`vises`", "`...sjes`", "`...tjes`", "`...djes`", "`is`", "`us`", "`as`", "`ins`", "`uns`", "`ans`", "`kun uman`", "`per`", "`pro`", "`due`", "`fin`", "`tem`", "`mod`"):
         assert form in case_spec, form
 
     copula = COPULA_SPEC.read_text(encoding="utf-8")

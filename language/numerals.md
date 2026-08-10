@@ -118,14 +118,13 @@ The numeral **precedes the noun**. Because the numeral already conveys plurality
 duo dom        — two houses
 ```
 
-The old plural suffix `-en` is obsolete. After a numeral the noun normally remains bare because quantity is already explicit:
+The old plural suffix `-en` is obsolete. After a numeral the noun remains bare because quantity is already explicit; `wi` is normally omitted as redundant:
 
 ```
-duo dom        (compact, default)
-duo domen      (explicit, emphatic)
+duo dom        - two houses
 ```
 
-When the noun phrase takes case, the case suffix attaches to the noun, which sits at the right edge of the phrase (see [`noun_case_system.md`](noun_case_system.md) §5):
+When the noun phrase takes case, the case suffix attaches to the noun, which sits at the right edge of the phrase (see [`noun_case_system.md`](noun_case_system.md) §4):
 
 ```
 duo dom        — two houses

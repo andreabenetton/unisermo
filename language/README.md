@@ -12,7 +12,7 @@ Quantitative studies and design evidence live under `../research/`.
 - `alphabet_and_phonology.md` — current 21-phoneme inventory and adaptation rules
 - `verb_specification.md` — `root + aspect + time + person vowel + optional N`
 - `noun_number_system.md` — number-neutral nouns and optional plural `wi`
-- `noun_case_system.md` — nominative Ø, accusative `-em`, genitive `-s/-es`, cases and possessives
+- `noun_case_system.md` — six synthetic cases plus analytic relators such as `kun`
 - `articles.md` — no obligatory articles; optional indefinite `uno`
 - `derivation.md` — `-er`, `-or`, `-ia`, `-it`, `-itat`, `-al` and prefixes
 - `numerals.md` — cardinal numeral system including `kin` = 5
@@ -30,5 +30,6 @@ Quantitative studies and design evidence live under `../research/`.
 - person `i/u/a`; plural `/N/` after the person vowel
 - finite verb order: `root + aspect + time + person vowel + optional N`
 - noun number neutral by default; optional explicit plural `wi`
+- synthetic cases: Ø, `-em`, `-s/-es`, `-ad`, `-de`, `-in`; comitative is analytic `kun + NP`
 - indefinite singular may be expressed by the numeral/determiner `uno`
 - `-it` participial/resultative; `-itat` abstract; `-ia=/i.a/` place/institution/field/domain

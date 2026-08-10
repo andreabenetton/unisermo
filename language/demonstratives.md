@@ -5,7 +5,7 @@ A formal specification of the demonstrative system of the synthetic language. Th
 ## Related documents
 
 - Demonstratives are optional precision tools; the bare noun remains the default. See [`articles.md`](articles.md) for the no-obligatory-articles rule.
-- Demonstratives precede the noun and remain invariant, like other modifiers. See [`adjectives.md`](adjectives.md) for the modifier rule, and [`noun_case_system.md`](noun_case_system.md) §5 for the case-attachment rule.
+- Demonstratives precede the noun and remain invariant, like other modifiers. See [`adjectives.md`](adjectives.md) for the modifier rule, and [`noun_case_system.md`](noun_case_system.md) §4 for the case-attachment rule.
 - Vowel-only contrasts in core vocabulary are avoided per [`vocabulary_design_rules.md`](vocabulary_design_rules.md) Rule 1 and Rule 6 — which motivates the three-letter forms below.
 
 This document introduces **three demonstratives**: `tik` (this), `tes` (that near you), `tan` (that, far from both).
@@ -49,9 +49,9 @@ Demonstratives precede the noun, following the modifier-before-head pattern used
 
 | Italian | Form | English |
 |---|---|---|
-| questo uomo | `tik vir` | this man |
-| codesto uomo / quell'uomo vicino a te | `tes vir` | that man (near you) |
-| quell'uomo | `tan vir` | that man (over there) |
+| questo uomo | `tik umano` | this man |
+| codesto uomo / quell'uomo vicino a te | `tes umano` | that man (near you) |
+| quell'uomo | `tan umano` | that man (over there) |
 | questa casa | `tik dom` | this house |
 | codesta casa | `tes dom` | that house (near you) |
 | quella casa | `tan dom` | that house (over there) |
@@ -60,14 +60,14 @@ Demonstratives precede the noun, following the modifier-before-head pattern used
 
 ## 4. Interaction with Case, Plural, and Other Modifiers
 
-Like all other modifiers, demonstratives are **invariant**: they do not inflect for case, number, or any other category. Case and plural attach to the noun, which sits at the right edge of the noun phrase (see [`noun_case_system.md`](noun_case_system.md) §5 and [`noun_number_system.md`](noun_number_system.md) §4).
+Like all other modifiers, demonstratives are **invariant**: they do not inflect for case, number, or any other category. Synthetic case attaches to the head noun, while optional plural `wi` precedes the noun phrase (see [`noun_case_system.md`](noun_case_system.md) §4 and [`noun_number_system.md`](noun_number_system.md) §4).
 
 | Form | Meaning |
 |---|---|
 | `tik dom` | this house |
 | `tik domem` | this house (direct object) |
-| `tik domen` | these houses |
-| `tik domenem` | these houses (direct object) |
+| `tik wi dom` | these houses |
+| `tik wi domem` | these houses (direct object) |
 | `tan doms` | of that house / that house's |
 | `tes domin` | in that house (near you) |
 
@@ -75,7 +75,7 @@ Demonstratives can stack with adjectives and other modifiers, all of which sit b
 
 ```
 tik bon dom    — this good house
-tan duo domen  — those two houses
+tan duo dom    — those two houses
 ```
 
 ---
@@ -112,7 +112,7 @@ The resulting `ik` / `ist` / `ile` set is less regular and less acoustically bal
 
 ## 6. Rule
 
-> **Demonstrative + noun.** The demonstrative precedes the noun. The demonstrative does not inflect; case and plural attach to the noun.
+> **Demonstrative + noun.** The demonstrative precedes the noun and does not inflect. Synthetic case attaches to the head noun; optional plural `wi` precedes the noun phrase.
 
 Examples with case:
 
