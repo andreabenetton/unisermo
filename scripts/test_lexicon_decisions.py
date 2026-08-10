@@ -36,6 +36,11 @@ def main() -> None:
         assert entries[rel]["category"] == "function_word"
         assert "Former suffix" in entries[rel]["decision"]
 
+    # Canonical lexical forms may use only the 21 official graphemes.
+    allowed = set("aeioupbtdkgmnfvszlrjw")
+    invalid_forms = {form: sorted(set(form) - allowed) for form in entries if set(form) - allowed}
+    assert invalid_forms == {}, invalid_forms
+
     audit = AUDIT.read_text(encoding="utf-8")
     mapping = {
         "act":"ager", "cad":"kad", "cap":"kap", "centr":"sentr",

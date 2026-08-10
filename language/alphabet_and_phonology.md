@@ -43,6 +43,10 @@ l  r
 j  w
 ```
 
+The letter `x` is **not** part of the official alphabet. It may appear only in
+metalanguage, source forms, or legacy material; canonical GlottoDelta words must
+represent any source `x` with sequences built from the official units.
+
 Important notes:
 
 - `j` represents the glide **/j/**, approximately English `y` in *yes* or Italian `i` in *ieri* when consonantal.

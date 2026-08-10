@@ -13,8 +13,9 @@ a e i o u
 p b t d k g m n f v s z l r j w
 ```
 
-No canonical root contains source `c`, `h`, unitary `sh`, phonemic schwa, or a
-separate affricate letter.
+No canonical root contains source `c`, `h`, `x`, unitary `sh`, phonemic schwa, or a
+separate affricate letter. The letter `x` is not an official GlottoDelta grapheme;
+source `x` must be adapted root by root using only canonical units.
 
 ## 2. Glides and vowel sequences
 
