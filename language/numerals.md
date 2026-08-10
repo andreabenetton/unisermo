@@ -4,7 +4,7 @@ A formal specification of the cardinal numerals of the synthetic language. This 
 
 ## Related documents
 
-- The noun number system — including the rule that the plural suffix `-en` is optional after a numeral — is defined in [`noun_number_system.md`](noun_number_system.md).
+- The noun number system — including the rule that nouns normally remain bare after a numeral — is defined in [`noun_number_system.md`](noun_number_system.md).
 - The case suffixes attach to the noun at the right edge of the noun phrase, as defined in [`noun_case_system.md`](noun_case_system.md).
 - The phonotactic restriction that motivates `ter` instead of `*tri` (no initial CC clusters in the core vocabulary) is in [`vocabulary_design_rules.md`](vocabulary_design_rules.md) §3 Rule 2.
 
@@ -32,7 +32,7 @@ The thirteen base numerals are:
 | 2 | `duo` | duo / due |
 | 3 | `ter` | three / tre / tri, but with no initial `tr` cluster |
 | 4 | `for` | four / for |
-| 5 | `cin` | cinque / cinq (initial `c` = /tʃ/) |
+| 5 | `kin` | quinque / kinque / kinq, adapted as `kin` |
 | 6 | `ses` | seis / six |
 | 7 | `set` | sette / sept / siete |
 | 8 | `oto` | otto / ocho / octo simplified |
@@ -72,7 +72,7 @@ Compound numerals are formed by concatenating the base forms in **big-endian ord
 | Value | Form |
 |---|---|
 | 21 | `duo dek uno` |
-| 25 | `duo dek cin` |
+| 25 | `duo dek kin` |
 | 99 | `nin dek nin` |
 
 ### 3.4 Hundreds: `digit + sen`
@@ -93,7 +93,7 @@ Components combine in big-endian order:
 | Value | Form |
 |---|---|
 | 321 | `ter sen duo dek uno` |
-| 405 | `for sen cin` |
+| 405 | `for sen kin` |
 | 999 | `nin sen nin dek nin` |
 
 ### 3.6 Thousands: `digit + mil`
@@ -118,7 +118,7 @@ The numeral **precedes the noun**. Because the numeral already conveys plurality
 duo dom        — two houses
 ```
 
-The plural suffix `-en` is **optional and usually omitted** after a numeral, but may be added for emphasis or in formal registers:
+The old plural suffix `-en` is obsolete. After a numeral the noun normally remains bare because quantity is already explicit:
 
 ```
 duo dom        (compact, default)
@@ -141,7 +141,7 @@ Numerals themselves do not inflect for case or number.
 
 - The form for `1` is `uno`. It is **not** prefixed to `sen` or `mil` (so `100 = sen`, not `*uno sen`; `1000 = mil`, not `*uno mil`).
 - The form for `3` is `ter`, not `*tri`, because initial CC clusters are disallowed in the core vocabulary (see [`vocabulary_design_rules.md`](vocabulary_design_rules.md) §3 Rule 2).
-- The form `cin` is pronounced /tʃin/, since `c` = /tʃ/ in the alphabet (see [`alphabet_and_phonology.md`](alphabet_and_phonology.md)).
+- The form `kin` is canonical /kin/.
 - All base numerals are three letters; this is intentional and gives the digit set a uniform CVC rhythm.
 
 ---
@@ -154,7 +154,7 @@ uno  = 1
 duo  = 2
 ter  = 3
 for  = 4
-cin  = 5
+kin  = 5
 ses  = 6
 set  = 7
 oto  = 8
@@ -164,4 +164,4 @@ sen  = 100
 mil  = 1000
 ```
 
-Composition: big-endian concatenation, with each digit preceding the power word it multiplies. `uno` is omitted before `sen` and `mil`. After a numeral, the noun stays bare; `-en` is optional and usually omitted.
+Composition: big-endian concatenation, with each digit preceding the power word it multiplies. `uno` is omitted before `sen` and `mil`. After a numeral, the noun stays bare; obsolete nominal `-en` is not used.

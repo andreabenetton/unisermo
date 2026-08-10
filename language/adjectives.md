@@ -47,7 +47,7 @@ This matches the order used in English, Mandarin, Turkish, Japanese, and German,
 
 ## 4. Interaction with Case and Plural
 
-The case suffix and the plural suffix attach to the **noun**, not to the adjective. Adjectives **do not agree** with the noun they modify.
+Case is marked once at the right edge of the noun phrase; optional plural `wi` precedes the phrase. Adjectives **do not agree** with the noun in case or number.
 
 | Form | Meaning |
 |---|---|
@@ -59,7 +59,7 @@ The case suffix and the plural suffix attach to the **noun**, not to the adjecti
 
 The adjective `bon` is invariant in all of these. The case and number information appears once, at the right edge of the noun phrase, in line with the attachment rule of [`noun_case_system.md`](noun_case_system.md) §5.
 
-**Stacking modifiers.** When more than one modifier appears, all of them sit before the noun and none of them inflect; the case and plural suffixes still apply only to the noun:
+**Stacking modifiers.** When more than one modifier appears, all of them sit before the noun and none of them inflect; case still applies once at the noun-phrase edge, while optional plural `wi` precedes the phrase:
 
 | Form | Meaning |
 |---|---|

@@ -90,7 +90,7 @@ A simpler series would distinguish the three forms by vowel alone:
 | `te` | that (near you) |
 | `ta` | that (far) |
 
-This is rejected because the language tries to avoid core-vocabulary contrasts that depend solely on vowel-letters (see [`vocabulary_design_rules.md`](vocabulary_design_rules.md) Rule 1, which lists `e / i` and `a / ə` and other vowel-only pairs as fragile for many target backgrounds). Demonstratives are high-frequency words, so they deserve a more robust distinction.
+This is rejected because demonstratives are high-frequency forms and should remain perceptually robust across accents; the selected forms use more than a fragile vowel-only contrast.
 
 The chosen series adds a second distinguishing feature — the final consonant — so each form changes both vowel **and** coda:
 

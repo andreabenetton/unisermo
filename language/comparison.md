@@ -9,7 +9,7 @@ A formal specification of comparison constructions in the synthetic language: co
 - The demonstratives `tik` (this) and `tan` (that, far) used in the examples below are in [`demonstratives.md`](demonstratives.md).
 - Negation follows the rule in [`negation.md`](negation.md).
 
-This document introduces **six new function words**: `major`, `minor`, `masim`, `minus`, `dan`, `ekual`.
+This document introduces **six new function words**: `major`, `minor`, `masim`, `minus`, `dan`, `ekwal`.
 
 ---
 
@@ -26,14 +26,14 @@ This document introduces **six new function words**: `major`, `minor`, `masim`, 
 
 | Function | Form | Meaning | Pronunciation |
 |---|---|---|---|
-| Comparative of majority | `major` | more / -er | /madʒor/ |
+| Comparative of majority | `major` | more / -er | /ma.jor/ |
 | Comparative of minority | `minor` | less | /minor/ |
 | Superlative maximum | `masim` | most / -est | /masim/ |
 | Superlative minimum | `minus` | least | /minus/ |
 | Comparison marker | `dan` | than / compared with / as | /dan/ |
-| Equality | `ekual` | as / equally | /e.ku.al/ ~ /ekual/ |
+| Equality | `ekwal` | as / equally | /e.kwal/ |
 
-**Note on `ekual`.** The source is "equal" / "égal" / "igual". Since the alphabet has no `q` or `w`, the source sequence /kw/ is adapted as `ku` (per `vocabulary_design_rules.md` §4 — `q` → `k`, `w` → `u`). The resulting `kua` is pronounced as two vowel positions (`ku.al`) but is also acceptable as a single rapid syllable in normal speech.
+**Note on `ekwal`.** Canonical `w=/w/` is available, so the international /kw/ sequence is represented transparently as `kw`: `ekwal` = /e.kwal/.
 
 ---
 
@@ -67,7 +67,7 @@ A  minor  ADJ  dan  B
 Example:
 
 ```
-i minor vel dan e
+i minor vel dan u
 = I am less fast than you
 ```
 
@@ -114,13 +114,13 @@ tik dom minus vel
 Pattern:
 
 ```
-A  ekual  ADJ  dan  B
+A  ekwal  ADJ  dan  B
 ```
 
 Example:
 
 ```
-i ekual vel dan e
+i ekwal vel dan u
 = I am as fast as you
 ```
 
@@ -133,7 +133,7 @@ Here `dan` introduces the second term of an equality comparison — equivalent t
 `dan` is the **general second-term marker** in every comparison that has an overt second term:
 
 - After `major` or `minor`, `dan` corresponds to English "than".
-- After `ekual`, `dan` corresponds to English "as" in the "as ... as" construction.
+- After `ekwal`, `dan` corresponds to English "as" in the "as ... as" construction.
 
 This unifies all comparison constructions under a single second-term marker. The form is the same regardless of whether the comparison is one of inequality or equality.
 
@@ -187,7 +187,7 @@ tik dom no esda major gran dan tan dom
 | `masim` | superlative — most / -est |
 | `minus` | superlative — least |
 | `dan` | comparison marker (than / as) |
-| `ekual` | equal / equally / as |
+| `ekwal` | equal / equally / as |
 
 Patterns:
 
@@ -195,6 +195,6 @@ Patterns:
 - **A `minor` ADJ `dan` B** — A is less ADJ than B
 - **A `masim` ADJ** — A is the most ADJ
 - **A `minus` ADJ** — A is the least ADJ
-- **A `ekual` ADJ `dan` B** — A is as ADJ as B
+- **A `ekwal` ADJ `dan` B** — A is as ADJ as B
 
 The system is compact (six words cover the full comparison space), internationally recognizable (every word is adapted from a familiar Latin / Romance / English source), and regular (no adjective inflection, single second-term marker).
