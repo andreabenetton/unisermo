@@ -141,6 +141,28 @@ whereas `inmov` presupposes an already established motion and asserts its
 continuation.
 
 
+### Vertical motion: `alt`, `bas`, `altmov`, `basmov`
+
+The canonical vertical spatial axis uses `alt` = high / upper / up and `bas` =
+low / lower / down. Direction can be expressed analytically with the ordinary
+allative case:
+
+```text
+mov altad    = move / go upward
+mov basad    = move / go downward
+```
+
+The transparent compounds `altmov` and `basmov` are also canonical:
+
+- `altmov` = ascend / go up
+- `basmov` = descend / go down
+
+These are directional compounds, not phase forms. In particular, `admov` still
+means "begin moving" and `demov` still means "cease moving". The ordinary
+`mov`-family valency alternation can apply where semantically appropriate; the
+vertical element contributes direction, while `mov` contributes motion.
+
+
 ### Explicit transition between states
 
 The canonical verb `traes` expresses transition from one explicitly named state

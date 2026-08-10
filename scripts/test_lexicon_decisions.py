@@ -17,7 +17,7 @@ def main() -> None:
     expected = {
         "ager", "kad", "kap", "sentr", "sert", "sirkul", "siv", "klar",
         "kun", "kom", "ker", "per", "pro", "due", "fin", "tem", "mod", "kred", "kurar", "dek", "dik", "dirig", "dok", "fak",
-        "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal",
+        "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal", "alt", "bas", "altmov", "basmov",
     }
     assert expected <= entries.keys(), expected - entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
@@ -30,6 +30,10 @@ def main() -> None:
     assert entries["uman"]["meaning_it"] == "persona; essere umano"
     assert entries["pel"]["meaning_en"] == "push"
     assert entries["trak"]["meaning_en"] == "pull; draw; drag"
+    assert entries["alt"]["meaning_en"] == "high; upper; up"
+    assert entries["bas"]["meaning_en"] == "low; lower; down"
+    assert entries["altmov"]["meaning_en"] == "ascend; go up"
+    assert entries["basmov"]["meaning_en"] == "descend; go down"
     assert "umano" in entries["uman"]["decision"]
     assert "umane" in entries["uman"]["decision"]
     assert "umanitat" in entries["uman"]["decision"]

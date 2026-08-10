@@ -197,3 +197,19 @@ push or pull an object that does not move. Actual caused displacement is express
 with transitive `mov`, optionally with a destination in `-ad`. Thus force/manner and
 resulting motion remain semantically distinct.
 
+## 10. Vertical motion
+
+The vertical-axis roots are `alt` = high/upper/up and `bas` = low/lower/down.
+With the allative case they form analytic motion directions:
+
+- `mov altad` — move / go upward
+- `mov basad` — move / go downward
+
+The transparent compounds are also canonical:
+
+- `altmov` — ascend / go up
+- `basmov` — descend / go down
+
+They encode direction and must not be confused with phase-derived `admov`
+(begin moving) or `demov` (cease moving).
+

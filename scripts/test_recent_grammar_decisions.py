@@ -22,3 +22,6 @@ assert 'Y-NOM traes X-em RESULT-da' in d['explicit_state_transition_traes'] and 
 assert '-da resultative predicative/transformative' in d['nominal_case_inventory_seven']
 print('recent grammar decision checks passed')
 assert 'pel = push' in d['motion_force_roots_pel_trak'] and 'trak = pull/draw' in d['motion_force_roots_pel_trak']
+assert 'mov altad' in d['vertical_motion_alt_bas'] and 'mov basad' in d['vertical_motion_alt_bas']
+assert 'altmov = ascend/go up' in d['vertical_motion_alt_bas'] and 'basmov = descend/go down' in d['vertical_motion_alt_bas']
+assert 'admov remains begin moving' in d['vertical_motion_alt_bas'] and 'demov remains cease moving' in d['vertical_motion_alt_bas']

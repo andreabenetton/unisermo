@@ -154,6 +154,10 @@
     {
       "id": "motion_force_roots_pel_trak",
       "decision": "Canonize pel = push and trak = pull/draw as independent force/manner verbal roots. Y-NOM pel X-em means Y pushes X; Y-NOM trak X-em means Y pulls X. These verbs describe the force/manner relation and do not by themselves entail that X actually changes position. Successful caused displacement remains Y-NOM mov X-em (optionally DEST-ad), while admov/inmov/demov/remov retain their phase meanings."
+    },
+    {
+      "id": "vertical_motion_alt_bas",
+      "decision": "Canonize alt = high/upper/up and bas = low/lower/down as the vertical spatial axis. Directional motion may be expressed analytically as mov altad = move/go upward and mov basad = move/go downward, using canonical allative -ad. Canonize transparent compounds altmov = ascend/go up and basmov = descend/go down. altmov/basmov encode vertical direction, not phase: admov remains begin moving and demov remains cease moving. The ordinary mov-family intransitive/transitive valency alternation remains available for these compounds where semantically appropriate."
     }
   ]
 }

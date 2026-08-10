@@ -290,6 +290,38 @@
       "meaning_en": "pull; draw; drag",
       "source": "Latin trahere / tract-; international traction-tractor family",
       "decision": "Canonical force/manner verb for pull. It describes traction/pulling and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame."
+    },
+    {
+      "form": "alt",
+      "category": "root",
+      "meaning_it": "alto; superiore; su",
+      "meaning_en": "high; upper; up",
+      "source": "Latin altus / international alt- family",
+      "decision": "Canonical vertical-axis root for high/upper/up. With allative -ad, altad marks upward direction/toward a higher position. It may compound transparently with mov: altmov = ascend/go up."
+    },
+    {
+      "form": "bas",
+      "category": "root",
+      "meaning_it": "basso; inferiore; giu",
+      "meaning_en": "low; lower; down",
+      "source": "international bas-/base family; Romance basso/bas",
+      "decision": "Canonical vertical-axis root for low/lower/down. With allative -ad, basad marks downward direction/toward a lower position. It may compound transparently with mov: basmov = descend/go down."
+    },
+    {
+      "form": "altmov",
+      "category": "compound",
+      "meaning_it": "salire; andare in su",
+      "meaning_en": "ascend; go up",
+      "source": "productive compound alt + mov",
+      "decision": "Canonical transparent motion compound alt+mov for upward motion/ascending. Equivalent directional paraphrase: mov altad. It is distinct from phase-derived admov, which means begin moving."
+    },
+    {
+      "form": "basmov",
+      "category": "compound",
+      "meaning_it": "scendere; andare in giu",
+      "meaning_en": "descend; go down",
+      "source": "productive compound bas + mov",
+      "decision": "Canonical transparent motion compound bas+mov for downward motion/descending. Equivalent directional paraphrase: mov basad. It is distinct from phase-derived demov, which means cease moving."
     }
   ]
 }
