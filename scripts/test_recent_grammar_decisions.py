@@ -35,3 +35,15 @@ def test_cardinal_two_is_bis_everywhere_canonical():
     assert "duo" not in numerals
     entry = next(d for d in decisions["decisions"] if d["id"] == "numeral_two_bis")
     assert "cardinal numeral 2" in entry["decision"]
+
+
+def test_jer_is_general_iteration_counter_and_compounds_are_fused():
+    root = Path(__file__).resolve().parents[1]
+    numerals = (root / "language" / "numerals.md").read_text()
+    decisions = json.loads((root / "research" / "grammar" / "confirmed_decisions.json").read_text())
+    assert "`dekbis`" in numerals and "`bisdek`" in numerals
+    assert "`dek bis`" not in numerals and "`bis dek`" not in numerals
+    assert "bisjer = two times; two iterations; two steps" in numerals
+    entry = next(d for d in decisions["decisions"] if d["id"] == "iteration_counter_jer")
+    assert "not restricted to genealogy" in entry["decision"]
+    assert "bisjer = two times/two iterations/two steps" in entry["decision"]

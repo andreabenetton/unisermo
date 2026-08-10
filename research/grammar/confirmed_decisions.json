@@ -165,7 +165,11 @@
     },
     {
       "id": "numeral_two_bis",
-      "decision": "Canonize bis as the cardinal numeral 2 throughout the GlottoDelta numeral system, replacing canonical duo. bis is used in ordinary counting, numeral compounds, quantified noun phrases, hundreds/thousands, and any productive construction based on the cardinal 2. Legacy duo remains historical/source material only and is not canonical."
+      "decision": "Canonize bis as the cardinal numeral 2 throughout the GlottoDelta numeral system, replacing canonical duo. bis is used in ordinary counting, numeral compounds, quantified noun phrases, hundreds/thousands, and any productive construction based on the cardinal 2. Legacy duo remains historical/source material only and is not canonical. Compound numerals are fused into one orthographic word without spaces or hyphens, e.g. dekbis = 12 and bisdek = 20."
+    },
+    {
+      "id": "iteration_counter_jer",
+      "decision": "Canonize jer as the general grammatical counter for an occurrence, iteration, or step in a repeatable relation or process. It is not an ordinal marker and is not restricted to genealogy. A cardinal numeral precedes jer and fuses with it as one orthographic word: bisjer = two times/two iterations/two steps, terjer = three times/three iterations/three steps, forjer = four times/four iterations/four steps. NUMjer may enter larger transparent compounds and remains fused there; when applied to an iterable relation it counts applications/relational steps. Genealogical distance is one application of this general rule, not the lexical meaning of jer."
     }
   ]
 }

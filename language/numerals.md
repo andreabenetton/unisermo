@@ -47,33 +47,33 @@ All forms are three letters of CVC shape. Each respects the alphabet defined in 
 
 ## 3. Composition Rules
 
-Compound numerals are formed by concatenating the base forms in **big-endian order** (largest power first), with each "digit" preceding the power word it multiplies. There is no overt linker between components.
+Compound numerals are formed by concatenating the base forms in **big-endian order** (largest power first), with each "digit" preceding the power word it multiplies. There is no overt linker between components, and a compound numeral is written as **one orthographic word**, without spaces or hyphens. Thus `dekbis` = 12 and `bisdek` = 20.
 
 ### 3.1 Teens (11–19): `dek + digit`
 
 | Value | Form |
 |---|---|
-| 11 | `dek uno` |
-| 12 | `dek bis` |
-| 13 | `dek ter` |
-| 19 | `dek nin` |
+| 11 | `dekuno` |
+| 12 | `dekbis` |
+| 13 | `dekter` |
+| 19 | `deknin` |
 
 ### 3.2 Decades (20–90): `digit + dek`
 
 | Value | Form |
 |---|---|
-| 20 | `bis dek` |
-| 30 | `ter dek` |
-| 40 | `for dek` |
-| 90 | `nin dek` |
+| 20 | `bisdek` |
+| 30 | `terdek` |
+| 40 | `fordek` |
+| 90 | `nindek` |
 
 ### 3.3 Decades + units (21–99): `digit + dek + digit`
 
 | Value | Form |
 |---|---|
-| 21 | `bis dek uno` |
-| 25 | `bis dek kin` |
-| 99 | `nin dek nin` |
+| 21 | `bisdekuno` |
+| 25 | `bisdekkin` |
+| 99 | `nindeknin` |
 
 ### 3.4 Hundreds: `digit + sen`
 
@@ -82,9 +82,9 @@ The form for `100` is the bare word `sen` — `uno` is **not** prefixed.
 | Value | Form |
 |---|---|
 | 100 | `sen` |
-| 200 | `bis sen` |
-| 300 | `ter sen` |
-| 900 | `nin sen` |
+| 200 | `bissen` |
+| 300 | `tersen` |
+| 900 | `ninsen` |
 
 ### 3.5 Hundreds + decades + units
 
@@ -92,9 +92,9 @@ Components combine in big-endian order:
 
 | Value | Form |
 |---|---|
-| 321 | `ter sen bis dek uno` |
-| 405 | `for sen kin` |
-| 999 | `nin sen nin dek nin` |
+| 321 | `tersenbisdekuno` |
+| 405 | `forsenkin` |
+| 999 | `ninsennindeknin` |
 
 ### 3.6 Thousands: `digit + mil`
 
@@ -103,14 +103,32 @@ The form for `1000` is the bare word `mil` — `uno` is **not** prefixed.
 | Value | Form |
 |---|---|
 | 1000 | `mil` |
-| 2000 | `bis mil` |
-| 9000 | `nin mil` |
+| 2000 | `bismil` |
+| 9000 | `ninmil` |
 
-Larger compounds continue the same big-endian, linker-free pattern: `mil + (hundreds) + (decades) + (units)`.
+Larger compounds continue the same big-endian, linker-free pattern and remain one orthographic word: `mil + (hundreds) + (decades) + (units)`.
 
 ---
 
-## 4. Use with Nouns
+## 4. Iteration and step counter `jer`
+
+`jer` is the canonical grammatical counter for an **occurrence, iteration, or step in a repeatable relation or process**. It is not restricted to genealogy.
+
+A cardinal numeral combines directly before `jer`, and the result is written as one word:
+
+```
+bisjer = two times; two iterations; two steps
+terjer = three times; three iterations; three steps
+forjer = four times; four iterations; four steps
+```
+
+`NUMjer` may itself be the first component of a larger transparent compound. When it modifies an iterable relation, it specifies how many applications or relational steps are traversed. The whole lexicalized compound is written as one word, just like compound numerals. For example, in a genealogical system a form of the structural type `bisjerROOT` means ROOT reached after two applications/steps; a larger compound such as `adelbisjerROOT` remains fused when it denotes one kinship term. The precise lexical roots used for individual kinship relations are defined separately from the general meaning of `jer`.
+
+`jer` therefore means neither “ordinal” nor “genealogical degree” by itself. `bisjer` is the general expression “two times / two steps”; genealogy is one application of that general iteration mechanism.
+
+---
+
+## 5. Use with Nouns
 
 The numeral **precedes the noun**. Because the numeral already conveys plurality, the noun normally remains in its bare (number-neutral) form (see [`noun_number_system.md`](noun_number_system.md) §7):
 
@@ -136,7 +154,7 @@ Numerals themselves do not inflect for case or number.
 
 ---
 
-## 5. Notes
+## 6. Notes
 
 - The form for `1` is `uno`. It is **not** prefixed to `sen` or `mil` (so `100 = sen`, not `*uno sen`; `1000 = mil`, not `*uno mil`).
 - The form for `3` is `ter`, not `*tri`, because initial CC clusters are disallowed in the core vocabulary (see [`vocabulary_design_rules.md`](vocabulary_design_rules.md) §3 Rule 2).
@@ -145,7 +163,7 @@ Numerals themselves do not inflect for case or number.
 
 ---
 
-## 6. Summary
+## 7. Summary
 
 ```
 nul  = 0
@@ -163,4 +181,4 @@ sen  = 100
 mil  = 1000
 ```
 
-Composition: big-endian concatenation, with each digit preceding the power word it multiplies. `uno` is omitted before `sen` and `mil`. After a numeral, the noun stays bare; obsolete nominal `-en` is not used.
+Composition: big-endian concatenation into one orthographic word, with each digit preceding the power word it multiplies. `uno` is omitted before `sen` and `mil`. After a numeral, the noun stays bare; obsolete nominal `-en` is not used.
