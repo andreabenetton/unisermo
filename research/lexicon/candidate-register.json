@@ -12,9 +12,11 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "retain_current",
-      "review_note": "Owner favors retaining dik: high-frequency speech concept, short productive regular root. No replacement proposed.",
-      "proposed_comparison": []
+      "decision": "reopened_for_dir_comparison",
+      "review_note": "Owner requested serious reassessment of dir as an alternative; prior preference for retaining dik superseded as a research priority, not an accepted canonical change. Compare Catalan dir, Italian/French dire, Spanish decir, Portuguese dizer; test dik/tik risk.",
+      "proposed_comparison": [
+        "dir"
+      ]
     },
     {
       "canonical": "stru",
@@ -25,9 +27,12 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "no_change",
-      "review_note": "Still awaiting evidence.",
-      "proposed_comparison": []
+      "decision": "reopened_for_konstru_comparison",
+      "review_note": "Owner suggested constru, which contains forbidden c; study phonotactically permissible konstru and kostru against existing stru. Do not assume Latin construe/build equivalence across all senses.",
+      "proposed_comparison": [
+        "konstru",
+        "kostru"
+      ]
     },
     {
       "canonical": "kurar",
@@ -38,11 +43,9 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "retain_pending_frequency_evidence",
-      "review_note": "Do not prioritize reduction to kur: care/cure is not assumed frequent enough to deserve a three-letter form, and earlier collision motivations for kurar must be preserved.",
-      "proposed_comparison": [
-        "kur"
-      ]
+      "decision": "retain_current",
+      "review_note": "Do not prioritize reduction to kur: care/cure is not assumed frequent enough to deserve a three-letter form, and earlier collision motivations for kurar must be preserved. Owner now requests leaving this root unchanged while assessing dir/konstru.",
+      "proposed_comparison": []
     },
     {
       "canonical": "sentr",
@@ -53,11 +56,9 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "retain_current_evaluate_two_channels",
-      "review_note": "Phonetic recognizability and graphic recognizability are distinct. sentr shares the initial /s/ and much of the spoken shape of English center and French centre, whereas kentr is a different adaptation. Neither recognizability score has been empirically measured.",
-      "proposed_comparison": [
-        "kentr"
-      ]
+      "decision": "retain_current",
+      "review_note": "Phonetic recognizability and graphic recognizability are distinct. sentr shares the initial /s/ and much of the spoken shape of English center and French centre, whereas kentr is a different adaptation. Neither recognizability score has been empirically measured. Owner now requests leaving this root unchanged while assessing dir/konstru.",
+      "proposed_comparison": []
     }
   ]
 }
