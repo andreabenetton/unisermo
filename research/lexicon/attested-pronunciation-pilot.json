@@ -1,0 +1,64 @@
+{
+  "schema": "unisermo/attested-ipa-pilot@1",
+  "status": "source_pronunciations_attested_recognition_unmeasured",
+  "concept": "center",
+  "candidate_unisermo_forms": [
+    "sentr",
+    "kentr"
+  ],
+  "notes": [
+    "Phonetic transcriptions are source-language varieties and are NOT added to Unisermo phonemic inventory.",
+    "Simple Levenshtein comparisons are mechanically reproducible proxies, not a human-auditory recognition score.",
+    "Italian initial /t͡ʃ/ and German /t͡s/ are not independent Unisermo phonemes. Do not convert them into canonical letters."
+  ],
+  "attestations": [
+    {
+      "language": "en",
+      "form": "center",
+      "variety": "General American, non-flapped",
+      "source_ipa": "/ˈsɛn.tɚ/",
+      "source_url": "https://kaikki.org/dictionary/English/meaning/c/ce/center.html",
+      "review_status": "pronunciation_source_checked"
+    },
+    {
+      "language": "en",
+      "form": "center",
+      "variety": "Received Pronunciation, non-rhotic",
+      "source_ipa": "/ˈsɛn.təː/",
+      "source_url": "https://kaikki.org/dictionary/English/meaning/c/ce/center.html",
+      "review_status": "pronunciation_source_checked"
+    },
+    {
+      "language": "it",
+      "form": "centro",
+      "variety": "Italian standard",
+      "source_ipa": "/ˈt͡ʃɛntro/",
+      "source_url": "https://kaikki.org/itwiktionary/Italiano/meaning/c/ce/centro.html",
+      "review_status": "pronunciation_source_checked"
+    },
+    {
+      "language": "es",
+      "form": "centro",
+      "variety": "Spanish seseante pronunciation",
+      "source_ipa": "/ˈsentɾo/",
+      "source_url": "https://kaikki.org/dictionary/Spanish/meaning/c/ce/centro.html",
+      "review_status": "pronunciation_source_checked"
+    },
+    {
+      "language": "fr",
+      "form": "centre",
+      "variety": "Metropolitan French",
+      "source_ipa": "/sɑ̃tʁ/",
+      "source_url": "https://kaikki.org/dictionary/French/meaning/c/ce/centre.html",
+      "review_status": "pronunciation_source_checked"
+    },
+    {
+      "language": "de",
+      "form": "Zentrum",
+      "variety": "Standard German",
+      "source_ipa": "/ˈt͡sɛntʁʊm/",
+      "source_url": "https://kaikki.org/dictionary/German/meaning/Z/Ze/Zentrum.html",
+      "review_status": "pronunciation_source_checked"
+    }
+  ]
+}
