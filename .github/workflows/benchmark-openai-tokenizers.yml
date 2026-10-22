@@ -11,6 +11,7 @@ on:
       - "tests/**"
       - "research/lexicon/candidate-register.json"
       - "research/lexicon/modern-form-seeds.json"
+      - "research/lexicon/modern-form-seeds-v2.json"
       - ".github/workflows/benchmark-openai-tokenizers.yml"
 jobs:
   tokenize:
@@ -38,6 +39,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_review.py' -v
           python -m unittest discover -s tests -p 'test_modern_evidence.py' -v
           python -m unittest discover -s tests -p 'test_kaikki_extract.py' -v
+          python -m unittest discover -s tests -p 'test_root_substitution.py' -v
       - name: Tokenize pilot with two real OpenAI encodings
         run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
       - name: Generate baseline diagnostic
@@ -51,6 +53,13 @@ jobs:
         run: python -m pip install -r benchmarks/requirements-frequency.txt
       - name: Measure modern surface-form frequencies (not concept recognition)
         run: python -m benchmarks.modern_evidence --output benchmarks/reports/modern-form-frequencies.json
+      - name: Counterfactual root replacement with official OpenAI tokenizers
+        run: python -m benchmarks.root_substitution --output-dir benchmarks/reports
+      - name: Measure extended modern form-frequency corpus
+        run: |
+          python -m benchmarks.modern_evidence \
+            --seeds research/lexicon/modern-form-seeds-v2.json \
+            --output benchmarks/reports/modern-form-frequencies-v2.json
       - name: Publish machine-readable results as CI artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -61,4 +70,7 @@ jobs:
             benchmarks/reports/diagnostic-pilot.json
             benchmarks/reports/lexical-screen.json
             benchmarks/reports/modern-form-frequencies.json
+            benchmarks/reports/modern-form-frequencies-v2.json
+            benchmarks/reports/root-substitution-o200k_base.json
+            benchmarks/reports/root-substitution-cl100k_base.json
           if-no-files-found: error
