@@ -69,6 +69,16 @@
       "status": "Experimental",
       "supersedes": "none",
       "title": "Preserve measured tokenizer baseline and define diagnostic review"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "lexicon",
+      "id": "LDR-0008",
+      "path": "docs/ldr/LDR-0008-lexical-recognizability.md",
+      "sha256": "164f24194419455252cfe63ee86e611f348e65ffc072c1cfb01ecfa6f6a42086",
+      "status": "Experimental",
+      "supersedes": "none",
+      "title": "Contemporary recognizability and lexical economy"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
