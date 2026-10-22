@@ -29,6 +29,13 @@ class LexicalScreenTests(unittest.TestCase):
         self.assertIn("pat", accent_keys("bad"))
         self.assertIn("wok", accent_keys("vok"))
 
+    def test_dik_tik_demonstrative_accent_risk_is_exposed(self):
+        # Current dik is preserved, but accepted d -> t accents can make
+        # the high-value demonstrative tik acoustically identical.
+        result = audit("dik", "dik", MORPH, LEXICON)
+        self.assertIn("tik", result["accent_merger_risks"])
+        self.assertIn("tik", result["critical_grammar_risks"])
+
     def test_register_is_auditable(self):
         output = evaluate(REGISTER, MORPH, LEXICON)
         self.assertEqual(output["status"], "research_only")
