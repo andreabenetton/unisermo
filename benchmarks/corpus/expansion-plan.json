@@ -1,0 +1,40 @@
+{
+  "status": "proposed_not_validated",
+  "target": 1000,
+  "groups": [
+    {
+      "name": "basic_clauses_objects",
+      "target": 180
+    },
+    {
+      "name": "negation_questions_operators_conditionals",
+      "target": 150
+    },
+    {
+      "name": "temporal_aspectual_contrasts",
+      "target": 150
+    },
+    {
+      "name": "reference_case_number_quantification",
+      "target": 140
+    },
+    {
+      "name": "dialogue_pragmatics",
+      "target": 120
+    },
+    {
+      "name": "technical_multi_agent",
+      "target": 160
+    },
+    {
+      "name": "complex_discourse_ambiguity",
+      "target": 100
+    }
+  ],
+  "rules": [
+    "No generated example counts as independently verified",
+    "Freeze holdout before optimizing forms",
+    "Record provenance and semantic review per example",
+    "Include ordinary and controlled concise English baselines"
+  ]
+}
