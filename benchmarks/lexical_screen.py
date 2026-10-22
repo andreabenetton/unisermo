@@ -55,15 +55,21 @@ def audit(candidate: str, canonical: str, morph: dict, lexicon: list[dict]) -> d
     valid = bool(candidate) and candidate.isascii() and candidate.isalpha() and candidate.islower() and not invalid
     result = {"canonical": canonical, "candidate": candidate, "inventory_valid": valid,
               "invalid_letters": invalid, "exact_collisions": [], "accent_merger_risks": [],
-              "morphological_collisions": [], "recognizability": "not_measured"}
+              "morphological_collisions": [], "critical_grammar_risks": [],
+              "recognizability": "not_measured"}
     if not valid:
         return result
     others = {x["form"]: x["status"] for x in lexicon if x["form"] != canonical}
-    guards = protected_forms(morph)
+    # Demonstratives are normative in language/demonstratives.md although
+    # some appear as example_only in the generated lexical index.
+    demonstratives = {x["form"] for x in lexicon
+                       if "demonstrative" in x.get("categories", [])}
+    guards = protected_forms(morph) | demonstratives
     result["exact_collisions"] = sorted(set(others) & {candidate} | guards & {candidate})
     candidate_accents = accent_keys(candidate)
     result["accent_merger_risks"] = sorted(word for word in (set(others) | guards)
         if word != candidate and candidate_accents & accent_keys(word))
+    result["critical_grammar_risks"] = sorted(set(result["accent_merger_risks"]) & guards)
     candidate_family = finite_forms(candidate, morph) | nominal_forms(candidate, morph)
     result["morphological_collisions"] = sorted(candidate_family & (set(others) | guards))
     # A risk is only a screening flag, not automatic proof of unintelligibility.
@@ -80,7 +86,8 @@ def evaluate(register: dict, morph: dict, lexicon: list[dict]) -> dict:
             "limitations": ["No automated modern-language recognizability claim",
                             "No corpus frequency estimates",
                             "Accent screening approximates only explicit letter mergers",
-                            "Morphological scan covers finite verbs and nominal cases, not full derivation"],
+                            "Morphological scan covers finite verbs and nominal cases, not full derivation",
+                            "Normative demonstratives are protected regardless of generated lexicon status"],
             "results": rows}
 
 def main() -> None:
