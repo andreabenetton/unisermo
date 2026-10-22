@@ -16,7 +16,12 @@ def load(name: str) -> dict:
     return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
-class Unisermo:
+from .generator.morphology import MorphologyGenerator
+from .parser.word import WordParser
+from .parser.clause import ClauseParser
+
+
+class Unisermo(MorphologyGenerator, WordParser, ClauseParser):
     def __init__(self) -> None:
         self.morph = load("morphology.json")
         index = load("lexicon_index.json")
@@ -30,125 +35,3 @@ class Unisermo:
         self.demonstratives = {form for form, entry in self.lexicon.items() if "demonstrative" in entry["categories"]}
         self.quantifiers = {form for form, entry in self.lexicon.items() if "quantifier" in entry["categories"]}
 
-    def check_lemma(self, lemma: str, domain: str) -> None:
-        if lemma not in (self.verbs if domain == "verb" else self.nouns):
-            raise ValueError(f"unsupported {domain} lemma: {lemma!r}; documentary attestations are not automatically canonical")
-
-    def generate_verb(self, lemma: str, tense: str = "present", aspect: str = "simple",
-                      person: int = 1, number: str = "singular") -> str:
-        self.check_lemma(lemma, "verb")
-        finite = self.morph["finite"]
-        try:
-            return (lemma + finite["aspect"][aspect] + finite["tense"][tense]
-                    + finite["person"][str(person)] + finite["number"][number])
-        except KeyError as exc:
-            raise ValueError(f"unsupported verbal feature: {exc}") from exc
-
-    def genitive_suffix(self, lemma: str) -> str:
-        nominal = self.morph["nominal"]
-        return (nominal["genitive_alternate"] if any(lemma.endswith(edge) for edge in
-                 nominal["genitive_alternate_after"]) else nominal["case"]["genitive"])
-
-    def generate_noun(self, lemma: str, case: str = "nominative") -> str:
-        if lemma.endswith("it") and lemma[:-2] in self.verbs:
-            # Nominalized resultatives are licensed in the live verb specification.
-            pass
-        else:
-            self.check_lemma(lemma, "noun")
-        cases = self.morph["nominal"]["case"]
-        if case not in cases:
-            raise ValueError(f"unsupported nominal case: {case}")
-        ending = self.genitive_suffix(lemma) if case == "genitive" else cases[case]
-        return lemma + ending
-
-    def generate_participle(self, lemma: str) -> str:
-        self.check_lemma(lemma, "verb")
-        return lemma + self.morph["non_finite"]["participle_resultative"]
-
-    def analyze_word(self, surface: str) -> dict:
-        if not surface.isascii() or not surface.isalpha() or surface != surface.lower() or not set(surface) <= set(self.morph["alphabet"]):
-            return {"surface": surface, "analyses": []}
-        out: list[dict] = []
-        for lemma, entry in self.lexicon.items():
-            if surface == lemma:
-                out.append({"kind": "lexical_form", "lemma": lemma, "status": entry["status"],
-                            "category": "/".join(entry["categories"])})
-        finite = self.morph["finite"]
-        for lemma in sorted(self.verbs):
-            for aspect, a in finite["aspect"].items():
-                for tense, t in finite["tense"].items():
-                    for person, p in finite["person"].items():
-                        for number, n in finite["number"].items():
-                            if surface == lemma + a + t + p + n:
-                                out.append({"kind": "finite_verb", "lemma": lemma, "status": self.lexicon[lemma]["status"],
-                                            "tense": tense, "aspect": aspect, "person": int(person), "number": number})
-        for lemma in sorted(self.verbs):
-            if surface == self.generate_participle(lemma):
-                out.append({"kind": "participle", "lemma": lemma, "status": self.lexicon[lemma]["status"]})
-        nominal_stems = self.nouns | {self.generate_participle(lemma) for lemma in self.verbs}
-        for lemma in sorted(nominal_stems):
-            for case in self.morph["nominal"]["case"]:
-                if surface == self.generate_noun(lemma, case):
-                    source_lemma = lemma[:-2] if lemma.endswith("it") and lemma[:-2] in self.verbs else lemma
-                    out.append({"kind": "nominal_case", "lemma": lemma, "status": self.lexicon[source_lemma]["status"],
-                                "case": case, "suffix": self.genitive_suffix(lemma) if case == "genitive" else self.morph["nominal"]["case"][case]})
-        return {"surface": surface, "analyses": out}
-
-    def _np(self, words: list[str], required_case: str) -> dict:
-        if not words:
-            raise ValueError("empty noun phrase")
-        if len(words) == 1 and required_case == "nominative" and words[0] in self.pronoun_to_person:
-            number, person = self.pronoun_to_person[words[0]]
-            return {"kind": "pronoun", "person": person, "number": number, "form": words[0]}
-        head = words[-1]
-        choices = [a for a in self.analyze_word(head)["analyses"]
-                   if a["kind"] == "nominal_case" and a["case"] == required_case]
-        if not choices:
-            raise ValueError(f"unrecognized {required_case} nominal head: {head}")
-        modifiers = words[:-1]
-        if not (len(modifiers) == len(set(modifiers)) and
-                all(x in self.demonstratives | self.quantifiers | {"wi"} for x in modifiers)):
-            raise ValueError(f"unsupported noun modifiers: {modifiers}")
-        demonstratives = [x for x in modifiers if x in self.demonstratives]
-        numerals = [x for x in modifiers if x in self.quantifiers]
-        if len(demonstratives) > 1 or len(numerals) > 1 or ("wi" in modifiers and numerals):
-            raise ValueError("unsupported or redundant quantification")
-        if demonstratives and modifiers[0] not in self.demonstratives:
-            raise ValueError("demonstrative must precede quantifier/plural")
-        if "wi" in modifiers and modifiers[-1] != "wi":
-            raise ValueError("wi must directly precede noun in this subset")
-        if len(choices) != 1:
-            raise ValueError(f"ambiguous nominal head {head}: {choices}")
-        return {"kind": "noun_phrase", "lemma": choices[0]["lemma"], "case": required_case, "modifiers": modifiers,
-                "lexical_status": choices[0]["status"]}
-
-    def parse_sentence(self, sentence: str) -> dict:
-        """Subset: [ka] [S-NP] [no] finite-V [OBJ-NP]. Unsupported syntax fails closed."""
-        raw = sentence.strip()
-        question = raw.endswith("?")
-        words = raw.rstrip(".?!").lower().split()
-        if not words:
-            raise ValueError("empty sentence")
-        interrogative = words[0] == "ka"
-        if interrogative:
-            words = words[1:]
-        if question and not interrogative:
-            raise ValueError("only polar ka questions are supported")
-        verbs = [(i, a) for i, word in enumerate(words) for a in self.analyze_word(word)["analyses"]
-                 if a["kind"] == "finite_verb"]
-        if len(verbs) != 1:
-            raise ValueError("expected exactly one identifiable finite verb in supported SVO clause")
-        position, verb = verbs[0]
-        prefix = words[:position]
-        negative = bool(prefix and prefix[-1] == "no")
-        if negative:
-            prefix = prefix[:-1]
-        subject = self._np(prefix, "nominative") if prefix else None
-        if subject and subject["kind"] == "pronoun":
-            if (subject["person"], subject["number"]) != (verb["person"], verb["number"]):
-                raise ValueError("pronoun disagrees with finite person/number")
-        obj = self._np(words[position + 1:], "accusative") if words[position + 1:] else None
-        return {"kind": "svo_clause", "interrogative": interrogative, "negative": negative,
-                "subject": subject or {"kind": "pro_drop", "person": verb["person"], "number": verb["number"]},
-                "predicate": verb, "object": obj,
-                "limitations": "SVO reference subset; not a full semantic interpretation"}

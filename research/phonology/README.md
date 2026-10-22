@@ -27,12 +27,12 @@ GlottoDelta production semantics.
 ```bash
 python3 scripts/analyze_phoneme_inventory.py --write
 python3 scripts/analyze_person_number.py
-python3 scripts/test_person_number.py
+python3 tests/test_person_number.py
 python3 scripts/analyze_affricates.py
-python3 scripts/test_affricates.py
+python3 tests/test_affricates.py
 ```
 
-The analyzer reads only the frozen `baseline/original.html`. It does not alter
+The analyzer reads only the frozen `vendor/glottodelta-atlas/baseline/original.html`. It does not alter
 GlottoDelta's production `L`/`P` calculations.
 
 ### Metric distinction

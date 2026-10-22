@@ -39,6 +39,26 @@
       "status": "Proposed",
       "supersedes": "none",
       "title": "Migrate normative rules to machine-readable sources"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "governance",
+      "id": "LDR-0005",
+      "path": "docs/ldr/LDR-0005-repository-boundaries.md",
+      "sha256": "2e44c4feb32797b68974d1ee5957ebf1e2f54d6a69fe5c12b4dc57c166689ebf",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Separate Unisermo implementation from frozen GlottoDelta atlas"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "llm-efficiency",
+      "id": "LDR-0006",
+      "path": "docs/ldr/LDR-0006-tokenizer-benchmark-protocol.md",
+      "sha256": "6be356700a83b7d5bfe0b42ce188fedc4ee5c8aa729d2f483c64e919dd2967bc",
+      "status": "Experimental",
+      "supersedes": "none",
+      "title": "Establish exploratory tokenizer benchmark protocol"
     }
   ],
   "schema": "unisermo/ldr-registry@1"

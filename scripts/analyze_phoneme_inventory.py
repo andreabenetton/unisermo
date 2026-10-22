@@ -18,7 +18,7 @@ import re
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASELINE = os.path.join(ROOT, "baseline", "original.html")
+BASELINE = os.path.join(ROOT, "vendor", "glottodelta-atlas", "baseline", "original.html")
 TARGETS_PATH = os.path.join(ROOT, "research", "phonology", "phoneme_targets.json")
 CANDIDATES_PATH = os.path.join(ROOT, "research", "phonology", "candidates.json")
 ROOTS_PATH = os.path.join(ROOT, "research", "phonology", "latin_roots_seed.json")

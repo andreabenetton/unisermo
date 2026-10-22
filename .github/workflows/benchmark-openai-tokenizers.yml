@@ -1,0 +1,40 @@
+# Opt-in GitHub Actions benchmark. Does NOT modify/push the GlottoDelta atlas.
+# This workflow only runs if Unisermo is later published to its own remote.
+name: OpenAI tokenizer pilot
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "benchmarks/**"
+      - "formalization/**"
+      - "language/**"
+      - ".github/workflows/benchmark-openai-tokenizers.yml"
+jobs:
+  tokenize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: benchmarks/requirements-openai.txt
+      - name: Install official tokenizer
+        run: python -m pip install -r benchmarks/requirements-openai.txt
+      - name: Check pinned tokenizer version and offline grammar/corpus tests
+        run: |
+          python -m pip show tiktoken
+          python -m unittest discover -s tests -p 'test_benchmarks.py' -v
+          python benchmarks/build_pilot.py --check
+      - name: Tokenize pilot with two real OpenAI encodings
+        run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
+      - name: Publish machine-readable results as CI artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: unisermo-openai-tokenizer-pilot
+          path: |
+            benchmarks/reports/o200k_base-pilot.json
+            benchmarks/reports/cl100k_base-pilot.json
+          if-no-files-found: error

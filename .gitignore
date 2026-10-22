@@ -23,3 +23,6 @@ scratch/
 *.bundle
 glottodelta-src.tar.gz
 unisermo-src.tar.gz
+
+# Generated numeric benchmark reports: may only be attached with explicit provenance
+benchmarks/reports/*-pilot.json

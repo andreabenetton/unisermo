@@ -1,0 +1,25 @@
+{
+  "actual_token_counts": null,
+  "corpus_records": 78,
+  "development_records": 63,
+  "groups": {
+    "clause-operators": 5,
+    "finite-paradigm": 64,
+    "svo-object": 9
+  },
+  "holdout_records": 15,
+  "human_reviewed": 0,
+  "limits": [
+    "Pilot consists of morphology-biased examples",
+    "English renderings are drafted, not independently reviewed",
+    "Tokenizer counts alone do not measure LLM comprehension, inference output or full task cost"
+  ],
+  "parser_verified": 78,
+  "phase": "tokenizer pilot (Phase 2)",
+  "reason": "No real tokenizer was executed for this report; raw corpus and engine remain ready.",
+  "tokenizer_availability": {
+    "sentencepiece": true,
+    "tiktoken": false,
+    "tokenizers": false
+  }
+}

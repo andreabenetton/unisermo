@@ -60,3 +60,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0002: Lexical efficiency scoring](LDR-0002-lexical-efficiency-scoring.md) — Experimental
 - [LDR-0003: Preserve semantics during optimization](LDR-0003-semantics-preservation.md) — Accepted
 - [LDR-0004: Migrate normative sources to structured data](LDR-0004-formal-source-of-truth.md) — Proposed
+- [LDR-0005: Repository boundaries](LDR-0005-repository-boundaries.md) — Accepted
+- [LDR-0006: Tokenizer benchmark protocol](LDR-0006-tokenizer-benchmark-protocol.md) — Experimental

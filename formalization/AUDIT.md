@@ -45,8 +45,8 @@
 ```sh
 python3 -m formalization build --check
 python3 -m formalization validate
-python3 scripts/test_formalization.py
-for t in scripts/test_*.py; do python3 "$t"; done
+python3 tests/test_formalization.py
+for t in tests/test_*.py; do python3 "$t"; done
 ```
 
 No atlas research data or historical language snapshots were modified.

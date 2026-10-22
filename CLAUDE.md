@@ -13,9 +13,9 @@ https://github.com/andreabenetton/glottodelta.
 - `research/` contains working evidence and studies for Unisermo, which may
   refer to the GlottoDelta snapshot as a dataset.
 - `legacy/original-language/` is immutable; keep `SHA256SUMS` valid.
-- `baseline/`, `data/`, `public/`, the GlottoDelta atlas generator/browser
-  scripts, and the atlas-related `package.json` are a *frozen research copy*,
-  NOT the authoritative atlas; do not change or publish them as such.
+- `vendor/glottodelta-atlas/` holds `baseline/`, `data/`, `public/`, its own
+  `scripts/`, `docs/`, and `package.json` as a frozen research reference;
+  NOT the authoritative atlas. Do not edit, regenerate or publish those files.
 - The up-to-date GlottoDelta atlas remains on its original GitHub repository.
   Refreshing the research snapshot is independent from Unisermo development.
 
@@ -40,9 +40,9 @@ rationales for the pre-LDR confirmed decision corpus.
 2. Distinguish confirmed decisions from tentative experiments; do not silently
    alter language semantics as part of a refactor or renaming.
 3. Preserve the complete Git history and immutable legacy files.
-4. Run tests in `scripts/test_*.py` after language-related changes.
+4. Run tests in `tests/test_*.py` after language-related changes; `benchmarks/` is experimental and never normative. OpenAI token counts must use the official pinned `tiktoken` implementation, not text-length approximations. Do not claim results exist if a vocabulary cannot load.
 5. Use the name **Unisermo** for the language, and **GlottoDelta** only when
    specifically referring to the original IPA atlas or historical citations.
 
 For historical GlottoDelta atlas architecture, see
-`docs/atlas-snapshot/CLAUDE.md`.
+`vendor/glottodelta-atlas/docs/CLAUDE.md`.

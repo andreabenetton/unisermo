@@ -58,7 +58,7 @@ class FormalizationTests(unittest.TestCase):
 
     def test_decisions_not_auto_ratified(self):
         entries = load_ldrs()
-        self.assertEqual({x["id"] for x in entries}, {"LDR-0001", "LDR-0002", "LDR-0003", "LDR-0004"})
+        self.assertTrue({"LDR-0001", "LDR-0002", "LDR-0003", "LDR-0004"} <= {x["id"] for x in entries})
         self.assertEqual({x["id"]: x["status"] for x in entries}["LDR-0002"], "Experimental")
         self.assertEqual({x["id"]: x["status"] for x in entries}["LDR-0004"], "Proposed")
 

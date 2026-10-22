@@ -22,7 +22,7 @@ from analyze_phoneme_inventory import BASELINE, extract_raw, load_source, pct
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "research", "phonology", "affricate_results.json")
 REPORT = os.path.join(ROOT, "research", "phonology", "affricate_study.md")
-SUPP = os.path.join(ROOT, "data", "orthography-supplement.json")
+SUPP = os.path.join(ROOT, "vendor", "glottodelta-atlas", "data", "orthography-supplement.json")
 
 FAMILIES = {
     "t": {"t", "ʈ"},

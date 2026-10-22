@@ -1,0 +1,4 @@
+# Official OpenAI tokenizer implementation, pinned for reproducibility.
+# Upstream: https://github.com/openai/tiktoken
+# Python binary wheel published at https://pypi.org/project/tiktoken/
+tiktoken==0.14.0

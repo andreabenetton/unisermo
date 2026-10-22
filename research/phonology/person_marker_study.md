@@ -104,7 +104,7 @@ Run:
 
 ```bash
 python3 scripts/analyze_person_number.py
-python3 scripts/test_person_number.py
+python3 tests/test_person_number.py
 ```
 
 Machine-readable results are in `research/phonology/person_number_results.json`.

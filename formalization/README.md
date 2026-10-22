@@ -25,7 +25,7 @@ python3 -m formalization analyze dikodi
 python3 -m formalization sentence 'ka i no diki domem?'
 python3 -m formalization generate dik --tense past --aspect perfect --person 1
 python3 -m formalization noun spets --case genitive
-python3 scripts/test_formalization.py
+python3 tests/test_formalization.py
 ```
 
 `build` deterministically derives:
@@ -39,6 +39,14 @@ python3 scripts/test_formalization.py
   (5 x 3 aspects x 3 times x 3 persons x 2 numbers) and seven cases for six
   sample nominals (6 x 7), with a machine-readable analysis and lexical status.
   These are **312 morphological forms**, not 312 semantic sentence pairs.
+
+## Runtime modules
+
+The `Unisermo` API is assembled in `formalization/core.py` from dedicated
+mixins in `formalization/generator/` and `formalization/parser/`. This is a
+pure code organization refactor; all feature values still come from the
+existing accepted source-linked data. `formalization/semantics/` documents the
+unimplemented logical-form layer and must not be mistaken for a real semantic parser.
 
 ## Capabilities and deliberate limits
 
