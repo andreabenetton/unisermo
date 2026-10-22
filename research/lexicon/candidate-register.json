@@ -1,0 +1,51 @@
+{
+  "schema": "unisermo/candidate-register@1",
+  "status": "experimental",
+  "reference": "LDR-0008",
+  "candidates": [
+    {
+      "canonical": "dik",
+      "proposal": null,
+      "modern_cognates": [],
+      "concept_frequency": null,
+      "pronunciation_review": "pending",
+      "collision_review": "pending",
+      "tokenizer_results": [],
+      "semantic_review": "pending",
+      "decision": "no_change"
+    },
+    {
+      "canonical": "stru",
+      "proposal": null,
+      "modern_cognates": [],
+      "concept_frequency": null,
+      "pronunciation_review": "pending",
+      "collision_review": "pending",
+      "tokenizer_results": [],
+      "semantic_review": "pending",
+      "decision": "no_change"
+    },
+    {
+      "canonical": "kurar",
+      "proposal": null,
+      "modern_cognates": [],
+      "concept_frequency": null,
+      "pronunciation_review": "pending",
+      "collision_review": "pending",
+      "tokenizer_results": [],
+      "semantic_review": "pending",
+      "decision": "no_change"
+    },
+    {
+      "canonical": "sentr",
+      "proposal": null,
+      "modern_cognates": [],
+      "concept_frequency": null,
+      "pronunciation_review": "pending",
+      "collision_review": "pending",
+      "tokenizer_results": [],
+      "semantic_review": "pending",
+      "decision": "no_change"
+    }
+  ]
+}
