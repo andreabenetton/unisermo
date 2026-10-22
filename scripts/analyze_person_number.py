@@ -117,7 +117,7 @@ def main():
         }
 
     out = {
-        "schema": "glottodelta/person-number-study@1",
+        "schema": "unisermo/person-number-study@1",
         "dataset": {
             "languages": len(inventories),
             "demographic_languages": len(demographic),

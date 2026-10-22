@@ -22,3 +22,4 @@ scratch/
 # delivery artifacts (generated, sent to user)
 *.bundle
 glottodelta-src.tar.gz
+unisermo-src.tar.gz

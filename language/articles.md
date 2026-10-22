@@ -1,6 +1,6 @@
 # Articles and Definiteness
 
-GlottoDelta has **no obligatory articles**. A bare noun is neutral with respect
+Unisermo has **no obligatory articles**. A bare noun is neutral with respect
 to definiteness unless context or another determiner supplies the distinction.
 
 ## 1. Bare noun

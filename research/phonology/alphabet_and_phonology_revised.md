@@ -17,9 +17,9 @@ The alphabet and phonological inventory are governed by eight core principles:
 5. **No unnecessary rare contrasts.** A sound may occur as an accentual or coalescent realization without receiving independent phoneme status.
 6. **Controlled accent tolerance.** Predictable accent-driven substitutions are accepted where meaning remains recoverable. Grammar-critical contrasts must use the most robust part of the inventory.
 7. **Protected lexical contrasts.** Some useful Latin-root contrasts are retained canonically even when particular accents may merge them. The lexicon should avoid minimal pairs that would become ambiguous under the explicitly accepted soft mergers.
-8. **Root-by-root source adaptation.** Latin and international source spellings are not transliterated mechanically when their historical letters have divergent modern pronunciations. The canonical GlottoDelta form is chosen root by root to maximize international recognizability, phonological accessibility, and lexical distinctness.
+8. **Root-by-root source adaptation.** Latin and international source spellings are not transliterated mechanically when their historical letters have divergent modern pronunciations. The canonical Unisermo form is chosen root by root to maximize international recognizability, phonological accessibility, and lexical distinctness.
 
-The distinction between **source spelling**, **canonical GlottoDelta phoneme**, and **accepted surface realization** is fundamental. A source letter need not survive in the canonical spelling, and a pronunciation may be correct even when several adjacent canonical phonemes are realized as one coalesced sound.
+The distinction between **source spelling**, **canonical Unisermo phoneme**, and **accepted surface realization** is fundamental. A source letter need not survive in the canonical spelling, and a pronunciation may be correct even when several adjacent canonical phonemes are realized as one coalesced sound.
 
 ---
 
@@ -232,9 +232,9 @@ The lexicon should avoid basic minimal pairs that differ only by one of these so
 
 ### 5.9 Latin-source `c` is adapted root by root
 
-The letter `c` is **not** part of the official GlottoDelta alphabet and has no fixed GlottoDelta phonemic value. A `c` found in a Latin or international source form is therefore treated as **source orthography**, not as an instruction for pronunciation.
+The letter `c` is **not** part of the official Unisermo alphabet and has no fixed Unisermo phonemic value. A `c` found in a Latin or international source form is therefore treated as **source orthography**, not as an instruction for pronunciation.
 
-There is **no universal conversion rule** such as “Latin `c` always becomes `k`”, “`c` before `e/i` always becomes `s`”, or “soft `c` always becomes `tj`”. Instead, each candidate root is evaluated individually. Where a source `c` corresponds to divergent international pronunciations, the canonical GlottoDelta root may represent it with one of the existing official sequences:
+There is **no universal conversion rule** such as “Latin `c` always becomes `k`”, “`c` before `e/i` always becomes `s`”, or “soft `c` always becomes `tj`”. Instead, each candidate root is evaluated individually. Where a source `c` corresponds to divergent international pronunciations, the canonical Unisermo root may represent it with one of the existing official sequences:
 
 ```text
 k   = /k/
@@ -248,17 +248,17 @@ The choice is made by comparing at least four criteria:
 1. **International recognizability:** which form best preserves recognition across the major descendant and international vocabulary traditions relevant to that root.
 2. **Population accessibility:** which form uses phonemes and contrasts that are robust for the largest relevant speaker populations.
 3. **Genealogical dispersion:** which form avoids imposing a difficult contrast on major independent language families.
-4. **Lexical distinctness:** which form avoids collisions or dangerous near-collisions with other GlottoDelta roots, including under accepted accent mergers.
+4. **Lexical distinctness:** which form avoids collisions or dangerous near-collisions with other Unisermo roots, including under accepted accent mergers.
 
 Thus a source root such as `CENT-` is not automatically assigned a form by spelling rule. Candidate adaptations such as `kent-`, `sent-`, `jent-`, and `tjent-` may be compared, and the lexicon selects the form that gives the best overall balance. The same procedure applies independently to `CIV-`, `CERT-`, `CIRC-`, and other roots containing historical `c`.
 
-This is a **lexical adaptation rule**, not a pronunciation exception. Once a GlottoDelta root has been selected and entered into the lexicon, its canonical spelling follows the ordinary one-letter/one-phoneme rules of this document. For example, a root selected with `tj` is underlyingly `/t+j/`; `[tʃ]` is merely an accepted coalescent realization.
+This is a **lexical adaptation rule**, not a pronunciation exception. Once a Unisermo root has been selected and entered into the lexicon, its canonical spelling follows the ordinary one-letter/one-phoneme rules of this document. For example, a root selected with `tj` is underlyingly `/t+j/`; `[tʃ]` is merely an accepted coalescent realization.
 
 ### 5.10 Source /dʒ/ and recurrent divergent Romance outcomes
 
 The canonical letter `j` always represents the palatal glide **/j/**. It **never** has the phonemic value /dʒ/, even when a source language writes a similar sound with `j`, `g`, or another letter.
 
-GlottoDelta does not introduce a separate /dʒ/ phoneme. When a Latin-derived, Romance, or international candidate root contains /dʒ/ in one important source language, the form is therefore **not transliterated mechanically**. The lexicon compares the wider Latin and international root family and chooses the most useful canonical adaptation. Possible outcomes include:
+Unisermo does not introduce a separate /dʒ/ phoneme. When a Latin-derived, Romance, or international candidate root contains /dʒ/ in one important source language, the form is therefore **not transliterated mechanically**. The lexicon compares the wider Latin and international root family and chooses the most useful canonical adaptation. Possible outcomes include:
 
 ```text
 dj  = /d+j/ -> [dj ~ dʒ]
@@ -276,9 +276,9 @@ or an etymologically/internationally motivated form that avoids /dʒ/ altogether
 
 For example, a lexical family in the area of `GEN-/GENT-` may require comparison among candidates such as `gent-`, `jent-`, `djent-`, or a sibilant adaptation rather than simply copying the pronunciation of one modern Romance language. The same principle applies to other roots whose Romance descendants diverge between velar, palatal, affricate, glide, or sibilant outcomes.
 
-This situation is expected to occur **frequently during root construction**, because the purpose of GlottoDelta is not to reproduce the phonology of any single Neo-Latin language. Historical palatalization and later sound changes have often caused related Latin-derived words to diverge substantially across Romance and international vocabularies. Therefore the treatment of /dʒ/ is part of a **general recurrent lexical-adaptation procedure**, alongside the treatment of source `c`, rather than a special exception for a handful of words.
+This situation is expected to occur **frequently during root construction**, because the purpose of Unisermo is not to reproduce the phonology of any single Neo-Latin language. Historical palatalization and later sound changes have often caused related Latin-derived words to diverge substantially across Romance and international vocabularies. Therefore the treatment of /dʒ/ is part of a **general recurrent lexical-adaptation procedure**, alongside the treatment of source `c`, rather than a special exception for a handful of words.
 
-For each affected root, the decision must consider at least international recognizability, population accessibility, genealogical dispersion, preservation of the Latin/international lexical family, phonotactic simplicity, and lexical distinctness under accepted accent mergers. Once a canonical GlottoDelta root is selected, its spelling is fixed and ordinary GlottoDelta pronunciation rules apply.
+For each affected root, the decision must consider at least international recognizability, population accessibility, genealogical dispersion, preservation of the Latin/international lexical family, phonotactic simplicity, and lexical distinctness under accepted accent mergers. Once a canonical Unisermo root is selected, its spelling is fixed and ordinary Unisermo pronunciation rules apply.
 
 ---
 
@@ -371,8 +371,8 @@ The following restrictions are canonical:
 
 1. **No silent letters.** Every official letter represents an underlying phoneme.
 2. **One official letter per canonical phoneme.** Surface coalescence does not alter spelling.
-3. `k` is always /k/. The letter `c` is not part of the official alphabet and has no automatic GlottoDelta pronunciation. Source-form `c` is adapted **root by root** to `k`, `s`, `j`, or `tj` according to §5.9.
-4. Once a root has been canonically selected, its spelling is fixed; the root-by-root adaptation rule does not create contextual pronunciation rules inside GlottoDelta.
+3. `k` is always /k/. The letter `c` is not part of the official alphabet and has no automatic Unisermo pronunciation. Source-form `c` is adapted **root by root** to `k`, `s`, `j`, or `tj` according to §5.9.
+4. Once a root has been canonically selected, its spelling is fixed; the root-by-root adaptation rule does not create contextual pronunciation rules inside Unisermo.
 5. `g` is always hard /g/ canonically.
 6. `j` is always the glide /j/; it is never an independent /dʒ/ phoneme. A source or Romance realization /dʒ/ is handled **root by root** according to §5.10; possible canonical outcomes include `dj`, `j`, `g`, `z`, or an etymologically/internationally motivated form that avoids /dʒ/.
 7. `w` is always /w/.

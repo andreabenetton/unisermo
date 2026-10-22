@@ -3,7 +3,7 @@
 > **Status:** normative migration table. Confirmed 2026-08-09.
 
 The current alphabet has no letter `c`. The following legacy/source roots have
-now been assigned canonical GlottoDelta replacements. Historical/source `c` is
+now been assigned canonical Unisermo replacements. Historical/source `c` is
 still adapted root-by-root; this table records the decisions rather than a
 global conversion rule.
 
@@ -33,7 +33,7 @@ global conversion rule.
 | `nacion` | `nation` | nazione | `natio, nationis` |
 
 The user-supplied candidate `sircul` was normalized to **`sirkul`** because
-letter `c` is not part of the canonical GlottoDelta alphabet.
+letter `c` is not part of the canonical Unisermo alphabet.
 
 These are lexical decisions. They do not create a mechanical source `c`
 conversion rule for future roots.

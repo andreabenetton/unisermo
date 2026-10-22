@@ -40,7 +40,7 @@ old affricate `j` are not referenced by the rule.
 
 ## 2. Personal possessives are genitive pronouns
 
-GlottoDelta does not need a separate possessive-pronoun paradigm. Personal
+Unisermo does not need a separate possessive-pronoun paradigm. Personal
 possessives are formed productively by applying the genitive suffix to the
 personal pronoun forms.
 

@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/grammar-confirmed-decisions@1",
+  "schema": "unisermo/grammar-confirmed-decisions@1",
   "confirmed_on": "2026-08-10",
   "status": "confirmed_core_grammar",
   "decisions": [
@@ -165,7 +165,7 @@
     },
     {
       "id": "numeral_two_bis",
-      "decision": "Canonize bis as the cardinal numeral 2 throughout the GlottoDelta numeral system, replacing canonical duo. bis is used in ordinary counting, numeral compounds, quantified noun phrases, hundreds/thousands, and any productive construction based on the cardinal 2. Legacy duo remains historical/source material only and is not canonical. Compound numerals are fused into one orthographic word without spaces or hyphens, e.g. dekbis = 12 and bisdek = 20."
+      "decision": "Canonize bis as the cardinal numeral 2 throughout the Unisermo numeral system, replacing canonical duo. bis is used in ordinary counting, numeral compounds, quantified noun phrases, hundreds/thousands, and any productive construction based on the cardinal 2. Legacy duo remains historical/source material only and is not canonical. Compound numerals are fused into one orthographic word without spaces or hyphens, e.g. dekbis = 12 and bisdek = 20."
     },
     {
       "id": "iteration_counter_jer",

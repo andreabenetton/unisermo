@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/phoneme-study-results@1",
+  "schema": "unisermo/phoneme-study-results@1",
   "dataset": {
     "chart_symbols": 111,
     "languages": 2122,

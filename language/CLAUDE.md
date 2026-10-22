@@ -1,4 +1,4 @@
-# CLAUDE.md — GlottoDelta language specification
+# CLAUDE.md — Unisermo language specification
 
 This directory is the live language specification. Historical source documents
 are preserved verbatim under `../legacy/original-language/`; research evidence

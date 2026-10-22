@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/person-number-study@1",
+  "schema": "unisermo/person-number-study@1",
   "dataset": {
     "languages": 2122,
     "demographic_languages": 384,

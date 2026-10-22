@@ -1,6 +1,6 @@
 # Grammar design workspace
 
-This directory records confirmed GlottoDelta grammar decisions separately from
+This directory records confirmed Unisermo grammar decisions separately from
 ongoing phonology research. Confirmed choices belong on `main`; exploratory
 comparisons should remain on research branches until selected.
 

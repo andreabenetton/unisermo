@@ -1,323 +1,39 @@
-# CLAUDE.md — Glottodelta
+# Unisermo — repository guidance
 
-Working notes for anyone (human or agent) editing this repo. Read this before
-touching the app or the data.
+Unisermo is the artificial international language designed here. **GlottoDelta**
+is a distinct phonetic atlas maintained independently at
+https://github.com/andreabenetton/glottodelta.
 
-## What this is
+## Scope and source of truth
 
-An interactive visualization of how IPA symbols are distributed across the
-world's languages, demographically weighted. Data comes from PHOIBLE (phoneme
-inventories), Glottolog (identifiers) and CLDR (population estimates). It is a
-**static site** deployed to Cloudflare Pages at `glottodelta.com`.
+- `language/` contains the current Unisermo specification. Keep its decisions
+  consistent with `research/grammar/confirmed_decisions.json`,
+  `research/phonology/confirmed_decisions.json`, and
+  `research/lexicon/confirmed_lexicon.json`.
+- `research/` contains working evidence and studies for Unisermo, which may
+  refer to the GlottoDelta snapshot as a dataset.
+- `legacy/original-language/` is immutable; keep `SHA256SUMS` valid.
+- `baseline/`, `data/`, `public/`, the GlottoDelta atlas generator/browser
+  scripts, and the atlas-related `package.json` are a *frozen research copy*,
+  NOT the authoritative atlas; do not change or publish them as such.
+- The up-to-date GlottoDelta atlas remains on its original GitHub repository.
+  Refreshing the research snapshot is independent from Unisermo development.
 
-It began life as a single 3.1 MB `.html` file (preserved verbatim at
-`baseline/original.html`). That file is now the **data source** for the build,
-not the app. The live app is the split, normalized version under `public/`.
+## Git safety
 
-## Repo layout
+This repository is a local, independently maintained Unisermo working copy.
+Do not add a Git remote, and do not push to GitHub, unless expressly requested.
+In particular, NEVER push language changes to `andreabenetton/glottodelta`.
 
-```
-public/                     # Cloudflare Pages output directory (deploy this)
-  index.html                #   markup + <link>/<script> tags only (~68 KB)
-  _headers                  #   Cloudflare cache headers
-  assets/
-    css/styles.css          #   all styles (was 12 inline <style> blocks)
-    js/
-      data.js               #   GENERATED — normalized data (see below)
-      app-core.js           #   core logic (metrics, picker, drawer, highlight)
-      priority-feature-logic.js  # comparison + evidence-audit layer
-      technical-features.js #   search, export, URL-state, a11y, provenance
-    favicon.svg
-  data/
-    languages.json          #   GENERATED — canonical language dictionary
-    symbols.json            #   GENERATED — symbol -> language-id arrays
-data/                       # build inputs + audit records (NOT deployed)
-  name-overrides.json       #   curated canonical-name fixes (hand/agent edited)
-  endonyms.json             #   curated native-script autonyms for search (hand/agent edited)
-  orthography-supplement.json #  curated orthography profiles beyond the baseline 40
-  languages-supplement.json #   curated historical languages outside PHOIBLE (stats-neutral)
-  audio-overrides.json      #   corrections to IPA_AUDIO_FILES filenames (per symbol)
-  allophones.json           #   GENERATED (build_allophones.py) — symbol -> glottocodes
-                            #   where PHOIBLE documents the symbol as an allophone
-  name-fixes.json           #   GENERATED — every raw->canonical name change
-  name-conflicts.json       #   GENERATED — genuine multi-name languages
-scripts/
-  build_data.py             #   the data pipeline (regenerates data.js + json)
-  build_allophones.py       #   refreshes data/allophones.json from the PHOIBLE
-                            #   CLDF ValueTable (network; run only on release bump)
-  smoke.mjs                 #   headless-Chromium regression oracle
-  functest.mjs              #   functional test across language tiers
-  mobiletest.mjs            #   phone/tablet-emulation responsive oracle
-docs/data-report.md         #   GENERATED — data-quality + normalization metrics
-baseline/original.html      #   FROZEN original single-file app (build source)
-```
+## Workflow
 
-## The load model — DO NOT break it
+1. Read `language/CLAUDE.md` before changing grammar or vocabulary.
+2. Distinguish confirmed decisions from tentative experiments; do not silently
+   alter language semantics as part of a refactor or renaming.
+3. Preserve the complete Git history and immutable legacy files.
+4. Run tests in `scripts/test_*.py` after language-related changes.
+5. Use the name **Unisermo** for the language, and **GlottoDelta** only when
+   specifically referring to the original IPA atlas or historical citations.
 
-All four scripts are **classic scripts loaded in document order** and share one
-global lexical environment:
-
-```
-data.js  →  app-core.js  →  priority-feature-logic.js  →  technical-features.js
-```
-
-Everything runs **synchronously at parse time** (no DOMContentLoaded, no
-modules, no `await fetch` for data). Consequences:
-
-- **Never** convert a script to `type="module"` or add `defer`/`async`. Modules
-  get isolated scope; the cross-script globals (`DATA`, `LANGUAGE_DIRECTORY`,
-  `selectedLanguage`, `evidenceMode`, the function-wrapping pattern, …) would
-  break instantly.
-- **Never** move `DATA` (or the other data consts) to `fetch()`-ed JSON. They
-  are consumed synchronously at top level. That is why `data.js` is a script,
-  not JSON.
-- Later scripts **wrap** functions defined earlier (`openSymbol`,
-  `applyLanguageHighlight`, `clearLanguageHighlight`, `refreshClickButtons`).
-  Preserve load order or the wrappers detach.
-- `clearComparisonLanguage` in `priority-feature-logic.js` is an **implicit
-  global** — don't wrap that file in strict mode / an IIFE.
-
-## Data model
-
-`data.js` is generated by `scripts/build_data.py` from `baseline/original.html`.
-It defines:
-
-- `LANG_DICT` — array; each row `[name, iso, glottocode, demographicTier(0|1)]`.
-  Array index = language id.
-- `SYMBOL_LANGS` — `{ symbol: [language ids] }`.
-- `DATA` — reconstructed synchronously into the shape the app expects:
-  `{ symbol: { languages: [{name, iso, glottocode}, …] } }`.
-- The unchanged verbatim consts: `SPEAKER_ESTIMATES`, `ORTHO`, `ORTHO_BY_ISO`,
-  `LANGUAGE_PHONEME_MODELS`, `GEORGIAN_ALPHABET_ROWS`,
-  `VERIFIED_LANGUAGE_PROFILES`, `VERIFIED_ORTHO`, `WRITING_SYSTEM_META`,
-  `IPA_AUDIO_FILES`, `IPA_AUDIO_VOICES`. Exception: `IPA_AUDIO_FILES` passes
-  through `data/audio-overrides.json` (curated per-symbol filename corrections —
-  currently only ə, whose baseline filename 404s on the host).
-- `ENDONYMS` — from `data/endonyms.json`; native-script autonyms, used only for
-  search matching and search-result details.
-- `SUPPLEMENTAL_ORTHO` / `SUPPLEMENTAL_LANGUAGE_PROFILES` — from
-  `data/orthography-supplement.json`; curated orthography profiles beyond the
-  baseline 40 (currently 36 living languages + Latin; ~90% of the weighted
-  population base is profile-covered).
-  Merged at runtime in `app-core.js` right after the `VERIFIED_ORTHO` merge;
-  **baseline data always wins on collision**. Languages listed here become
-  adjudicable (can reach green) and therefore enter P where attested + mapped.
-- `ALLOPHONE_LANGS` / `ALLOPHONE_META` — from `data/allophones.json` (generated
-  by `scripts/build_allophones.py` from the PHOIBLE 2.0.1 ValueTable
-  `Allophones` column). `symbol -> language ids` where the symbol is a
-  documented allophone of a *different* phoneme, with languages already
-  phonemically attested for that symbol removed at build time. Powers the
-  **phonetic view** toggle only — never merged into `SYMBOL_LANGS`.
-- `SUPPLEMENTAL_LANGUAGES` — from `data/languages-supplement.json`; curated
-  historical languages **outside PHOIBLE** (currently `lat`, Latin of the late
-  Roman Republic). They join the picker directory (`curated:true`) and
-  `LANGUAGE_PHONEME_MODELS`, so selection/highlighting/comparison/search work —
-  but they are **never added to `SYMBOL_LANGS`**, so they cannot enter L, P,
-  the per-symbol drawer lists or the evidence audit. Stats-neutral by
-  construction; `statetest.mjs` T10 enforces this.
-
-Normalization removed ~90% of the data blob (2.77 MB → ~320 KB) by storing each
-language once and referencing it by index. The old per-record `count`,
-`inventories`, `pct` fields were **dead** (never read) and were dropped.
-
-### Language identity — `langKey()`
-
-The canonical identity of a language is the **composite key**: the ISO 639-3
-code, except when it is a non-distinguishing placeholder (`mis` uncoded / `und`,
-or empty) in which case the Glottocode is used (name as last resort). This is
-implemented as `langKey(l)` in `app-core.js` and mirrored in `build_data.py`'s
-`key()`. It keeps the 28 `mis`-coded PHOIBLE languages distinct instead of
-collapsing them under one ISO. For every real ISO-coded language
-`langKey === iso`, so demographic/population logic is unaffected.
-
-All language maps key on `langKey`: `LANGUAGE_SYMBOLS`, `LANGUAGE_RECORDS`,
-`LANGUAGE_LOOKUP`, and the `<select>` option `value`. If you add code that
-identifies a language, use `langKey(l)`, never `l.iso`.
-
-## Methodology invariants — DO NOT silently change
-
-- **L (languages)** = every source-attested language for a symbol, deduplicated
-  by `langKey`. All ~2,122 attested languages are in the picker, the tile L
-  counts, highlighting and the drawer list.
-- **P (population)** = demographically weighted, summed **only** over the
-  demographic-certain subset (`isDemographic(l)` — the ISO has a
-  `SPEAKER_ESTIMATES` entry). Divisor is `SPEAKER_BASE` over that same subset.
-- Attested-only languages (no certain population) are shown and counted in L but
-  **carry no population and never enter P**. They are **not** counted as zero —
-  do not add `|| 0` population into any P sum or denominator. UI must show
-  "attested only — no population estimate", never "0 speakers".
-- P still counts only green (verified/curated) + amber (alternative
-  realization); blue (unresolved attestation) is excluded.
-- Curated historical languages (`curated:true`, e.g. Latin) are outside the
-  PHOIBLE universe: pickable, highlightable, comparable — but **never** counted
-  in L, never in P, never in the audited drawer list or audit summary. Do not
-  add them to `SYMBOL_LANGS`. The drawer shows them only in the visually
-  separate "Curated beyond PHOIBLE" section (filter `all` only, stats-neutral;
-  `statetest.mjs` T11 enforces).
-- The **phonetic view** toggle is a display-only lens: it reveals per-tile
-  `+n` badges (`.phonetic-plus`, hidden in comparison mode) and a
-  "Documented allophones" drawer section from `ALLOPHONE_LANGS`. It never
-  changes L, P, the audit summary or the quality panel. It is orthogonal to
-  S0/S1/S2 — it survives Clear primary — and serializes to the URL as
-  `view=phonetic` iff enabled. Allophone coverage is uneven (835/2,186
-  ValueTable languages); the drawer section must keep disclosing that absence
-  is not evidence of absence. `statetest.mjs` T12 enforces all of this.
-- The runtime SHA-256 (`updateProvenance`) hashes
-  `{DATA, SPEAKER_ESTIMATES, LANGUAGE_PHONEME_MODELS, VERIFIED_LANGUAGE_PROFILES}`
-  in that literal order. Changing the data changes the checksum — expected.
-
-## UI state machine
-
-Selection states: **S0** no language · **S1** primary only · **S2** primary +
-comparison. `scripts/statetest.mjs` asserts this table — keep them in sync.
-
-| aspect | S0 | S1 | S2 |
-|---|---|---|---|
-| evidence default (not user-set) | `all` | `population` | `population` |
-| speaker meters + legend | visible | visible | hidden (`body.comparison-mode`) |
-| Only differences | off + disabled | off + disabled | enabled; off by default |
-| tile visuals | base L/P | green/amber/blue/red + graphemes | shared/only-A/only-B/neither |
-
-- `evidenceModeUserSet` becomes true on an explicit dropdown change or an
-  `evidence=` URL param; while true, no auto-default fires. It resets **only**
-  on Clear primary (full reset to pristine S0). Transitions run
-  `syncEvidenceDefault()` after selection state is settled, before rendering.
-- URL: `evidence` is serialized **iff user-set** (including `all`, so an
-  explicit override round-trips). Auto-derived defaults never enter the URL;
-  a `lang=`/`compare=`-only link re-derives them on load.
-- "Only differences" is sticky across a direct comparison-language switch and
-  resets on clear-comparison / clear-primary.
-
-## Responsive tiers — keep `mobiletest.mjs` green
-
-Three chart tiers, one DOM (never duplicate the 111 `button.sym` nodes — counts,
-wrappers and exports all query `.sym` globally):
-
-- **Desktop >1180px**: pixel-identical baseline. The pulmonic table width is
-  `calc(manner + 11*column)` = exactly 2415px at the default vars
-  (`mobiletest.mjs` guards this identity).
-- **Tablet ≤1180px**: same matrix, compressed via the CSS vars (~1720px),
-  two-axis sticky headers, per-tile P/meter hidden (relocated to the drawer
-  glance). 1180 not 1280 — statetest runs at 1280×720 and asserts meters
-  visible.
-- **Phone ≤700px**: CSS-only linearized list (`tr` = manner/height card,
-  occupied `td` = place-labelled chip via `content:attr(data-place)`;
-  `empty-place` class set once in app-core.js). `body.chart-grid-view`
-  (toggle button, display-only, never URL-serialized) restores the matrix.
-
-Drawer: one close path — global `closeDrawer()` in app-core.js, wrapped by
-technical-features.js for URL sync; backdrop + body scroll-lock ≤900px; opening
-pushes one history entry so back/popstate closes it (guarded by
-`applyingURLState`). Internals (`.stats`, `.audit-summary`, `.quality-grid`)
-use `@container drawer` queries, not viewport queries. The `#symbolGlance`
-strip renders the tile-tooltip data (L/P/magnitude, `mappingTitle()` verbatim,
-S2 states) — touch users have no tooltips; mobiletest asserts strict equality
-with `mappingTitle()`, so change both together or neither. Secondary controls
-(badges, legend, toolbar) live in `<details id="secondaryTools" open>`,
-auto-collapsed ≤900px at load. Tap targets ≥44px under
-`(max-width:900px),(pointer:coarse)`.
-
-## Regenerating data
-
-```
-python3 scripts/build_data.py
-```
-Reads `baseline/original.html` + `data/name-overrides.json` +
-`data/endonyms.json` + `data/orthography-supplement.json`; writes
-`public/assets/js/data.js`, `public/data/{languages,symbols}.json`,
-`data/name-{fixes,conflicts}.json`, `docs/data-report.md`. It is deterministic
-and idempotent. Never hand-edit `data.js` — edit the pipeline or the overrides.
-
-To fix a language's display name, add `"<key>": "<name>"` to
-`data/name-overrides.json` (key is `i:<iso>` or `g:<glottocode>`) and rebuild.
-To make another language adjudicable (green-capable, P-eligible), add an entry
-to `data/orthography-supplement.json` — an ORTHO-format `ortho` map keyed by the
-language's PHOIBLE-attested chart symbols plus a full `profile`. Supplement
-entries use the `curated-*` statuses (mirroring the baseline's `verified-*`
-tiers in `verificationLabel()`) so the UI discloses that they are agent-curated
-and not independently reviewed; promote to `verified-*` only after review. Then
-rebuild. Map only defensible
-symbols; leaving a doculect artifact unmapped (blue) is correct.
-
-## Testing
-
-Requires the preinstalled Chromium (do not `playwright install`):
-
-```
-node scripts/smoke.mjs      # renders app, checks symbol/picker counts, L/P, drawer
-node scripts/functest.mjs   # selects demographic / attested-only / mis languages,
-                            # comparison mode, tier-aware drawer — asserts no JS errors
-node scripts/statetest.mjs  # walks the UI state machine (see section above):
-                            # evidence defaults, meters, differences, URL round-trips
-node scripts/mobiletest.mjs # phone (390×844, touch) + tablet (768×1024) emulation:
-                            # no page-level horizontal overflow, drawer opens on tap,
-                            # responsive-layout invariants
-```
-
-Both spin up a local static server over `public/`. `crypto.subtle` (the
-provenance checksum) needs a secure context — `http://127.0.0.1` and
-`https://glottodelta.com` both qualify; `file://` does not.
-
-If Playwright cannot resolve a browser, point the tests at one explicitly:
-`PW_CHROMIUM=/path/to/chrome node scripts/smoke.mjs`.
-
-Regression baseline (all languages included, with the 36 supplemental
-orthography profiles and 1 curated historical language): 111 symbols,
-picker 2,124 options (2,122 PHOIBLE + placeholder + Latin), /m/ L 2058 · P 7.85B,
-/p/ L 1855 · P 7.33B, /i/ L 2025 · P 7.16B, /k/ L 1961 · P 7.38B,
-/a/ L 1934 · P 5.67B, drawer lists all attested languages with tier-aware
-population lines. P moves when adjudicable coverage changes (e.g. a new
-orthography-supplement entry) — re-measure and update these numbers when it does.
-
-## Git discipline
-
-After each logical unit of work:
-- create a git commit
-- push to the current branch
-
-If push cannot be completed because of credentials, remote access, branch
-protection, or environment limits:
-- say so explicitly
-- do not claim the push succeeded
-
-Commit messages must be short, specific, and scoped to the actual change.
-Do not leave completed logical units of work uncommitted.
-Do not add a "Co-Authored-By" trailer, a "Generated with" line, a session
-link, or any other tool-attribution reference to any commit message.
-
-Commits and tags are GPG-signed and OpenTimestamps-stamped: the local git
-config sets `commit.gpgsign` / `tag.gpgsign` and routes `gpg.program`
-through the OTS wrapper. Do not bypass this with `--no-gpg-sign`.
-
-### Multi-fix prompts
-
-When a single prompt asks for **more than one unrelated fix** (different
-files, different bugs, different concerns — not the natural sub-tasks of one
-feature), do not bundle them into a single commit. Instead, for each fix in
-turn:
-
-1. implement only that one fix
-2. if it touches the data pipeline or its inputs, rerun
-   `python3 scripts/build_data.py` and include the regenerated artifacts
-3. run the impacted suites (`smoke.mjs` / `functest.mjs` / `statetest.mjs`);
-   verify they pass
-4. create one commit scoped to that fix (message describing only it)
-5. push, then move to the next fix
-
-## Deploy (Cloudflare Pages)
-
-Output directory: `public/`. No build step is required for deploy — `data.js`
-is committed. If you change the data, run `build_data.py` and commit the result.
-`_headers` sets cache lifetimes. The app fetches the PHOIBLE click-family
-ValueTable and audio from external hosts at runtime; failures degrade
-gracefully (see the Runtime dependencies section of the provenance dialog).
-
-## Language specification — source vs live docs
-
-The original user-provided language Markdown is immutable under
-`legacy/original-language/`. The live specification is under `language/`.
-When a language-design decision is confirmed, update the corresponding live
-Markdown file in `language/` in the same Git change as the machine-readable
-research/decision records. Do not leave confirmed rules only under `research/`.
-Never edit `legacy/original-language/`; its hashes are guarded by
-`scripts/test_legacy_language_snapshot.py`.
+For historical GlottoDelta atlas architecture, see
+`docs/atlas-snapshot/CLAUDE.md`.

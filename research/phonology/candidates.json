@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/phoneme-candidates@1",
+  "schema": "unisermo/phoneme-candidates@1",
   "candidates": {
     "current_simple_21": {
       "description": "Current language inventory excluding the three affricate/complex units ts, c=/tʃ/, j=/dʒ/, which the current 111-cell GlottoDelta chart cannot score as standalone segments.",

@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/latin-root-seed@1",
+  "schema": "unisermo/latin-root-seed@1",
   "status": "provisional",
   "method_note": "A small audit seed, not a frequency corpus. Forms are intended root candidates for the auxiliary language, chosen to expose which consonantal contrasts preserve highly recognizable Latin/international material. Expand to 300-500 roots before any final lexical score is treated as stable.",
   "roots": [

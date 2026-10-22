@@ -58,3 +58,5 @@ originals, or compare a live file directly with its immutable counterpart under
 ## Canonical lexical updates
 
 - Canonical water root: `akwa` = water, replacing example-only `akva`; canonical `w` preserves /w/ in the international aqua family.
+
+- 2026-10-22 — the artificial language was named **Unisermo**. This is a name-only change; the independent **GlottoDelta** IPA atlas stays under its original name and authoritative GitHub repository. No morphology, vocabulary or orthography rule changed.

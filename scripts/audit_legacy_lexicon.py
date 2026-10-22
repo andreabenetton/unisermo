@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit token-like legacy GlottoDelta forms against the current alphabet.
+"""Audit token-like legacy Unisermo forms against the current alphabet.
 
 Usage: python scripts/audit_legacy_lexicon.py PATH_TO_LEGACY_LANGUAGE_DIR
 Prints a compact JSON summary. The committed detailed audit was generated from

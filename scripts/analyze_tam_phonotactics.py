@@ -284,7 +284,7 @@ def examples(root: str):
 def main():
     root_sets = load_root_sets()
     report = {
-        "schema": "glottodelta/tam-phonotactics-study@1",
+        "schema": "unisermo/tam-phonotactics-study@1",
         "status": "confirmed_canonical_vowel_aspect",
         "systems": {
             "former_consonantal": "root + time(0/d/f) + aspect(0/n/b) + person(i/u/a) + number(0/n)",

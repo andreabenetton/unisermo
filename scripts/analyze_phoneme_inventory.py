@@ -485,7 +485,7 @@ def main():
     five_vowel = set_metrics(["a","e","i","o","u"], comp, all_keys, demographic, speaker_base)
 
     results = {
-        "schema": "glottodelta/phoneme-study-results@1",
+        "schema": "unisermo/phoneme-study-results@1",
         "dataset": {
             "chart_symbols": len(data),
             "languages": len(all_keys),

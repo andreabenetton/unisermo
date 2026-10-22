@@ -6,7 +6,7 @@ Source: `language(1).zip`, SHA-256 `78ea47efca711a183d5a0b4bdea9024dc1992caed7a7
 
 ## Scope
 
-The machine audit scans all top-level legacy grammar documents (excluding the obsolete phonology document itself and meta README/CLAUDE files), extracts every token-like GlottoDelta form appearing in inline code, and classifies it against the current alphabet. This intentionally includes inflected/example forms so stale morphology is visible rather than silently ignored. A curated core inventory separates base lexical/grammatical items from generated examples.
+The machine audit scans all top-level legacy grammar documents (excluding the obsolete phonology document itself and meta README/CLAUDE files), extracts every token-like Unisermo form appearing in inline code, and classifies it against the current alphabet. This intentionally includes inflected/example forms so stale morphology is visible rather than silently ignored. A curated core inventory separates base lexical/grammatical items from generated examples.
 
 ## Summary
 

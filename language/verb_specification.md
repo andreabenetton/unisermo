@@ -35,7 +35,7 @@ person vowel.
 | second | `u` | `un` |
 | third | `a` | `an` |
 
-Independent subject pronouns use the same forms. GlottoDelta is pro-drop when
+Independent subject pronouns use the same forms. Unisermo is pro-drop when
 the verbal ending makes the subject recoverable.
 
 ## 3. Canonical finite structure

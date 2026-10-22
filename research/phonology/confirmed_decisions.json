@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/phoneme-confirmed-decisions@1",
+  "schema": "unisermo/phoneme-confirmed-decisions@1",
   "confirmed_on": "2026-08-09",
   "status": "confirmed_current_inventory_and_root_adaptation_rules",
   "decisions": [
@@ -41,7 +41,7 @@
     },
     {
       "id": "source_c_lexical_adaptation",
-      "decision": "The letter c is not part of the official GlottoDelta alphabet and has no automatic pronunciation. A source-form Latin/international c is adapted root by root to k, s, j, or tj according to international recognizability, population accessibility, genealogical dispersion, phonotactic simplicity, and lexical distinctness. Once selected, the GlottoDelta root spelling is fixed."
+      "decision": "The letter c is not part of the official Unisermo alphabet and has no automatic pronunciation. A source-form Latin/international c is adapted root by root to k, s, j, or tj according to international recognizability, population accessibility, genealogical dispersion, phonotactic simplicity, and lexical distinctness. Once selected, the Unisermo root spelling is fixed."
     },
     {
       "id": "source_dzh_lexical_adaptation",

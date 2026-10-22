@@ -4,7 +4,7 @@
 
 ## 1. Productive suffix `-it`
 
-GlottoDelta forms the ordinary participial/resultative stem with invariant
+Unisermo forms the ordinary participial/resultative stem with invariant
 **`-it`**:
 
 ```text
@@ -62,7 +62,7 @@ syntax of passive clauses remains a separate decision.
 ## 4. `-it` is no longer an abstract-noun suffix
 
 Legacy material assigned `-it` to abstract qualities/states. That assignment
-is retired. In current GlottoDelta, productive `-it` is reserved for the
+is retired. In current Unisermo, productive `-it` is reserved for the
 participial/resultative function above.
 
 Existing legacy examples of abstract `-it` must therefore be migrated when the
@@ -70,7 +70,7 @@ abstract-derivation system is finalized.
 
 ## 5. Productive abstract-quality suffix `-itat`
 
-GlottoDelta uses invariant **`-itat`** to derive abstract qualities, states, and
+Unisermo uses invariant **`-itat`** to derive abstract qualities, states, and
 properties from suitable lexical bases. The form continues the Latin
 `-itas, -itatis` family and its Romance descendants while remaining clearly
 distinct from participial/resultative `-it`.

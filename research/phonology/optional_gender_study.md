@@ -4,7 +4,7 @@
 
 ## Decision
 
-GlottoDelta remains grammatically gender-neutral by default.
+Unisermo remains grammatically gender-neutral by default.
 
 - neutral / unspecified reference = zero marking
 - optional masculine or male-specific reference = `-o`

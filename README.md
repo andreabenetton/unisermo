@@ -1,102 +1,66 @@
-# Glottodelta
+# Unisermo
 
-Interactive, demographically weighted visualization of how the symbols of the
-**International Phonetic Alphabet** are distributed across the world's languages.
+**Unisermo** is a constructed international language with Latin/international
+lexical foundations, regular morphology, and an emphasis on pronounceability,
+clarity and efficient communication between humans and language models.
 
-Built on open language data — [PHOIBLE](https://phoible.org/) phoneme
-inventories, [Glottolog](https://glottolog.org/) identifiers and
-[CLDR](https://cldr.unicode.org/) population estimates — it renders the canonical
-IPA charts (pulmonic and non‑pulmonic consonants, vowels, clicks, implosives,
-ejectives) and, for each of the 111 symbols, reports two metrics:
+This repository contains the **local, independently developed language project**.
+Its naming and language specifications are separate from the **GlottoDelta IPA
+atlas**, which continues to be maintained at
+<https://github.com/andreabenetton/glottodelta>.
 
-- **L** — the number of source‑attested languages that use the sound.
-- **P** — the share of speakers (demographically weighted) whose language uses
-  it, counting only verified/curated mappings and alternative realizations.
+## Where to begin
 
-Select any language to see its phoneme–grapheme profile highlighted on the
-chart, compare two languages side by side, listen to official IPA audio, and
-deep‑link any view via the URL.
+- [`language/`](language/) — current, editable normative language specification.
+- [`research/grammar/`](research/grammar/) — confirmed grammatical decisions.
+- [`research/lexicon/`](research/lexicon/) — confirmed and audited lexicon.
+- [`research/phonology/`](research/phonology/) — phonological evidence and candidate studies.
+- [`scripts/`](scripts/) — research analyzers and regression checks.
+- [`legacy/original-language/`](legacy/original-language/) — immutable historical source documents.
+- [`language/MIGRATION_HISTORY.md`](language/MIGRATION_HISTORY.md) — migration history.
 
-## Coverage and honesty
+## Relationship with GlottoDelta
 
-The dataset covers **every** PHOIBLE source‑attested language (~2,100 after
-deduplication). Only a subset (~384) can be linked to a **verified population
-estimate**; those drive **P**. Every other language is still fully browsable and
-counted in **L**, but carries **no population** and never enters **P** — it is
-never silently treated as zero. The interface labels each language's
-demographic‑certainty tier and orthography‑verification level explicitly, and a
-provenance dialog exposes sources, licences, counts, a runtime SHA‑256 of the
-embedded data, and the live status of external dependencies.
+The `baseline/`, `public/`, `data/` and atlas-related `scripts/` files are a
+**local historical snapshot** of the GlottoDelta IPA atlas. They exist solely
+as input for Unisermo phonetic research and as a reproducibility aid. They are
+**not** the canonical or latest version of the atlas; the GitHub repository
+linked above is the source of truth for future atlas development.
 
-## Local development
+Do not rename the GlottoDelta branding inside that snapshot, replace its IPA
+data with Unisermo vocabulary, publish this copy as the live atlas, or push
+changes from here to the atlas repository. Any future refresh of the atlas
+research dataset must be an explicit, separately reviewed operation.
 
-```bash
-# serve the static site (any static server works)
-cd public && python3 -m http.server 8000
-# open http://127.0.0.1:8000
-```
+See [`docs/atlas-snapshot/`](docs/atlas-snapshot/) for the original atlas
+README and maintainer instructions retained as reference, and
+[`docs/ATLAS_SNAPSHOT.md`](docs/ATLAS_SNAPSHOT.md) for data provenance.
 
-Use `127.0.0.1`/`localhost` (a secure context) so the provenance checksum can
-run. Tests use the environment's preinstalled Chromium:
+## Local tests
 
-```bash
-node scripts/smoke.mjs      # regression checks
-node scripts/functest.mjs   # functional checks across language tiers
-```
-
-## Regenerating the data
-
-The app's data is generated from the frozen original at
-`baseline/original.html`:
+From the repository root:
 
 ```bash
-python3 scripts/build_data.py
+for test in scripts/test_*.py; do python3 "$test"; done
 ```
 
-This writes the normalized data module (`public/assets/js/data.js`), the
-canonical JSON (`public/data/`), and a data‑quality report
-(`docs/data-report.md`). See [`CLAUDE.md`](./CLAUDE.md) for the architecture,
-data model and methodology invariants.
+Some tests require optional dependencies or environments. The GlottoDelta
+snapshot's original browser test commands remain documented separately under
+`docs/atlas-snapshot/`.
 
-## Deployment
+## Development policy
 
-Static site for **Cloudflare Pages** — set the output directory to `public/`.
-No build step is required (the generated `data.js` is committed).
+Maintain Unisermo's own Git history locally. **No Git remote is configured**
+in the distributed repository. Never configure or push to the GlottoDelta
+upstream without explicit owner authorization. Preserve the immutable language
+legacy snapshot and the frozen IPA research dataset.
+
+The rename to Unisermo does not change the pronunciation rules, canonical
+roots or grammatical decisions. This is an identity/documentation change,
+not Phase 1 formalization and not a change of language semantics.
 
 ## Licence
 
-Copyright © 2026 Andrea Benetton.
-
-This program is free software: you can redistribute it and/or modify it under
-the terms of the **GNU Affero General Public License** as published by the Free
-Software Foundation, either version 3 of the License, or (at your option) any
-later version. See [`LICENSE`](./LICENSE) for the full text.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
-
-Because the AGPL covers interaction over a network (§13), any deployed instance
-must offer its complete corresponding source to its users; the in‑app licensing
-footer links back to this repository for that purpose.
-
-### Component licences
-
-The AGPL covers the software in this repository. The data and media it builds
-on are honored per source and documented in the app's provenance dialog: IPA
-chart artwork CC BY‑SA 4.0; official IPA audio CC BY‑NC‑ND 4.0 (streamed, not
-redistributed); PHOIBLE CC BY‑SA 3.0; CLDR under the Unicode licence. The
-original editorial annotations remain under CC BY‑SA 4.0. Attribution and
-versions are listed in‑app.
-
-## Language specification history
-
-The user-provided original language Markdown is preserved verbatim under
-`legacy/original-language/`. The live, editable descendants are under
-`language/`; confirmed language changes must update those files so Git records
-the actual specification evolution. Quantitative studies and decision evidence
-remain under `research/`.
-
-Use `language/MIGRATION_HISTORY.md` for the migration note and
-`scripts/test_legacy_language_snapshot.py` to verify that the historical source
-snapshot has not been altered.
+This code and material retain their existing licence notices; consult
+[`LICENSE`](LICENSE) and the atlas snapshot's component attribution before
+redistributing or deploying anything.

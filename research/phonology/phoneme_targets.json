@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/phoneme-targets@1",
+  "schema": "unisermo/phoneme-targets@1",
   "method_note": "Target families are deliberately broad but disjoint where possible. They model acceptable canonical realizations for auxiliary-language design, not phonological equivalence claims.",
   "targets": {
     "a": {"canonical": "a", "family": ["a", "ɑ", "ɐ"], "class": "vowel"},

@@ -1,5 +1,5 @@
 {
-  "schema": "glottodelta/affricate-study@1",
+  "schema": "unisermo/affricate-study@1",
   "method": {
     "warning": "Whole-base figures are component-availability proxies, not direct affricate prevalence. Direct affricate figures use only curated profiles and have their own denominator.",
     "speaker_base": 8786359971.0,

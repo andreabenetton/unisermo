@@ -34,7 +34,7 @@ Two samples are used.
    roots `mov`, `vid`, and copular `es` where they were not already present.
 2. `currentized_seed74`: the 74-root provisional Latin/international seed, with
    every root that already has a confirmed replacement migrated to its current
-   GlottoDelta form.
+   Unisermo form.
 
 Each root generates all 54 finite cells:
 
@@ -232,7 +232,7 @@ Purely phonotactically, `root + aspect(e/o) + time(d/f) + person + number` is
 clearly superior to the former consonantal `root + time + aspect(n/b) + ...`
 system on the tested inventories. This result is now canonical.
 
-The design question was resolved affirmatively: GlottoDelta makes the mid-vowel contrast `e/o` obligatory for finite aspect when overt. The phonology therefore requires aspect `e/o` to remain recoverably distinct from person `i/u/a`, and aspect-person hiatus may not be lost through coalescence when that would erase aspect.
+The design question was resolved affirmatively: Unisermo makes the mid-vowel contrast `e/o` obligatory for finite aspect when overt. The phonology therefore requires aspect `e/o` to remain recoverably distinct from person `i/u/a`, and aspect-person hiatus may not be lost through coalescence when that would erase aspect.
 
 ## Reproduction
 

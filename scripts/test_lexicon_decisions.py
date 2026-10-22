@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regression checks for confirmed GlottoDelta lexical decisions."""
+"""Regression checks for confirmed Unisermo lexical decisions."""
 
 import json
 from pathlib import Path

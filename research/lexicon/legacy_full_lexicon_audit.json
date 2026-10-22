@@ -1,9 +1,9 @@
 {
-  "schema": "glottodelta/legacy-lexicon-audit@1",
+  "schema": "unisermo/legacy-lexicon-audit@1",
   "audit_date": "2026-08-09",
   "source_archive": "language(1).zip",
   "source_sha256": "78ea47efca711a183d5a0b4bdea9024dc1992caed7a7b1a2ef9278520ee66951",
-  "scope": "Top-level legacy grammar markdown files excluding phonology/README/CLAUDE; every token-like form found in inline code spans is audited, including inflected and illustrative GlottoDelta forms. core_inventory is a curated subset of lexical and grammatical base forms.",
+  "scope": "Top-level legacy grammar markdown files excluding phonology/README/CLAUDE; every token-like form found in inline code spans is audited, including inflected and illustrative Unisermo forms. core_inventory is a curated subset of lexical and grammatical base forms.",
   "summary": {
     "valid_orthography": 268,
     "needs_revision": 65,

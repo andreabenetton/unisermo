@@ -1,7 +1,7 @@
 # Phonology research workspace
 
-This directory contains both confirmed design constraints and continuing phoneme
-research. Confirmed design decisions are recorded in `confirmed_decisions.json`, and the
+This directory contains Unisermo design constraints and continuing phoneme
+research using the frozen GlottoDelta IPA atlas dataset. Confirmed design decisions are recorded in `confirmed_decisions.json`, and the
 current normative sound-system specification is `alphabet_and_phonology_revised.md`.
 Research experiments remain separated until selected, and none of this tooling changes
 GlottoDelta production semantics.

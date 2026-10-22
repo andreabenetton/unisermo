@@ -1,7 +1,7 @@
 # Vocabulary Design Rules
 
 This document defines how lexical forms are selected under the current
-GlottoDelta phonology. The historical rules are preserved in
+Unisermo phonology. The historical rules are preserved in
 `legacy/original-language/vocabulary_design_rules.md`.
 
 ## 1. Allowed phonemes and letters
@@ -14,7 +14,7 @@ p b t d k g m n f v s z l r j w
 ```
 
 No canonical root contains source `c`, `h`, `x`, unitary `sh`, phonemic schwa, or a
-separate affricate letter. The letter `x` is not an official GlottoDelta grapheme;
+separate affricate letter. The letter `x` is not an official Unisermo grapheme;
 source `x` must be adapted root by root using only canonical units.
 
 ## 2. Glides and vowel sequences

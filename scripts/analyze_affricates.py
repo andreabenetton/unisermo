@@ -147,7 +147,7 @@ def main():
     profiles, weighted = load_curated_profiles(speakers)
     curated = curated_affricate_metrics(profiles, weighted)
     result = {
-        "schema": "glottodelta/affricate-study@1",
+        "schema": "unisermo/affricate-study@1",
         "method": {
             "warning": "Whole-base figures are component-availability proxies, not direct affricate prevalence. Direct affricate figures use only curated profiles and have their own denominator.",
             "speaker_base": speaker_base,

@@ -6,7 +6,7 @@
 
 ## 1. Free polarity forms: `si` and `no`
 
-GlottoDelta uses two short invariant free forms for polar responses:
+Unisermo uses two short invariant free forms for polar responses:
 
 - `si` — **YES**, affirmative response
 - `no` — **NO**, negative response

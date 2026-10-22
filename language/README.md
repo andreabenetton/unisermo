@@ -1,4 +1,4 @@
-# GlottoDelta language specification
+# Unisermo language specification
 
 This directory contains the **live Markdown specification** of the language.
 It is intentionally descended from the original user-provided Markdown files,
