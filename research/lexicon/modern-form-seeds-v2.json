@@ -1,0 +1,588 @@
+{
+  "schema": "unisermo/modern-form-seeds@1",
+  "status": "exploratory_unreviewed",
+  "reference": "LDR-0008",
+  "notes": [
+    "Latin anchor pages verified; modern entries curated as test inputs and still require independent sense and etymology review.",
+    "No IPA or speaker-recognizability scores are asserted.",
+    "Within-language surface-form frequency is not concept frequency. Never sum orthographic variants or equate cognate frequency with concept usage.",
+    "All new non-European comparisons are provisional, not independently sense-verified; several inflected or noun forms are not equivalent to a verb root.",
+    "The wordfreq output is a form frequency; cross-language/script recognition is not inferred from it."
+  ],
+  "concepts": [
+    {
+      "id": "say",
+      "canonical": "dik",
+      "latin": {
+        "headword": "dico",
+        "source_url": "https://kaikki.org/dictionary/Latin/meaning/d/di/dico.html",
+        "attestation": "latin_page_checked"
+      },
+      "modern": [
+        {
+          "language": "en",
+          "form": "say",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "en",
+          "form": "dictate",
+          "comparison_role": "related_family_not_equivalent",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "it",
+          "form": "dire",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "es",
+          "form": "decir",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "pt",
+          "form": "dizer",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "fr",
+          "form": "dire",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "de",
+          "form": "sagen",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "zh",
+          "form": "说",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Mandarin form; polysemy and regional variation pending review"
+        },
+        {
+          "language": "ja",
+          "form": "言う",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Japanese verb citation form"
+        },
+        {
+          "language": "ar",
+          "form": "يقول",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Arabic third-person masculine present indicative; not an infinitive"
+        },
+        {
+          "language": "hi",
+          "form": "कहना",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Hindi infinitive"
+        },
+        {
+          "language": "id",
+          "form": "berkata",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Indonesian verb, saying/speaking nuance requires review"
+        },
+        {
+          "language": "tr",
+          "form": "söylemek",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Turkish infinitive; say/tell nuance requires review"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "canonical": "stru",
+      "latin": {
+        "headword": "struo",
+        "source_url": "https://kaikki.org/dictionary/Latin/meaning/s/st/struo.html",
+        "attestation": "latin_page_checked"
+      },
+      "modern": [
+        {
+          "language": "en",
+          "form": "build",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "en",
+          "form": "construct",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "it",
+          "form": "costruire",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "es",
+          "form": "construir",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "pt",
+          "form": "construir",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "fr",
+          "form": "construire",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "de",
+          "form": "bauen",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "de",
+          "form": "konstruieren",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "zh",
+          "form": "建造",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Mandarin build/construct; sense specificity pending"
+        },
+        {
+          "language": "ja",
+          "form": "建てる",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Japanese build/erect, often buildings; narrower sense"
+        },
+        {
+          "language": "ar",
+          "form": "يبني",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Arabic third-person masculine present; not an infinitive"
+        },
+        {
+          "language": "hi",
+          "form": "बनाना",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Hindi make/create/build; broader than building"
+        },
+        {
+          "language": "id",
+          "form": "membangun",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Indonesian construct/build"
+        },
+        {
+          "language": "tr",
+          "form": "kurmak",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Turkish establish/set up, can mean erect/build; broader sense"
+        }
+      ]
+    },
+    {
+      "id": "care",
+      "canonical": "kurar",
+      "latin": {
+        "headword": "cura",
+        "source_url": "https://kaikki.org/dictionary/Latin/meaning/c/cu/cura.html",
+        "attestation": "latin_page_checked"
+      },
+      "modern": [
+        {
+          "language": "en",
+          "form": "care",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "en",
+          "form": "cure",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "it",
+          "form": "curare",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "es",
+          "form": "cuidar",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "es",
+          "form": "curar",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "pt",
+          "form": "cuidar",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "pt",
+          "form": "curar",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "fr",
+          "form": "soigner",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "de",
+          "form": "pflegen",
+          "comparison_role": "translation_non_cognate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "zh",
+          "form": "关心",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Mandarin be concerned about; care/cure sense not established"
+        },
+        {
+          "language": "ja",
+          "form": "世話",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Japanese noun/help/care, not verb citation form"
+        },
+        {
+          "language": "ar",
+          "form": "رعاية",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Arabic noun care/custody, not verb"
+        },
+        {
+          "language": "hi",
+          "form": "देखभाल",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Hindi noun care/looking after, not verb"
+        },
+        {
+          "language": "id",
+          "form": "merawat",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Indonesian care for/tend; medical nuance possible"
+        },
+        {
+          "language": "tr",
+          "form": "bakmak",
+          "comparison_role": "related_family_sense_check",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Turkish look/attend/look after; broad polysemy"
+        }
+      ]
+    },
+    {
+      "id": "center",
+      "canonical": "sentr",
+      "latin": {
+        "headword": "centrum",
+        "source_url": "https://kaikki.org/dictionary/Latin/meaning/c/ce/centrum.html",
+        "attestation": "latin_page_checked"
+      },
+      "modern": [
+        {
+          "language": "en",
+          "form": "center",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "en",
+          "form": "centre",
+          "comparison_role": "orthographic_variant",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "it",
+          "form": "centro",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "es",
+          "form": "centro",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "pt",
+          "form": "centro",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "fr",
+          "form": "centre",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "de",
+          "form": "Zentrum",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "ru",
+          "form": "центр",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null
+        },
+        {
+          "language": "zh",
+          "form": "中心",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Mandarin centre/heart"
+        },
+        {
+          "language": "ja",
+          "form": "中心",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Japanese centre (same Han character spelling as Mandarin, different reading)"
+        },
+        {
+          "language": "ar",
+          "form": "مركز",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Arabic centre; context needed"
+        },
+        {
+          "language": "hi",
+          "form": "केंद्र",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Hindi centre; Sanskrit-related, not Latin cognate"
+        },
+        {
+          "language": "id",
+          "form": "pusat",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Indonesian centre"
+        },
+        {
+          "language": "tr",
+          "form": "merkez",
+          "comparison_role": "translation_candidate",
+          "modern_sense_review": "pending",
+          "ipa": null,
+          "spoken_recognizability": null,
+          "written_recognizability": null,
+          "comparison_note": "Turkish centre; Arabic loan family rather than Latin"
+        }
+      ]
+    }
+  ],
+  "version": "v2_extended_geographic_sampling",
+  "parent_seed_path": "research/lexicon/modern-form-seeds.json"
+}
