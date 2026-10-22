@@ -12,7 +12,9 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "no_change"
+      "decision": "retain_current",
+      "review_note": "Owner favors retaining dik: high-frequency speech concept, short productive regular root. No replacement proposed.",
+      "proposed_comparison": []
     },
     {
       "canonical": "stru",
@@ -23,7 +25,9 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "no_change"
+      "decision": "no_change",
+      "review_note": "Still awaiting evidence.",
+      "proposed_comparison": []
     },
     {
       "canonical": "kurar",
@@ -34,7 +38,11 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "no_change"
+      "decision": "retain_pending_frequency_evidence",
+      "review_note": "Do not prioritize reduction to kur: care/cure is not assumed frequent enough to deserve a three-letter form, and earlier collision motivations for kurar must be preserved.",
+      "proposed_comparison": [
+        "kur"
+      ]
     },
     {
       "canonical": "sentr",
@@ -45,7 +53,11 @@
       "collision_review": "pending",
       "tokenizer_results": [],
       "semantic_review": "pending",
-      "decision": "no_change"
+      "decision": "retain_current_evaluate_two_channels",
+      "review_note": "Phonetic recognizability and graphic recognizability are distinct. sentr shares the initial /s/ and much of the spoken shape of English center and French centre, whereas kentr is a different adaptation. Neither recognizability score has been empirically measured.",
+      "proposed_comparison": [
+        "kentr"
+      ]
     }
   ]
 }
