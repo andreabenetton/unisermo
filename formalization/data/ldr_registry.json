@@ -79,6 +79,16 @@
       "status": "Experimental",
       "supersedes": "none",
       "title": "Contemporary recognizability and lexical economy"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "lexicon",
+      "id": "LDR-0009",
+      "path": "docs/ldr/LDR-0009-alternative-roots-dir-konstru.md",
+      "sha256": "dcaad9e5555e2d0f7027be2ada34f2fa5357d3e8da647d594bb789f7a6d234e9",
+      "status": "Experimental",
+      "supersedes": "none",
+      "title": "Evaluate dir and konstru as lexical root replacements"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
