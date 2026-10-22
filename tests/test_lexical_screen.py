@@ -39,7 +39,7 @@ class LexicalScreenTests(unittest.TestCase):
     def test_register_is_auditable(self):
         output = evaluate(REGISTER, MORPH, LEXICON)
         self.assertEqual(output["status"], "research_only")
-        self.assertTrue(any(x["candidate"] == "kentr" for x in output["results"]))
+        self.assertEqual({x["candidate"] for x in output["results"]}, {"dik", "dir", "stru", "konstru", "kostru", "kurar", "sentr"})
         self.assertTrue(all(x["recognizability"] == "not_measured" for x in output["results"]))
 
 if __name__ == "__main__":
