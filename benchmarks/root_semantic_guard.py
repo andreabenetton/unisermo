@@ -115,7 +115,7 @@ def evaluate() -> dict:
     # Control for prefix confusion with existing dirig; this root is NEVER
     # replaced or segmented as dir + an invented suffix.
     control_texts = [
-        "dirigi.", "dirigdi.", "ka u dirigdu?", "no dirigia.",
+        "dirigi.", "dirigdi.", "ka u dirigdu?", "no diriga.",
         "i dirigi.", "ka no dirigi?",
     ]
     controls = []
