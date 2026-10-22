@@ -29,6 +29,8 @@ jobs:
           python -m unittest discover -s tests -p 'test_benchmarks.py' -v
           python -m unittest discover -s tests -p 'test_diagnostics.py' -v
           python benchmarks/build_pilot.py --check
+          python -m unittest discover -s tests -p 'test_lexical_screen.py' -v
+          python -m unittest discover -s tests -p 'test_review.py' -v
       - name: Tokenize pilot with two real OpenAI encodings
         run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
       - name: Generate baseline diagnostic
@@ -36,6 +38,8 @@ jobs:
           python -m benchmarks.diagnostics \
             --reports benchmarks/reports/o200k_base-pilot.json benchmarks/reports/cl100k_base-pilot.json \
             --output benchmarks/reports/diagnostic-pilot.json
+      - name: Screen lexical candidates (research only)
+        run: python -m benchmarks.lexical_screen --output benchmarks/reports/lexical-screen.json
       - name: Publish machine-readable results as CI artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -44,4 +48,5 @@ jobs:
             benchmarks/reports/o200k_base-pilot.json
             benchmarks/reports/cl100k_base-pilot.json
             benchmarks/reports/diagnostic-pilot.json
+            benchmarks/reports/lexical-screen.json
           if-no-files-found: error
