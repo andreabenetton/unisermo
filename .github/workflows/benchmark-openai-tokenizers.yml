@@ -8,6 +8,9 @@ on:
       - "benchmarks/**"
       - "formalization/**"
       - "language/**"
+      - "tests/**"
+      - "research/lexicon/candidate-register.json"
+      - "research/lexicon/modern-form-seeds.json"
       - ".github/workflows/benchmark-openai-tokenizers.yml"
 jobs:
   tokenize:
