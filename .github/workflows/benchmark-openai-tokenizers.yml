@@ -40,6 +40,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_modern_evidence.py' -v
           python -m unittest discover -s tests -p 'test_kaikki_extract.py' -v
           python -m unittest discover -s tests -p 'test_root_substitution.py' -v
+          python -m unittest discover -s tests -p 'test_root_family_collisions.py' -v
       - name: Tokenize pilot with two real OpenAI encodings
         run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
       - name: Generate baseline diagnostic
@@ -55,6 +56,8 @@ jobs:
         run: python -m benchmarks.modern_evidence --output benchmarks/reports/modern-form-frequencies.json
       - name: Counterfactual root replacement with official OpenAI tokenizers
         run: python -m benchmarks.root_substitution --output-dir benchmarks/reports
+      - name: Screen generated root families for collisions
+        run: python -m benchmarks.root_family_collisions --output benchmarks/reports/root-family-collisions.json
       - name: Measure extended modern form-frequency corpus
         run: |
           python -m benchmarks.modern_evidence \
@@ -73,4 +76,5 @@ jobs:
             benchmarks/reports/modern-form-frequencies-v2.json
             benchmarks/reports/root-substitution-o200k_base.json
             benchmarks/reports/root-substitution-cl100k_base.json
+            benchmarks/reports/root-family-collisions.json
           if-no-files-found: error
