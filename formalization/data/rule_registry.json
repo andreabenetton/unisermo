@@ -1,0 +1,335 @@
+{
+  "entries": [
+    {
+      "content_sha256": "abd8821a641c5da8cc5432ceac4e439c21002113cbc0f75a5b5e4385db130337",
+      "id": "grammar.abstract_it_retired",
+      "source": "research/grammar/confirmed_decisions.json#decisions/abstract_it_retired",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "b53baf9e1c1cf99781200efcc8e120691d4406c60dbfd096ad6474ee5adee1ed",
+      "id": "grammar.abstract_quality_itat",
+      "source": "research/grammar/confirmed_decisions.json#decisions/abstract_quality_itat",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "88762b17e226668a93696aff3d07597942cc9d93dd13b76d81c5126d46f1d689",
+      "id": "grammar.additive_focus_clitic_si",
+      "source": "research/grammar/confirmed_decisions.json#decisions/additive_focus_clitic_si",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "473ec7692335c3bdc992f30317d947b652f858a55ff2d28979ec6dd3dd2d0b8e",
+      "id": "grammar.comitative_kun_analytic",
+      "source": "research/grammar/confirmed_decisions.json#decisions/comitative_kun_analytic",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "49b8f7319459e0ee3bbac3d916390b12aeac83460121bd28d717c5405d554c4c",
+      "id": "grammar.copula_es_current_person_number",
+      "source": "research/grammar/confirmed_decisions.json#decisions/copula_es_current_person_number",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "a91bba6c00765717dd4c9ce2d11ec5d089a503bcde69ced3b3b2f4992a22e936",
+      "id": "grammar.derivational_instrument_device_il",
+      "source": "research/grammar/confirmed_decisions.json#decisions/derivational_instrument_device_il",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "281c301053983d878e938c12c071f6221be11dd8b68093f183ea085fcc3dba0f",
+      "id": "grammar.derivational_person_agent_or",
+      "source": "research/grammar/confirmed_decisions.json#decisions/derivational_person_agent_or",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "261dbea8ac39ce2abe218eb6f25ece736471ee8d27f97b2a01f30cb4f48c4003",
+      "id": "grammar.derivational_place_field_ia",
+      "source": "research/grammar/confirmed_decisions.json#decisions/derivational_place_field_ia",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "88c13e466b8ec4a89c005e022d3fc261c0b4948b7a2ec209a14b304716a2d511",
+      "id": "grammar.explicit_state_transition_traes",
+      "source": "research/grammar/confirmed_decisions.json#decisions/explicit_state_transition_traes",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "964c44d1fb47b3ae6eb92fa494d8a3858be99951b6d3914f73aea980afff54a4",
+      "id": "grammar.extended_case_suffixes_retired",
+      "source": "research/grammar/confirmed_decisions.json#decisions/extended_case_suffixes_retired",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "569bbb61ec311bb7c323c70d6bd3b3f5dc52a4bbdc611371323c3e57ea4ad4cb",
+      "id": "grammar.finite_aspect_inventory",
+      "source": "research/grammar/confirmed_decisions.json#decisions/finite_aspect_inventory",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "9132c7b66330c8b6c0a4b434491c903b9c6ea3adffceed9de21d76e1e1bda5c3",
+      "id": "grammar.finite_aspect_vowel_protection",
+      "source": "research/grammar/confirmed_decisions.json#decisions/finite_aspect_vowel_protection",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "9b94e58ec7e0d1fb2059f4884046689882ffb198c89b43ff01f989f986773813",
+      "id": "grammar.finite_tense_inventory",
+      "source": "research/grammar/confirmed_decisions.json#decisions/finite_tense_inventory",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "ee0a68d09e937252c8c86d30cb1dde89a5934f8657910f722d498892895c8c69",
+      "id": "grammar.finite_verb_morphotactics",
+      "source": "research/grammar/confirmed_decisions.json#decisions/finite_verb_morphotactics",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "e2bfe0b8d9e1cbac2a6b5f5df89301efdda6ddc653f4a5282552922b8ef2a906",
+      "id": "grammar.focus_clitic_scope",
+      "source": "research/grammar/confirmed_decisions.json#decisions/focus_clitic_scope",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "9ee18bf839f93269b2de643680f5731d5576953e579bd225360d29cd3ba691b8",
+      "id": "grammar.genitive_allomorph_s_es",
+      "source": "research/grammar/confirmed_decisions.json#decisions/genitive_allomorph_s_es",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "105da867f38796a53a7b643ac70da1a5bcd82d043d84df19201e23df7d67d2f0",
+      "id": "grammar.indefinite_singular_uno",
+      "source": "research/grammar/confirmed_decisions.json#decisions/indefinite_singular_uno",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "abfc824a296350633249da561fc67b49d81bebec291c35ed68b9acd39b01876c",
+      "id": "grammar.integral_totality_tot",
+      "source": "research/grammar/confirmed_decisions.json#decisions/integral_totality_tot",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "7c0be5a7b1ec32227d501ab51d37d6c2de375bbfa1145f2470281cdafa01a26f",
+      "id": "grammar.iteration_counter_jer",
+      "source": "research/grammar/confirmed_decisions.json#decisions/iteration_counter_jer",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "e4e77175e569936e080e5e0f255f81ea8ad0a9da693abf13ebf031deb1fdd2ac",
+      "id": "grammar.lexical_aer_plan_aerplan_frat",
+      "source": "research/grammar/confirmed_decisions.json#decisions/lexical_aer_plan_aerplan_frat",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "386b091b758b2d2c44635e22fb444104a0425ca0bd61d0794951504fa9e8ea3a",
+      "id": "grammar.mi_unassigned",
+      "source": "research/grammar/confirmed_decisions.json#decisions/mi_unassigned",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "8f30489579bee247c21904a19c170b4d358f216150f943ad2991f25330d0c051",
+      "id": "grammar.modal_m_retired",
+      "source": "research/grammar/confirmed_decisions.json#decisions/modal_m_retired",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "d97113d181af61b0c5760896ff0d994536db7ada59193642a4f381e424f53397",
+      "id": "grammar.modifier_order_demonstrative_quantifier_noun",
+      "source": "research/grammar/confirmed_decisions.json#decisions/modifier_order_demonstrative_quantifier_noun",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "31f7d06e8ffb0a18747a1e2cc62a1b63244a3b581177e202f70fc6d9fe005141",
+      "id": "grammar.motion_family_valency_mov",
+      "source": "research/grammar/confirmed_decisions.json#decisions/motion_family_valency_mov",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "2deb7a27c6298932f0f0b9dcaa275e4545613da4e94ee29f9f56292794fb15ab",
+      "id": "grammar.motion_force_roots_pel_trak",
+      "source": "research/grammar/confirmed_decisions.json#decisions/motion_force_roots_pel_trak",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "72b97fa999891dd878ea8b7eddb7a6b09a40ad4806264f4509f4c40699ba4477",
+      "id": "grammar.negative_additive_focus_clitic_no",
+      "source": "research/grammar/confirmed_decisions.json#decisions/negative_additive_focus_clitic_no",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "345d90641103234b5f1f13e306d77e578e184a562773fa3e9c3e75852a1ebc21",
+      "id": "grammar.nominal_case_inventory_seven",
+      "source": "research/grammar/confirmed_decisions.json#decisions/nominal_case_inventory_seven",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "f3b9e799465f577ac8f0d9839ccd18261cf88ae7a3b9d203fb81fef3e460f0f1",
+      "id": "grammar.nominal_number_default",
+      "source": "research/grammar/confirmed_decisions.json#decisions/nominal_number_default",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "9ded690f8435f588bda0ea8a833fe9fdfdaad06ccf459786ffce348243827bb5",
+      "id": "grammar.nominalized_participle_it",
+      "source": "research/grammar/confirmed_decisions.json#decisions/nominalized_participle_it",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "84f01254119d09b2cb2dd8b1e739f507069c0d26fd6d2f5efe2d7d0d25035ee3",
+      "id": "grammar.numeral_two_bis",
+      "source": "research/grammar/confirmed_decisions.json#decisions/numeral_two_bis",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "6115c85caf6776fef317328606c16d92547db48e62c09da7be2a66d42f6186d7",
+      "id": "grammar.optional_nominal_plural_wi",
+      "source": "research/grammar/confirmed_decisions.json#decisions/optional_nominal_plural_wi",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "d565ed4ea5d3812b1c964ab8bbf86c0e90d843ed7b2a351c2734497b07d21a8e",
+      "id": "grammar.participial_resultative_it",
+      "source": "research/grammar/confirmed_decisions.json#decisions/participial_resultative_it",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "93637f21150d327f8c5f5902e65eda3c60510166063a4d404936bb124ad02eb8",
+      "id": "grammar.personal_possessives_as_genitives",
+      "source": "research/grammar/confirmed_decisions.json#decisions/personal_possessives_as_genitives",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "37fb65a83714204045c8ca2f3211ea36bcfc0587f1d692e9cee84a0c9e162832",
+      "id": "grammar.phase_prefix_family",
+      "source": "research/grammar/confirmed_decisions.json#decisions/phase_prefix_family",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "d0db7ed68125c465dd90dd2ee6adcc50b0dd12787e299e9fc1d9638a31469e36",
+      "id": "grammar.plural_redundancy",
+      "source": "research/grammar/confirmed_decisions.json#decisions/plural_redundancy",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "f55541dc141781655aff824732440eae7fac44e3f151d14f5d152b9ed2da92eb",
+      "id": "grammar.polar_responses_si_no",
+      "source": "research/grammar/confirmed_decisions.json#decisions/polar_responses_si_no",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "8f91d7ef1e6b9d33b22c8b2596bc94c62ec06fc42973de590bb4c20175e0dc6a",
+      "id": "grammar.question_words_kom_ker",
+      "source": "research/grammar/confirmed_decisions.json#decisions/question_words_kom_ker",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "2a04e91616e0050bcb792cdd4563e87d566b41b143be9a0009186756e40eba2f",
+      "id": "grammar.servile_verbs_analytic",
+      "source": "research/grammar/confirmed_decisions.json#decisions/servile_verbs_analytic",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "75c289f909b5d3bb5a7cfc702ca3dc2d7c1746ff7d0d393e241f4508ef8b3fc9",
+      "id": "grammar.state_phase_family_es",
+      "source": "research/grammar/confirmed_decisions.json#decisions/state_phase_family_es",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "c478bb5c024b604398d161eddce280ef7f31ed5f39df24303240f29c90e82c4f",
+      "id": "grammar.universal_quantifier_omni",
+      "source": "research/grammar/confirmed_decisions.json#decisions/universal_quantifier_omni",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "3f8709d463ed964d2d1e7475c3f543f3d578b7b6f61710965eaba60fc3582385",
+      "id": "grammar.vertical_motion_alt_bas",
+      "source": "research/grammar/confirmed_decisions.json#decisions/vertical_motion_alt_bas",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "dde449dfc97b20f562fcab5a30b1df54e68954977ae3b01ca596ba1c964bba96",
+      "id": "grammar.zero_quantifier_nul",
+      "source": "research/grammar/confirmed_decisions.json#decisions/zero_quantifier_nul",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "e885a57c6708a0712a7a6c0171e7dc68f9f302f3dd02101e53484b86d4e95074",
+      "id": "phonology.affricates_as_sequences",
+      "source": "research/phonology/confirmed_decisions.json#decisions/affricates_as_sequences",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "2b483ba2aac139f9edc8716ba9354a8dc56f6262e16480e6b3423eb3227b87cc",
+      "id": "phonology.canonical_phoneme_inventory",
+      "source": "research/phonology/confirmed_decisions.json#decisions/canonical_phoneme_inventory",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "decb11bd341339913683b5a6a12326c3caca06673a0329f6c99dddfd4794a4d5",
+      "id": "phonology.excluded_independent_phonemes",
+      "source": "research/phonology/confirmed_decisions.json#decisions/excluded_independent_phonemes",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "9b8e7417a445dffc515587341ab5b07059fba6e4347ad96f56ec8d3c1d318a7e",
+      "id": "phonology.glides",
+      "source": "research/phonology/confirmed_decisions.json#decisions/glides",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "4a212e4f1f9aa40d34bab108ac3a85c878c8df49be22e9ee081e546f7cdd501b",
+      "id": "phonology.gn_coalescence",
+      "source": "research/phonology/confirmed_decisions.json#decisions/gn_coalescence",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "056e98fef9c8a6087fc3d872eb3ca88b3f2deaa5f1e1108625869973349ca894",
+      "id": "phonology.person_number_paradigm",
+      "source": "research/phonology/confirmed_decisions.json#decisions/person_number_paradigm",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "1383c8afdfc7ff44a50a6281f740c627fb634931ceab658197c6ed0f64fcd163",
+      "id": "phonology.referential_specificity_markers",
+      "source": "research/phonology/confirmed_decisions.json#decisions/referential_specificity_markers",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "ad0055fc3425fb13819044292bce16aac44ec65eefc95d4bc7ee8e8bf2681ca7",
+      "id": "phonology.rhotic",
+      "source": "research/phonology/confirmed_decisions.json#decisions/rhotic",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "dbc20db9e50c6a5624fb85622eedf324cf92209a9f8bd1416f9a6c2327d42ee7",
+      "id": "phonology.sj_coalescence",
+      "source": "research/phonology/confirmed_decisions.json#decisions/sj_coalescence",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "4f36e90a50618aa4cd374ea1fa30106dd3b23c27a2983349b4c7590f00734d16",
+      "id": "phonology.soft_lexical_contrasts",
+      "source": "research/phonology/confirmed_decisions.json#decisions/soft_lexical_contrasts",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "927d37997c6190764043ddf5589f9eb5c96821a00154c3b247013f79f6b63b64",
+      "id": "phonology.source_c_lexical_adaptation",
+      "source": "research/phonology/confirmed_decisions.json#decisions/source_c_lexical_adaptation",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "5ab80e712fa4380256e98c72ec87e6451e9d004dcfcb26acfa86e222d59c433e",
+      "id": "phonology.source_dzh_lexical_adaptation",
+      "source": "research/phonology/confirmed_decisions.json#decisions/source_dzh_lexical_adaptation",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "154f430444d223e822e21cfd9ce1a91c5cf8a05bfb8483491adfa482dba5b94c",
+      "id": "phonology.vowel_architecture",
+      "source": "research/phonology/confirmed_decisions.json#decisions/vowel_architecture",
+      "status": "confirmed"
+    }
+  ],
+  "schema": "unisermo/rule-registry@1"
+}

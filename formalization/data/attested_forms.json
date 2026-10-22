@@ -1,0 +1,210 @@
+{
+  "schema": "unisermo/attested-forms@1",
+  "note": "Expressions appearing in live specifications but missing from the core lexicon. Listing here is evidence of attestation, NOT lexical ratification. Categories constrain the reference parser only.",
+  "entries": [
+    {
+      "form": "ades",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "admov",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/verb_specification.md"
+    },
+    {
+      "form": "amik",
+      "category": "noun",
+      "status": "example_only",
+      "source": "language/word_order.md"
+    },
+    {
+      "form": "bis",
+      "category": "quantifier",
+      "status": "decision_attested_not_indexed",
+      "source": "language/numerals.md"
+    },
+    {
+      "form": "bon",
+      "category": "nominal_predicate",
+      "status": "example_only",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "dees",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "demov",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/verb_specification.md"
+    },
+    {
+      "form": "doktor",
+      "category": "noun",
+      "status": "example_only",
+      "source": "language/noun_case_system.md"
+    },
+    {
+      "form": "dom",
+      "category": "noun",
+      "status": "example_only",
+      "source": "language/noun_case_system.md"
+    },
+    {
+      "form": "es",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "ines",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "inmov",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/verb_specification.md"
+    },
+    {
+      "form": "jer",
+      "category": "counter",
+      "status": "decision_attested_not_indexed",
+      "source": "language/numerals.md"
+    },
+    {
+      "form": "ka",
+      "category": "particle",
+      "status": "decision_attested_not_indexed",
+      "source": "language/questions.md"
+    },
+    {
+      "form": "likwid",
+      "category": "nominal_predicate",
+      "status": "example_only",
+      "source": "language/noun_case_system.md"
+    },
+    {
+      "form": "mov",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/verb_specification.md"
+    },
+    {
+      "form": "multi",
+      "category": "quantifier",
+      "status": "example_only",
+      "source": "language/noun_number_system.md"
+    },
+    {
+      "form": "no",
+      "category": "particle",
+      "status": "decision_attested_not_indexed",
+      "source": "language/negation.md"
+    },
+    {
+      "form": "nul",
+      "category": "quantifier",
+      "status": "decision_attested_not_indexed",
+      "source": "language/noun_number_system.md"
+    },
+    {
+      "form": "omni",
+      "category": "quantifier",
+      "status": "decision_attested_not_indexed",
+      "source": "language/noun_number_system.md"
+    },
+    {
+      "form": "rees",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "remov",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/verb_specification.md"
+    },
+    {
+      "form": "san",
+      "category": "nominal_predicate",
+      "status": "example_only",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "solid",
+      "category": "nominal_predicate",
+      "status": "example_only",
+      "source": "language/noun_case_system.md"
+    },
+    {
+      "form": "student",
+      "category": "noun",
+      "status": "example_only",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "tan",
+      "category": "demonstrative",
+      "status": "example_only",
+      "source": "language/demonstratives.md"
+    },
+    {
+      "form": "ter",
+      "category": "quantifier",
+      "status": "example_only",
+      "source": "language/numerals.md"
+    },
+    {
+      "form": "tes",
+      "category": "demonstrative",
+      "status": "example_only",
+      "source": "language/demonstratives.md"
+    },
+    {
+      "form": "tik",
+      "category": "demonstrative",
+      "status": "example_only",
+      "source": "language/demonstratives.md"
+    },
+    {
+      "form": "tot",
+      "category": "quantifier",
+      "status": "decision_attested_not_indexed",
+      "source": "research/grammar/nominal_number_and_quantification.md"
+    },
+    {
+      "form": "traes",
+      "category": "verb",
+      "status": "decision_attested_not_indexed",
+      "source": "language/copula.md"
+    },
+    {
+      "form": "uno",
+      "category": "quantifier",
+      "status": "decision_attested_not_indexed",
+      "source": "language/articles.md"
+    },
+    {
+      "form": "vid",
+      "category": "verb",
+      "status": "example_only",
+      "source": "language/verb_specification.md"
+    },
+    {
+      "form": "wi",
+      "category": "particle",
+      "status": "decision_attested_not_indexed",
+      "source": "language/noun_number_system.md"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "unisermo/lexical-roles@1",
+  "note": "Parser subset categories supported by examples or explicit lexical decisions. Not a claim that other roots cannot perform those roles.",
+  "verb": [
+    "ager",
+    "kad",
+    "kap",
+    "kred",
+    "kurar",
+    "dik",
+    "dirig",
+    "dok",
+    "fak",
+    "pel",
+    "trak",
+    "altmov",
+    "basmov"
+  ],
+  "noun": [
+    "aerplan",
+    "akwa",
+    "frat",
+    "nation",
+    "spets",
+    "uman"
+  ],
+  "nominal_predicate": [
+    "alt",
+    "bas",
+    "klar"
+  ],
+  "function_word": [
+    "kun",
+    "kom",
+    "ker",
+    "per",
+    "pro",
+    "due",
+    "fin",
+    "tem",
+    "mod",
+    "major",
+    "ekwal"
+  ]
+}

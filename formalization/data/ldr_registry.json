@@ -1,0 +1,45 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-22",
+      "domain": "governance",
+      "id": "LDR-0001",
+      "path": "docs/ldr/LDR-0001-language-design-records.md",
+      "sha256": "4b0e1ef26675de66b490dfb99a95527cb3e1b7a338814bbee3df1f89612b1f70",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Adopt Language Design Records"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "llm-efficiency",
+      "id": "LDR-0002",
+      "path": "docs/ldr/LDR-0002-lexical-efficiency-scoring.md",
+      "sha256": "f25a08dc69d34c25a8732722bf4ffc864590dd5e6f8737f74593ae85acab6f7a",
+      "status": "Experimental",
+      "supersedes": "none",
+      "title": "Explore multi-objective lexical efficiency scoring"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "compatibility",
+      "id": "LDR-0003",
+      "path": "docs/ldr/LDR-0003-semantics-preservation.md",
+      "sha256": "246e760445152e6a4cb3c3ebb5aa53105ce2806cff7fec5eddbbe89d2c593f96",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Preserve accepted semantics during LLM optimization"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "formalization",
+      "id": "LDR-0004",
+      "path": "docs/ldr/LDR-0004-formal-source-of-truth.md",
+      "sha256": "5ccc9d685ca93437935954ac5315e7028976f7a477d087aa33206de30d5685c5",
+      "status": "Proposed",
+      "supersedes": "none",
+      "title": "Migrate normative rules to machine-readable sources"
+    }
+  ],
+  "schema": "unisermo/ldr-registry@1"
+}

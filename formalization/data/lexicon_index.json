@@ -1,0 +1,809 @@
+{
+  "entries": [
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "ades",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "admov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical root for air. Preserves the classical/international aer- family in canonical Unisermo spelling.",
+      "form": "aer",
+      "meaning_en": "air",
+      "meaning_it": "aria",
+      "origin": "Latin aer / Greek aer",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonical transparent compound aer+plan for airplane/aeroplane. Preferred over aeroplan; the lexical structure is explicitly aer + plan.",
+      "form": "aerplan",
+      "meaning_en": "airplane; aeroplane",
+      "meaning_it": "aeroplano; aereo",
+      "origin": "productive compound aer + plan; international aeroplane family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy act.",
+      "form": "ager",
+      "meaning_en": "act; do",
+      "meaning_it": "agire",
+      "origin": "Latin agere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonical water root. Chosen as akwa rather than akva or akua: w represents the canonical /w/ glide, preserving the international aqua /akwa/ shape without substituting /v/ or introducing a vowel hiatus.",
+      "form": "akwa",
+      "meaning_en": "water",
+      "meaning_it": "acqua",
+      "origin": "Latin aqua / international aqua- family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "decision": "Canonical vertical-axis root for high/upper/up. With allative -ad, altad marks upward direction/toward a higher position. It may compound transparently with mov: altmov = ascend/go up.",
+      "form": "alt",
+      "meaning_en": "high; upper; up",
+      "meaning_it": "alto; superiore; su",
+      "origin": "Latin altus / international alt- family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "verb"
+      ],
+      "decision": "Canonical transparent motion compound alt+mov for upward motion/ascending. Equivalent directional paraphrase: mov altad. It is distinct from phase-derived admov, which means begin moving.",
+      "form": "altmov",
+      "meaning_en": "ascend; go up",
+      "meaning_it": "salire; andare in su",
+      "origin": "productive compound alt + mov",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "form": "amik",
+      "source": "language/word_order.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "decision": "Canonical vertical-axis root for low/lower/down. With allative -ad, basad marks downward direction/toward a lower position. It may compound transparently with mov: basmov = descend/go down.",
+      "form": "bas",
+      "meaning_en": "low; lower; down",
+      "meaning_it": "basso; inferiore; giu",
+      "origin": "international bas-/base family; Romance basso/bas",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "verb"
+      ],
+      "decision": "Canonical transparent motion compound bas+mov for downward motion/descending. Equivalent directional paraphrase: mov basad. It is distinct from phase-derived demov, which means cease moving.",
+      "form": "basmov",
+      "meaning_en": "descend; go down",
+      "meaning_it": "scendere; andare in giu",
+      "origin": "productive compound bas + mov",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "bis",
+      "source": "language/numerals.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "form": "bon",
+      "source": "language/copula.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "dees",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy dec.",
+      "form": "dek",
+      "meaning_en": "ten; decimal",
+      "meaning_it": "dieci; decimale",
+      "origin": "Latin decem",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "demov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical verbal root replacing legacy dict; regular participial/resultative dikit.",
+      "form": "dik",
+      "meaning_en": "say; tell; express",
+      "meaning_it": "dire; esprimere",
+      "origin": "Latin dicere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy direct.",
+      "form": "dirig",
+      "meaning_en": "direct; guide",
+      "meaning_it": "dirigere",
+      "origin": "Latin dirigere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy doc and former dots. Source Latin docere means teach; Latin doctor is its agent noun. The k adaptation preserves the doc-/doct-/doctor family transparently under the canonical alphabet, giving regular dok + -or -> dokor (teacher).",
+      "form": "dok",
+      "meaning_en": "teach",
+      "meaning_it": "insegnare",
+      "origin": "Latin docere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "form": "doktor",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "form": "dom",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired.",
+      "form": "due",
+      "meaning_en": "because of; due to",
+      "meaning_it": "a causa di; dovuto a",
+      "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/.",
+      "form": "ekwal",
+      "meaning_en": "equal; equally; as ... as",
+      "meaning_it": "uguale; ugualmente; come ... come",
+      "origin": "Latin aequalis / international equal family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "es",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy fac.",
+      "form": "fak",
+      "meaning_en": "do; make",
+      "meaning_it": "fare; creare; produrre",
+      "origin": "Latin facere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical invariant free purposive relator. Former suffix -fin is retired.",
+      "form": "fin",
+      "meaning_en": "for the purpose of",
+      "meaning_it": "allo scopo di",
+      "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonical kinship root for brother, based on Latin frater and the international fratern- family.",
+      "form": "frat",
+      "meaning_en": "brother",
+      "meaning_it": "fratello",
+      "origin": "Latin frater / international fratern- family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "ines",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "inmov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "counter"
+      ],
+      "form": "jer",
+      "source": "language/numerals.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "particle"
+      ],
+      "form": "ka",
+      "source": "language/questions.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy cad.",
+      "form": "kad",
+      "meaning_en": "fall",
+      "meaning_it": "cadere",
+      "origin": "Latin cadere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy cap.",
+      "form": "kap",
+      "meaning_en": "take; capture",
+      "meaning_it": "prendere; catturare",
+      "origin": "Latin capere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical WH-word WHY, replacing legacy kur to avoid collision with the care/cure lexical family.",
+      "form": "ker",
+      "meaning_en": "why?",
+      "meaning_it": "perche?",
+      "origin": "revised Unisermo question system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "numeral"
+      ],
+      "decision": "Canonical numeral 5 replacing legacy cin.",
+      "form": "kin",
+      "meaning_en": "five",
+      "meaning_it": "cinque",
+      "origin": "Latin quinque / Romance cinque-cinq family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "decision": "Canonical replacement for legacy clar.",
+      "form": "klar",
+      "meaning_en": "clear; clarity",
+      "meaning_it": "chiaro; chiarezza",
+      "origin": "Latin clarus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical WH-word HOW. Retained after moving Latin cum/com- lexical root to kun.",
+      "form": "kom",
+      "meaning_en": "how?",
+      "meaning_it": "come?",
+      "origin": "legacy Unisermo question system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy cred.",
+      "form": "kred",
+      "meaning_en": "believe; credit",
+      "meaning_it": "credere; credito",
+      "origin": "Latin credere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical replacement for legacy/source com from Latin cum/com-. Chosen as kun to avoid collision with canonical question word kom = HOW. Also canonical invariant free comitative relator in kun + noun phrase; the former comitative suffix -ko is retired.",
+      "form": "kun",
+      "meaning_en": "with; together",
+      "meaning_it": "con-; insieme",
+      "origin": "Latin cum / com-",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical replacement for legacy/source cur from Latin cura. Chosen as kurar to avoid collision with the former WHY question word; WHY is now ker.",
+      "form": "kurar",
+      "meaning_en": "care; cure",
+      "meaning_it": "cura; curare",
+      "origin": "Latin cura",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "form": "likwid",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy loc.",
+      "form": "lok",
+      "meaning_en": "place; location",
+      "meaning_it": "luogo; locale",
+      "origin": "Latin locus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/.",
+      "form": "major",
+      "meaning_en": "more; comparative marker",
+      "meaning_it": "piu; comparativo di maggioranza",
+      "origin": "Latin maior",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical invariant free manner relator. Former suffix -mod is retired.",
+      "form": "mod",
+      "meaning_en": "in the manner of",
+      "meaning_it": "nel modo di; alla maniera di",
+      "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "mov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "multi",
+      "source": "language/noun_number_system.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonical replacement for legacy nacion.",
+      "form": "nation",
+      "meaning_en": "nation",
+      "meaning_it": "nazione",
+      "origin": "Latin natio, nationis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "particle"
+      ],
+      "form": "no",
+      "source": "language/negation.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "nul",
+      "source": "language/noun_number_system.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "omni",
+      "source": "language/noun_number_system.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical force/manner verb for push. It describes exerting force in a pushing relation and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame.",
+      "form": "pel",
+      "meaning_en": "push",
+      "meaning_it": "spingere",
+      "origin": "Latin pellere / international propel-repel family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word",
+        "note"
+      ],
+      "decision": "Canonical invariant free instrumental/perlative relator. Former suffix -per is retired.",
+      "form": "per",
+      "meaning_en": "through; by means of",
+      "meaning_it": "per; attraverso; per mezzo di",
+      "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical root for plane/flat/level. Used as the second component of transparent compound aerplan.",
+      "form": "plan",
+      "meaning_en": "plane; flat; level",
+      "meaning_it": "piano; piatto; superficie piana",
+      "origin": "Latin planus / planum; international plan-/plane family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical invariant free benefactive relator. Former suffix -pro is retired.",
+      "form": "pro",
+      "meaning_en": "for the benefit of",
+      "meaning_it": "a favore di; per il beneficio di",
+      "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "rees",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "remov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "form": "san",
+      "source": "language/copula.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy centr. The bare root sentr is preferred over former sentrum to preserve a compact derivational base and avoid an unnecessary nominal ending.",
+      "form": "sentr",
+      "meaning_en": "center; central",
+      "meaning_it": "centro; centrale",
+      "origin": "Latin centrum / international centr- family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy cert.",
+      "form": "sert",
+      "meaning_en": "certain; certainty",
+      "meaning_it": "certo; certezza",
+      "origin": "Latin certus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy circul. User-supplied sircul is normalized to sirkul because c is not in the canonical alphabet.",
+      "form": "sirkul",
+      "meaning_en": "circle; circular",
+      "meaning_it": "cerchio; circolare",
+      "origin": "Latin circulus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy civ.",
+      "form": "siv",
+      "meaning_en": "citizen; civic",
+      "meaning_it": "cittadino; civile",
+      "origin": "Latin civis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "nominal_predicate"
+      ],
+      "form": "solid",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonical replacement for legacy spec.",
+      "form": "spets",
+      "meaning_en": "look; observe; aspect",
+      "meaning_it": "guardare; osservare; aspetto",
+      "origin": "Latin specere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy struct.",
+      "form": "stru",
+      "meaning_en": "build; structure",
+      "meaning_it": "costruire; struttura",
+      "origin": "Latin struere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "form": "student",
+      "source": "language/copula.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "demonstrative"
+      ],
+      "form": "tan",
+      "source": "language/demonstratives.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired.",
+      "form": "tem",
+      "meaning_en": "during; at the time of",
+      "meaning_it": "durante; nel tempo di",
+      "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "ter",
+      "source": "language/numerals.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "demonstrative"
+      ],
+      "form": "tes",
+      "source": "language/demonstratives.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "demonstrative"
+      ],
+      "form": "tik",
+      "source": "language/demonstratives.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "tot",
+      "source": "research/grammar/nominal_number_and_quantification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "traes",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical force/manner verb for pull. It describes traction/pulling and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame.",
+      "form": "trak",
+      "meaning_en": "pull; draw; drag",
+      "meaning_it": "tirare; trascinare",
+      "origin": "Latin trahere / tract-; international traction-tractor family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonical human/person root replacing earlier om. Optional referential specificity gives umano (male person/man) and umane (female person/woman); explicit plural is wi uman. Abstract humanity is regularly umanitat via -itat.",
+      "form": "uman",
+      "meaning_en": "person; human being",
+      "meaning_it": "persona; essere umano",
+      "origin": "Latin humanus / homo family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "uno",
+      "source": "language/articles.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "vid",
+      "source": "language/verb_specification.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Canonical replacement for legacy voc.",
+      "form": "vok",
+      "meaning_en": "voice; call",
+      "meaning_it": "voce; chiamare",
+      "origin": "Latin vox",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "particle"
+      ],
+      "form": "wi",
+      "source": "language/noun_number_system.md",
+      "status": "decision_attested_not_indexed"
+    }
+  ],
+  "schema": "unisermo/lexicon-index@1"
+}

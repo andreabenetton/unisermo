@@ -14,6 +14,12 @@ Consonants/glides: `p b t d k g m n f v s z l r j w`
 independent affricate phoneme. `ts`, `tj`, `dj`, `sj`, and `gn` are transparent
 sequences with permitted coalescent realizations.
 
+## Design record policy
+
+Use `docs/ldr/README.md` to document consequential new language choices and
+their alternatives. Accepted decisions are reflected here only after owner
+approval; Experimental/Proposed LDRs do not amend this specification.
+
 ## Editing policy
 
 1. Edit these Markdown files when a design decision changes the language.

@@ -25,6 +25,15 @@ This repository is a local, independently maintained Unisermo working copy.
 Do not add a Git remote, and do not push to GitHub, unless expressly requested.
 In particular, NEVER push language changes to `andreabenetton/glottodelta`.
 
+## Decision records
+
+Before treating a new linguistic choice or LLM-efficiency optimization as
+normative, read `docs/ldr/README.md` and record an LDR with alternatives,
+evidence and explicit acceptance. Unvalidated scoring formulas must remain
+`Experimental`; parser/JSON formalization is a source-linked mirror of live
+`language/` until a migration LDR is accepted. Avoid silently inventing
+rationales for the pre-LDR confirmed decision corpus.
+
 ## Workflow
 
 1. Read `language/CLAUDE.md` before changing grammar or vocabulary.

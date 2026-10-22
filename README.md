@@ -16,6 +16,8 @@ atlas**, which continues to be maintained at
 - [`research/lexicon/`](research/lexicon/) — confirmed and audited lexicon.
 - [`research/phonology/`](research/phonology/) — phonological evidence and candidate studies.
 - [`scripts/`](scripts/) — research analyzers and regression checks.
+- [`docs/ldr/`](docs/ldr/) — Language Design Records (decision history, alternatives, hypotheses and evidence).
+- [`formalization/`](formalization/) — Phase 1 sourced machine-readable reference, parser, generator and tests.
 - [`legacy/original-language/`](legacy/original-language/) — immutable historical source documents.
 - [`language/MIGRATION_HISTORY.md`](language/MIGRATION_HISTORY.md) — migration history.
 
@@ -36,6 +38,20 @@ See [`docs/atlas-snapshot/`](docs/atlas-snapshot/) for the original atlas
 README and maintainer instructions retained as reference, and
 [`docs/ATLAS_SNAPSHOT.md`](docs/ATLAS_SNAPSHOT.md) for data provenance.
 
+## Formalization and decision traceability
+
+Design rationale is recorded as **Language Design Records (LDRs)** under
+`docs/ldr/`, independently of the old confirmed-decision JSON. The proposed
+weighted lexical-efficiency score is experimental and has not changed the
+language canon. See [`formalization/AUDIT.md`](formalization/AUDIT.md) for
+remaining work.
+
+```sh
+python3 -m formalization build --check
+python3 -m formalization validate
+python3 scripts/test_formalization.py
+```
+
 ## Local tests
 
 From the repository root:
@@ -55,9 +71,10 @@ in the distributed repository. Never configure or push to the GlottoDelta
 upstream without explicit owner authorization. Preserve the immutable language
 legacy snapshot and the frozen IPA research dataset.
 
-The rename to Unisermo does not change the pronunciation rules, canonical
-roots or grammatical decisions. This is an identity/documentation change,
-not Phase 1 formalization and not a change of language semantics.
+The earlier rename to Unisermo did not alter pronunciation rules, roots
+or grammatical decisions. The separate Phase 1 `formalization/` workspace
+implements a reference mirror and decision traceability without introducing
+new language semantics.
 
 ## Licence
 

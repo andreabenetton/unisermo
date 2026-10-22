@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Unisermo reference analysis v1",
+  "type": "object", "required": ["surface", "analyses"], "additionalProperties": false,
+  "properties": {
+    "surface": {"type": "string"},
+    "analyses": {"type": "array", "items": {
+      "type": "object", "required": ["kind", "lemma", "status"],
+      "properties": {
+        "kind": {"enum": ["finite_verb", "nominal_case", "participle", "lexical_form"]},
+        "lemma": {"type": "string"}, "status": {"type": "string"},
+        "tense": {"type": "string"}, "aspect": {"type": "string"},
+        "person": {"type": "integer", "minimum": 1, "maximum": 3},
+        "number": {"type": "string"}, "case": {"type": "string"},
+        "category": {"type": "string"}, "suffix": {"type": "string"}
+      }, "additionalProperties": false
+    }}
+  }
+}

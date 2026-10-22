@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Unisermo executable morphology v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "sources", "alphabet", "finite", "nominal", "syntax", "non_finite", "not_implemented"],
+  "properties": {
+    "$schema": {"type": "string"}, "schema": {"const": "unisermo/morphology@1"},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "alphabet": {"type": "string", "minLength": 1},
+    "finite": {"type": "object", "required": ["order", "aspect", "tense", "person", "number"], "properties": {
+      "order": {"const": ["lemma", "aspect", "tense", "person", "number"]},
+      "aspect": {"type": "object", "required": ["simple", "progressive", "perfect"], "additionalProperties": {"type": "string"}},
+      "tense": {"type": "object", "required": ["present", "past", "future"], "additionalProperties": {"type": "string"}},
+      "person": {"type": "object", "required": ["1", "2", "3"], "additionalProperties": {"type": "string"}},
+      "number": {"type": "object", "required": ["singular", "plural"], "additionalProperties": {"type": "string"}}
+    }, "additionalProperties": false},
+    "nominal": {"type": "object", "required": ["number_default", "plural_particle", "case", "genitive_alternate", "genitive_alternate_after"], "properties": {
+      "number_default": {"const": "unspecified"}, "plural_particle": {"const": "wi"},
+      "case": {"type": "object", "required": ["nominative", "accusative", "genitive", "dative_allative", "ablative", "locative", "resultative"], "additionalProperties": {"type": "string"}},
+      "genitive_alternate": {"type": "string"}, "genitive_alternate_after": {"type": "array", "items": {"type": "string"}}
+    }, "additionalProperties": false},
+    "syntax": {"type": "object", "required": ["canonical_order", "subject_pro_drop", "polar_marker", "negator", "optional_indefinite"], "properties": {
+      "canonical_order": {"const": "SVO"}, "subject_pro_drop": {"type": "boolean"},
+      "polar_marker": {"type": "string"}, "negator": {"type": "string"}, "optional_indefinite": {"type": "string"}
+    }, "additionalProperties": false},
+    "non_finite": {"type": "object", "properties": {"participle_resultative": {"type": "string"}}, "required": ["participle_resultative"], "additionalProperties": false},
+    "not_implemented": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }
+}
