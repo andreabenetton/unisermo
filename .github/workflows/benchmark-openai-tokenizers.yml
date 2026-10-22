@@ -27,9 +27,15 @@ jobs:
         run: |
           python -m pip show tiktoken
           python -m unittest discover -s tests -p 'test_benchmarks.py' -v
+          python -m unittest discover -s tests -p 'test_diagnostics.py' -v
           python benchmarks/build_pilot.py --check
       - name: Tokenize pilot with two real OpenAI encodings
         run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
+      - name: Generate baseline diagnostic
+        run: |
+          python -m benchmarks.diagnostics \
+            --reports benchmarks/reports/o200k_base-pilot.json benchmarks/reports/cl100k_base-pilot.json \
+            --output benchmarks/reports/diagnostic-pilot.json
       - name: Publish machine-readable results as CI artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -37,4 +43,5 @@ jobs:
           path: |
             benchmarks/reports/o200k_base-pilot.json
             benchmarks/reports/cl100k_base-pilot.json
+            benchmarks/reports/diagnostic-pilot.json
           if-no-files-found: error

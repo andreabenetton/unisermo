@@ -94,3 +94,23 @@ results to another repository.
 6. Record an accepted LDR **before** changing a lexical or grammatical rule.
 
 See [LDR-0006](../docs/ldr/LDR-0006-tokenizer-benchmark-protocol.md).
+
+## Post-run diagnostic (LDR-0007)
+
+GitHub Actions run `39832551377` supplied genuine pilot result artifacts.
+The unmodified JSON reports are retained in `benchmarks/evidence/`.
+To produce the diagnostic, without needing `tiktoken` installed:
+
+```bash
+python -m benchmarks.diagnostics \
+  --reports benchmarks/evidence/*json \
+  --output benchmarks/reports/diagnostic-pilot.json
+```
+
+To additionally inspect **real** tokenizer boundaries on a machine with
+`tiktoken` and vocabularies installed, append `--segment-openai`. Without that
+flag, the diagnostic makes no claims about token *pieces* or merge rules.
+The analysis lists worst and best samples only for the development split;
+holdout gets aggregate metrics, not ranked examples. Every pilot translation
+is pending independent semantic review. LDR-0007 specifies balanced 1,000-pair
+quotas; no fabricated or unreviewed 1,000-pair corpus is presented as evidence.

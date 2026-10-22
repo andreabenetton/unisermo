@@ -62,3 +62,4 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0004: Migrate normative sources to structured data](LDR-0004-formal-source-of-truth.md) — Proposed
 - [LDR-0005: Repository boundaries](LDR-0005-repository-boundaries.md) — Accepted
 - [LDR-0006: Tokenizer benchmark protocol](LDR-0006-tokenizer-benchmark-protocol.md) — Experimental
+- [LDR-0007: Tokenization diagnostic baseline](LDR-0007-tokenization-diagnostic-baseline.md) — Experimental

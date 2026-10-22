@@ -1,0 +1,764 @@
+{
+  "corpus_sha256": "d274e0ce24a7152952b57497787013aad575b4706b6a5e9a76edb17ebbe28327",
+  "encoding": "o200k_base",
+  "groups": {
+    "clause-operators": {
+      "english_tokens": 25,
+      "mean_english_tokens": 5.0,
+      "mean_unisermo_tokens": 5.4,
+      "reduction_pct": -8.0,
+      "samples": 5,
+      "unisermo_tokens": 27
+    },
+    "finite-paradigm": {
+      "english_tokens": 248,
+      "mean_english_tokens": 3.875,
+      "mean_unisermo_tokens": 3.219,
+      "reduction_pct": 16.935,
+      "samples": 64,
+      "unisermo_tokens": 206
+    },
+    "svo-object": {
+      "english_tokens": 42,
+      "mean_english_tokens": 4.667,
+      "mean_unisermo_tokens": 5.333,
+      "reduction_pct": -14.286,
+      "samples": 9,
+      "unisermo_tokens": 48
+    }
+  },
+  "implementation": "tiktoken:0.14.0",
+  "overall": {
+    "english_tokens": 315,
+    "mean_english_tokens": 4.038,
+    "mean_unisermo_tokens": 3.603,
+    "reduction_pct": 10.794,
+    "samples": 78,
+    "unisermo_tokens": 281
+  },
+  "pairs": [
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P001",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P002",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P003",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P004",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P005",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P006",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P007",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -2,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P008",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P009",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P010",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P011",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P012",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P013",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P014",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P015",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -2,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P016",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P017",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P018",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P019",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P020",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P021",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P022",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P023",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P024",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P025",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P026",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P027",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P028",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P029",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P030",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P031",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -2,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P032",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P033",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P034",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P035",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P036",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P037",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P038",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P039",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -2,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P040",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P041",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P042",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P043",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P044",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P045",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P046",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P047",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -2,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P048",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P049",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P050",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P051",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P052",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P053",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P054",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P055",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P056",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P057",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 3,
+      "group": "finite-paradigm",
+      "id": "P058",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P059",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P060",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P061",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": 0,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P062",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 4
+    },
+    {
+      "delta": -1,
+      "english_tokens": 4,
+      "group": "finite-paradigm",
+      "id": "P063",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": -2,
+      "english_tokens": 5,
+      "group": "finite-paradigm",
+      "id": "P064",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 3
+    },
+    {
+      "delta": 1,
+      "english_tokens": 4,
+      "group": "svo-object",
+      "id": "P065",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 0,
+      "english_tokens": 5,
+      "group": "svo-object",
+      "id": "P066",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 1,
+      "english_tokens": 5,
+      "group": "svo-object",
+      "id": "P067",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 6
+    },
+    {
+      "delta": 1,
+      "english_tokens": 4,
+      "group": "svo-object",
+      "id": "P068",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 0,
+      "english_tokens": 5,
+      "group": "svo-object",
+      "id": "P069",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 1,
+      "english_tokens": 5,
+      "group": "svo-object",
+      "id": "P070",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 6
+    },
+    {
+      "delta": 1,
+      "english_tokens": 4,
+      "group": "svo-object",
+      "id": "P071",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 0,
+      "english_tokens": 5,
+      "group": "svo-object",
+      "id": "P072",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 1,
+      "english_tokens": 5,
+      "group": "svo-object",
+      "id": "P073",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 6
+    },
+    {
+      "delta": -1,
+      "english_tokens": 6,
+      "group": "clause-operators",
+      "id": "P074",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 0,
+      "english_tokens": 5,
+      "group": "clause-operators",
+      "id": "P075",
+      "review_status": "draft_parser_verified",
+      "split": "holdout",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 0,
+      "english_tokens": 6,
+      "group": "clause-operators",
+      "id": "P076",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 6
+    },
+    {
+      "delta": 1,
+      "english_tokens": 4,
+      "group": "clause-operators",
+      "id": "P077",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 5
+    },
+    {
+      "delta": 2,
+      "english_tokens": 4,
+      "group": "clause-operators",
+      "id": "P078",
+      "review_status": "draft_parser_verified",
+      "split": "development",
+      "unisermo_tokens": 6
+    }
+  ],
+  "review_status": "not_human_verified",
+  "scope": "paired input token counts only; not full task cost, semantic correctness, or inference output",
+  "splits": {
+    "development": {
+      "english_tokens": 255,
+      "mean_english_tokens": 4.048,
+      "mean_unisermo_tokens": 3.587,
+      "reduction_pct": 11.373,
+      "samples": 63,
+      "unisermo_tokens": 226
+    },
+    "holdout": {
+      "english_tokens": 60,
+      "mean_english_tokens": 4.0,
+      "mean_unisermo_tokens": 3.667,
+      "reduction_pct": 8.333,
+      "samples": 15,
+      "unisermo_tokens": 55
+    }
+  },
+  "tokenizer_sha256": "f2f614601c635339047c0ec251d13afcfd8e3bc01440bca9ab0bdf17ed61e2d0"
+}

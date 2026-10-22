@@ -59,6 +59,16 @@
       "status": "Experimental",
       "supersedes": "none",
       "title": "Establish exploratory tokenizer benchmark protocol"
+    },
+    {
+      "date": "2026-10-22",
+      "domain": "llm-efficiency",
+      "id": "LDR-0007",
+      "path": "docs/ldr/LDR-0007-tokenization-diagnostic-baseline.md",
+      "sha256": "d78d22f57a7610aea34c4d6799f5e4fc19eb73207273b5e0e2bd42ce34269f01",
+      "status": "Experimental",
+      "supersedes": "none",
+      "title": "Preserve measured tokenizer baseline and define diagnostic review"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
