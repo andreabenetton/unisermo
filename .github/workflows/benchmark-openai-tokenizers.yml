@@ -42,6 +42,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_root_substitution.py' -v
           python -m unittest discover -s tests -p 'test_root_family_collisions.py' -v
           python -m unittest discover -s tests -p 'test_root_semantic_guard.py' -v
+          python -m unittest discover -s tests -p 'test_root_recognition.py' -v
       - name: Tokenize pilot with two real OpenAI encodings
         run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
       - name: Generate baseline diagnostic
@@ -66,6 +67,8 @@ jobs:
             --output benchmarks/reports/modern-form-frequencies-v2.json
       - name: Test counterfactual dir parser parity
         run: python -m benchmarks.root_semantic_guard --output benchmarks/reports/root-semantic-parity.json
+      - name: Build isolated blind lexical recognition prompts
+        run: python -m benchmarks.root_recognition build --output-dir benchmarks/reports
       - name: Publish machine-readable results as CI artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -81,4 +84,6 @@ jobs:
             benchmarks/reports/root-substitution-cl100k_base.json
             benchmarks/reports/root-family-collisions.json
             benchmarks/reports/root-semantic-parity.json
+            benchmarks/reports/root-recognition-prompts-v1.jsonl
+            benchmarks/reports/root-recognition-answer-key-v1.jsonl
           if-no-files-found: error
