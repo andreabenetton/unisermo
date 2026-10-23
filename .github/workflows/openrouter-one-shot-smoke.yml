@@ -17,14 +17,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - slug: gemma
-            model: google/gemma-3-27b-it
+          - slug: qwen
+            model: qwen/qwen3-32b
     steps:
       - name: Verify one-shot authorization marker
         env:
           ACTUAL_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: retry Gemma smoke with bounded rate-limit handling' || exit 1
+          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: retry Qwen smoke without thinking mode' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
