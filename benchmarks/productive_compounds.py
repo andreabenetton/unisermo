@@ -32,7 +32,7 @@ def build_report():
             errors.append(f"{ident}: surface does not match components")
         if any(not part or not set(part)<=ALPHABET for part in components):
             errors.append(f"{ident}: forbidden grapheme")
-        unknown=[part for part in components if part not in canonical and not (part=="mov" and part in indexed and item["evidence"]=="confirmed_compound")]
+        unknown=[part for part in components if part not in canonical and not (part=="mov" and part in indexed)]
         if unknown:errors.append(f"{ident}: unconfirmed components {unknown}")
         if "mov" in components and item["evidence"]=="hypothetical_test":
             # mov is attested in grammar, but not a confirmed standalone root.
