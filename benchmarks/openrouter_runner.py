@@ -38,6 +38,11 @@ def invoke(key: str, model: str, question: dict, provider: str | None) -> dict:
         payload["reasoning"] = {"enabled": False}
         payload["temperature"] = 0.7
         payload["seed"] = 23
+        # Qwen3 model-card supported inline switch: provider may ignore the
+        # nested reasoning flag. Treat this as an explicit prompt variant.
+        payload["messages"] = [
+            {"role": "user", "content": question["messages"][0]["content"] + "\n/no_think"}
+        ]
     request = urllib.request.Request(URL,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Authorization": "Bearer " + key, "Content-Type": "application/json",
@@ -79,7 +84,9 @@ def run(key: str, model: str, provider: str | None, subset: str,
     if max_requests < 1 or max_requests > MAX_PER_MODEL:
         raise ValueError("max_requests outside safe bounds")
     questions, answer_key = build_pack()
-    if subset == "smoke":
+    if subset == "probe":
+        selected = [q for q in questions if q["split"] == "development"][:2]
+    elif subset == "smoke":
         # Only development items, both glossary conditions and all three roots.
         selected = [q for q in questions if q["split"] == "development"][:6]
     elif subset == "development":
@@ -120,7 +127,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--model", required=True, choices=sorted(MODELS.values()))
     p.add_argument("--provider", default="")
-    p.add_argument("--subset", choices=("smoke", "development", "full"), default="smoke")
+    p.add_argument("--subset", choices=("probe", "smoke", "development", "full"), default="smoke")
     p.add_argument("--max-requests", type=int, default=6)
     p.add_argument("--output", type=Path, required=True)
     args = p.parse_args()
