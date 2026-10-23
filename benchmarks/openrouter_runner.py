@@ -19,6 +19,9 @@ MODELS = {"qwen": "qwen/qwen3-32b", "gemma": "google/gemma-3-27b-it"}
 MAX_PER_MODEL = 72
 MAX_OUTPUT = 48
 
+class RateLimited(RuntimeError):
+    """Retryable provider rate limit, without copying upstream response bodies."""
+
 def invoke(key: str, model: str, question: dict, provider: str | None) -> dict:
     routing = {"allow_fallbacks": False, "data_collection": "deny"}
     if provider:
@@ -39,7 +42,9 @@ def invoke(key: str, model: str, question: dict, provider: str | None) -> dict:
         with urllib.request.urlopen(request, timeout=75) as response:
             result = json.load(response)
     except urllib.error.HTTPError as exc:
-        # Deliberately do not echo upstream body: may include request fields.
+        # Do not emit upstream body, which can echo private request data.
+        if exc.code == 429:
+            raise RateLimited(f"OpenRouter HTTP 429 on question {question['id']}") from None
         raise RuntimeError(f"OpenRouter HTTP {exc.code} on question {question['id']}") from None
     choices = result.get("choices") or []
     if len(choices) != 1:
@@ -81,11 +86,22 @@ def run(key: str, model: str, provider: str | None, subset: str,
     if output.exists():
         raise ValueError("refuse to overwrite existing raw result")
     rows = []
-    for q in selected:
-        rows.append(invoke(key, model, q, provider))
-        print(f"{model}: completed {len(rows)}/{len(selected)}", flush=True)
-        time.sleep(0.25)
-    output.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))
+    # Persist each completed billed call, even when a later request fails.
+    with output.open("x", encoding="utf-8") as record:
+        for q in selected:
+            for attempt in range(3):
+                try:
+                    response = invoke(key, model, q, provider)
+                    break
+                except RateLimited:
+                    if attempt == 2:
+                        raise
+                    time.sleep([5, 15][attempt])
+            rows.append(response)
+            record.write(json.dumps(response, ensure_ascii=False) + "\n")
+            record.flush()
+            print(f"{model}: completed {len(rows)}/{len(selected)}", flush=True)
+            time.sleep(1.0)
     if subset == "full":
         key_rows = [x for x in answer_key if x["id"] in {r["id"] for r in rows}]
         scored = score(key_rows, rows, model)
