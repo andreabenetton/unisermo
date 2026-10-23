@@ -13,7 +13,8 @@ jobs:
       - name: Verify one-shot message
         env:
           MSG: ${{ github.event.head_commit.message }}
-        run: test "$MSG" = 'ci: run document primer comparison once'
+        run: |
+          test "$MSG" = 'ci: retry document primer with valid workflow syntax' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
