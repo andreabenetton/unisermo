@@ -40,6 +40,7 @@ jobs:
           python -m benchmarks.build_expansion_001 --check
           python -m benchmarks.build_discourse_001 --check
           python -m unittest discover -s tests -p 'test_discourse_001.py' -v
+          python -m unittest discover -s tests -p 'test_discourse_semantics.py' -v
           python -m unittest discover -s tests -p 'test_lexical_screen.py' -v
           python -m unittest discover -s tests -p 'test_review.py' -v
           python -m unittest discover -s tests -p 'test_modern_evidence.py' -v
