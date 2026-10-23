@@ -14,7 +14,7 @@ class OpenInferenceTests(unittest.TestCase):
         self.assertEqual(sum(c["recognized"] for c in x["groups"]),48)
         self.assertEqual(extract('{"verb":"tell"}'),"tell")
         self.assertIsNone(extract("say"))
-        self.assertEqual(extract('```json\\n{"verb":"say"}\\n```'),"say")
+        self.assertEqual(extract('```json\n{"verb":"say"}\n```'),"say")
         self.assertIsNone(extract('Some reasoning: {"verb":"say"}'))
     def test_unbalanced(self):
         q,k=build()
