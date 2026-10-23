@@ -1,0 +1,56 @@
+name: One-shot open lexical inference (96 requests maximum)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/open-inference-one-shot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  infer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: qwen
+            model: qwen/qwen3-32b
+          - label: gemma
+            model: google/gemma-3-27b-it
+    steps:
+      - name: Check one-shot marker
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$COMMIT_MESSAGE" = 'ci: run one-shot open-ended Unisermo interpretation' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Offline independent tests
+        run: |
+          python -m unittest discover -s tests -p 'test_open_inference.py' -v
+          python -m unittest discover -s tests -p 'test_openrouter_runner.py' -v
+      - name: Run maximum 48 API calls for this model
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MODEL: ${{ matrix.model }}
+          LABEL: ${{ matrix.label }}
+        run: |
+          test -n "$OPENROUTER_API_KEY" || exit 1
+          python -m benchmarks.open_inference_runner \
+            --model "$MODEL" --output "benchmarks/reports/open-inference-$LABEL.jsonl"
+      - name: Upload raw outputs and provisional mechanical scoring
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: open-inference-${{ matrix.label }}-${{ github.run_id }}
+          path: |
+            benchmarks/reports/open-inference-${{ matrix.label }}.jsonl
+            benchmarks/reports/open-inference-${{ matrix.label }}.score.json
+          if-no-files-found: warn
+          retention-days: 30
