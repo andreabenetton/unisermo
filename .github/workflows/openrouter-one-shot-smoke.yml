@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   smoke:
-    if: ${{ github.event.head_commit.message == 'ci: execute one-shot OpenRouter smoke (12 requests max)' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
@@ -23,6 +22,11 @@ jobs:
           - slug: gemma
             model: google/gemma-3-27b-it
     steps:
+      - name: Verify one-shot authorization marker
+        env:
+          ACTUAL_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: execute bounded OpenRouter smoke exactly once' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
