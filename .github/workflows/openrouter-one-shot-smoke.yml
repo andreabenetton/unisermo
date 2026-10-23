@@ -24,7 +24,7 @@ jobs:
         env:
           ACTUAL_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: retry Qwen smoke without thinking mode' || exit 1
+          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: Qwen no-think two-request probe' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -41,7 +41,7 @@ jobs:
         run: |
           test -n "$OPENROUTER_API_KEY" || { echo 'OPENROUTER_API_KEY unavailable'; exit 1; }
           python -m benchmarks.openrouter_runner \
-            --model "$MODEL" --subset smoke --max-requests 6 \
+            --model "$MODEL" --subset probe --max-requests 2 \
             --output "benchmarks/reports/openrouter-smoke-$SLUG.jsonl"
       - name: Upload raw real-model replies
         if: always()
