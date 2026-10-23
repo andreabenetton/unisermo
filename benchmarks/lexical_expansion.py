@@ -21,7 +21,7 @@ def evaluate(data, morph, lexicon):
         raise ValueError("proposals must be unique")
     results=[]
     for entry in items:
-        if entry.get("canonical_adoption") is not False or entry["review_status"]!="concept_and_root_unreviewed":
+        if entry.get("canonical_adoption") is not False or entry["review_status"] not in {"concept_and_root_unreviewed", "prior_kinship_system_review_required"}:
             raise ValueError("unauthorized ratification")
         if any(entry[x] is not None for x in ("concept_frequency","written_recognition","spoken_recognition")):
             raise ValueError("unmeasured metric supplied")
