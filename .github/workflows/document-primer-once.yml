@@ -1,0 +1,34 @@
+name: One-shot document primer
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/document-primer-once.yml']
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify one-shot message
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+        run: test "$MSG" = 'ci: run document primer comparison once'
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Offline test
+        run: python -m unittest discover -s tests -p 'test_document_primer.py' -v
+      - name: Two bounded API requests
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.document_primer_trial --output benchmarks/reports/document-primer.jsonl
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: document-primer-${{ github.run_id }}
+          path: benchmarks/reports/document-primer*
+          if-no-files-found: warn
+          retention-days: 30
