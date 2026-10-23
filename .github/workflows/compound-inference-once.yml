@@ -10,7 +10,6 @@ permissions:
 
 jobs:
   evaluate:
-    if: ${{ github.event.head_commit.message == 'ci: run one-shot compound comprehension experiment' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -22,6 +21,11 @@ jobs:
           - label: gemma
             model: google/gemma-3-27b-it
     steps:
+      - name: Verify one-shot authorization
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$COMMIT_MESSAGE" = 'ci: execute compound study after workflow syntax fix' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
