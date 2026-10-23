@@ -74,7 +74,7 @@ def main():
     p.add_argument("--check", action="store_true")
     args = p.parse_args()
     rows = build()
-    content = "".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n" for x in rows)
+    content = "".join(json.dumps(x, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n" for x in rows)
     if args.check:
         if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf8") != content:
             raise SystemExit("expansion-001 corpus out of sync")
