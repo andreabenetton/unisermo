@@ -73,7 +73,7 @@ def extract(answer):
     text=answer.strip()
     # Common LLM formatting: a single fenced JSON object. Do not scrape
     # arbitrary prose, accept multiple blocks, or guess missing fields.
-    match=re.fullmatch(r"```(?:json)?\\s*\\n(\\{[^\x60]*\\})\\s*\\n```",text,re.I|re.S)
+    match=re.fullmatch(r"```(?:json)?\s*\n(\{[^```]*\})\s*\n```",text,re.I|re.S)
     if match:
         text=match.group(1)
     try:
