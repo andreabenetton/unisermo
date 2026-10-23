@@ -1,0 +1,37 @@
+name: One-shot discourse semantic validation
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/discourse-semantics-once.yml']
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Verify bounded authorization
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MESSAGE" = 'ci: run six semantic discourse queries once' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify corpus and tests
+        run: |
+          python -m benchmarks.build_discourse_001 --check
+          python -m unittest discover -s tests -p 'test_discourse_semantics.py' -v
+      - name: Bounded OpenRouter six requests
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.discourse_semantics_runner --output benchmarks/reports/discourse-slots.jsonl
+      - name: Preserve full raw and scored output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: discourse-slots-${{ github.run_id }}
+          path: benchmarks/reports/discourse-slots*
+          if-no-files-found: warn
+          retention-days: 30
