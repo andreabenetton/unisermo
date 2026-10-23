@@ -1,0 +1,94 @@
+name: OpenRouter lexical recognition (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Approved OpenRouter model"
+        required: true
+        default: "qwen/qwen3-32b"
+        type: choice
+        options:
+          - "qwen/qwen3-32b"
+          - "google/gemma-3-27b-it"
+      subset:
+        description: "smoke=6; development=54; full=72 requests"
+        required: true
+        default: "smoke"
+        type: choice
+        options:
+          - smoke
+          - development
+          - full
+      max_requests:
+        description: "Hard ceiling for a single model (smoke 6, development 54, full 72)"
+        required: true
+        default: "6"
+        type: choice
+        options:
+          - "6"
+          - "54"
+          - "72"
+      provider:
+        description: "Optional OpenRouter provider slug; empty uses default first provider without fallbacks"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: unisermo-openrouter-trial
+  cancel-in-progress: false
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check runner and answer-key integrity (offline)
+        run: |
+          python -m unittest discover -s tests -p 'test_openrouter_runner.py' -v
+          python -m unittest discover -s tests -p 'test_root_recognition.py' -v
+      - name: Validate dispatch input without secrets
+        env:
+          SUBSET: ${{ inputs.subset }}
+          MAX_REQUESTS: ${{ inputs.max_requests }}
+        run: |
+          python - <<'PY'
+          import os
+          n = int(os.environ["MAX_REQUESTS"])
+          required = {"smoke": 6, "development": 54, "full": 72}[os.environ["SUBSET"]]
+          if n != required:
+              raise SystemExit(f"Set max_requests to {required} for {os.environ['SUBSET']}")
+          PY
+      - name: Run isolated OpenRouter questions
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MODEL: ${{ inputs.model }}
+          SUBSET: ${{ inputs.subset }}
+          MAX_REQUESTS: ${{ inputs.max_requests }}
+          PROVIDER: ${{ inputs.provider }}
+        run: |
+          test -n "$OPENROUTER_API_KEY" || { echo 'Missing OPENROUTER_API_KEY repository secret'; exit 1; }
+          python -m benchmarks.openrouter_runner \
+            --model "$MODEL" \
+            --subset "$SUBSET" \
+            --max-requests "$MAX_REQUESTS" \
+            --provider "$PROVIDER" \
+            --output "benchmarks/reports/openrouter-responses.jsonl"
+      - name: Upload responses without credentials
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openrouter-root-recognition-${{ inputs.subset }}-${{ github.run_id }}
+          path: |
+            benchmarks/reports/openrouter-responses.jsonl
+            benchmarks/reports/openrouter-responses.score.json
+          if-no-files-found: error
+          retention-days: 14
