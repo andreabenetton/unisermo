@@ -68,8 +68,16 @@ def build():
     return questions,key
 
 def extract(answer):
+    if not isinstance(answer,str):
+        return None
+    text=answer.strip()
+    # Common LLM formatting: a single fenced JSON object. Do not scrape
+    # arbitrary prose, accept multiple blocks, or guess missing fields.
+    match=re.fullmatch(r"```(?:json)?\\s*\\n(\\{[^\x60]*\\})\\s*\\n```",text,re.I|re.S)
+    if match:
+        text=match.group(1)
     try:
-        value=json.loads(answer)
+        value=json.loads(text)
         if not isinstance(value,dict) or set(value)!={"verb"} or not isinstance(value["verb"],str):
             return None
         s=value["verb"].lower().strip()
