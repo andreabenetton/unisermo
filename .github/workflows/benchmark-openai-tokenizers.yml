@@ -35,6 +35,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_benchmarks.py' -v
           python -m unittest discover -s tests -p 'test_diagnostics.py' -v
           python benchmarks/build_pilot.py --check
+          python -m benchmarks.build_expansion_001 --check
           python -m unittest discover -s tests -p 'test_lexical_screen.py' -v
           python -m unittest discover -s tests -p 'test_review.py' -v
           python -m unittest discover -s tests -p 'test_modern_evidence.py' -v
