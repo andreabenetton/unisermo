@@ -1,0 +1,48 @@
+name: One-shot compound context amortization
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/compound-context-once.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  qwen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Confirm authorized one-shot push
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MESSAGE" = 'ci: execute controlled compound context comparison' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate 24 bounded independent and history questions
+        run: |
+          python - <<'PY'
+          from benchmarks.compound_context_runner import build
+          q,k=build()
+          assert len(q)==len(k)==24
+          assert sum(x['mode']=='history_dictionary' for x in q)==12
+          PY
+      - name: Run actual model conversation
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          test -n "$OPENROUTER_API_KEY" || exit 1
+          python -m benchmarks.compound_context_runner --model qwen/qwen3-32b --output benchmarks/reports/compound-context-qwen.jsonl
+      - name: Preserve partial responses and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compound-context-qwen-${{ github.run_id }}
+          path: |
+            benchmarks/reports/compound-context-qwen.jsonl
+            benchmarks/reports/compound-context-qwen.score.json
+          if-no-files-found: warn
+          retention-days: 30
