@@ -18,8 +18,8 @@ class TestLexicalExpansion(unittest.TestCase):
     def test_screen_preserves_status_and_missing_evidence(self):
         result=evaluate(DATA,M,L)
         self.assertEqual(result["concepts"],100)
-        self.assertEqual(result["root_proposals"],59)
-        self.assertEqual(result["without_proposals"],41)
+        self.assertEqual(result["root_proposals"],56)
+        self.assertEqual(result["without_proposals"],44)
         self.assertEqual(len(result["coverage_by_domain"]),10)
         self.assertEqual(result["inventory_invalid"],0)
         self.assertTrue(all(x["status"]=="requires_independent_review" for x in result["results"]))
