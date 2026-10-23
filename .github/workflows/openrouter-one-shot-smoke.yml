@@ -1,4 +1,4 @@
-name: One-shot OpenRouter smoke (12 requests maximum)
+name: One-shot OpenRouter bounded lexical experiment
 
 on:
   push:
@@ -12,19 +12,21 @@ permissions:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
         include:
           - slug: qwen
             model: qwen/qwen3-32b
+          - slug: gemma
+            model: google/gemma-3-27b-it
     steps:
       - name: Verify one-shot authorization marker
         env:
           ACTUAL_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: Qwen no-think two-request probe' || exit 1
+          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: execute full OpenRouter lexical benchmark once' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -33,7 +35,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_openrouter_runner.py' -v
           python -m unittest discover -s tests -p 'test_root_recognition.py' -v
-      - name: Run six isolated paid requests
+      - name: Run at most 72 isolated paid requests
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MODEL: ${{ matrix.model }}
@@ -41,13 +43,15 @@ jobs:
         run: |
           test -n "$OPENROUTER_API_KEY" || { echo 'OPENROUTER_API_KEY unavailable'; exit 1; }
           python -m benchmarks.openrouter_runner \
-            --model "$MODEL" --subset probe --max-requests 2 \
+            --model "$MODEL" --subset full --max-requests 72 \
             --output "benchmarks/reports/openrouter-smoke-$SLUG.jsonl"
       - name: Upload raw real-model replies
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: openrouter-smoke-${{ matrix.slug }}-${{ github.run_id }}
-          path: benchmarks/reports/openrouter-smoke-${{ matrix.slug }}.jsonl
+          name: openrouter-full-${{ matrix.slug }}-${{ github.run_id }}
+          path: |
+            benchmarks/reports/openrouter-smoke-${{ matrix.slug }}.jsonl
+            benchmarks/reports/openrouter-smoke-${{ matrix.slug }}.score.json
           if-no-files-found: warn
-          retention-days: 14
+          retention-days: 30
