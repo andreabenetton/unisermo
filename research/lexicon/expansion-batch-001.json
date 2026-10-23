@@ -25,7 +25,7 @@
       "concept_frequency": null,
       "source_languages_reviewed": [],
       "canonical_adoption": false,
-      "notes": null
+      "notes": "Distinguish household/family collective from relational kinship roots; do not presume famil creates mother/father terms."
     },
     {
       "id": "mother",
@@ -34,9 +34,9 @@
       "meaning_it": "madre",
       "priority_band": "A_high",
       "priority_basis": "expert_coverage_hypothesis_not_measured_frequency",
-      "proposal": "mater",
-      "proposal_origin": "provisional Latin/international resemblance hypothesis; etymology unverified",
-      "review_status": "concept_and_root_unreviewed",
+      "proposal": null,
+      "proposal_origin": null,
+      "review_status": "prior_kinship_system_review_required",
       "semantic_boundary_review": "pending",
       "phonology_review": "pending",
       "collision_review": "pending",
@@ -45,7 +45,7 @@
       "concept_frequency": null,
       "source_languages_reviewed": [],
       "canonical_adoption": false,
-      "notes": null
+      "notes": "Pending structured-kinship proposal par/paro/pare: pare = mother, feminine of par = parent. Not yet canonical."
     },
     {
       "id": "father",
@@ -54,9 +54,9 @@
       "meaning_it": "padre",
       "priority_band": "A_high",
       "priority_basis": "expert_coverage_hypothesis_not_measured_frequency",
-      "proposal": "pater",
-      "proposal_origin": "provisional Latin/international resemblance hypothesis; etymology unverified",
-      "review_status": "concept_and_root_unreviewed",
+      "proposal": null,
+      "proposal_origin": null,
+      "review_status": "prior_kinship_system_review_required",
       "semantic_boundary_review": "pending",
       "phonology_review": "pending",
       "collision_review": "pending",
@@ -65,7 +65,7 @@
       "concept_frequency": null,
       "source_languages_reviewed": [],
       "canonical_adoption": false,
-      "notes": null
+      "notes": "Pending structured-kinship proposal par/paro/pare: paro = father. Not yet canonical."
     },
     {
       "id": "child",
@@ -74,9 +74,9 @@
       "meaning_it": "bambino; figlio",
       "priority_band": "A_high",
       "priority_basis": "expert_coverage_hypothesis_not_measured_frequency",
-      "proposal": "infan",
-      "proposal_origin": "provisional Latin/international resemblance hypothesis; etymology unverified",
-      "review_status": "concept_and_root_unreviewed",
+      "proposal": null,
+      "proposal_origin": null,
+      "review_status": "prior_kinship_system_review_required",
       "semantic_boundary_review": "pending",
       "phonology_review": "pending",
       "collision_review": "pending",
@@ -85,7 +85,7 @@
       "concept_frequency": null,
       "source_languages_reviewed": [],
       "canonical_adoption": false,
-      "notes": null
+      "notes": "Separate generic child (age) from descendant/offspring relation; the earlier fil/filo/file = child-son-daughter relation is proposed, not canon. Do not use infan without a semantic boundary decision."
     },
     {
       "id": "friend",
@@ -2007,5 +2007,9 @@
       "canonical_adoption": false,
       "notes": null
     }
+  ],
+  "notes": [
+    "Kinship concepts are governed by an earlier unratified system of neutral bases plus -o masculine / -e feminine: par/paro/pare, fil/filo/file, av/avo/ave, avun/avuno/avune etc. Do not independently canonize mother=mater, father=pater, or child=infan. The existing confirmed frat=brother remains normative pending explicit migration.",
+    "Numerals are ALREADY defined in language/numerals.md: nul uno bis ter for kin ses set oto nin; dek sen mil; combined as one orthographic word. jer counts iteration/relation steps. Never regenerate independent numeral roots."
   ]
 }
