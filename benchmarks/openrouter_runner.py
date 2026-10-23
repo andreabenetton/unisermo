@@ -32,6 +32,12 @@ def invoke(key: str, model: str, question: dict, provider: str | None) -> dict:
         "stream": False, "temperature": 0, "max_tokens": MAX_OUTPUT,
         "provider": routing,
     }
+    # Qwen3 defaults to reasoning and can consume MAX_OUTPUT with no visible
+    # answer. Request non-thinking mode explicitly for this lexical task.
+    if model == MODELS["qwen"]:
+        payload["reasoning"] = {"enabled": False}
+        payload["temperature"] = 0.7
+        payload["seed"] = 23
     request = urllib.request.Request(URL,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Authorization": "Bearer " + key, "Content-Type": "application/json",
