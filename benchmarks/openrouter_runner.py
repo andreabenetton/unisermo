@@ -22,14 +22,14 @@ MAX_OUTPUT = 48
 class RateLimited(RuntimeError):
     """Retryable provider rate limit, without copying upstream response bodies."""
 
-def invoke(key: str, model: str, question: dict, provider: str | None) -> dict:
+def invoke(key: str, model: str, question: dict, provider: str | None, max_output: int = MAX_OUTPUT) -> dict:
     routing = {"allow_fallbacks": False, "data_collection": "deny"}
     if provider:
         routing["only"] = [provider]
         routing["order"] = [provider]
     payload = {
         "model": model, "messages": question["messages"],
-        "stream": False, "temperature": 0, "max_tokens": MAX_OUTPUT,
+        "stream": False, "temperature": 0, "max_tokens": max_output,
         "provider": routing,
     }
     # Qwen3 defaults to reasoning and can consume MAX_OUTPUT with no visible
