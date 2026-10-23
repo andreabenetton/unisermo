@@ -47,6 +47,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_root_semantic_guard.py' -v
           python -m unittest discover -s tests -p 'test_root_recognition.py' -v
           python -m unittest discover -s tests -p 'test_open_inference.py' -v
+          python -m unittest discover -s tests -p 'test_document_scaling.py' -v
           python -m unittest discover -s tests -p 'test_lexical_expansion.py' -v
           python -m unittest discover -s tests -p 'test_productive_compounds.py' -v
       - name: Tokenize pilot with two real OpenAI encodings
@@ -79,6 +80,8 @@ jobs:
         run: python -m benchmarks.lexical_expansion --output benchmarks/reports/lexical-expansion-001.json
       - name: Validate experimental productive compounds
         run: python -m benchmarks.productive_compounds --output benchmarks/reports/productive-compounds.json
+      - name: Measure synthetic 100 and 1000 entry document header scaling
+        run: python -m benchmarks.document_scaling --output benchmarks/reports/document-scaling.json
       - name: Publish machine-readable results as CI artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -96,6 +99,7 @@ jobs:
             benchmarks/reports/root-semantic-parity.json
             benchmarks/reports/lexical-expansion-001.json
             benchmarks/reports/productive-compounds.json
+            benchmarks/reports/document-scaling.json
             benchmarks/reports/root-recognition-prompts-v1.jsonl
             benchmarks/reports/root-recognition-answer-key-v1.jsonl
           if-no-files-found: error
