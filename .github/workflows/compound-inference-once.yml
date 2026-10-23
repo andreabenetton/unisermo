@@ -1,0 +1,56 @@
+name: One-shot compound interpretation benchmark
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/compound-inference-once.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    if: ${{ github.event.head_commit.message == 'ci: run one-shot compound comprehension experiment' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: qwen
+            model: qwen/qwen3-32b
+          - label: gemma
+            model: google/gemma-3-27b-it
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate corpus and 36 prompt limit
+        run: |
+          python - <<'PY'
+          from benchmarks.compound_inference import build
+          q,k=build()
+          assert len(q)==len(k)==36
+          assert len({x['id'] for x in q})==36
+          assert all(len(x['messages'])==1 for x in q)
+          print('36 prompts validated')
+          PY
+      - name: Run isolated paid requests
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MODEL: ${{ matrix.model }}
+          LABEL: ${{ matrix.label }}
+        run: |
+          test -n "$OPENROUTER_API_KEY" || exit 1
+          python -m benchmarks.compound_inference_runner --model "$MODEL" --output "benchmarks/reports/compound-$LABEL.jsonl"
+      - name: Archive raw and mechanically scored answers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compound-${{ matrix.label }}-${{ github.run_id }}
+          path: |
+            benchmarks/reports/compound-${{ matrix.label }}.jsonl
+            benchmarks/reports/compound-${{ matrix.label }}.score.json
+          if-no-files-found: warn
+          retention-days: 30
