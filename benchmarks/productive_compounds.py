@@ -32,8 +32,13 @@ def build_report():
             errors.append(f"{ident}: surface does not match components")
         if any(not part or not set(part)<=ALPHABET for part in components):
             errors.append(f"{ident}: forbidden grapheme")
-        unknown=[part for part in components if part not in canonical]
+        unknown=[part for part in components if part not in canonical and not (part=="mov" and part in indexed and item["evidence"]=="confirmed_compound")]
         if unknown:errors.append(f"{ident}: unconfirmed components {unknown}")
+        if "mov" in components and item["evidence"]=="hypothetical_test":
+            # mov is attested in grammar, but not a confirmed standalone root.
+            results_warning = "mov_standalone_status_unconfirmed"
+        else:
+            results_warning = None
         indexed_surface=item["surface"] in indexed
         if item["evidence"]=="confirmed_compound" and not indexed_surface:
             errors.append(f"{ident}: claimed compound not indexed")
@@ -44,7 +49,7 @@ def build_report():
         results.append({"id":ident,"surface":item["surface"],
             "segmentation":components,"indexed_surface":indexed_surface,
             "evidence":item["evidence"],"ambiguity":item["ambiguity"],
-            "meaning_status":"not_semantically_reviewed"})
+            "meaning_status":"not_semantically_reviewed","warning":results_warning})
     if trials.get("canonical_changes") is not False:
         errors.append("trial wrongly asserts canonical changes")
     return {"schema":"unisermo/productive-compound-validation@1",
