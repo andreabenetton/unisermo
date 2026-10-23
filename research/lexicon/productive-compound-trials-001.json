@@ -1,0 +1,160 @@
+{
+  "schema": "unisermo/productive-compound-trials@1",
+  "status": "experimental_not_normative",
+  "principle": "separate compositionality from out-of-context LLM recognition; opaque meaning and pragmatic conventionalization require independent review",
+  "cases": [
+    {
+      "id": "airplane",
+      "components": [
+        "aer",
+        "plan"
+      ],
+      "surface": "aerplan",
+      "compositional_gloss": "air + plane",
+      "expected_concept": "airplane",
+      "evidence": "confirmed_compound",
+      "ambiguity": "low"
+    },
+    {
+      "id": "ascent",
+      "components": [
+        "alt",
+        "mov"
+      ],
+      "surface": "altmov",
+      "compositional_gloss": "up + move",
+      "expected_concept": "ascend",
+      "evidence": "confirmed_compound",
+      "ambiguity": "low"
+    },
+    {
+      "id": "descent",
+      "components": [
+        "bas",
+        "mov"
+      ],
+      "surface": "basmov",
+      "compositional_gloss": "down + move",
+      "expected_concept": "descend",
+      "evidence": "confirmed_compound",
+      "ambiguity": "low"
+    },
+    {
+      "id": "civic_voice",
+      "components": [
+        "siv",
+        "vok"
+      ],
+      "surface": "sivvok",
+      "compositional_gloss": "citizen + voice/call",
+      "expected_concept": "civic voice or civic call; underspecified",
+      "evidence": "hypothetical_test",
+      "ambiguity": "high"
+    },
+    {
+      "id": "air_motion",
+      "components": [
+        "aer",
+        "mov"
+      ],
+      "surface": "aermov",
+      "compositional_gloss": "air + move",
+      "expected_concept": "movement of air / moving through air; unresolved",
+      "evidence": "hypothetical_test",
+      "ambiguity": "high"
+    },
+    {
+      "id": "circular_motion",
+      "components": [
+        "sirkul",
+        "mov"
+      ],
+      "surface": "sirkulmov",
+      "compositional_gloss": "circle + move",
+      "expected_concept": "circular movement; contextual",
+      "evidence": "hypothetical_test",
+      "ambiguity": "medium"
+    },
+    {
+      "id": "care_work",
+      "components": [
+        "kurar",
+        "ager"
+      ],
+      "surface": "kurarager",
+      "compositional_gloss": "care/cure + act/do",
+      "expected_concept": "care work or caring action; unresolved",
+      "evidence": "hypothetical_test",
+      "ambiguity": "high"
+    },
+    {
+      "id": "clear_voice",
+      "components": [
+        "klar",
+        "vok"
+      ],
+      "surface": "klarvok",
+      "compositional_gloss": "clear + voice",
+      "expected_concept": "clear voice; unresolved",
+      "evidence": "hypothetical_test",
+      "ambiguity": "medium"
+    },
+    {
+      "id": "structure_plan",
+      "components": [
+        "stru",
+        "plan"
+      ],
+      "surface": "struplan",
+      "compositional_gloss": "build/structure + plane/plan",
+      "expected_concept": "structural plane or construction plan; ambiguous",
+      "evidence": "hypothetical_test",
+      "ambiguity": "high"
+    },
+    {
+      "id": "air_center",
+      "components": [
+        "aer",
+        "sentr"
+      ],
+      "surface": "aersentr",
+      "compositional_gloss": "air + center",
+      "expected_concept": "air center; context dependent",
+      "evidence": "hypothetical_test",
+      "ambiguity": "high"
+    },
+    {
+      "id": "human_voice",
+      "components": [
+        "uman",
+        "vok"
+      ],
+      "surface": "umanvok",
+      "compositional_gloss": "person/human + voice",
+      "expected_concept": "human voice; contextual",
+      "evidence": "hypothetical_test",
+      "ambiguity": "medium"
+    },
+    {
+      "id": "downward_pull",
+      "components": [
+        "bas",
+        "trak"
+      ],
+      "surface": "bastrak",
+      "compositional_gloss": "down + pull",
+      "expected_concept": "pull downward; context dependent",
+      "evidence": "hypothetical_test",
+      "ambiguity": "medium"
+    }
+  ],
+  "research_questions": [
+    "Do readers segment the compound correctly without a glossary?",
+    "Can they recover the broad compositional gloss with component definitions?",
+    "Do they overclaim one exact conventional meaning from an ambiguous compound?",
+    "How much does a one-time rule primer reduce errors relative to repeated full glossaries?",
+    "What is the input/output token price for prompted decoding relative to single independent lexical roots?"
+  ],
+  "human_validation": "deferred_in_issue_3",
+  "canonical_changes": false
+}
