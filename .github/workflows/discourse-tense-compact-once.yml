@@ -1,0 +1,42 @@
+name: One-shot compact tense comparison
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/discourse-tense-compact-once.yml']
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Require one-shot commit
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MSG" = 'ci: run compact tense comparison once' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check same documents and answers
+        run: |
+          python - <<'PY'
+          from benchmarks.discourse_tense_compact import build_compact
+          from benchmarks.discourse_semantics import build
+          q,k=build_compact();original,truth=build()
+          assert len(q)==6 and k==truth
+          assert all(q[i]['messages'][0]['content'].endswith(original[i]['messages'][0]['content']) for i in range(6))
+          PY
+      - name: Six bounded model requests
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.discourse_tense_compact_runner --output benchmarks/reports/discourse-compact.jsonl
+      - name: Archive actual responses
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: discourse-compact-${{ github.run_id }}
+          path: benchmarks/reports/discourse-compact*
+          if-no-files-found: warn
+          retention-days: 30
