@@ -40,9 +40,13 @@ def invoke(key: str, model: str, question: dict, provider: str | None, max_outpu
         payload["seed"] = 23
         # Qwen3 model-card supported inline switch: provider may ignore the
         # nested reasoning flag. Treat this as an explicit prompt variant.
-        payload["messages"] = [
-            {"role": "user", "content": question["messages"][0]["content"] + "\n/no_think"}
-        ]
+        # Preserve prior turns for persistent-context experiments.
+        payload["messages"] = [dict(message) for message in question["messages"]]
+        last_user = next((i for i in range(len(payload["messages"])-1, -1, -1)
+                          if payload["messages"][i]["role"] == "user"), None)
+        if last_user is None:
+            raise ValueError("Qwen request requires a user turn")
+        payload["messages"][last_user]["content"] += "\n/no_think"
     request = urllib.request.Request(URL,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Authorization": "Bearer " + key, "Content-Type": "application/json",
