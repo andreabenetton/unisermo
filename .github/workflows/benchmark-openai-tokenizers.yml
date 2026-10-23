@@ -43,6 +43,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_root_family_collisions.py' -v
           python -m unittest discover -s tests -p 'test_root_semantic_guard.py' -v
           python -m unittest discover -s tests -p 'test_root_recognition.py' -v
+          python -m unittest discover -s tests -p 'test_open_inference.py' -v
       - name: Tokenize pilot with two real OpenAI encodings
         run: python -m benchmarks measure-openai --include-draft --output-dir benchmarks/reports
       - name: Generate baseline diagnostic
