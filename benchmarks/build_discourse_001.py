@@ -46,7 +46,7 @@ def build():
 def main():
     import argparse
     p=argparse.ArgumentParser();p.add_argument("--check",action="store_true");a=p.parse_args()
-    content="".join(json.dumps(x,sort_keys=True,ensure_ascii=False)+"\n" for x in build())
+    content="".join(json.dumps(x,sort_keys=True,ensure_ascii=False,separators=(",",":"))+"\n" for x in build())
     if a.check:
         if not OUT.exists() or OUT.read_text()!=content:raise SystemExit("discourse corpus out of sync")
     else:OUT.write_text(content)
