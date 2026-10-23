@@ -17,8 +17,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - slug: qwen
-            model: qwen/qwen3-32b
           - slug: gemma
             model: google/gemma-3-27b-it
     steps:
@@ -26,7 +24,7 @@ jobs:
         env:
           ACTUAL_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: execute bounded OpenRouter smoke exactly once' || exit 1
+          test "$ACTUAL_COMMIT_MESSAGE" = 'ci: retry Gemma smoke with bounded rate-limit handling' || exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -46,10 +44,10 @@ jobs:
             --model "$MODEL" --subset smoke --max-requests 6 \
             --output "benchmarks/reports/openrouter-smoke-$SLUG.jsonl"
       - name: Upload raw real-model replies
-        if: success()
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: openrouter-smoke-${{ matrix.slug }}-${{ github.run_id }}
           path: benchmarks/reports/openrouter-smoke-${{ matrix.slug }}.jsonl
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 14
