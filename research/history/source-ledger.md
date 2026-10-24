@@ -40,6 +40,8 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 
 | [10 August original kinship dialogue versus Git](august-kinship-original-dialogue-versus-git.md) | Speaker-attributed 16:09 `gen/geno/gene`, 16:11 **user-approved `adel/adelo/adele`**, 16:12 proposed `adelgen`, relation composition, 16:31 generic `jer`; immutable Git 15:56 confirmed `frat` | **Distinct evidentiary layers**: dated conversation index, directly versioned `frat` lexicon and `jer` grammar, October retrospective note. User acceptance of `adel` **must not be mislabeled unapproved brainstorming**, nor silently substituted for currently canonical `frat`. Full original transcript and later resolution unknown. |
 
+| [Author-directed restoration of `adel`](august-kinship-original-dialogue-versus-git.md) | Current 24 Oct direct author statement says the 10 Aug accepted sibling family was simply **forgotten**; changes canonical lexicon from `frat` to `adel/adelo/adele` and archives its history | **Author testimony** for intent/cause; contemporary original user message 10 Aug 16:11 supports prior acceptance; Git `a1df1425` proves older `frat` status; 24 Oct branch/PR proves actual implementation. No other kinship roots automatically approved. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
