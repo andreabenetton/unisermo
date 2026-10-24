@@ -1,0 +1,45 @@
+name: One-shot controlled proposition meaning pilot
+on:
+  push:
+    branches: [research/proposition-meaning-pilot-20261024]
+    paths: ['.github/workflows/proposition-meaning-once.yml']
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-proposition-meaning-20261024
+  cancel-in-progress: false
+jobs:
+  experiment:
+    if: >-
+      github.event.head_commit.message == 'ci: execute proposition meaning study once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Preflight parser gates and API spend bounds
+        run: |
+          python -m unittest discover -s tests -p 'test_proposition_meaning.py' -v
+          python - <<'PY'
+          from benchmarks.proposition_meaning import load_corpus,build_questions,MAX_REQUESTS,MAX_OUTPUT,MAX_OBSERVED_COST_USD,MODEL
+          assert len(load_corpus())==12
+          assert len(build_questions())==MAX_REQUESTS==24
+          assert MAX_OUTPUT==520
+          assert MAX_OBSERVED_COST_USD==0.02
+          assert MODEL=='qwen/qwen3-32b'
+          print('24 calls max, controlled valid 24 propositions; only development data, no holdout')
+          PY
+      - name: Run bounded Qwen proposition-meaning extraction
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.proposition_meaning --output benchmarks/reports/proposition-meaning-raw.jsonl
+      - name: Preserve original outputs including partial records on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: proposition-meaning-${{ github.run_id }}
+          path: benchmarks/reports/proposition-meaning-*
+          if-no-files-found: warn
+          retention-days: 30
