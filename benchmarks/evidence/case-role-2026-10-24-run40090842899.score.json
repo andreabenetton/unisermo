@@ -1,0 +1,1727 @@
+{
+  "schema": "unisermo/case-role-decoding-dev@1",
+  "status": "development_automated_gold_not_independent_semantic_validation",
+  "requested_model": "qwen/qwen3-32b",
+  "calls": 24,
+  "documents": 12,
+  "comparisons": {
+    "case": {
+      "exact_clauses": 16,
+      "total_clauses": 24,
+      "exact_arguments": 35,
+      "total_arguments": 48,
+      "exact_stems": 38,
+      "exact_tags": 37,
+      "format_errors": {},
+      "tag_confusions": {
+        "ablative -> resultative": 4,
+        "dative_allative -> resultative": 1,
+        "ablative -> accusative": 1,
+        "dative_allative -> accusative": 4,
+        "ablative -> dative_allative": 1
+      },
+      "usage": {
+        "prompt_tokens": 4208,
+        "completion_tokens": 1531,
+        "total_tokens": 5739,
+        "cost": 0.00076532
+      },
+      "cost_per_exact_clause": 4.78325e-05,
+      "details": [
+        {
+          "doc": "CR001",
+          "family": "move",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR001",
+          "family": "move",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR002",
+          "family": "move",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR002",
+          "family": "move",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR003",
+          "family": "move",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR003",
+          "family": "move",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "movefi",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR004",
+          "family": "move",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "accusative"
+              },
+              {
+                "stem": "uman",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR004",
+          "family": "move",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "accusative"
+              },
+              {
+                "stem": "dom",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR005",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "likwid",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "likwid",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR005",
+          "family": "transition",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "student",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "student",
+                "tag": "ablative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR006",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "likwid",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solida",
+                "tag": "resultative"
+              },
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR006",
+          "family": "transition",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "student",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktora",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "studenta",
+                "tag": "ablative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR007",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "likwid",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR007",
+          "family": "transition",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "student",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "student",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR008",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "likwid",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "dative_allative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR008",
+          "family": "transition",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "dative_allative"
+              },
+              {
+                "stem": "student",
+                "tag": "ablative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "student",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR009",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR009",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR010",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR010",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR011",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR011",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR012",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "accusative"
+              },
+              {
+                "stem": "solid",
+                "tag": "resultative"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR012",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "accusative"
+              },
+              {
+                "stem": "doktor",
+                "tag": "resultative"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "role": {
+      "exact_clauses": 15,
+      "total_clauses": 24,
+      "exact_arguments": 39,
+      "total_arguments": 48,
+      "exact_stems": 43,
+      "exact_tags": 44,
+      "format_errors": {},
+      "tag_confusions": {
+        "source -> result": 3,
+        "destination -> result": 1
+      },
+      "usage": {
+        "prompt_tokens": 4160,
+        "completion_tokens": 1474,
+        "total_tokens": 5634,
+        "cost": 0.00074552
+      },
+      "cost_per_exact_clause": 4.970133333333333e-05,
+      "details": [
+        {
+          "doc": "CR001",
+          "family": "move",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR001",
+          "family": "move",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR002",
+          "family": "move",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dome",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR002",
+          "family": "move",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR003",
+          "family": "move",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "domem",
+                "tag": "patient"
+              },
+              {
+                "stem": "umanad",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR003",
+          "family": "move",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwaem",
+                "tag": "patient"
+              },
+              {
+                "stem": "domad",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR004",
+          "family": "move",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "dom",
+                "tag": "patient"
+              },
+              {
+                "stem": "uman",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR004",
+          "family": "move",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          },
+          "received": {
+            "verb": "mov",
+            "args": [
+              {
+                "stem": "aerplan",
+                "tag": "patient"
+              },
+              {
+                "stem": "dom",
+                "tag": "destination"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR005",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR005",
+          "family": "transition",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR006",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR006",
+          "family": "transition",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR007",
+          "family": "transition",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR007",
+          "family": "transition",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR008",
+          "family": "transition",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "solid",
+                "tag": "destination"
+              },
+              {
+                "stem": "likwid",
+                "tag": "source"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR008",
+          "family": "transition",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "destination"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "doktor",
+                "tag": "result"
+              },
+              {
+                "stem": "student",
+                "tag": "source"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR009",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR009",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR010",
+          "family": "cause_result",
+          "event": 0,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traese",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR010",
+          "family": "cause_result",
+          "event": 1,
+          "exact": false,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traesodun",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR011",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR011",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR012",
+          "family": "cause_result",
+          "event": 0,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "akwa",
+                "tag": "patient"
+              },
+              {
+                "stem": "solid",
+                "tag": "result"
+              }
+            ]
+          }
+        },
+        {
+          "doc": "CR012",
+          "family": "cause_result",
+          "event": 1,
+          "exact": true,
+          "valid_event_shape": true,
+          "expected": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          },
+          "received": {
+            "verb": "traes",
+            "args": [
+              {
+                "stem": "uman",
+                "tag": "patient"
+              },
+              {
+                "stem": "doktor",
+                "tag": "result"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "document_pairing": [
+    {
+      "doc": "CR001",
+      "family": "move",
+      "case": 2,
+      "role": 2
+    },
+    {
+      "doc": "CR002",
+      "family": "move",
+      "case": 2,
+      "role": 1
+    },
+    {
+      "doc": "CR003",
+      "family": "move",
+      "case": 1,
+      "role": 0
+    },
+    {
+      "doc": "CR004",
+      "family": "move",
+      "case": 2,
+      "role": 2
+    },
+    {
+      "doc": "CR005",
+      "family": "transition",
+      "case": 1,
+      "role": 1
+    },
+    {
+      "doc": "CR006",
+      "family": "transition",
+      "case": 0,
+      "role": 1
+    },
+    {
+      "doc": "CR007",
+      "family": "transition",
+      "case": 0,
+      "role": 1
+    },
+    {
+      "doc": "CR008",
+      "family": "transition",
+      "case": 0,
+      "role": 1
+    },
+    {
+      "doc": "CR009",
+      "family": "cause_result",
+      "case": 2,
+      "role": 2
+    },
+    {
+      "doc": "CR010",
+      "family": "cause_result",
+      "case": 2,
+      "role": 0
+    },
+    {
+      "doc": "CR011",
+      "family": "cause_result",
+      "case": 2,
+      "role": 2
+    },
+    {
+      "doc": "CR012",
+      "family": "cause_result",
+      "case": 2,
+      "role": 2
+    }
+  ],
+  "limitations": "Different outputs evaluate different target labels; no semantic equivalence or English baseline. The grammar primer teaches the relevant rule. Same lexical material and templated families are not a genuine held-out sample.",
+  "raw_sha256": "c55cd847cd2522f8857432e0121c990f39064a78335fccd5e5fa28e9430695e6",
+  "corpus_sha256": "0d8c6a10f7cb8b4545654208af9cfbf8af65f870b0e2e6334c7adc9e6df4a1fb",
+  "observed_cost_usd": 0.0015108399999999996,
+  "controls": {
+    "temperature": 0.7,
+    "seed": 23,
+    "no_think": true,
+    "provider_fallbacks": false,
+    "max_output": 340,
+    "call_cap": 24,
+    "observed_cost_guard_usd": 0.02
+  }
+}

@@ -1,0 +1,61 @@
+name: Archive case-role semantic evidence once
+on:
+  push:
+    branches: [research/case-vs-role-decoding-20261024]
+    paths: ['.github/workflows/case-role-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive verified case-role evidence once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Retrieve completed original run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/case-role-evidence
+          gh run download 40090842899 --repo andreabenetton/unisermo --name case-role-40090842899 --dir /tmp/case-role-evidence
+          test -s /tmp/case-role-evidence/case-role-raw.jsonl
+          test -s /tmp/case-role-evidence/case-role-raw.score.json
+      - name: Recheck raw SHA, source, model/provider, costs and score
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from benchmarks.case_role_decoding import CORPUS,MODEL,load_corpus,evaluate
+          p=Path('/tmp/case-role-evidence/case-role-raw.jsonl')
+          s=json.loads(Path('/tmp/case-role-evidence/case-role-raw.score.json').read_text())
+          rows=[json.loads(line) for line in p.read_text().splitlines() if line.strip()]
+          assert len(rows)==24 and len({x['id'] for x in rows})==24
+          assert [x['call_order'] for x in rows]==list(range(1,25))
+          assert all(x['returned_model']==MODEL and x['provider']=='DeepInfra' and x['finish_reason']=='stop' for x in rows)
+          assert hashlib.sha256(p.read_bytes()).hexdigest()==s['raw_sha256']
+          assert hashlib.sha256(CORPUS.read_bytes()).hexdigest()==s['corpus_sha256']
+          assert abs(sum(x['usage']['cost'] for x in rows)-s['observed_cost_usd'])<1e-12
+          assert s['observed_cost_usd']<.02
+          again=evaluate(rows,load_corpus())
+          assert again['comparisons']==s['comparisons']
+          assert again['document_pairing']==s['document_pairing']
+          assert again['calls']==s['calls']
+          print('Verified original 24 calls and all score fields, original hashes and provider billing')
+          PY
+      - name: Commit original bytes to permanent evidence paths
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/case-role-evidence/case-role-raw.jsonl benchmarks/evidence/case-role-2026-10-24-run40090842899.jsonl
+          cp /tmp/case-role-evidence/case-role-raw.score.json benchmarks/evidence/case-role-2026-10-24-run40090842899.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/case-role-2026-10-24-run40090842899.jsonl benchmarks/evidence/case-role-2026-10-24-run40090842899.score.json
+          git commit -m 'research: preserve verified original case-role Qwen evidence'
+          git push origin HEAD:research/case-vs-role-decoding-20261024
