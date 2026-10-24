@@ -96,3 +96,8 @@ Schematic illustrations (not claims of complete parser support): `se P, alor Q` 
 ## Order of causal clauses (ratified 24 October 2026)
 
 Both `P due Q` (effect followed by its causal explanation) and `due Q, P` (fronted causal clause followed by effect) are accepted. In either order Q is the cause and P the effect. `Q, ergo P` instead presents P as an inference/conclusion. General subordinate nesting and delimiter rules are not yet implemented in the restricted Phase 1 parser; no silent acceptance of unparsed forms is implied.
+
+
+## Factual concessive `etsi` (ratified 24 October 2026)
+
+`etsi` introduces an accepted/factual concession: `etsi P, Q` ('although P, Q') and `Q etsi P` ('Q, although P') are both permitted, with P the conceded proposition and Q the contrasting outcome. Distinguish conditional `se` (IF) and adversative `ma` (BUT). The hypothetical reading 'even if P were to happen' is not automatically ratified. The restricted Phase 1 parser does not yet implement compound concessive clauses.
