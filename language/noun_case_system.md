@@ -183,3 +183,8 @@ The already confirmed free relator `due` ('because of', introducing a nominal ph
 - `due Q, P` — Since Q, P (cause first; P is the effect).
 
 This is not the same construction as `Q, ergo P` ('Q, therefore P'): `ergo` explicitly introduces an inference/conclusion rather than labeling the subordinate proposition as a cause. Interrogative `ker` remains WHY. No separate causal connector `kar` is introduced. A parser must preserve which clause is cause and which is effect, and distinguish `due + NP` from `due + finite clause`; punctuation and nested-clause rules beyond the simple examples require further specification.
+
+
+## Factual cause versus evidential justification — required distinction (24 October 2026)
+
+The author requires two separate grammatical treatments for a *real-world causal relation* (one circumstance brings about or contributes to an effect) and a *speaker's reason/evidence for asserting a proposition* (an observation supports an inference without causing the inferred event). `due` is the confirmed **factual causal** linker; the distinct evidential/argumentative linker is **not yet ratified**. Candidate `nam` from Latin is only a proposal. Existing `ergo` indicates an inference/conclusion but does not yet constitute ratification of a reverse evidence marker. Do not silently parse evidence/support as `due` causation.
