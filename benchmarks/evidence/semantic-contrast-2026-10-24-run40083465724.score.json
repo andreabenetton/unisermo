@@ -1,0 +1,313 @@
+{
+  "schema": "unisermo/semantic-contrast-development@1",
+  "status": "completed_development_experiment_not_independent_review",
+  "requested_model": "qwen/qwen3-32b",
+  "probes": 30,
+  "calls": 60,
+  "conditions": {
+    "cold": {
+      "correct": 25,
+      "total": 30,
+      "accuracy": 0.8333333333333334,
+      "by_family": {
+        "case": {
+          "correct": 4,
+          "total": 6
+        },
+        "relator": {
+          "correct": 6,
+          "total": 6
+        },
+        "quantity": {
+          "correct": 6,
+          "total": 6
+        },
+        "deixis_possession": {
+          "correct": 3,
+          "total": 6
+        },
+        "transition_focus": {
+          "correct": 6,
+          "total": 6
+        }
+      },
+      "failures": [
+        {
+          "id": "SC002",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "case"
+        },
+        {
+          "id": "SC004",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "case"
+        },
+        {
+          "id": "SC020",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "deixis_possession"
+        },
+        {
+          "id": "SC022",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "deixis_possession"
+        },
+        {
+          "id": "SC024",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "deixis_possession"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2611,
+        "completion_tokens": 270,
+        "total_tokens": 2881,
+        "cost": 0.00028448
+      },
+      "usd_per_correct_choice": 1.13792e-05
+    },
+    "guided": {
+      "correct": 27,
+      "total": 30,
+      "accuracy": 0.9,
+      "by_family": {
+        "case": {
+          "correct": 6,
+          "total": 6
+        },
+        "relator": {
+          "correct": 6,
+          "total": 6
+        },
+        "quantity": {
+          "correct": 6,
+          "total": 6
+        },
+        "deixis_possession": {
+          "correct": 5,
+          "total": 6
+        },
+        "transition_focus": {
+          "correct": 4,
+          "total": 6
+        }
+      },
+      "failures": [
+        {
+          "id": "SC022",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "deixis_possession"
+        },
+        {
+          "id": "SC026",
+          "expected": "B",
+          "actual": "A",
+          "format_error": null,
+          "family": "transition_focus"
+        },
+        {
+          "id": "SC029",
+          "expected": "A",
+          "actual": "B",
+          "format_error": null,
+          "family": "transition_focus"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 12811,
+        "completion_tokens": 270,
+        "total_tokens": 13081,
+        "cost": 0.00110048
+      },
+      "usd_per_correct_choice": 4.075851851851852e-05
+    }
+  },
+  "paired_outcomes": {
+    "both_correct": 23,
+    "guided_only": 4,
+    "neither": 1,
+    "cold_only": 2
+  },
+  "paired_details": [
+    {
+      "id": "SC001",
+      "family": "case",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC002",
+      "family": "case",
+      "outcome": "guided_only"
+    },
+    {
+      "id": "SC003",
+      "family": "case",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC004",
+      "family": "case",
+      "outcome": "guided_only"
+    },
+    {
+      "id": "SC005",
+      "family": "case",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC006",
+      "family": "case",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC007",
+      "family": "relator",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC008",
+      "family": "relator",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC009",
+      "family": "relator",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC010",
+      "family": "relator",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC011",
+      "family": "relator",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC012",
+      "family": "relator",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC013",
+      "family": "quantity",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC014",
+      "family": "quantity",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC015",
+      "family": "quantity",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC016",
+      "family": "quantity",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC017",
+      "family": "quantity",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC018",
+      "family": "quantity",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC019",
+      "family": "deixis_possession",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC020",
+      "family": "deixis_possession",
+      "outcome": "guided_only"
+    },
+    {
+      "id": "SC021",
+      "family": "deixis_possession",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC022",
+      "family": "deixis_possession",
+      "outcome": "neither"
+    },
+    {
+      "id": "SC023",
+      "family": "deixis_possession",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC024",
+      "family": "deixis_possession",
+      "outcome": "guided_only"
+    },
+    {
+      "id": "SC025",
+      "family": "transition_focus",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC026",
+      "family": "transition_focus",
+      "outcome": "cold_only"
+    },
+    {
+      "id": "SC027",
+      "family": "transition_focus",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC028",
+      "family": "transition_focus",
+      "outcome": "both_correct"
+    },
+    {
+      "id": "SC029",
+      "family": "transition_focus",
+      "outcome": "cold_only"
+    },
+    {
+      "id": "SC030",
+      "family": "transition_focus",
+      "outcome": "both_correct"
+    }
+  ],
+  "guardrails": {
+    "holdout_touched": false,
+    "canonical_changes": false,
+    "human_review": "pending",
+    "max_requests": 60,
+    "observed_cost_limit_usd": 0.04
+  },
+  "limitations": "Canonical expression examples, author-assigned semantic keys, forced-choice English questions, templated pairs, no independently validated translations or dialogue-level anaphora; a high score measures constrained discrimination only.",
+  "corpus_sha256": "b80c9a7380b4f3563de9b2b48863c3b32bce6b8ae3bd9e89848f10d230de0b32",
+  "raw_sha256": "5d0e6668fcc18b305f9bf37c49634277a51cfcf0a8a04576619ccf520c252e4f",
+  "observed_cost_usd": 0.0013849600000000006,
+  "model_controls": {
+    "temperature": 0.7,
+    "seed": 23,
+    "non_thinking": true,
+    "request_max_output": 130,
+    "provider_fallbacks": false
+  }
+}
