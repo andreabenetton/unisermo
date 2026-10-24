@@ -1,0 +1,44 @@
+name: One-shot Unisermo semantic contrast pilot
+on:
+  push:
+    branches: [research/semantic-contrast-pilot-20261024]
+    paths: ['.github/workflows/semantic-contrast-once.yml']
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-semantic-contrast-20261024
+  cancel-in-progress: false
+jobs:
+  semantic-pilot:
+    if: >-
+      github.event.head_commit.message == 'ci: execute semantic contrast pilot once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Preflight canonical provenance and call cap
+        run: |
+          python -m unittest discover -s tests -p 'test_semantic_contrast.py' -v
+          python - <<'PY'
+          from benchmarks.semantic_contrast import MAX_REQUESTS, MAX_COST_USD, MODEL, build_questions, load_corpus
+          c = load_corpus()
+          q = build_questions(c)
+          assert len(c)==30 and len(q)==MAX_REQUESTS==60
+          assert MAX_COST_USD==0.04 and MODEL=='qwen/qwen3-32b'
+          print('preflight OK; no holdout; budget USD 0.04')
+          PY
+      - name: Run bounded semantic choice API comparison
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.semantic_contrast --output benchmarks/reports/semantic-contrast-raw.jsonl
+      - name: Archive all original and derived evidence (including partial on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semantic-contrast-${{ github.run_id }}
+          path: benchmarks/reports/semantic-contrast-*
+          if-no-files-found: warn
+          retention-days: 30
