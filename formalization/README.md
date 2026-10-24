@@ -32,7 +32,7 @@ See [normative numerals](../language/numerals.md). Powers beyond giga, negative 
 
 ## Positive ordinals (`-im`)
 
-The positive ordinal operator `-im` generates a single fused form and contracts the terminal `o` of `uno`/`oto` (including compound final digits): `unim`, `otim`, `dekunim`, `bisdekunim`. It is invariable in noun phrases; the nominal head retains case marking. `nulim` and analytical forms `unoim`, `otoim` are **not recognized** because they have not been unequivocally approved. Fractions are still proposals. The restricted SVO parser accepts only a standalone ordinal modifier, not cooccurrence with other modifiers.
+The positive ordinal operator `-im` generates a single fused form and contracts the terminal `o` of `uno`/`oto` (including compound final digits): `unim`, `otim`, `dekunim`, `bisdekunim`. It is invariable in noun phrases; the nominal head retains case marking. `nulim` is not approved; analytical forms `unoim`, `otoim` are accepted variants normalized to the contracted form. Fractions are still proposals. The restricted SVO parser accepts only a standalone ordinal modifier, not cooccurrence with other modifiers.
 
 Commands: `python3 -m formalization order 21` and `python3 -m formalization ordinal bisdekunim`.
 
