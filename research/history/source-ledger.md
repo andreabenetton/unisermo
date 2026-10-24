@@ -24,6 +24,9 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 
 | [Frozen-baseline implementation audit](glottodelta-original-baseline-audit.md) | Static parsing of `DATA`, `SPEAKER_ESTIMATES`, verified orthography profiles, Georgian graphemes, L/P functions and quality score; contrasts with old/new language inventory | **High confidence** in reported frozen-source content; not independent validation of demographics, IPA sampling or causal role in choices. Includes caveat that speaker denominator exceeds deduplicated persons. |
 
+| [August phonology decision chain](august-phonology-decision-chain.md) | Direct immutable SHA recovery of commits `7311032`, `011247a`, `9aa7b49`, `8bb979b` in **Unisermo** with original alternatives, model scores, decisions and open assumptions | **Verified commit objects**. Quantitative metrics are research models, not validated human intelligibility. Chat-to-commit causation remains partially inferred. |
+| [Ten original ChatGPT HTML snapshots](glottodelta-chatgpt-snapshot-comparison.md) | Direct Library file checkpoint comparison, invariant corpus, code changes and ISO-first denominator reconciliation | **Verified raw-file audit** of 10 out of 39 snapshots. 2,122 ISO-first research languages must not be conflated with raw Glottocode identities. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
