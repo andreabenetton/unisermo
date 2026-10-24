@@ -638,6 +638,14 @@
       "meaning_en": "although; even though (factual concessive)",
       "source": "Explicit author ratification 2026-10-24; Latin etsi",
       "decision": "Concessive conjunction allowing etsi P, Q and Q etsi P. Factual or contextually accepted P contrasted with Q; hypothetical even-if semantics remain unresolved."
+    },
+    {
+      "form": "nam",
+      "category": "function_word",
+      "meaning_it": "infatti; introduce una giustificazione o evidenza per un'affermazione",
+      "meaning_en": "for/indeed; introduces an evidential or argumentative reason supporting an assertion",
+      "source": "Explicit author ratification 2026-10-24; Latin nam",
+      "decision": "P nam Q indicates that the speaker presents Q as support for asserting P, without claiming that Q caused P or that Q proves P. Distinct from factual causal due and inference-first ergo."
     }
   ]
 }
