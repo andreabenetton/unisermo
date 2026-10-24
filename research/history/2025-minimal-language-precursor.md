@@ -2,6 +2,16 @@
 
 **Research note: 24 October 2026.** This is a candidate **conceptual antecedent**, not a verified earlier version or a proven continuous development phase of Unisermo. The dates below refer to retrieved speaker-attributed *conversation-index summaries*, not an exported full transcript. Quoted concepts are paraphrases unless independently copied from original text.
 
+## Addendum — author confirms conceptual continuity (24 October 2026)
+
+**Supersedes the provisional conclusion of this earlier research note about the continuity of the *idea*.** In the ongoing ChatGPT reconstruction the author directly confirmed that the original driver was **transmitting more information in less time** and identified the **July 2025 discussion as the first spark** of the project that later became Unisermo.
+
+**Evidence class:** present-day direct author testimony dated **24 October 2026** (retrospective), corroborated by the independently indexed **15 July 2025** question. The full 2025 transcript has still not been deposited. See [founding objective and its measurement](founding-objective-and-efficiency-measures.md) for exact-source attribution and the distinction between oral rate, written compactness and LLM tokenization.
+
+**Revised classification:** July 2025 is the **author-confirmed conceptual origin** of the eventual Unisermo trajectory. The **2025 assistant's particular phonemes, 100–200 word target and adjective order were *proposals***; no evidence shows they were accepted, implemented or carried forward intact. There is still **no documented continuous implementation history** covering July 2025–May 2026.
+
+The status statements below are retained as a snapshot of what was established *before* the author supplied this confirmation; read their earlier “unverified continuity” qualification as **historically superseded for conceptual motivation only**.
+
 ## Original-conversation evidence (UTC)
 
 | Time on 15 July 2025 | Speaker | What the indexed record supports | Source class |
@@ -46,3 +56,5 @@ The **8 August 2026 original snapshot** in [`andreabenetton/language`](https://g
 - First dated appearance of the specific 2026 goal to optimize **speaking time versus comprehension and root recognition** (distinct from later October tokenizer tests).
 
 **Classification:** July 2025 = **possible conceptual precursor**, **medium-to-high** confidence in dated indexed discussion and **unverified** causal continuity; 8 August 2026 = **high** source confidence in immutable Git specification.
+
+**Historical status update:** the author's October 2026 testimony answers the earlier open question about the connection between the 2025 *goal* and the later project; it does **not** authenticate a complete 2025–2026 engineering sequence.
