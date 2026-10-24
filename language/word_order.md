@@ -110,4 +110,8 @@ The invariant **single-word** compound `etsise` = `etsi` (concessive) + `se` (hy
 
 ## Exception and conditional exception (ratified 24 October 2026)
 
-`ecce` is a free invariant EXCEPT/EXCLUDING operator. The fused single-word `eccese` = `ecce` + `se` introduces a conditional exception, UNLESS / EXCEPT IF. The two clause orders `eccese P, Q` ('unless P, Q') and `Q eccese P` ('Q, unless P') are both valid. Unlike simple `se no P, Q` ('if not P, Q'), `eccese` signals that P is an exception to an expectation/rule associated with Q; it does not generally entail that Q must happen whenever P is false. Full syntactic handling of the general exclusion operator and nested subordinate clauses remains future parser work. The fused compound is specifically licensed and does not make arbitrary fusion productive.
+`ekse` is a free invariant EXCEPT/EXCLUDING operator. The fused single-word `eksese` = `ekse` + `se` introduces a conditional exception, UNLESS / EXCEPT IF. The two clause orders `eksese P, Q` ('unless P, Q') and `Q eksese P` ('Q, unless P') are both valid. Unlike simple `se no P, Q` ('if not P, Q'), `eksese` signals that P is an exception to an expectation/rule associated with Q; it does not generally entail that Q must happen whenever P is false. Full syntactic handling of the general exclusion operator and nested subordinate clauses remains future parser work. The fused compound is specifically licensed and does not make arbitrary fusion productive.
+
+## Ratified free coordination (24 October 2026)
+
+`e` AND and `o` OR are free conjunction words, not bound verbal aspect vowels `-e` or `-o`. Mixed-connective scope and precedence are not yet specified.
