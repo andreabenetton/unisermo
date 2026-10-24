@@ -53,6 +53,11 @@ class FormalizationTests(unittest.TestCase):
         idx = json.loads((ROOT / "formalization/data/lexicon_index.json").read_text())
         entries = {x["form"]: x for x in idx["entries"]}
         self.assertEqual(entries["spets"]["status"], "confirmed_lexicon")
+        self.assertEqual(entries["bon"]["status"], "confirmed_lexicon")
+        self.assertEqual(entries["e"]["status"], "confirmed_lexicon")
+        self.assertEqual(entries["o"]["status"], "confirmed_lexicon")
+        attested = json.loads((ROOT / "formalization/data/attested_forms.json").read_text())["entries"]
+        self.assertTrue(any(a["form"] == "bon" and a["source"] == "language/copula.md" for a in attested))
         self.assertEqual(entries["dom"]["status"], "example_only")
         self.assertNotEqual(entries["mov"]["status"], "confirmed_lexicon")
         for name in ("adel", "adelo", "adele", "gen", "geno", "gene", "adelgen", "bisjergen", "fil", "filadelgen", "genegene", "genegeno", "genogene", "genogeno"):
