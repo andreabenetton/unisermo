@@ -351,6 +351,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion.",
+      "form": "etsise",
+      "meaning_en": "even if; hypothetical concessive",
+      "meaning_it": "anche qualora; anche se (concessione ipotetica)",
+      "origin": "Explicit author ratification 2026-10-24; compound etsi + se",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "decision": "Canonical replacement for legacy fac.",
