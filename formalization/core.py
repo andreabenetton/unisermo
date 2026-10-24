@@ -20,9 +20,10 @@ from .generator.morphology import MorphologyGenerator
 from .parser.word import WordParser
 from .parser.clause import ClauseParser
 from .parser.kinship import KinshipParser
+from .parser.numeral import NumeralParser
 
 
-class Unisermo(MorphologyGenerator, WordParser, KinshipParser, ClauseParser):
+class Unisermo(MorphologyGenerator, WordParser, NumeralParser, KinshipParser, ClauseParser):
     def __init__(self) -> None:
         self.morph = load("morphology.json")
         index = load("lexicon_index.json")
