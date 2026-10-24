@@ -149,6 +149,18 @@
     },
     {
       "categories": [
+        "root"
+      ],
+      "decision": "Functional fitness only; separate from efficiency, effectiveness, and general quality.",
+      "form": "apt",
+      "meaning_en": "apt; fit or suitable for a purpose",
+      "meaning_it": "adatto; idoneo a una funzione o uno scopo",
+      "origin": "Author selection in 2026-10-24 discussion preceding this ratification; record as provisional rather than author-ratified",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "nominal_predicate"
       ],
       "decision": "Canonical vertical-axis root for low/lower/down. With allative -ad, basad marks downward direction/toward a lower position. It may compound transparently with mov: basmov = descend/go down.",
@@ -169,6 +181,18 @@
       "meaning_en": "descend; go down",
       "meaning_it": "scendere; andare in giu",
       "origin": "productive compound bas + mov",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Restrict to the aesthetic domain, including aesthetic judgment of sounds and experiences; not a general synonym for bon.",
+      "form": "bel",
+      "meaning_en": "beautiful; aesthetically pleasing",
+      "meaning_it": "bello; di qualità estetica positiva",
+      "origin": "Author ratification 2026-10-24",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -195,11 +219,15 @@
     },
     {
       "categories": [
-        "nominal_predicate"
+        "root"
       ],
+      "decision": "General goodness only: not lexical synonym of aesthetic bel, moral prob or functional apt.",
       "form": "bon",
-      "source": "language/copula.md",
-      "status": "example_only"
+      "meaning_en": "good; context-dependent generally positive evaluation",
+      "meaning_it": "buono; valutazione positiva generale dipendente dal contesto",
+      "origin": "Already attested in language/copula.md and language/adjectives.md; author clarification 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -324,6 +352,18 @@
       "form": "es",
       "source": "language/copula.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Distinguish from prob: ethical conformity is not necessarily a global evaluation of a person's moral goodness.",
+      "form": "etik",
+      "meaning_en": "ethical; pertaining to ethics or aligned with ethical principles",
+      "meaning_it": "etico; relativo all'etica; conforme a principi etici",
+      "origin": "Author ratification 2026-10-24; Greek ethikos via international ethical vocabulary",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -505,6 +545,18 @@
       "form": "jer",
       "source": "language/numerals.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "A specific moral dimension (justice/fairness), not all moral goodness.",
+      "form": "just",
+      "meaning_en": "just; fair; aligned with justice",
+      "meaning_it": "giusto; conforme alla giustizia",
+      "origin": "Author ratification 2026-10-24; Latin iustus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -700,6 +752,18 @@
     },
     {
       "categories": [
+        "root"
+      ],
+      "decision": "Descriptive domain adjective, not necessarily positive: moral actions or moral issues are not by definition good.",
+      "form": "moral",
+      "meaning_en": "moral; pertaining to morality",
+      "meaning_it": "morale; relativo alla moralità",
+      "origin": "Author ratification 2026-10-24; Latin moralis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "form": "mov",
@@ -728,11 +792,35 @@
     },
     {
       "categories": [
+        "derivational_prefix"
+      ],
+      "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel.",
+      "form": "ne-",
+      "meaning_en": "lexical antonym / semantic opposite of a quality, not simple negation",
+      "meaning_it": "opposto semantico di una qualita; polo contrario, non semplice negazione",
+      "origin": "Author ratification 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "particle"
       ],
       "form": "no",
       "source": "language/negation.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Social and figurative senses should be distinguished contextually; nobl is not a generic equivalent of prob.",
+      "form": "nobl",
+      "meaning_en": "noble; socially noble or noble in character depending on context",
+      "meaning_it": "nobile; di nobiltà sociale o nobiltà d'animo secondo contesto",
+      "origin": "Author ratification 2026-10-24; Latin nobilis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -776,8 +864,7 @@
     },
     {
       "categories": [
-        "function_word",
-        "note"
+        "function_word"
       ],
       "decision": "Canonical invariant free instrumental/perlative relator. Former suffix -per is retired.",
       "form": "per",
@@ -808,6 +895,18 @@
       "meaning_en": "for the benefit of",
       "meaning_it": "a favore di; per il beneficio di",
       "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "root"
+      ],
+      "decision": "Denotes positive moral character or conduct, not generic goodness, proof/probability or merely adherence to a moral code.",
+      "form": "prob",
+      "meaning_en": "morally good; upright; morally sound",
+      "meaning_it": "moralmente buono; retto; di integrità morale",
+      "origin": "Author ratification 2026-10-24; Latin probus",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
