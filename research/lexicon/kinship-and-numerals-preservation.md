@@ -2,6 +2,20 @@
 
 This note prevents the 100-concept expansion from replacing already discussed family-relation morphology with unrelated Latin-looking roots.
 
+## Historical clarification from recovered original 10 August dialogue (24 October 2026)
+
+The earlier summary below is **not exhaustive**. Individually dated original user messages now show:
+
+- **10 Aug 16:09:15 UTC**: user returns to `gen` = parent (`geno` father, `gene` mother), while criticizing `par` **for a sibling interpretation**.
+- **10 Aug 16:09:17 UTC**: assistant compares sibling roots `sor/germ/sib/frer/adel` and proposes `adel`.
+- **10 Aug 16:11:23 UTC**: **user explicitly confirms** `adel` = sibling, `adelo` = brother, `adele` = sister. These were not *merely unapproved candidate suggestions* in the original conversation.
+- **10 Aug 16:12:33 UTC**: user proposes `adelgen` for an uncle/aunt relation and fused compositions `A+B = A relative to B`. Assistant follow-up mentions `adelgeno` / `adelgene`; complete user sign-off on these elaborations remains unconfirmed.
+- **10 Aug 15:56:43 UTC** (earlier): Git had canonized **`frat` = brother** ([commit](https://github.com/andreabenetton/unisermo/commit/a1df1425bddf6e8636074ffb50309b1fd9476c1f)), which still remains in `research/lexicon/confirmed_lexicon.json`.
+
+**Critical status distinction:** *user-approved within dialogue* is not equivalent to *integrated in canonical Git*. The `adel/adelo/adele` choice is supported as **a historical conversational decision**, yet not demonstrably adopted into the Git-confirmed lexicon. The unresolved `frat`/ `adel` divergence could represent an integration gap or a later reversal, but no source proves which. The alternative `par/fil/av/germ/sib` list below is retained as an earlier **proposal inventory**, not an exhaustive August decision set.
+
+See [source-critical reconstruction](../history/august-kinship-original-dialogue-versus-git.md). No canonical lexicon entries are changed by this historical note; do not promote either uncommitted forms or unverified genealogical compounds to current grammar without a separate decision.
+
 ## Earlier kinship design (not yet independently ratified in the confirmed lexicon)
 
 A **neutral relational stem** plus `-o` for male and `-e` for female was preferred in prior discussion. These are historical **candidate analyses**, not established canonical entries:
