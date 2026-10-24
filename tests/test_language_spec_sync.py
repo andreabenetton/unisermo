@@ -60,3 +60,6 @@ kinship = (lang / 'kinship.md').read_text()
 for word in ['`adel`', '`adelo`', '`adele`']:
     assert word in kinship, f'missing canonical sibling term: {word}'
 assert '`frat`' in kinship and 'not a canonical synonym' in kinship
+
+for term in ['`gen`', '`geno`', '`gene`', '`adelgen`', '`bisjergen`']:
+    assert term in kinship, f'missing approved family term: {term}'
