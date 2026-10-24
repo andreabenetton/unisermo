@@ -46,3 +46,48 @@ Operational constraints: Qwen3 32B via existing OpenRouter helper, requested tem
 This is machine-gold grammar and semantic projection from accepted written examples. **Independent human review is still 0/24** for these new sentences. A separate reviewer must inspect canonical sources and judge whether each example is licensed and whether its case/role target is semantically natural, *without being told the model's result*. Track whether a label describes morphosyntax or broader conceptual equivalence; in particular, causative `result` and noncausative `destination` might share everyday English paraphrases while having distinct grammatical suffixes. The study intentionally preserves that distinction.
 
 No change to the normative `language/` files, seven-case inventory, lexical decisions or original result archives is allowed as part of this pilot. Next gate after the analysis is independent review, then a richer controlled English comparator with explicitly checked semantic equivalence, and only after a ratified referential model should connected discourse be scored.
+
+---
+
+## Prospective run completed — observed results, 2026-10-24
+
+**Execution:** [Qwen3 paired experimental run 40090842899](https://github.com/andreabenetton/unisermo/actions/runs/40090842899) completed all 24 responses. Returned model `qwen/qwen3-32b`, provider DeepInfra in all requests, all `finish_reason=stop`. Source-provenance / scorer tests passed in [run 40090809826](https://github.com/andreabenetton/unisermo/actions/runs/40090809826) and updated posthoc diagnostics passed in [run 40090933318](https://github.com/andreabenetton/unisermo/actions/runs/40090933318). An initial offline test run exposed a wrong `doc` vs `id` dictionary key in the scorer; this implementation error was fixed and verified *before* paid execution, without revising the corpus or prompts.
+
+The full original artifact `case-role-40090842899` (ID `12558578960`) was independently downloaded, checked and rescored in [archive job 40090996422](https://github.com/andreabenetton/unisermo/actions/runs/40090996422). Preserved original bytes:
+- [`benchmarks/evidence/case-role-2026-10-24-run40090842899.jsonl`](../../benchmarks/evidence/case-role-2026-10-24-run40090842899.jsonl), raw SHA-256 `c55cd847cd2522f8857432e0121c990f39064a78335fccd5e5fa28e9430695e6`.
+- [`benchmarks/evidence/case-role-2026-10-24-run40090842899.score.json`](../../benchmarks/evidence/case-role-2026-10-24-run40090842899.score.json), corpus SHA-256 `0d8c6a10f7cb8b4545654208af9cfbf8af65f870b0e2e6334c7adc9e6df4a1fb`.
+
+| Registered measure | Morphological **case** arm | Semantic **role** arm |
+| --- | ---: | ---: |
+| **Exact two-argument complete clauses** | **16/24 (66.67%)** | **15/24 (62.5%)** |
+| Arguments with BOTH stem and label correct | 35/48 | 39/48 |
+| Exact argument stems alone | 38/48 | 43/48 |
+| Exact argument labels alone | 37/48 | 44/48 |
+| Invalid JSON envelopes | 0/12 | 0/12 |
+| Input tokens | 4,208 | 4,160 |
+| Completion tokens | 1,531 | 1,474 |
+| Total tokens | 5,739 | 5,634 |
+| Provider USD | 0.00076532 | 0.00074552 |
+| USD / strict correct clause | 0.0000478325 | 0.0000497013 |
+
+Whole experiment **11,373 tokens**, observed provider USD **0.00151084**, well under the USD 0.02 stop.
+
+### Source-frame stratification: eight clauses per family
+
+| Family | Case arm exact | Role arm exact |
+| --- | ---: | ---: |
+| `mov` patient `-em` + destination `-ad` | **7/8** | **5/8** |
+| Noncausative `traes` destination `-ad` + source `-de` | **1/8** | **4/8** |
+| Causative `traes` patient `-em` + result `-da` | **8/8** | **6/8** |
+
+The surface-case arm made **4** `ablative → resultative` confusions, **4** `dative_allative → accusative`, plus three other tag confusions. The role arm made **3** `source → result` and **1** `destination → result` confusions. The role arm recovered more **labels** and **stems** than the case arm, yet one fewer strictly correct complete clause. Failures still include incorrectly retained noun suffixes as part of a stem, not merely relation interpretation.
+
+This clarifies the earlier failure but does not imply an inverted hierarchy of cognitive complexity: the two arms ask different questions, provide the model with the operative rules, have different permissible label vocabularies, and use familiar templated development constructions. It is **not** a direct comparison of general semantic recognition to morphological understanding or to controlled English.
+
+### Historical diagnostic and next decisions
+
+`benchmarks/relational_frame_diagnostics.py` and `tests/test_relational_frame_diagnostics.py` now reproduce from the **unchanged original PR #12 JSONL** the posthoc counts motivating this trial, with their retrospective status made explicit. The original strict scoring of 0/24 cold, 4/24 guided is **not recalculated or replaced**.
+
+**Independent semantic-key approval: 0/24** new clauses. [Review worksheet](case-role-human-review-2026-10-24.md) requires separate human judgments for morphological cases and licensed semantic roles. Because the normativity and the exact theme/causer entailments of the new full finite sentences remain under independent review, avoid presenting these machine gold scores as validated communicative correctness.
+
+**Decision gate:** do not change the seven-case system, `traes` meanings, lexical entries, grammar or holdout. The next strongest step is independent adjudication of the constructed case/role gold, then independently reviewed English paraphrases and a genuinely semantic equivalence test in which both messages and total token/prompt/correction costs are controlled. A separate scored axis for *formal output-schema compliance* should be retained, rather than retrospectively erasing failure cases.
