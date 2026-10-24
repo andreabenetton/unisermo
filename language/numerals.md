@@ -124,6 +124,8 @@ forjer = four times; four iterations; four steps
 
 `NUMjer` may itself be the first component of a larger transparent compound. When it modifies an iterable relation, it specifies how many applications or relational steps are traversed. The whole lexicalized compound is written as one word, just like compound numerals. For example, in a genealogical system a form of the structural type `bisjerROOT` means ROOT reached after two applications/steps; a larger compound such as `adelbisjerROOT` remains fused when it denotes one kinship term. The precise lexical roots used for individual kinship relations are defined separately from the general meaning of `jer`.
 
+In the now-confirmed [kinship system](kinship.md), applying `gen` (parent) twice gives **`bisjergen` = grandparent (gender-neutral)**; applying it three times gives **`terjergen` = great-grandparent (gender-neutral)**. These examples follow the original August genealogical design. The distinction between an individual's gender and the sex of each **intermediate** parent link is not specified by the general `jer` construction; forms such as `bisjergeno` therefore remain unratified pending a scope rule.
+
 `jer` therefore means neither “ordinal” nor “genealogical degree” by itself. `bisjer` is the general expression “two times / two steps”; genealogy is one application of that general iteration mechanism.
 
 ---
