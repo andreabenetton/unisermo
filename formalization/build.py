@@ -41,13 +41,18 @@ def build_indexes() -> dict[str, str]:
                           "origin": record.get("source", ""), "decision": record.get("decision", "")}
     for record in attested:
         lemma = record["form"]
-        if lemma in entries:
-            raise ValueError(f"attested duplicate of confirmed core: {lemma}")
+        # An earlier historical attestation can later become confirmed.
+        # Keep provenance in attested_forms.json without downgrading the
+        # current confirmed lexical entry in the generated live index.
         if not (ROOT / record["source"]).is_file():
             raise ValueError(f"attestation document is absent: {record['source']}")
         text = (ROOT / record["source"]).read_text(encoding="utf-8")
         if lemma not in text:
             raise ValueError(f"missing textual attestation of {lemma} in {record['source']}")
+        if lemma in entries:
+            # The attestation remains in its original historical registry;
+            # the live index must represent the most authoritative current form.
+            continue
         entries[lemma] = {"form": lemma, "status": record["status"], "source": record["source"],
                           "categories": [record["category"]]}
     accepted_alphabet = set(read("formalization/data/morphology.json")["alphabet"])
