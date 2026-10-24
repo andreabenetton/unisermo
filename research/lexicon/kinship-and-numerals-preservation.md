@@ -2,6 +2,14 @@
 
 This note prevents the 100-concept expansion from replacing already discussed family-relation morphology with unrelated Latin-looking roots.
 
+## Further ratification of parent and uncle/aunt roots (24 October 2026)
+
+The author expressly approves **`gen` parent, `geno` father, `gene` mother and `adelgen` parent's sibling**. The general `NUMjer` rule, also attested in the August dialogue, yields `bisjergen` grandparent and `terjergen` great-grandparent. They are not new arbitrary roots for each generation.
+
+The candidate inverse `fil` = offspring and proposed cousin compound `filadelgen` remain **unratified**. The sex/gender scope of `bisjergeno` and `bisjergene` in longer chains also remains **undecided**; these cannot yet be treated as universally unambiguous grandfather/grandmother spellings. See [current kinship](../../language/kinship.md).
+
+The prior paragraphs below describe successive historical research stages and remain retained rather than rewritten as original 10 August canon.
+
 ## Subsequent author correction and canonical migration (24 October 2026)
 
 The author explicitly clarified in the active reconstruction conversation that the **`adel` choice was forgotten** and **must replace `frat`**. The sibling family `adel` (neutral), `adelo` (male) and `adele` (female) is consequently **canonized in the live specification and confirmed lexicon** as of this 24 October restoration. Earlier Git use of `frat` remains important *historical evidence*, but it is **retired from current vocabulary**, not a second accepted synonym. The older paragraph below saying that `frat` is "currently confirmed" is preserved as **a superseded 23 October snapshot**, not a current status claim.
