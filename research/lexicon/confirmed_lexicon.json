@@ -630,6 +630,14 @@
       "meaning_en": "therefore; thus; inferential conclusion marker",
       "source": "Explicit author ratification 2026-10-24; Latin ergo",
       "decision": "Use ergo to introduce inferential conclusions, distinct from conditional-correlative alor and ordinary adversative ma."
+    },
+    {
+      "form": "etsi",
+      "category": "function_word",
+      "meaning_it": "sebbene, benché, nonostante il fatto che",
+      "meaning_en": "although; even though (factual concessive)",
+      "source": "Explicit author ratification 2026-10-24; Latin etsi",
+      "decision": "Concessive conjunction allowing etsi P, Q and Q etsi P. Factual or contextually accepted P contrasted with Q; hypothetical even-if semantics remain unresolved."
     }
   ]
 }
