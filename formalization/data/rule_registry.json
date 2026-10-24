@@ -193,6 +193,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "1c41eb7d7f9833140413160478e28eaa17fe375e493237ba57c069655005f900",
+      "id": "grammar.numeral_mila_mega_giga_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/numeral_mila_mega_giga_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "84f01254119d09b2cb2dd8b1e739f507069c0d26fd6d2f5efe2d7d0d25035ee3",
       "id": "grammar.numeral_two_bis",
       "source": "research/grammar/confirmed_decisions.json#decisions/numeral_two_bis",
