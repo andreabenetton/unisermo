@@ -59,3 +59,5 @@ jobs:
           git add benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.jsonl benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.score.json
           git commit -m 'research: preserve verified Mistral and GPT-OSS data'
           git push origin HEAD:research/two-model-case-role-20261024
+
+# Execution confirmed: successful workflow 40099913553, artifact 12561574521.
