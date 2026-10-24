@@ -39,11 +39,11 @@ Subsequent dated commits:
 
 ## What the original discussions likely need to establish (still unverified)
 
-1. When and why /ə/ was first admitted as a sixth vowel, and why eventually removed.
+1. **Now partially resolved:** assistant initially preferred five vowels on 16 May; user argued for six vowels including /ə/ on 22 May to express six grammatical persons. Remaining: full dialogue on contrast robustness and exact August abandonment rationale.
 2. Why `sh`, `ts`, `c=/tʃ/`, and `j=/dʒ/` were first selected and later turned into contextual sequences, and why glides `j,w` replaced that inventory.
 3. Which international language-family and first-language population analyses actually informed the tradeoffs, versus retrospective justifications in specifications.
 4. Whether the one-written-unit/phoneme ideal was revised explicitly because productive compounding and phonemic accessibility required coalescence.
-5. Origin and exact dated rationale for /h/ and /ŋ/ exclusions, accent-tolerant mergers, genitive `-s/-es` and other morphology/phonotactics interactions.
+5. **Partly resolved:** /h/ expressly excluded by user on 22 May at 23:14:48 UTC, while other /ŋ/, accent-tolerant mergers, genitive `-s/-es` and morphology/phonotactics rationales still require complete transcripts.
 6. The dates and exact arguments in original **conversations earlier than May 2026**. An available personal-history search produced no matching conversation. Additional historical chat export or another identifiable thread may be needed.
 
 **Important distinction:** source commit dates anchor when versions entered this repository. They do not prove when ideas were first discussed. All original-specification decisions are documented as *no later than* their 10 Aug import unless verified earlier elsewhere.
