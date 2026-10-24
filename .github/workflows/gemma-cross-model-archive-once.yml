@@ -73,3 +73,5 @@ jobs:
           git add benchmarks/evidence/gemma-case-role-2026-10-24-final.jsonl benchmarks/evidence/gemma-case-role-2026-10-24-final.score.json
           git commit -m 'research: preserve verified complete Gemma and Qwen comparison'
           git push origin HEAD:research/two-model-case-role-20261024
+
+# Exact verified source: successful run 40097642521 (24 Gemma responses).
