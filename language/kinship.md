@@ -44,16 +44,54 @@ The preexisting general [`jer` operator](numerals.md) is used to count successiv
 
 **Reference-parser limitation:** `bisjergen` is explicitly listed in the confirmed lexicon and can be recognized by the current Phase 1 parser. `terjergen` and further `NUMjergen` combinations are licensed by the language specification but **not yet handled by a general productive compound parser**. An illustrative form is therefore not proof of implemented parser support.
 
-**Open ambiguity about sex/gender scope of grandparents:** `bisjergeno` could be parsed as `bisjer + geno`, repeating the *father* relation, rather than selecting a *male individual* after two unrestricted parent links. Similarly `bisjergene` risks a maternal-line reading. The original indexed excerpts do **not** establish a binding scope rule, so neither spelling is canonized as the general "grandfather"/"grandmother". **`bisjergen` is presently the neutral canonical expression covering both**. A separate binding or gender-scoping rule is needed for exact male/female grandparent terms.
+## Exact maternal and paternal relations: typed genealogical paths
 
-## Cousin composition: pending inverse relation
+The **confirmed** kinship composition rule is `A+B = A relative to B`: the rightmost component names the closest relative to the reference person (ego), and the component to its left names the next relation to follow **from that relative**. The compound is written as one word; morpheme boundaries below are displayed only for analysis.
 
-Under the rule `A+B = A relative to B`, a first cousin is a **child of a parent's sibling**, structurally `CHILD + adelgen`. If the previously proposed neutral descendant/offspring root `fil` is accepted, this gives the **candidate** `filadelgen` (child of uncle/aunt). However, **`fil` is not yet approved** as a canonical inverse to `gen`, and the compound is therefore **not canonized**. Before approving it, distinguish relational *offspring* from a young *child*, and check whether the genealogical terminology includes cousins of different degree and generation.
+Importantly, **`geno` (father of) and `gene` (mother of) are complete relational links**, not gender inflections over the whole compound. Thus the individual's gender and the paternal/maternal branch are separately encoded in each link, without a new scope-marking suffix.
+
+| Canonical spelling | Decomposition (right to left) | Meaning |
+| --- | --- | --- |
+| `genegene` | `gene + gene` | **maternal grandmother** = mother's mother |
+| `genegeno` | `gene + geno` | **paternal grandmother** = father's mother |
+| `genogene` | `geno + gene` | **maternal grandfather** = mother's father |
+| `genogeno` | `geno + geno` | **paternal grandfather** = father's father |
+
+All four expressions are now listed explicitly in the confirmed lexicon and can be recognized in the **limited Phase 1 formal reference**. Their path derivation is deterministic from atomic `geno` and `gene` links; it does **not** prove that real listeners will distinguish long genealogical strings without training.
+
+**Partial specificity:** A neutral `bisjergen` means any grandparent: two applications of unspecified `gen`. `gengene` means parent **of mother**, maternal grandparent of unspecified gender; `gengeno` means parent **of father**, paternal grandparent of unspecified gender. These last two are **productive analytical compositions**, not separate listed lexemes in the Phase 1 index.
+
+### What `jer` repeats, precisely
+
+`NUMjer+RELATION` applies the **whole relation lexeme** the indicated number of times. For example:
+
+- `bisjergen` = `gen(gen(ego))`: any grandparent.
+- `bisjergene` = `gene(gene(ego))`: maternal grandmother (same path as `genegene`), **not** a generic grandmother of either branch.
+- `bisjergeno` = `geno(geno(ego))`: paternal grandfather (same path as `genogeno`), **not** a generic grandfather of either branch.
+
+The `bisjer` alternatives are **semantically licensed transparent formations**, but productive `NUMjer` parsing is not implemented generally by the Phase 1 parser. Prefer the explicit four-way root-path spellings when precise ancestry is needed. This rule resolves the earlier suffix-scope ambiguity by refusing to treat final `-o/-e` as global gender markers.
+
+### Generalization
+
+A longer chain is interpreted by applying successive known **relational links from right to left**. For example `genegenogeno` = mother of father of father (father's father's mother). The meaning follows the same rule without inventing a special word for each ancestor. For longer or unusual paths, explicit morpheme segmentation may be shown in teaching material; the normative orthography stays fused.
+
+## Descendant inverse and first cousin
+
+**`fil` is ratified by the author on 24 October 2026** as the neutral relational inverse of `gen`:
+
+| Form | Meaning | Decomposition |
+| --- | --- | --- |
+| `fil` | offspring; son or daughter, gender-neutral, **not restricted to children by age** | inverse relation to `gen` |
+| `filadelgen` | **first cousin**, gender-neutral | `fil + adel + gen` = child of parent's sibling |
+
+For `filadelgen`, apply `gen` to ego (parent), then `adel` to that parent (uncle/aunt), then `fil` to that relative (first cousin). The form is **confirmed as a transparent productive compound**, not a free-standing new family root.
+
+This covers first cousins at the same genealogical generation; other degrees, removals, adoptive relations, and nonstandard genealogies may require additional disambiguation. `filo/file` were discussed as gender-marked offspring candidates in past notes, but approval of the **neutral `fil` root** does not automatically approve those derived spellings.
 
 ## Unconfirmed related designs
 
-Earlier studies contain `par/fil/av/germ/sib` alternatives. These are **not** promoted merely by approving the `gen/adelgen` system. In particular, `fil` (offspring) and `filadelgen` (cousin) remain explicitly proposed pending approval.
+Earlier studies contain `par/av/germ/sib` alternatives. These remain historical proposals: the approval of `fil` does not automatically approve `filo/file` or unrelated earlier kinship roots.
 
-`jer` remains the separately canonized general [iteration/step operator](numerals.md), not a special kinship suffix. The approved parent system validates `bisjergen` and the general iteration rule, but not every possible genealogical compound or the gender-scope of repeated relations.
+`jer` remains the separately canonized general [iteration/step operator](numerals.md), not a special kinship suffix. The approved parent system validates `bisjergen` and the stated right-to-left path-composition rule. Each specified `gene/geno` link carries its own meaning; there is no global gender suffix for a whole genealogical path. The reference parser still has a limited fixed indexed vocabulary.
 
 See [original dialogue vs saved Git](../research/history/august-kinship-original-dialogue-versus-git.md) for the dated original user-message index, and [migration history](MIGRATION_HISTORY.md) for the original and restored states.
