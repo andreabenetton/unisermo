@@ -17,7 +17,7 @@ def main() -> None:
     expected = {
         "ager", "kad", "kap", "sentr", "sert", "sirkul", "siv", "klar",
         "kun", "kom", "ker", "per", "pro", "due", "fin", "tem", "mod", "kred", "kurar", "dek", "dik", "dirig", "dok", "fak",
-        "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal", "alt", "bas", "altmov", "basmov", "aer", "plan", "aerplan", "adel", "adelo", "adele", "gen", "geno", "gene", "adelgen", "bisjergen", "fil", "filadelgen", "genegene", "genegeno", "genogene", "genogeno",
+        "mila", "mega", "giga", "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal", "alt", "bas", "altmov", "basmov", "aer", "plan", "aerplan", "adel", "adelo", "adele", "gen", "geno", "gene", "adelgen", "bisjergen", "fil", "filadelgen", "genegene", "genegeno", "genogene", "genogeno",
     }
     assert expected <= entries.keys(), expected - entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
@@ -55,6 +55,10 @@ def main() -> None:
     assert entries["genegeno"]["meaning_en"].startswith("paternal grandmother")
     assert entries["genogene"]["meaning_en"].startswith("maternal grandfather")
     assert entries["genogeno"]["meaning_en"].startswith("paternal grandfather")
+    assert entries["mila"]["meaning_en"].startswith("thousand")
+    assert entries["mega"]["meaning_en"].startswith("million")
+    assert entries["giga"]["meaning_en"].startswith("billion")
+    assert "mil" not in entries
     assert "frat" not in entries
     assert "umano" in entries["uman"]["decision"]
     assert "umane" in entries["uman"]["decision"]
