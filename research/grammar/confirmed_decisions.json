@@ -190,6 +190,10 @@
     {
       "id": "conditional_se_20261024",
       "decision": "Ratify free standalone se as the IF conditional introducer, phonologically and orthographically distinct from si YES and no NO/NOT; Latin si is its source adaptation. The conjunction se introduces a condition clause. The separate marker for THEN (tum/alor), its optionality, conditional scope and parsing, inferential ergo, negative nisi, contrastive sed, and counterfactual morphology remain proposals, not implied ratifications. Author explicitly agreed on 2026-10-24."
+    },
+    {
+      "id": "connectives_alor_ma_ergo_20261024",
+      "decision": "Author ratifies standalone alor = THEN (conditional consequent correlative), ma = BUT (ordinary adversative conjunction), and ergo = THEREFORE/THUS (inferential conclusion). Distinguish alor conditional relation from ergo inference and ma contrast; e and o retain their previously ratified additive and disjunctive functions, and se retains conditional IF. Full coordination, subordinate-clause scope, optionality of alor in particular contexts, and logical precedence remain separate parser decisions. Author ratification 2026-10-24."
     }
   ]
 }
