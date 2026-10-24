@@ -21,6 +21,10 @@ This reconstructs a **specific earlier ChatGPT discussion on 24 May 2026**, foun
 - Later at **14:29:59 UTC**, the conversation distinguished caused transitions (causer + affected object) from spontaneous transitions and discussed a separate **resulting predicate** `-da`. This was **still a proposal at that instant**, and is now a canonical resultative `-da` in the current `language/noun_case_system.md`.
 - Distinguish **allative `-ad`** (destination) from **resultative `-da`** (role/state as transformed outcome). Do not read today's meaning of `-da` back into the May rejected `-da` = source alternative.
 
+### 10 August, 14:11–15:41 UTC: how resultative `-da` fits a broader semantic design
+
+An independent [state, phase, motion and causation timeline](august-semantic-phase-motion-and-causation.md) traces the transition from `ades X` BECOME (source unspecified) to `traes DEST-ad SOURCE-de` with two predicative poles (user confirmation 14:21, Git 14:22), and then `Y traes X-em RESULT-da` for **caused transformation of a marked object** (user acceptance 14:35, Git 14:36). The resulting `-da` should not be described merely as a synonym of allative `-ad`. Later the same hour `mov` gained transitive/intransitive alternation; `pel` and `trak` were deliberately separated from resulting displacement. These are **different argument frames**; the apparent overlap in English translations cannot erase the distinctions.
+
 ### Later revision: fewer synthetic cases and analytic complements
 
 The current `language/noun_case_system.md` records a seven-case **closed synthetic core**:
@@ -53,7 +57,7 @@ This is evidence of **iterative design and selective reversal**: the early ideal
 - `language/noun_case_system.md` — current normative rule.
 - `formalization/data/morphology.json` — parser/generator data contract.
 
-**Archival work remaining:** obtain the full original May transcript, verify exact wording and dates of change from 13 synthetic cases to 7 and from `-en` to `wi`, plus the final adoption of resultative `-da`.
+**Archival work remaining:** obtain the full original May transcript, recover the full original 24 May and 10 August conversational wording. The **Git adoption dates of 13→6→7 and -en→wi have already been verified** in the linked timeline; original verbatim decision arguments remain to be archived.
 
 ## New primary Git anchors (24 October follow-up)
 

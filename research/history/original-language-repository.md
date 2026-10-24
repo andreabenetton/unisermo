@@ -27,6 +27,12 @@ The source shows a **two-level international accessibility strategy** already pr
 
 **Caution:** the speaker-profile difficulty rankings and descriptions are expert hypotheses; they are not substitutes for validated typological databases or actual participant studies. The full conversational origin of each decision and any quantitative population/genealogy weighting remain research gaps.
 
+## Additional historical source consistency audit — numerals (24 October 2026)
+
+The [8 August original `numerals.md`](https://github.com/andreabenetton/language/blob/bacc1a7a9aaaa18596120c6ea2812c927b33b0e3/numerals.md) describes thirteen three-letter bases and mistakenly calls **all** of them `CVC`. In the same table, `uno` and `oto` are **VCV** and `duo` is **CVV**. The length claim (three letters) holds; the universal CVC shape claim does not. A descendant CVC statement persists even in current documentation because `uno/oto` remain; do not use this assertion as evidence of a uniform actual numeral syllable template. This historical note is **not** a normative grammar amendment.
+
+Later evidence fixes the exact 10 August changes: [`4d19263`](https://github.com/andreabenetton/unisermo/commit/4d19263da58802bd184774b3d1463714c50979dc) substitutes `bis` for `duo` (16:24:59), while [`b3c473e`](https://github.com/andreabenetton/unisermo/commit/b3c473e6f86cb58734e208491a7e2ed6306623c6) introduces fused numeral spelling and generic `jer` (16:35:31). See [complete investigation](august-numerals-iteration-and-kinship-history.md); user decision reasons, full original conversation and family candidate canonization are separate pending questions.
+
 ## Primary evidence
 
 - Original source commit: https://github.com/andreabenetton/language/commit/bacc1a7a9aaaa18596120c6ea2812c927b33b0e3
