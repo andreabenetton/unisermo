@@ -54,3 +54,9 @@ This is evidence of **iterative design and selective reversal**: the early ideal
 - `formalization/data/morphology.json` — parser/generator data contract.
 
 **Archival work remaining:** obtain the full original May transcript, verify exact wording and dates of change from 13 synthetic cases to 7 and from `-en` to `wi`, plus the final adoption of resultative `-da`.
+
+## New primary Git anchors (24 October follow-up)
+
+The August transition took **two** separate, verifiable steps, not one: [`64c2d33`](https://github.com/andreabenetton/unisermo/commit/64c2d33cb83ded768480f8185582025c380a855e) at **10 August 09:16:52 UTC** removed the old `-ko` and six extended suffixal cases, leaving **six synthetic cases** with analytic `kun/per/pro/due/fin/tem/mod`. [`53df8ba`](https://github.com/andreabenetton/unisermo/commit/53df8ba04e5d04ef9794c62c357a712567f86123) at **14:36:39 UTC** added resulting-predicate `-da`, giving the current **seven**. This explains the previously undated middle state **13→6→7**, with no assumption about a fully recovered user transcript.
+
+An earlier conversation-index record now also places `mov`, `et`, past-tense `d`, and an explicit `root+tense+person` versus `root+person+tense` comparison at **24 May 19:57–20:00 UTC**, preceding the 21:55 noun-case discussion. See [chronological reconstruction](may-august-morphology-decision-chain.md). Exact May wording remains unexported.
