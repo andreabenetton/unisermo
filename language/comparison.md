@@ -216,3 +216,28 @@ particular new degree word is ratified by this decision. In particular,
 `super-` is **not** an absolute-superlative operator on adjectives; historical
 `super-` remains available for other established derivational uses but does
 not replace `masim` and does not mean `-est`.
+
+## 12. Absolute degree modifiers (ratified 2026-10-24)
+
+Absolute intensity is marked analytically by invariant, independent words
+preceding a gradable adjective or qualitative predicate. Scale A is canonical:
+
+| Modifier | Example | Reading |
+|---|---|---|
+| `minu` | `minu bel` | barely/minimally beautiful |
+| `pok` | `pok bel` | slightly/a little beautiful |
+| unmarked | `bel` | beautiful, unspecified degree |
+| `mult` | `mult bel` | very beautiful |
+| `ekstrem` | `ekstrem bel` | extremely beautiful |
+
+`minu` is **not** `minim`: `minim bel` means the least beautiful
+within a comparison set. `ekstrem bel` means extremely beautiful;
+`masim bel` means the most beautiful in a comparison set, without
+entailing extreme absolute beauty. Similarly `mult nebel` = very ugly,
+while `no mult bel` negates 'very beautiful' without entailing ugliness.
+
+Degree modifiers apply to the *selected qualitative predicate*, including
+a semantically licensed antonym in `ne-`. They do not change comparative
+or superlative meanings. Their scale is qualitative/contextual, not an
+exact numerical partition. No free modifier for 'fairly' versus
+'sufficiently' is ratified here.
