@@ -37,7 +37,7 @@ The simplified sound inventory was **decided and documented before** its 10 Augu
 
 This is an actual *reduction followed by selective expansion*, not an instantaneous 13→7 replacement. Git provides exact sequence and implementation; the full spoken motivations remain to be recovered.
 
-## 22 May attribution caveat
+## 22 May attribution resolved; complete dialogue outstanding
 
 **Subsequent verification (24 October 2026):** The previously disputed 22 May dialogue **has now been located in speaker-attributed dated original-message retrieval**. On 22 May the user accepts schwa as a sixth person vowel and asks about Georgian IPA affricates, globally familiar consonants and the exclusion of /h/. The earliest explicit international invented-language query found is **16 May 11:50 UTC**, when the user asks whether five or six vowels are preferable. A 6 May Italian/Georgian IPA comparison is an earlier **unconnected phonetic precursor**. The former WordPress result was an irrelevant retrieval match, not evidence disproving the genuine May 22 conversation. The complete original thread is still not exported. Details: [early May evidence](early-may-conversation-evidence.md).
 
