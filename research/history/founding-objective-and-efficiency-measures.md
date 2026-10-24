@@ -58,6 +58,16 @@ The 8 August [original vocabulary-design rules](https://github.com/andreabenetto
 - [23 October selective glossary pilot](https://github.com/andreabenetton/unisermo/blob/main/research/lexicon/document-primer-results-2026-10-23.md): 8/8 correct splits under either small header; 384 vs 395 billed total tokens across two conditions. Narrow and not semantically reviewed.
 - [24 October new-document tense replication](https://github.com/andreabenetton/unisermo/blob/main/research/lexicon/discourse-tense-replication-results-2026-10-24.md): 13/18 vs 15/18 events exactly extracted under different primers, a reminder that shorter prompts can lose important semantic detail.
 
+## Scientific literature relevant to the 2025 objective
+
+A directly relevant **independent scholarly reference** (located during the 24 October 2026 audit) is:
+
+Coupé, C., Oh, Y. M., Dediu, D., and Pellegrino, F. (2019). *Different languages, similar encoding efficiency: Comparable information rates across the human communicative niche*. **Science Advances, 5**(9), eaaw2594. [DOI 10.1126/sciadv.aaw2594](https://doi.org/10.1126/sciadv.aaw2594); [PubMed](https://pubmed.ncbi.nlm.nih.gov/32047854/).
+
+The study analyzed **17 natural languages** and estimated similar average information transmission rates (approximately **39 bits/s**), despite variation in syllabic information density and syllables per second. This implies an empirical **density vs. speech-rate tradeoff**, not a fixed physiological upper limit; it says **nothing empirical about Unisermo**. Research on first- and second-language speech also separates articulatory speed and information per syllable: [*Information encoding and transmission profiles of first-language (L1) and second-language (L2) speech*](https://www.cambridge.org/core/journals/bilingualism-language-and-cognition/article/information-encoding-and-transmission-profiles-of-firstlanguage-l1-and-secondlanguage-l2-speech/6C9D9A0CDA368D1C85ED41BD68EF58F2).
+
+**Implication for measurement:** compression of lexical forms alone may be offset by slower articulation, L2 decoding demands, corrections and ambiguities. Test speech production and listener comprehension jointly at controlled learning stages. Maintain **syllabic information**, **semantic recoverability**, and **LLM token measures** as distinct dependent variables. Neither cited paper proves the author used this literature in 2025 or 2026; these are **retrospective scientific context** for a prospectively testable research objective.
+
 ## Recommended paper claim and empirical test
 
 **Defensible historical formulation (paraphrase, not verbatim):**
