@@ -309,6 +309,30 @@
       "categories": [
         "function_word"
       ],
+      "decision": "Free invariant ecce marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma.",
+      "form": "ecce",
+      "meaning_en": "except, excluding; general exception operator",
+      "meaning_it": "eccetto, tranne, salvo; operatore generale di esclusione",
+      "origin": "Explicit author ratification 2026-10-24; international except/exception family, distinct from Latin ecce ('behold')",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Canonical single-word compound ecce+se marks conditional exception (UNLESS). Both eccese P, Q and Q eccese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms.",
+      "form": "eccese",
+      "meaning_en": "unless; except if (conditional exception)",
+      "meaning_it": "a meno che, salvo che; eccezione condizionale",
+      "origin": "Explicit author ratification 2026-10-24; fused ecce + se",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
       "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/.",
       "form": "ekwal",
       "meaning_en": "equal; equally; as ... as",
