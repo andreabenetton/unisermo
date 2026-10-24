@@ -119,3 +119,31 @@ class NumeralParser:
             "count": number["value"],
             "status": "canonical_by_rule", "source": "language/numerals.md",
         }
+
+    def generate_ordinal(self, value: int) -> str:
+        """Canonical positive ordinal: cardinal + im; final uno/oto lose o."""
+        base = self.generate_numeral(value)
+        if value == 0:
+            raise ValueError("zero ordinal has not been ratified")
+        return (base[:-1] if base.endswith(("uno", "oto")) else base) + "im"
+
+    def parse_ordinal(self, surface: str) -> dict | None:
+        """Decode only ratified canonical ordinals, without guessing variants."""
+        if (not isinstance(surface, str) or not surface.endswith("im")
+                or len(surface) > MAX_NUMERAL_CHARS + 2
+                or not surface.isascii() or not surface.isalpha()
+                or surface != surface.lower()):
+            return None
+        stem = surface[:-2]
+        for cardinal_form in (stem, stem + "o"):
+            cardinal = self.parse_numeral(cardinal_form)
+            if cardinal is None or cardinal["value"] == 0:
+                continue
+            value = cardinal["value"]
+            if self.generate_ordinal(value) == surface:
+                return {
+                    "kind": "ordinal_numeral", "form": surface,
+                    "value": value, "status": "canonical_by_rule",
+                    "source": "language/numerals.md",
+                }
+        return None
