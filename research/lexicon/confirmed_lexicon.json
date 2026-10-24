@@ -606,6 +606,30 @@
       "meaning_en": "if; condition introducer",
       "source": "Explicit author ratification 2026-10-24, Latin si adapted to distinguish si=yes",
       "decision": "Ratify standalone se as IF, distinct from confirmed si YES and no NO/NOT. No automatic ratification of then/tum, ergo, nisi, sin, sed or other connective forms."
+    },
+    {
+      "form": "alor",
+      "category": "function_word",
+      "meaning_it": "allora; correlativo della conseguenza condizionale",
+      "meaning_en": "then; conditional consequent marker",
+      "source": "Explicit author ratification 2026-10-24; Italian allora and French alors",
+      "decision": "Use alor for THEN in condition-consequence constructions, distinct from ergo inferential THEREFORE. Not obligatory by this lexical ratification; its precise omission rules and nested scopes await detailed conditional syntax."
+    },
+    {
+      "form": "ma",
+      "category": "function_word",
+      "meaning_it": "ma; congiunzione avversativa",
+      "meaning_en": "but; adversative conjunction",
+      "source": "Explicit author ratification 2026-10-24; Italian ma, French mais and Portuguese mas",
+      "decision": "Use standalone ma as ordinary adversative BUT, distinct from simple additive e. Concessive subordinate connectors remain open."
+    },
+    {
+      "form": "ergo",
+      "category": "function_word",
+      "meaning_it": "quindi; dunque; pertanto",
+      "meaning_en": "therefore; thus; inferential conclusion marker",
+      "source": "Explicit author ratification 2026-10-24; Latin ergo",
+      "decision": "Use ergo to introduce inferential conclusions, distinct from conditional-correlative alor and ordinary adversative ma."
     }
   ]
 }
