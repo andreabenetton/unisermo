@@ -27,7 +27,9 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 | [August phonology decision chain](august-phonology-decision-chain.md) | Direct immutable SHA recovery of commits `7311032`, `011247a`, `9aa7b49`, `8bb979b` in **Unisermo** with original alternatives, model scores, decisions and open assumptions | **Verified commit objects**. Quantitative metrics are research models, not validated human intelligibility. Chat-to-commit causation remains partially inferred. |
 | [Ten original ChatGPT HTML snapshots](glottodelta-chatgpt-snapshot-comparison.md) | Direct Library file checkpoint comparison, invariant corpus, code changes and ISO-first denominator reconciliation | **Verified raw-file audit** of 10 out of 39 snapshots. 2,122 ISO-first research languages must not be conflated with raw Glottocode identities. |
 
-| [May–August morphology decision chain](may-august-morphology-decision-chain.md) | 24 May pre-case verbal alternatives, precise 8–10 Aug phoneme chronology, **13→6→7** case transitions, rejected/reused `-da` meanings | May conversation data are indexed summaries (medium); Aug SHA/date/diff high; May 22 dating disputed and explicitly flagged. |\n\n## Required per-entry data for all new research
+| [May–August morphology decision chain](may-august-morphology-decision-chain.md) | 24 May pre-case verbal alternatives, precise 8–10 Aug phoneme chronology, **13→6→7** case transitions, rejected/reused `-da` meanings | May conversation data are indexed summaries (medium); Aug SHA/date/diff high; May 22 dating disputed and explicitly flagged. |\n\n| [9 August nominal number confirmation](https://github.com/andreabenetton/unisermo/commit/e31929945d4fce0f628ac96a4dc6c2c260bbe63e) | Primary `-en`→`wi` change, neutral bare noun, quantifier redundancy, `omni`/`tot` distinction | Immutable research commit at 19:35:58 UTC; full prior deliberation not recovered; no head-to-head human trial claimed. |
+
+## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
 - Research question and prior hypothesis, including possible negative outcome
