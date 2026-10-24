@@ -65,6 +65,19 @@ For speaker-level details, provenance and caveats see [early May conversation ev
 
 Times marked **~** were recovered at approximate minute resolution, not full verbatim conversation timestamps. Family terms preserved in an October note remain candidate analyses. [Full numeral history](august-numerals-iteration-and-kinship-history.md).
 
+## 10 August 2026: resolved kinship conversation fragment and conflicting Git representation
+
+| Original UTC message / speaker | Recovered evidence | Corroborating Git, or gap |
+| --- | --- | --- |
+| **15:56:43 Git** | `frat` canonical brother entry | [`a1df1425`](https://github.com/andreabenetton/unisermo/commit/a1df1425bddf6e8636074ffb50309b1fd9476c1f) |
+| **16:09:15 user** | `gen/geno/gene` parent/father/mother, and an objection to ambiguous `par` for a sibling interpretation | No corresponding contemporary canonical root entry found in current lexicon |
+| **16:09:17 assistant** | Compares `sor/germ/sib/frer/adel`; suggests neutral `adel` | Assistant proposal only at this instant |
+| **16:11:23 user** | **Confirms `adel` = sibling, `adelo` = brother, `adele` = sister** | **Conversation-confirmed**, not found as a subsequent confirmed Git root; `frat` persists |
+| **16:12:33 user** | Proposes `adelgen` = sibling-of-parent (uncle/aunt), and fused `A+B` genealogy | Structural illustration in later `language/numerals.md` is not canonical `adel` |
+| **16:31:20 user** | Confirms `bisjer` counts repeated steps/iterations generally | [`b3c473e`, 16:35](https://github.com/andreabenetton/unisermo/commit/b3c473e6f86cb58734e208491a7e2ed6306623c6) |
+
+[Detailed discrepancy analysis](august-kinship-original-dialogue-versus-git.md). These are **dated original-conversation indexed messages** and independently versioned Git states, not a full first-party chat export. Neither acceptance of `adel` as **conversation choice** nor persistence of `frat` in **canonical repository data** should be erased.
+
 ## Independently verified Git anchors
 
 - 27 July 2026 17:59:16 UTC — `andreabenetton/glottodelta` commit `bd25974983e3` imported an **already working** IPA atlas into Git. This postdates the 27 July **morning** conversations, establishing that the earlier conversations plausibly concerned work later captured in the imported snapshot.

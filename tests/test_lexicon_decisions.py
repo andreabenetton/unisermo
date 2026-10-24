@@ -17,7 +17,7 @@ def main() -> None:
     expected = {
         "ager", "kad", "kap", "sentr", "sert", "sirkul", "siv", "klar",
         "kun", "kom", "ker", "per", "pro", "due", "fin", "tem", "mod", "kred", "kurar", "dek", "dik", "dirig", "dok", "fak",
-        "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal", "alt", "bas", "altmov", "basmov", "aer", "plan", "aerplan", "frat",
+        "lok", "spets", "stru", "vok", "kin", "nation", "uman", "major", "ekwal", "alt", "bas", "altmov", "basmov", "aer", "plan", "aerplan", "adel", "adelo", "adele", "gen", "geno", "gene", "adelgen", "bisjergen", "fil", "filadelgen", "genegene", "genegeno", "genogene", "genogeno",
     }
     assert expected <= entries.keys(), expected - entries.keys()
     assert entries["kin"]["meaning_it"] == "cinque"
@@ -39,7 +39,23 @@ def main() -> None:
     assert entries["aerplan"]["meaning_en"] == "airplane; aeroplane"
     assert entries["aerplan"]["category"] == "compound"
     assert "aer+plan" in entries["aerplan"]["decision"]
-    assert entries["frat"]["meaning_en"] == "brother"
+    assert entries["adel"]["meaning_en"].startswith("sibling")
+    assert entries["adelo"]["meaning_en"].startswith("brother")
+    assert entries["adele"]["meaning_en"].startswith("sister")
+    assert entries["gen"]["meaning_en"].startswith("parent")
+    assert entries["geno"]["meaning_en"] == "father"
+    assert entries["gene"]["meaning_en"] == "mother"
+    assert entries["adelgen"]["meaning_en"].startswith("uncle or aunt")
+    assert entries["bisjergen"]["category"] == "compound"
+    assert entries["fil"]["meaning_en"].startswith("offspring")
+    assert entries["filadelgen"]["meaning_en"].startswith("first cousin")
+    for term in ("genegene", "genegeno", "genogene", "genogeno"):
+        assert entries[term]["category"] == "compound"
+    assert entries["genegene"]["meaning_en"].startswith("maternal grandmother")
+    assert entries["genegeno"]["meaning_en"].startswith("paternal grandmother")
+    assert entries["genogene"]["meaning_en"].startswith("maternal grandfather")
+    assert entries["genogeno"]["meaning_en"].startswith("paternal grandfather")
+    assert "frat" not in entries
     assert "umano" in entries["uman"]["decision"]
     assert "umane" in entries["uman"]["decision"]
     assert "umanitat" in entries["uman"]["decision"]

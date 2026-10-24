@@ -63,6 +63,12 @@
       "source": "language/copula.md"
     },
     {
+      "form": "frat",
+      "category": "noun",
+      "status": "example_only",
+      "source": "language/MIGRATION_HISTORY.md"
+    },
+    {
       "form": "ines",
       "category": "verb",
       "status": "decision_attested_not_indexed",

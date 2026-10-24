@@ -28,5 +28,5 @@
   },
   "syntax": {"canonical_order": "SVO", "subject_pro_drop": true, "polar_marker": "ka", "negator": "no", "optional_indefinite": "uno"},
   "non_finite": {"participle_resultative": "it"},
-  "not_implemented": ["full_clausal_reordering", "enclitic_focus_scope", "wh_interrogatives", "zero_copula", "servile_complement_frames", "full_lexical_valency", "productive_compounding", "passive_clauses", "phonetic_allophony"]
+  "not_implemented": ["full_clausal_reordering", "enclitic_focus_scope", "wh_interrogatives", "zero_copula", "servile_complement_frames", "full_lexical_valency", "general_productive_compounding", "passive_clauses", "phonetic_allophony"]
 }

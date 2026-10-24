@@ -16,6 +16,7 @@ Quantitative studies and design evidence live under `../research/`.
 - `articles.md` — no obligatory articles; optional indefinite `uno`
 - `derivation.md` — `-or`, `-il`, `-ia`, `-it`, `-itat`, `-al` and prefixes
 - `numerals.md` — cardinal numeral system including `kin` = 5
+- `kinship.md` — sibling `adel`, parents `gen/geno/gene`, offspring `fil`, uncle/aunt `adelgen`, cousin `filadelgen` and maternal/paternal grandparent paths; historical `frat` retired
 - `questions.md` — `ka` and the wh series, including `kom` = how and `ker` = why
 - `negation.md` — `si/no` and focus enclitics `-si/-no`
 - `copula.md` — `es` with the current person-number system

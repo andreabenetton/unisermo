@@ -348,12 +348,116 @@
       "decision": "Canonical transparent compound aer+plan for airplane/aeroplane. Preferred over aeroplan; the lexical structure is explicitly aer + plan."
     },
     {
-      "form": "frat",
+      "form": "adel",
       "category": "root",
+      "meaning_it": "fratello o sorella (non specificato)",
+      "meaning_en": "sibling (brother or sister, gender-neutral)",
+      "source": "Author-confirmed choice, original ChatGPT conversation 2026-08-10 16:11:23 UTC; restored at author's instruction 2026-10-24",
+      "decision": "Canonize adel as neutral sibling root. This August 10 author-approved choice was omitted from the saved lexicon; explicitly restored by author October 24, replacing obsolete frat."
+    },
+    {
+      "form": "adelo",
+      "category": "derived",
       "meaning_it": "fratello",
-      "meaning_en": "brother",
-      "source": "Latin frater / international fratern- family",
-      "decision": "Canonical kinship root for brother, based on Latin frater and the international fratern- family."
+      "meaning_en": "brother (male sibling)",
+      "source": "Author-confirmed 2026-08-10 adel + -o masculine sibling formation; restoration 2026-10-24",
+      "decision": "Canonize adelo = male sibling/brother, derived from neutral adel plus kinship-family ending -o. Replaces retired frat. Not evidence of a universal gender rule across all nouns."
+    },
+    {
+      "form": "adele",
+      "category": "derived",
+      "meaning_it": "sorella",
+      "meaning_en": "sister (female sibling)",
+      "source": "Author-confirmed 2026-08-10 adel + -e feminine sibling formation; restoration 2026-10-24",
+      "decision": "Canonize adele = female sibling/sister, derived from neutral adel plus kinship-family ending -e. Do not generalize this pattern to unconfirmed kinship candidates."
+    },
+    {
+      "form": "gen",
+      "category": "root",
+      "meaning_it": "genitore",
+      "meaning_en": "parent (gender-neutral)",
+      "source": "Author-approved 2026-08-10 parent system, reaffirmed explicitly 2026-10-24",
+      "decision": "Canonize gen as neutral parent relation, base for geno (father) and gene (mother)."
+    },
+    {
+      "form": "geno",
+      "category": "derived",
+      "meaning_it": "padre",
+      "meaning_en": "father",
+      "source": "2026-08-10 parent family gen+o, author-approved 2026-10-24",
+      "decision": "Canonize geno = father, male parent. Sex suffix applies to the immediate parent relation in this confirmed form."
+    },
+    {
+      "form": "gene",
+      "category": "derived",
+      "meaning_it": "madre",
+      "meaning_en": "mother",
+      "source": "2026-08-10 parent family gen+e, author-approved 2026-10-24",
+      "decision": "Canonize gene = mother, female parent. Sex suffix applies to the immediate parent relation in this confirmed form."
+    },
+    {
+      "form": "adelgen",
+      "category": "compound",
+      "meaning_it": "zio o zia (non specificato)",
+      "meaning_en": "uncle or aunt (parent's sibling, gender-neutral)",
+      "source": "2026-08-10 author proposal adel+gen; expressly ratified 2026-10-24",
+      "decision": "Canonize adelgen = sibling of a parent. Composition A+B means A relative to B, keeping left and right relation roles distinct."
+    },
+    {
+      "form": "bisjergen",
+      "category": "compound",
+      "meaning_it": "nonno o nonna (genitore di un genitore, neutro)",
+      "meaning_en": "grandparent (parent's parent, gender-neutral)",
+      "source": "2026-08-10 original genealogical NUMjer design, author reaffirmation 2026-10-24",
+      "decision": "Canonize bisjergen = two successive gen (parent) relations: parent of parent. bisjer counts two relational steps. No claim that bisjergeno/bisjergene have resolved male/female endpoint scope."
+    },
+    {
+      "form": "fil",
+      "category": "root",
+      "meaning_it": "figlio o figlia in quanto discendente diretto; prole",
+      "meaning_en": "offspring; child of a parent (relational, gender-neutral)",
+      "source": "Direct author ratification, 2026-10-24; prior kinship design discussion",
+      "decision": "Canonize fil as the inverse one-generation relation to gen: offspring/child of a parent, irrespective of age or sex. It does not mean a young person."
+    },
+    {
+      "form": "filadelgen",
+      "category": "compound",
+      "meaning_it": "cugino o cugina di primo grado (figlio o figlia di uno zio/zia)",
+      "meaning_en": "first cousin (offspring of a parent's sibling, gender-neutral)",
+      "source": "Productive relational composition fil + adel + gen following direct approval of fil, 2026-10-24",
+      "decision": "Canonical transparent kinship compound filadelgen = fil + (adel + gen), offspring of parent's sibling = first cousin. Components compose as A relative to B and are evaluated from right to left. Not a gender-specific or more distant cousin."
+    },
+    {
+      "form": "genegene",
+      "category": "compound",
+      "meaning_it": "nonna materna",
+      "meaning_en": "maternal grandmother (mother of mother)",
+      "source": "Author-requested genealogical path feature, 2026-10-24; compose gene + gene",
+      "decision": "Canonize genegene = gene + gene: mother of mother; trace relational path from ego right to left. Explicit link sex is part of each parent root, not a floating word-final gender suffix."
+    },
+    {
+      "form": "genegeno",
+      "category": "compound",
+      "meaning_it": "nonna paterna",
+      "meaning_en": "paternal grandmother (mother of father)",
+      "source": "Author-requested genealogical path feature, 2026-10-24; compose gene + geno",
+      "decision": "Canonize genegeno = gene + geno: mother of father; traverse rightmost geno (father), then leftmost gene (his mother)."
+    },
+    {
+      "form": "genogene",
+      "category": "compound",
+      "meaning_it": "nonno materno",
+      "meaning_en": "maternal grandfather (father of mother)",
+      "source": "Author-requested genealogical path feature, 2026-10-24; compose geno + gene",
+      "decision": "Canonize genogene = geno + gene: father of mother; traverse rightmost gene (mother), then leftmost geno (her father)."
+    },
+    {
+      "form": "genogeno",
+      "category": "compound",
+      "meaning_it": "nonno paterno",
+      "meaning_en": "paternal grandfather (father of father)",
+      "source": "Author-requested genealogical path feature, 2026-10-24; compose geno + geno",
+      "decision": "Canonize genogeno = geno + geno: father of father; both links specify male parent. Not a general label for all grandfathers."
     }
   ]
 }

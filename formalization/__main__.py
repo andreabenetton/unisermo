@@ -24,6 +24,8 @@ def main() -> None:
     noun = sub.add_parser("noun", help="generate a nominal case form")
     noun.add_argument("lemma")
     noun.add_argument("--case", default="nominative")
+    kinship = sub.add_parser("kinship", help="decode a confirmed/productive genealogy as a typed path")
+    kinship.add_argument("word")
     participle = sub.add_parser("participle", help="generate a -it resultative")
     participle.add_argument("lemma")
     args = p.parse_args()
@@ -34,7 +36,11 @@ def main() -> None:
         validate()
     else:
         language = Unisermo()
-        if args.command == "analyze": result = language.analyze_word(args.word)
+        if args.command == "kinship":
+            result = language.parse_kinship(args.word)
+            if result is None:
+                p.error("unknown, unsupported or ambiguous kinship relation")
+        elif args.command == "analyze": result = language.analyze_word(args.word)
         elif args.command == "sentence": result = language.parse_sentence(args.text)
         elif args.command == "generate": result = language.generate_verb(args.lemma, args.tense, args.aspect, args.person, args.number)
         elif args.command == "noun": result = language.generate_noun(args.lemma, args.case)

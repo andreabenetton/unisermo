@@ -71,6 +71,10 @@ pilot → Run workflow** in that repository to generate JSON artifacts. Local
 execution is also supported. The workflow does not create commits or upload
 results to another repository.
 
+## Frozen lexical snapshot versus current canon (24 October 2026)
+
+These pilot and development corpora were created **before** the author's correction of the missed 10 August sibling decision. They contain historical `frat` = brother. **Do not edit or re-label those saved samples and old experiment outputs**: doing so would break dataset/checksum provenance. Their deterministic corpus generators intentionally preserve the original lexical snapshot for **reproduction only**, and the Phase 1 parser retains `frat` as **`example_only` historical attestation**, not a current canonical root. New materials should use **`adelo` = brother, `adele` = sister or `adel` = neutral sibling**; see [live kinship](../language/kinship.md). Any new benchmark on the restored lexicon needs a new corpus ID and explicit evaluation/version boundary, not a silent rewrite of old data.
+
 ## Interpretation limits
 
 - The pilot is morphology-biased: 64 of 78 examples are inflected verbs.

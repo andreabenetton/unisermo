@@ -56,8 +56,33 @@ with optional pronoun subject, pro-drop, `ka` questions, and pre-verbal `no`.
 Multiple analyses are preserved for ambiguous forms; unsupported syntax is
 rejected rather than assigned guessed semantics.
 
+## Productive genealogy (approved subset)
+
+`python3 -m formalization kinship genegenogeno` returns a **typed
+`path_from_ego`** (rightmost link first), while
+`python3 -m formalization analyze genegenogenoem` returns the
+recognized productive nominal accusative. Standard noun generation and the
+restricted SVO clause parser accept these derived kinship forms.
+
+Accepted atomic links: `adel/adelo/adele`, `gen/geno/gene`, and `fil`.
+Relations compose `A+B = A of B`, traversing **right-to-left**.
+Numeral `NUMjer` repeats **the next complete atomic relation link**,
+for example `bisjergene` = mother's mother and `adelbisjergen` =
+sibling of a grandparent. This scoping rule is deliberately narrow: an
+unbracketed `NUMjer` does not attempt to repeat an arbitrarily complex
+compound. It supports canonical cardinal expressions for counts from
+1 through 128, with a 256-character input and a 128-step expansion guard.
+It never imports former proposals or historical `frat` as productive roots.
+
+An unlisted well-formed family relation is labelled
+`productive_from_confirmed`, **not** added to the confirmed lexicon.
+Ambiguous or malformed segmentations fail closed; the parser returns
+**relational paths, not human comprehension or full semantic inference**.
+See [normative kinship](../language/kinship.md) and
+[`tests/test_kinship_parser.py`](../tests/test_kinship_parser.py).
+
 Not yet implemented: full lexical valency, focus enclitic scope, all free
-relator constructions, derivational compounding, passives, optional word-order
+relator constructions, general (non-kinship) derivational compounding, passives, optional word-order
 variants, all wh-questions, zero copula and non-canonical phonetic realizations.
 These remain legitimate language phenomena even when unsupported by this
 **reference subset**.

@@ -29,5 +29,46 @@ class WordParser:
                     source_lemma = lemma[:-2] if lemma.endswith("it") and lemma[:-2] in self.verbs else lemma
                     out.append({"kind": "nominal_case", "lemma": lemma, "status": self.lexicon[source_lemma]["status"],
                                 "case": case, "suffix": self.genitive_suffix(lemma) if case == "genitive" else self.morph["nominal"]["case"][case]})
+        # Surface-transparent genealogical compounds are licensed by the
+        # confirmed relation inventory, even if their *whole* lemma is not
+        # explicitly indexed. Keep the structural path separate from lexical
+        # status; an unlisted but valid compound is productive, not a new root.
+        kinship = self.parse_kinship(surface)
+        if kinship is not None:
+            out.append(kinship)
+            if surface not in self.nouns:
+                out.append({
+                    "kind": "nominal_case", "lemma": surface,
+                    "status": "productive_from_confirmed",
+                    "case": "nominative", "suffix": "",
+                    "kinship": kinship,
+                })
+        for case, suffix in self.morph["nominal"]["case"].items():
+            if case == "nominative":
+                continue
+            # The alternate genitive form -es is root-dependent: do not
+            # accept it indiscriminately when the nominal ends in a vowel.
+            if case == "genitive":
+                suffixes = {suffix, self.morph["nominal"]["genitive_alternate"]}
+            else:
+                suffixes = {suffix}
+            for ending in suffixes:
+                if not surface.endswith(ending) or len(surface) <= len(ending):
+                    continue
+                stem = surface[:-len(ending)]
+                if stem in self.nouns:
+                    continue  # Existing nominal loop already owns this case.
+                parsed = self.parse_kinship(stem)
+                if parsed is None:
+                    continue
+                proper = (self.genitive_suffix(stem) if case == "genitive"
+                          else self.morph["nominal"]["case"][case])
+                if proper != ending:
+                    continue
+                out.append({
+                    "kind": "nominal_case", "lemma": stem,
+                    "status": "productive_from_confirmed",
+                    "case": case, "suffix": ending, "kinship": parsed,
+                })
         return {"surface": surface, "analyses": out}
 

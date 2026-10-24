@@ -3,8 +3,14 @@ from __future__ import annotations
 
 class MorphologyGenerator:
     def check_lemma(self, lemma: str, domain: str) -> None:
-        if lemma not in (self.verbs if domain == "verb" else self.nouns):
-            raise ValueError(f"unsupported {domain} lemma: {lemma!r}; documentary attestations are not automatically canonical")
+        if lemma in (self.verbs if domain == "verb" else self.nouns):
+            return
+        if domain == "noun" and self.parse_kinship(lemma) is not None:
+            return  # Licensed productive composition of individually confirmed relations.
+        raise ValueError(
+            f"unsupported {domain} lemma: {lemma!r}; "
+            "documentary attestations are not automatically canonical"
+        )
 
     def generate_verb(self, lemma: str, tense: str = "present", aspect: str = "simple",
                       person: int = 1, number: str = "singular") -> str:
