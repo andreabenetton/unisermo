@@ -1,6 +1,6 @@
 {
   "schema": "unisermo/confirmed-lexicon@1",
-  "confirmed_on": "2026-08-09",
+  "confirmed_on": "2026-10-24",
   "status": "confirmed_core_lexicon",
   "entries": [
     {
@@ -482,6 +482,78 @@
       "meaning_en": "billion (10^9 decimal group power)",
       "source": "Author ratification 2026-10-24; international giga- power prefix",
       "decision": "Ratify giga as the numerical power 1000000000 (short-scale billion, Italian miliardo), with a fused 1..999 group coefficient, not as an abbreviation gig."
+    },
+    {
+      "form": "bon",
+      "category": "root",
+      "meaning_it": "buono; valutazione positiva generale dipendente dal contesto",
+      "meaning_en": "good; context-dependent generally positive evaluation",
+      "source": "Already attested in language/copula.md and language/adjectives.md; author clarification 2026-10-24",
+      "decision": "General goodness only: not lexical synonym of aesthetic bel, moral prob or functional apt.",
+      "status": "confirmed"
+    },
+    {
+      "form": "bel",
+      "category": "root",
+      "meaning_it": "bello; di qualità estetica positiva",
+      "meaning_en": "beautiful; aesthetically pleasing",
+      "source": "Author ratification 2026-10-24",
+      "decision": "Restrict to the aesthetic domain, including aesthetic judgment of sounds and experiences; not a general synonym for bon.",
+      "status": "confirmed"
+    },
+    {
+      "form": "prob",
+      "category": "root",
+      "meaning_it": "moralmente buono; retto; di integrità morale",
+      "meaning_en": "morally good; upright; morally sound",
+      "source": "Author ratification 2026-10-24; Latin probus",
+      "decision": "Denotes positive moral character or conduct, not generic goodness, proof/probability or merely adherence to a moral code.",
+      "status": "confirmed"
+    },
+    {
+      "form": "etik",
+      "category": "root",
+      "meaning_it": "etico; relativo all'etica; conforme a principi etici",
+      "meaning_en": "ethical; pertaining to ethics or aligned with ethical principles",
+      "source": "Author ratification 2026-10-24; Greek ethikos via international ethical vocabulary",
+      "decision": "Distinguish from prob: ethical conformity is not necessarily a global evaluation of a person's moral goodness.",
+      "status": "confirmed"
+    },
+    {
+      "form": "moral",
+      "category": "root",
+      "meaning_it": "morale; relativo alla moralità",
+      "meaning_en": "moral; pertaining to morality",
+      "source": "Author ratification 2026-10-24; Latin moralis",
+      "decision": "Descriptive domain adjective, not necessarily positive: moral actions or moral issues are not by definition good.",
+      "status": "confirmed"
+    },
+    {
+      "form": "nobl",
+      "category": "root",
+      "meaning_it": "nobile; di nobiltà sociale o nobiltà d'animo secondo contesto",
+      "meaning_en": "noble; socially noble or noble in character depending on context",
+      "source": "Author ratification 2026-10-24; Latin nobilis",
+      "decision": "Social and figurative senses should be distinguished contextually; nobl is not a generic equivalent of prob.",
+      "status": "confirmed"
+    },
+    {
+      "form": "just",
+      "category": "root",
+      "meaning_it": "giusto; conforme alla giustizia",
+      "meaning_en": "just; fair; aligned with justice",
+      "source": "Author ratification 2026-10-24; Latin iustus",
+      "decision": "A specific moral dimension (justice/fairness), not all moral goodness.",
+      "status": "confirmed"
+    },
+    {
+      "form": "apt",
+      "category": "root",
+      "meaning_it": "adatto; idoneo a una funzione o uno scopo",
+      "meaning_en": "apt; fit or suitable for a purpose",
+      "source": "Author selection in 2026-10-24 discussion preceding this ratification; record as provisional rather than author-ratified",
+      "decision": "Functional fitness only; separate from efficiency, effectiveness, and general quality.",
+      "status": "proposed_pending_explicit_ratification"
     }
   ]
 }
