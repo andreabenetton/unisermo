@@ -1,0 +1,60 @@
+name: Archive proposition meaning evidence once
+on:
+  push:
+    branches: [research/proposition-meaning-pilot-20261024]
+    paths: ['.github/workflows/proposition-meaning-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive verified proposition meaning once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Retrieve successful original run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/unisermo-propositions
+          gh run download 40086484557 --repo andreabenetton/unisermo --name proposition-meaning-40086484557 --dir /tmp/unisermo-propositions
+          test -s /tmp/unisermo-propositions/proposition-meaning-raw.jsonl
+          test -s /tmp/unisermo-propositions/proposition-meaning-raw.score.json
+      - name: Verify original responses and rerun parser-derived scoring
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from benchmarks.proposition_meaning import CORPUS,MODEL,load_corpus,score
+          p=Path('/tmp/unisermo-propositions/proposition-meaning-raw.jsonl')
+          s=json.loads(Path('/tmp/unisermo-propositions/proposition-meaning-raw.score.json').read_text())
+          rows=[json.loads(l) for l in p.read_text().splitlines() if l.strip()]
+          assert len(rows)==24 and len({r['id'] for r in rows})==24
+          assert [r['call_order'] for r in rows]==list(range(1,25))
+          assert all(r['returned_model']==MODEL and r['provider']=='DeepInfra' and r['finish_reason']=='stop' for r in rows)
+          assert hashlib.sha256(p.read_bytes()).hexdigest()==s['responses_sha256']
+          assert hashlib.sha256(CORPUS.read_bytes()).hexdigest()==s['corpus_sha256']
+          assert abs(sum(r['usage']['cost'] for r in rows)-s['observed_cost_usd'])<1e-12
+          assert s['observed_cost_usd']<.02
+          recalculated=score(rows,load_corpus())
+          assert recalculated['conditions']==s['conditions']
+          assert recalculated['paired_documents']==s['paired_documents']
+          print('Verified model/provider, all 24 original responses, prompt identity, hashes, costs, and score.')
+          PY
+      - name: Preserve original evidence in versioned repository paths
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/unisermo-propositions/proposition-meaning-raw.jsonl benchmarks/evidence/proposition-meaning-2026-10-24-run40086484557.jsonl
+          cp /tmp/unisermo-propositions/proposition-meaning-raw.score.json benchmarks/evidence/proposition-meaning-2026-10-24-run40086484557.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/proposition-meaning-2026-10-24-run40086484557.jsonl benchmarks/evidence/proposition-meaning-2026-10-24-run40086484557.score.json
+          git commit -m 'research: archive verified proposition-meaning results'
+          git push origin HEAD:research/proposition-meaning-pilot-20261024
