@@ -40,4 +40,4 @@ jobs:
           python -m unittest discover -s tests -p 'test_formalization.py' -v
           python tests/test_language_spec_sync.py
           python tests/test_lexicon_decisions.py
-          python -m unittest discover -s tests -p 'test_recent_grammar_decisions.py' -v
+          python tests/test_recent_grammar_decisions.py
