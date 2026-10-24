@@ -1,0 +1,41 @@
+{
+  "schema": "unisermo/tally-spontaneous-pretest@1",
+  "title": "Unisermo — Pretest di comprensione spontanea",
+  "instructions": "Leggi ogni frase e scrivi cosa pensi che significhi in italiano. Non è necessario riconoscere ogni parola né identificare i tempi verbali. Puoi indicare soltanto gli elementi che comprendi o lasciare il campo vuoto se non hai alcuna ipotesi. Non utilizzare dizionari, traduttori o strumenti AI. La partecipazione è volontaria e non richiede nome o indirizzo email.",
+  "status": "draft_pending_source_review",
+  "items": [
+    {
+      "id": "SP001",
+      "sentence": "dom bon.",
+      "source": "language/copula.md"
+    },
+    {
+      "id": "SP002",
+      "sentence": "uman esa doktor.",
+      "source": "language/copula.md"
+    },
+    {
+      "id": "SP003",
+      "sentence": "uman vida domem.",
+      "source": "language/noun_case_system.md"
+    },
+    {
+      "id": "SP004",
+      "sentence": "i movi akwaem domad.",
+      "source": "language/verb_specification.md + language/noun_case_system.md",
+      "review": "finite constructed combination - source review pending"
+    },
+    {
+      "id": "SP005",
+      "sentence": "akwa traesa solidad likwidde.",
+      "source": "language/copula.md section 6",
+      "review": "finite constructed combination - source review pending"
+    },
+    {
+      "id": "SP006",
+      "sentence": "u traesu umanem doktorda.",
+      "source": "language/copula.md section 7",
+      "review": "finite constructed combination - source review pending"
+    }
+  ]
+}

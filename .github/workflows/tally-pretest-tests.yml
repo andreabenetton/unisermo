@@ -1,0 +1,31 @@
+name: Tally form draft offline tests
+on:
+  push:
+    branches: [research/tally-human-comprehension-pretest-20261024]
+    paths:
+      - 'benchmarks/tally_pretest.py'
+      - 'benchmarks/corpus/tally-spontaneous-pretest-v1.json'
+      - 'tests/test_tally_pretest.py'
+      - '.github/workflows/tally-pretest-tests.yml'
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate no-network Tally draft
+        run: |
+          python -m unittest discover -s tests -p 'test_tally_pretest.py' -v
+          python -m benchmarks.tally_pretest --dry-run > /tmp/unisermo-tally-draft.json
+          python - <<'PY'
+          import json
+          form=json.load(open('/tmp/unisermo-tally-draft.json'))['form']
+          assert form['status']=='DRAFT'
+          assert len([b for b in form['blocks'] if b['type']=='TEXTAREA'])==6
+          print('Offline Tally draft complete; no external API request.')
+          PY
