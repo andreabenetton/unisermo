@@ -13,6 +13,30 @@ from proposal and alternatives through evidence to explicit acceptance. The
 weighted lexical objective in LDR-0002 remains **Experimental**, not an
 established language rule.
 
+## Multiplicative factor `NUMfol` (author approved 24 October 2026)
+
+The new **`-fol`** operator derives an invariant scalar/relational
+factor from a positive canonical numeral: `bisfol` = double/×2,
+`terfol` = triple/×3, `forfol` = quadruple/×4. It is **not**
+`NUMjer` (event repetition) or an ordinal (position). Its pre-nominal
+use in the small SVO subset is recognized only **alone** before the
+noun; combined modifier scope is deliberately left for future syntax
+work. Zero factor `nulfol` is not approved. Former discussion candidate
+`-mul` is not canonical.
+
+```sh
+python3 -m formalization factor 4
+python3 -m formalization multiplicative forfol
+python3 -m formalization analyze bisfol
+python3 -m formalization sentence 'vidi bisfol domem'
+```
+
+The parser and generator cover factors 1 through 999,999,999,999
+by wrapping the already-accepted **canonical cardinal grammar**, not
+by adding a list of separate multipliers. `tests/test_multiplicative_parser.py`
+checks old and large-number ranges, invalid variants, contrast with
+`NUMjer`, and restricted nominal use.
+
 ## Cardinal numerals and iteration (0–999,999,999,999)
 
 The `formalization/parser/numeral.py` module now generates and parses **every canonical number 0–999,999,999,999**. It composes groups of three digits using only a 999-entry coefficient index and rejects variants with explicit zero-place components, redundant `uno` before a power, repeated powers and unknown spellings. It also recognizes positive `NUMjer` counters and passes the same normalized `_cardinal` generator to the kinship parser (whose *path expansion* independently remains limited to 128).
