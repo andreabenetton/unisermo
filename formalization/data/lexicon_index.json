@@ -460,6 +460,18 @@
     },
     {
       "categories": [
+        "numeral"
+      ],
+      "decision": "Ratify giga as the numerical power 1000000000 (short-scale billion, Italian miliardo), with a fused 1..999 group coefficient, not as an abbreviation gig.",
+      "form": "giga",
+      "meaning_en": "billion (10^9 decimal group power)",
+      "meaning_it": "miliardo; potenza numerica 10^9",
+      "origin": "Author ratification 2026-10-24; international giga- power prefix",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "form": "ines",
@@ -627,6 +639,38 @@
       "meaning_en": "more; comparative marker",
       "meaning_it": "piu; comparativo di maggioranza",
       "origin": "Latin maior",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "numeral"
+      ],
+      "decision": "Ratify mega as the numerical power 1000000, with a fused 1..999 coefficient before it, omitting uno for multiplier 1 and omitting zero groups.",
+      "form": "mega",
+      "meaning_en": "million (10^6 decimal group power)",
+      "meaning_it": "milione; potenza numerica 10^6",
+      "origin": "Author ratification 2026-10-24; international mega- power prefix",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "numeral"
+      ],
+      "form": "mil",
+      "source": "language/MIGRATION_HISTORY.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "numeral"
+      ],
+      "decision": "Ratify mila as the sole current numerical power 1000; explicitly retire historical mil as noncanonical. Group coefficient 1..999 precedes mila, omitting uno for coefficient 1. Composites remain fused.",
+      "form": "mila",
+      "meaning_en": "thousand (10^3 decimal group power)",
+      "meaning_it": "mille; potenza numerica 10^3",
+      "origin": "Author ratification 2026-10-24; replaces historical mil; internationally recognizable mila/mille",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },

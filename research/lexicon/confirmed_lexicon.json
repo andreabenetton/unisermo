@@ -458,6 +458,30 @@
       "meaning_en": "paternal grandfather (father of father)",
       "source": "Author-requested genealogical path feature, 2026-10-24; compose geno + geno",
       "decision": "Canonize genogeno = geno + geno: father of father; both links specify male parent. Not a general label for all grandfathers."
+    },
+    {
+      "form": "mila",
+      "category": "numeral",
+      "meaning_it": "mille; potenza numerica 10^3",
+      "meaning_en": "thousand (10^3 decimal group power)",
+      "source": "Author ratification 2026-10-24; replaces historical mil; internationally recognizable mila/mille",
+      "decision": "Ratify mila as the sole current numerical power 1000; explicitly retire historical mil as noncanonical. Group coefficient 1..999 precedes mila, omitting uno for coefficient 1. Composites remain fused."
+    },
+    {
+      "form": "mega",
+      "category": "numeral",
+      "meaning_it": "milione; potenza numerica 10^6",
+      "meaning_en": "million (10^6 decimal group power)",
+      "source": "Author ratification 2026-10-24; international mega- power prefix",
+      "decision": "Ratify mega as the numerical power 1000000, with a fused 1..999 coefficient before it, omitting uno for multiplier 1 and omitting zero groups."
+    },
+    {
+      "form": "giga",
+      "category": "numeral",
+      "meaning_it": "miliardo; potenza numerica 10^9",
+      "meaning_en": "billion (10^9 decimal group power)",
+      "source": "Author ratification 2026-10-24; international giga- power prefix",
+      "decision": "Ratify giga as the numerical power 1000000000 (short-scale billion, Italian miliardo), with a fused 1..999 group coefficient, not as an abbreviation gig."
     }
   ]
 }

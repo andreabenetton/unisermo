@@ -1,42 +1,92 @@
-"""Canonical Unisermo numerals: deterministic 0..9999 generation and parsing.
+"""Canonical Unisermo decimal cardinal numerals, 0..999,999,999,999.
 
-Source: language/numerals.md (three-letter 0..9, dek/sen/mil and
-largest-place-first concatenation). Powers use implicit one (sen, mil),
-and no leading-zero, zero-place, or *uno+power variants are accepted.
-This closes the existing documented 0..9999 range; >9999 is not yet
-specified and is never interpreted by guessing.
+The author ratified mila=10^3, mega=10^6, giga=10^9 on 24 October 2026,
+retiring the former `mil`. Each high-order group has a coefficient in 1..999
+spelled with the existing digit/dek/sen grammar; coefficient 1 is unspoken.
+The final units group is likewise 1..999, or absent when divisible by 1,000.
+
+The parser is compositional: only the 999 possible low-order coefficients
+are indexed. No enumeration of 10^12 numeric values or guesswork.
 """
 from __future__ import annotations
 
 from functools import lru_cache
 
 DIGITS = ("nul", "uno", "bis", "ter", "for", "kin", "ses", "set", "oto", "nin")
-MAX_CARDINAL = 9999
+SCALES = ((10**9, "giga"), (10**6, "mega"), (10**3, "mila"))
+MAX_CARDINAL = 10**12 - 1
+MAX_NUMERAL_CHARS = 128
 
 
-def _cardinal(number: int) -> str:
-    """Generate the one canonical form for an integer in 0..9999."""
-    if isinstance(number, bool) or not isinstance(number, int) or not 0 <= number <= MAX_CARDINAL:
-        raise ValueError("numeral must be an integer in 0..9999")
-    if number < 10:
-        return DIGITS[number]
+def _small_cardinal(number: int) -> str:
+    """Unique low-order spelling for a group in 1..999."""
+    if not 1 <= number <= 999:
+        raise ValueError("numeric group must be 1..999")
     parts = []
-    remainder = number
-    for multiplier, power in ((1000, "mil"), (100, "sen"), (10, "dek")):
-        digit, remainder = divmod(remainder, multiplier)
-        if digit:
-            parts.append((DIGITS[digit] if digit > 1 else "") + power)
-    if remainder:
-        parts.append(DIGITS[remainder])
+    hundreds, remainder = divmod(number, 100)
+    tens, units = divmod(remainder, 10)
+    if hundreds:
+        parts.append((DIGITS[hundreds] if hundreds > 1 else "") + "sen")
+    if tens:
+        parts.append((DIGITS[tens] if tens > 1 else "") + "dek")
+    if units:
+        parts.append(DIGITS[units])
     return "".join(parts)
 
 
 @lru_cache(maxsize=1)
-def _reverse_index() -> dict[str, int]:
-    forms = {_cardinal(n): n for n in range(MAX_CARDINAL + 1)}
-    if len(forms) != MAX_CARDINAL + 1:
-        raise ValueError("numeral grammar is not injective")
+def _small_reverse() -> dict[str, int]:
+    forms = {_small_cardinal(value): value for value in range(1, 1000)}
+    if len(forms) != 999:
+        raise ValueError("three-digit numeral grammar is not injective")
     return forms
+
+
+def _cardinal(number: int) -> str:
+    """Generate the unique accepted numeral for 0 <= number <= 999,999,999,999."""
+    if (isinstance(number, bool) or not isinstance(number, int)
+            or not 0 <= number <= MAX_CARDINAL):
+        raise ValueError("numeral must be an integer in 0..999999999999")
+    if number == 0:
+        return DIGITS[0]
+    remaining = number
+    parts = []
+    for size, word in SCALES:
+        coefficient, remaining = divmod(remaining, size)
+        if coefficient:
+            parts.append((_small_cardinal(coefficient) if coefficient > 1 else "") + word)
+    if remaining:
+        parts.append(_small_cardinal(remaining))
+    return "".join(parts)
+
+
+def _decode(surface: str) -> int | None:
+    if surface == "nul":
+        return 0
+    remaining = surface
+    total = 0
+    groups = _small_reverse()
+    for multiplier, word in SCALES:
+        index = remaining.find(word)
+        if index == -1:
+            continue
+        coefficient = groups.get(remaining[:index]) if index else 1
+        if coefficient is None:
+            return None
+        total += coefficient * multiplier
+        remaining = remaining[index + len(word):]
+    if remaining:
+        units = groups.get(remaining)
+        if units is None:
+            return None
+        total += units
+    if total == 0 or total > MAX_CARDINAL:
+        return None
+    # Re-generation enforces canonical order, silent zero groups,
+    # implicit 'uno' and one occurrence of each power.
+    if _cardinal(total) != surface:
+        return None
+    return total
 
 
 class NumeralParser:
@@ -44,27 +94,28 @@ class NumeralParser:
         return _cardinal(value)
 
     def parse_numeral(self, surface: str) -> dict | None:
-        if (not isinstance(surface, str) or not surface or len(surface) > 64
+        if (not isinstance(surface, str) or not surface
+                or len(surface) > MAX_NUMERAL_CHARS
                 or not surface.isascii() or not surface.isalpha()
                 or surface != surface.lower()):
             return None
-        value = _reverse_index().get(surface)
-        if value is None:
+        number = _decode(surface)
+        if number is None:
             return None
         return {
-            "kind": "cardinal_numeral", "form": surface, "value": value,
+            "kind": "cardinal_numeral", "form": surface, "value": number,
             "status": "canonical_by_rule", "source": "language/numerals.md",
         }
 
     def parse_iteration(self, surface: str) -> dict | None:
-        """General count+jer for positive numerals; zero iteration not ratified."""
+        """Positive NUMjer is general iteration, not a genealogical root."""
         if not isinstance(surface, str) or not surface.endswith("jer"):
             return None
-        cardinal = self.parse_numeral(surface[:-3])
-        if cardinal is None or cardinal["value"] == 0:
+        number = self.parse_numeral(surface[:-3])
+        if number is None or number["value"] == 0:
             return None
         return {
             "kind": "iteration_counter", "form": surface,
-            "count": cardinal["value"],
+            "count": number["value"],
             "status": "canonical_by_rule", "source": "language/numerals.md",
         }
