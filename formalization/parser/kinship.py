@@ -38,7 +38,7 @@ def _cardinal(n: int) -> str:
 
 # Longest numeric prefixes first; no zero-iteration form.
 _ITERATIONS = tuple(sorted(
-    ((_cardinal(n) + "jer", n) for n in range(2, MAX_KINSHIP_STEPS + 1)),
+    ((_cardinal(n) + "jer", n) for n in range(1, MAX_KINSHIP_STEPS + 1)),
     key=lambda pair: (-len(pair[0]), pair[0]),
 ))
 
