@@ -239,5 +239,33 @@ while `no mult bel` negates 'very beautiful' without entailing ugliness.
 Degree modifiers apply to the *selected qualitative predicate*, including
 a semantically licensed antonym in `ne-`. They do not change comparative
 or superlative meanings. Their scale is qualitative/contextual, not an
-exact numerical partition. No free modifier for 'fairly' versus
-'sufficiently' is ratified here.
+exact numerical partition. The distinction between moderate degree and threshold sufficiency is
+ratified separately below.
+
+## 13. Moderate degree and threshold sufficiency (ratified 2026-10-24)
+
+Two invariant free modifiers precede a gradable predicate:
+
+- `ase` — fairly / rather / moderately, asserting a moderately positive
+  degree on the property scale; it does not assert that any requirement is met.
+- `suf` — sufficiently / enough, asserting that the property reaches a
+  contextually relevant threshold for a purpose or requirement; it does not
+  assert high absolute intensity.
+
+Examples (present-tense zero copula):
+
+- `tik dom ase bel` — this house is fairly beautiful.
+- `tik dom suf gran` — this house is large enough (for the contextual need).
+- `tik dom no suf gran` — this house is not large enough.
+- `tik dom ase nebel` — this house is rather ugly.
+
+The `ase` scale position is moderate, not a mathematically fixed value.
+`suf` does **not** occupy a fixed position on that scale: a modest absolute
+value can be sufficient for an easy threshold, and a high value insufficient
+for a demanding threshold. When the purpose is expressed, use an already
+licensed purpose construction; this ratification does not create a new
+purpose-marker or mandate a particular syntactic frame.
+
+Negation remains independent: `no ase bel` denies the moderately-high degree;
+`no suf gran` denies threshold satisfaction. Neither entails `nebel`
+or `negran` respectively.
