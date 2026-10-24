@@ -140,10 +140,11 @@ class NumeralParser:
             if cardinal is None or cardinal["value"] == 0:
                 continue
             value = cardinal["value"]
-            if self.generate_ordinal(value) == surface:
+            canonical = self.generate_ordinal(value)
+            if canonical == surface or (cardinal_form.endswith("o") and cardinal_form + "im" == surface and canonical != surface):
                 return {
                     "kind": "ordinal_numeral", "form": surface,
-                    "value": value, "status": "canonical_by_rule",
-                    "source": "language/numerals.md",
+                    "value": value, "status": "canonical_by_rule" if canonical == surface else "accepted_analytic_variant",
+                    "canonical_form": canonical, "source": "language/numerals.md",
                 }
         return None
