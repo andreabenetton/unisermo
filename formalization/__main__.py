@@ -32,6 +32,11 @@ def main() -> None:
     ordinal.add_argument("word")
     ordinalgen = sub.add_parser("order", help="generate the canonical positive -im ordinal")
     ordinalgen.add_argument("value", type=int)
+    fraction = sub.add_parser("fraction", help="parse a ratified two-word fractional expression")
+    fraction.add_argument("text")
+    fractiongen = sub.add_parser("ratio", help="generate a ratified fraction from numerator and denominator")
+    fractiongen.add_argument("numerator", type=int)
+    fractiongen.add_argument("denominator", type=int)
     counter = sub.add_parser("iteration", help="analyze a positive NUMjer step counter")
     counter.add_argument("word")
     cardinal = sub.add_parser("number", help="generate canonical written numeral for 0..999999999999")
@@ -56,6 +61,12 @@ def main() -> None:
                 p.error("invalid, unratified, or noncanonical ordinal")
         elif args.command == "order":
             result = language.generate_ordinal(args.value)
+        elif args.command == "fraction":
+            result = language.parse_fraction(args.text)
+            if result is None:
+                p.error("invalid or unapproved fraction")
+        elif args.command == "ratio":
+            result = language.generate_fraction(args.numerator, args.denominator)
         elif args.command == "iteration":
             result = language.parse_iteration(args.word)
             if result is None:
