@@ -79,3 +79,8 @@ Here the object `domem` is fronted, but its `-em` suffix keeps it identifiable a
 - **The case system provides the release valve.** Speakers from SOV backgrounds (Japanese, Korean, Hindi/Urdu, Turkish) or from free-order traditions are not forced to abandon their habits in emphatic or contrastive sentences; they can reorder freely whenever the case suffixes carry the load.
 
 The combination — fixed SVO default plus permitted reordering — gives the regularity of a strict-order language together with the flexibility of a case-marked one, at no extra morphological cost.
+
+
+## Coordinating conjunctions (author ratification, 24 October 2026)
+
+The free-standing conjunction `e` means **AND** (additive coordination), and the free-standing conjunction `o` means **OR** (disjunctive coordination). They are **separate orthographic words**, and must not be confused with the bound verbal aspect vowels `-e` progressive and `-o` perfect/completive. Neither aspect vowel is a freestanding word in those verbal functions. Examples of simple coordination: `dom e aerplan` (house and airplane); `dom o aerplan` (house or airplane). These are illustrations of the conjunction meanings, not an implemented full clause-coordination parser. Scope and precedence for mixed conjunctions, and inclusive/exclusive disjunction, await further explicit decisions.
