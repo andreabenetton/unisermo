@@ -52,6 +52,21 @@ The Library's `ipa_language_counts_scroll_quality.html` (created 17:08:22 UTC) w
 
 Thus the ChatGPT phase's final file was imported into GlottoDelta **byte-for-byte**, not merely as a similar reconstruction. Five earlier snapshots also had raw bytes materialized and Git blob hashes computed (see table).
 
+## Content-level checks on materialized checkpoints
+
+The checks below inspect literal code markers in the original saved HTML files; **absence of a particular variable name does not prove absence of a feature under another implementation**.
+
+| Checkpoint | Raw bytes | `SPEAKER_ESTIMATES` | `GEORGIAN_ALPHABET_ROWS` | `VERIFIED_LANGUAGE_PROFILES` | `IPA_AUDIO_FILES` | `differencesOnly` |
+| --- | ---: | :---: | :---: | :---: | :---: | :---: |
+| 05:15 first HTML | 2,797,713 | No | No | No | No | No |
+| 05:58 demographics-corrected | 2,824,514 | Yes | No | No | No | No |
+| 09:48 Georgian-complete | 2,841,315 | Yes | No | No | No | No |
+| 13:53 official IPA | 3,062,315 | Yes | Yes | Yes | Yes | No |
+| 16:24 priority features | 3,100,469 | Yes | Yes | Yes | Yes | Yes |
+| 17:08 final baseline | 3,141,880 | Yes | Yes | Yes | Yes | Yes |
+
+These checkpoint inspections complement the dated user requests and demonstrate that the final research tool accumulated new data structures, verification machinery, playback and comparison features during its ChatGPT phase, **before the Git import**. The fully faithful account still requires the conversation transcript and detailed diff inspection, not just marker presence.
+
 ## Research implications
 
 1. The earliest recovered version is **05:15 UTC**. Its size is 2,797,713 bytes and Git blob SHA `c4a7b9be7939c26f0d6b7fb2b9e3e1ce1c772384`.
