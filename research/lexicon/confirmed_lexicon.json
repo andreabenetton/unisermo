@@ -598,6 +598,24 @@
       "source": "ne- + fas; author ratification 2026-10-24",
       "decision": "Contrary to sacred permissibility, not merely negated no fas.",
       "status": "confirmed"
+    },
+    {
+      "form": "medi",
+      "category": "root",
+      "meaning_it": "medio; intermedio; collocato nella parte centrale di una scala",
+      "meaning_en": "middle; intermediate; central position on a scale",
+      "source": "Author ratification 2026-10-24; Latin medius",
+      "decision": "Descriptive midpoint or intermediate degree, not intrinsically mediocre or negative.",
+      "status": "confirmed"
+    },
+    {
+      "form": "medibon",
+      "category": "compound_lexeme",
+      "meaning_it": "di qualita media; ordinario; senza particolare pregio",
+      "meaning_en": "of average quality; ordinary; unexceptional",
+      "source": "Author ratification 2026-10-24; medi + bon",
+      "decision": "Approved lexical compound medi+bon. Not intrinsically derogatory; may convey mediocre when context implies modest evaluation. Its compounding pattern must be checked against general compound morphology before treating it as productive.",
+      "status": "confirmed"
     }
   ]
 }
