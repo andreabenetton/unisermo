@@ -60,3 +60,58 @@ The Gemma-only follow-up [run 40092124879](https://github.com/andreabenetton/uni
 A source-controlled resume implementation now validates the entire stored 19-response ordered prefix against the original frozen `gemma_plan()` (model, provider, response finish state, question identity and SHA-256 of prompt), and compares the first seven stored answers against the unchanged initial 14-response partial run. It refuses to overwrite or re-bill those 19. The remaining five Gemma requests are executed by [run 40097642521](https://github.com/andreabenetton/unisermo/actions/runs/40097642521) using the **same model and DeepInfra-only route**, preserving comparability with the first nineteen. The extra job does not retrospectively make the original failed 48-call same-prompt experiment a success. It is an explicitly amended follow-up with the already documented Qwen `/no_think` control difference.
 
 Raw and scored files will be assessed only if Gemma reaches **24/24** with independently verified request IDs, response model/provider, SHA-256 of original/corpus, and recomputed paired scores. Historical failures are retained as first-class reproducibility evidence. No Unisermo language authority, corpus or holdout changes were made.
+
+---
+
+## Final completed exploratory two-family comparison — 24 October 2026
+
+**Completed recovery and independently verified archival:** [GitHub Actions 40097642521](https://github.com/andreabenetton/unisermo/actions/runs/40097642521) restored the original **19 Gemma replies** and obtained the remaining **5**, yielding **24/24 valid Gemma calls**. [GitHub Actions 40097951414](https://github.com/andreabenetton/unisermo/actions/runs/40097951414) then verified the 19-record prefix byte-for-byte as JSON objects, exact request IDs/order, Qwen and Gemma returned model IDs, all DeepInfra provider IDs and `finish_reason=stop`, SHA-256, accumulated cost, and recomputed complete scores. It committed both original raw and score files into this research branch:
+
+- [`benchmarks/evidence/gemma-case-role-2026-10-24-final.jsonl`](../../benchmarks/evidence/gemma-case-role-2026-10-24-final.jsonl); SHA-256 `9bfb0109399669d13dc3c0c307897bb64e1c33897989f809842dd0140e0012eb`.
+- [`benchmarks/evidence/gemma-case-role-2026-10-24-final.score.json`](../../benchmarks/evidence/gemma-case-role-2026-10-24-final.score.json), containing the complete Qwen/Gemma agreement matrix, individual event predictions, per-family counts and billing.
+- Original Qwen response file `benchmarks/evidence/case-role-2026-10-24-run40090842899.jsonl` SHA-256 `c55cd847cd2522f8857432e0121c990f39064a78335fccd5e5fa28e9430695e6`. The unchanged source corpus SHA-256 is `0d8c6a10f7cb8b4545654208af9cfbf8af65f870b0e2e6334c7adc9e6df4a1fb`.
+
+**This is an amended exploratory comparison, NOT completion of the initially preregistered strict byte-identical two-model experiment.** Both model families completed the same original 12 documents × two labeling conditions, but Qwen from its earlier successful run included the model-specific `/no_think` control suffix and the responses were gathered in different runs; Gemma's model requests were pinned to DeepInfra while Qwen's actual provider was DeepInfra via automatic routing. Conclusions must preserve this distinction and cannot be described as an isolated model architecture experiment.
+
+### Exact registered-style scores on the unchanged development corpus
+
+| Metric | Qwen3 32B, case | Gemma3 27B, case | Qwen3 32B, role | Gemma3 27B, role |
+| --- | ---: | ---: | ---: | ---: |
+| **Exact two-argument clauses** | **16/24** | **8/24** | **15/24** | **7/24** |
+| Arguments with both stem and label correct | 35/48 | 24/48 | 39/48 | 22/48 |
+| Exact stems | 38/48 | 32/48 | 43/48 | 32/48 |
+| Exact labels | 37/48 | 37/48 | 44/48 | 38/48 |
+| JSON envelope/cardinality failures | 0/12 | 0/12 | 0/12 | 0/12 |
+| Prompt tokens | 4,208 | 4,233 | 4,160 | 4,209 |
+| Completion tokens | 1,531 | 1,608 | 1,474 | 1,521 |
+| Total tokens | 5,739 | 5,841 | 5,634 | 5,730 |
+| Provider USD | 0.00076532 | 0.00059592 | 0.00074552 | 0.00058008 |
+| USD per exact clause | 0.0000478325 | 0.0000744900 | 0.0000497013 | 0.0000828686 |
+
+Across **both conditions** (two tasks on the **same** twenty-four clauses), Qwen obtained **31/48** strict clause-task successes vs Gemma **15/48**. This is not 48 independent natural-language texts. Model provider cost across the two conditions was Qwen **USD 0.00151084**, Gemma **USD 0.00117600**; do not treat lower gross Gemma API cost as lower communication cost at equivalent accuracy.
+
+### Which meanings were recovered by each model?
+
+| Outcome among same 24 clauses | Morphological case task | Semantic role task |
+| --- | ---: | ---: |
+| Both models correct | **8** | **5** |
+| Qwen only | 8 | 10 |
+| Gemma only | 0 | **2** |
+| Both wrong | 8 | 7 |
+
+| Canonical frame family (8 clauses each) | Qwen case | Gemma case | Qwen role | Gemma role |
+| --- | ---: | ---: | ---: | ---: |
+| Motion with explicit allative destination | 7 | 4 | 5 | 7 |
+| Noncausative `traes` transition (`-ad/-de`) | 1 | **0** | 4 | **0** |
+| Causative `traes` result (`-em/-da`) | 8 | 4 | 6 | **0** |
+
+The strongest **common concern** is the noncausative two-state `traes` representation. Even when the model is explicitly told its case/role guide, neither family is consistently accurate on the transition frame; Gemma scored 0/8 in both variants, Qwen 1/8 and 4/8. Yet source-defined case/role labels and complete clause naturalness still await independent linguistic validation. Shared confusion does not uniquely distinguish language ambiguity from incorrect gold, prompt effects, insufficient training exposure, or the task's arbitrary ontology.
+
+In the **movement-role** task, Gemma scored 7/8 vs Qwen's 5/8; aggregate Qwen superiority therefore does not translate to every construction. Two role-annotation clauses were solved only by Gemma. Preserve these as potentially informative counterexamples rather than optimizing exclusively for the best overall model.
+
+### Research decision
+
+- Adopt [two-family evaluation policy](../methodology/multimodel-evaluation-policy.md) for new substantive semantic/LLM efficiency studies. This comparison provides useful **cross-model failure diagnostics**, not independently validated Unisermo understanding.
+- No change to accepted Unisermo morphology, case names, phonology, pronouns, lexicon, `traes` semantics or syntactic authority.
+- Retain 0/24 **human-approved** new case/role keys. Their adjudication, naturalness/valency validation and then a controlled English-equivalent comparison are prerequisites for any publication-grade language efficiency conclusion.
+- Later tests require genuinely new independent stimuli, prior registration, robust model-specific control handling, an untouched final holdout and, preferably, a third model family. Preserve *all* original failed jobs (14/48, 19/24) and their partial evidence instead of silently replacing them with completed results.
