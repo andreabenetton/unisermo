@@ -1,0 +1,41 @@
+name: One-shot fresh development schema
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/schema-fresh-once.yml']
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check explicit execution marker
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MESSAGE" = 'ci: run fresh development schema comparison once' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify eight source documents
+        run: |
+          python - <<'PY'
+          from benchmarks.operator_schema_fresh import build
+          q,key=build()
+          assert len(q)==16 and len(key)==8
+          assert sum(x['condition']=='strict' for x in q)==8
+          PY
+      - name: Run sixteen bounded OpenRouter calls
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.operator_schema_fresh_runner --output benchmarks/reports/schema-fresh.jsonl
+      - name: Archive answer and score
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: schema-fresh-${{ github.run_id }}
+          path: benchmarks/reports/schema-fresh*
+          if-no-files-found: warn
+          retention-days: 30
