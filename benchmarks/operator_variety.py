@@ -13,7 +13,7 @@ def parse_event_array(answer):
     if raw.startswith(fence):
         lines=raw.splitlines()
         if len(lines)>=3 and lines[0] in (fence,fence+"json") and lines[-1]==fence:
-            raw="\\n".join(lines[1:-1])
+            raw=chr(10).join(lines[1:-1])
     try:obj=json.loads(raw)
     except (ValueError,TypeError):return None
     return obj if isinstance(obj,list) else None
