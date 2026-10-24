@@ -217,6 +217,6 @@ Author-approved invariant ordinal suffix: `-im` follows the entire canonical pos
 | `bisdekuno` | `bisdekunim` | twenty-first |
 | `mila` | `milaim` | thousandth |
 
-Ordinal values are 1..999,999,999,999. `nulim` has **not** been approved. Full analytic forms such as `unoim` and `otoim` were considered but have **not yet been unequivocally ratified as parser-accepted alternatives**; they are not current canonical outputs, and parsing fails closed on them pending a separate author decision. This does not declare them forbidden forever.
+Ordinal values are 1..999,999,999,999. `nulim` has **not** been approved. Full analytic forms such as `unoim`, `otoim` and compound-final `dekunoim` were explicitly accepted by the author on 24 October 2026 as valid **noncanonical variants**. The parser recognizes them and normalizes them to `unim`, `otim`, `dekunim` respectively; the generator emits only contracted canonical forms.
 
 Ordinals act as invariant pre-nominal modifiers, like adjectives: `bisim dom` is the second house; `bisim domem` marks accusative on the noun, not on the ordinal. The restricted SVO reference parser handles a *single* ordinal modifier; combining one with quantifiers, demonstratives, plural particles, or other modifiers awaits separate scope and ordering rules. Fused `NUMim` is not a fraction by itself. The proposed two-word numerator/ordinal-denominator fraction syntax remains unratified.
