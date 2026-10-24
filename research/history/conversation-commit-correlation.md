@@ -55,6 +55,16 @@ For speaker-level details, provenance and caveats see [early May conversation ev
 
 [Detailed historical case](august-semantic-phase-motion-and-causation.md). Original index extracts are **not** a full transcript; the precise 15:41 *user* acceptance was not located.
 
+## 10 August: numeral and iteration system decision evidence
+
+| Original indexed time UTC | Conversation-status evidence | Immutable Git corroboration |
+| --- | --- | --- |
+| **~15:55 user** | Revisits `duo→bis` for TWO, asks about rationale; complete original justification still unavailable | [`4d19263`, 16:24:59](https://github.com/andreabenetton/unisermo/commit/4d19263da58802bd184774b3d1463714c50979dc) confirms `bis` |
+| **~16:10 user** | Requests fused `dekbis`, `bisdek` rather than space-separated components | [`b3c473e`, 16:35:31](https://github.com/andreabenetton/unisermo/commit/b3c473e6f86cb58734e208491a7e2ed6306623c6) records single-word rule |
+| **~16:30 user** | Supports general `jer` iteration/relational steps, including possible genealogical application | [`b3c473e`](https://github.com/andreabenetton/unisermo/commit/b3c473e6f86cb58734e208491a7e2ed6306623c6) confirms general `NUMjer`, **not** all family terms |
+
+Times marked **~** were recovered at approximate minute resolution, not full verbatim conversation timestamps. Family terms preserved in an October note remain candidate analyses. [Full numeral history](august-numerals-iteration-and-kinship-history.md).
+
 ## Independently verified Git anchors
 
 - 27 July 2026 17:59:16 UTC — `andreabenetton/glottodelta` commit `bd25974983e3` imported an **already working** IPA atlas into Git. This postdates the 27 July **morning** conversations, establishing that the earlier conversations plausibly concerned work later captured in the imported snapshot.
