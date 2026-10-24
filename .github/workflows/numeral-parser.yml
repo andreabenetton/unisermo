@@ -6,6 +6,7 @@ on:
       - 'language/numerals.md'
       - 'language/kinship.md'
       - 'tests/test_numeral_parser.py'
+      - 'tests/test_ordinal_parser.py'
       - 'tests/test_kinship_parser.py'
       - '.github/workflows/numeral-parser.yml'
   push:
@@ -36,6 +37,7 @@ jobs:
           python -m formalization build --check
           python -m formalization validate
           python -m unittest discover -s tests -p 'test_numeral_parser.py' -v
+          python -m unittest discover -s tests -p 'test_ordinal_parser.py' -v
           python -m unittest discover -s tests -p 'test_kinship_parser.py' -v
           python -m unittest discover -s tests -p 'test_formalization.py' -v
           python tests/test_language_spec_sync.py
