@@ -9,7 +9,7 @@ A formal specification of comparison constructions in the synthetic language: co
 - The demonstratives `tik` (this) and `tan` (that, far) used in the examples below are in [`demonstratives.md`](demonstratives.md).
 - Negation follows the rule in [`negation.md`](negation.md).
 
-This document introduces **six new function words**: `major`, `minor`, `masim`, `minus`, `dan`, `ekwal`.
+This document introduces **six new function words**: `major`, `minor`, `masim`, `minim`, `dan`, `ekwal`.
 
 ---
 
@@ -29,7 +29,7 @@ This document introduces **six new function words**: `major`, `minor`, `masim`, 
 | Comparative of majority | `major` | more / -er | /ma.jor/ |
 | Comparative of minority | `minor` | less | /minor/ |
 | Superlative maximum | `masim` | most / -est | /masim/ |
-| Superlative minimum | `minus` | least | /minus/ |
+| Superlative minimum | `minim` | least | /minim/ |
 | Comparison marker | `dan` | than / compared with / as | /dan/ |
 | Equality | `ekwal` | as / equally | /e.kwal/ |
 
@@ -97,13 +97,13 @@ No `dan` is used, because there is no overt second term — the comparison is im
 Pattern:
 
 ```
-A  minus  ADJ
+A  minim  ADJ
 ```
 
 Example:
 
 ```
-tik dom minus vel
+tik dom minim vel
 = this one is the least fast
 ```
 
@@ -137,7 +137,7 @@ Here `dan` introduces the second term of an equality comparison — equivalent t
 
 This unifies all comparison constructions under a single second-term marker. The form is the same regardless of whether the comparison is one of inequality or equality.
 
-The superlatives (`masim`, `minus`) do not take `dan`, because they do not compare against a specific second term.
+The superlatives (`masim`, `minim`) do not take `dan`, because they do not compare against a specific second term.
 
 ---
 
@@ -185,7 +185,7 @@ tik dom no esda major gran dan tan dom
 | `major` | comparative — more / -er |
 | `minor` | comparative — less |
 | `masim` | superlative — most / -est |
-| `minus` | superlative — least |
+| `minim` | superlative — least |
 | `dan` | comparison marker (than / as) |
 | `ekwal` | equal / equally / as |
 
@@ -194,7 +194,25 @@ Patterns:
 - **A `major` ADJ `dan` B** — A is more ADJ than B
 - **A `minor` ADJ `dan` B** — A is less ADJ than B
 - **A `masim` ADJ** — A is the most ADJ
-- **A `minus` ADJ** — A is the least ADJ
+- **A `minim` ADJ** — A is the least ADJ
 - **A `ekwal` ADJ `dan` B** — A is as ADJ as B
 
 The system is compact (six words cover the full comparison space), internationally recognizable (every word is adapted from a familiar Latin / Romance / English source), and regular (no adjective inflection, single second-term marker).
+
+## 11. Ratified separation: comparison versus absolute intensity (2026-10-24)
+
+The relative superlatives are `masim` (most) and `minim` (least), a symmetric
+pair. Historical `minus` is retired from its superlative-minimum role.
+Comparatives remain `major` and `minor`; equality remains `ekwal`.
+
+`masim ADJ` means the highest degree within the contextually relevant
+comparison set, not necessarily a very high absolute degree. Likewise,
+`minim ADJ` is the lowest within that set, not necessarily a low absolute
+degree. A comparative without an overt `dan` complement is not automatically
+a superlative: its comparator may simply be implicit.
+
+Absolute intensity is expressed separately using degree modifiers. No
+particular new degree word is ratified by this decision. In particular,
+`super-` is **not** an absolute-superlative operator on adjectives; historical
+`super-` remains available for other established derivational uses but does
+not replace `masim` and does not mean `-est`.

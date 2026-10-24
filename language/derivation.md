@@ -264,3 +264,13 @@ The historical nominal plural suffix `-en` is not part of the current system.
 The lexical ratification of `medibon` does **not** establish a general
 productive two-root compounding rule. Such a rule requires a separate review
 of the language's compounding syntax and collision constraints.
+
+### Absolute degree versus relative superlative (ratified 2026-10-24)
+
+Relative extrema use the free grammatical operators `masim` (most)
+and `minim` (least), not an affix. Adjectival `super-` is not a
+productive absolute-superlative construction: do not equate `superbel`
+with "very beautiful" or "most beautiful" on this basis. Other
+historical derivational meanings of `super-` remain unaffected.
+Absolute intensity is a separate analytic domain; its degree words
+(`poko`, `mult`, etc.) await an independent lexical decision.
