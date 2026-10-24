@@ -2,6 +2,14 @@
 
 This note prevents the 100-concept expansion from replacing already discussed family-relation morphology with unrelated Latin-looking roots.
 
+## Subsequent author correction and canonical migration (24 October 2026)
+
+The author explicitly clarified in the active reconstruction conversation that the **`adel` choice was forgotten** and **must replace `frat`**. The sibling family `adel` (neutral), `adelo` (male) and `adele` (female) is consequently **canonized in the live specification and confirmed lexicon** as of this 24 October restoration. Earlier Git use of `frat` remains important *historical evidence*, but it is **retired from current vocabulary**, not a second accepted synonym. The older paragraph below saying that `frat` is "currently confirmed" is preserved as **a superseded 23 October snapshot**, not a current status claim.
+
+**Limits:** The restoration authorizes these three sibling forms only. Parent `gen/geno/gene`, proposed `adelgen` and older `par/fil/av/germ/sib` family alternatives remain separate design questions; no blanket `-o/-e` noun-gender rule was approved.
+
+See [live kinship specification](../../language/kinship.md) and [source reconciliation](../history/august-kinship-original-dialogue-versus-git.md).
+
 ## Historical clarification from recovered original 10 August dialogue (24 October 2026)
 
 The earlier summary below is **not exhaustive**. Individually dated original user messages now show:
