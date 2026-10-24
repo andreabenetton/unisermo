@@ -1,0 +1,796 @@
+{
+  "schema": "unisermo/proposition-meaning-dev@1",
+  "status": "development_parser_derived_unreviewed",
+  "unit_of_analysis": "two-proposition_document",
+  "requested_model": "qwen/qwen3-32b",
+  "documents": 12,
+  "calls": 24,
+  "conditions": {
+    "cold": {
+      "exact_propositions": 0,
+      "total_propositions": 24,
+      "accuracy": 0.0,
+      "fields": {
+        "action": {
+          "correct": 18,
+          "total": 24
+        },
+        "agent": {
+          "correct": 14,
+          "total": 24
+        },
+        "agent_number": {
+          "correct": 18,
+          "total": 24
+        },
+        "patient": {
+          "correct": 17,
+          "total": 24
+        },
+        "patient_quantity": {
+          "correct": 20,
+          "total": 24
+        },
+        "patient_deixis": {
+          "correct": 20,
+          "total": 24
+        },
+        "tense": {
+          "correct": 11,
+          "total": 24
+        },
+        "aspect": {
+          "correct": 22,
+          "total": 24
+        },
+        "polarity": {
+          "correct": 24,
+          "total": 24
+        },
+        "speech_act": {
+          "correct": 24,
+          "total": 24
+        }
+      },
+      "documents": [
+        {
+          "doc": "P001",
+          "stratum": "agent_object",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "patient",
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P002",
+          "stratum": "polarity_question",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P003",
+          "stratum": "person_number",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "agent_number"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "action",
+                "agent",
+                "agent_number"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P004",
+          "stratum": "nominal_agent",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "patient"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "agent_number",
+                "patient"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P005",
+          "stratum": "deixis",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "patient_deixis",
+                "tense"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P006",
+          "stratum": "deixis_plural",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "patient",
+                "patient_deixis",
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "patient",
+                "patient_quantity",
+                "tense"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P007",
+          "stratum": "quantity",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "agent_number",
+                "patient_quantity",
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "patient_quantity"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P008",
+          "stratum": "quantity_scope_open",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P009",
+          "stratum": "tense_action",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "action",
+                "patient_deixis",
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "action",
+                "patient",
+                "patient_deixis",
+                "tense"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P010",
+          "stratum": "aspect_time",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "agent_number",
+                "tense",
+                "aspect"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "action",
+                "agent",
+                "agent_number",
+                "tense",
+                "aspect"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P011",
+          "stratum": "force_vs_motion",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "action"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "action"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P012",
+          "stratum": "quantity_polarity",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "patient",
+                "patient_quantity"
+              ]
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2301,
+        "completion_tokens": 2202,
+        "total_tokens": 4503,
+        "cost": 0.00080064
+      },
+      "usd_per_exact_proposition": null
+    },
+    "guided": {
+      "exact_propositions": 15,
+      "total_propositions": 24,
+      "accuracy": 0.625,
+      "fields": {
+        "action": {
+          "correct": 22,
+          "total": 24
+        },
+        "agent": {
+          "correct": 17,
+          "total": 24
+        },
+        "agent_number": {
+          "correct": 20,
+          "total": 24
+        },
+        "patient": {
+          "correct": 22,
+          "total": 24
+        },
+        "patient_quantity": {
+          "correct": 20,
+          "total": 24
+        },
+        "patient_deixis": {
+          "correct": 22,
+          "total": 24
+        },
+        "tense": {
+          "correct": 19,
+          "total": 24
+        },
+        "aspect": {
+          "correct": 20,
+          "total": 24
+        },
+        "polarity": {
+          "correct": 22,
+          "total": 24
+        },
+        "speech_act": {
+          "correct": 22,
+          "total": 24
+        }
+      },
+      "documents": [
+        {
+          "doc": "P001",
+          "stratum": "agent_object",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": "invalid_wrapper",
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "action",
+                "agent",
+                "agent_number",
+                "patient",
+                "patient_quantity",
+                "patient_deixis",
+                "tense",
+                "aspect",
+                "polarity",
+                "speech_act"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "action",
+                "agent",
+                "agent_number",
+                "patient",
+                "patient_quantity",
+                "patient_deixis",
+                "tense",
+                "aspect",
+                "polarity",
+                "speech_act"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P002",
+          "stratum": "polarity_question",
+          "correct_events": 2,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P003",
+          "stratum": "person_number",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "agent_number"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P004",
+          "stratum": "nominal_agent",
+          "correct_events": 1,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "patient_quantity"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P005",
+          "stratum": "deixis",
+          "correct_events": 2,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P006",
+          "stratum": "deixis_plural",
+          "correct_events": 2,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P007",
+          "stratum": "quantity",
+          "correct_events": 2,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P008",
+          "stratum": "quantity_scope_open",
+          "correct_events": 2,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P009",
+          "stratum": "tense_action",
+          "correct_events": 1,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P010",
+          "stratum": "aspect_time",
+          "correct_events": 0,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "agent_number",
+                "tense",
+                "aspect"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "agent",
+                "patient_quantity",
+                "aspect"
+              ]
+            }
+          ]
+        },
+        {
+          "doc": "P011",
+          "stratum": "force_vs_motion",
+          "correct_events": 2,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        },
+        {
+          "doc": "P012",
+          "stratum": "quantity_polarity",
+          "correct_events": 1,
+          "total_events": 2,
+          "decode_error": null,
+          "events": [
+            {
+              "event_index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "event_index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5037,
+        "completion_tokens": 2196,
+        "total_tokens": 7233,
+        "cost": 0.0010178399999999999
+      },
+      "usd_per_exact_proposition": 6.7856e-05
+    }
+  },
+  "paired_documents": [
+    {
+      "doc": "P001",
+      "stratum": "agent_object",
+      "cold": 0,
+      "guided": 0,
+      "delta_guided_minus_cold": 0
+    },
+    {
+      "doc": "P002",
+      "stratum": "polarity_question",
+      "cold": 0,
+      "guided": 2,
+      "delta_guided_minus_cold": 2
+    },
+    {
+      "doc": "P003",
+      "stratum": "person_number",
+      "cold": 0,
+      "guided": 0,
+      "delta_guided_minus_cold": 0
+    },
+    {
+      "doc": "P004",
+      "stratum": "nominal_agent",
+      "cold": 0,
+      "guided": 1,
+      "delta_guided_minus_cold": 1
+    },
+    {
+      "doc": "P005",
+      "stratum": "deixis",
+      "cold": 0,
+      "guided": 2,
+      "delta_guided_minus_cold": 2
+    },
+    {
+      "doc": "P006",
+      "stratum": "deixis_plural",
+      "cold": 0,
+      "guided": 2,
+      "delta_guided_minus_cold": 2
+    },
+    {
+      "doc": "P007",
+      "stratum": "quantity",
+      "cold": 0,
+      "guided": 2,
+      "delta_guided_minus_cold": 2
+    },
+    {
+      "doc": "P008",
+      "stratum": "quantity_scope_open",
+      "cold": 0,
+      "guided": 2,
+      "delta_guided_minus_cold": 2
+    },
+    {
+      "doc": "P009",
+      "stratum": "tense_action",
+      "cold": 0,
+      "guided": 1,
+      "delta_guided_minus_cold": 1
+    },
+    {
+      "doc": "P010",
+      "stratum": "aspect_time",
+      "cold": 0,
+      "guided": 0,
+      "delta_guided_minus_cold": 0
+    },
+    {
+      "doc": "P011",
+      "stratum": "force_vs_motion",
+      "cold": 0,
+      "guided": 2,
+      "delta_guided_minus_cold": 2
+    },
+    {
+      "doc": "P012",
+      "stratum": "quantity_polarity",
+      "cold": 0,
+      "guided": 1,
+      "delta_guided_minus_cold": 1
+    }
+  ],
+  "limitations": "Controlled SVO agent/patient lexical/grammatical interpretation only. Gold is produced from restricted parser; source words include example-only entries. No independent semantic review, no cross-clause anaphora/scope, no full language competence, no English baseline.",
+  "corpus_sha256": "d0876b7ec4cee2d06465338b7ba0b6fbd7eff627502cf9f7fa28e286ebd8b892",
+  "responses_sha256": "ce0880dd234727b40d34b94e118803234ec266bb3ecbd7200aeb5bc1d3040037",
+  "observed_cost_usd": 0.00181848,
+  "request_controls": {
+    "temperature": 0.7,
+    "seed": 23,
+    "no_think": true,
+    "provider_fallbacks": false,
+    "max_output": 520,
+    "max_requests": 24,
+    "observed_spend_limit_usd": 0.02
+  }
+}
