@@ -229,7 +229,7 @@
       "status": "confirmed"
     },
     {
-      "content_sha256": "9ecdb0ac8e483f09f5f9fb111eeac7dd74b59d57b104fbe483b3018d04da5f7c",
+      "content_sha256": "f968e29b727c38188f1ab3a1c44f82f3ed29afdfd4a3e26eb9d52e7a9647f391",
       "id": "grammar.percentages_as_senim_20261024",
       "source": "research/grammar/confirmed_decisions.json#decisions/percentages_as_senim_20261024",
       "status": "confirmed"
