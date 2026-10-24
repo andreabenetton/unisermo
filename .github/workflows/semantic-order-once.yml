@@ -1,0 +1,44 @@
+name: One-shot mirrored semantic choice trial
+on:
+  push:
+    branches: [research/semantic-order-counterbalance-20261024]
+    paths: ['.github/workflows/semantic-order-once.yml']
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-mirrored-choice-20261024
+  cancel-in-progress: false
+jobs:
+  execute:
+    if: >-
+      github.event.head_commit.message == 'ci: execute mirrored semantic choice trial once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Preflight source provenance, pair novelty, and cost/call caps
+        run: |
+          python -m unittest discover -s tests -p 'test_semantic_order.py' -v
+          python - <<'PY'
+          from benchmarks.semantic_order import MAX_REQUESTS, MAX_COST_USD, MODEL, load_corpus, make_requests
+          assert len(load_corpus())==20
+          assert len(make_requests())==MAX_REQUESTS==80
+          assert MAX_COST_USD==0.03
+          assert MODEL=='qwen/qwen3-32b'
+          print('Preflight passed: 80 calls maximum, USD 0.03 observed-spend guard, no holdout')
+          PY
+      - name: Execute Qwen3 mirrored semantics trial
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.semantic_order --output benchmarks/reports/semantic-order-raw.jsonl
+      - name: Archive raw and scored evidence even on failed trial
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semantic-order-${{ github.run_id }}
+          path: benchmarks/reports/semantic-order-*
+          if-no-files-found: warn
+          retention-days: 30
