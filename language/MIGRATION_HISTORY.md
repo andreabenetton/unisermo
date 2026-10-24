@@ -4,6 +4,8 @@
 - 2026-08-10 - canonical vertical motion axis established: `alt` = high/upper/up, `bas` = low/lower/down; `mov altad` / `mov basad` express upward/downward motion analytically, while transparent compounds `altmov` / `basmov` mean ascend/descend and remain distinct from phase `admov` / `demov`.
 - 2026-08-10 - canonical force/manner roots established: `pel` = push and `trak` = pull/draw. They remain semantically distinct from `mov`: pushing/pulling does not entail successful displacement.
 # Language specification migration history
+
+- **2026-10-24** — Author identifies an **omitted 10 August 2026 decision**: `adel` = gender-neutral sibling, `adelo` = brother and `adele` = sister (original user acceptance 10 Aug 16:11:23 UTC). Restore these three as the canonical sibling family and **retire `frat`** from current lexical data. Preserve the earlier 10 Aug `frat` entry below strictly as historical evidence, and keep old experimental corpora reproducible via separately marked noncanonical/legacy attestation. Parent `gen` and uncle/aunt compound `adelgen` are not promoted by this targeted correction.
 - 2026-08-10 - canonical `mov` valency alternation established: intransitive `X mov` = X moves; transitive `Y mov X-em` = Y moves/displaces X, optionally toward `DEST-ad`. The same alternation applies to `admov`, `inmov`, `demov`, `remov`; transitive `inmov` means keep X in motion, not push/pull.
 
 The files in this directory are the **live, editable language specification**.
