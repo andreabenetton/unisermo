@@ -12,7 +12,7 @@ Research audit 24 October 2026. Provenance: C = recovered dated *conversation-in
 - **22:05:25 UTC (C, user)**: `-de` assigned exclusively to source/from; rejects prior alternatives `-de` for 'of' and `-da` for 'from'.
 - **22:09:05 UTC (C, conversation index)**: historical 7 basic plus 6 extended cases consolidated, as subsequently preserved in the 8 August original language specification.
 
-**Significance:** The earliest firmly indexed 24 May sequence concerns lexical roots and verb layout nearly two hours before the case discussion. The project's inception date is still unknown; no full transcript has yet been archived.
+**Significance:** The earliest firmly indexed 24 May sequence concerns lexical roots and verb layout nearly two hours before the case discussion. The project's true inception date is still unknown, but an explicit international constructed-language vowel-design question is now confirmed by a **16 May 11:50 UTC** original user message. Full transcripts remain unexported.
 
 ## 8–10 August: research results before final language migration
 
@@ -39,7 +39,7 @@ This is an actual *reduction followed by selective expansion*, not an instantane
 
 ## 22 May attribution caveat
 
-Prior October summaries claimed a 22 May phoneme/grapheme discussion. A new targeted personal-history retrieval returned **contradictory matches**, including an unrelated 22 May WordPress discussion. Therefore the precise 22 May linguistic session and its transcript remain **uncorroborated**; do not cite retrospective summaries as direct 22 May messages. This does not exclude earlier real discussions. The 24 May indexed sequence above currently has stronger direct chronological leads.
+**Subsequent verification (24 October 2026):** The previously disputed 22 May dialogue **has now been located in speaker-attributed dated original-message retrieval**. On 22 May the user accepts schwa as a sixth person vowel and asks about Georgian IPA affricates, globally familiar consonants and the exclusion of /h/. The earliest explicit international invented-language query found is **16 May 11:50 UTC**, when the user asks whether five or six vowels are preferable. A 6 May Italian/Georgian IPA comparison is an earlier **unconnected phonetic precursor**. The former WordPress result was an irrelevant retrieval match, not evidence disproving the genuine May 22 conversation. The complete original thread is still not exported. Details: [early May evidence](early-may-conversation-evidence.md).
 
 ## External phonotactic source check
 
