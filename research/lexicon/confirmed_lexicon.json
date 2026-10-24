@@ -656,20 +656,36 @@
       "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion."
     },
     {
-      "form": "ecce",
+      "form": "ekse",
       "category": "function_word",
-      "meaning_it": "eccetto, tranne, salvo; operatore generale di esclusione",
+      "meaning_it": "eksetto, tranne, salvo; operatore generale di esclusione",
       "meaning_en": "except, excluding; general exception operator",
-      "source": "Explicit author ratification 2026-10-24; international except/exception family, distinct from Latin ecce ('behold')",
-      "decision": "Free invariant ecce marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma."
+      "source": "Explicit author ratification 2026-10-24; international except/exception family, distinct from Latin ekse ('behold')",
+      "decision": "Free invariant ekse marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma."
     },
     {
-      "form": "eccese",
+      "form": "eksese",
       "category": "function_word",
-      "meaning_it": "a meno che, salvo che; eccezione condizionale",
+      "meaning_it": "a meno che, salvo che; eksezione condizionale",
       "meaning_en": "unless; except if (conditional exception)",
-      "source": "Explicit author ratification 2026-10-24; fused ecce + se",
-      "decision": "Canonical single-word compound ecce+se marks conditional exception (UNLESS). Both eccese P, Q and Q eccese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms."
+      "source": "Explicit author ratification 2026-10-24; fused ekse + se",
+      "decision": "Canonical single-word compound ekse+se marks conditional exception (UNLESS). Both eksese P, Q and Q eksese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms."
+    },
+    {
+      "form": "e",
+      "category": "function_word",
+      "meaning_it": "e; congiunzione coordinante additiva",
+      "meaning_en": "and; additive coordination",
+      "source": "Explicit author ratification 2026-10-24",
+      "decision": "e as a free-standing conjunction AND; distinct from bound progressive aspect -e."
+    },
+    {
+      "form": "o",
+      "category": "function_word",
+      "meaning_it": "o; congiunzione coordinante disgiuntiva",
+      "meaning_en": "or; disjunctive coordination",
+      "source": "Explicit author ratification 2026-10-24",
+      "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified."
     }
   ]
 }
