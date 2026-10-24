@@ -25,6 +25,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "1c42f8fbfd7c357e8221e8a3a7b5c2c793e85e0109705daeabee85a36420d63a",
+      "id": "grammar.conditional_se_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/conditional_se_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "49b8f7319459e0ee3bbac3d916390b12aeac83460121bd28d717c5405d554c4c",
       "id": "grammar.copula_es_current_person_number",
       "source": "research/grammar/confirmed_decisions.json#decisions/copula_es_current_person_number",
