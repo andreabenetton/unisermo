@@ -26,6 +26,12 @@ def main() -> None:
     noun.add_argument("--case", default="nominative")
     kinship = sub.add_parser("kinship", help="decode a confirmed/productive genealogy as a typed path")
     kinship.add_argument("word")
+    numeral = sub.add_parser("numeral", help="analyze a fused canonical cardinal numeral 0..9999")
+    numeral.add_argument("word")
+    counter = sub.add_parser("iteration", help="analyze a positive NUMjer step counter")
+    counter.add_argument("word")
+    cardinal = sub.add_parser("number", help="generate canonical written numeral for 0..9999")
+    cardinal.add_argument("value", type=int)
     participle = sub.add_parser("participle", help="generate a -it resultative")
     participle.add_argument("lemma")
     args = p.parse_args()
@@ -36,7 +42,17 @@ def main() -> None:
         validate()
     else:
         language = Unisermo()
-        if args.command == "kinship":
+        if args.command == "numeral":
+            result = language.parse_numeral(args.word)
+            if result is None:
+                p.error("invalid or noncanonical numeral")
+        elif args.command == "iteration":
+            result = language.parse_iteration(args.word)
+            if result is None:
+                p.error("invalid or noncanonical NUMjer counter")
+        elif args.command == "number":
+            result = language.generate_numeral(args.value)
+        elif args.command == "kinship":
             result = language.parse_kinship(args.word)
             if result is None:
                 p.error("unknown, unsupported or ambiguous kinship relation")
