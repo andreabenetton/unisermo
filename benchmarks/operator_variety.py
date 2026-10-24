@@ -2,6 +2,21 @@
 import json
 from pathlib import Path
 from benchmarks.discourse_semantics import parse
+
+def parse_event_array(answer):
+    """Accept a pure JSON array or an events wrapper; never scrape prose."""
+    parsed=parse(answer)
+    if parsed is not None:return parsed
+    if not isinstance(answer,str):return None
+    raw=answer.strip()
+    fence=chr(96)*3
+    if raw.startswith(fence):
+        lines=raw.splitlines()
+        if len(lines)>=3 and lines[0] in (fence,fence+"json") and lines[-1]==fence:
+            raw="\\n".join(lines[1:-1])
+    try:obj=json.loads(raw)
+    except (ValueError,TypeError):return None
+    return obj if isinstance(obj,list) else None
 SOURCE=Path(__file__).resolve().parents[1]/"benchmarks/corpus/operator-variety-001.jsonl"
 GLOSS="pel=push, trak=pull, vid=see; akwa=water, frat=brother, aerplan=airplane."
 PRIMER=("Finite verb = root + aspect + tense + person + number. "
@@ -31,7 +46,7 @@ def score(key,responses):
     by_field={field:{"correct":0,"total":0} for field in FIELDS}
     exact=0;total=0;details=[]
     for truth in key:
-        actual=parse(found[truth["id"]].get("answer"))
+        actual=parse_event_array(found[truth["id"]].get("answer"))
         hits=0
         for i,event in enumerate(truth["events"]):
             candidate=actual[i] if isinstance(actual,list) and i<len(actual) and isinstance(actual[i],dict) else {}
