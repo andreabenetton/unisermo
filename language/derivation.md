@@ -15,6 +15,13 @@ phrase rather than attaching inside the derived word.
 | abstract quality / state / property | `-itat` | `klaritat` | clarity |
 | relational adjective | `-al` | `fakal` | related to making |
 
+The independent approved **numeric scalar-factor suffix `-fol`** is
+defined in [numerals](numerals.md), not as a general lexical agent or
+instrument suffix. It applies **only to positive canonical cardinals**:
+`bisfol` = double, `terfol` = triple, `forfol` = quadruple. Do not
+confuse it with the separate `NUMjer` iteration operator. The earlier
+candidate `-mul` was **not ratified**.
+
 ## 2. Agent and instrumental derivation
 
 The productive suffix **`-or`** derives a person whose characteristic role or
