@@ -19,6 +19,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "b93f6d164fe48756b1ff0ba0d1ccd9ea9262362fb2c7c90c6b846a3dc1b694be",
+      "id": "grammar.causal_due_propositional_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/causal_due_propositional_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "473ec7692335c3bdc992f30317d947b652f858a55ff2d28979ec6dd3dd2d0b8e",
       "id": "grammar.comitative_kun_analytic",
       "source": "research/grammar/confirmed_decisions.json#decisions/comitative_kun_analytic",

@@ -194,6 +194,10 @@
     {
       "id": "connectives_alor_ma_ergo_20261024",
       "decision": "Author ratifies standalone alor = THEN (conditional consequent correlative), ma = BUT (ordinary adversative conjunction), and ergo = THEREFORE/THUS (inferential conclusion). Distinguish alor conditional relation from ergo inference and ma contrast; e and o retain their previously ratified additive and disjunctive functions, and se retains conditional IF. Full coordination, subordinate-clause scope, optionality of alor in particular contexts, and logical precedence remain separate parser decisions. Author ratification 2026-10-24."
+    },
+    {
+      "id": "causal_due_propositional_20261024",
+      "decision": "Author ratifies extending existing free relator due ('because of' + nominal phrase) to introduce a complete causal subordinate clause ('because/since' + proposition). Both orders are grammatical: P due Q ('P because Q') and due Q, P ('since Q, P'), with Q the asserted cause and P the consequence. This is distinct from P, ergo Q ('P, therefore Q'), where ergo introduces a conclusion/inference, not a cause. Interrogative ker remains WHY. No new kar lexeme; parsing must distinguish due + NP from due + clause and preserve cause/effect role regardless of order. Detailed delimitation and nested scoping remain future parser work. Ratified by author 2026-10-24."
     }
   ]
 }

@@ -173,3 +173,13 @@ Synthetic case is reserved for a small, frequent grammatical core. More
 specific semantic relations remain transparent free words. This avoids a long
 case paradigm while preserving compact marking for direct objects, possession,
 recipients/direction, source, location, and resultative predication.
+
+
+## Causal clauses introduced by `due` (ratified 24 October 2026)
+
+The already confirmed free relator `due` ('because of', introducing a nominal phrase) **also introduces a complete causal proposition** ('because', 'since'). Both orders are accepted:
+
+- `P due Q` — P because Q (effect first; Q is the cause).
+- `due Q, P` — Since Q, P (cause first; P is the effect).
+
+This is not the same construction as `Q, ergo P` ('Q, therefore P'): `ergo` explicitly introduces an inference/conclusion rather than labeling the subordinate proposition as a cause. Interrogative `ker` remains WHY. No separate causal connector `kar` is introduced. A parser must preserve which clause is cause and which is effect, and distinguish `due + NP` from `due + finite clause`; punctuation and nested-clause rules beyond the simple examples require further specification.
