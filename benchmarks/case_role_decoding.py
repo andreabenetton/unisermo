@@ -235,8 +235,8 @@ def evaluate(outputs, corpus=None):
                 if usage["cost"] is not None and exact_clauses else None,
             "details": details,
         }
-        by_doc[cond] = {d["doc"]: sum(int(x["exact"]) for x in details
-                                   if x["doc"] == d["doc"]) for d in corpus}
+        by_doc[cond] = {d["id"]: sum(int(x["exact"]) for x in details
+                                   if x["doc"] == d["id"]) for d in corpus}
     paired = [{"doc": d["id"], "family": d["family"],
                "case": by_doc["case"][d["id"]], "role": by_doc["role"][d["id"]]}
               for d in corpus]
