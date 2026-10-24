@@ -106,3 +106,8 @@ Both `P due Q` (effect followed by its causal explanation) and `due Q, P` (front
 ## Hypothetical concessive `etsise` (ratified 24 October 2026)
 
 The invariant **single-word** compound `etsise` = `etsi` (concessive) + `se` (hypothetical condition) denotes hypothetical **EVEN IF / EVEN SHOULD**. Both `etsise P, Q` ('even if P, Q') and `Q etsise P` ('Q, even if P') are grammatical. The speaker does **not assert that P is true or false**, unlike `etsi` which presents P as factual or accepted. The consequent Q is asserted to hold even in the eventuality P, not in all imaginable circumstances. `etsise` is a specifically licensed compound, **not** evidence that arbitrary connective strings may be fused. Complex subordinate-scope parsing remains outside the current restricted parser.
+
+
+## Exception and conditional exception (ratified 24 October 2026)
+
+`ecce` is a free invariant EXCEPT/EXCLUDING operator. The fused single-word `eccese` = `ecce` + `se` introduces a conditional exception, UNLESS / EXCEPT IF. The two clause orders `eccese P, Q` ('unless P, Q') and `Q eccese P` ('Q, unless P') are both valid. Unlike simple `se no P, Q` ('if not P, Q'), `eccese` signals that P is an exception to an expectation/rule associated with Q; it does not generally entail that Q must happen whenever P is false. Full syntactic handling of the general exclusion operator and nested subordinate clauses remains future parser work. The fused compound is specifically licensed and does not make arbitrary fusion productive.
