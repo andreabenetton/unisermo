@@ -9,24 +9,74 @@
   ],
   "alphabet": "aeioupbtdkgmnfvszlrjw",
   "finite": {
-    "order": ["lemma", "aspect", "tense", "person", "number"],
-    "aspect": {"simple": "", "progressive": "e", "perfect": "o"},
-    "tense": {"present": "", "past": "d", "future": "f"},
-    "person": {"1": "i", "2": "u", "3": "a"},
-    "number": {"singular": "", "plural": "n"}
+    "order": [
+      "lemma",
+      "aspect",
+      "tense",
+      "person",
+      "number"
+    ],
+    "aspect": {
+      "simple": "",
+      "progressive": "e",
+      "perfect": "o"
+    },
+    "tense": {
+      "present": "",
+      "past": "d",
+      "future": "f"
+    },
+    "person": {
+      "1": "i",
+      "2": "u",
+      "3": "a"
+    },
+    "number": {
+      "singular": "",
+      "plural": "n"
+    }
   },
   "nominal": {
     "number_default": "unspecified",
     "plural_particle": "wi",
     "case": {
-      "nominative": "", "accusative": "em", "genitive": "s",
-      "dative_allative": "ad", "ablative": "de", "locative": "in",
+      "nominative": "",
+      "accusative": "em",
+      "genitive": "s",
+      "dative_allative": "ad",
+      "ablative": "de",
+      "locative": "in",
       "resultative": "da"
     },
     "genitive_alternate": "es",
-    "genitive_alternate_after": ["s", "z", "sj", "tj", "dj"]
+    "genitive_alternate_after": [
+      "s",
+      "z",
+      "sj",
+      "tj",
+      "dj"
+    ]
   },
-  "syntax": {"canonical_order": "SVO", "subject_pro_drop": true, "polar_marker": "ka", "negator": "no", "optional_indefinite": "uno"},
-  "non_finite": {"participle_resultative": "it"},
-  "not_implemented": ["full_clausal_reordering", "enclitic_focus_scope", "wh_interrogatives", "zero_copula", "servile_complement_frames", "full_lexical_valency", "general_productive_compounding", "fractions_decimals_ordinals_beyond_giga", "passive_clauses", "phonetic_allophony"]
+  "syntax": {
+    "canonical_order": "SVO",
+    "subject_pro_drop": true,
+    "polar_marker": "ka",
+    "negator": "no",
+    "optional_indefinite": "uno"
+  },
+  "non_finite": {
+    "participle_resultative": "it"
+  },
+  "not_implemented": [
+    "full_clausal_reordering",
+    "enclitic_focus_scope",
+    "wh_interrogatives",
+    "zero_copula",
+    "servile_complement_frames",
+    "full_lexical_valency",
+    "general_productive_compounding",
+    "fractions_decimals_signed_numbers_beyond_giga",
+    "passive_clauses",
+    "phonetic_allophony"
+  ]
 }

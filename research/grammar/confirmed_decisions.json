@@ -186,6 +186,10 @@
     {
       "id": "numeral_mila_mega_giga_20261024",
       "decision": "Ratify mila = 1000, mega = 1000000, giga = 1000000000 and retire mil from canonical numerals (preserved only as historical attestation). Compose all cardinal integers 0..999999999999 as descending nonzero 1..999 coefficients followed by giga, mega, mila, then bare units. Omit zero groups and coefficient uno before powers. NUMjer uses the same complete canonical integer grammar for positive iteration counts; genealogical expansion retains a separate 128-step safety limit. Author approval dated 2026-10-24. Fractions, signed numbers, ordinals and powers beyond giga remain undecided."
+    },
+    {
+      "id": "ordinal_im_positive_contraction_20261024",
+      "decision": "Ratify invariant productive positive ordinal suffix -im on each canonical cardinal from 1 through 999999999999. The canonical surface removes the terminal o from a cardinal ending in uno or oto before adding im: uno->unim, oto->otim, dekuno->dekunim, bisdekuno->bisdekunim; otherwise append im unchanged (bis->bisim, dek->dekim, mila->milaim). Cardinal roots and cardinal spellings do not change. Ordinals are invariant prenominal modifiers without number or case agreement, with case remaining on the noun. The author separately ratified full analytic unoim/otoim (including compound-final forms like dekunoim) as valid noncanonical variants; parser accepts them and normalizes to the contracted canonical spelling. nulim is unratified and rejected. Fractions are a separate proposed construction, not inferred from ordinal ratification."
     }
   ]
 }

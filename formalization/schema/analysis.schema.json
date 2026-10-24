@@ -29,7 +29,8 @@
               "lexical_form",
               "kinship_relation",
               "cardinal_numeral",
-              "iteration_counter"
+              "iteration_counter",
+              "ordinal_numeral"
             ]
           },
           "lemma": {
@@ -91,6 +92,9 @@
             "minimum": 1
           },
           "source": {
+            "type": "string"
+          },
+          "canonical_form": {
             "type": "string"
           }
         },

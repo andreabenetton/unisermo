@@ -198,3 +198,25 @@ Numerals themselves do not inflect for case or number.
 ```
 
 Write positive integers as descending three-digit groups with `giga`, `mega`, `mila`, then a bare 0..999 units group. Omit all zero groups and the coefficient `uno` before each power. After a numeral the noun remains bare; case suffixes attach to the noun, never to a numeral. The whole numerical word is fused.
+
+---
+
+## 8. Positive ordinal numbers: `-im` (24 October 2026)
+
+Author-approved invariant ordinal suffix: `-im` follows the entire canonical positive cardinal word (not individual thousand groups). When the cardinal ends in `o` (its final digit is `uno` or `oto`), delete only that final `o` before `im`. Canonical writing is a single fused word. Ordinary cardinal forms remain unchanged.
+
+| Cardinal | Canonical ordinal | Interpretation |
+|---|---|---|
+| `uno` | `unim` | first |
+| `bis` | `bisim` | second |
+| `ter` | `terim` | third |
+| `for` | `forim` | fourth |
+| `oto` | `otim` | eighth |
+| `dek` | `dekim` | tenth |
+| `dekuno` | `dekunim` | eleventh |
+| `bisdekuno` | `bisdekunim` | twenty-first |
+| `mila` | `milaim` | thousandth |
+
+Ordinal values are 1..999,999,999,999. `nulim` has **not** been approved. Full analytic forms such as `unoim`, `otoim` and compound-final `dekunoim` were explicitly accepted by the author on 24 October 2026 as valid **noncanonical variants**. The parser recognizes them and normalizes them to `unim`, `otim`, `dekunim` respectively; the generator emits only contracted canonical forms.
+
+Ordinals act as invariant pre-nominal modifiers, like adjectives: `bisim dom` is the second house; `bisim domem` marks accusative on the noun, not on the ordinal. The restricted SVO reference parser handles a *single* ordinal modifier; combining one with quantifiers, demonstratives, plural particles, or other modifiers awaits separate scope and ordering rules. Fused `NUMim` is not a fraction by itself. The proposed two-word numerator/ordinal-denominator fraction syntax remains unratified.

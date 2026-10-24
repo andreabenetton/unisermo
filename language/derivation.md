@@ -203,3 +203,8 @@ Explicit plural `wi` remains a separate pre-nominal particle:
 - `wi fakorem` — makers as direct object
 
 The historical nominal plural suffix `-en` is not part of the current system.
+
+
+## Numeric ordinal inflection-like derivation (`-im`)
+
+The confirmed positive numerical ordinal `NUMim` is a productive, invariant **numeral modifier**, not a general-purpose derivational suffix on arbitrary words. Attach it to the *complete* positive cardinal form; if that ends in `o` then contract that last `o` before `im`. See [numerals](numerals.md) §8. This rule does not license `nulim`; full analytical spellings before `-im` are valid noncanonical variants normalized to the contracted form.

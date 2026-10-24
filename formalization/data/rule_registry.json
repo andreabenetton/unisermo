@@ -211,6 +211,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "3db4f881ebb38792f1effd0abd60629c592163a3ba8448572d8d65dee6012dd3",
+      "id": "grammar.ordinal_im_positive_contraction_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/ordinal_im_positive_contraction_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "d565ed4ea5d3812b1c964ab8bbf86c0e90d843ed7b2a351c2734497b07d21a8e",
       "id": "grammar.participial_resultative_it",
       "source": "research/grammar/confirmed_decisions.json#decisions/participial_resultative_it",

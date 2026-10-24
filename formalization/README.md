@@ -28,7 +28,13 @@ python3 -m formalization sentence 'vidi tersenbisdekuno domem'
 
 Numerals act as **prenomial quantifiers** and are never case-inflected; case remains on the following noun. `nul` means zero. Redundant `wi` is rejected in the supported SVO subset when quantity is specified by any canonical numeral. The ordinary confirmed-lexicon and historical-example provenance of words is retained independently from the newly computed `cardinal_numeral` analysis (`status: canonical_by_rule`). No implication of new canonical words or empirical efficiency is intended.
 
-See [normative numerals](../language/numerals.md). Powers beyond giga, negative numbers, fractions, decimals and ordinals are **outside this approved reference range**.
+See [normative numerals](../language/numerals.md). Powers beyond giga, negative numbers, fractions and decimals are **outside this approved reference range**.
+
+## Positive ordinals (`-im`)
+
+The positive ordinal operator `-im` generates a single fused form and contracts the terminal `o` of `uno`/`oto` (including compound final digits): `unim`, `otim`, `dekunim`, `bisdekunim`. It is invariable in noun phrases; the nominal head retains case marking. `nulim` is not approved; analytical forms `unoim`, `otoim` are accepted variants normalized to the contracted form. Fractions are still proposals. The restricted SVO parser accepts only a standalone ordinal modifier, not cooccurrence with other modifiers.
+
+Commands: `python3 -m formalization order 21` and `python3 -m formalization ordinal bisdekunim`.
 
 ## Commands
 

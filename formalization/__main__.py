@@ -28,6 +28,10 @@ def main() -> None:
     kinship.add_argument("word")
     numeral = sub.add_parser("numeral", help="analyze a fused canonical cardinal numeral 0..999999999999")
     numeral.add_argument("word")
+    ordinal = sub.add_parser("ordinal", help="parse a canonical positive -im ordinal")
+    ordinal.add_argument("word")
+    ordinalgen = sub.add_parser("order", help="generate the canonical positive -im ordinal")
+    ordinalgen.add_argument("value", type=int)
     counter = sub.add_parser("iteration", help="analyze a positive NUMjer step counter")
     counter.add_argument("word")
     cardinal = sub.add_parser("number", help="generate canonical written numeral for 0..999999999999")
@@ -46,6 +50,12 @@ def main() -> None:
             result = language.parse_numeral(args.word)
             if result is None:
                 p.error("invalid or noncanonical numeral")
+        elif args.command == "ordinal":
+            result = language.parse_ordinal(args.word)
+            if result is None:
+                p.error("invalid, unratified, or noncanonical ordinal")
+        elif args.command == "order":
+            result = language.generate_ordinal(args.value)
         elif args.command == "iteration":
             result = language.parse_iteration(args.word)
             if result is None:
