@@ -40,6 +40,10 @@ Commands: `python3 -m formalization order 21` and `python3 -m formalization ordi
 
 `CARDINAL ORDINAL` is a fraction with an integer numerator 0..999999999999 and ordinal denominator 2..999999999999; improper fractions remain valid, and original parts are preserved. Use `python3 -m formalization ratio 2 4` to generate `bis forim`, or `python3 -m formalization fraction 'bis forim'` to parse it. The denominator accepts ratified analytic ordinal spellings while the canonical generator contracts them. No automatically reduced fraction or clause-level modifier stacking is inferred.
 
+## Percentages
+
+Percentages use the confirmed ordinary fraction with denominator `senim`, e.g. `kin senim` = five percent. No new lexical root or dedicated percentage parser is needed. Use `python3 -m formalization fraction 'kin senim'`; denominator 100 is explicit in the analysis.
+
 ## Commands
 
 From the repository root (Python 3.11+ recommended):
