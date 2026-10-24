@@ -199,6 +199,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "3f56822cadd6ffa2e848e9e2cb578648c42946cbdddeba1d47112843f45e78de",
+      "id": "grammar.numeral_multiplicative_suffix_fol",
+      "source": "research/grammar/confirmed_decisions.json#decisions/numeral_multiplicative_suffix_fol",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "84f01254119d09b2cb2dd8b1e739f507069c0d26fd6d2f5efe2d7d0d25035ee3",
       "id": "grammar.numeral_two_bis",
       "source": "research/grammar/confirmed_decisions.json#decisions/numeral_two_bis",
