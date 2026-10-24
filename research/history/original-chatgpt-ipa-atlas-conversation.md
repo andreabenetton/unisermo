@@ -4,18 +4,26 @@
 
 ## Recovered conversation chronology (27 July 2026; UTC)
 
+The first recovered user message (05:11:50 UTC) begins: **“sei in grado per ogni riquadro presente nella tabella https://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/ di contare le lettere presenti in lingue diverse ?”** This exact phrase is a useful ChatGPT history-search anchor. Although the wording says “letters”, the session evolved into an explicit phoneme-versus-grapheme distinction.
+
 | Approximate time | Provenance | Explicit requirement or milestone |
 | --- | --- | --- |
 | 05:11:50–05:11:57 | **User**, conversation search | Count distinct source languages that attest the phoneme for every cell in an IPA chart; avoid double counting and distinguish exact symbols. |
+| **05:15:19** | **Assistant output** | First recovered generated file: `ipa_language_counts.html`. Its old conversation sandbox address is not a verified downloadable link in the present session. |
 | 05:12:47 | **User** | Accepted a PHOIBLE-driven approach with source-traceable symbol inventories, language lists and geographic/family information. |
 | 05:19:04 | **User** | When selecting a language, display its orthographic graphemes corresponding to the IPA phoneme, not only the IPA symbol. |
 | 05:21:00–05:21:44 | **User** | Produce the interactive updated chart with spelling mappings and a speaker-weighted prevalence measure, and verify ISO/Glottocode and demographic joins. |
 | 09:03:30 | **User** | Account for phonetic variants when relating IPA symbols to canonical language phonemes; adopt a many-to-many phoneme–grapheme mapping with explicit evidence. |
 | 09:44:35 | **User** | Explicitly verify **all 33 modern Georgian graphemes**; add checks for whole-alphabet coverage and language-specific mappings. |
 | 13:34:06–13:46:48 | **User** | Cite data sources and attribution/licensing, prefer the official International Phonetic Association chart for symbol inventory/layout; use third-party chart/media only where appropriate. |
+| **13:40:14** | **Assistant output** | File `ipa_language_counts_vowel_compact_sources.html` documents an intermediate compact/source-accounting chart. |
+| **13:52:53** | **Assistant output** | File `ipa_language_counts_official_ipa_2026.html` documents official IPA chart revision. |
+| **14:10:06** | **Assistant output** | File `ipa_language_counts_vowel_five_headers.html`: assistant reported five vowel headings, 15 phoneme columns and 28 vowels, including validation of JavaScript. These are reported features, not a fresh audit of the file's bytes. |
 | 16:24:05 | **Assistant output (recovered summary)** | At this stage the single-file application reportedly included evidence filters, two-language comparison, differences-only mode and a transparent L/P audit. This is assistant-reported implementation, corroborated by the later baseline's UI/content but not an exact HTML checksum from the chat attachment. |
 
-**Research caution:** these are indexed excerpts and paraphrases, **not** a verbatim complete transcript; do not invent missing intervening dialogue or an unverified chat URL. The first recovered user message is 05:11:50 UTC, but the precise time the standalone HTML was generated is not independently established.
+**Research caution:** these are indexed excerpts and paraphrases, **not** a verbatim complete transcript; do not invent missing intervening dialogue or an unverified chat URL. The first recovered user message is 05:11:50 UTC; an initial downloadable HTML is explicitly recorded at **05:15:19 UTC**. The final file cited in the chat is named `ipa_language_counts_scroll_quality.html` at **17:14:38 UTC**; do not claim bitwise equivalence with the Git baseline until the original chat attachment can be materialized and compared.
+
+- **17:14:38 UTC**: latest working file identified in the ChatGPT conversation as `ipa_language_counts_scroll_quality.html`. This predates the 17:59 Git import. Its exact file SHA has not been compared with the Git baseline.
 
 ## Immutable Git-level trace of the app
 
