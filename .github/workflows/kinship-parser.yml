@@ -1,0 +1,43 @@
+name: Kinship parser regression
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'research/grammar/confirmed_decisions.json'
+      - 'research/lexicon/confirmed_lexicon.json'
+      - 'tests/test_kinship_parser.py'
+      - 'tests/test_formalization.py'
+      - 'tests/test_lexicon_decisions.py'
+      - '.github/workflows/kinship-parser.yml'
+  push:
+    branches:
+      - research/august-kinship-dialogue-vs-git-20261024
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'tests/**'
+      - '.github/workflows/kinship-parser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kinship-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify generated formalization, parser and grammar regressions
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+          python -m unittest discover -s tests -p 'test_kinship_parser.py' -v
+          python -m unittest discover -s tests -p 'test_formalization.py' -v
+          python tests/test_language_spec_sync.py
+          python tests/test_lexicon_decisions.py
+          python -m unittest discover -s tests -p 'test_recent_grammar_decisions.py' -v
