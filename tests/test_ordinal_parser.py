@@ -23,8 +23,18 @@ class OrdinalTests(unittest.TestCase):
             self.assertEqual(self.lang.parse_ordinal(word)["value"], n)
             self.assertEqual(self.lang.generate_ordinal(self.lang.parse_ordinal(word)["value"]), word)
 
+    def test_analytical_variants(self):
+        samples = {"unoim": "unim", "otoim": "otim", "dekunoim": "dekunim", "bisdekunoim": "bisdekunim", "bisdekotoim": "bisdekotim"}
+        for form, canonical in samples.items():
+            with self.subTest(form=form):
+                result = self.lang.parse_ordinal(form)
+                self.assertIsNotNone(result)
+                self.assertEqual(result["canonical_form"], canonical)
+                self.assertEqual(result["status"], "accepted_analytic_variant")
+                self.assertEqual(self.lang.generate_ordinal(result["value"]), canonical)
+
     def test_unapproved_or_invalid(self):
-        for word in ("nulim", "unoim", "otoim", "dekunoim", "bisdekunoim", "milim", "unimim", "Unim", "bis-im", "bisjerim", "bisfolim", "bisimfol", "bisimjer", "im"):
+        for word in ("nulim", "milim", "unimim", "Unim", "bis-im", "bisjerim", "bisfolim", "bisimfol", "bisimjer", "im"):
             with self.subTest(word=word): self.assertIsNone(self.lang.parse_ordinal(word))
         for n in (0, -1, MAX_CARDINAL+1, True, 1.5):
             with self.assertRaises(ValueError): self.lang.generate_ordinal(n)
