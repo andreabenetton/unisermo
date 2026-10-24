@@ -46,6 +46,8 @@ This is the **living historical record** for a future methodological paper about
 
 | **24 Oct 2026 — historical object recovery** | All four previously cited short SHAs (`7311032`, `011247a`, `9aa7b49`, `8bb979b`) have now been **resolved to actual Git objects in Unisermo**, dated 8–10 August. The first three include original phonology research, machine-readable design constraints, person/number comparison, affricates, and genealogical ordering. A separate ten-snapshot audit confirms the July atlas source DATA stayed constant while demographic and orthographic evidence tooling evolved. | `research/history/august-phonology-decision-chain.md`; `research/history/glottodelta-chatgpt-snapshot-comparison.md`; Git artifact high, conversational causality incomplete |
 
+| **9 Aug 2026, 19:35:58 UTC** | Explicit confirmation of *number-neutral nouns* and optional analytic pre-nominal plural `wi`, replacing historical noun suffix `-en`; omit `wi` when numeral/quantifier already provides quantity. Separately distinguishes `omni` ALL/EVERY from `tot` WHOLE/ENTIRE. | [Commit `e319299`](https://github.com/andreabenetton/unisermo/commit/e31929945d4fce0f628ac96a4dc6c2c260bbe63e), `research/grammar/nominal_number_and_quantification.md`; **high** Git fact, original conversational rationale still unexported |
+
 ## Historical decisions requiring special preservation
 
 **Numerals:** `nul, uno, bis, ter, for, kin, ses, set, oto, nin, dek, sen, mil`; compounds such as `dekbis`, `bisdekkin`; `jer` for repetitions/steps. See `language/numerals.md`, rather than re-inventing the system.
