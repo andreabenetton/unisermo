@@ -370,6 +370,46 @@
       "meaning_en": "sister (female sibling)",
       "source": "Author-confirmed 2026-08-10 adel + -e feminine sibling formation; restoration 2026-10-24",
       "decision": "Canonize adele = female sibling/sister, derived from neutral adel plus kinship-family ending -e. Do not generalize this pattern to unconfirmed kinship candidates."
+    },
+    {
+      "form": "gen",
+      "category": "root",
+      "meaning_it": "genitore",
+      "meaning_en": "parent (gender-neutral)",
+      "source": "Author-approved 2026-08-10 parent system, reaffirmed explicitly 2026-10-24",
+      "decision": "Canonize gen as neutral parent relation, base for geno (father) and gene (mother)."
+    },
+    {
+      "form": "geno",
+      "category": "derived",
+      "meaning_it": "padre",
+      "meaning_en": "father",
+      "source": "2026-08-10 parent family gen+o, author-approved 2026-10-24",
+      "decision": "Canonize geno = father, male parent. Sex suffix applies to the immediate parent relation in this confirmed form."
+    },
+    {
+      "form": "gene",
+      "category": "derived",
+      "meaning_it": "madre",
+      "meaning_en": "mother",
+      "source": "2026-08-10 parent family gen+e, author-approved 2026-10-24",
+      "decision": "Canonize gene = mother, female parent. Sex suffix applies to the immediate parent relation in this confirmed form."
+    },
+    {
+      "form": "adelgen",
+      "category": "compound",
+      "meaning_it": "zio o zia (non specificato)",
+      "meaning_en": "uncle or aunt (parent's sibling, gender-neutral)",
+      "source": "2026-08-10 author proposal adel+gen; expressly ratified 2026-10-24",
+      "decision": "Canonize adelgen = sibling of a parent. Composition A+B means A relative to B, keeping left and right relation roles distinct."
+    },
+    {
+      "form": "bisjergen",
+      "category": "compound",
+      "meaning_it": "nonno o nonna (genitore di un genitore, neutro)",
+      "meaning_en": "grandparent (parent's parent, gender-neutral)",
+      "source": "2026-08-10 original genealogical NUMjer design, author reaffirmation 2026-10-24",
+      "decision": "Canonize bisjergen = two successive gen (parent) relations: parent of parent. bisjer counts two relational steps. No claim that bisjergeno/bisjergene have resolved male/female endpoint scope."
     }
   ]
 }
