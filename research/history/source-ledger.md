@@ -42,6 +42,8 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 
 | [Author-directed restoration of `adel`](august-kinship-original-dialogue-versus-git.md) | Current 24 Oct direct author statement says the 10 Aug accepted sibling family was simply **forgotten**; changes canonical lexicon from `frat` to `adel/adelo/adele` and archives its history | **Author testimony** for intent/cause; contemporary original user message 10 Aug 16:11 supports prior acceptance; Git `a1df1425` proves older `frat` status; 24 Oct branch/PR proves actual implementation. No other kinship roots automatically approved. |
 
+| [2026-10-24 parent-system approval and genealogical iteration](august-kinship-original-dialogue-versus-git.md) | Author approves gen parent, geno father, gene mother and adelgen uncle/aunt. Earlier dated messages contain bisjergen, terjergen and general NUMjer. | Direct author approval now; indexed original 10 Aug user excerpts and 10 Aug Git operator commit. fil offspring and filadelgen cousin NOT adopted. Sex-marker scope across repeated parent links unresolved. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
