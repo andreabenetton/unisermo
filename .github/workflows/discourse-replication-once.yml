@@ -1,0 +1,42 @@
+name: One-shot paired tense replication
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/discourse-replication-once.yml']
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: One-shot guard
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MSG" = 'ci: run paired tense replication once' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check study design
+        run: |
+          python - <<'PY'
+          from benchmarks.discourse_tense_replication import build
+          questions,key=build()
+          assert len(questions)==12 and len(key)==6
+          assert sum(x['variant']=='short' for x in questions)==6
+          assert [x['variant'] for x in questions[:4]]==['short','full','full','short']
+          PY
+      - name: Make twelve bounded requests
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.discourse_tense_replication_runner --output benchmarks/reports/tense-replication.jsonl
+      - name: Archive original answers and score
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tense-replication-${{ github.run_id }}
+          path: benchmarks/reports/tense-replication*
+          if-no-files-found: warn
+          retention-days: 30
