@@ -2,6 +2,19 @@
 
 Research note dated 24 October 2026. This source recovers **individual dated conversation excerpts / previous assistant reports** and connects them to Git history where independently available. A conversation-to-commit link is an **investigative hypothesis**, not proof of which chat triggered a change.
 
+## May 2026 verified earlier message-level milestones
+
+| UTC timestamp | Recovered original speaker's contribution | Evidence class |
+| --- | --- | --- |
+| 6 May 18:47–18:50 | Italian/Georgian IPA-grapheme comparison with explicit sound-based matches; no explicit conlang purpose established. | User and assistant original-message retrieval; **context only** |
+| **16 May 11:50:27** | User raises five versus six vowel design for an international synthetic language; assistant recommends five core vowels. | Dated user/assistant original-message indexed excerpts; **first explicit constructed-language design found** |
+| **22 May 22:28–22:29** | User disputes exclusion of /ə/ and confirms six verb-person vowels. | Dated user original-message indexed excerpts; design reversal |
+| 22 May 22:52–22:55 | User asks Georgian IPA mapping and whether ძ and წ are affricates; assistant confirms affricate classification. | Dated user and assistant original-message indexed excerpts |
+| **22 May 23:14:48** | User expressly removes /h/ from the proposed phoneme inventory. | Dated user original-message indexed excerpt |
+| 22 May 23:40:45 | Assistant documents candidate with `sh ts c j` for /ʃ ts tʃ dʒ/ and no h/ng; 24 May user keeps contrasts f/v and l/r rather than merges. | Original-message indexed excerpts; full intervening sequence still to be archived |
+
+For speaker-level details, provenance and caveats see [early May conversation evidence](early-may-conversation-evidence.md).
+
 ## Newly recovered conversational milestones
 
 | UTC timestamp | Recovered conversational content | Evidence class |
