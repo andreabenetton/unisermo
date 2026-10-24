@@ -47,3 +47,12 @@ def test_jer_is_general_iteration_counter_and_compounds_are_fused():
     entry = next(d for d in decisions["decisions"] if d["id"] == "iteration_counter_jer")
     assert "not restricted to genealogy" in entry["decision"]
     assert "bisjer = two times/two iterations/two steps" in entry["decision"]
+
+
+def test_kinship_parental_path_decision_is_confirmed():
+    record = json.loads((ROOT / "research" / "grammar" / "confirmed_decisions.json").read_text())
+    choices = {x["id"]: x["decision"] for x in record["decisions"]}
+    text = choices["kinship_typed_parent_paths_and_fil_offspring"]
+    for word in ("filadelgen", "genegene", "genegeno", "genogene", "genogeno"):
+        assert word in text
+    assert "rightmost link" in text
