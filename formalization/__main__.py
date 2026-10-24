@@ -1,4 +1,4 @@
-"""CLI: python3 -m formalization [build|validate|analyze|sentence|generate|noun|participle]."""
+"""Unisermo deterministic reference CLI: morphology, numbers and relation analysis."""
 import argparse
 import json
 from .core import Unisermo
