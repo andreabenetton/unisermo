@@ -54,3 +54,9 @@ for fn in ['adjectives.md','demonstratives.md','numerals.md']:
 case_text=(lang/'noun_case_system.md').read_text()
 for retired in ['`-ko` | comitative', '`-per` |', '`-pro` |', '`-due` |', '`-fin` |', '`-tem` |', '`-mod` |']:
     assert retired not in case_text, f'noun_case_system.md: retired suffix still listed as productive: {retired}'
+
+# The sibling family restored by the author replaces frat in the active specification.
+kinship = (lang / 'kinship.md').read_text()
+for word in ['`adel`', '`adelo`', '`adele`']:
+    assert word in kinship, f'missing canonical sibling term: {word}'
+assert '`frat`' in kinship and 'not a canonical synonym' in kinship
