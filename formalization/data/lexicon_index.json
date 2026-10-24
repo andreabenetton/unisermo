@@ -26,6 +26,19 @@
     },
     {
       "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonize adelgen = sibling of a parent. Composition A+B means A relative to B, keeping left and right relation roles distinct.",
+      "form": "adelgen",
+      "meaning_en": "uncle or aunt (parent's sibling, gender-neutral)",
+      "meaning_it": "zio o zia (non specificato)",
+      "origin": "2026-08-10 author proposal adel+gen; expressly ratified 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "noun"
       ],
       "decision": "Canonize adelo = male sibling/brother, derived from neutral adel plus kinship-family ending -o. Replaces retired frat. Not evidence of a universal gender rule across all nouns.",
@@ -166,6 +179,19 @@
       "form": "bis",
       "source": "language/numerals.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonize bisjergen = two successive gen (parent) relations: parent of parent. bisjer counts two relational steps. No claim that bisjergeno/bisjergene have resolved male/female endpoint scope.",
+      "form": "bisjergen",
+      "meaning_en": "grandparent (parent's parent, gender-neutral)",
+      "meaning_it": "nonno o nonna (genitore di un genitore, neutro)",
+      "origin": "2026-08-10 original genealogical NUMjer design, author reaffirmation 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -318,6 +344,42 @@
       "form": "frat",
       "source": "language/MIGRATION_HISTORY.md",
       "status": "example_only"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonize gen as neutral parent relation, base for geno (father) and gene (mother).",
+      "form": "gen",
+      "meaning_en": "parent (gender-neutral)",
+      "meaning_it": "genitore",
+      "origin": "Author-approved 2026-08-10 parent system, reaffirmed explicitly 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonize gene = mother, female parent. Sex suffix applies to the immediate parent relation in this confirmed form.",
+      "form": "gene",
+      "meaning_en": "mother",
+      "meaning_it": "madre",
+      "origin": "2026-08-10 parent family gen+e, author-approved 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonize geno = father, male parent. Sex suffix applies to the immediate parent relation in this confirmed form.",
+      "form": "geno",
+      "meaning_en": "father",
+      "meaning_it": "padre",
+      "origin": "2026-08-10 parent family gen+o, author-approved 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
