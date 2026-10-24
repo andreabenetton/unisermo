@@ -35,6 +35,8 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 
 | [10 August semantic phase, motion, causation](august-semantic-phase-motion-and-causation.md) | UTC-anchored sequence of phase prefixes, `traes` two-state versus causative frames, resultative case, `mov` valency, `pel/trak` force/manner, `alt/bas` vertical direction | **Six direct immutable Git commits** + dated, speaker-attributed conversation-index user acceptances at 14:06/14:21/14:35/14:45/14:50. Full transcript absent; at 15:41 only Git decision is independently attested. |
 
+| [10 August numerals, iteration and kinship provenance](august-numerals-iteration-and-kinship-history.md) | Original `duo/cin` and spaced numeral forms; verified 10 Aug `duo→bis` (16:24), fused `dekbis` and generic `jer` (16:35); candidate `par/fil/av/germ/sib` kinship forms from later note | Original 8 Aug Git + two direct August commits and indexed user messages; **no full transcript**, kinship candidates not ratified; explicit source-internal **CVC vs VCV/CVV** inconsistency. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
