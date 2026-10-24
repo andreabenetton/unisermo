@@ -67,6 +67,8 @@ This is the **living historical record** for a future methodological paper about
 
 | **24 Oct 2026 — restoration of overlooked sibling choice** | Author explicitly confirms `adel` was **forgotten during repository integration**, not withdrawn; directs canonical `adel` neutral sibling, `adelo` brother, `adele` sister to **replace** old `frat`. Preserves dated user acceptance on **10 Aug 16:11** while distinguishing 24 Oct corrective implementation. Frozen experimental corpora remain unchanged and are marked historical. Parent/uncle/aunt forms **not** silently canonized. | Direct author testimony in this conversation, [new live specification](../../language/kinship.md), [historical reconciliation](august-kinship-original-dialogue-versus-git.md), new PR #18 commits. **High** for author intent, no retrodated Git adoption. |
 
+| **24 Oct 2026 — approval of parent and uncle/aunt relations** | Author explicitly confirms gen/geno/gene and adelgen, building on the restored adel sibling family. Dated 10 Aug original-message records also support bisjergen as grandparent and terjergen as great-grandparent through general NUMjer relational iteration. The candidate cousin filadelgen is not approved, because fil = offspring has not been ratified. The scope of gender in bisjergeno/bisjergene remains unclear. | Direct present-day author approval, indexed original 10 Aug messages, live language/kinship.md and this PR. |
+
 ## Historical decisions requiring special preservation
 
 **Numerals:** `nul, uno, bis, ter, for, kin, ses, set, oto, nin, dek, sen, mil`; compounds such as `dekbis`, `bisdekkin`; `jer` for repetitions/steps. See `language/numerals.md`, rather than re-inventing the system.
