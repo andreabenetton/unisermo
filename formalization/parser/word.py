@@ -77,7 +77,7 @@ class WordParser:
         ordinal = self.parse_ordinal(surface)
         if ordinal is not None:
             out.append({"kind": "ordinal_numeral", "lemma": surface,
-                        "status": ordinal["status"], "value": ordinal["value"]})
+                        "status": ordinal["status"], "value": ordinal["value"], "canonical_form": ordinal["canonical_form"]})
         iteration = self.parse_iteration(surface)
         if iteration is not None:
             out.append({"kind": "iteration_counter", "lemma": surface,
