@@ -1,0 +1,775 @@
+{
+  "schema": "unisermo/semantic-order-counterbalance@1",
+  "status": "development_not_holdout_keys_unreviewed",
+  "model_requested": "qwen/qwen3-32b",
+  "documents": 20,
+  "requests": 80,
+  "comparisons": {
+    "cold": {
+      "correct_presentations": 31,
+      "total_presentations": 40,
+      "correct_both_orientations": 12,
+      "total_contrast_pairs": 20,
+      "distractor_both_orientations": 1,
+      "position_sticking_A": 6,
+      "position_sticking_B": 1,
+      "other_pairs": 0,
+      "format_errors": {},
+      "by_family": {
+        "case": {
+          "correct_presentations": 3,
+          "total_presentations": 8,
+          "both_correct_pairs": 0,
+          "total_pairs": 4
+        },
+        "relator": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        },
+        "quantity": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        },
+        "deixis_possession": {
+          "correct_presentations": 4,
+          "total_presentations": 8,
+          "both_correct_pairs": 0,
+          "total_pairs": 4
+        },
+        "transition_focus": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        }
+      },
+      "usage": {
+        "prompt_tokens": 3534,
+        "completion_tokens": 360,
+        "total_tokens": 3894,
+        "cost": 0.00038352
+      },
+      "usd_per_correct_presentation": 1.2371612903225806e-05,
+      "usd_per_both_correct_pair": 3.196e-05
+    },
+    "guided": {
+      "correct_presentations": 38,
+      "total_presentations": 40,
+      "correct_both_orientations": 18,
+      "total_contrast_pairs": 20,
+      "distractor_both_orientations": 0,
+      "position_sticking_A": 2,
+      "position_sticking_B": 0,
+      "other_pairs": 0,
+      "format_errors": {},
+      "by_family": {
+        "case": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        },
+        "relator": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        },
+        "quantity": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        },
+        "deixis_possession": {
+          "correct_presentations": 8,
+          "total_presentations": 8,
+          "both_correct_pairs": 4,
+          "total_pairs": 4
+        },
+        "transition_focus": {
+          "correct_presentations": 6,
+          "total_presentations": 8,
+          "both_correct_pairs": 2,
+          "total_pairs": 4
+        }
+      },
+      "usage": {
+        "prompt_tokens": 17134,
+        "completion_tokens": 360,
+        "total_tokens": 17494,
+        "cost": 0.00147152
+      },
+      "usd_per_correct_presentation": 3.872421052631579e-05,
+      "usd_per_both_correct_pair": 8.175111111111111e-05
+    }
+  },
+  "joint_outcome_transitions": {
+    "always_A -> target_both": 6,
+    "distractor_both -> target_both": 1,
+    "target_both -> target_both": 10,
+    "always_B -> target_both": 1,
+    "target_both -> always_A": 2
+  },
+  "pairs": [
+    {
+      "doc": "OR001",
+      "family": "case",
+      "condition": "cold",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR002",
+      "family": "case",
+      "condition": "cold",
+      "outcome": "distractor_both",
+      "target_first": {
+        "choice": "B",
+        "error": null,
+        "correct": false
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR003",
+      "family": "case",
+      "condition": "cold",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR004",
+      "family": "case",
+      "condition": "cold",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR005",
+      "family": "relator",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR006",
+      "family": "relator",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR007",
+      "family": "relator",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR008",
+      "family": "relator",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR009",
+      "family": "quantity",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR010",
+      "family": "quantity",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR011",
+      "family": "quantity",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR012",
+      "family": "quantity",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR013",
+      "family": "deixis_possession",
+      "condition": "cold",
+      "outcome": "always_B",
+      "target_first": {
+        "choice": "B",
+        "error": null,
+        "correct": false
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR014",
+      "family": "deixis_possession",
+      "condition": "cold",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR015",
+      "family": "deixis_possession",
+      "condition": "cold",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR016",
+      "family": "deixis_possession",
+      "condition": "cold",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR017",
+      "family": "transition_focus",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR018",
+      "family": "transition_focus",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR019",
+      "family": "transition_focus",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR020",
+      "family": "transition_focus",
+      "condition": "cold",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR001",
+      "family": "case",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR002",
+      "family": "case",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR003",
+      "family": "case",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR004",
+      "family": "case",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR005",
+      "family": "relator",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR006",
+      "family": "relator",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR007",
+      "family": "relator",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR008",
+      "family": "relator",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR009",
+      "family": "quantity",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR010",
+      "family": "quantity",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR011",
+      "family": "quantity",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR012",
+      "family": "quantity",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR013",
+      "family": "deixis_possession",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR014",
+      "family": "deixis_possession",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR015",
+      "family": "deixis_possession",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR016",
+      "family": "deixis_possession",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR017",
+      "family": "transition_focus",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR018",
+      "family": "transition_focus",
+      "condition": "guided",
+      "outcome": "target_both",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "B",
+        "error": null,
+        "correct": true
+      }
+    },
+    {
+      "doc": "OR019",
+      "family": "transition_focus",
+      "condition": "guided",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    },
+    {
+      "doc": "OR020",
+      "family": "transition_focus",
+      "condition": "guided",
+      "outcome": "always_A",
+      "target_first": {
+        "choice": "A",
+        "error": null,
+        "correct": true
+      },
+      "target_second": {
+        "choice": "A",
+        "error": null,
+        "correct": false
+      }
+    }
+  ],
+  "limitations": "Original pairs newly combined but vocabulary/examples seen elsewhere; forced-choice English queries, key meanings researcher-assigned; orientation pairing may share stochastic and template effects. Descriptive only; no independent human validation.",
+  "observed_cost_usd": 0.0018550399999999992,
+  "corpus_sha256": "c7218177da3b8179078af3d9aec672b29b41bec594fad47b1e4d695afe85f928",
+  "raw_sha256": "a761032d2478feca319d46fb263714bfb4a1e68d92c197b9e99a5fd4b2f86717",
+  "controls": {
+    "model": "qwen/qwen3-32b",
+    "temperature": 0.7,
+    "seed": 23,
+    "reasoning_disabled": true,
+    "no_think_suffix": true,
+    "provider_fallbacks": false,
+    "max_output_tokens_per_request": 130,
+    "max_requests": 80,
+    "cumulative_observed_cost_stop_usd": 0.03
+  }
+}
