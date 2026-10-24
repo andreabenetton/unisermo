@@ -72,7 +72,7 @@ def build_corpus() -> str:
                          "analysis": {"kind": "finite_verb", "lemma": lemma, "tense": tense, "aspect": aspect,
                                       "person": person, "number": number},
                          "lexical_status": language.lexicon[lemma]["status"], "source": "generated-from-morphology@1"})
-    for lemma in ["dom", "uman", "akwa", "frat", "spets", "solid"]:
+    for lemma in ["dom", "uman", "akwa", "adelo", "spets", "solid"]:
         for case in language.morph["nominal"]["case"]:
             rows.append({"surface": language.generate_noun(lemma, case),
                          "analysis": {"kind": "nominal_case", "lemma": lemma, "case": case},
