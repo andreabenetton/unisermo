@@ -11,7 +11,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   experiment:
-    if: github.event.head_commit.message == 'ci: execute prospective schema repeatability once'
+    if: >-
+      github.event.head_commit.message == 'ci: execute prospective schema repeatability once'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
