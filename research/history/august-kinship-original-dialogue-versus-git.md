@@ -12,6 +12,16 @@ The author explicitly confirms that **`adel` was forgotten in Git**, rather than
 
 **Implementation status after this 24 October correction:** this PR updates live [`language/kinship.md`](../../language/kinship.md), `confirmed_lexicon.json`, confirmed decisions, the formalization source data, generated indexes, tests and migration history. `frat` remains a **historical 10 August choice only**, plus an `example_only` parser attestation to keep old research corpora reproducible. Parent `gen` and `adelgen` are not automatically promoted by this sibling-only correction. See the dated 10 August evidence below, which describes the historical **pre-correction Git state**.
 
+## Parent approval and generational examples — author's confirmation on 24 October 2026
+
+Following the direct sibling restoration, the author additionally declares: **`gen/geno/gene` and `adelgen` approved**. This confirms the neutral parent, father, mother and parent's sibling relations, independently of the earlier 10 August conversation-index excerpts. The updated canonical grammar includes `gen`, `geno`, `gene`, `adelgen` and `bisjergen`.
+
+Original dated 10 August conversation-index messages around 16:12–16:32 also identify **`bisjergen` = grandparent (two successive parent links)**, **`terjergen` = great-grandparent (three links)** and `adelbisjergen` = a grandparent's sibling, using the already confirmed `NUMjer` step operator. Exact original wording and all intermediate alternatives still require a complete transcript.
+
+**Not ratified here:** `fil` as inverse offspring relation or `filadelgen` as cousin. `bisjergeno` and `bisjergene` are not unambiguously grandfather/grandmother without deciding whether gender modifies the final relative or all intermediate steps. See [current kinship specification](../../language/kinship.md).
+
+Historical pre-approval observations below are retained as evidence for the former state, **not current normative status**.
+
 ## Main finding: a conversation-level confirmation absent from the confirmed Git lexicon
 
 | Timestamp (UTC) | Evidence | What can be established |
@@ -51,7 +61,7 @@ The two embody a tension between **root recognizability** and **productive neutr
 
 1. **Resolved by author testimony on 24 October:** `adel` was omitted inadvertently and **must replace** `frat`; the Git change is being implemented in this PR. The original full August chat remains unexported.
 2. What precisely was `gen` intended to cover, and why was `par` judged equivocal for the particular sibling candidate? The 16:09 index provides only a partial context.
-3. Were `adelgen`, `adelgeno`, `adelgene` explicitly approved by the **user** or only interpreted/proposed by the assistant? Separate the 16:12 user proposal from assistant follow-ups.
+3. Neutral `adelgen` was expressly approved on 24 October; sex/gender scope of longer `adelgeno`/`adelgene` remains unresolved. The original 10 August transcript is still to be exported.
 4. Was a full `A+B` genealogical direction/semantic semantics formally defined and consistency-tested for kinship trees? No complete proof or human evaluation found.
 5. How did the 23 October `par/fil/av/germ/sib` preservation note come to emphasize different roots from the **16:09–16:12 original conversation**? The note was compiled retrospectively and may be incomplete; the chronology must not be normalized by fiat.
 
