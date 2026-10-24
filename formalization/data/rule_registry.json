@@ -31,8 +31,8 @@
       "status": "confirmed"
     },
     {
-      "id": "grammar.concessive_etsi_20261024",
       "content_sha256": "1e85e53a3258d7ec696adac79080349fc3e47094e3bc0f31f4aa116fb31bcca9",
+      "id": "grammar.concessive_etsi_20261024",
       "source": "research/grammar/confirmed_decisions.json#decisions/concessive_etsi_20261024",
       "status": "confirmed"
     },
@@ -46,6 +46,12 @@
       "content_sha256": "90332e2e804bcce83cf7d65e6a5c1630e31e2650783456e5a80bb3a5554bdc3f",
       "id": "grammar.connectives_alor_ma_ergo_20261024",
       "source": "research/grammar/confirmed_decisions.json#decisions/connectives_alor_ma_ergo_20261024",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "a18dd8a8fdce6955d01e59266ac6cc4fbd82b820dd373747932034d7bc3be9bb",
+      "id": "grammar.coordination_e_o_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/coordination_e_o_20261024",
       "status": "confirmed"
     },
     {
@@ -79,10 +85,10 @@
       "status": "confirmed"
     },
     {
-      "id": "grammar.exception_ecce_eccese_20261024",
-      "status": "confirmed",
-      "source": "research/grammar/confirmed_decisions.json#decisions/exception_ecce_eccese_20261024",
-      "content_sha256": "f4042ee9e789fd5bffe7b6c0dcde04f83ef4624d97ad3dca6c2f7a7208f2cb48"
+      "content_sha256": "ee0349625898018b40e766fee45bde5857c69ccec84a3167536fba7a83832ff5",
+      "id": "grammar.exception_ekse_eksese_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/exception_ekse_eksese_20261024",
+      "status": "confirmed"
     },
     {
       "content_sha256": "88c13e466b8ec4a89c005e022d3fc261c0b4948b7a2ec209a14b304716a2d511",
