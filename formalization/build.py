@@ -41,13 +41,14 @@ def build_indexes() -> dict[str, str]:
                           "origin": record.get("source", ""), "decision": record.get("decision", "")}
     for record in attested:
         lemma = record["form"]
-        if lemma in entries:
-            raise ValueError(f"attested duplicate of confirmed core: {lemma}")
         if not (ROOT / record["source"]).is_file():
             raise ValueError(f"attestation document is absent: {record['source']}")
         text = (ROOT / record["source"]).read_text(encoding="utf-8")
         if lemma not in text:
             raise ValueError(f"missing textual attestation of {lemma} in {record['source']}")
+        if lemma in entries:
+            # Preserve attestation in source registry; current confirmed lexeme wins.
+            continue
         entries[lemma] = {"form": lemma, "status": record["status"], "source": record["source"],
                           "categories": [record["category"]]}
     accepted_alphabet = set(read("formalization/data/morphology.json")["alphabet"])
