@@ -48,3 +48,9 @@ The August nasal study cites [WALS Maddieson chapter 12](https://wals.info/chapt
 ## Outstanding sources
 
 The complete May 24 and May 22 conversations have not been exported. Recover the dialogue rather than presenting the index-level summaries as verbatim quotations; preserve alternatives and discarded forms in the final paper.
+
+## 9 August: independent change in nominal plurality
+
+The [original 8 August `language` snapshot](https://github.com/andreabenetton/language/blob/bacc1a7a9aaaa18596120c6ea2812c927b33b0e3/noun_number_system.md) used optional suffix `-en` on nouns, with person/number already represented by six verb endings. The verified [`e319299` commit](https://github.com/andreabenetton/unisermo/commit/e31929945d4fce0f628ac96a4dc6c2c260bbe63e), **9 August 2026 at 19:35:58 UTC**, instead records a new and explicit **number-neutral bare noun** and an **optional preposed invariant `wi`** for the cases in which plural needs to be asserted. Numerals and quantifiers make `wi` redundant and it is normally omitted. The same commit distinguishes `omni` (all/every set members) from `tot` (whole/entire one referent) and reserves `mi` without assigning it a grammatical role.
+
+This is a documented **architectural switch from bound nominal inflection to optional analytic expression**, and it predates the 10 August canonical live-spec migration. It reflects an information-minimization design policy explicitly written into the 9 August research artifact; **no historical randomized comprehension study or direct `-en` versus `wi` performance benchmark was found in this evidence**. Earlier proposals for `mi` or alternative plural morphemes should not be inferred from the fact that `mi` was reserved. The 10 August [`04dad80`](https://github.com/andreabenetton/unisermo/commit/04dad808c53f3f3d0beebcb2461811896dd09491) is the integration event, not the first recorded confirmation of this noun-number choice.
