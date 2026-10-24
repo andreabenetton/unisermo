@@ -91,6 +91,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "bfeb0e9803c72279a1422608c43a36f9bec4543b9c656c9efb70643adefb763b",
+      "id": "grammar.fraction_cardinal_ordinal_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/fraction_cardinal_ordinal_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "9ee18bf839f93269b2de643680f5731d5576953e579bd225360d29cd3ba691b8",
       "id": "grammar.genitive_allomorph_s_es",
       "source": "research/grammar/confirmed_decisions.json#decisions/genitive_allomorph_s_es",
