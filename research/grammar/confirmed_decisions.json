@@ -160,8 +160,8 @@
       "decision": "Canonize alt = high/upper/up and bas = low/lower/down as the vertical spatial axis. Directional motion may be expressed analytically as mov altad = move/go upward and mov basad = move/go downward, using canonical allative -ad. Canonize transparent compounds altmov = ascend/go up and basmov = descend/go down. altmov/basmov encode vertical direction, not phase: admov remains begin moving and demov remains cease moving. The ordinary mov-family intransitive/transitive valency alternation remains available for these compounds where semantically appropriate."
     },
     {
-      "id": "lexical_aer_plan_aerplan_frat",
-      "decision": "Canonize aer = air, plan = plane/flat/level, aerplan = airplane/aeroplane as the transparent compound aer+plan, and frat = brother. aerplan is preferred over aeroplan. Instrumental travel uses the existing free relator per + NP, e.g. per aerplan = by airplane."
+      "id": "lexical_aer_plan_aerplan",
+      "decision": "Canonize aer = air, plan = plane/flat/level, aerplan = airplane/aeroplane as the transparent compound aer+plan. aerplan is preferred over aeroplan. Instrumental travel uses the existing free relator per + NP, e.g. per aerplan = by airplane."
     },
     {
       "id": "numeral_two_bis",
@@ -170,6 +170,10 @@
     {
       "id": "iteration_counter_jer",
       "decision": "Canonize jer as the general grammatical counter for an occurrence, iteration, or step in a repeatable relation or process. It is not an ordinal marker and is not restricted to genealogy. A cardinal numeral precedes jer and fuses with it as one orthographic word: bisjer = two times/two iterations/two steps, terjer = three times/three iterations/three steps, forjer = four times/four iterations/four steps. NUMjer may enter larger transparent compounds and remains fused there; when applied to an iterable relation it counts applications/relational steps. Genealogical distance is one application of this general rule, not the lexical meaning of jer."
+    },
+    {
+      "id": "kinship_adel_family_replaces_frat",
+      "decision": "Restore the user-confirmed 10 August 2026 sibling family, omitted from Git in 2026: adel = gender-neutral sibling (brother/sister), adelo = brother (male sibling), adele = sister (female sibling). Retire frat as a current lexical item; preserve it solely in historical artifacts and archived benchmark corpora. The -o/-e distinction here is approved for the adel sibling family; do not infer universal kinship or noun-gender derivation. This restoration is explicitly directed by the author on 24 October 2026. Other suggested kinship forms such as adelgen and gen remain separate historical candidates pending formal approval."
     }
   ]
 }
