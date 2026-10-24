@@ -211,7 +211,7 @@
       "status": "confirmed"
     },
     {
-      "content_sha256": "dd94da1364cf2d781bbeed9dcbe195fce8ed06f497b3532acd654e5576116120",
+      "content_sha256": "3db4f881ebb38792f1effd0abd60629c592163a3ba8448572d8d65dee6012dd3",
       "id": "grammar.ordinal_im_positive_contraction_20261024",
       "source": "research/grammar/confirmed_decisions.json#decisions/ordinal_im_positive_contraction_20261024",
       "status": "confirmed"
