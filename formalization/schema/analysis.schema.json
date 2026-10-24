@@ -93,6 +93,9 @@
           },
           "source": {
             "type": "string"
+          },
+          "canonical_form": {
+            "type": "string"
           }
         },
         "additionalProperties": false
