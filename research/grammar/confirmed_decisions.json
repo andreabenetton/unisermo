@@ -186,6 +186,10 @@
     {
       "id": "numeral_mila_mega_giga_20261024",
       "decision": "Ratify mila = 1000, mega = 1000000, giga = 1000000000 and retire mil from canonical numerals (preserved only as historical attestation). Compose all cardinal integers 0..999999999999 as descending nonzero 1..999 coefficients followed by giga, mega, mila, then bare units. Omit zero groups and coefficient uno before powers. NUMjer uses the same complete canonical integer grammar for positive iteration counts; genealogical expansion retains a separate 128-step safety limit. Author approval dated 2026-10-24. Fractions, signed numbers, ordinals and powers beyond giga remain undecided."
+    },
+    {
+      "id": "coordination_e_o_20261024",
+      "decision": "The author explicitly ratifies free standalone e as additive conjunction AND, and free standalone o as disjunctive conjunction OR. The words are separate tokens and do not replace or alter bound verbal aspect markers -e (progressive) or -o (perfect/completive). This decision establishes the lexical meanings only; detailed coordination scope, precedence, comma conventions, and whether OR is inclusive/exclusive have not yet been independently specified. Author ratification dated 2026-10-24."
     }
   ]
 }

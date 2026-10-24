@@ -562,6 +562,22 @@
       "meaning_en": "lexical antonym / semantic opposite of a quality, not simple negation",
       "source": "Author ratification 2026-10-24",
       "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel."
+    },
+    {
+      "form": "e",
+      "category": "function_word",
+      "meaning_it": "e; congiunzione coordinante additiva",
+      "meaning_en": "and; additive coordination",
+      "source": "Explicit author ratification 2026-10-24",
+      "decision": "e as a free-standing conjunction AND; distinct from bound progressive aspect -e."
+    },
+    {
+      "form": "o",
+      "category": "function_word",
+      "meaning_it": "o; congiunzione coordinante disgiuntiva",
+      "meaning_en": "or; disjunctive coordination",
+      "source": "Explicit author ratification 2026-10-24",
+      "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified."
     }
   ]
 }

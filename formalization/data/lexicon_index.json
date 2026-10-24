@@ -297,6 +297,18 @@
       "categories": [
         "function_word"
       ],
+      "decision": "e as a free-standing conjunction AND; distinct from bound progressive aspect -e.",
+      "form": "e",
+      "meaning_en": "and; additive coordination",
+      "meaning_it": "e; congiunzione coordinante additiva",
+      "origin": "Explicit author ratification 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
       "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/.",
       "form": "ekwal",
       "meaning_en": "equal; equally; as ... as",
@@ -729,6 +741,18 @@
       "form": "nul",
       "source": "language/noun_number_system.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified.",
+      "form": "o",
+      "meaning_en": "or; disjunctive coordination",
+      "meaning_it": "o; congiunzione coordinante disgiuntiva",
+      "origin": "Explicit author ratification 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
