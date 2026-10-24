@@ -1,0 +1,54 @@
+# Numerals, fused compounds, iterative relations and kinship proposals (8–10 August 2026)
+
+**Retrospective reconstruction: 24 October 2026.** Primary sources are the dated [original `language` numeral specification](https://github.com/andreabenetton/language/blob/bacc1a7a9aaaa18596120c6ea2812c927b33b0e3/numerals.md), independently verifiable Unisermo Git commits, indexed original user messages, and a **later 23 October 2026 preservation note** about prior kinship designs. Do **not** mistake the latter retrospective note for a signed original August decision about every relationship root.
+
+## Documented alternatives and adoption
+
+| UTC date | Primary evidence | Observed state or action |
+| --- | --- | --- |
+| **8 Aug 18:31** | [Original `language` commit `bacc1a7`](https://github.com/andreabenetton/language/commit/bacc1a7a9aaaa18596120c6ea2812c927b33b0e3), `numerals.md` | `duo` = TWO; `cin` = FIVE, other three-letter numerals, powers `dek/sen/mil`. Multiplicative big-endian composition and **space-separated orthographic sequences** in examples: `dek duo` (12), `duo dek` (20), `ter sen duo dek uno` (321). After numerals, the then-current noun suffix `-en` was optional. |
+| **9 Aug and 10 Aug morning** | [`d5d9ed7`](https://github.com/andreabenetton/unisermo/commit/d5d9ed7c650e0c5ace90abf6487d15ec67e033a2), prior phonology and nominal-number changes | `cin→kin` follows removal of letter `c`; bare noun becomes number-neutral, with redundant `wi` normally omitted with numerals. |
+| **10 Aug ~15:55 UTC** | Indexed original **user** message | Raises/reviews changing numeral TWO `duo→bis`, including a question about the preference. The indexed snippet **does not give a reliable, exhaustive comparative justification**; do not infer that `bis` is demonstrably shorter or more universal. |
+| **10 Aug ~16:10 UTC** | Indexed original **user** message | Requests single-word concatenation `dekbis`, `bisdek` without spaces. The message time is recovered at approximate minute resolution. |
+| **10 Aug 16:24:59** | [`4d19263`](https://github.com/andreabenetton/unisermo/commit/4d19263da58802bd184774b3d1463714c50979dc), *Canonize bis as numeral two* | **Canonical TWO `bis`**, replacing `duo` in numeral and grammar examples. The earlier `duo` is preserved in historical docs. |
+| **10 Aug ~16:30 UTC** | Indexed original **user** message | Adopts `jer` for **generic repetition, iteration or relational steps**, not merely a dedicated genealogical generation marker; example patterns include `bisjer` and a longer genealogical example of the structural type `adelbisjer...`. Do not canonize the incomplete family-specific composite on this evidence. |
+| **10 Aug 16:35:31** | [`b3c473e`](https://github.com/andreabenetton/unisermo/commit/b3c473e6f86cb58734e208491a7e2ed6306623c6), *Canonize jer iteration counter* | Explicitly changes multi-component numerals into **single orthographic words** (`dekbis`, `bisdek`, `tersenbisdekuno`). Confirms `NUMjer` = numerical iteration/step and use inside larger transparent compounds. Genealogy is one application; `jer` is **not an ordinal marker**. |
+
+The timed user messages and the Git commits are separate evidence classes. In particular, the `dekbis/bisdek` preference was documented as a user request **before** its formal 16:35 Git migration, which is not necessarily its time of first conception.
+
+## Comparisons important to the foundational efficiency objective
+
+1. **Information encoding versus spelling:** The 8 August numeral system was already **morphologically compositional**, but its components were separated by spaces. The 10 August single-word rule changes **orthographic token boundaries**, not the component sequence or necessarily the spoken duration of `dek+bis`. No measured speaking speed follows from this change.
+2. **Root size versus recognizability:** Both `duo` and `bis` contain **three written letters**. The Git object certifies the replacement, but the historical index currently offers no securely recovered numerical experiment proving a speech-rate or cross-language recognition advantage. The exact *why* is still an archival question.
+3. **Deduplication of grammatical categories:** `jer` was chosen as a **general iterative operator** rather than creating a distinct counting vocabulary only for genealogy. This is a productive morphosyntactic design hypothesis; the 10 August documents do not validate that all genealogical relations are semantically transparent to human speakers.
+4. **Redundancy:** `wi` and obsolete `-en` should not be retroactively fused into the same noun-number system. `duo dom` in the original is not equivalent *as a morphological structure* to current `bis dom` even when translations converge.
+
+### Source-internal problem: “all base forms are CVC” is demonstrably false
+
+The **original** `numerals.md` claims that all 13 numeral bases are exactly three-letter **CVC** forms. In the same table, `uno` and `oto` are **V-C-V**, while `duo` is **C-V-V**. The **current** numerals file still says that all thirteen are CVC even though `uno` and `oto` remain V-C-V. Thus:
+
+- **Accurate:** the listed 13 bases have **three written letters**.
+- **Inaccurate as stated in the source:** they are uniformly **CVC phonotactic forms**.
+- The original asserts both and contradicts itself; this must be documented as a historical **specification drafting error**. It is **not** evidence of an actual three-segment CVC phonology for the entire numeral system. This history-only investigation does **not** edit the normative file.
+
+A second descriptive tension: the original heading states *thirteen base numerals* but the list consists of **ten digits (0–9) plus three powers (10, 100, 1000)**. That use of “base” is a category label, not evidence of a base-13 numbering system. Compound structure remains decimal.
+
+## Kinship: distinguish preserved earlier alternatives from accepted lexicon
+
+The [23 October retrospective preservation note](https://github.com/andreabenetton/unisermo/blob/main/research/lexicon/kinship-and-numerals-preservation.md) records earlier discussed relational stems such as `par/paro/pare` (parent/father/mother), `fil/filo/file` (offspring/son/daughter), `av/avo/ave` (grandparent/grandfather/grandmother), and **`germ` versus `sib`** for a neutral sibling stem. In that note, **these are historical candidate analyses**, explicitly **not independently ratified canonical lexemes**. The confirmed lexicon separately contains `frat` = brother. Earlier expansion suggestions `mater/pater/infan` were withdrawn without thereby canonizing `pare/paro/fil`.
+
+**What is verifiable now:** 10 August `jer` is a canonical *general-purpose iteration operator*; 23 October preserved previously considered gendered kinship patterns as research **proposals**, not final entries.
+
+**What is not currently proven:** exact dates and complete original user/assistant discussions for each kinship candidate, acceptance of every compound such as `adelbisjerROOT`, or measured human ability to interpret multi-generation relational strings. Such an expression must be checked against canonical existing roots and actual attested genealogy semantics before adoption.
+
+## Historical evidence grading and open tasks
+
+| Type | Strongest evidence | Limit |
+| --- | --- | --- |
+| Original numeral/compound specification | Immutable 8 August Markdown | Descriptive **CVC** claim contradicted by own table |
+| Revised number-two and `jer` rules | Immutable [16:24](https://github.com/andreabenetton/unisermo/commit/4d19263da58802bd184774b3d1463714c50979dc) and [16:35](https://github.com/andreabenetton/unisermo/commit/b3c473e6f86cb58734e208491a7e2ed6306623c6) Git | Adoption timing, not direct human comprehension verification |
+| Historical user preference | Dated original-message indexed excerpts at **about** 15:55, 16:10, 16:30 UTC | Approximate index times, not exported unabridged transcript |
+| Kinship options | 23 October preservation note quoting earlier discussions | Retrospective; no independently retrieved 10 August verbatim thread for individual candidates |
+| User's founding goal | 24 October 2026 direct author testimony | Supports conceptual lineage, not achieving human speech efficiency |
+
+Next: recover full 10 August 15:55–16:35 message sequence and first genuine kinship design discussion. Track accepted and withdrawn forms in **separate** columns to prevent candidate proposals being merged into canonical lexical inventory.
