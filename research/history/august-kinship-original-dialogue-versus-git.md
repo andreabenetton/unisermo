@@ -2,6 +2,16 @@
 
 **Retrospective research audit: 24 October 2026.** This file distinguishes (a) original **speaker-attributed, dated conversation-index excerpts**, (b) immutable **contemporaneous Git artifacts**, and (c) a **23 October retrospective preservation note**. The whole original 10 August conversation has **not** been exported, so the dated excerpts below are **summaries**, not certified verbatim transcriptions.
 
+## Resolution from the author (24 October 2026): **an omitted implementation, not a rejected choice**
+
+**New firsthand testimony in the active ChatGPT conversation:** the author states (verbatim, preserving the original Italian):
+
+> "adel e' semplicemente stata dimenticata ma va sicuramente recuperata come scelta e ssotituire frat"
+
+The author explicitly confirms that **`adel` was forgotten in Git**, rather than abandoned, and directs its restoration **replacing `frat`**, not treating both as synonyms. Combined with the independently dated **10 August 16:11:23 UTC** user acceptance of `adel/adelo/adele`, this resolves the former *cause-of-divergence* question at the level of **retrospective author testimony**. It does **not** retroactively prove that Git had integrated these words on 10 August.
+
+**Implementation status after this 24 October correction:** this PR updates live [`language/kinship.md`](../../language/kinship.md), `confirmed_lexicon.json`, confirmed decisions, the formalization source data, generated indexes, tests and migration history. `frat` remains a **historical 10 August choice only**, plus an `example_only` parser attestation to keep old research corpora reproducible. Parent `gen` and `adelgen` are not automatically promoted by this sibling-only correction. See the dated 10 August evidence below, which describes the historical **pre-correction Git state**.
+
 ## Main finding: a conversation-level confirmation absent from the confirmed Git lexicon
 
 | Timestamp (UTC) | Evidence | What can be established |
@@ -23,7 +33,7 @@
 - **Git-canonized generic morphology:** `NUMjer` *was* committed. It may be illustrated with kinship compounds in normative numerals without ratifying their base roots.
 - **23 October historical preservation note:** names **different historical candidates**. It cannot override either the user-confirmed **10 August dialogue** or the earlier canonical `frat` Git entry. Conversely, the retrieved 10 August dialogue does not automatically supersede the versioned lexicon or establish a subsequent accepted resolution.
 
-**Potentially unresolved historical conflict:** The user accepted neutral sibling `adel` about **15 minutes after** `frat` = brother was committed, yet no corresponding revision appears in the present confirmed-lexicon file. This may be a **conversation-to-repository integration gap**, or a choice later overridden/not formalized. **There is insufficient evidence to select one explanation.** In particular, the later preservation note's mention of `germ/sib` as sibling alternatives is compatible with brainstorming before `adel` but not a complete account of the August user decision.
+**Potentially unresolved historical conflict:** The user accepted neutral sibling `adel` about **15 minutes after** `frat` = brother was committed, yet no corresponding revision appears in the present confirmed-lexicon file. **Later resolved by the author on 24 October 2026 as a forgotten integration**, not a subsequent intentional rejection. That statement is retrospective testimony and separately documented above. In particular, the later preservation note's mention of `germ/sib` as sibling alternatives is compatible with brainstorming before `adel` but not a complete account of the August user decision.
 
 ## Why this matters for Unisermo's founding objective
 
@@ -39,7 +49,7 @@ The two embody a tension between **root recognizability** and **productive neutr
 
 ## Open questions requiring original transcript or later formal acceptance
 
-1. Did the user subsequently **withdraw** `frat`, retain it as a synonym, or expect `adel` to replace it in the canonical lexicon? **Unknown.**
+1. **Resolved by author testimony on 24 October:** `adel` was omitted inadvertently and **must replace** `frat`; the Git change is being implemented in this PR. The original full August chat remains unexported.
 2. What precisely was `gen` intended to cover, and why was `par` judged equivocal for the particular sibling candidate? The 16:09 index provides only a partial context.
 3. Were `adelgen`, `adelgeno`, `adelgene` explicitly approved by the **user** or only interpreted/proposed by the assistant? Separate the 16:12 user proposal from assistant follow-ups.
 4. Was a full `A+B` genealogical direction/semantic semantics formally defined and consistency-tested for kinship trees? No complete proof or human evaluation found.
