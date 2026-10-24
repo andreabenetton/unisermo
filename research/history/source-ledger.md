@@ -33,6 +33,8 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 | [10 August TAM phonotactics decision case](august-tam-phonotactics-decision-history.md) | Three original TAM systems A/B/C, 25+74 root simulations, 5,346 generated forms, original indexed author confirmation at 07:17 and canonical 07:26 commit | Immutable comparative code/report/results; **not** human pronunciation tests. User acceptance indexed with timestamp; complete conversation missing. |
 | [9–10 August lexical collisions and derivation](august-lexical-collision-decision-history.md) | Three lexical/function collisions, root-by-root Latin adaptation, `-it/-itat`, `-er/-or/-il`, `doc→dots→dok` and `duo→bis` historic states | Direct Git content and dated original user-message summaries 20:45/20:51/21:03 on Aug 9. Not a controlled recognition study. |
 
+| [10 August semantic phase, motion, causation](august-semantic-phase-motion-and-causation.md) | UTC-anchored sequence of phase prefixes, `traes` two-state versus causative frames, resultative case, `mov` valency, `pel/trak` force/manner, `alt/bas` vertical direction | **Six direct immutable Git commits** + dated, speaker-attributed conversation-index user acceptances at 14:06/14:21/14:35/14:45/14:50. Full transcript absent; at 15:41 only Git decision is independently attested. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
