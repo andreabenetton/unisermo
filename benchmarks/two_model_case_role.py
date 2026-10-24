@@ -187,36 +187,62 @@ def compare(rows, corpus=None):
     }
 
 
-def run(output,key):
+def run(output,key,resume=False):
     if not key:
         raise ValueError("OPENROUTER_API_KEY missing")
-    if output.exists() or output.with_suffix(".score.json").exists():
-        raise ValueError("refuse overwrite evidence")
+    if output.with_suffix(".score.json").exists():
+        raise ValueError("refuse overwriting an already scored experiment")
     questions=plan()
     output.parent.mkdir(parents=True,exist_ok=True)
-    rows,spent=[],0.0
-    with output.open("x",encoding="utf8") as f:
-        for q in questions:
-            for attempt in range(3):
+    rows=[]
+    if resume:
+        if not output.exists():
+            raise ValueError("resume requires an existing original response file")
+        rows=[json.loads(line) for line in output.read_text(encoding="utf8").splitlines()
+              if line.strip()]
+        if not 0 < len(rows) < MAX_REQUESTS:
+            raise ValueError("resume expects a proper nonempty response prefix")
+        for i,row in enumerate(rows):
+            q=questions[i]
+            if row.get("call_order")!=i+1 or any(row.get(k)!=q[k] for k in
+                ("id","doc","condition","model_label","requested_model","prompt_sha256")):
+                raise ValueError("prior requests do not match exactly; refuse resume")
+            if row.get("provider")!=PROVIDER or row.get("returned_model")!=q["requested_model"] or row.get("finish_reason")!="stop":
+                raise ValueError("prior model/provider/stop status mismatch")
+    elif output.exists():
+        raise ValueError("refuse overwrite existing raw evidence")
+    spent=0.0
+    for row in rows:
+        cost=(row.get("usage") or {}).get("cost")
+        if type(cost) not in (int,float) or not 0<=cost<MAX_OBSERVED_SPEND_USD:
+            raise ValueError("invalid past provider cost")
+        spent+=cost
+    if spent>=MAX_OBSERVED_SPEND_USD:
+        raise ValueError("observed-spend cap already reached")
+    with output.open("a" if resume else "x",encoding="utf8") as f:
+        for q in questions[len(rows):]:
+            for attempt in range(6):
                 try:
                     r=invoke_same_prompt(key,q)
                     break
                 except RetryableRateLimit:
-                    if attempt==2:
+                    if attempt==5:
                         raise
-                    time.sleep((10,30)[attempt])
+                    delay=(60,90,120,180,240)[attempt]
+                    print(f"rate limited, waiting {delay}s",flush=True)
+                    time.sleep(delay)
             r["call_order"]=len(rows)+1
             rows.append(r)
             f.write(json.dumps(r,ensure_ascii=False)+"\n")
             f.flush()
             cost=(r["usage"] or {}).get("cost")
-            if type(cost) not in (int,float) or not 0 <= cost <= MAX_OBSERVED_SPEND_USD:
-                raise RuntimeError("unknown or invalid provider cost: stop calling")
+            if type(cost) not in (int,float) or not 0<=cost<=MAX_OBSERVED_SPEND_USD:
+                raise RuntimeError("missing or invalid provider cost; stop")
             spent+=cost
             print(f"{len(rows)}/{MAX_REQUESTS} calls; observed USD {spent:.8f}",flush=True)
-            if spent >= MAX_OBSERVED_SPEND_USD:
-                raise RuntimeError("observed-spend limit reached")
-            time.sleep(0.5)
+            if spent>=MAX_OBSERVED_SPEND_USD:
+                raise RuntimeError("observed-spend cap reached; stop")
+            time.sleep(3.0)
     score=compare(rows)
     score["observed_usd"]=spent
     score["response_sha256"]=hashlib.sha256(output.read_bytes()).hexdigest()
@@ -238,5 +264,6 @@ def run(output,key):
 if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--resume",action="store_true")
     args=p.parse_args()
-    run(args.output,os.environ.get("OPENROUTER_API_KEY",""))
+    run(args.output,os.environ.get("OPENROUTER_API_KEY",""),resume=args.resume)
