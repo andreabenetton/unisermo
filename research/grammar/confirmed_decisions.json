@@ -197,7 +197,7 @@
     },
     {
       "id": "percentages_as_senim_20261024",
-      "decision": "Ratify percentages solely as the already confirmed CARDINAL ORDINAL fraction with denominator senim (=100). Thus kin senim is exactly 5%, nul senim is 0%, and sen senim is 100%. No new percent root, suffix, particle, or special parser production is introduced; use the fraction parser preserving numerator and denominator. Noninteger percent numerators await independent decimal grammar approval. Author approval dated 2026-10-24."
+      "decision": "Ratify percentages solely as the already confirmed CARDINAL ORDINAL fraction with denominator senim (=100). Thus kin senim is exactly 5%, nul senim is 0%, and sen senim is 100%. No new percent root, suffix, particle, or special parser production is introduced; use the fraction parser preserving numerator and denominator. Noninteger percentages can already be represented as ordinary fractions (2.5% = 25/1000); a decimal spelling remains a separate decision. Author approval dated 2026-10-24."
     }
   ]
 }
