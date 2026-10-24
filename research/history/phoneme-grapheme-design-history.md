@@ -1,6 +1,12 @@
 # Phoneme and grapheme design: recoverable historical stages
 
-**Status (24 Oct 2026):** the complete pre-May conversation could NOT be located in the available conversation search. This record is a documentary reconstruction from an immutable imported specification plus dated Git commits. Do **not** describe it as a recovered conversation transcript or claim the choices were first made on the import date.
+**Updated status (24 Oct 2026):** Message-level excerpts from **22 May 2026** document early linguistic design debates, and the **27 July 2026 ChatGPT conversation** for the first IPA atlas has been located. The complete transcripts are still not archived, and the original historical phonology specification is separately preserved in Git. Do not treat dated commit imports as dates of the first conversations.
+
+## Earlier conversations and empirical atlas work (May–July 2026)
+
+- **22 May 2026:** recovered conversation excerpts show the user requesting IPA mappings for Georgian, discussing sound selections across languages and considering /h/ (removed), /ŋ/ (temporarily admitted as `ng`, later removed), glides `w/y`, plus spelling decisions `c=/tʃ/`, `sh=/ʃ/`, `ts=/ts/`, and `j=/dʒ/`. This is an evolving discussion, **not** a final inventory snapshot.
+- **27 July 2026 05:11–16:24 UTC:** original ChatGPT IPA atlas conversation covered counts per symbol, population weighting, source and orthography evidence, phoneme/grapheme correspondence, verification of all 33 Georgian letters, and official IPA presentation. First imported Git baseline at **17:59 UTC** that day. See `original-chatgpt-ipa-atlas-conversation.md`.
+- The exact reasons for adopting or rejecting individual phonemes in the formal Unisermo inventory remain to be corroborated with full dialogue, controlled comparisons and recorded source statistics.
 
 ## Original design, composed before or by 10 Aug 2026
 
