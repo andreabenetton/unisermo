@@ -272,5 +272,6 @@ and `minim` (least), not an affix. Adjectival `super-` is not a
 productive absolute-superlative construction: do not equate `superbel`
 with "very beautiful" or "most beautiful" on this basis. Other
 historical derivational meanings of `super-` remain unaffected.
-Absolute intensity is a separate analytic domain; its degree words
-(`poko`, `mult`, etc.) await an independent lexical decision.
+Absolute intensity is a separate analytic domain with ratified free
+modifiers `minu`, `pok`, `mult`, `ekstrem` (see `comparison.md`).
+These are not derivational affixes or relative superlatives.
