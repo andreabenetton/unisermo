@@ -107,6 +107,25 @@ class NumeralParser:
             "status": "canonical_by_rule", "source": "language/numerals.md",
         }
 
+    def generate_multiplicative(self, value: int) -> str:
+        """Generate NUMfol as a factor, distinct from NUMjer repetition."""
+        if isinstance(value, bool) or not isinstance(value, int) or not 1 <= value <= MAX_CARDINAL:
+            raise ValueError("multiplicative factor must be an integer in 1..999999999999")
+        return _cardinal(value) + "fol"
+
+    def parse_multiplicative(self, surface: str) -> dict | None:
+        """Recognize only positive, canonically spelled NUMfol factors."""
+        if not isinstance(surface, str) or not surface.endswith("fol"):
+            return None
+        cardinal = self.parse_numeral(surface[:-3])
+        if cardinal is None or cardinal["value"] == 0:
+            return None
+        return {
+            "kind": "multiplicative_factor", "form": surface,
+            "factor": cardinal["value"], "status": "canonical_by_rule",
+            "source": "language/numerals.md",
+        }
+
     def parse_iteration(self, surface: str) -> dict | None:
         """Positive NUMjer is general iteration, not a genealogical root."""
         if not isinstance(surface, str) or not surface.endswith("jer"):

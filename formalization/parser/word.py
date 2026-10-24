@@ -78,5 +78,9 @@ class WordParser:
         if iteration is not None:
             out.append({"kind": "iteration_counter", "lemma": surface,
                         "status": iteration["status"], "count": iteration["count"]})
+        multiple = self.parse_multiplicative(surface)
+        if multiple is not None:
+            out.append({"kind": "multiplicative_factor", "lemma": surface,
+                        "status": multiple["status"], "factor": multiple["factor"]})
         return {"surface": surface, "analyses": out}
 

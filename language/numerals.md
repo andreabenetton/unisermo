@@ -150,6 +150,52 @@ In the now-confirmed [kinship system](kinship.md), applying `gen` (parent) twice
 
 ---
 
+## 4a. Productive multiplicative factor: `NUMfol` (approved 24 October 2026)
+
+The author explicitly approves **`-fol`** for a *multiplicative
+factor*, inspired by the internationally recognizable English suffix
+*-fold* (e.g., twofold, fourfold). It is semantically distinct from
+`NUMjer` (number of iterations/repetitions). The form is a
+**single fused word**:
+
+| Value | Multiplicative | Meaning |
+| ---: | --- | --- |
+| 1 | `unofol` | single factor, ×1 |
+| 2 | `bisfol` | double, ×2 |
+| 3 | `terfol` | triple, ×3 |
+| 4 | `forfol` | quadruple, ×4 |
+| 5 | `kinfol` | quintuple, ×5 |
+| 8 | `otofol` | eightfold, ×8 |
+| 10 | `dekfol` | tenfold, ×10 |
+| 100 | `senfol` | hundredfold, ×100 |
+| 1,000 | `milafol` | thousandfold, ×1,000 |
+| 1,000,000 | `megafol` | millionfold, ×1,000,000 |
+
+For any **positive** cardinal NUM supported by the current decimal
+system, `NUMfol` expresses a scalar multiplication factor NUM:
+`NUMfol(X) = NUM × X`. A factor does not by itself assert that an event
+occurs NUM times, nor that NUM objects exist.
+
+**Morphotactics:** attach `fol` to the **full cardinal form** without
+changing its last letter. Thus `unofol`, not `unfol`; `otofol`, not
+`otfol`. The retired candidate `-mul` is **not** canonical.
+`forfol` avoids the unwanted lexical resemblance of `formul`
+to *formula*, while preserving canonical `for` = four.
+
+The zero-factor term `nulfol` is not yet ratified; the current
+productive subset recognizes factors **1 through 999,999,999,999**.
+This does not decide whether a zero factor might later be needed in
+mathematical speech.
+
+The output is a scalar/relational **invariant modifier**. In the
+reference SVO parser, one `NUMfol` may precede a noun by itself;
+its exact referential comparison baseline depends on context, and
+the modifier does not mark nominal plurality or take case. That
+restricted implementation **does not yet infer the scope** of
+`NUMfol` combined with a cardinal, determiner, or other modifier.
+
+---
+
 ## 5. Use with Nouns
 
 The numeral **precedes the noun**. Because the numeral already conveys plurality, the noun normally remains in its bare (number-neutral) form (see [`noun_number_system.md`](noun_number_system.md) §7):
