@@ -6,6 +6,8 @@ on:
       - 'benchmarks/case_role_decoding.py'
       - 'benchmarks/corpus/case-role-dev-001.jsonl'
       - 'tests/test_case_role_decoding.py'
+      - 'benchmarks/relational_frame_diagnostics.py'
+      - 'tests/test_relational_frame_diagnostics.py'
       - '.github/workflows/case-role-tests.yml'
   workflow_dispatch:
 permissions:
@@ -22,5 +24,6 @@ jobs:
       - name: Verify parser source gate, new data, scoring and original parsers
         run: |
           python -m unittest discover -s tests -p 'test_case_role_decoding.py' -v
+          python -m unittest discover -s tests -p 'test_relational_frame_diagnostics.py' -v
           python -m unittest discover -s tests -p 'test_relational_frames.py' -v
           python -m unittest discover -s tests -p 'test_relational_frame_meaning.py' -v
