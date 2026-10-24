@@ -62,6 +62,8 @@ This is the **living historical record** for a future methodological paper about
 
 | **9 Aug 2026, 19:35:58 UTC** | Explicit confirmation of *number-neutral nouns* and optional analytic pre-nominal plural `wi`, replacing historical noun suffix `-en`; omit `wi` when numeral/quantifier already provides quantity. Separately distinguishes `omni` ALL/EVERY from `tot` WHOLE/ENTIRE. | [Commit `e319299`](https://github.com/andreabenetton/unisermo/commit/e31929945d4fce0f628ac96a4dc6c2c260bbe63e), `research/grammar/nominal_number_and_quantification.md`; **high** Git fact, original conversational rationale still unexported |
 
+| **24 Oct 2026 — author's explanation of `duo→bis`** | New direct retrospective testimony: the author chose `bis` rather than `duo` to avoid the latter's **misleading assonance with English `due`**, a word with different meanings, given a valid alternative. Both candidates have three letters: this was **not** a character-count optimization. | Present 24 Oct user message + contemporaneous adoption [Git `4d19263`](https://github.com/andreabenetton/unisermo/commit/4d19263da58802bd184774b3d1463714c50979dc). Author-stated motive **high as testimony**, historical 10 Aug verbatim unavailable; perceptual confusion **not experimentally tested**. [Numeral history](august-numerals-iteration-and-kinship-history.md). |
+
 ## Historical decisions requiring special preservation
 
 **Numerals:** `nul, uno, bis, ter, for, kin, ses, set, oto, nin, dek, sen, mil`; compounds such as `dekbis`, `bisdekkin`; `jer` for repetitions/steps. See `language/numerals.md`, rather than re-inventing the system.
