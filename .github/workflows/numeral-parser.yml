@@ -1,0 +1,43 @@
+name: Numeral grammar and parser
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/numerals.md'
+      - 'language/kinship.md'
+      - 'tests/test_numeral_parser.py'
+      - 'tests/test_kinship_parser.py'
+      - '.github/workflows/numeral-parser.yml'
+  push:
+    branches:
+      - feature/cardinal-numeral-parser-20261024
+    paths:
+      - 'formalization/**'
+      - 'language/numerals.md'
+      - 'language/kinship.md'
+      - 'tests/test_numeral_parser.py'
+      - '.github/workflows/numeral-parser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  numeral-parser-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Test canonical 10k round trips and integration invariants
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+          python -m unittest discover -s tests -p 'test_numeral_parser.py' -v
+          python -m unittest discover -s tests -p 'test_kinship_parser.py' -v
+          python -m unittest discover -s tests -p 'test_formalization.py' -v
+          python tests/test_language_spec_sync.py
+          python tests/test_lexicon_decisions.py
+          python tests/test_recent_grammar_decisions.py
