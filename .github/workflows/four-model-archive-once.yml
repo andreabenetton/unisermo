@@ -1,0 +1,61 @@
+name: Archive four-model extension evidence once
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/four-model-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive verified Mistral GPT-OSS study once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Retrieve original successful additional-model run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/multimodel
+          gh run download 40099913553 --repo andreabenetton/unisermo --name additional-models-40099913553 --dir /tmp/multimodel
+          test -s /tmp/multimodel/additional-models-raw.jsonl
+          test -s /tmp/multimodel/additional-models-raw.score.json
+      - name: Verify model IDs, provider, exact corpus prompts, SHA and cost, then reproduce score
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from benchmarks.additional_models_case_role import MODELS,PROVIDER,CORPUS,MAX_CALLS,compare,checked_prefix
+          raw=Path('/tmp/multimodel/additional-models-raw.jsonl')
+          original=json.loads(Path('/tmp/multimodel/additional-models-raw.score.json').read_text())
+          rows=[json.loads(l) for l in raw.read_text().splitlines() if l.strip()]
+          assert len(rows)==MAX_CALLS==48
+          checked_prefix(rows)
+          assert all(r['returned_model']==MODELS[r['model_label']] for r in rows)
+          assert all(r['provider']==PROVIDER and r['finish_reason']=='stop' for r in rows)
+          assert hashlib.sha256(raw.read_bytes()).hexdigest()==original['raw_sha256']
+          assert hashlib.sha256(CORPUS.read_bytes()).hexdigest()==original['corpus_sha256']
+          assert abs(sum(r['usage']['cost'] for r in rows)-original['observed_usd'])<1e-12
+          assert original['observed_usd']<0.03
+          score=compare(rows)
+          assert score['new_model_results']==original['new_model_results']
+          assert score['new_model_agreement']==original['new_model_agreement']
+          print('Verified 48 full original responses, provider billing, hashes and recomputed scores.')
+          PY
+      - name: Retain exact original model evidence in research branch
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/multimodel/additional-models-raw.jsonl benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.jsonl
+          cp /tmp/multimodel/additional-models-raw.score.json benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.jsonl benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.score.json
+          git commit -m 'research: preserve verified Mistral and GPT-OSS data'
+          git push origin HEAD:research/two-model-case-role-20261024
