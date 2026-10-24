@@ -119,23 +119,56 @@ def analyze(qwen,gemma):
     }
 
 
-def run(prefix_path,output,key):
+def checked_resume_rows(rows, original):
+    """Refuse resume unless an exact valid ordered prefix of the same model plan."""
+    questions=gemma_plan()
+    if not 7 <= len(rows) < len(questions):
+        raise ValueError("resume must have 7-23 saved Gemma replies")
+    previous=restore_prefix(original)
+    for i,(row,q) in enumerate(zip(rows,questions)):
+        if row.get("call_order")!=i+1:
+            raise ValueError("noncontiguous Gemma resume prefix")
+        for k in ("id","doc","condition","model_label","requested_model","prompt_sha256"):
+            if row.get(k)!=q[k]:
+                raise ValueError(f"Gemma resume prompt/order drift at position {i+1}: {k}")
+        if (row.get("provider")!=PROVIDER or row.get("returned_model")!=MODELS["gemma"]
+            or row.get("finish_reason")!="stop"):
+            raise ValueError("saved response not a valid completed Gemma answer")
+        cost=(row.get("usage") or {}).get("cost")
+        if type(cost) not in (float,int) or not 0<=cost<MAX_OBSERVED_GEMMA_USD:
+            raise ValueError("invalid billed cost in resumed file")
+        if i<len(previous):
+            keys=("id","doc","condition","model_label","requested_model","prompt_sha256","answer","response_id","provider","finish_reason","usage")
+            if any(row.get(k)!=previous[i].get(k) for k in keys):
+                raise ValueError("reused original seven replies changed")
+    return rows
+
+
+def run(prefix_path,output,key,resume=False):
     if not key:
         raise ValueError("OPENROUTER_API_KEY missing")
-    if output.exists() or output.with_suffix(".score.json").exists():
-        raise ValueError("refuse overwriting response evidence")
+    if output.with_suffix(".score.json").exists():
+        raise ValueError("refuse overwrite of existing complete score")
     qwen=jsonl(QWEN_RAW)
     original=jsonl(prefix_path)
-    gemma=restore_prefix(original)
+    if resume:
+        if not output.exists():
+            raise ValueError("resume file missing")
+        gemma=checked_resume_rows(jsonl(output),original)
+    else:
+        if output.exists():
+            raise ValueError("refuse overwrite")
+        gemma=restore_prefix(original)
     q=gemma_plan()
     output.parent.mkdir(parents=True,exist_ok=True)
     spent=sum(x["usage"]["cost"] for x in gemma)
     if spent>=MAX_OBSERVED_GEMMA_USD:
-        raise ValueError("budget already exhausted by seven reused replies")
-    with output.open("x",encoding="utf8") as f:
-        for row in gemma:
-            f.write(json.dumps(row,ensure_ascii=False)+"\n")
-        f.flush()
+        raise ValueError("previous observations already exhausted spend guard")
+    with output.open("a" if resume else "x",encoding="utf8") as f:
+        if not resume:
+            for row in gemma:
+                f.write(json.dumps(row,ensure_ascii=False)+"\n")
+            f.flush()
         for question in q[len(gemma):]:
             for attempt in range(6):
                 try:
@@ -145,7 +178,7 @@ def run(prefix_path,output,key):
                     if attempt==5:
                         raise
                     delay=(60,90,120,180,240)[attempt]
-                    print(f"Gemma 429; sleeping {delay}s",flush=True)
+                    print(f"Gemma 429; waiting {delay}s",flush=True)
                     time.sleep(delay)
             result["call_order"]=len(gemma)+1
             result["original_run"]=None
@@ -174,5 +207,6 @@ if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("--prefix",required=True,type=Path,help="unmodified original partial 48-run JSONL")
     p.add_argument("--output",required=True,type=Path)
+    p.add_argument("--resume",action="store_true",help="resume checked Gemma-only JSONL prefix")
     a=p.parse_args()
-    run(a.prefix,a.output,os.environ.get("OPENROUTER_API_KEY",""))
+    run(a.prefix,a.output,os.environ.get("OPENROUTER_API_KEY",""),resume=a.resume)
