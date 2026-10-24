@@ -1,3 +1,5 @@
+> **Superseded coverage notice (24 October 2026):** This report verified **10** of the 39 ChatGPT snapshots. The [new all-39 audit](glottodelta-39-snapshot-audit.md) independently materializes every raw file, supplies 39 Git blob hashes, and identifies **earlier** source introductions: audio by 12:25, Georgian 33-row table by 12:38, and 40 profiles by 13:04. Read this ten-checkpoint document as an intermediate research result, not the latest complete inventory.
+
 # GlottoDelta original ChatGPT snapshot comparison
 
 Research audit dated 24 October 2026. Ten of the 39 original July 27 ChatGPT HTML snapshots were independently materialized from the user's file Library, parsed for source constants, and hashed as Git blobs. This is an artifact-level comparison, not the complete transcript or browser functional test.
