@@ -1,0 +1,24 @@
+name: Gemma follow-up and original Qwen artifact integrity
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths:
+      - 'benchmarks/gemma_case_role_followup.py'
+      - 'tests/test_gemma_case_role_followup.py'
+      - '.github/workflows/gemma-case-role-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run original-run and Gemma reuse guard tests
+        run: |
+          python -m unittest discover -s tests -p 'test_gemma_case_role_followup.py' -v
+          python -m unittest discover -s tests -p 'test_two_model_case_role.py' -v
