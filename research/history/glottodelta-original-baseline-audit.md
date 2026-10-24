@@ -88,3 +88,7 @@ The surprising combinations are valuable **research questions**, not retroactive
 - [Original 27 July ChatGPT session reconstruction](original-chatgpt-ipa-atlas-conversation.md)
 - [39-file revision manifest](chatgpt-ipa-html-revision-manifest.md)
 - [Pre-/post-import Git archaeology](glottodelta-git-archaeology.md)
+
+## Deduplication correction (24 October 2026)
+
+The ~2,177 distinct raw source-language identities reported above must **not** be treated as the identical language denominator used by the 8 August research. The preserved script `scripts/analyze_phoneme_inventory.py` at commit `7311032` selects ISO identity first and falls back to Glottocode/name. Applied to the initial 05:15 ChatGPT HTML (the unchanged original `DATA` tables) this produces **2,122** deduplicated research languages, without requiring a later change to the corpus. See [snapshot comparison](glottodelta-chatgpt-snapshot-comparison.md).
