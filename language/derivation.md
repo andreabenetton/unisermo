@@ -247,3 +247,20 @@ Explicit plural `wi` remains a separate pre-nominal particle:
 - `wi fakorem` — makers as direct object
 
 The historical nominal plural suffix `-en` is not part of the current system.
+
+### Ratified medium-quality lexical compound (2026-10-24)
+
+- `medi` is the descriptive middle/intermediate position on a scale.
+- `medibon` is the ratified lexical compound `medi` + `bon`: average-quality,
+  ordinary, unexceptional. It does not lexically require a negative judgment;
+  context can convey the evaluative sense of "mediocre".
+- `subbon` expresses falling short of the relevant standard of quality, not
+  mere statistical averageness. This is a compositional illustration, not a
+  new standalone lexicon entry.
+- `submedi` (below a mean) and `supermedi` (well above a mean) are compositional
+  illustrations, not independently ratified lexical entries. `nemedi` is not
+  automatically licensed because "middle" has no unique opposite pole.
+
+The lexical ratification of `medibon` does **not** establish a general
+productive two-root compounding rule. Such a rule requires a separate review
+of the language's compounding syntax and collision constraints.
