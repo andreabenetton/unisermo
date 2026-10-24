@@ -14,6 +14,25 @@ class ClauseParser:
         if not choices:
             raise ValueError(f"unrecognized {required_case} nominal head: {head}")
         modifiers = words[:-1]
+        factors = [self.parse_multiplicative(x) for x in modifiers]
+        parsed_factors = [x for x in factors if x is not None]
+        if len(parsed_factors) > 1:
+            raise ValueError("more than one multiplicative factor per noun phrase")
+        if parsed_factors:
+            # A factor is a scalar multiplier/modifier, not an explicit
+            # count of referents (NUM) or repetition count (NUMjer).
+            # Phase 1 does not attempt combined NUM + NUMfol scope.
+            if len(modifiers) != 1:
+                raise ValueError("NUMfol with other modifiers is outside the supported subset")
+            if len(choices) != 1:
+                raise ValueError(f"ambiguous nominal head {head}: {choices}")
+            return {
+                "kind": "noun_phrase", "lemma": choices[0]["lemma"],
+                "case": required_case, "modifiers": modifiers,
+                "lexical_status": choices[0]["status"],
+                "numerical_value": None,
+                "multiplicative_factor": parsed_factors[0]["factor"],
+            }
         if not (len(modifiers) == len(set(modifiers)) and
                 all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None for x in modifiers)):
             raise ValueError(f"unsupported noun modifiers: {modifiers}")
