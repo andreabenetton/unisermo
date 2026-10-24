@@ -1,0 +1,61 @@
+name: Resume exact Qwen Gemma paired experiment after rate limit
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/two-model-case-role-resume-once.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: unisermo-two-model-case-role-resume-20261024
+  cancel-in-progress: false
+jobs:
+  resume:
+    if: >-
+      github.event.head_commit.message == 'ci: resume original paired Qwen Gemma responses once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reverify offline scoring and two-model prompt pairing
+        run: |
+          python -m unittest discover -s tests -p 'test_two_model_case_role.py' -v
+      - name: Recover the original 14 completed billed requests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/unisermo-original
+          gh run download 40091590850 --repo andreabenetton/unisermo --name two-model-case-role-40091590850 --dir /tmp/unisermo-original
+          test -s /tmp/unisermo-original/two-model-case-role-raw.jsonl
+          mkdir -p benchmarks/reports
+          cp /tmp/unisermo-original/two-model-case-role-raw.jsonl benchmarks/reports/two-model-case-role-raw.jsonl
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from benchmarks.two_model_case_role import plan
+          p=Path('benchmarks/reports/two-model-case-role-raw.jsonl')
+          rows=[json.loads(x) for x in p.read_text().splitlines() if x.strip()]
+          qs=plan()
+          assert len(rows)==14
+          for i,r in enumerate(rows):
+              assert r['call_order']==i+1
+              assert all(r[k]==qs[i][k] for k in
+                  ('id','doc','condition','model_label','requested_model','prompt_sha256'))
+              assert r['finish_reason']=='stop' and r['provider']=='DeepInfra'
+          print('Restored exactly 14 correctly paired original billable responses; no re-billing.')
+          PY
+      - name: Resume exactly from the first missing model/question pair
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.two_model_case_role --resume --output benchmarks/reports/two-model-case-role-raw.jsonl
+      - name: Preserve all original and newly appended model answers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: two-model-case-role-resumed-${{ github.run_id }}
+          path: benchmarks/reports/two-model-case-role-*
+          if-no-files-found: warn
+          retention-days: 30
