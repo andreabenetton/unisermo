@@ -752,6 +752,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "P nam Q indicates that the speaker presents Q as support for asserting P, without claiming that Q caused P or that Q proves P. Distinct from factual causal due and inference-first ergo.",
+      "form": "nam",
+      "meaning_en": "for/indeed; introduces an evidential or argumentative reason supporting an assertion",
+      "meaning_it": "infatti; introduce una giustificazione o evidenza per un'affermazione",
+      "origin": "Explicit author ratification 2026-10-24; Latin nam",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "noun"
       ],
       "decision": "Canonical replacement for legacy nacion.",

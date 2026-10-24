@@ -73,6 +73,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "bdd740d181e2df91d540955fc016ffd38bff4e11aeeff281081b875e1d11fb1f",
+      "id": "grammar.evidential_nam_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/evidential_nam_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "88c13e466b8ec4a89c005e022d3fc261c0b4948b7a2ec209a14b304716a2d511",
       "id": "grammar.explicit_state_transition_traes",
       "source": "research/grammar/confirmed_decisions.json#decisions/explicit_state_transition_traes",
