@@ -79,3 +79,8 @@ Here the object `domem` is fronted, but its `-em` suffix keeps it identifiable a
 - **The case system provides the release valve.** Speakers from SOV backgrounds (Japanese, Korean, Hindi/Urdu, Turkish) or from free-order traditions are not forced to abandon their habits in emphatic or contrastive sentences; they can reorder freely whenever the case suffixes carry the load.
 
 The combination — fixed SVO default plus permitted reordering — gives the regularity of a strict-order language together with the flexibility of a case-marked one, at no extra morphological cost.
+
+
+## Conditional introducer `se` (ratified 24 October 2026)
+
+`se` is the standalone conditional conjunction **IF**. It is distinct from confirmed free `si` YES and `no` NO/NOT. `se` introduces a condition clause P in a conditional relation between P and Q; the exact placement, boundary marking and nesting rules of complex conditionals are **not yet ratified**. Candidate structures `se P, Q` and `se P, tum Q` are **illustrative proposals**, not a new approved clausal parser grammar. `tum`/ `alor` (THEN), `ergo` (THEREFORE), `nisi` (UNLESS), `sin` (ELSE IF) and `sed` (BUT) remain under consideration. `se` does not by itself establish a counterfactual verbal mood.
