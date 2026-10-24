@@ -16,10 +16,26 @@
 
 The timed user messages and the Git commits are separate evidence classes. In particular, the `dekbis/bisdek` preference was documented as a user request **before** its formal 16:35 Git migration, which is not necessarily its time of first conception.
 
+## Author's retrospective clarification of why `duo` was replaced (24 October 2026)
+
+**New direct first-person testimony:** In the present historical-reconstruction conversation, the project's author explained (verbatim, original Italian orthography):
+
+> "duo assona con due che in inglese significa altro, tanto vale evitare questa collisione avendo una buona alternativa"
+
+**Meaning in context:** The author confirms that `duo` was avoided because of its **perceived phonetic resemblance to English `due`**, which has meanings such as *owed, expected or scheduled* rather than TWO. The coexistence of Italian *due* = TWO and English *due* with another meaning was considered a source of potentially misleading cross-language associations. Since `bis` was an acceptable alternative, preserving `duo` had no compelling benefit. The claim is about **author-perceived risk of association or confusion**, not a tested phonological homophone in every English variety: pronunciations and syllable counts may vary between `duo` and `due`.
+
+**Evidence provenance, kept separate:**
+- **10 Aug 2026 contemporary Git:** [commit `4d19263`](https://github.com/andreabenetton/unisermo/commit/4d19263da58802bd184774b3d1463714c50979dc) proves the change from `duo` to `bis`, with historical documentation of the former form.
+- **10 Aug 2026 conversation index:** a user message at approximately 15:55 UTC discusses the option; the original full transcript was **not** recovered and the indexed extract alone **did not explicitly establish this motivation**.
+- **24 Oct 2026 user testimony:** the author now explicitly identifies **avoidance of misleading similarity to English `due`** as the motivation. Direct current-message evidence for the author's historical recollection, **not** a contemporaneous verbatim 10 August quotation.
+- **Empirical status:** No controlled cross-language perception, lexical retrieval, confusion, acquisition, or speaking-time study was documented. Do not report `duo` as empirically proven ambiguous or `bis` as statistically superior.
+
+**Corrected interpretation:** The change is an example of **cross-linguistic semantic-interference avoidance** as an explicit design consideration, rather than word-length compression (both forms have three letters) or an attested statistical optimization. This case complements the dated `kom/kun`, `kur/ker`, and `un/uno` collision avoidance decisions, but unlike those local same-language collisions this is an **associative collision across languages**.
+
 ## Comparisons important to the foundational efficiency objective
 
 1. **Information encoding versus spelling:** The 8 August numeral system was already **morphologically compositional**, but its components were separated by spaces. The 10 August single-word rule changes **orthographic token boundaries**, not the component sequence or necessarily the spoken duration of `dek+bis`. No measured speaking speed follows from this change.
-2. **Root size versus recognizability:** Both `duo` and `bis` contain **three written letters**. The Git object certifies the replacement, but the historical index currently offers no securely recovered numerical experiment proving a speech-rate or cross-language recognition advantage. The exact *why* is still an archival question.
+2. **Root size versus recognizability:** Both `duo` and `bis` contain **three written letters**. The **author has now clarified on 24 October 2026** that the change was motivated by perceived misleading assonance with English `due`, not a length reduction. The 10 August full transcript and any empirical confusion comparison remain outstanding; see the retrospective-testimony addendum above.
 3. **Deduplication of grammatical categories:** `jer` was chosen as a **general iterative operator** rather than creating a distinct counting vocabulary only for genealogy. This is a productive morphosyntactic design hypothesis; the 10 August documents do not validate that all genealogical relations are semantically transparent to human speakers.
 4. **Redundancy:** `wi` and obsolete `-en` should not be retroactively fused into the same noun-number system. `duo dom` in the original is not equivalent *as a morphological structure* to current `bis dom` even when translations converge.
 
@@ -51,4 +67,4 @@ The [23 October retrospective preservation note](https://github.com/andreabenett
 | Kinship options | 23 October preservation note quoting earlier discussions | Retrospective; no independently retrieved 10 August verbatim thread for individual candidates |
 | User's founding goal | 24 October 2026 direct author testimony | Supports conceptual lineage, not achieving human speech efficiency |
 
-Next: recover full 10 August 15:55–16:35 message sequence and first genuine kinship design discussion. Track accepted and withdrawn forms in **separate** columns to prevent candidate proposals being merged into canonical lexical inventory.
+Next: recover the full 10 August 15:55–16:35 message sequence, corroborate the now author-attested `duo`/English `due` rationale in its original context if possible, and locate the first genuine kinship-design dialogue. Track accepted and withdrawn forms in **separate** columns to prevent candidate proposals being merged into canonical lexical inventory.
