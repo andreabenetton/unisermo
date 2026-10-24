@@ -50,3 +50,13 @@ An attempted strict-prefix recovery job [40091922563](https://github.com/andreab
 The original preregistration above remains untouched and *must not* be rewritten as if the controlled trial succeeded. All conclusions from the salvaged comparison must be identified as **exploratory**, since the method was amended after observing the operational failures. Raw source artifacts, request hashes and all costs must be preserved. The existing frozen holdout and canonical language are still untouched.
 
 New runner: `benchmarks/gemma_case_role_followup.py`; archive the resulting complete 24-answer Gemma set, original Qwen corpus and paired descriptive score as distinct, versioned evidence. Any future strong model-family conclusion requires **a newly preregistered** independent corpus with robust model-specific nonthinking controls and human-approved semantics.
+
+---
+
+## Interrupted Gemma follow-up (19/24) and exact resumption gate
+
+The Gemma-only follow-up [run 40092124879](https://github.com/andreabenetton/unisermo/actions/runs/40092124879) **was cancelled at its 45-minute job timeout**, after completing 19 of 24 required Gemma answers. Its response JSONL was uploaded as artifact `gemma-case-role-followup-40092124879` (ID `12560587008`), even though there is **no complete score JSON**. A direct archive inspection confirmed **19 valid `finish_reason=stop` Gemma records**, last `CR010_role`, and cumulative recorded provider USD **0.00092784**. The runner encountered repeated DeepInfra HTTP 429; job completion must not be inferred from artifact upload alone.
+
+A source-controlled resume implementation now validates the entire stored 19-response ordered prefix against the original frozen `gemma_plan()` (model, provider, response finish state, question identity and SHA-256 of prompt), and compares the first seven stored answers against the unchanged initial 14-response partial run. It refuses to overwrite or re-bill those 19. The remaining five Gemma requests are executed by [run 40097642521](https://github.com/andreabenetton/unisermo/actions/runs/40097642521) using the **same model and DeepInfra-only route**, preserving comparability with the first nineteen. The extra job does not retrospectively make the original failed 48-call same-prompt experiment a success. It is an explicitly amended follow-up with the already documented Qwen `/no_think` control difference.
+
+Raw and scored files will be assessed only if Gemma reaches **24/24** with independently verified request IDs, response model/provider, SHA-256 of original/corpus, and recomputed paired scores. Historical failures are retained as first-class reproducibility evidence. No Unisermo language authority, corpus or holdout changes were made.
