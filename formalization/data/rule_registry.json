@@ -31,6 +31,12 @@
       "status": "confirmed"
     },
     {
+      "id": "grammar.concessive_etsi_20261024",
+      "content_sha256": "1e85e53a3258d7ec696adac79080349fc3e47094e3bc0f31f4aa116fb31bcca9",
+      "source": "research/grammar/confirmed_decisions.json#decisions/concessive_etsi_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "1c42f8fbfd7c357e8221e8a3a7b5c2c793e85e0109705daeabee85a36420d63a",
       "id": "grammar.conditional_se_20261024",
       "source": "research/grammar/confirmed_decisions.json#decisions/conditional_se_20261024",

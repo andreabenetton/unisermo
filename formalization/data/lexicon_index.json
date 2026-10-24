@@ -339,6 +339,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "Concessive conjunction allowing etsi P, Q and Q etsi P. Factual or contextually accepted P contrasted with Q; hypothetical even-if semantics remain unresolved.",
+      "form": "etsi",
+      "meaning_en": "although; even though (factual concessive)",
+      "meaning_it": "sebbene, benché, nonostante il fatto che",
+      "origin": "Explicit author ratification 2026-10-24; Latin etsi",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "decision": "Canonical replacement for legacy fac.",
