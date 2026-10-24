@@ -18,6 +18,7 @@ This is the **living historical record** for a future methodological paper about
 
 | Date / period | Entry | Evidence and confidence |
 | --- | --- | --- |
+| **Before 10 Aug 2026 (exact date unknown)** | Earlier 24-unit writing system with schwa and independent affricates, preserved in August import; then redesigned as a 21-letter system using glides and phonetic coalescence. Import date is not the date of the original discussion. | `research/history/phoneme-grapheme-design-history.md` |
 | **24 May 2026** | Recovered original discussion on cases and complements: one ending per complement; 7 base cases plus 6 extended, corrected -s genitive and -de source; later revisions moved extended relations to free relators. | `research/history/cases-and-complements-design-history.md` and original May conversation snippets; full transcript not archived |
 | Prior to 10 Aug 2026 — exact start unverified | Initial planning of an international, pronunciation-accessible, compositional auxiliary language, built with explicit decision records. The full earlier conversational history has **not** been exhaustively recovered. | Context reconstruction; early date and original rationale need first-party archival verification |
 | **10 Aug 2026** | Confirmed baseline grammatical decision set: number-neutral bare nouns; optional `wi` plural; person/tense/aspect morphology; multiple noun cases including resultative; phonological and lexical constraints. | `research/grammar/confirmed_decisions.json` (`confirmed_on`); grammatical counts reported in an Oct 22 baseline audit |
