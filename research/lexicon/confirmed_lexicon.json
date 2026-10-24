@@ -652,6 +652,24 @@
       "source": "Author ratification 2026-10-24: absolute intensity scale A",
       "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
       "status": "confirmed"
+    },
+    {
+      "form": "ase",
+      "category": "degree_modifier",
+      "meaning_it": "abbastanza; piuttosto; grado moderatamente elevato, senza implicare sufficienza",
+      "meaning_en": "fairly; rather; moderately positive degree",
+      "source": "Author ratification 2026-10-24",
+      "decision": "Analytic degree modifier preceding a gradable quality; not threshold sufficiency.",
+      "status": "confirmed"
+    },
+    {
+      "form": "suf",
+      "category": "degree_modifier",
+      "meaning_it": "sufficientemente; quanto basta rispetto a uno scopo o una soglia",
+      "meaning_en": "sufficiently; enough relative to a purpose or threshold",
+      "source": "Author ratification 2026-10-24",
+      "decision": "Analytic sufficiency operator: reaches contextual requirement; not a fixed degree or synonym of mult.",
+      "status": "confirmed"
     }
   ]
 }
