@@ -646,6 +646,14 @@
       "meaning_en": "for/indeed; introduces an evidential or argumentative reason supporting an assertion",
       "source": "Explicit author ratification 2026-10-24; Latin nam",
       "decision": "P nam Q indicates that the speaker presents Q as support for asserting P, without claiming that Q caused P or that Q proves P. Distinct from factual causal due and inference-first ergo."
+    },
+    {
+      "form": "etsise",
+      "category": "function_word",
+      "meaning_it": "anche qualora; anche se (concessione ipotetica)",
+      "meaning_en": "even if; hypothetical concessive",
+      "source": "Explicit author ratification 2026-10-24; compound etsi + se",
+      "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion."
     }
   ]
 }
