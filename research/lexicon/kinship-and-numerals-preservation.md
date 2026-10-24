@@ -32,6 +32,14 @@ The earlier summary below is **not exhaustive**. Individually dated original use
 
 See [source-critical reconstruction](../history/august-kinship-original-dialogue-versus-git.md). No canonical lexicon entries are changed by this historical note; do not promote either uncommitted forms or unverified genealogical compounds to current grammar without a separate decision.
 
+## Author-ratified inverse relation and exact-grandparent feature (24 October 2026)
+
+The user now expressly **ratifies `fil`** as offspring and seeks a way to distinguish maternal/paternal grandmothers. The new live system uses **atomic right-to-left parent relations**: `genegene` = mother's mother, `genegeno` = father's mother, `genogene` = mother's father, `genogeno` = father's father. `filadelgen` = offspring of parent's sibling (first cousin), using `fil` approved today with previously approved `adelgen`.
+
+The generic `bisjergen` still means either grandparent. The iteration operator repeats the **complete** named relation: `bisjergene` is two mother-links, `bisjergeno` two father-links; neither is a floating gender suffix on `bisjergen`. The historical comments below saying `fil` or `filadelgen` remain candidates are **superseded for those specific forms**, not for other relative roots such as `av` or unratified `filo/file`.
+
+See [current kinship](../../language/kinship.md), which is the normative source.
+
 ## Earlier kinship design (not yet independently ratified in the confirmed lexicon)
 
 A **neutral relational stem** plus `-o` for male and `-e` for female was preferred in prior discussion. These are historical **candidate analyses**, not established canonical entries:
