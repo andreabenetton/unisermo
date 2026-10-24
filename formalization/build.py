@@ -32,7 +32,7 @@ def build_indexes() -> dict[str, str]:
     entries: dict[str, dict] = {}
     for record in core:
         lemma = record["form"]
-        role_list = [k for k, forms in roles.items() if lemma in forms]
+        role_list = [k for k, forms in roles.items() if isinstance(forms, list) and lemma in forms]
         if not role_list:
             role_list = [record["category"]]
         entries[lemma] = {"form": lemma, "status": "confirmed_lexicon", "source": "research/lexicon/confirmed_lexicon.json",
