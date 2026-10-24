@@ -654,6 +654,22 @@
       "meaning_en": "even if; hypothetical concessive",
       "source": "Explicit author ratification 2026-10-24; compound etsi + se",
       "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion."
+    },
+    {
+      "form": "ecce",
+      "category": "function_word",
+      "meaning_it": "eccetto, tranne, salvo; operatore generale di esclusione",
+      "meaning_en": "except, excluding; general exception operator",
+      "source": "Explicit author ratification 2026-10-24; international except/exception family, distinct from Latin ecce ('behold')",
+      "decision": "Free invariant ecce marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma."
+    },
+    {
+      "form": "eccese",
+      "category": "function_word",
+      "meaning_it": "a meno che, salvo che; eccezione condizionale",
+      "meaning_en": "unless; except if (conditional exception)",
+      "source": "Explicit author ratification 2026-10-24; fused ecce + se",
+      "decision": "Canonical single-word compound ecce+se marks conditional exception (UNLESS). Both eccese P, Q and Q eccese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms."
     }
   ]
 }
