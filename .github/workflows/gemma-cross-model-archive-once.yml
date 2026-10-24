@@ -1,0 +1,77 @@
+name: Archive verified Gemma completion and cross-model scores
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/gemma-cross-model-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive verified completed Gemma followup once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Retrieve successfully completed five-answer recovery and cancelled nineteen-answer artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/final /tmp/partial
+          gh run download 40097642521 --repo andreabenetton/unisermo --name gemma-final-five-40097642521 --dir /tmp/final
+          gh run download 40092124879 --repo andreabenetton/unisermo --name gemma-case-role-followup-40092124879 --dir /tmp/partial
+          test -s /tmp/final/gemma-case-role-followup-raw.jsonl
+          test -s /tmp/final/gemma-case-role-followup-raw.score.json
+      - name: Check original 19 prefix, all 24 final Gemma replies, models and rescoring
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from benchmarks.gemma_case_role_followup import analyze,jsonl,QWEN_RAW
+          from benchmarks.two_model_case_role import MODELS
+          from benchmarks.two_model_case_role import PROVIDER
+          from benchmarks.gemma_case_role_followup import gemma_plan
+          final=Path('/tmp/final/gemma-case-role-followup-raw.jsonl')
+          partial=Path('/tmp/partial/gemma-case-role-followup-raw.jsonl')
+          scores=json.loads(Path('/tmp/final/gemma-case-role-followup-raw.score.json').read_text())
+          raw=jsonl(final)
+          pref=jsonl(partial)
+          original=jsonl(QWEN_RAW)
+          plan=gemma_plan()
+          assert len(raw)==24 and len(pref)==19 and len(original)==24
+          assert raw[:19]==pref
+          assert [r['call_order'] for r in raw]==list(range(1,25))
+          assert len({r['id'] for r in raw})==24
+          for row,request in zip(raw,plan):
+              assert all(row[k]==request[k] for k in ('id','doc','condition','model_label','requested_model','prompt_sha256'))
+              assert row['provider']==PROVIDER
+              assert row['returned_model']==MODELS['gemma']
+              assert row['finish_reason']=='stop'
+          assert hashlib.sha256(final.read_bytes()).hexdigest()==scores['gemma_sha256']
+          assert hashlib.sha256(QWEN_RAW.read_bytes()).hexdigest()==scores['prior_qwen_sha256']
+          assert abs(sum(r['usage']['cost'] for r in raw)-scores['observed_gemma_usd'])<1e-12
+          assert scores['observed_gemma_usd']<.02
+          computed=analyze(original,raw)
+          assert computed['comparisons']==scores['comparisons']
+          assert computed['agreement_by_condition']==scores['agreement_by_condition']
+          assert computed['correct_by_family']==scores['correct_by_family']
+          print('PASS 24/24 Gemma, 19/19 old answers unchanged, 24/24 prior Qwen, provenance/score/cost.')
+          PY
+      - name: Preserve verbatim final outputs and machine analysis on research branch
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/final/gemma-case-role-followup-raw.jsonl benchmarks/evidence/gemma-case-role-2026-10-24-final.jsonl
+          cp /tmp/final/gemma-case-role-followup-raw.score.json benchmarks/evidence/gemma-case-role-2026-10-24-final.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/gemma-case-role-2026-10-24-final.jsonl benchmarks/evidence/gemma-case-role-2026-10-24-final.score.json
+          git commit -m 'research: preserve verified complete Gemma and Qwen comparison'
+          git push origin HEAD:research/two-model-case-role-20261024
+
+# Exact verified source: successful run 40097642521 (24 Gemma responses).

@@ -1,0 +1,62 @@
+name: Complete last five Gemma answers without rebilling
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/gemma-five-once.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: unisermo-gemma-last-five-20261024
+  cancel-in-progress: false
+jobs:
+  finish:
+    if: >-
+      github.event.head_commit.message == 'ci: complete remaining five Gemma responses once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate exact prefix reuse and model scoring offline
+        run: |
+          python -m unittest discover -s tests -p 'test_gemma_resume_19.py' -v
+          python -m unittest discover -s tests -p 'test_gemma_case_role_followup.py' -v
+          python -m unittest discover -s tests -p 'test_case_role_decoding.py' -v
+      - name: Retrieve both immutable original-run artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/original-run /tmp/cancelled-gemma benchmarks/reports
+          gh run download 40091590850 --repo andreabenetton/unisermo --name two-model-case-role-40091590850 --dir /tmp/original-run
+          gh run download 40092124879 --repo andreabenetton/unisermo --name gemma-case-role-followup-40092124879 --dir /tmp/cancelled-gemma
+          cp /tmp/cancelled-gemma/gemma-case-role-followup-raw.jsonl benchmarks/reports/gemma-case-role-followup-raw.jsonl
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from benchmarks.gemma_case_role_followup import checked_resume_rows
+          orig=[json.loads(s) for s in Path('/tmp/original-run/two-model-case-role-raw.jsonl').read_text().splitlines() if s.strip()]
+          file=Path('benchmarks/reports/gemma-case-role-followup-raw.jsonl')
+          rows=[json.loads(s) for s in file.read_text().splitlines() if s.strip()]
+          assert len(orig)==14
+          assert len(rows)==19
+          checked_resume_rows(rows,orig)
+          print('Verified 19 old Gemma responses and exact 5-request missing suffix. Zero re-bills.')
+          PY
+      - name: Run five missing Gemma requests with provider rate-limit backoff
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python -m benchmarks.gemma_case_role_followup \
+            --prefix /tmp/original-run/two-model-case-role-raw.jsonl \
+            --output benchmarks/reports/gemma-case-role-followup-raw.jsonl --resume
+      - name: Archive all responses and score, or remaining partial on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemma-final-five-${{ github.run_id }}
+          path: benchmarks/reports/gemma-case-role-followup-*
+          if-no-files-found: warn
+          retention-days: 30

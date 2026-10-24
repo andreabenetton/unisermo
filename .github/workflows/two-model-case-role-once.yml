@@ -1,0 +1,47 @@
+name: One-shot two-model Unisermo case-role test
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/two-model-case-role-once.yml']
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-two-model-case-role-20261024
+  cancel-in-progress: false
+jobs:
+  experiment:
+    if: >-
+      github.event.head_commit.message == 'ci: execute paired Qwen Gemma benchmark once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Preflight identical source prompts and budget
+        run: |
+          python -m unittest discover -s tests -p 'test_two_model_case_role.py' -v
+          python - <<'PY'
+          from benchmarks.two_model_case_role import (
+              MODELS,PROVIDER,plan,MAX_REQUESTS,MAX_OUTPUT_TOKENS,MAX_OBSERVED_SPEND_USD
+          )
+          assert MODELS=={'qwen':'qwen/qwen3-32b','gemma':'google/gemma-3-27b-it'}
+          assert len(plan())==MAX_REQUESTS==48
+          assert PROVIDER=='DeepInfra'
+          assert MAX_OUTPUT_TOKENS==340
+          assert MAX_OBSERVED_SPEND_USD==0.03
+          print('48 calls maximum, 24 prompts duplicated byte-exactly across model families.')
+          PY
+      - name: Execute two-model paired decoding
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.two_model_case_role --output benchmarks/reports/two-model-case-role-raw.jsonl
+      - name: Preserve raw outputs (including partial responses if trial fails)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: two-model-case-role-${{ github.run_id }}
+          path: benchmarks/reports/two-model-case-role-*
+          if-no-files-found: warn
+          retention-days: 30

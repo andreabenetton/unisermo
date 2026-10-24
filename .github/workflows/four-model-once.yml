@@ -1,0 +1,44 @@
+name: One-shot Mistral and GPT-OSS case-role study
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/four-model-once.yml']
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-four-model-addendum-20261024
+  cancel-in-progress: false
+jobs:
+  models:
+    if: >-
+      github.event.head_commit.message == 'ci: execute Mistral and GPT-OSS additions once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate both new model IDs and prompt contract
+        run: |
+          python -m unittest discover -s tests -p 'test_additional_models_case_role.py' -v
+          python - <<'PY'
+          from benchmarks.additional_models_case_role import planned,MODELS,MAX_CALLS,MAX_OBSERVED_SPEND_USD
+          assert len(planned())==MAX_CALLS==48
+          assert MODELS=={'mistral':'mistralai/mistral-small-3.2-24b-instruct',
+                          'gpt_oss':'openai/gpt-oss-20b'}
+          assert MAX_OBSERVED_SPEND_USD==0.03
+          print('Verified 24 paired questions x 2 new model families, development only.')
+          PY
+      - name: Run additional family comparisons
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.additional_models_case_role --output benchmarks/reports/additional-models-raw.jsonl
+      - name: Preserve raw answer prefix on any failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: additional-models-${{ github.run_id }}
+          path: benchmarks/reports/additional-models-*
+          if-no-files-found: warn
+          retention-days: 30

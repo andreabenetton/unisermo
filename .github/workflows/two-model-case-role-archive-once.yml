@@ -1,0 +1,69 @@
+name: Archive verified two-model evidence once
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/two-model-case-role-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive verified two-model evidence once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Download original completed two-model artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/two-model-evidence
+          gh run download 40091590850 --repo andreabenetton/unisermo --name two-model-case-role-40091590850 --dir /tmp/two-model-evidence
+          test -s /tmp/two-model-evidence/two-model-case-role-raw.jsonl
+          test -s /tmp/two-model-evidence/two-model-case-role-raw.score.json
+      - name: Verify raw answers, labels, paired prompts, model identities and exact rescore
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          from benchmarks.two_model_case_role import (
+              MODELS,PROVIDER,CORPUS,MAX_REQUESTS,compare,plan
+          )
+          p=Path('/tmp/two-model-evidence/two-model-case-role-raw.jsonl')
+          raw=p.read_bytes()
+          original=json.loads(Path('/tmp/two-model-evidence/two-model-case-role-raw.score.json').read_text())
+          rows=[json.loads(s) for s in raw.decode('utf8').splitlines() if s.strip()]
+          assert len(rows)==MAX_REQUESTS==48
+          assert [r['call_order'] for r in rows]==list(range(1,49))
+          assert len({(r['id'],r['model_label']) for r in rows})==48
+          assert all(r['requested_model']==MODELS[r['model_label']] for r in rows)
+          assert all(r['returned_model']==r['requested_model'] for r in rows)
+          assert all(r['provider']==PROVIDER for r in rows)
+          assert all(r['finish_reason']=='stop' for r in rows)
+          assert all(type(r['usage']['cost']) in (float,int) for r in rows)
+          assert hashlib.sha256(raw).hexdigest()==original['response_sha256']
+          assert hashlib.sha256(CORPUS.read_bytes()).hexdigest()==original['corpus_sha256']
+          assert abs(sum(r['usage']['cost'] for r in rows)-original['observed_usd'])<1e-12
+          assert original['observed_usd'] < 0.03
+          recomputed=compare(rows)
+          assert recomputed['model_results']==original['model_results']
+          assert recomputed['exact_event_agreement']==original['exact_event_agreement']
+          assert recomputed['correct_by_family']==original['correct_by_family']
+          print('Verified 48 calls, both models, common provider, prompt digests, original costs, hashes and full rescore.')
+          PY
+      - name: Persist immutable two-model raw and score artifacts to repository
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/two-model-evidence/two-model-case-role-raw.jsonl benchmarks/evidence/two-model-case-role-2026-10-24-run40091590850.jsonl
+          cp /tmp/two-model-evidence/two-model-case-role-raw.score.json benchmarks/evidence/two-model-case-role-2026-10-24-run40091590850.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/two-model-case-role-2026-10-24-run40091590850.jsonl benchmarks/evidence/two-model-case-role-2026-10-24-run40091590850.score.json
+          git commit -m 'research: archive verified Qwen and Gemma semantic decoding evidence'
+          git push origin HEAD:research/two-model-case-role-20261024
