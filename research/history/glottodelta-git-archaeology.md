@@ -1,12 +1,12 @@
 # GlottoDelta as a methodological precursor: Git archaeology
 
-Verified 24 October 2026 via connected GitHub repository `andreabenetton/glottodelta`. This is a **separate IPA atlas**, but its data and design work plausibly supported the phonological decisions for the later constructed language. The causal connection is a hypothesis until supported by the original discussions.
+Verified 24 October 2026 via connected GitHub repository `andreabenetton/glottodelta`. This is a **separate IPA atlas**, but its data and design work plausibly supported the phonological decisions for the later constructed language. A dedicated ChatGPT **creation conversation is now recovered for 27 July 2026**; this substantiates that the atlas was built to study phoneme distributions and grapheme mappings. A causal role in each **specific language-design choice** remains unverified.
 
 ## Chronological anchors from commits
 
 | Date UTC | Commit | Evidence |
 |---|---|---|
-| 27 July 2026 17:59 | `bd25974983e3` | First Git commit imports an already working **single-file IPA atlas** and scaffolds the site. Consequently, the design and data work began **before this commit**, at an unknown earlier date. |
+| 27 July 2026 17:59 | `bd25974983e3` | First Git commit imports an already working **single-file IPA atlas** and scaffolds the site. Conversation excerpts establish original work starting **at least by 05:11 UTC the same day**, preceding this 17:59 import. |
 | 27 July 2026 18:31 | `9d632d9aaa2a` | Include all PHOIBLE-attested languages in language-count metric L; avoid treating demographic-only speaker share P as if full phoneme coverage were known. |
 | 27 July 2026 18:34 | `213ba194cbc5` | UI explicitly surfaces demographic-certainty and source provenance. |
 | 27 July 2026 18:43 | `41973ec8b2ac` | Correct language-identity mismatch in search, selection and comparison. |
@@ -31,7 +31,7 @@ All timestamps above refer to **repository commits**, not the initial constructi
 
 This provides an empirical **tooling context** for the international-phoneme selection discussions: inventory prevalence, population weighting, differences between phoneme and allophone, orthography compatibility, and known data-quality hazards were being implemented **27–28 July**, **before** the original `andreabenetton/language` commit of 8 August and its transfer into Unisermo on 10 August.
 
-The GlottoDelta commit sequence **does not prove** it determined any particular Unisermo letter or phoneme choice. In particular, the six-vowel 24-unit original specification may have been drafted before or alongside the atlas, and the date of the original discussions remains open. Original `baseline/original.html` was **already working** at the first Git commit, so the prehistory may be earlier than July.
+The recovered original ChatGPT atlas conversation corroborates the research questions behind the application, but the GlottoDelta commit sequence **does not prove** that it determined any particular Unisermo letter or phoneme choice. In particular, the six-vowel 24-unit original specification may have been drafted before or alongside the atlas, and the date of the original discussions remains open. Original `baseline/original.html` was **already working** at the first Git commit, so the prehistory may be earlier than July.
 
 ## Sources and next forensic tasks
 
@@ -44,3 +44,7 @@ The GlottoDelta commit sequence **does not prove** it determined any particular 
 - https://github.com/andreabenetton/glottodelta/commit/71b6c4244dd9
 
 To establish direct influence, compare dated language-design discussion with GlottoDelta's original baseline and verify actual phoneme-specific statistics invoked in selecting/rejecting /ə/, /h/, /ŋ/, affricates, j and w. Preserve corrections and missing data rather than extrapolating globally.
+
+## Newly recovered direct ChatGPT source
+
+See [`original-chatgpt-ipa-atlas-conversation.md`](original-chatgpt-ipa-atlas-conversation.md) for user-authored requirements from **27 July 2026**, the frozen HTML blob SHA, and the clear distinction between the ChatGPT initial design and subsequent repository refinements. These direct conversational fragments replace the earlier assumption that the pre-import design time was wholly unknown.
