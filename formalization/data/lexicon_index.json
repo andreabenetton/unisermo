@@ -297,10 +297,10 @@
       "categories": [
         "function_word"
       ],
-      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired.",
+      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired. Author ratified on 2026-10-24 extension to complete causal clause in both P due Q and due Q, P, distinct from inferential ergo.",
       "form": "due",
-      "meaning_en": "because of; due to",
-      "meaning_it": "a causa di; dovuto a",
+      "meaning_en": "because of (nominal); because/since (causal clause)",
+      "meaning_it": "a causa di; perché/poiché/siccome (introduce anche una proposizione causale)",
       "origin": "legacy Unisermo extended case system",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
