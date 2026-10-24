@@ -42,6 +42,8 @@ The user also expressly approved `gen/geno/gene` and `adelgen` in the **24 Octob
 
 The preexisting general [`jer` operator](numerals.md) is used to count successive applications of a relation, **not just genealogy**. Historical user messages from **10 August 2026** already cite `bisjergen` as grandparent and `terjergen` as great-grandparent; these are transparent applications of the productive numeral + iteration mechanism. A genealogical prefix `NUMjer` specifies the number of parent links traced upward. `terjergen` thus denotes three ascendant parent links without requiring another independent lexical root.
 
+**Reference-parser limitation:** `bisjergen` is explicitly listed in the confirmed lexicon and can be recognized by the current Phase 1 parser. `terjergen` and further `NUMjergen` combinations are licensed by the language specification but **not yet handled by a general productive compound parser**. An illustrative form is therefore not proof of implemented parser support.
+
 **Open ambiguity about sex/gender scope of grandparents:** `bisjergeno` could be parsed as `bisjer + geno`, repeating the *father* relation, rather than selecting a *male individual* after two unrestricted parent links. Similarly `bisjergene` risks a maternal-line reading. The original indexed excerpts do **not** establish a binding scope rule, so neither spelling is canonized as the general "grandfather"/"grandmother". **`bisjergen` is presently the neutral canonical expression covering both**. A separate binding or gender-scoping rule is needed for exact male/female grandparent terms.
 
 ## Cousin composition: pending inverse relation
