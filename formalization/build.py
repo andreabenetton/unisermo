@@ -52,8 +52,12 @@ def build_indexes() -> dict[str, str]:
         entries[lemma] = {"form": lemma, "status": record["status"], "source": record["source"],
                           "categories": [record["category"]]}
     accepted_alphabet = set(read("formalization/data/morphology.json")["alphabet"])
-    for lemma in entries:
-        if not set(lemma) <= accepted_alphabet:
+    for lemma, record in entries.items():
+        # Lexicon convention writes a productive prefix with a terminal hyphen.
+        # The hyphen is a notation boundary, not a phoneme in its surface.
+        is_prefix = any(x["form"] == lemma and x["category"] == "derivational_prefix" for x in core)
+        phonemes = lemma[:-1] if is_prefix and lemma.endswith("-") else lemma
+        if not phonemes or not set(phonemes) <= accepted_alphabet:
             raise ValueError(f"illegal grapheme in {lemma}")
     generated = {"formalization/data/rule_registry.json": canonical({"schema": "unisermo/rule-registry@1", "entries": registry}),
                  "formalization/data/lexicon_index.json": canonical({"schema": "unisermo/lexicon-index@1", "entries": [entries[k] for k in sorted(entries)]}),
