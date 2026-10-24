@@ -42,7 +42,12 @@ The user also expressly approved `gen/geno/gene` and `adelgen` in the **24 Octob
 
 The preexisting general [`jer` operator](numerals.md) is used to count successive applications of a relation, **not just genealogy**. Historical user messages from **10 August 2026** already cite `bisjergen` as grandparent and `terjergen` as great-grandparent; these are transparent applications of the productive numeral + iteration mechanism. A genealogical prefix `NUMjer` specifies the number of parent links traced upward. `terjergen` thus denotes three ascendant parent links without requiring another independent lexical root.
 
-**Reference-parser limitation:** `bisjergen` is explicitly listed in the confirmed lexicon and can be recognized by the current Phase 1 parser. `terjergen` and further `NUMjergen` combinations are licensed by the language specification but **not yet handled by a general productive compound parser**. An illustrative form is therefore not proof of implemented parser support.
+**Reference-parser implementation:** The Phase 1 parser recognizes
+`bisjergen` as a confirmed listed lexeme and also recognizes
+`terjergen` and other productive `NUMjer` single-link iterations, and
+longer mixed relation paths, even when absent from the fixed lexicon.
+It returns typed structural analyses and supports nominal case suffixes,
+without upgrading unlisted compounds to independently confirmed roots.
 
 ## Exact maternal and paternal relations: typed genealogical paths
 
@@ -92,6 +97,12 @@ This covers first cousins at the same genealogical generation; other degrees, re
 
 Earlier studies contain `par/av/germ/sib` alternatives. These remain historical proposals: the approval of `fil` does not automatically approve `filo/file` or unrelated earlier kinship roots.
 
-`jer` remains the separately canonized general [iteration/step operator](numerals.md), not a special kinship suffix. The approved parent system validates `bisjergen` and the stated right-to-left path-composition rule. Each specified `gene/geno` link carries its own meaning; there is no global gender suffix for a whole genealogical path. The reference parser still has a limited fixed indexed vocabulary.
+`jer` remains the separately canonized general [iteration/step operator](numerals.md), not a special kinship suffix. The approved parent system validates `bisjergen` and the stated right-to-left path-composition rule. Each specified `gene/geno` link carries its own meaning; there is no global gender suffix for a whole genealogical path. The reference parser now supports **productive unindexed kinship compounds**
+as long as they can be parsed uniquely into approved atomic relation links.
+It supports `NUMjer` applied to the **next atomic link** (up to 128
+expanded steps), but deliberately does not infer scope over an entire
+unbracketed composite relation. Unsupported or ambiguous words are rejected.
+The index records explicitly accepted lexemes, while valid novel family
+compounds are parsed under the distinct status `productive_from_confirmed`.
 
 See [original dialogue vs saved Git](../research/history/august-kinship-original-dialogue-versus-git.md) for the dated original user-message index, and [migration history](MIGRATION_HISTORY.md) for the original and restored states.
