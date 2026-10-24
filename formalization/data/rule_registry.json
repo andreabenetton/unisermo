@@ -127,6 +127,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "6484d0f514157786bc0ea8489c05960d0db417aa03989309004f8a987fe19d60",
+      "id": "grammar.hypothetical_concessive_etsise_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/hypothetical_concessive_etsise_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "105da867f38796a53a7b643ac70da1a5bcd82d043d84df19201e23df7d67d2f0",
       "id": "grammar.indefinite_singular_uno",
       "source": "research/grammar/confirmed_decisions.json#decisions/indefinite_singular_uno",
