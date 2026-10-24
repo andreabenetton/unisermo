@@ -5,6 +5,9 @@ on:
     paths:
       - 'formalization/semantics/relational_frames.py'
       - 'tests/test_relational_frames.py'
+      - 'benchmarks/relational_frame_meaning.py'
+      - 'benchmarks/corpus/relational-frames-dev-001.jsonl'
+      - 'tests/test_relational_frame_meaning.py'
       - '.github/workflows/relational-frames-tests.yml'
   workflow_dispatch:
 permissions:
@@ -21,5 +24,6 @@ jobs:
       - name: Run source-licensed frame and original parser regression tests
         run: |
           python -m unittest discover -s tests -p 'test_relational_frames.py' -v
+          python -m unittest discover -s tests -p 'test_relational_frame_meaning.py' -v
           python tests/test_formalization.py
           python -m unittest discover -s tests -p 'test_proposition_meaning.py' -v
