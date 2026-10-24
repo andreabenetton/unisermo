@@ -1,6 +1,6 @@
 {
   "schema": "unisermo/confirmed-lexicon@1",
-  "confirmed_on": "2026-08-09",
+  "confirmed_on": "2026-10-24",
   "status": "confirmed_core_lexicon",
   "entries": [
     {
@@ -482,6 +482,14 @@
       "meaning_en": "billion (10^9 decimal group power)",
       "source": "Author ratification 2026-10-24; international giga- power prefix",
       "decision": "Ratify giga as the numerical power 1000000000 (short-scale billion, Italian miliardo), with a fused 1..999 group coefficient, not as an abbreviation gig."
+    },
+    {
+      "form": "ne-",
+      "category": "derivational_prefix",
+      "meaning_it": "opposto semantico di una qualita; polo contrario, non semplice negazione",
+      "meaning_en": "lexical antonym / semantic opposite of a quality, not simple negation",
+      "source": "Author ratification 2026-10-24",
+      "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel."
     }
   ]
 }
