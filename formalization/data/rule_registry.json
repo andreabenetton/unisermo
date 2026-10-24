@@ -115,9 +115,15 @@
       "status": "confirmed"
     },
     {
-      "content_sha256": "a96c1b08bd04a4e04800aae5f1a32997b38a07898840aaa79814e4fc6a66b2ab",
+      "content_sha256": "98a5a14c65796b462c9c4144b05ecb24e2e852fec45a765d6f678c8cda68edd2",
       "id": "grammar.kinship_adel_family_replaces_frat",
       "source": "research/grammar/confirmed_decisions.json#decisions/kinship_adel_family_replaces_frat",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "3b39dd410326a181c81c8d0a2d678ee86822ac0fbcb3540a654171c19bd5b4e0",
+      "id": "grammar.kinship_gen_adelgen_and_generational_iteration",
+      "source": "research/grammar/confirmed_decisions.json#decisions/kinship_gen_adelgen_and_generational_iteration",
       "status": "confirmed"
     },
     {
