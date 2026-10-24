@@ -554,6 +554,14 @@
       "source": "Author selection in 2026-10-24 discussion preceding this ratification; record as provisional rather than author-ratified",
       "decision": "Functional fitness only; separate from efficiency, effectiveness, and general quality.",
       "status": "proposed_pending_explicit_ratification"
+    },
+    {
+      "form": "ne-",
+      "category": "derivational_prefix",
+      "meaning_it": "opposto semantico di una qualita; polo contrario, non semplice negazione",
+      "meaning_en": "lexical antonym / semantic opposite of a quality, not simple negation",
+      "source": "Author ratification 2026-10-24",
+      "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel."
     }
   ]
 }

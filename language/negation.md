@@ -30,3 +30,16 @@ Examples:
 `-no` carries the negative force of the focused proposition. An additional
 preverbal `no` is not normally required: use `i-no vidi`, not ordinary
 `*i-no no vidi`.
+
+## 4. Negation is not antonymy
+
+**Ratified 2026-10-24:** Free `no` is the sole ordinary grammatical
+negator; historical attached `no-` is retired. Semantic antonyms of
+opposable qualitative roots instead use fused `ne-` (see `derivation.md`).
+
+- `tik no bel` — this is not beautiful (does not entail ugly)
+- `tik nebel` — this is ugly
+- `tik no nebel` — this is not ugly (does not entail beautiful)
+
+`anti-` continues to mark active opposition, not negation or an automatically
+derivable antonym.
