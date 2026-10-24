@@ -115,9 +115,15 @@
       "status": "confirmed"
     },
     {
-      "content_sha256": "e4e77175e569936e080e5e0f255f81ea8ad0a9da693abf13ebf031deb1fdd2ac",
-      "id": "grammar.lexical_aer_plan_aerplan_frat",
-      "source": "research/grammar/confirmed_decisions.json#decisions/lexical_aer_plan_aerplan_frat",
+      "content_sha256": "a96c1b08bd04a4e04800aae5f1a32997b38a07898840aaa79814e4fc6a66b2ab",
+      "id": "grammar.kinship_adel_family_replaces_frat",
+      "source": "research/grammar/confirmed_decisions.json#decisions/kinship_adel_family_replaces_frat",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "e09bc8924134c1b7cf615f3c6aef1866eb1947f60fab166d2ad61d2b977ea838",
+      "id": "grammar.lexical_aer_plan_aerplan",
+      "source": "research/grammar/confirmed_decisions.json#decisions/lexical_aer_plan_aerplan",
       "status": "confirmed"
     },
     {
