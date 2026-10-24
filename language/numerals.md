@@ -220,3 +220,12 @@ Author-approved invariant ordinal suffix: `-im` follows the entire canonical pos
 Ordinal values are 1..999,999,999,999. `nulim` has **not** been approved. Full analytic forms such as `unoim`, `otoim` and compound-final `dekunoim` were explicitly accepted by the author on 24 October 2026 as valid **noncanonical variants**. The parser recognizes them and normalizes them to `unim`, `otim`, `dekunim` respectively; the generator emits only contracted canonical forms.
 
 Ordinals act as invariant pre-nominal modifiers, like adjectives: `bisim dom` is the second house; `bisim domem` marks accusative on the noun, not on the ordinal. The restricted SVO reference parser handles a *single* ordinal modifier; combining one with quantifiers, demonstratives, plural particles, or other modifiers awaits separate scope and ordering rules. Fused `NUMim` is not a fraction by itself. The proposed two-word numerator/ordinal-denominator fraction syntax remains unratified.
+
+
+---
+
+## 9. Rational fractions (author ratification, 24 October 2026)
+
+The numerator is an invariant canonical cardinal (0..999,999,999,999), followed by exactly one space and a positive ordinal denominator (2..999,999,999,999). Orthographic form is **two separate words**: `CARDINAL ORDINAL`. The ordinal denotes the number of equal parts of a unit; `uno bisim` = 1/2 (no special root for 'half'); `bis terim` = 2/3, `ter forim` = 3/4, `kin senim` = 5/100, `nul bisim` = 0/2 and `kin terim` = 5/3. Improper fractions are valid; no normalization of arithmetic values or simplification of written fractions is performed. `bis forim` (2/4) remains distinct in representation from `uno bisim` (1/2).
+
+The ratified noncanonical analytic variants of ordinal denominators, such as `uno otoim`, may be parsed and normalized to canonical `uno otim`. The *generator* always uses the canonical contracted ordinal denominator. Denominator 1 or 0 and negative numerator/denominator are not licensed by this rule. Parsing a pair of tokens as a fraction requires the explicit grammatical numeric-expression context; a multiword numeral must not be silently reinterpreted as a prenominal modifier sequence inside the restricted clause parser. Numerators must be cardinal values rather than `NUMjer`, `NUMfol` or ordinals. See the standalone `parse_fraction` API.

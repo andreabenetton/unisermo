@@ -36,6 +36,10 @@ The positive ordinal operator `-im` generates a single fused form and contracts 
 
 Commands: `python3 -m formalization order 21` and `python3 -m formalization ordinal bisdekunim`.
 
+## Ratified two-word fractions
+
+`CARDINAL ORDINAL` is a fraction with an integer numerator 0..999999999999 and ordinal denominator 2..999999999999; improper fractions remain valid, and original parts are preserved. Use `python3 -m formalization ratio 2 4` to generate `bis forim`, or `python3 -m formalization fraction 'bis forim'` to parse it. The denominator accepts ratified analytic ordinal spellings while the canonical generator contracts them. No automatically reduced fraction or clause-level modifier stacking is inferred.
+
 ## Commands
 
 From the repository root (Python 3.11+ recommended):

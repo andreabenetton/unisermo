@@ -148,3 +148,26 @@ class NumeralParser:
                     "canonical_form": canonical, "source": "language/numerals.md",
                 }
         return None
+
+    def generate_fraction(self, numerator: int, denominator: int) -> str:
+        """Ratified analytic fraction: positive denominator >=2, numerator >=0."""
+        if isinstance(denominator, bool) or not isinstance(denominator, int) or denominator < 2 or denominator > MAX_CARDINAL:
+            raise ValueError("denominator must be an integer in 2..999999999999")
+        return self.generate_numeral(numerator) + " " + self.generate_ordinal(denominator)
+
+    def parse_fraction(self, surface: str) -> dict | None:
+        """Preserve exact numerator/denominator, without simplifying fractions."""
+        if not isinstance(surface, str) or len(surface) > 2 * (MAX_NUMERAL_CHARS + 2) + 1:
+            return None
+        parts = surface.split(" ")
+        if len(parts) != 2:
+            return None
+        numerator = self.parse_numeral(parts[0])
+        denominator = self.parse_ordinal(parts[1])
+        if numerator is None or denominator is None or denominator["value"] < 2:
+            return None
+        num, den = numerator["value"], denominator["value"]
+        return {"kind": "fraction", "form": surface, "numerator": num,
+                "denominator": den, "canonical_form": self.generate_fraction(num, den),
+                "status": "canonical_by_rule" if surface == self.generate_fraction(num, den) else "accepted_analytic_variant",
+                "source": "language/numerals.md"}
