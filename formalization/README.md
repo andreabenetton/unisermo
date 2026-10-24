@@ -13,6 +13,23 @@ from proposal and alternatives through evidence to explicit acceptance. The
 weighted lexical objective in LDR-0002 remains **Experimental**, not an
 established language rule.
 
+## Cardinal numerals and iteration (0–9999)
+
+The `formalization/parser/numeral.py` module now generates and parses **every canonical number 0–9,999**. It enumerates 10,000 distinct forms and rejects variants with explicit zero-place components, redundant `uno` before a power, repeated powers and unknown spellings. It also recognizes positive `NUMjer` counters and passes the same normalized `_cardinal` generator to the kinship parser (whose *path expansion* independently remains limited to 128).
+
+Examples:
+
+```sh
+python3 -m formalization number 321
+python3 -m formalization numeral tersenbisdekuno
+python3 -m formalization iteration bisjer
+python3 -m formalization sentence 'vidi tersenbisdekuno domem'
+```
+
+Numerals act as **prenomial quantifiers** and are never case-inflected; case remains on the following noun. `nul` means zero. Redundant `wi` is rejected in the supported SVO subset when quantity is specified by any canonical numeral. The ordinary confirmed-lexicon and historical-example provenance of words is retained independently from the newly computed `cardinal_numeral` analysis (`status: canonical_by_rule`). No implication of new canonical words or empirical efficiency is intended.
+
+See [normative numerals](../language/numerals.md). Higher powers, negative numbers, fractions, decimals and ordinals are **outside this approved reference range**.
+
 ## Commands
 
 From the repository root (Python 3.11+ recommended):
@@ -22,6 +39,8 @@ python3 -m formalization build
 python3 -m formalization build --check
 python3 -m formalization validate
 python3 -m formalization analyze dikodi
+python3 -m formalization numeral tersenbisdekuno
+python3 -m formalization number 321
 python3 -m formalization sentence 'ka i no diki domem?'
 python3 -m formalization generate dik --tense past --aspect perfect --person 1
 python3 -m formalization noun spets --case genitive
@@ -50,7 +69,7 @@ unimplemented logical-form layer and must not be mistaken for a real semantic pa
 
 ## Capabilities and deliberate limits
 
-The reference parser recognizes finite tense/aspect/person/number, case-marked
+The reference parser recognizes fused canonical cardinals through 9,999 as prenominal quantifiers, positive NUMjer counters, finite tense/aspect/person/number, case-marked
 nominals, the `-it` resultative/participle, and a small SVO sentence pattern
 with optional pronoun subject, pro-drop, `ka` questions, and pre-verbal `no`.
 Multiple analyses are preserved for ambiguous forms; unsupported syntax is
