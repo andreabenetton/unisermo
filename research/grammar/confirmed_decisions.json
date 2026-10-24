@@ -186,6 +186,10 @@
     {
       "id": "numeral_mila_mega_giga_20261024",
       "decision": "Ratify mila = 1000, mega = 1000000, giga = 1000000000 and retire mil from canonical numerals (preserved only as historical attestation). Compose all cardinal integers 0..999999999999 as descending nonzero 1..999 coefficients followed by giga, mega, mila, then bare units. Omit zero groups and coefficient uno before powers. NUMjer uses the same complete canonical integer grammar for positive iteration counts; genealogical expansion retains a separate 128-step safety limit. Author approval dated 2026-10-24. Fractions, signed numbers, ordinals and powers beyond giga remain undecided."
+    },
+    {
+      "id": "conditional_se_20261024",
+      "decision": "Ratify free standalone se as the IF conditional introducer, phonologically and orthographically distinct from si YES and no NO/NOT; Latin si is its source adaptation. The conjunction se introduces a condition clause. The separate marker for THEN (tum/alor), its optionality, conditional scope and parsing, inferential ergo, negative nisi, contrastive sed, and counterfactual morphology remain proposals, not implied ratifications. Author explicitly agreed on 2026-10-24."
     }
   ]
 }

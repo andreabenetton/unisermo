@@ -598,6 +598,14 @@
       "source": "ne- + fas; author ratification 2026-10-24",
       "decision": "Contrary to sacred permissibility, not merely negated no fas.",
       "status": "confirmed"
+    },
+    {
+      "form": "se",
+      "category": "function_word",
+      "meaning_it": "se; introduce una condizione",
+      "meaning_en": "if; condition introducer",
+      "source": "Explicit author ratification 2026-10-24, Latin si adapted to distinguish si=yes",
+      "decision": "Ratify standalone se as IF, distinct from confirmed si YES and no NO/NOT. No automatic ratification of then/tum, ergo, nisi, sin, sed or other connective forms."
     }
   ]
 }
