@@ -29,7 +29,8 @@
               "lexical_form",
               "kinship_relation",
               "cardinal_numeral",
-              "iteration_counter"
+              "iteration_counter",
+              "multiplicative_factor"
             ]
           },
           "lemma": {
@@ -92,6 +93,11 @@
           },
           "source": {
             "type": "string"
+          },
+          "factor": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 999999999999
           }
         },
         "additionalProperties": false
