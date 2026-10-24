@@ -1,0 +1,63 @@
+name: Archive semantic contrast evidence once
+on:
+  push:
+    branches: [research/semantic-contrast-pilot-20261024]
+    paths: ['.github/workflows/semantic-contrast-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive verified semantic contrast evidence once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Retrieve original successful Qwen run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/unisermo-evidence
+          gh run download 40083465724 --repo andreabenetton/unisermo --name semantic-contrast-40083465724 --dir /tmp/unisermo-evidence
+          test -s /tmp/unisermo-evidence/semantic-contrast-raw.jsonl
+          test -s /tmp/unisermo-evidence/semantic-contrast-raw.score.json
+      - name: Verify original bytes, scoring, caller and cost provenance
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          from benchmarks.semantic_contrast import CORPUS, score, load_corpus
+          p=Path('/tmp/unisermo-evidence/semantic-contrast-raw.jsonl')
+          s=json.loads(Path('/tmp/unisermo-evidence/semantic-contrast-raw.score.json').read_text())
+          rows=[json.loads(line) for line in p.read_text().splitlines() if line.strip()]
+          assert len(rows)==60 and len({r['id'] for r in rows})==60
+          assert hashlib.sha256(p.read_bytes()).hexdigest()==s['raw_sha256']
+          assert hashlib.sha256(CORPUS.read_bytes()).hexdigest()==s['corpus_sha256']
+          assert all(r['returned_model']=='qwen/qwen3-32b' for r in rows)
+          assert all(r['finish_reason']=='stop' for r in rows)
+          assert all(r['provider']=='DeepInfra' for r in rows)
+          assert abs(sum(r['usage']['cost'] for r in rows)-s['observed_cost_usd'])<1e-12
+          assert s['observed_cost_usd']<0.04
+          rechecked=score(rows, load_corpus())
+          assert rechecked['paired_outcomes']==s['paired_outcomes']
+          for c in ('cold','guided'):
+              assert rechecked['conditions'][c]['correct']==s['conditions'][c]['correct']
+              assert rechecked['conditions'][c]['usage']==s['conditions'][c]['usage']
+          print('VERIFIED all 60 answers, scores, provider data, hashes and cost')
+          PY
+      - name: Store immutable original evidence in research branch
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/unisermo-evidence/semantic-contrast-raw.jsonl benchmarks/evidence/semantic-contrast-2026-10-24-run40083465724.jsonl
+          cp /tmp/unisermo-evidence/semantic-contrast-raw.score.json benchmarks/evidence/semantic-contrast-2026-10-24-run40083465724.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/semantic-contrast-2026-10-24-run40083465724.jsonl benchmarks/evidence/semantic-contrast-2026-10-24-run40083465724.score.json
+          git commit -m 'research: preserve verified semantic contrast responses and scores'
+          git push origin HEAD:research/semantic-contrast-pilot-20261024
