@@ -1,0 +1,41 @@
+name: One-shot strict schema grammar
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/operator-schema-once.yml']
+permissions:
+  contents: read
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Confirm one-shot invocation
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MESSAGE" = 'ci: execute eight strict-schema grammar trials' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate frozen scoring schema and test length
+        run: |
+          python - <<'PY'
+          from benchmarks.operator_schema_strict import build_strict
+          q,k=build_strict()
+          assert len(q)==len(k)==8
+          assert sum(len(x['events']) for x in k)==24
+          PY
+      - name: Perform eight paid requests
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.operator_schema_strict_runner --output benchmarks/reports/schema-strict.jsonl
+      - name: Preserve outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: schema-strict-${{ github.run_id }}
+          path: benchmarks/reports/schema-strict*
+          if-no-files-found: warn
+          retention-days: 30
