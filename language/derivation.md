@@ -120,6 +120,23 @@ constrained by lexical opposability, not by arbitrary string prefixing.
 
 
 
+
+### Normative antonyms: four distinct domains (ratified 2026-10-24)
+
+| Domain | Positive | Contrary | Meaning of contrary |
+|---|---|---|---|
+| Moral character | `prob` | `neprob` | morally bad |
+| Justice/fairness | `just` | `nejust` | unjust |
+| Applicable positive law | `legal` | `nelegal` | illegal/unlawful |
+| Sacred or religious order | `fas` | `nefas` | impious/sacrilegious |
+
+The independent particle `no` negates the stated predicate without asserting
+its contrary: `no legal` does not necessarily mean `nelegal`; `no fas`
+does not necessarily mean `nefas`. In particular, `nejust` means unjust,
+not illegal. A binary contextual distinction may yield equivalent extensions,
+but the expressions remain semantically different. `ne-` is licensed on
+opposable qualitative bases, not arbitrary nouns or category labels.
+
 ### Canonical phase prefixes
 
 A restricted, semantically compositional phase family is canonical with the

@@ -43,3 +43,17 @@ opposable qualitative roots instead use fused `ne-` (see `derivation.md`).
 
 `anti-` continues to mark active opposition, not negation or an automatically
 derivable antonym.
+
+## 5. Negation of normative predicates (ratified 2026-10-24)
+
+Free `no` negates a proposition. Fused `ne-` indicates a substantive
+contrary in domains where a semantic opposite exists:
+
+- `no prob`: not morally good; `neprob`: morally bad.
+- `no just`: not just; `nejust`: unjust, not necessarily illegal.
+- `no legal`: not legal; `nelegal`: illegal under applicable positive law.
+- `no fas`: not permitted under a sacred norm; `nefas`: impious or sacrilegious.
+
+A neutral or indeterminate status need not instantiate the contrary. In a
+context with a genuinely exhaustive binary distinction the extension may
+coincide, but the grammatical and lexical operations remain separate.

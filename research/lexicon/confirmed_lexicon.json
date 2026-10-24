@@ -562,6 +562,42 @@
       "meaning_en": "lexical antonym / semantic opposite of a quality, not simple negation",
       "source": "Author ratification 2026-10-24",
       "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel."
+    },
+    {
+      "form": "legal",
+      "category": "root",
+      "meaning_it": "legale; conforme al diritto positivo applicabile",
+      "meaning_en": "legal; conforming to applicable positive law",
+      "source": "Latin legalis; author ratification 2026-10-24",
+      "decision": "Positive-law domain; distinct from just and fas.",
+      "status": "confirmed"
+    },
+    {
+      "form": "fas",
+      "category": "root",
+      "meaning_it": "lecito secondo la norma sacra o religiosa",
+      "meaning_en": "permitted under a sacred or religious normative order",
+      "source": "Latin fas; author ratification 2026-10-24",
+      "decision": "Sacred norm rather than positive law or generic morality.",
+      "status": "confirmed"
+    },
+    {
+      "form": "nelegal",
+      "category": "derived_lexeme",
+      "meaning_it": "illegale; contrario al diritto positivo applicabile",
+      "meaning_en": "illegal; unlawful",
+      "source": "ne- + legal; author ratification 2026-10-24",
+      "decision": "Contrary to legal, not merely negated no legal.",
+      "status": "confirmed"
+    },
+    {
+      "form": "nefas",
+      "category": "derived_lexeme",
+      "meaning_it": "empio; sacrilego; contrario all'ordine sacro",
+      "meaning_en": "impious; sacrilegious",
+      "source": "ne- + fas; author ratification 2026-10-24",
+      "decision": "Contrary to sacred permissibility, not merely negated no fas.",
+      "status": "confirmed"
     }
   ]
 }
