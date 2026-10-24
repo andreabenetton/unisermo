@@ -616,6 +616,42 @@
       "source": "Author ratification 2026-10-24; medi + bon",
       "decision": "Approved lexical compound medi+bon. Not intrinsically derogatory; may convey mediocre when context implies modest evaluation. Its compounding pattern must be checked against general compound morphology before treating it as productive.",
       "status": "confirmed"
+    },
+    {
+      "form": "minu",
+      "category": "degree_modifier",
+      "meaning_it": "in misura minima; appena",
+      "meaning_en": "minimally; barely",
+      "source": "Author ratification 2026-10-24: absolute intensity scale A",
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "status": "confirmed"
+    },
+    {
+      "form": "pok",
+      "category": "degree_modifier",
+      "meaning_it": "poco; in misura debole",
+      "meaning_en": "slightly; to a small degree",
+      "source": "Author ratification 2026-10-24: absolute intensity scale A",
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "status": "confirmed"
+    },
+    {
+      "form": "mult",
+      "category": "degree_modifier",
+      "meaning_it": "molto; in misura elevata",
+      "meaning_en": "very; to a high degree",
+      "source": "Author ratification 2026-10-24: absolute intensity scale A",
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ekstrem",
+      "category": "degree_modifier",
+      "meaning_it": "estremamente; in misura estrema",
+      "meaning_en": "extremely; to an extreme degree",
+      "source": "Author ratification 2026-10-24: absolute intensity scale A",
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "status": "confirmed"
     }
   ]
 }
