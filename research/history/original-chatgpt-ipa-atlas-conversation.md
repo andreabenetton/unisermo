@@ -9,8 +9,8 @@ The first recovered user message (05:11:50 UTC) begins: **“sei in grado per og
 | Approximate time | Provenance | Explicit requirement or milestone |
 | --- | --- | --- |
 | 05:11:50–05:11:57 | **User**, conversation search | Count distinct source languages that attest the phoneme for every cell in an IPA chart; avoid double counting and distinguish exact symbols. |
-| **05:15:19** | **Assistant output** | First recovered generated file: `ipa_language_counts.html`. Its old conversation sandbox address is not a verified downloadable link in the present session. |
 | 05:12:47 | **User** | Accepted a PHOIBLE-driven approach with source-traceable symbol inventories, language lists and geographic/family information. |
+| **05:15:19** | **Assistant output** | First recovered generated file: `ipa_language_counts.html`. Its old conversation sandbox address is not a verified downloadable link in the present session. |
 | 05:19:04 | **User** | When selecting a language, display its orthographic graphemes corresponding to the IPA phoneme, not only the IPA symbol. |
 | 05:21:00–05:21:44 | **User** | Produce the interactive updated chart with spelling mappings and a speaker-weighted prevalence measure, and verify ISO/Glottocode and demographic joins. |
 | 09:03:30 | **User** | Account for phonetic variants when relating IPA symbols to canonical language phonemes; adopt a many-to-many phoneme–grapheme mapping with explicit evidence. |
