@@ -1,0 +1,53 @@
+name: Archive schema repeatability research evidence
+on:
+  push:
+    branches: [research/schema-repeatability-20261024]
+    paths:
+      - '.github/workflows/schema-evidence-archive-once.yml'
+permissions:
+  actions: read
+  contents: write
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive prospective schema repeatability evidence once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: schema-repeatability-40081219392
+          run-id: 40081219392
+          github-token: ${{ github.token }}
+          path: /tmp/schema-evidence
+      - name: Verify archived original data, without API calls
+        run: |
+          python - <<'PY'
+          import json, hashlib, pathlib
+          root=pathlib.Path("/tmp/schema-evidence")
+          raw=(root/"schema-repeatability-raw.jsonl").read_bytes()
+          score=json.loads((root/"schema-repeatability-raw.score.json").read_text())
+          rows=[json.loads(line) for line in raw.splitlines() if line.strip()]
+          assert len(rows) == len({r["id"] for r in rows}) == 32
+          assert hashlib.sha256(raw).hexdigest() == score["response_digest_sha256"]
+          assert score["requests"] == 32 and score["docs"] == 8
+          assert score["model_requested"] == "qwen/qwen3-32b"
+          assert score["conditions"]["generic"]["exact_events"] == 32
+          assert score["conditions"]["strict"]["exact_events"] == 39
+          assert score["observed_provider_cost_usd"] < 0.02
+          print("artifact verified, digest:", hashlib.sha256(raw).hexdigest())
+          PY
+      - name: Preserve exact raw and scored files in evidence
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/schema-evidence/schema-repeatability-raw.jsonl benchmarks/evidence/schema-repeatability-2026-10-24-run40081219392.jsonl
+          cp /tmp/schema-evidence/schema-repeatability-raw.score.json benchmarks/evidence/schema-repeatability-2026-10-24-run40081219392.score.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add benchmarks/evidence/schema-repeatability-2026-10-24-run40081219392*
+          git diff --cached --check
+          git commit -m "research: preserve prospective schema repeatability raw evidence"
+          git push origin HEAD:research/schema-repeatability-20261024
