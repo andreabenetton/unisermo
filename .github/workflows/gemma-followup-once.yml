@@ -1,0 +1,53 @@
+name: One-shot complete Gemma case-role follow-up
+on:
+  push:
+    branches: [research/two-model-case-role-20261024]
+    paths: ['.github/workflows/gemma-followup-once.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: unisermo-gemma-case-role-followup-20261024
+  cancel-in-progress: false
+jobs:
+  followup:
+    if: >-
+      github.event.head_commit.message == 'ci: complete Gemma followup from seven preserved answers once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Confirm original valid Qwen data and Gemma recovery contract
+        run: |
+          python -m unittest discover -s tests -p 'test_gemma_case_role_followup.py' -v
+          python - <<'PY'
+          from benchmarks.gemma_case_role_followup import gemma_plan,MAX_GEMMA_REQUESTS,MAX_OBSERVED_GEMMA_USD
+          assert len(gemma_plan())==MAX_GEMMA_REQUESTS==24
+          assert MAX_OBSERVED_GEMMA_USD==0.02
+          print('24 Gemma answers required; only 17 additional billable calls; no holdout')
+          PY
+      - name: Obtain original unmodified partial-run JSONL
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/unisermo-original
+          gh run download 40091590850 --repo andreabenetton/unisermo --name two-model-case-role-40091590850 --dir /tmp/unisermo-original
+          test -s /tmp/unisermo-original/two-model-case-role-raw.jsonl
+      - name: Complete Gemma-only question set and compare with verified Qwen corpus
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python -m benchmarks.gemma_case_role_followup \
+            --prefix /tmp/unisermo-original/two-model-case-role-raw.jsonl \
+            --output benchmarks/reports/gemma-case-role-followup-raw.jsonl
+      - name: Preserve exact originals and new responses even on later failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemma-case-role-followup-${{ github.run_id }}
+          path: benchmarks/reports/gemma-case-role-followup-*
+          if-no-files-found: warn
+          retention-days: 30
