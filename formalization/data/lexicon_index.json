@@ -813,6 +813,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "Ratify standalone se as IF, distinct from confirmed si YES and no NO/NOT. No automatic ratification of then/tum, ergo, nisi, sin, sed or other connective forms.",
+      "form": "se",
+      "meaning_en": "if; condition introducer",
+      "meaning_it": "se; introduce una condizione",
+      "origin": "Explicit author ratification 2026-10-24, Latin si adapted to distinguish si=yes",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "root"
       ],
       "decision": "Canonical replacement for legacy centr. The bare root sentr is preferred over former sentrum to preserve a compact derivational base and avoid an unnecessary nominal ending.",
