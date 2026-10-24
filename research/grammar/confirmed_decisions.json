@@ -190,6 +190,10 @@
     {
       "id": "ordinal_im_positive_contraction_20261024",
       "decision": "Ratify invariant productive positive ordinal suffix -im on each canonical cardinal from 1 through 999999999999. The canonical surface removes the terminal o from a cardinal ending in uno or oto before adding im: uno->unim, oto->otim, dekuno->dekunim, bisdekuno->bisdekunim; otherwise append im unchanged (bis->bisim, dek->dekim, mila->milaim). Cardinal roots and cardinal spellings do not change. Ordinals are invariant prenominal modifiers without number or case agreement, with case remaining on the noun. The author separately ratified full analytic unoim/otoim (including compound-final forms like dekunoim) as valid noncanonical variants; parser accepts them and normalizes to the contracted canonical spelling. nulim is unratified and rejected. Fractions are a separate proposed construction, not inferred from ordinal ratification."
+    },
+    {
+      "id": "fraction_cardinal_ordinal_20261024",
+      "decision": "Ratify the analytic two-word fractional numeric expression CARDINAL ORDINAL, exactly one separating space: the numerator is a canonical cardinal 0..999999999999, and the denominator is an ordinal representing an integer in 2..999999999999. Examples uno bisim = 1/2, bis terim = 2/3, nul bisim = 0/2, kin terim = 5/3, bis forim = 2/4. No separate half root, no automatic written reduction or conversion of improper fractions, and preserve numerator and denominator independently. Analytic ordinal denominator variants are valid input and normalized to contracted canon. The expression is parsed in explicit numeric-expression context, not silently as a two-modifier noun phrase. Signed fractions, denominator zero or one, and new mathematical operators need independent decisions. Author approval on 2026-10-24."
     }
   ]
 }
