@@ -1,0 +1,25 @@
+name: Relational-frame parser offline validation
+on:
+  push:
+    branches: [research/relational-frame-gate-20261024]
+    paths:
+      - 'formalization/semantics/relational_frames.py'
+      - 'tests/test_relational_frames.py'
+      - '.github/workflows/relational-frames-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run source-licensed frame and original parser regression tests
+        run: |
+          python -m unittest discover -s tests -p 'test_relational_frames.py' -v
+          python tests/test_formalization.py
+          python -m unittest discover -s tests -p 'test_proposition_meaning.py' -v
