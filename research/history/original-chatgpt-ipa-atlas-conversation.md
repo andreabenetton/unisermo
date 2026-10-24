@@ -1,6 +1,6 @@
 # Original ChatGPT IPA atlas conversation and GlottoDelta baseline
 
-**Research log compiled 24 October 2026.** The user identified `andreabenetton/glottodelta/baseline/original.html` as the original application produced collaboratively in ChatGPT and later refined using Claude Code. A targeted prior-conversation search recovered dated **message-level excerpts** from the original ChatGPT session on **27 July 2026**. The complete export of the dialogue and the actual chat-delivered HTML binary have **not** yet been obtained.
+**Research log compiled 24 October 2026.** The user identified `andreabenetton/glottodelta/baseline/original.html` as the original application produced collaboratively in ChatGPT and later refined using Claude Code. A targeted prior-conversation search recovered dated **message-level excerpts** from the original ChatGPT session on **27 July 2026**. The complete export of the dialogue has **not** yet been obtained. However, **39 original ChatGPT-generated HTML snapshots are indexed in ChatGPT Library**; six key snapshots have been materialized and hashed, including the **exact final HTML file** imported into Git.
 
 ## Recovered conversation chronology (27 July 2026; UTC)
 
@@ -19,16 +19,22 @@ The first recovered user message (05:11:50 UTC) begins: **“sei in grado per og
 | **13:40:14** | **Assistant output** | File `ipa_language_counts_vowel_compact_sources.html` documents an intermediate compact/source-accounting chart. |
 | **13:52:53** | **Assistant output** | File `ipa_language_counts_official_ipa_2026.html` documents official IPA chart revision. |
 | **14:10:06** | **Assistant output** | File `ipa_language_counts_vowel_five_headers.html`: assistant reported five vowel headings, 15 phoneme columns and 28 vowels, including validation of JavaScript. These are reported features, not a fresh audit of the file's bytes. |
-| 16:24:05 | **Assistant output (recovered summary)** | At this stage the single-file application reportedly included evidence filters, two-language comparison, differences-only mode and a transparent L/P audit. This is assistant-reported implementation, corroborated by the later baseline's UI/content but not an exact HTML checksum from the chat attachment. |
+| 16:24:05 | **Assistant output (recovered summary)** | At this stage the single-file application reportedly included evidence filters, two-language comparison, differences-only mode and a transparent L/P audit. This is assistant-reported implementation, corroborated by the recovered final HTML file and its Git-blob match. |
 
-**Research caution:** these are indexed excerpts and paraphrases, **not** a verbatim complete transcript; do not invent missing intervening dialogue or an unverified chat URL. The first recovered user message is 05:11:50 UTC; an initial downloadable HTML is explicitly recorded at **05:15:19 UTC**. The final file cited in the chat is named `ipa_language_counts_scroll_quality.html` at **17:14:38 UTC**; do not claim bitwise equivalence with the Git baseline until the original chat attachment can be materialized and compared.
+**Research caution:** these are indexed excerpts and paraphrases, **not** a verbatim complete transcript; do not invent missing intervening dialogue or an unverified chat URL. The first recovered user message is 05:11:50 UTC; an initial downloadable HTML is explicitly recorded at **05:15:19 UTC**. The final file cited in the chat is named `ipa_language_counts_scroll_quality.html` at **17:14:38 UTC**; its Library file was created **17:08:22 UTC** and has now been independently materialized and byte-compared with the Git baseline.
 
-- **17:14:38 UTC**: latest working file identified in the ChatGPT conversation as `ipa_language_counts_scroll_quality.html`. This predates the 17:59 Git import. Its exact file SHA has not been compared with the Git baseline.
+- **17:14:38 UTC**: latest working file identified in the ChatGPT conversation as `ipa_language_counts_scroll_quality.html`. This predates the 17:59 Git import. Its Git blob hash **matches** the GlottoDelta initial baseline.
+
+## Historical HTML file recovery and independent verification
+
+Library metadata locates **39 successive `ipa_language_counts*.html` artifacts** from 05:15:31 through 17:08:22 UTC on 27 July 2026. A complete filename/time/size inventory and six independently computed snapshot hashes are in [`chatgpt-ipa-html-revision-manifest.md`](chatgpt-ipa-html-revision-manifest.md).
+
+The raw last ChatGPT file `ipa_language_counts_scroll_quality.html` (3,141,880 bytes) was materialized from the user's Library and passed to `git hash-object`: **`eab1b5ed7b5463a52202a6dd9bcd13a811af85c3`**, exactly equal to the blobs of **both** `glottodelta/baseline/original.html` and `glottodelta/public/index.html` in the first Git commit. Its SHA-256 is `93734e6d0c423b76d239b817e71d8f382cfd18d33c33204804a969bb5abcb252`. Thus **byte identity is demonstrated**, while the full conversational rationale still needs transcript export.
 
 ## Immutable Git-level trace of the app
 
 - Git repository `andreabenetton/glottodelta`, initial commit [`bd25974983e3f5f160659851880147876488c1ca`](https://github.com/andreabenetton/glottodelta/commit/bd25974983e3f5f160659851880147876488c1ca), **27 July 2026 17:59:16 UTC**, imports a working HTML app.
-- Its **`baseline/original.html` and `public/index.html` refer to the identical Git blob** `eab1b5ed7b5463a52202a6dd9bcd13a811af85c3` (3,141,880 bytes), verified in the first commit's recursive tree. This establishes identical repository content at the import point, **not an independent bit-for-bit comparison against a ChatGPT-generated file**.
+- Its **`baseline/original.html` and `public/index.html` refer to the identical Git blob** `eab1b5ed7b5463a52202a6dd9bcd13a811af85c3` (3,141,880 bytes), verified in the first commit's recursive tree. This establishes identical repository content, and **independent bit-for-bit comparison against the recovered ChatGPT file now confirms the same blob**.
 - The same Git blob remains at `baseline/original.html` in the inspected main branch; the baseline is a retained reference rather than Claude Code's subsequent restructured app.
 - The original document has approximately 1,638 lines, contains license/IPA source-date metadata (`2026-07-27`), PHOIBLE-based symbol-language lists, `SPEAKER_ESTIMATES`, `GEORGIAN_ALPHABET_ROWS`, `VERIFIED_LANGUAGE_PROFILES`, `ORTHO_BY_ISO`, IPA audio mappings, and comparison/audit UI.
 - Explicit UI explanation in the baseline: **L** represents source-attested languages while **P** is restricted to demographically linked verified/curated and qualified alternative mappings. Unresolved source attestations are not silently promoted into population percentages. The evidence filter does not rewrite underlying L/P values.
@@ -60,7 +66,7 @@ The evolving atlas **likely informed** cross-language phoneme evaluation, as its
 
 ## Remaining tasks for publication
 
-1. Locate/export the full July 27 ChatGPT transcript, including intermediate iterations, prompts and actual emitted HTML file, to verify content fingerprints and exact reasoning.
+1. Export the full July 27 ChatGPT transcript and preserve the 39 recovered HTML snapshots; the final emitted HTML content fingerprint has already been independently verified.
 2. Recover the separate **May 22** discussions on initial phoneme selection and Georgian orthography; timestamp the chronology before May 24's case discussion.
 3. Identify and verify the first source and computation behind any population-weighted claims used to select/reject each sound.
 4. Map each relevant later GlottoDelta commit to its actual conversation where possible; **a relevant commit is a search lead, not proof that any particular conversation preceded it**.
