@@ -50,3 +50,55 @@ Gold fields reflect normative forms and a restricted executable parser **without
 4. freeze an independent holdout before final selection and avoid further tuning on it.
 
 No results should authorize a canonical change or efficiency advantage claim by themselves. Archive the original raw responses and scores after a successful run and append—not overwrite—this preregistration.
+
+---
+
+## Measured outcome — executed and archived 2026-10-24
+
+**Execution:** [GitHub Actions 40086484557](https://github.com/andreabenetton/unisermo/actions/runs/40086484557) completed all 24 Qwen requests; [archive/rescore verification 40086662928](https://github.com/andreabenetton/unisermo/actions/runs/40086662928) succeeded. Original artifact `proposition-meaning-40086484557` (ID `12557605311`) is retained verbatim in the repository:
+
+- [Raw responses](../../benchmarks/evidence/proposition-meaning-2026-10-24-run40086484557.jsonl), SHA256 `ce0880dd234727b40d34b94e118803234ec266bb3ecbd7200aeb5bc1d3040037`.
+- [Original exact score](../../benchmarks/evidence/proposition-meaning-2026-10-24-run40086484557.score.json); source corpus SHA256 `d0876b7ec4cee2d06465338b7ba0b6fbd7eff627502cf9f7fa28e286ebd8b892`.
+- All returned `qwen/qwen3-32b` via `DeepInfra`, with all 24 `finish_reason=stop`. Requests were bounded and no holdout or canonical language file was changed.
+
+| Preregistered metric | Cold | Guided |
+| --- | ---: | ---: |
+| **Exact full ten-field propositions** | **0/24 (0%)** | **15/24 (62.5%)** |
+| Documents matching required JSON envelope | 12/12 | 11/12 |
+| Strictly scored correctly typed field slots | 188/240 | 206/240 |
+| Prompt tokens | 2,301 | 5,037 |
+| Completion tokens | 2,202 | 2,196 |
+| Total tokens | 4,503 | 7,233 |
+| Provider-reported USD | 0.00080064 | 0.00101784 |
+| USD per fully correct proposition | Undefined (0 successes) | 0.000067856 |
+
+Entire run: **11,736 tokens** and **USD 0.00181848**, below USD 0.02 observed-cost guard.
+
+### Per-feature strict-format error counts
+
+| Feature | Cold errors / 24 | Guided errors / 24 |
+| --- | ---: | ---: |
+| Action | 6 | 2 |
+| Agent identity / speech participant | 10 | 7 |
+| Agent grammatical number | 6 | 4 |
+| Patient lexical identity | 7 | 2 |
+| Patient quantity | 4 | 4 |
+| Patient deixis | 4 | 2 |
+| Tense | 13 | 5 |
+| Aspect | 2 | 4 |
+| Polarity | 0 | 2 |
+| Speech act | 0 | 2 |
+
+**Interpretation nuance:** Cold 0/24 is a conjunction over ten fields; it does NOT mean zero extracted correct features. Under the registered scorer, cold obtains 188/240 field slots correct; tense and agent identification are major weaknesses. The two-clause-document grouping remains relevant; the 24 events are not independent natural-language samples.
+
+**Format sensitivity:** Guided document `P001` returns an unwrapped pure JSON array. Manual inspection of the original response confirms that **both ten-field event objects match the machine reference perfectly**, but the preregistered decoder requires `{"events":[...]}`. It therefore assigns 0/2 for this document and 20 field failures. **A non-preregistered exploratory alternative** accepting both raw arrays and wrapped objects would yield **17/24 (70.83%) guided exact propositions**, not the official 15/24. Do not silently change the protocol or retroactively re-score the primary metric. Conversely, accept neither extraneous prose nor incorrect field values as exact semantic reconstruction.
+
+Guided failures cluster in particular documents: `P003` (explicit plural participant identity/number), `P010` (combined tense/aspect and subject parsing), with partial losses in `P004`, `P009`, `P012`. In `P010`, model output incorrectly reported `speaker`/singular for the first-person plural subject and `third` as an agent label for the second-person plural subject, among other errors. The guide is not a guarantee of full semantic decoding.
+
+### Scientific conclusion / next gated stage
+
+The short reference guide substantially increases exact decoding on this *small parser-compatible development subset*, at 1.27× gross provider cost (7,233 vs 4,503 total tokens, ~1.61×). But there is **no defined cold USD-per-correct estimate** when cold has zero exact outcomes; do not present infinite/finite cost ratios as general efficiency claims. These machine-gold propositions were **not checked by an independent human reviewer** (see [review sheet](proposition-meaning-human-review-sheet-2026-10-24.md): 0/24 approved).
+
+This is evidence of controlled role, quantity and grammatical-feature reconstruction under supplied instructions, not validated comprehension of connected text, pronoun anaphora, distributive scope, modal/peripheral relations or the full language. No English comparison, human readability test or final token-efficiency estimate was performed.
+
+**Research direction:** review complete sentence meanings; separate semantic accuracy from output-format compliance; test targeted person/number and TAM ambiguities in *new* development texts; formalize/source-validate additional valency and relational frames **without** changing the canon merely to fit a benchmark; introduce genuinely connected discourse only after a referential model is ratified. Preserve previous negative trials and this failure report in the research diary.
