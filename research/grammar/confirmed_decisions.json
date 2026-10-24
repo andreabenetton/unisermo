@@ -206,6 +206,10 @@
     {
       "id": "evidential_nam_20261024",
       "decision": "Ratify free connective nam for evidential/argumentative justification: P nam Q presents Q as the speaker's reason or evidence for asserting P. This does NOT entail factual causation from Q to P, nor Q's truth, sufficiency, or logical validity. Distinguish factual causal due (P due Q), inference-introducing ergo (Q ergo P), and evidential nam. Nested-clause parsing and evidential scope remain separate implementation work. Author ratification 2026-10-24."
+    },
+    {
+      "id": "hypothetical_concessive_etsise_20261024",
+      "decision": "Ratify canonical fused and invariant etsise = etsi + se, hypothetical concessive EVEN IF / EVEN SHOULD. Both etsise P, Q and Q etsise P are grammatical; P is not asserted as true or false, and Q is presented as holding even under P. Distinguish factual concessive etsi P, Q (P presented as factual/accepted) and ordinary conditional se P, Q. This compound is licensed individually, not a blanket authorization of arbitrary fused connective sequences. Full subordinate scope/nesting parser work remains open. Ratified by author 2026-10-24."
     }
   ]
 }
