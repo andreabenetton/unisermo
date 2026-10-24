@@ -91,3 +91,7 @@ This is the **living historical record** for a future methodological paper about
 ## Paper-oriented structure
 
 Suggested sections: problem and motivation; design constraints; phonological and lexical evidence; grammatical design and compositional productivity; decisions and counterfactuals; machine-readable formalization; experiment chronology with failures and negative results; quantitative decoding/cost evidence; human study; limitations, reproducibility and reflections. These are **planned paper sections**, not completed scientific claims.
+
+## 24 October 2026 — General goodness versus aesthetic and moral vocabulary
+
+Author decisions: retain `bon` only for context-dependent general positive evaluation (not a synonym of beauty); ratify `bel` strictly for aesthetic beauty; adopt `prob` for morally good/upright, to avoid `virt` and its potential collision with 'virtual'. Ratify distinct lexical entries `etik` (ethical / aligned with ethical principles), `moral` (pertaining to morality without inherent positive valence), `nobl` (noble in social or figurative sense), and `just` (just / fair; the justice dimension of morality). None of these should be treated as interchangeable. `apt` (fit/suitable for a purpose) is recorded as a provisional suggestion, not explicitly ratified in the latest decision. See `research/lexicon/confirmed_lexicon.json`. The human survey translation of `dom bon.` must be only 'La casa è buona', not 'bella'.
