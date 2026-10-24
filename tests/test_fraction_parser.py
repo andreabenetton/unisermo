@@ -15,6 +15,15 @@ class FractionTests(unittest.TestCase):
                 self.assertEqual((obj["numerator"],obj["denominator"]),(num,den))
                 self.assertEqual(obj["canonical_form"],spelling)
 
+    def test_percentages_as_hundredths(self):
+        for value in (0, 1, 5, 17, 100, 175):
+            with self.subTest(value=value):
+                form = self.lang.generate_fraction(value, 100)
+                self.assertTrue(form.endswith(" senim"))
+                result = self.lang.parse_fraction(form)
+                self.assertEqual(result["numerator"], value)
+                self.assertEqual(result["denominator"], 100)
+
     def test_variants_and_bounds(self):
         a=self.lang.parse_fraction("uno otoim")
         self.assertEqual((a["numerator"],a["denominator"]),(1,8))

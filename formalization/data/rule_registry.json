@@ -229,6 +229,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "f968e29b727c38188f1ab3a1c44f82f3ed29afdfd4a3e26eb9d52e7a9647f391",
+      "id": "grammar.percentages_as_senim_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/percentages_as_senim_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "93637f21150d327f8c5f5902e65eda3c60510166063a4d404936bb124ad02eb8",
       "id": "grammar.personal_possessives_as_genitives",
       "source": "research/grammar/confirmed_decisions.json#decisions/personal_possessives_as_genitives",

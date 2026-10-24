@@ -194,6 +194,10 @@
     {
       "id": "fraction_cardinal_ordinal_20261024",
       "decision": "Ratify the analytic two-word fractional numeric expression CARDINAL ORDINAL, exactly one separating space: the numerator is a canonical cardinal 0..999999999999, and the denominator is an ordinal representing an integer in 2..999999999999. Examples uno bisim = 1/2, bis terim = 2/3, nul bisim = 0/2, kin terim = 5/3, bis forim = 2/4. No separate half root, no automatic written reduction or conversion of improper fractions, and preserve numerator and denominator independently. Analytic ordinal denominator variants are valid input and normalized to contracted canon. The expression is parsed in explicit numeric-expression context, not silently as a two-modifier noun phrase. Signed fractions, denominator zero or one, and new mathematical operators need independent decisions. Author approval on 2026-10-24."
+    },
+    {
+      "id": "percentages_as_senim_20261024",
+      "decision": "Ratify percentages solely as the already confirmed CARDINAL ORDINAL fraction with denominator senim (=100). Thus kin senim is exactly 5%, nul senim is 0%, and sen senim is 100%. No new percent root, suffix, particle, or special parser production is introduced; use the fraction parser preserving numerator and denominator. Noninteger percentages can already be represented as ordinary fractions (2.5% = 25/1000); a decimal spelling remains a separate decision. Author approval dated 2026-10-24."
     }
   ]
 }
