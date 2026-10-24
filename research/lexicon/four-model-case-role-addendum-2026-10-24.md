@@ -28,3 +28,70 @@ Report separately for all four families and both task types: fully correct claus
 ## Decision gate
 
 Retain all data, failures and model-specific limitations. Do not merge/close PR #16 before the four-model run is verified and reported. More serious publication-grade claims require new source-reviewed sentences, independently adjudicated semantic meanings, controlled English comparators, and preferably fresh evaluation data for all four families. No canonical Unisermo grammar or lexicon changes are authorized.
+
+---
+
+## Results — completed 2026-10-24 (appended after preregistration)
+
+### Verified execution and immutable evidence
+
+- [Model execution run 40099913553](https://github.com/andreabenetton/unisermo/actions/runs/40099913553): **48/48** completed model calls, all reported provider **DeepInfra**, returned models exactly `mistralai/mistral-small-3.2-24b-instruct` and `openai/gpt-oss-20b`, each with 24 `finish_reason=stop` results. Original artifact `additional-models-40099913553`, ID `12561574521`.
+- [Evidence verification and archival run 40100228591](https://github.com/andreabenetton/unisermo/actions/runs/40100228591): completed all original response-ID/order checks, prompt digests, model/provider, SHA256, provider USD, and exact independent re-scoring.
+- [Original Mistral/GPT-OSS raw replies](../../benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.jsonl) and [score JSON](../../benchmarks/evidence/mistral-gptoss-case-role-2026-10-24.score.json) committed to this branch.
+- Frozen earlier [Qwen answers](../../benchmarks/evidence/case-role-2026-10-24-run40090842899.jsonl) and [Gemma answers](../../benchmarks/evidence/gemma-case-role-2026-10-24-final.jsonl) were not modified.
+
+### Four-family scores on the SAME development corpus
+
+The case and role tasks assess **the same 24 finite clauses** twice, so `33/48` is not 33 different language sentences and must not be used as an iid outcome.
+
+| Model family | Case exact clauses (24) | Role exact clauses (24) | Combined clause-task successes (48) | Total tokens | Provider USD |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Qwen3 32B | **16** | **15** | **31** | 11,373 | 0.00151084 |
+| Google Gemma 3 27B | **8** | **7** | **15** | 11,571 | 0.00117600 |
+| Mistral Small 3.2 24B | **17** | **16** | **33** | 11,472 | 0.00123540 |
+| OpenAI GPT-OSS 20B | **18** | **15** | **33** | 17,909 | 0.00148360 |
+
+New models' observations, broken down by task:
+
+| Metric | Mistral case | GPT-OSS case | Mistral role | GPT-OSS role |
+| --- | ---: | ---: | ---: | ---: |
+| Strict whole clauses | **17/24** | **18/24** | **16/24** | **15/24** |
+| Whole stem+tag arguments | 44/48 | 39/48 | 44/48 | 35/48 |
+| Correct argument stems | **48/48** | 39/48 | **48/48** | 35/48 |
+| Correct labels | 44/48 | **48/48** | 44/48 | **48/48** |
+| Prompt tokens | 4,260 | 4,677 | 4,212 | 4,629 |
+| Completion tokens | 1,545 | 4,488 | 1,455 | 4,115 |
+| Provider cost USD | 0.00062850 | 0.00076863 | 0.00060690 | 0.00071497 |
+| Incorrect format envelopes | 0/12 | 0/12 | 0/12 | 0/12 |
+
+The two new-model total cost was **USD 0.00271900**, below the USD 0.03 observed-cost cutoff. GPT-OSS produced substantially more completion tokens than Mistral (**8,603 vs 3,000**). Those token counts may include the distinct reasoning-control behavior; they are not equivalent amounts of visible Unisermo explanation.
+
+The main contrast is that **Mistral recovered every argument stem** but mistagged some grammatical distinctions, whereas **GPT-OSS classified every tag correctly** while failing some exact stem extraction. This means whole-proposition accuracy alone masks substantially different error modes.
+
+### Breakdown by grammatical frame (8 propositions per family)
+
+| Frame | Qwen case | Gemma case | Mistral case | GPT-OSS case | Qwen role | Gemma role | Mistral role | GPT-OSS role |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Motion with allative destination | 7 | 4 | 5 | 7 | 5 | 7 | 3 | 6 |
+| Noncausative `traes` transition | 1 | 0 | 4 | 3 | 4 | 0 | 5 | 2 |
+| Causative `traes` transformation | 8 | 4 | 8 | 8 | 6 | 0 | 8 | 7 |
+
+The previous assertion that models necessarily fail on `traes` must be qualified: **Mistral correctly identified 4/8 transition cases and 5/8 transition roles**, and GPT-OSS obtained 3/8 and 2/8. Those differences caution against inferring a language defect from Qwen/Gemma alone. They also do not prove which labeling ontology is independently correct.
+
+### Four-way agreement on the same 24 clauses
+
+| Agreement pattern | Morphological case task | Semantic role task |
+| --- | ---: | ---: |
+| **All four correct** | 7 | 2 |
+| Exactly three correct | 7 | 7 |
+| Exactly two correct | 3 | 10 |
+| Exactly one correct | 4 | 4 |
+| **All four wrong** | 3 | 1 |
+
+The three clauses wrong for **all four** models on the case task are `CR006.1`, `CR007.1`, `CR008.1`; the shared role error is `CR007.1`. All are generated two-state transition examples. Shared failures are prioritized for independent review, **not** predeclared evidence that these sentences violate the canon: four models can share the same annotation mismatch or learn similar input-language conventions.
+
+### Scientific decision
+
+Four model families now support an exploratory **error diversity** analysis, a material methodological improvement over Qwen-only tests. However, the data remain fixed development material with **0/24 independently approved semantic keys** and model-specific generation controls across historical runs. No controlled English baseline, human language comprehension evidence, or untouched test set was introduced. Keep this PR draft while the reviewer and upstream stacked branch review are outstanding; do not change Unisermo canonical case morphology, `traes` grammar, phonology or lexicon based on these results.
+
+**Next gate:** blind human adjudication of the four shared failures and a broader sample of the 24 source-licensed sentences, then new independent phrases, controlled English comparison and preregistered four-family execution with validated effective generation controls.
