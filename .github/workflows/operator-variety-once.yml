@@ -1,0 +1,35 @@
+name: One-shot operator variety comprehension
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/operator-variety-once.yml']
+permissions:
+  contents: read
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Verify one-shot intent
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          test "$MESSAGE" = 'ci: run operator variety eight request pilot' || exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check scoring and corpus
+        run: python -m unittest discover -s tests -p 'test_operator_variety.py' -v
+      - name: Eight bounded OpenRouter calls
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.operator_variety_runner --output benchmarks/reports/operator-variety.jsonl
+      - name: Preserve original answers and scoring
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: operator-variety-${{ github.run_id }}
+          path: benchmarks/reports/operator-variety*
+          if-no-files-found: warn
+          retention-days: 30
