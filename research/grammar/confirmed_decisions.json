@@ -173,7 +173,11 @@
     },
     {
       "id": "kinship_adel_family_replaces_frat",
-      "decision": "Restore the user-confirmed 10 August 2026 sibling family, omitted from Git in 2026: adel = gender-neutral sibling (brother/sister), adelo = brother (male sibling), adele = sister (female sibling). Retire frat as a current lexical item; preserve it solely in historical artifacts and archived benchmark corpora. The -o/-e distinction here is approved for the adel sibling family; do not infer universal kinship or noun-gender derivation. This restoration is explicitly directed by the author on 24 October 2026. Other suggested kinship forms such as adelgen and gen remain separate historical candidates pending formal approval."
+      "decision": "Restore the user-confirmed 10 August 2026 sibling family, omitted from Git in 2026: adel = gender-neutral sibling (brother/sister), adelo = brother (male sibling), adele = sister (female sibling). Retire frat as a current lexical item; preserve it solely in historical artifacts and archived benchmark corpora. The -o/-e distinction here is approved for the adel sibling family; do not infer universal kinship or noun-gender derivation. This restoration is explicitly directed by the author on 24 October 2026. Related parent forms gen/geno/gene and adelgen were expressly approved by the author on 24 October 2026 in a separate follow-up decision; their genealogical semantics are documented separately."
+    },
+    {
+      "id": "kinship_gen_adelgen_and_generational_iteration",
+      "decision": "Canonize gen = parent (neutral), geno = father, gene = mother, and adelgen = sibling of a parent (uncle/aunt, neutral). Productive genealogical relation compounding reads A+B as A relative to B, so adelgen = sibling of parent. The already accepted NUMjer iteration operator counts applications of a relation: bisjergen = grandparent (parent of parent, neutral); terjergen = great-grandparent (three parent steps). Fused compounds do not require standalone roots for each generation. The sex-marking scope in longer compounds such as bisjergeno is not yet resolved, so no gender-specific grandparent spelling is canonized by this decision. The child/offspring inverse root fil and cousin composition filadelgen remain proposals pending explicit approval. Direct author approval of gen/geno/gene and adelgen is dated 24 October 2026; bisjergen and terjergen also occur in indexed 10 August 2026 original design dialogue."
     }
   ]
 }
