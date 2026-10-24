@@ -211,6 +211,12 @@
       "category": "particle",
       "status": "decision_attested_not_indexed",
       "source": "language/noun_number_system.md"
+    },
+    {
+      "form": "mil",
+      "category": "numeral",
+      "status": "example_only",
+      "source": "language/MIGRATION_HISTORY.md"
     }
   ]
 }
