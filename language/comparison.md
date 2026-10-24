@@ -97,7 +97,7 @@ No `dan` is used, because there is no overt second term — the comparison is im
 Pattern:
 
 ```
-A  minus  ADJ
+A  minim  ADJ
 ```
 
 Example:
