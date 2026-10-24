@@ -70,5 +70,13 @@ class WordParser:
                     "status": "productive_from_confirmed",
                     "case": case, "suffix": ending, "kinship": parsed,
                 })
+        cardinal = self.parse_numeral(surface)
+        if cardinal is not None:
+            out.append({"kind": "cardinal_numeral", "lemma": surface,
+                        "status": cardinal["status"], "value": cardinal["value"]})
+        iteration = self.parse_iteration(surface)
+        if iteration is not None:
+            out.append({"kind": "iteration_counter", "lemma": surface,
+                        "status": iteration["status"], "count": iteration["count"]})
         return {"surface": surface, "analyses": out}
 

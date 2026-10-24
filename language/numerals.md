@@ -14,7 +14,7 @@ A formal specification of the cardinal numerals of the synthetic language. This 
 
 The numerals follow the same four priorities as the rest of the language:
 
-1. **Compactness.** Every base numeral is exactly three letters (CVC), giving a uniform rhythm and a minimum-length encoding for the digits.
+1. **Compactness.** The ten digit names and three power names are each three letters long. Their syllabic shapes differ (for example `uno` and `oto` are VCV), so equal written length must not be presented as a uniform CVC phonotactic shape or as a proven minimal encoding.
 2. **Recognizability.** Each form is adapted from internationally recognizable sources (Latin, Romance, Germanic), so a speaker of any major European language can guess most digits on first hearing.
 3. **Regularity.** Compound numerals are built by simple concatenation — there are no irregular teens, no decade-specific stems, no special multiplicative forms.
 4. **Auditory clarity and phonotactic safety.** All forms respect the safety rules of [`vocabulary_design_rules.md`](vocabulary_design_rules.md): no initial consonant clusters, no ambiguous `ng`, no reliance on fragile minimal pairs.
@@ -41,7 +41,7 @@ The thirteen base numerals are:
 | 100 | `sen` | cent / cento |
 | 1000 | `mil` | mille / mil |
 
-All forms are three letters of CVC shape. Each respects the alphabet defined in [`alphabet_and_phonology.md`](alphabet_and_phonology.md) and the syllable rules of [`vocabulary_design_rules.md`](vocabulary_design_rules.md).
+All thirteen forms are three letters long, **but not all are CVC**: `uno` and `oto` are VCV. The term “thirteen base numerals” means **ten digits plus three powers of ten**, not a base-13 positional system. Each form is written with the official alphabet.
 
 ---
 
@@ -108,6 +108,18 @@ The form for `1000` is the bare word `mil` — `uno` is **not** prefixed.
 
 Larger compounds continue the same big-endian, linker-free pattern and remain one orthographic word: `mil + (hundreds) + (decades) + (units)`.
 
+### 3.7 Explicit current domain and zero/one rules
+
+The specification and executable reference parser now cover **every integer from 0 through 9,999**, each in a single canonical fused written form. Higher magnitudes, fractions, decimals, ordinals, signed numbers and specialized measurement/clock readings **are not defined by these cardinal rules**; they need separate decisions. This does **not** imply that the language cannot eventually express such values.
+
+- **Zero:** `nul` alone. Omitted decimal positions are **silent**: 405 is `forsenkin`, never `forsennuldekkin`.
+- **One before a power:** the multiplier `uno` is **always omitted** before `dek`, `sen`, `mil`. Thus 10=`dek`, 100=`sen`, 1000=`mil`; not `unodek`, `unosen`, `unomil`.
+- **Single canonical spelling per integer:** do not repeat power markers at the same magnitude, spell out silent zeroes, or prefix an unnecessary `uno`. `nul` is not part of positive compounds.
+- **Compositional boundary examples:** `senuno` = 101, `milsen` = 1100, `bismilbisdekses` = 2026, `ninmilninsennindeknin` = 9999.
+- Numbers always use decimal place-value composition and **three written power words**, with at most one thousands, hundreds and tens component in that order.
+
+These constraints are descriptive formalization of the existing accepted examples, not the approval of new numeral roots. Numerical parser support is [documented here](../formalization/README.md).
+
 ---
 
 ## 4. Iteration and step counter `jer`
@@ -161,7 +173,7 @@ Numerals themselves do not inflect for case or number.
 - The form for `1` is `uno`. It is **not** prefixed to `sen` or `mil` (so `100 = sen`, not `*uno sen`; `1000 = mil`, not `*uno mil`).
 - The form for `3` is `ter`, not `*tri`, because initial CC clusters are disallowed in the core vocabulary (see [`vocabulary_design_rules.md`](vocabulary_design_rules.md) §3 Rule 2).
 - The form `kin` is canonical /kin/.
-- All base numerals are three letters; this is intentional and gives the digit set a uniform CVC rhythm.
+- All thirteen base forms are three letters long, but they do **not** share one universal CVC pattern (`uno` and `oto` are VCV). This corrects an inherited descriptive error without changing any canonical word.
 
 ---
 

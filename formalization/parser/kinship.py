@@ -10,30 +10,13 @@ admitted. An unsupported or structurally ambiguous form fails closed.
 from __future__ import annotations
 
 from functools import lru_cache
+from .numeral import _cardinal
 
 
 # Approved atomic relations, not arbitrary nouns or historical candidate roots.
 KINSHIP_LINKS = ("adelo", "adele", "adel", "geno", "gene", "gen", "fil")
-DIGITS = ("nul", "uno", "bis", "ter", "for", "kin", "ses", "set", "oto", "nin")
 MAX_KINSHIP_STEPS = 128
 MAX_KINSHIP_CHARS = 256
-
-
-def _cardinal(n: int) -> str:
-    """Canonical fused decimal expression for 1..MAX_KINSHIP_STEPS."""
-    if not 1 <= n <= MAX_KINSHIP_STEPS:
-        raise ValueError("kinship iteration out of supported range")
-    if n < 10:
-        return DIGITS[n]
-    if n < 20:
-        return "dek" + ("" if n == 10 else DIGITS[n - 10])
-    if n < 100:
-        tens, units = divmod(n, 10)
-        return DIGITS[tens] + "dek" + (DIGITS[units] if units else "")
-    hundreds, remainder = divmod(n, 100)
-    return ("" if hundreds == 1 else DIGITS[hundreds]) + "sen" + (
-        _cardinal(remainder) if remainder else ""
-    )
 
 
 # Longest numeric prefixes first; no zero-iteration form.

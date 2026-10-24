@@ -15,10 +15,10 @@ class ClauseParser:
             raise ValueError(f"unrecognized {required_case} nominal head: {head}")
         modifiers = words[:-1]
         if not (len(modifiers) == len(set(modifiers)) and
-                all(x in self.demonstratives | self.quantifiers | {"wi"} for x in modifiers)):
+                all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None for x in modifiers)):
             raise ValueError(f"unsupported noun modifiers: {modifiers}")
         demonstratives = [x for x in modifiers if x in self.demonstratives]
-        numerals = [x for x in modifiers if x in self.quantifiers]
+        numerals = [x for x in modifiers if x in self.quantifiers or self.parse_numeral(x) is not None]
         if len(demonstratives) > 1 or len(numerals) > 1 or ("wi" in modifiers and numerals):
             raise ValueError("unsupported or redundant quantification")
         if demonstratives and modifiers[0] not in self.demonstratives:
@@ -27,8 +27,10 @@ class ClauseParser:
             raise ValueError("wi must directly precede noun in this subset")
         if len(choices) != 1:
             raise ValueError(f"ambiguous nominal head {head}: {choices}")
+        parsed_cardinals = [self.parse_numeral(x) for x in numerals]
+        values = [x["value"] for x in parsed_cardinals if x is not None]
         return {"kind": "noun_phrase", "lemma": choices[0]["lemma"], "case": required_case, "modifiers": modifiers,
-                "lexical_status": choices[0]["status"]}
+                "lexical_status": choices[0]["status"], "numerical_value": values[0] if values else None}
 
     def parse_sentence(self, sentence: str) -> dict:
         """Subset: [ka] [S-NP] [no] finite-V [OBJ-NP]. Unsupported syntax fails closed."""
