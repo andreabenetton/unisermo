@@ -22,6 +22,14 @@ Original dated 10 August conversation-index messages around 16:12–16:32 also i
 
 Historical pre-approval observations below are retained as evidence for the former state, **not current normative status**.
 
+## 24 October — `fil` ratification and explicit maternal/paternal paths
+
+In a further message the author expressly confirms `fil` as **ratified**, then asks how to distinguish a **maternal** grandmother from a **paternal** grandmother. This is a new direct source for the offspring root and for the requested *exact-path feature*; it must **not** be backdated to the 10 August original thread.
+
+The resulting normative design takes the already approved meaning **`A+B = A relative to B`** and treats `geno` (father) and `gene` (mother) as **atomic typed relation links**, read from right to left. Thus: `genegene` mother's mother, `genegeno` father's mother, `genogene` mother's father, `genogeno` father's father. This avoids a floating whole-compound gender suffix. The previously canonical `bisjergen` remains generic grandparent; `bisjergene` and `bisjergeno` each repeat the specific following parent relation, rather than denoting all grandmothers or grandfathers. `filadelgen` is the transparent first-cousin expression: offspring of parent's sibling.
+
+**Independent boundaries:** the root `fil` was ratified by the author on **24 October**, and the exact four-way grandparent path system was articulated in that same consultation. Their productive construction is justified by earlier 10 August `gen/adel/jer` ideas, but there is **no independently recovered 10 August source that explicitly canonizes all four new strings**. The lexicon and Phase 1 parser support the explicitly indexed compounds; generalized automatic parsing of arbitrary deeper genealogy remains unimplemented. **`filo/file` are not approved by the user's `fil` ratification alone**.
+
 ## Main finding: a conversation-level confirmation absent from the confirmed Git lexicon
 
 | Timestamp (UTC) | Evidence | What can be established |
