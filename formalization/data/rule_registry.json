@@ -79,6 +79,12 @@
       "status": "confirmed"
     },
     {
+      "id": "grammar.exception_ecce_eccese_20261024",
+      "status": "confirmed",
+      "source": "research/grammar/confirmed_decisions.json#decisions/exception_ecce_eccese_20261024",
+      "content_sha256": "f4042ee9e789fd5bffe7b6c0dcde04f83ef4624d97ad3dca6c2f7a7208f2cb48"
+    },
+    {
       "content_sha256": "88c13e466b8ec4a89c005e022d3fc261c0b4948b7a2ec209a14b304716a2d511",
       "id": "grammar.explicit_state_transition_traes",
       "source": "research/grammar/confirmed_decisions.json#decisions/explicit_state_transition_traes",
