@@ -91,3 +91,8 @@ The combination — fixed SVO default plus permitted reordering — gives the re
 Free-standing `alor` marks **THEN**, the consequent in a conditional relation introduced by ratified `se` (IF); `ma` is the ordinary adversative conjunction **BUT**; `ergo` introduces an inferential conclusion **THEREFORE / THUS**. They are distinct from each other and from already ratified `e` (AND) and `o` (OR).
 
 Schematic illustrations (not claims of complete parser support): `se P, alor Q` ('if P, then Q'), `P ma Q` ('P but Q'), `P, ergo Q` ('P, therefore Q'). Full clausal grammar, nesting, precedence and whether `alor` may be omitted in every construction remain to be decided separately. `sed` and `tum` were alternatives considered, **not** ratified.
+
+
+## Order of causal clauses (ratified 24 October 2026)
+
+Both `P due Q` (effect followed by its causal explanation) and `due Q, P` (fronted causal clause followed by effect) are accepted. In either order Q is the cause and P the effect. `Q, ergo P` instead presents P as an inference/conclusion. General subordinate nesting and delimiter rules are not yet implemented in the restricted Phase 1 parser; no silent acceptance of unparsed forms is implied.
