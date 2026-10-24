@@ -30,6 +30,17 @@ For speaker-level details, provenance and caveats see [early May conversation ev
 | 10 August 2026, 14:42:37 | Assistant reported 21 canonical graphemes and exclusion of `x` from lexical roots. | Previous assistant output; corroborated by `unisermo` commit `70e18f59c492` |
 | 10 August 2026, 15:41:12 | Assistant described distinctions between `alt`, `bas`, `mov altad`, `mov basad`, `altmov` and `basmov`; reported a local head `8bb979b`. | Previous assistant output; investigate original branch/repository |
 
+## 9–10 August additions: original messages correlated with Git objects
+
+| Original dated UTC item | Message-level evidence | Independent Git anchor / limitation |
+| --- | --- | --- |
+| **9 Aug 20:45:35** user | Individual root adaptations `cin→kin`, `doc→dots`, `fac→fak`, `dik`, `cur→kurar`; no blanket transliteration | [`16d899da`](https://github.com/andreabenetton/unisermo/commit/16d899da5e68a2328c5018f16c12ddc8bcd4f7d3), [`0beab462`](https://github.com/andreabenetton/unisermo/commit/0beab4622f235d43fb774cc8f9d98db69aa57701); original full transcript absent |
+| **9 Aug 20:51:23** user | Fixed `root + TAM + person + optional N`; requests complete legacy audit | [`0b4856d5`](https://github.com/andreabenetton/unisermo/commit/0b4856d544345e7cebea023bd92006ebf76032de) 20:57; near-time correlation, not complete proof of every step |
+| **9 Aug 21:03:17** user | `com→kun`, `ker` WHY, `cur→kurar`, `-ia` as /i.a/, clarify article | [`d5d9ed7c`](https://github.com/andreabenetton/unisermo/commit/d5d9ed7c650e0c5ace90abf6487d15ec67e033a2) 21:05; resolves `kom/kur/un` collisions |
+| **10 Aug 07:13:38** assistant | Comparative 25/74-root phonotactic trial reported, comparing consonant clusters and vowel hiatus | [`eff48c08`](https://github.com/andreabenetton/unisermo/commit/eff48c08cdc4c64f60d98f9e04b51baf12dd13d6) 07:18 archives simulations, does not date the very first run |
+| **10 Aug 07:17:27** **user** | Confirms `root+aspect(e/o)+time(d/f)+person(i/u/a)+number(n)` | [`13a1d4fe`](https://github.com/andreabenetton/unisermo/commit/13a1d4febe0ae571cc0f63057575fac41994afd7) 07:26 adopts with hiatus protection |
+| **10 Aug 07:27:08** assistant | Reports `dikedi` paradigm, hiatus, no aspect/person collapse, checks for R/R+e/o roots | Corroborated by [canonical grammar](august-tam-phonotactics-decision-history.md), user full wording unavailable |
+
 ## Independently verified Git anchors
 
 - 27 July 2026 17:59:16 UTC — `andreabenetton/glottodelta` commit `bd25974983e3` imported an **already working** IPA atlas into Git. This postdates the 27 July **morning** conversations, establishing that the earlier conversations plausibly concerned work later captured in the imported snapshot.

@@ -58,6 +58,10 @@ The 8 August [original vocabulary-design rules](https://github.com/andreabenetto
 - [23 October selective glossary pilot](https://github.com/andreabenetton/unisermo/blob/main/research/lexicon/document-primer-results-2026-10-23.md): 8/8 correct splits under either small header; 384 vs 395 billed total tokens across two conditions. Narrow and not semantically reviewed.
 - [24 October new-document tense replication](https://github.com/andreabenetton/unisermo/blob/main/research/lexicon/discourse-tense-replication-results-2026-10-24.md): 13/18 vs 15/18 events exactly extracted under different primers, a reminder that shorter prompts can lose important semantic detail.
 
+### Archived historical engineering tests of the compactness–pronounceability trade-off
+
+The reconstructed [10 August TAM experiment](august-tam-phonotactics-decision-history.md) supplies a concrete *within-project testable proxy*: changing from `time + consonantal aspect(n/b)` to `vowel aspect(e/o) + time` greatly reduced **morphology-created consonant sequences of three or more graphemes** on 25-root and 74-root generated paradigms, at the cost of explicit hiatus. [9–10 August lexical collision decisions](august-lexical-collision-decision-history.md) separately show conscious rejection of ambiguous short strings (`kom/kun`, `kur/ker/kurar`, `un/uno`). These substantiate a path from the author's efficiency objective to *measured design proxies and constraint checking*, while **not** demonstrating information per speaking second or comprehension across listeners.
+
 ## Scientific literature relevant to the 2025 objective
 
 A directly relevant **independent scholarly reference** (located during the 24 October 2026 audit) is:

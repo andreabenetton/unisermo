@@ -29,6 +29,10 @@ Research audit 24 October 2026. Provenance: C = recovered dated *conversation-in
 
 The simplified sound inventory was **decided and documented before** its 10 August live import. Research-stage confirmation, independent specification, and canonical migration are three separate events.
 
+## Newly verified 10 August pre-case TAM reversal (06:32–07:27 UTC)
+
+The earlier phrase “finite morphology simplified on 10 August” omits an **intermediate canonical reversal**: [`84f3a891`](https://github.com/andreabenetton/unisermo/commit/84f3a891e0abefc3f76c5bd801605c3f52946078) at **06:32** confirmed `root + time(Ø/d/f) + aspect(Ø/n/b) + person(i/u/a) + number(N)`; a [three-model numerical phonotactic study](august-tam-phonotactics-decision-history.md), archived [07:18](https://github.com/andreabenetton/unisermo/commit/eff48c08cdc4c64f60d98f9e04b51baf12dd13d6), compared it with `aspect(e/o)` before time and after time. A dated user-message index at **07:17:27** confirms selection of `root + aspect(Ø/e/o) + time + person + number`, canonical by [**07:26**](https://github.com/andreabenetton/unisermo/commit/13a1d4febe0ae571cc0f63057575fac41994afd7). The test covered 1,350 and 3,996 generated forms, measured consonant cluster reductions and warned about hiatus fusion and future lexical root collisions. No human speaking-speed improvement measured. Read the full case before attributing any single design rationale.
+
 ## 10 August: actual synthetic case sequence was 13 → 6 → 7
 
 - **8 August original snapshot:** 13 synthetic cases: seven basic (zero, `-em`, `-s`, `-de`, `-ad`, `-in`, `-ko`) and six extended (`-per -pro -due -fin -tem -mod`).

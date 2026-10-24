@@ -30,6 +30,9 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 | [May–August morphology decision chain](may-august-morphology-decision-chain.md) | 24 May pre-case verbal alternatives, precise 8–10 Aug phoneme chronology, **13→6→7** case transitions, rejected/reused `-da` meanings | May conversation data are indexed summaries (medium); Aug SHA/date/diff high; May 22 existence/date now independently supported by dated message-level retrieval; full dialogue still unexported. |
 | [9 August nominal number confirmation](https://github.com/andreabenetton/unisermo/commit/e31929945d4fce0f628ac96a4dc6c2c260bbe63e) | Primary `-en`→`wi` change, neutral bare noun, quantifier redundancy, `omni`/`tot` distinction | Immutable research commit at 19:35:58 UTC; full prior deliberation not recovered; no head-to-head human trial claimed. |
 
+| [10 August TAM phonotactics decision case](august-tam-phonotactics-decision-history.md) | Three original TAM systems A/B/C, 25+74 root simulations, 5,346 generated forms, original indexed author confirmation at 07:17 and canonical 07:26 commit | Immutable comparative code/report/results; **not** human pronunciation tests. User acceptance indexed with timestamp; complete conversation missing. |
+| [9–10 August lexical collisions and derivation](august-lexical-collision-decision-history.md) | Three lexical/function collisions, root-by-root Latin adaptation, `-it/-itat`, `-er/-or/-il`, `doc→dots→dok` and `duo→bis` historic states | Direct Git content and dated original user-message summaries 20:45/20:51/21:03 on Aug 9. Not a controlled recognition study. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
