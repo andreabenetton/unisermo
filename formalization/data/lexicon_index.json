@@ -116,6 +116,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "Use alor for THEN in condition-consequence constructions, distinct from ergo inferential THEREFORE. Not obligatory by this lexical ratification; its precise omission rules and nested scopes await detailed conditional syntax.",
+      "form": "alor",
+      "meaning_en": "then; conditional consequent marker",
+      "meaning_it": "allora; correlativo della conseguenza condizionale",
+      "origin": "Explicit author ratification 2026-10-24; Italian allora and French alors",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "nominal_predicate"
       ],
       "decision": "Canonical vertical-axis root for high/upper/up. With allative -ad, altad marks upward direction/toward a higher position. It may compound transparently with mov: altmov = ascend/go up.",
@@ -302,6 +314,18 @@
       "meaning_en": "equal; equally; as ... as",
       "meaning_it": "uguale; ugualmente; come ... come",
       "origin": "Latin aequalis / international equal family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Use ergo to introduce inferential conclusions, distinct from conditional-correlative alor and ordinary adversative ma.",
+      "form": "ergo",
+      "meaning_en": "therefore; thus; inferential conclusion marker",
+      "meaning_it": "quindi; dunque; pertanto",
+      "origin": "Explicit author ratification 2026-10-24; Latin ergo",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -627,6 +651,18 @@
       "meaning_en": "place; location",
       "meaning_it": "luogo; locale",
       "origin": "Latin locus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Use standalone ma as ordinary adversative BUT, distinct from simple additive e. Concessive subordinate connectors remain open.",
+      "form": "ma",
+      "meaning_en": "but; adversative conjunction",
+      "meaning_it": "ma; congiunzione avversativa",
+      "origin": "Explicit author ratification 2026-10-24; Italian ma, French mais and Portuguese mas",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
