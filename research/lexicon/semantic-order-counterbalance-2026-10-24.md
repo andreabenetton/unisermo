@@ -50,3 +50,59 @@ Questions reuse familiar lexical forms and English metalanguage, so recognition 
 ## Archived evidence plan
 
 After successful execution: verify raw answer count, prompt digests, returned model and use/cost metadata; retain the **original** JSONL and score in `benchmarks/evidence`, append results to this record and the historical diary, and cite GitHub run/commit IDs. Do not rewrite this preregistered section to reflect outcomes.
+
+---
+
+## Executed observations — appended after preregistration on 2026-10-24
+
+**GitHub provenance**
+
+- [Actual Qwen3 experiment](https://github.com/andreabenetton/unisermo/actions/runs/40085726322): successfully completed all **80** isolated requests from the preregistered development questions. Original Actions artifact `semantic-order-40085726322` (ID `12556773816`).
+- [Archive and re-scoring verification](https://github.com/andreabenetton/unisermo/actions/runs/40085913875): successfully re-read the saved JSONL and verified 80 unique request IDs/order, prompt digests, model and provider, raw/corpus SHA256, provider cost and the full scored comparison.
+- [Original 80 responses](../../benchmarks/evidence/semantic-order-2026-10-24-run40085726322.jsonl) (SHA256 `a761032d2478feca319d46fb263714bfb4a1e68d92c197b9e99a5fd4b2f86717`).
+- [Machine-readable score and paired outcomes](../../benchmarks/evidence/semantic-order-2026-10-24-run40085726322.score.json); source corpus SHA256 `c7218177da3b8179078af3d9aec672b29b41bec594fad47b1e4d695afe85f928`.
+- Qwen request/response model `qwen/qwen3-32b`, provider **DeepInfra** in all 80 results, all `finish_reason=stop`, no format failures. Temperature 0.7/seed 23, no-thinking flags were *requested*; provider-level deterministic treatment not established.
+
+### Outcomes
+
+| Measure | Cold | Guided |
+| --- | ---: | ---: |
+| Individual presentations correct | **31/40 (77.5%)** | **38/40 (95.0%)** |
+| **Contrast pairs correct in both A/B orientations** (primary) | **12/20 (60%)** | **18/20 (90%)** |
+| Same wrong expression under both orientations | 1/20 | 0/20 |
+| Same literal A label after swap (position sticking) | 6/20 | 2/20 |
+| Same literal B label after swap | 1/20 | 0/20 |
+| Invalid response format | 0 | 0 |
+| Input tokens | 3,534 | 17,134 |
+| Output tokens | 360 | 360 |
+| **Total tokens** | **3,894** | **17,494** |
+| Provider-reported USD | **0.00038352** | **0.00147152** |
+| USD per correct presentation | 0.0000123716 | 0.0000387242 |
+| **USD per pair correct in both orientations** | **0.00003196** | **0.0000817511** |
+
+**Total observed USD 0.00185504**, 21,388 tokens, far below the USD 0.03 observed-spend guard. While the guide improved strict two-order correctness by six items, it incurred about **2.56 times higher provider cost per fully stable correct meaning pair**, on this specific test. Gross guided API cost was about 3.84 times cold cost. This is not end-to-end human/LLM communication efficiency, where reference documents might be shared and their overhead amortized.
+
+### By family
+
+| Four semantic pairs each | Cold: both orientations correct | Guided: both orientations correct |
+| --- | ---: | ---: |
+| Case | 0/4 | 4/4 |
+| Analytic relators | 4/4 | 4/4 |
+| Quantity | 4/4 | 4/4 |
+| Deixis / possession | 0/4 | 4/4 |
+| Transition / focus | 4/4 | 2/4 |
+| **Overall** | **12/20** | **18/20** |
+
+Six cases shifted from **always-A** in cold to **target-invariant** under guidance; one previous stable distractor preference and one always-B switched to target-invariant as well. Ten remained correct in both conditions. Two previously target-invariant transition/focus questions (OR019, OR020) switched to **always-A** in the guided arm.
+
+**Important separation of errors:** cold results exhibit **six positional A-sticking cases and one B-sticking case**, alongside one genuinely stable distractor choice (OR002). A sticky position label is *not* itself a robust semantic error, whereas following an incorrect expression through A/B inversion is evidence of consistent selection of a different semantic candidate. Neither pattern proves the model's internal cause with one sample per arm.
+
+### Interpretation and prospective decision
+
+- The earlier all-five-failures-A observation should not be stated as an identified global positional bias. The counterbalanced data reveal per-item positional sticking, disproportionately at A (cold 6 vs 1 B), under a small, non-naturalistic development corpus. This supports *further* controls rather than a causal or population-level conclusion.
+- The guide's advantage is **concentrated in case/deixis**, while its **two regressions concern focus**. Testing a *selective* guide on genuinely new development constructs, with guide transport amortization, is more informative than optimizing prompts on these exposed 20 items.
+- All 20 author-assigned gold keys are **still awaiting independent human adjudication**. The review procedure and 20-row form reside in `research/lexicon/semantic-key-review-worksheet-2026-10-24.md`; it explicitly records **0/20 independently approved**. Automatic source-attestation and AI analysis do **not** count as such review.
+- All questions remain development-only. The frozen holdout was not accessed, and no normative language rules, case distinctions, roots, kinship or numerals were changed.
+- The next scientific gate is **authoritative full-proposition semantic validation** with explicit case/valency and referential modeling. If multi-clause anaphora, quantifier scope or valency remain underspecified in the current canon, register that as a language-design gap rather than inventing a test answer. Include reviewed concise English equivalences and charge prompt overhead/corrections, not just tokens on successful outputs.
+
+This result is a documented intermediate stage for the eventual scientific paper, **not** an established Unisermo language advantage.
