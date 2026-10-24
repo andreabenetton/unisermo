@@ -269,3 +269,23 @@ purpose-marker or mandate a particular syntactic frame.
 Negation remains independent: `no ase bel` denies the moderately-high degree;
 `no suf gran` denies threshold satisfaction. Neither entails `nebel`
 or `negran` respectively.
+
+## 14. Purpose-qualified sufficiency (ratified 2026-10-24)
+
+The existing purposive free relator `fin` may explicitly specify the goal
+against which a quality is judged sufficient. Canonical construction:
+
+```text
+SUBJECT suf QUALITY fin PURPOSE
+```
+
+Example: `tik dom suf gran fin fak` — this house is large enough for
+the purpose of making/producing something. The exact suitability threshold
+is contextual; neither `suf` nor `fin` encodes a numerical value.
+
+When the goal is implicit, `suf QUALITY` remains sufficient. The already
+established `pro` denotes a beneficiary, not the purpose threshold;
+`per` denotes an instrument/means, not the purpose. A quantitative
+capacity requirement (e.g. sufficient for five persons) requires separate
+review of numerals and measurement constructions; this rule does not
+silently license a new quantitative frame.
