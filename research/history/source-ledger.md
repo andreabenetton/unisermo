@@ -44,6 +44,8 @@ Purpose: make every future chronology/paper claim traceable. Confidence labels a
 
 | [2026-10-24 parent-system approval and genealogical iteration](august-kinship-original-dialogue-versus-git.md) | Author approves gen parent, geno father, gene mother and adelgen uncle/aunt. Earlier dated messages contain bisjergen, terjergen and general NUMjer. | Direct author approval now; indexed original 10 Aug user excerpts and 10 Aug Git operator commit. fil offspring and filadelgen cousin NOT adopted. Sex-marker scope across repeated parent links unresolved. |
 
+| [24 October typed genealogical paths and `fil` ratification](august-kinship-original-dialogue-versus-git.md) | Author approves `fil` as an inverse offspring relation and requests exact maternal/paternal grandparent distinctions. New productive `A+B = A of B` paths: `genegene`, `genegeno`, `genogene`, `genogeno`; approved `filadelgen` first cousin. | Source hierarchy: current direct author testimony for `fil` and the design objective; older Aug 10 indexed messages for family and `jer`; contemporary October normative Git changes for typed path feature. No historical claim that all four compounds were canonized in August; listener performance unmeasured. |
+
 ## Required per-entry data for all new research
 
 - Date/time UTC, event type, source link and source commit hash
