@@ -86,11 +86,38 @@ suffix.
 The following productive prefixes remain available unless a future lexical
 collision requires a root-specific revision:
 
-`no-`, `anti-`, `de-`, `re-`, `pre-`, `pos-`, `ko-`, `auto-`, `semi-`,
+`ne-`, `anti-`, `de-`, `re-`, `pre-`, `pos-`, `ko-`, `auto-`, `semi-`,
 `multi-`, `neo-`, `super-`, `sub-`, `mikro-`, `makro-`.
 
 Examples must use current roots, e.g. `refak`, `defak`, `autofak`, not obsolete
 `refac`, `defac`, `autofac`.
+
+### Antonymic `ne-` versus free negation `no`
+
+**Ratified 2026-10-24.** Productive `ne-` forms the *semantic opposite* of a
+property with an identifiable opposite pole, not simple logical negation.
+It is written fused to the lexical root. By contrast, independent `no`
+negates the truth of a predicate. The historical derivational prefix `no-`
+is **retired**; it must not be used to build new lexemes. Active opposition
+`anti-` remains distinct from both.
+
+| Construction | Meaning |
+|---|---|
+| `tik bel` | this is beautiful |
+| `tik no bel` | this is not beautiful; neutral or ugly remain possible |
+| `tik nebel` | this is ugly; aesthetic negative pole |
+| `tik no nebel` | this is not ugly; neutral or beautiful remain possible |
+| `bon` / `nebon` | generally good / bad |
+| `prob` / `neprob` | morally good / morally bad |
+| `just` / `nejust` | just / unjust, in a substantive sense |
+| `apt` / `neapt` | fit / unfit for purpose (illustrative; `apt` awaits separate lexicon ratification) |
+
+Not all categories have scalar antonyms: `nedom` is not a licensed example
+and a nominal `dom` does not automatically acquire an antonym. In particular,
+`nemoral` (if used) must be semantically resolved as an actual contrary to
+morality, not mere absence of moral relevance. The semantics of `ne-` are
+constrained by lexical opposability, not by arbitrary string prefixing.
+
 
 
 ### Canonical phase prefixes
