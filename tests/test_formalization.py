@@ -55,6 +55,12 @@ class FormalizationTests(unittest.TestCase):
         self.assertEqual(entries["spets"]["status"], "confirmed_lexicon")
         self.assertEqual(entries["dom"]["status"], "example_only")
         self.assertNotEqual(entries["mov"]["status"], "confirmed_lexicon")
+        for name in ("adel", "adelo", "adele"):
+            self.assertEqual(entries[name]["status"], "confirmed_lexicon")
+        # Frozen pre-restoration experiments can still be parsed without ratifying frat.
+        self.assertEqual(entries["frat"]["status"], "example_only")
+        self.assertEqual(self.lang.generate_noun("adelo", "accusative"), "adeloem")
+        self.assertEqual(self.lang.parse_sentence("vidi adeloem")["object"]["lemma"], "adelo")
 
     def test_decisions_not_auto_ratified(self):
         entries = load_ldrs()
