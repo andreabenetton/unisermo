@@ -1,0 +1,44 @@
+name: One-shot case-vs-role Qwen decoding
+on:
+  push:
+    branches: [research/case-vs-role-decoding-20261024]
+    paths: ['.github/workflows/case-role-once.yml']
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-case-role-20261024
+  cancel-in-progress: false
+jobs:
+  experiment:
+    if: >-
+      github.event.head_commit.message == 'ci: execute case-vs-role pilot once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate code, new corpus and spending cap offline
+        run: |
+          python -m unittest discover -s tests -p 'test_case_role_decoding.py' -v
+          python - <<'PY'
+          from benchmarks.case_role_decoding import requests,load_corpus,CALL_CAP,OUTPUT_CAP,OBSERVED_USD_LIMIT,MODEL
+          assert len(load_corpus())==12
+          assert len(requests())==CALL_CAP==24
+          assert OUTPUT_CAP==340 and OBSERVED_USD_LIMIT==.02
+          assert MODEL=='qwen/qwen3-32b'
+          print('preflight passed: 24 calls, USD 0.02 observed spend guard, no holdout')
+          PY
+      - name: Execute development-only model comparisons
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.case_role_decoding --output benchmarks/reports/case-role-raw.jsonl
+      - name: Preserve raw outputs even if scoring fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: case-role-${{ github.run_id }}
+          path: benchmarks/reports/case-role-*
+          if-no-files-found: warn
+          retention-days: 30
