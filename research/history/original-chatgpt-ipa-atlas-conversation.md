@@ -71,3 +71,7 @@ The evolving atlas **likely informed** cross-language phoneme evaluation, as its
 3. Identify and verify the first source and computation behind any population-weighted claims used to select/reject each sound.
 4. Map each relevant later GlottoDelta commit to its actual conversation where possible; **a relevant commit is a search lead, not proof that any particular conversation preceded it**.
 5. Make a systematic May→July→August comparison of phonemes, graphemes and morphological person marking, including decisions reversed.
+
+## Source-audit addendum (24 October 2026)
+
+The companion [frozen-baseline audit](glottodelta-original-baseline-audit.md) inspected the actual 27 July HTML rather than only file metadata. The HTML contains 111 IPA keys, 384 demographically matched ISO entries, 33 Georgian graphemes, 40 internal orthographic profiles and transparent L/P inclusion controls. Its speaker base (8,786,359,971 summed estimates) must not be interpreted as a unique world-population total. Its stored symbol `pct` is a language-inventory proportion and differs from speaker-weighted `P`. No causal connection between particular frequencies and the eventual language inventory is verified by these numbers alone.

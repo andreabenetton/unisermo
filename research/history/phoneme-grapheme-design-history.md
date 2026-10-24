@@ -50,3 +50,11 @@ Subsequent dated commits:
 ## Paper significance
 
 Unisermo's phonological design visibly underwent substantive changes: a phonemic 24-unit system with schwa and affricates gave way to a 21-letter system with glides and coalescent sequences. This is stronger documented evidence of iterative engineering than simply describing the current inventory. The research paper must preserve both the abandoned and accepted architectures, test their accessibility claims independently, and avoid inferring precise conversations from specifications.
+
+## 24 October 2026: audit of quantitative source versus design choices
+
+A new code-level reading of the **unaltered 27 July 2026 ChatGPT artifact** is preserved in [`glottodelta-original-baseline-audit.md`](glottodelta-original-baseline-audit.md). It identified baseline **L** values /ə/: **533** (24.5% of the source-language baseline), /h/: **1,258** (57.8%), /ŋ/: **1,424** (65.4%), /ʃ/: **782** (35.9%), /j/: **1,993** (91.5%), /w/: **1,883** (86.5%). These percentages are stored `DATA`-source language percentages, **not speaker-weighted P**, and must not be cited as the proportion of humanity able to articulate or hear the phoneme.
+
+This comparison exposes a crucial historical counterexample to simplistic frequency optimization: the 8 August design had excluded /h/ and /ŋ/ *despite* their substantial attestation, whereas it admitted schwa /ə/ with a much lower observed source-language count. Its rationale explicitly coupled phoneme choices to orthographic ambiguity and grammatical necessity (schwa distinguished a sixth verbal person). By the 10 August specification, person morphology instead used three person vowels plus plural `n`, removing that architectural dependency on schwa; glides /j/ and /w/ were included and the formerly separate affricates were reinterpreted as transparent sequences.
+
+These are **documented cross-snapshot facts and a mechanistic design interpretation**. No identified contemporaneous message yet shows that the July **numeric observations caused** an August selection decision. The project had already debated rejecting /h/ and /ŋ/ on 22 May, well before the dedicated IPA atlas, so even a strong correlation in July cannot be a claimed initial cause.
