@@ -327,6 +327,31 @@
     },
     {
       "categories": [
+        "noun"
+      ],
+      "decision": "Canonize fil as the inverse one-generation relation to gen: offspring/child of a parent, irrespective of age or sex. It does not mean a young person.",
+      "form": "fil",
+      "meaning_en": "offspring; child of a parent (relational, gender-neutral)",
+      "meaning_it": "figlio o figlia in quanto discendente diretto; prole",
+      "origin": "Direct author ratification, 2026-10-24; prior kinship design discussion",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonical transparent kinship compound filadelgen = fil + (adel + gen), offspring of parent's sibling = first cousin. Components compose as A relative to B and are evaluated from right to left. Not a gender-specific or more distant cousin.",
+      "form": "filadelgen",
+      "meaning_en": "first cousin (offspring of a parent's sibling, gender-neutral)",
+      "meaning_it": "cugino o cugina di primo grado (figlio o figlia di uno zio/zia)",
+      "origin": "Productive relational composition fil + adel + gen following direct approval of fil, 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "function_word"
       ],
       "decision": "Canonical invariant free purposive relator. Former suffix -fin is retired.",
@@ -371,6 +396,32 @@
     },
     {
       "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonize genegene = gene + gene: mother of mother; trace relational path from ego right to left. Explicit link sex is part of each parent root, not a floating word-final gender suffix.",
+      "form": "genegene",
+      "meaning_en": "maternal grandmother (mother of mother)",
+      "meaning_it": "nonna materna",
+      "origin": "Author-requested genealogical path feature, 2026-10-24; compose gene + gene",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonize genegeno = gene + geno: mother of father; traverse rightmost geno (father), then leftmost gene (his mother).",
+      "form": "genegeno",
+      "meaning_en": "paternal grandmother (mother of father)",
+      "meaning_it": "nonna paterna",
+      "origin": "Author-requested genealogical path feature, 2026-10-24; compose gene + geno",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "noun"
       ],
       "decision": "Canonize geno = father, male parent. Sex suffix applies to the immediate parent relation in this confirmed form.",
@@ -378,6 +429,32 @@
       "meaning_en": "father",
       "meaning_it": "padre",
       "origin": "2026-08-10 parent family gen+o, author-approved 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonize genogene = geno + gene: father of mother; traverse rightmost gene (mother), then leftmost geno (her father).",
+      "form": "genogene",
+      "meaning_en": "maternal grandfather (father of mother)",
+      "meaning_it": "nonno materno",
+      "origin": "Author-requested genealogical path feature, 2026-10-24; compose geno + gene",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "compound",
+        "noun"
+      ],
+      "decision": "Canonize genogeno = geno + geno: father of father; both links specify male parent. Not a general label for all grandfathers.",
+      "form": "genogeno",
+      "meaning_en": "paternal grandfather (father of father)",
+      "meaning_it": "nonno paterno",
+      "origin": "Author-requested genealogical path feature, 2026-10-24; compose geno + geno",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
