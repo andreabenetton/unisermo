@@ -24,9 +24,13 @@ Research note dated 24 October 2026. This source recovers **individual dated con
 - 8 August 2026 18:31:07 UTC — `andreabenetton/language` initial commit `bacc1a7a9aaaa18596120c6ea2812c927b33b0e3`, preserving the original 24-unit alphabet. The 8 August 19:41 and 20:10 comments therefore **postdate** this first snapshot.
 - 10 August 2026 — `andreabenetton/unisermo` recorded a new 21-letter canonical inventory and the rule excluding `x` in commits `04dad808c53f` and `70e18f59c492`.
 
+## CORRECTION — local Git SHAs resolved in Unisermo (24 October 2026)
+
+The previous claim below that short SHAs could not be found is **superseded**: all four have been located as verifiable objects in `andreabenetton/unisermo`, not GlottoDelta. `7311032` is the 8 August 19:41 phoneme research framework, `011247a` the 8 August 20:10 affricate study, `9aa7b49` the 9 August 14:18 family ranking, and `8bb979b` the 10 August 15:41 vertical motion study. See [August decision chain](august-phonology-decision-chain.md) and their canonical commit URLs there. The original worktree and transcript relationship are still not established.
+
 ## Critical distinction: which Git history?
 
-The **public** `andreabenetton/glottodelta` only exposes branches `main` and `claude/ipa-interactive-app-analysis-ipns9g` at inspection time, and GitHub's commit lookup did **not** resolve historical abbreviated SHAs `7311032`, `011247a`, or `9aa7b49` there. Those IDs appear in previous assistant reports but may belong to a **separate local branch/worktree, agent-integrated version or another repository**, or be unreachable/orphaned history. Do **not** present them as verified public commits. The 9 August family-ranking work is especially important to recover from the original integrated workspace rather than ascribing it to the public IPA visualization.
+**Historical note (superseded for SHA reachability):** The **public** `andreabenetton/glottodelta` only exposes branches `main` and `claude/ipa-interactive-app-analysis-ipns9g` at inspection time, and GitHub's commit lookup did **not** resolve historical abbreviated SHAs `7311032`, `011247a`, or `9aa7b49` there. Those IDs appear in previous assistant reports but may belong to a **separate local branch/worktree, agent-integrated version or another repository**, or be unreachable/orphaned history. Do **not** present them as verified public commits. The 9 August family-ranking work is especially important to recover from the original integrated workspace rather than ascribing it to the public IPA visualization.
 
 ## Scientific interpretation for the paper
 
