@@ -23,12 +23,12 @@ For speaker-level details, provenance and caveats see [early May conversation ev
 | 27 July 2026, 09:00:52 | User focused on Georgian /ʊ/ and /ɑ/, the many-to-many phoneme/grapheme relationship, and validation of all 33 Georgian letters. | User message recovered from conversation search |
 | 27 July 2026, 13:31:28 | Assistant described atlas refinement: standard IPA consonant/vowel locations, 111 IPA symbols, Georgian coverage, licensing and sound files. | Previous assistant output; implementation should be verified against source |
 | 8 August 2026, 19:04:48 | User linked creation/deployment of GlottoDelta to the newly created `andreabenetton/language` repository. | User message recovered |
-| 8 August 2026, 19:41:17 | Assistant described a full GlottoDelta reconstruction preserving `original.html` byte-for-byte; phoneme research on `phoneme-study`, reportedly commit `7311032`, comparing /ə/, /j/, /w/, /v/, speaker coverage and recognizable roots. | Previous assistant output; local commit ID **not found** in public `andreabenetton/glottodelta` |
-| 8 August 2026, 20:10:53 | Assistant reported the phonological simplification `/ts/=/t+s/`, `/tʃ/=/t+j/`, `/dʒ/=/d+j/`, with coalesced pronunciations, restoring /j/ while /w/ remained under consideration; local commit `011247a`. | Previous assistant output; commit **not found** in public GlottoDelta |
+| 8 August 2026, 19:41:17 | Assistant described a full GlottoDelta reconstruction preserving `original.html` byte-for-byte; phoneme research on `phoneme-study`, reportedly commit `7311032`, comparing /ə/, /j/, /w/, /v/, speaker coverage and recognizable roots. | Previous assistant output; **later verified as Git object in Unisermo**, not GlottoDelta |
+| 8 August 2026, 20:10:53 | Assistant reported the phonological simplification `/ts/=/t+s/`, `/tʃ/=/t+j/`, `/dʒ/=/d+j/`, with coalesced pronunciations, restoring /j/ while /w/ remained under consideration; local commit `011247a`. | Previous assistant output; **later verified in Unisermo Git history**, not GlottoDelta |
 | 9 August 2026, 14:13:20 | User required language-family analysis in **descending total speaker population**, with Abkhaz-Adyge outside that sequence. | User instruction recovered |
-| 9 August 2026, 14:18:36 | Assistant described a CLDR family-by-speaker ranking and Indo-European analysis, reportedly in commit `9aa7b49`; Indo-European ranked first, Sino-Tibetan second; 140 languages / 144 source records. | Previous assistant output; commit **not found** in public GlottoDelta |
+| 9 August 2026, 14:18:36 | Assistant described a CLDR family-by-speaker ranking and Indo-European analysis, reportedly in commit `9aa7b49`; Indo-European ranked first, Sino-Tibetan second; 140 languages / 144 source records. | Previous assistant output; **later verified in Unisermo Git history**, not GlottoDelta |
 | 10 August 2026, 14:42:37 | Assistant reported 21 canonical graphemes and exclusion of `x` from lexical roots. | Previous assistant output; corroborated by `unisermo` commit `70e18f59c492` |
-| 10 August 2026, 15:41:12 | Assistant described distinctions between `alt`, `bas`, `mov altad`, `mov basad`, `altmov` and `basmov`; reported a local head `8bb979b`. | Previous assistant output; investigate original branch/repository |
+| 10 August 2026, 15:41:12 | Assistant described distinctions between `alt`, `bas`, `mov altad`, `mov basad`, `altmov` and `basmov`; reported a local head `8bb979b`. | Previous assistant output; SHA **later verified in Unisermo**; original worktree topology unknown |
 
 ## 9–10 August additions: original messages correlated with Git objects
 
@@ -40,6 +40,20 @@ For speaker-level details, provenance and caveats see [early May conversation ev
 | **10 Aug 07:13:38** assistant | Comparative 25/74-root phonotactic trial reported, comparing consonant clusters and vowel hiatus | [`eff48c08`](https://github.com/andreabenetton/unisermo/commit/eff48c08cdc4c64f60d98f9e04b51baf12dd13d6) 07:18 archives simulations, does not date the very first run |
 | **10 Aug 07:17:27** **user** | Confirms `root+aspect(e/o)+time(d/f)+person(i/u/a)+number(n)` | [`13a1d4fe`](https://github.com/andreabenetton/unisermo/commit/13a1d4febe0ae571cc0f63057575fac41994afd7) 07:26 adopts with hiatus protection |
 | **10 Aug 07:27:08** assistant | Reports `dikedi` paradigm, hiatus, no aspect/person collapse, checks for R/R+e/o roots | Corroborated by [canonical grammar](august-tam-phonotactics-decision-history.md), user full wording unavailable |
+
+## 10 August: semantics and Git correlated at message level
+
+| UTC time / speaker | Evidence recovered | Independent Git source |
+| --- | --- | --- |
+| **13:46:04 user** | Remarks on ambiguous Italian `guarire`: spontaneous recovery versus another agent healing a patient | Contextual lead only; no direct causal proof |
+| **14:06–14:07 user** | Confirms fused (unhyphenated) phase-family forms `ades/dees` | [`51be6a8`, 14:11](https://github.com/andreabenetton/unisermo/commit/51be6a882a97d4a4cc4f75458ddb1b4ec373c1c9) |
+| **14:21:22 user** | Selects `traes DEST-ad SOURCE-de`, preserving simple `ades X` | [`16250c8`, 14:22](https://github.com/andreabenetton/unisermo/commit/16250c8b225daf2425112e21690ae0b2ccab2362) |
+| **14:35:00 user** | Selects causative `Y traes X-em RESULT-da` | [`53df8ba`, 14:36](https://github.com/andreabenetton/unisermo/commit/53df8ba04e5d04ef9794c62c357a712567f86123) |
+| **14:45:16 user** | Selects `mov` transitive/intransitive valency | [`9ce8c0c`, 14:47](https://github.com/andreabenetton/unisermo/commit/9ce8c0c4facc7df742d88ad63ee50562038e4c80) |
+| **14:50:00 user** | Confirms `pel/trak` separate force verbs; pushing/pulling need not entail movement | [`141667e`, 14:57](https://github.com/andreabenetton/unisermo/commit/141667e94c198e404958ef1010df057bda553d0e) |
+| **15:41 Git only** | Vertical `alt/bas` and `altmov/basmov` distinguish DIRECTION from PHASE | [`8bb979b`](https://github.com/andreabenetton/unisermo/commit/8bb979bf5e55f4a1ba713ecfe30e5b5d6c0ec1a6) |
+
+[Detailed historical case](august-semantic-phase-motion-and-causation.md). Original index extracts are **not** a full transcript; the precise 15:41 *user* acceptance was not located.
 
 ## Independently verified Git anchors
 
@@ -68,6 +82,6 @@ Hypothesis: data exploration informed the design of the language's revised phono
 
 ## Priority next retrievals
 
-- Locate the Git repository or worktree that carried branch `phoneme-study` and local commit `7311032`; identify `011247a`, `9aa7b49` and `8bb979b` using original workspace or archived conversations.
+- **SHA resolution completed:** `7311032`, `011247a`, `9aa7b49`, `8bb979b` all exist in the verifiable Unisermo Git object history (see [August decision history](august-phonology-decision-chain.md)). **Still open:** original branch/worktree name and whether those objects first existed on a different local topology.
 - Recover the complete 27 July and 8–9 August dialogue rather than excerpt-level summaries; check discussion leading to /ə/ rejection, /w/ acceptance and globally weighted family comparison.
 - If source branch can be recovered, build a per-phoneme before/after matrix with explicit model-derived and corpus-derived evidence.
