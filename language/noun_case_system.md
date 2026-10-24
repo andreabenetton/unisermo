@@ -173,3 +173,13 @@ Synthetic case is reserved for a small, frequent grammatical core. More
 specific semantic relations remain transparent free words. This avoids a long
 case paradigm while preserving compact marking for direct objects, possession,
 recipients/direction, source, location, and resultative predication.
+
+## Purpose relator with sufficiency (ratified 2026-10-24)
+
+The existing free relator `fin` can follow a `suf + qualitative predicate`
+construction to introduce the specific purpose that determines the sufficiency
+threshold: `SUBJECT suf QUALITY fin PURPOSE`.
+For example, `tik dom suf gran fin fak` means that this house is large
+enough for making/producing something. `pro` remains benefactive and `per`
+remains instrumental; neither automatically replaces `fin`.
+Numerical capacity thresholds are a distinct, still-open construction.
