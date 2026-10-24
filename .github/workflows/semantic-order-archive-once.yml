@@ -1,0 +1,63 @@
+name: Archive mirrored semantic order evidence once
+on:
+  push:
+    branches: [research/semantic-order-counterbalance-20261024]
+    paths: ['.github/workflows/semantic-order-archive-once.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    if: >-
+      github.event.head_commit.message == 'ci: archive mirrored semantic evidence once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Retrieve successful original Qwen run artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/unisermo-order-evidence
+          gh run download 40085726322 --repo andreabenetton/unisermo --name semantic-order-40085726322 --dir /tmp/unisermo-order-evidence
+          test -s /tmp/unisermo-order-evidence/semantic-order-raw.jsonl
+          test -s /tmp/unisermo-order-evidence/semantic-order-raw.score.json
+      - name: Verify raw data digests, provider, prompt identity, cost and rescore
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          from benchmarks.semantic_order import CORPUS, MODEL, load_corpus, score
+          p=Path('/tmp/unisermo-order-evidence/semantic-order-raw.jsonl')
+          original=json.loads(Path('/tmp/unisermo-order-evidence/semantic-order-raw.score.json').read_text())
+          rows=[json.loads(s) for s in p.read_text(encoding='utf8').splitlines() if s.strip()]
+          assert len(rows)==80 and len({r['id'] for r in rows})==80
+          assert [r['call_order'] for r in rows]==list(range(1,81))
+          assert hashlib.sha256(p.read_bytes()).hexdigest()==original['raw_sha256']
+          assert hashlib.sha256(CORPUS.read_bytes()).hexdigest()==original['corpus_sha256']
+          assert all(r['returned_model']==MODEL for r in rows)
+          assert all(r['provider']=='DeepInfra' and r['finish_reason']=='stop' for r in rows)
+          assert all(type(r['usage']['cost']) in (int,float) for r in rows)
+          assert abs(sum(r['usage']['cost'] for r in rows)-original['observed_cost_usd'])<1e-12
+          assert original['observed_cost_usd'] < .03
+          recalculated=score(rows,load_corpus())
+          assert recalculated['comparisons']==original['comparisons']
+          assert recalculated['joint_outcome_transitions']==original['joint_outcome_transitions']
+          assert recalculated['pairs']==original['pairs']
+          print('Verified 80 original Qwen responses, order, SHA256, exact prompt hashes, providers, cost and independent rescore')
+          PY
+      - name: Commit the unmodified raw and score evidence into research branch
+        run: |
+          mkdir -p benchmarks/evidence
+          cp /tmp/unisermo-order-evidence/semantic-order-raw.jsonl benchmarks/evidence/semantic-order-2026-10-24-run40085726322.jsonl
+          cp /tmp/unisermo-order-evidence/semantic-order-raw.score.json benchmarks/evidence/semantic-order-2026-10-24-run40085726322.score.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add benchmarks/evidence/semantic-order-2026-10-24-run40085726322.jsonl benchmarks/evidence/semantic-order-2026-10-24-run40085726322.score.json
+          git commit -m 'research: archive verified mirrored semantic-choice evidence'
+          git push origin HEAD:research/semantic-order-counterbalance-20261024
