@@ -18,6 +18,7 @@ This is the **living historical record** for a future methodological paper about
 
 | Date / period | Entry | Evidence and confidence |
 | --- | --- | --- |
+| **24 May 2026** | Recovered original discussion on cases and complements: one ending per complement; 7 base cases plus 6 extended, corrected -s genitive and -de source; later revisions moved extended relations to free relators. | `research/history/cases-and-complements-design-history.md` and original May conversation snippets; full transcript not archived |
 | Prior to 10 Aug 2026 — exact start unverified | Initial planning of an international, pronunciation-accessible, compositional auxiliary language, built with explicit decision records. The full earlier conversational history has **not** been exhaustively recovered. | Context reconstruction; early date and original rationale need first-party archival verification |
 | **10 Aug 2026** | Confirmed baseline grammatical decision set: number-neutral bare nouns; optional `wi` plural; person/tense/aspect morphology; multiple noun cases including resultative; phonological and lexical constraints. | `research/grammar/confirmed_decisions.json` (`confirmed_on`); grammatical counts reported in an Oct 22 baseline audit |
 | Aug–Oct 2026, finer dates unverified | Linguistic architecture expanded with explicit phoneme inventory, accent tolerance, Latin/international root exploration, productive compounds, and systematic numeral and kinship studies. Important caution: previously **proposed** kinship stems (`par`, `fil`, `av`, `avun`, etc.) were not all accepted as canonical, whereas the numeral system is documented. | `language/numerals.md`, `language/vocabulary_design_rules.md`, `research/lexicon/kinship-and-numerals-preservation.md` and earlier-conversation reconstruction |
@@ -45,7 +46,7 @@ This is the **living historical record** for a future methodological paper about
 
 ## Open historical recovery tasks
 
-1. Obtain the earliest dated proposal and exact chronology before August 2026 from conversation archives, commits and linguistic notes. Do not assert a project founding date prematurely.
+1. Recover the full 24 May 2026 conversation and any still-earlier discussions; the case-system discussion now establishes a May date but not necessarily project inception. Do not assert a project founding date prematurely.
 2. Recover original comparison of lexical genealogies/modern worldwide language distributions and decisions about international recognizability.
 3. Reconstruct the exact date and rationale for each numeral, kinship, and major morphosyntactic decision rather than relying on an October snapshot.
 4. Identify discarded word candidates and rejected grammatical systems, with decision rationale and provenance.
