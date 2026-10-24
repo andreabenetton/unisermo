@@ -1,0 +1,674 @@
+{
+  "schema": "unisermo/relational-frame-meaning@1",
+  "status": "development_machine_gold_unreviewed",
+  "calls": 24,
+  "model_requested": "qwen/qwen3-32b",
+  "comparisons": {
+    "cold": {
+      "exact_propositions": 0,
+      "total_propositions": 24,
+      "field_error_counts": {
+        "tense": 15,
+        "frame": 11,
+        "patient": 5,
+        "result_state": 9,
+        "number": 4,
+        "predicate": 5,
+        "destination": 14,
+        "aspect": 8,
+        "subject_role": 10,
+        "source_state": 6
+      },
+      "format_errors": {},
+      "documents": [
+        {
+          "doc": "RF001",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "patient",
+                "result_state",
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF002",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "number"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "predicate",
+                "tense",
+                "number"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF003",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "predicate",
+                "patient",
+                "destination"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "predicate",
+                "patient",
+                "destination",
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF004",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "predicate",
+                "patient",
+                "destination",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "predicate",
+                "patient",
+                "destination",
+                "tense",
+                "aspect"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF005",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF006",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state",
+                "tense"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state",
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF007",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state",
+                "tense",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state",
+                "tense",
+                "aspect"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF008",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state",
+                "tense",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "subject_role",
+                "destination",
+                "result_state",
+                "tense",
+                "aspect"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF009",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "source_state"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "source_state"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF010",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "source_state",
+                "tense",
+                "number"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "source_state",
+                "tense",
+                "number"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF011",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "source_state"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "source_state",
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF012",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "destination",
+                "tense",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "destination",
+                "aspect"
+              ]
+            }
+          ],
+          "format_error": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2427,
+        "completion_tokens": 2503,
+        "total_tokens": 4930,
+        "cost": 0.000895
+      },
+      "cost_per_exact_proposition": null
+    },
+    "guided": {
+      "exact_propositions": 4,
+      "total_propositions": 24,
+      "field_error_counts": {
+        "tense": 7,
+        "aspect": 7,
+        "number": 2,
+        "patient": 6,
+        "destination": 9,
+        "person": 1,
+        "result_state": 8,
+        "frame": 8,
+        "subject_role": 7,
+        "source_state": 7
+      },
+      "format_errors": {},
+      "documents": [
+        {
+          "doc": "RF001",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": true,
+              "wrong_fields": []
+            },
+            {
+              "index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF002",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "tense",
+                "aspect",
+                "number"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF003",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "patient",
+                "destination",
+                "person"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": true,
+              "wrong_fields": []
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF004",
+          "family": "move",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "patient",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "aspect"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF005",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "destination",
+                "result_state"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "patient",
+                "destination",
+                "result_state"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF006",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "destination",
+                "result_state",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "patient",
+                "destination",
+                "source_state",
+                "result_state"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF007",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "destination",
+                "result_state",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "patient",
+                "destination",
+                "source_state",
+                "result_state"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF008",
+          "family": "transition",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "destination",
+                "result_state",
+                "tense"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "patient",
+                "destination",
+                "source_state",
+                "result_state"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF009",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF010",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "source_state",
+                "tense",
+                "number"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "source_state",
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF011",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "source_state"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "tense"
+              ]
+            }
+          ],
+          "format_error": null
+        },
+        {
+          "doc": "RF012",
+          "family": "cause_result",
+          "events": [
+            {
+              "index": 0,
+              "correct": false,
+              "wrong_fields": [
+                "frame",
+                "subject_role",
+                "source_state",
+                "tense",
+                "aspect"
+              ]
+            },
+            {
+              "index": 1,
+              "correct": false,
+              "wrong_fields": [
+                "aspect"
+              ]
+            }
+          ],
+          "format_error": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5295,
+        "completion_tokens": 2485,
+        "total_tokens": 7780,
+        "cost": 0.0011194
+      },
+      "cost_per_exact_proposition": 0.00027985
+    }
+  },
+  "limitations": "Case-frame mapping from deterministic parser; person/theme role interpretation provisional. No human approval, no locative finite predication, no referential discourse, no English baseline.",
+  "observed_cost_usd": 0.0020143999999999995,
+  "corpus_sha256": "cf4d3f1b5f3c5aff65b518f27bc86e0fec9f6ffe37878f5ee0ad0c9e33fba9ab",
+  "raw_sha256": "135a414555471d467dcd8c2a546bbd05756790aaa4b4306d1c091d56a16c4076",
+  "controls": {
+    "temperature": 0.7,
+    "seed": 23,
+    "no_think": true,
+    "provider_fallbacks": false,
+    "max_output_tokens": 650,
+    "max_requests": 24,
+    "observed_budget_usd": 0.02
+  }
+}
