@@ -246,10 +246,10 @@
     {
       "form": "due",
       "category": "function_word",
-      "meaning_it": "a causa di; dovuto a",
-      "meaning_en": "because of; due to",
+      "meaning_it": "a causa di; perché/poiché/siccome (introduce anche una proposizione causale)",
+      "meaning_en": "because of (nominal); because/since (causal clause)",
       "source": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired."
+      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired. Author ratified on 2026-10-24 extension to complete causal clause in both P due Q and due Q, P, distinct from inferential ergo."
     },
     {
       "form": "fin",
@@ -670,6 +670,94 @@
       "source": "Author ratification 2026-10-24",
       "decision": "Analytic sufficiency operator: reaches contextual requirement; not a fixed degree or synonym of mult.",
       "status": "confirmed"
+    },
+    {
+      "form": "se",
+      "category": "function_word",
+      "meaning_it": "se; introduce una condizione",
+      "meaning_en": "if; condition introducer",
+      "source": "Explicit author ratification 2026-10-24, Latin si adapted to distinguish si=yes",
+      "decision": "Ratify standalone se as IF, distinct from confirmed si YES and no NO/NOT. No automatic ratification of then/tum, ergo, nisi, sin, sed or other connective forms."
+    },
+    {
+      "form": "alor",
+      "category": "function_word",
+      "meaning_it": "allora; correlativo della conseguenza condizionale",
+      "meaning_en": "then; conditional consequent marker",
+      "source": "Explicit author ratification 2026-10-24; Italian allora and French alors",
+      "decision": "Use alor for THEN in condition-consequence constructions, distinct from ergo inferential THEREFORE. Not obligatory by this lexical ratification; its precise omission rules and nested scopes await detailed conditional syntax."
+    },
+    {
+      "form": "ma",
+      "category": "function_word",
+      "meaning_it": "ma; congiunzione avversativa",
+      "meaning_en": "but; adversative conjunction",
+      "source": "Explicit author ratification 2026-10-24; Italian ma, French mais and Portuguese mas",
+      "decision": "Use standalone ma as ordinary adversative BUT, distinct from simple additive e. Concessive subordinate connectors remain open."
+    },
+    {
+      "form": "ergo",
+      "category": "function_word",
+      "meaning_it": "quindi; dunque; pertanto",
+      "meaning_en": "therefore; thus; inferential conclusion marker",
+      "source": "Explicit author ratification 2026-10-24; Latin ergo",
+      "decision": "Use ergo to introduce inferential conclusions, distinct from conditional-correlative alor and ordinary adversative ma."
+    },
+    {
+      "form": "etsi",
+      "category": "function_word",
+      "meaning_it": "sebbene, benché, nonostante il fatto che",
+      "meaning_en": "although; even though (factual concessive)",
+      "source": "Explicit author ratification 2026-10-24; Latin etsi",
+      "decision": "Concessive conjunction allowing etsi P, Q and Q etsi P. Factual or contextually accepted P contrasted with Q; hypothetical even-if semantics remain unresolved."
+    },
+    {
+      "form": "nam",
+      "category": "function_word",
+      "meaning_it": "infatti; introduce una giustificazione o evidenza per un'affermazione",
+      "meaning_en": "for/indeed; introduces an evidential or argumentative reason supporting an assertion",
+      "source": "Explicit author ratification 2026-10-24; Latin nam",
+      "decision": "P nam Q indicates that the speaker presents Q as support for asserting P, without claiming that Q caused P or that Q proves P. Distinct from factual causal due and inference-first ergo."
+    },
+    {
+      "form": "etsise",
+      "category": "function_word",
+      "meaning_it": "anche qualora; anche se (concessione ipotetica)",
+      "meaning_en": "even if; hypothetical concessive",
+      "source": "Explicit author ratification 2026-10-24; compound etsi + se",
+      "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion."
+    },
+    {
+      "form": "ekse",
+      "category": "function_word",
+      "meaning_it": "eksetto, tranne, salvo; operatore generale di esclusione",
+      "meaning_en": "except, excluding; general exception operator",
+      "source": "Explicit author ratification 2026-10-24; international except/exception family, distinct from Latin ekse ('behold')",
+      "decision": "Free invariant ekse marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma."
+    },
+    {
+      "form": "eksese",
+      "category": "function_word",
+      "meaning_it": "a meno che, salvo che; eksezione condizionale",
+      "meaning_en": "unless; except if (conditional exception)",
+      "source": "Explicit author ratification 2026-10-24; fused ekse + se",
+      "decision": "Canonical single-word compound ekse+se marks conditional exception (UNLESS). Both eksese P, Q and Q eksese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms."
+    },
+    {
+      "form": "e",
+      "category": "function_word",
+      "meaning_it": "e; congiunzione coordinante additiva",
+      "meaning_en": "and; additive coordination",
+      "source": "Explicit author ratification 2026-10-24",
+      "decision": "e as a free-standing conjunction AND; distinct from bound progressive aspect -e."
+    },
+    {
+      "form": "o",
+      "category": "function_word",
+      "meaning_it": "o; congiunzione coordinante disgiuntiva",
+      "meaning_en": "or; disjunctive coordination",
+      "source": "Explicit author ratification 2026-10-24",
+      "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified."
     }
   ]
 }
