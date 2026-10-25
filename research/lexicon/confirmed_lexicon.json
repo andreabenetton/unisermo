@@ -804,6 +804,15 @@
       "status": "confirmed",
       "source": "Author ratification 2026-10-25; Latin portare",
       "decision": "Physical carrying/transporting, distinct from taking (fer). Phase derivatives adport/inport/deport/report retain canonical in-/ad-/de-/re- meanings."
+    },
+    {
+      "form": "lim",
+      "category": "functional_word",
+      "meaning_it": "marcatore esplicito di chiusura dell'ambito proposizionale",
+      "meaning_en": "explicit propositional scope boundary marker",
+      "status": "confirmed",
+      "source": "Author ratification 2026-10-25; Latin limes, limitis",
+      "decision": "Invariant independent pronounced token before a clause connector. In approved connector chains closes the preceding sequence as left argument of the following connector; commas do not encode scope. Right association without lim. Not a sentence terminator; subordinate nesting remains open."
     }
   ]
 }
