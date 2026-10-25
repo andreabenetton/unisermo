@@ -70,7 +70,14 @@ def main() -> None:
 
     # Canonical lexical forms may use only the 21 official graphemes.
     allowed = set("aeioupbtdkgmnfvszlrjw")
-    invalid_forms = {form: sorted(set(form) - allowed) for form in entries if set(form) - allowed}
+    # A trailing hyphen is the dictionary notation for a derivational prefix,
+    # not an extra grapheme in the spoken lexical root.
+    normalized_forms = {
+        form: form[:-1] if item["category"] == "derivational_prefix" and form.endswith("-") else form
+        for form, item in entries.items()
+    }
+    invalid_forms = {form: sorted(set(surface) - allowed) for form, surface in normalized_forms.items()
+                     if not surface or set(surface) - allowed}
     assert invalid_forms == {}, invalid_forms
 
     audit = AUDIT.read_text(encoding="utf-8")
