@@ -210,3 +210,11 @@ This is not the same construction as `Q, ergo P` ('Q, therefore P'): `ergo` expl
 ## Factual cause versus evidential justification — required distinction (24 October 2026)
 
 The author requires two separate grammatical treatments for a *real-world causal relation* (one circumstance brings about or contributes to an effect) and a *speaker's reason/evidence for asserting a proposition* (an observation supports an inference without causing the inferred event). `due` is the confirmed **factual causal** linker; the distinct evidential/argumentative linker is now **ratified as `nam`** (Latin-derived). `P nam Q` presents Q as a reason/evidence supplied by the speaker for asserting P, without asserting that Q caused P or that Q is true, sufficient, or a valid proof. `due` retains factual causality. Existing `ergo` introduces an inference/conclusion in `Q ergo P`, whereas `P nam Q` foregrounds the assertion before its justification. Do not silently parse evidence/support as `due` causation.
+
+## Part-whole relation (ratified 2026-10-25)
+
+`part` is the noun for part/component of a larger whole, including abstract,
+structural, and informational wholes. Use existing genitive `-s/-es` to
+name the whole: `part doms` = part of the house; `kin part doms` = five
+parts of the house. No new case is introduced, and numerals do not require
+nominal plural `wi`. This does not assert physical containment or cognition.

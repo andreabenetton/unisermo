@@ -275,3 +275,13 @@ historical derivational meanings of `super-` remain unaffected.
 Absolute intensity is a separate analytic domain with ratified free
 modifiers `minu`, `pok`, `mult`, `ekstrem` (see `comparison.md`).
 These are not derivational affixes or relative superlatives.
+
+### Cognitive roots and phase family (ratified 2026-10-25)
+
+`pens` means think / mentally process; `sap` means understand / grasp meaning.
+Thinking does not entail understanding. `sap` neither denotes mere possession
+of knowledge nor informational inclusion; `kompren` was rejected.
+
+Existing phase prefixes give `adsap` begin to understand, `insap`
+continue to understand, `desap` cease to understand, and `resap`
+resume understanding. They operate likewise on `pens`.
