@@ -794,16 +794,16 @@
       "meaning_en": "take; grasp physically",
       "status": "confirmed",
       "source": "Author ratification 2026-10-25; Latin ferre (historically carry; semantic assignment deliberate)",
-      "decision": "Physical acquisition/grasp, distinct from transporting (port). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words."
+      "decision": "Physical acquisition/grasp, distinct from transporting (portar). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words."
     },
     {
-      "form": "port",
+      "form": "portar",
       "category": "verb_root",
       "meaning_it": "portare; trasportare",
       "meaning_en": "carry; transport",
       "status": "confirmed",
-      "source": "Author ratification 2026-10-25; Latin portare",
-      "decision": "Physical carrying/transporting, distinct from taking (fer). Phase derivatives adport/inport/deport/report retain canonical in-/ad-/de-/re- meanings."
+      "source": "Author ratification 2026-10-25; Latin portare; modern Romance portar",
+      "decision": "Replaces port to avoid collision of 3rd-person finite porta with noun porta. Physical transport distinct from fer. Phases adportar/inportar/deportar/reportar, plus kunportar."
     },
     {
       "form": "ten",
@@ -811,7 +811,7 @@
       "meaning_it": "tenere; mantenere un vincolo o controllo nel tempo",
       "meaning_en": "hold; maintain a constraint or control relation over time",
       "source": "Author ratification 2026-10-25",
-      "decision": "Distinct from fer acquisition, port transport, and ines persistence of a state. Standard phase prefix family adten/inten/deten/reten.",
+      "decision": "Distinct from fer acquisition, portar transport, and ines persistence of a state. Standard phase prefix family adten/inten/deten/reten.",
       "status": "confirmed"
     },
     {
@@ -831,6 +831,33 @@
       "status": "confirmed",
       "source": "Author ratification 2026-10-25; Latin limes, limitis",
       "decision": "Invariant independent pronounced token before a clause connector. In approved connector chains closes the preceding sequence as left argument of the following connector; commas do not encode scope. Right association without lim. Not a sentence terminator; subordinate nesting remains open."
+    },
+    {
+      "form": "porta",
+      "category": "noun_root",
+      "meaning_it": "porta; elemento fisico mobile che apre o chiude un passaggio",
+      "meaning_en": "door; movable physical barrier allowing or blocking passage",
+      "source": "Latin porta; contemporary Romance porta/puerta/porte",
+      "decision": "Distinct from verbal root portar, whose third-person form is portara. Physical door, not generic access or gate.",
+      "status": "confirmed"
+    },
+    {
+      "form": "aper",
+      "category": "property_root",
+      "meaning_it": "aperto; configurazione fisica di apertura",
+      "meaning_en": "open; physical configuration of opening",
+      "source": "Latin apertus; Romance aperto/abierto/aberto/ouvert",
+      "decision": "Stative physical property (model B). Does not mean start/initiate; causal change uses traes OBJECT-em aper-da, entry uses ades aper.",
+      "status": "confirmed"
+    },
+    {
+      "form": "klus",
+      "category": "property_root",
+      "meaning_it": "chiuso; configurazione fisica di chiusura",
+      "meaning_en": "closed; physical configuration of closure",
+      "source": "Latin clausus/clusus; Romance Italian chiuso and French clos",
+      "decision": "Selected over proposed klud; stative physical property (model B). Does not mean end/finish; transitions use ades klus or causative traes OBJECT-em klus-da.",
+      "status": "confirmed"
     }
   ]
 }

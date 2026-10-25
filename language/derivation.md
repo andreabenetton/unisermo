@@ -280,10 +280,10 @@ These are not derivational affixes or relative superlatives.
 
 The confirmed root distinctions are: `pens` = think / mentally process;
 `kap` = understand / cognitively grasp meaning; `sap` = know / possess
-knowledge; `fer` = physically take / grasp; `port` = carry / transport.
+knowledge; `fer` = physically take / grasp; `portar` = carry / transport.
 The former senses `kap` = take/capture and `sap` = understand are retired.
 The etymology of `fer` (Latin *ferre*, 'carry') must not override its explicitly
-ratified Unisermo meaning 'take/grasp'; `port` denotes carrying/transport.
+ratified Unisermo meaning 'take/grasp'; `portar` denotes carrying/transport.
 
 Each verb forms its **own regular phase family** using the already canonical
 prefixes, with no borrowed idiomatic senses:
@@ -291,13 +291,13 @@ prefixes, with no borrowed idiomatic senses:
 | Base | Begin (`ad-`) | Continue (`in-`) | Cease (`de-`) | Resume (`re-`) |
 |---|---|---|---|---|
 | `fer` | `adfer` | `infer` | `defer` | `refer` |
-| `port` | `adport` | `inport` | `deport` | `report` |
+| `portar` | `adportar` | `inportar` | `deportar` | `reportar` |
 | `kap` | `adkap` | `inkap` | `dekap` | `rekap` |
 | `sap` | `adsap` | `insap` | `desap` | `resap` |
 | `pens` | `adpens` | `inpens` | `depens` | `repens` |
 
-For example, `deport` means cease carrying, not deport in the ordinary
-Italian/English sense; `report` means resume carrying, not report.
+For example, `deportar` means cease carrying, not deportar in the ordinary
+Italian/English sense; `reportar` means resume carrying, not reportar.
 Phase readings of stative cognition (`kap`, `sap`) are subject to the
 ordinary meaning of a state; they are not a new lexical sense.
 
@@ -306,14 +306,14 @@ ordinary meaning of a state; they are not a new lexical sense.
 `ten` means to hold/maintain a physical or control **constraint over time**,
 not to preserve a property or state as such. State persistence is already
 expressed by `ines` from `es`. `fer` is physical acquisition and
-`port` carrying/transport. The ordinary phase family is `adten` begin
+`portar` carrying/transport. The ordinary phase family is `adten` begin
 holding, `inten` continue holding, `deten` cease holding/release the
 constraint (without entailing motion), and `reten` resume holding.
 
 The **productive bound prefix `kun-`** contributes jointness/association to
 the base event, without itself entailing enclosure, collaboration, or a new
 participant. Illustrative compositional forms include `kunmov` move
-jointly, `kunport` carry jointly, `kunpens` think jointly, and `kunfak`
+jointly, `kunportar` carry jointly, `kunpens` think jointly, and `kunfak`
 do/make jointly. Invariant **free** `kun` remains a comitative relator
 introducing an associated participant: the prefix modifies the event,
 whereas the relator introduces a noun phrase. These examples do not ratify
@@ -332,3 +332,21 @@ immutable legacy derivation specification. Historical forms like `kofac`
 remain historical only; modern forms use the current root and prefix,
 e.g. `kunfak`. This is distinct from the already retired nominal
 comitative suffix `-ko`; free `kun` remains the canonical comitative relator.
+
+### Physical opening and closing properties (ratified 2026-10-25)
+
+`aper` (physically open configuration) and `klus` (physically closed
+configuration; Latin *clusus/clausus*) are independent property roots.
+Neither means 'begin' or 'end', and neither automatically applies to
+figurative opening/closing of a process. They are not simply exhaustive
+logical negations. Model B expresses state entry with `ades aper` or
+`ades klus`, persistence with `ines`, and physical causation with the
+already canonical `Y traes X-em aper-da` / `Y traes X-em klus-da`.
+
+The verb root `portar` replaces former `port` (carry/transport).
+`porta` independently denotes a physical door. The regular third-person
+singular of `portar` is `portara`, avoiding the former collision where
+`port` + third-person `-a` yielded `porta`. Phase derivatives are
+`adportar`, `inportar`, `deportar`, `reportar`, and productive
+`kunportar` means transport jointly; none inherit unrelated Romance
+lexical meanings.
