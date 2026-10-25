@@ -313,6 +313,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "e0315ec780d45d2b57255c103dbd8defcf3bad99244460fbcda670b59613a842",
+      "id": "grammar.subordinate_scope_generalized_alor_20261025",
+      "source": "research/grammar/confirmed_decisions.json#decisions/subordinate_scope_generalized_alor_20261025",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "c478bb5c024b604398d161eddce280ef7f31ed5f39df24303240f29c90e82c4f",
       "id": "grammar.universal_quantifier_omni",
       "source": "research/grammar/confirmed_decisions.json#decisions/universal_quantifier_omni",
