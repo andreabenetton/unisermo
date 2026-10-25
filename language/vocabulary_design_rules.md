@@ -79,7 +79,7 @@ an accepted soft merger.
 |---|---|
 | `act` | `ager` |
 | `cad` | `kad` |
-| `cap` | `kap` |
+| `cap` | `kap` (reassigned to cognitive 'understand'; no longer physical 'take') |
 | `centr` | `sentr` |
 | `cert` | `sert` |
 | `circul` | `sirkul` |
