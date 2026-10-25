@@ -289,3 +289,27 @@ established `pro` denotes a beneficiary, not the purpose threshold;
 capacity requirement (e.g. sufficient for five persons) requires separate
 review of numerals and measurement constructions; this rule does not
 silently license a new quantitative frame.
+
+## 15. Quantified object within an explicit purpose (approved design C, 2026-10-25)
+
+For a sufficiency condition defined by an activity involving a number of
+entities, retain the existing purpose relator `fin` and spell out the event
+whose feasibility defines the threshold:
+
+```text
+SUBJECT suf QUALITY fin VERB_ROOT [NUMERAL NOUN-em]
+```
+
+The bare verb root is the dependent, non-finite lexical verb; it takes no
+person/tense marking. Where that verb licenses a direct object, the object
+remains accusative (`-em`) and the numeral is an invariant prenominal
+modifier; no plural `wi` is needed. As a schematic example, `fin fak kin
+objektem` would mean "for making five objects" **if** `objekt` is separately
+adopted as a lexical root; this example is not lexical ratification.
+
+This extends the already ratified `suf QUALITY fin PURPOSE` frame with
+an explicit verb phrase. It does not assign `fin` a new meaning of "capacity
+for N people" and does not reinterpret `pro` as quantitative capacity.
+The exact verb for lodging/hosting people remains unratified, so a fully
+canonical translation of "large enough to accommodate five people"
+is pending that lexical choice.

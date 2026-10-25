@@ -183,3 +183,16 @@ For example, `tik dom suf gran fin fak` means that this house is large
 enough for making/producing something. `pro` remains benefactive and `per`
 remains instrumental; neither automatically replaces `fin`.
 Numerical capacity thresholds are a distinct, still-open construction.
+
+## Purposive verb phrases with quantified objects (approved design C, 2026-10-25)
+
+After `suf QUALITY`, `fin` may introduce an explicit verbal purpose:
+`fin VERB_ROOT [NUMERAL NOUN-em]`. The verb root is uninflected, matching
+the language's existing bare dependent infinitive usage. A transitive
+purpose verb governs its direct object in `-em`; cardinal numerals precede
+number-neutral nouns without obligatory `wi`.
+
+This allows the sufficiency threshold to depend on a quantified activity
+rather than adding a new meaning to `fin` or `pro`. A lexical verb for
+"to host/accommodate" must be ratified before providing a canonical house
+capacity example with `kin umanem`.
