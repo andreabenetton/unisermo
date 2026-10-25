@@ -160,6 +160,17 @@
       "status": "example_only"
     },
     {
+      "form": "aper",
+      "categories": [
+        "property"
+      ],
+      "meaning_it": "aperto; configurazione fisica di apertura",
+      "meaning_en": "open (physical state)",
+      "origin": "Latin apertus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
       "categories": [
         "root"
       ],
@@ -747,6 +758,17 @@
       "status": "confirmed_lexicon"
     },
     {
+      "form": "klus",
+      "categories": [
+        "property"
+      ],
+      "meaning_it": "chiuso; configurazione fisica di chiusura",
+      "meaning_en": "closed (physical state)",
+      "origin": "Latin clausus/clusus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
       "categories": [
         "function_word"
       ],
@@ -1175,11 +1197,22 @@
       "status": "confirmed_lexicon"
     },
     {
+      "form": "porta",
+      "categories": [
+        "noun"
+      ],
+      "meaning_it": "porta; elemento fisico mobile che apre o chiude un passaggio",
+      "meaning_en": "door",
+      "origin": "Latin porta",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
       "categories": [
         "verb_root"
       ],
-      "decision": "Physical carrying/transporting, distinct from taking (fer). Phase derivatives adport/inport/deport/report retain canonical in-/ad-/de-/re- meanings.",
-      "form": "port",
+      "decision": "Replaces port: physical transport, phases adportar/inportar/deportar/reportar, productive kunportar; noun porta stays distinct.",
+      "form": "portar",
       "meaning_en": "carry; transport",
       "meaning_it": "portare; trasportare",
       "origin": "Author ratification 2026-10-25; Latin portare",
