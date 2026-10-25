@@ -19,9 +19,39 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "b93f6d164fe48756b1ff0ba0d1ccd9ea9262362fb2c7c90c6b846a3dc1b694be",
+      "id": "grammar.causal_due_propositional_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/causal_due_propositional_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "473ec7692335c3bdc992f30317d947b652f858a55ff2d28979ec6dd3dd2d0b8e",
       "id": "grammar.comitative_kun_analytic",
       "source": "research/grammar/confirmed_decisions.json#decisions/comitative_kun_analytic",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "1e85e53a3258d7ec696adac79080349fc3e47094e3bc0f31f4aa116fb31bcca9",
+      "id": "grammar.concessive_etsi_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/concessive_etsi_20261024",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "1c42f8fbfd7c357e8221e8a3a7b5c2c793e85e0109705daeabee85a36420d63a",
+      "id": "grammar.conditional_se_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/conditional_se_20261024",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "90332e2e804bcce83cf7d65e6a5c1630e31e2650783456e5a80bb3a5554bdc3f",
+      "id": "grammar.connectives_alor_ma_ergo_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/connectives_alor_ma_ergo_20261024",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "a18dd8a8fdce6955d01e59266ac6cc4fbd82b820dd373747932034d7bc3be9bb",
+      "id": "grammar.coordination_e_o_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/coordination_e_o_20261024",
       "status": "confirmed"
     },
     {
@@ -46,6 +76,18 @@
       "content_sha256": "261dbea8ac39ce2abe218eb6f25ece736471ee8d27f97b2a01f30cb4f48c4003",
       "id": "grammar.derivational_place_field_ia",
       "source": "research/grammar/confirmed_decisions.json#decisions/derivational_place_field_ia",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "bdd740d181e2df91d540955fc016ffd38bff4e11aeeff281081b875e1d11fb1f",
+      "id": "grammar.evidential_nam_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/evidential_nam_20261024",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "ee0349625898018b40e766fee45bde5857c69ccec84a3167536fba7a83832ff5",
+      "id": "grammar.exception_ekse_eksese_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/exception_ekse_eksese_20261024",
       "status": "confirmed"
     },
     {
@@ -94,6 +136,12 @@
       "content_sha256": "9ee18bf839f93269b2de643680f5731d5576953e579bd225360d29cd3ba691b8",
       "id": "grammar.genitive_allomorph_s_es",
       "source": "research/grammar/confirmed_decisions.json#decisions/genitive_allomorph_s_es",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "6484d0f514157786bc0ea8489c05960d0db417aa03989309004f8a987fe19d60",
+      "id": "grammar.hypothetical_concessive_etsise_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/hypothetical_concessive_etsise_20261024",
       "status": "confirmed"
     },
     {
