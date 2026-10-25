@@ -300,3 +300,32 @@ For example, `deport` means cease carrying, not deport in the ordinary
 Italian/English sense; `report` means resume carrying, not report.
 Phase readings of stative cognition (`kap`, `sap`) are subject to the
 ordinary meaning of a state; they are not a new lexical sense.
+
+### Associative `kun-` and the `ten` family (ratified 2026-10-25)
+
+`ten` means to hold/maintain a physical or control **constraint over time**,
+not to preserve a property or state as such. State persistence is already
+expressed by `ines` from `es`. `fer` is physical acquisition and
+`port` carrying/transport. The ordinary phase family is `adten` begin
+holding, `inten` continue holding, `deten` cease holding/release the
+constraint (without entailing motion), and `reten` resume holding.
+
+The **productive bound prefix `kun-`** contributes jointness/association to
+the base event, without itself entailing enclosure, collaboration, or a new
+participant. Illustrative compositional forms include `kunmov` move
+jointly, `kunport` carry jointly, `kunpens` think jointly, and `kunfak`
+do/make jointly. Invariant **free** `kun` remains a comitative relator
+introducing an associated participant: the prefix modifies the event,
+whereas the relator introduces a noun phrase. These examples do not ratify
+unrestricted two-root compounds.
+
+`kunten` is additionally **lexically specialized** to physical/spatial
+containment: maintain contents within spatial bounds. This is a documented
+special meaning, not an automatic interpretation of `kun-` across other
+roots. Abstract/informational part-whole inclusion continues to use `part`
+and the ordinary genitive rather than this spatial sense.
+
+The historical retained `ko-` remains listed in the earlier inventory;
+its semantic overlap or distinction with `kun-` is **unresolved**, and
+this ratification does not grant `ko-` the same productive associative
+sense. Review separately before any synonymy or retirement decision.

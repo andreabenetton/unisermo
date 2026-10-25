@@ -806,6 +806,24 @@
       "decision": "Physical carrying/transporting, distinct from taking (fer). Phase derivatives adport/inport/deport/report retain canonical in-/ad-/de-/re- meanings."
     },
     {
+      "form": "ten",
+      "category": "verb_root",
+      "meaning_it": "tenere; mantenere un vincolo o controllo nel tempo",
+      "meaning_en": "hold; maintain a constraint or control relation over time",
+      "source": "Author ratification 2026-10-25",
+      "decision": "Distinct from fer acquisition, port transport, and ines persistence of a state. Standard phase prefix family adten/inten/deten/reten.",
+      "status": "confirmed"
+    },
+    {
+      "form": "kunten",
+      "category": "lexical_compound",
+      "meaning_it": "contenere fisicamente; mantenere entro confini fisici",
+      "meaning_en": "physically contain; keep within spatial bounds",
+      "source": "Author ratification 2026-10-25; specialized kun- + ten",
+      "decision": "Documented lexical specialization of associative kun- + hold ten. General productive kun- only adds jointness/association; physical containment does not follow for arbitrary roots.",
+      "status": "confirmed"
+    },
+    {
       "form": "lim",
       "category": "functional_word",
       "meaning_it": "marcatore esplicito di chiusura dell'ambito proposizionale",
