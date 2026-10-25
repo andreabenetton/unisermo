@@ -86,7 +86,7 @@ suffix.
 The following productive prefixes remain available unless a future lexical
 collision requires a root-specific revision:
 
-`ne-`, `anti-`, `de-`, `re-`, `pre-`, `pos-`, `ko-`, `auto-`, `semi-`,
+`ne-`, `anti-`, `de-`, `re-`, `pre-`, `pos-`, `kun-`, `auto-`, `semi-`,
 `multi-`, `neo-`, `super-`, `sub-`, `mikro-`, `makro-`.
 
 Examples must use current roots, e.g. `refak`, `defak`, `autofak`, not obsolete
@@ -325,7 +325,10 @@ special meaning, not an automatic interpretation of `kun-` across other
 roots. Abstract/informational part-whole inclusion continues to use `part`
 and the ordinary genitive rather than this spatial sense.
 
-The historical retained `ko-` remains listed in the earlier inventory;
-its semantic overlap or distinction with `kun-` is **unresolved**, and
-this ratification does not grant `ko-` the same productive associative
-sense. Review separately before any synonymy or retirement decision.
+**Ratified 2026-10-25:** the historical associative prefix `ko-` is retired
+in favor of the sole canonical productive associative prefix `kun-`.
+The earlier `ko-` already meant together/joint/co-, as documented in the
+immutable legacy derivation specification. Historical forms like `kofac`
+remain historical only; modern forms use the current root and prefix,
+e.g. `kunfak`. This is distinct from the already retired nominal
+comitative suffix `-ko`; free `kun` remains the canonical comitative relator.
