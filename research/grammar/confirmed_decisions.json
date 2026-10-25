@@ -194,6 +194,30 @@
     {
       "id": "connectives_alor_ma_ergo_20261024",
       "decision": "Author ratifies standalone alor = THEN (conditional consequent correlative), ma = BUT (ordinary adversative conjunction), and ergo = THEREFORE/THUS (inferential conclusion). Distinguish alor conditional relation from ergo inference and ma contrast; e and o retain their previously ratified additive and disjunctive functions, and se retains conditional IF. Full coordination, subordinate-clause scope, optionality of alor in particular contexts, and logical precedence remain separate parser decisions. Author ratification 2026-10-24."
+    },
+    {
+      "id": "causal_due_propositional_20261024",
+      "decision": "Author ratifies extending existing free relator due ('because of' + nominal phrase) to introduce a complete causal subordinate clause ('because/since' + proposition). Both orders are grammatical: P due Q ('P because Q') and due Q, P ('since Q, P'), with Q the asserted cause and P the consequence. This is distinct from P, ergo Q ('P, therefore Q'), where ergo introduces a conclusion/inference, not a cause. Interrogative ker remains WHY. No new kar lexeme; parsing must distinguish due + NP from due + clause and preserve cause/effect role regardless of order. Detailed delimitation and nested scoping remain future parser work. Ratified by author 2026-10-24."
+    },
+    {
+      "id": "concessive_etsi_20261024",
+      "decision": "Ratify standalone etsi as concessive ALTHOUGH/EVEN THOUGH, with both etsi P, Q and Q etsi P. P is a factual or contextually accepted concession rather than an unasserted hypothetical antecedent; hypothetical even-if constructions remain for separate ratification. Keep distinction from adversative ma (BUT) and conditional se (IF). Author ratified 2026-10-24."
+    },
+    {
+      "id": "evidential_nam_20261024",
+      "decision": "Ratify free connective nam for evidential/argumentative justification: P nam Q presents Q as the speaker's reason or evidence for asserting P. This does NOT entail factual causation from Q to P, nor Q's truth, sufficiency, or logical validity. Distinguish factual causal due (P due Q), inference-introducing ergo (Q ergo P), and evidential nam. Nested-clause parsing and evidential scope remain separate implementation work. Author ratification 2026-10-24."
+    },
+    {
+      "id": "hypothetical_concessive_etsise_20261024",
+      "decision": "Ratify canonical fused and invariant etsise = etsi + se, hypothetical concessive EVEN IF / EVEN SHOULD. Both etsise P, Q and Q etsise P are grammatical; P is not asserted as true or false, and Q is presented as holding even under P. Distinguish factual concessive etsi P, Q (P presented as factual/accepted) and ordinary conditional se P, Q. This compound is licensed individually, not a blanket authorization of arbitrary fused connective sequences. Full subordinate scope/nesting parser work remains open. Ratified by author 2026-10-24."
+    },
+    {
+      "id": "exception_ekse_eksese_20261024",
+      "decision": "Ratify invariant free ekse as general exception/exclusion EXCEPT, and fused invariant eksese = ekse + se as conditional exception UNLESS / EXCEPT IF. Both eksese P, Q and Q eksese P are permitted. This marks an exception to Q's default/expectation, distinguished from bare negative condition se no P, Q; it does not assert that Q must obtain whenever P is false. The compound is explicitly licensed, not a rule allowing arbitrary fused connectors. Parser scope and subordinate nesting remain open. Author ratification 2026-10-24. Canonical spelling ekse/eksese explicitly approved by author 2026-10-24 to respect the inventory without c."
+    },
+    {
+      "id": "coordination_e_o_20261024",
+      "decision": "The author explicitly ratifies free standalone e as additive conjunction AND, and free standalone o as disjunctive conjunction OR. The words are separate tokens and do not replace or alter bound verbal aspect markers -e (progressive) or -o (perfect/completive). This decision establishes the lexical meanings only; detailed coordination scope, precedence, comma conventions, and whether OR is inclusive/exclusive have not yet been independently specified. Author ratification dated 2026-10-24."
     }
   ]
 }

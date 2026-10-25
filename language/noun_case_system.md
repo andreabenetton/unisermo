@@ -173,3 +173,18 @@ Synthetic case is reserved for a small, frequent grammatical core. More
 specific semantic relations remain transparent free words. This avoids a long
 case paradigm while preserving compact marking for direct objects, possession,
 recipients/direction, source, location, and resultative predication.
+
+
+## Causal clauses introduced by `due` (ratified 24 October 2026)
+
+The already confirmed free relator `due` ('because of', introducing a nominal phrase) **also introduces a complete causal proposition** ('because', 'since'). Both orders are accepted:
+
+- `P due Q` — P because Q (effect first; Q is the cause).
+- `due Q, P` — Since Q, P (cause first; P is the effect).
+
+This is not the same construction as `Q, ergo P` ('Q, therefore P'): `ergo` explicitly introduces an inference/conclusion rather than labeling the subordinate proposition as a cause. Interrogative `ker` remains WHY. No separate causal connector `kar` is introduced. A parser must preserve which clause is cause and which is effect, and distinguish `due + NP` from `due + finite clause`; punctuation and nested-clause rules beyond the simple examples require further specification.
+
+
+## Factual cause versus evidential justification — required distinction (24 October 2026)
+
+The author requires two separate grammatical treatments for a *real-world causal relation* (one circumstance brings about or contributes to an effect) and a *speaker's reason/evidence for asserting a proposition* (an observation supports an inference without causing the inferred event). `due` is the confirmed **factual causal** linker; the distinct evidential/argumentative linker is now **ratified as `nam`** (Latin-derived). `P nam Q` presents Q as a reason/evidence supplied by the speaker for asserting P, without asserting that Q caused P or that Q is true, sufficient, or a valid proof. `due` retains factual causality. Existing `ergo` introduces an inference/conclusion in `Q ergo P`, whereas `P nam Q` foregrounds the assertion before its justification. Do not silently parse evidence/support as `due` causation.
