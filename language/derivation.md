@@ -276,12 +276,27 @@ Absolute intensity is a separate analytic domain with ratified free
 modifiers `minu`, `pok`, `mult`, `ekstrem` (see `comparison.md`).
 These are not derivational affixes or relative superlatives.
 
-### Cognitive roots and phase family (ratified 2026-10-25)
+### Cognitive and physical-action root families (ratified revision 2026-10-25)
 
-`pens` means think / mentally process; `sap` means understand / grasp meaning.
-Thinking does not entail understanding. `sap` neither denotes mere possession
-of knowledge nor informational inclusion; `kompren` was rejected.
+The confirmed root distinctions are: `pens` = think / mentally process;
+`kap` = understand / cognitively grasp meaning; `sap` = know / possess
+knowledge; `fer` = physically take / grasp; `port` = carry / transport.
+The former senses `kap` = take/capture and `sap` = understand are retired.
+The etymology of `fer` (Latin *ferre*, 'carry') must not override its explicitly
+ratified Unisermo meaning 'take/grasp'; `port` denotes carrying/transport.
 
-Existing phase prefixes give `adsap` begin to understand, `insap`
-continue to understand, `desap` cease to understand, and `resap`
-resume understanding. They operate likewise on `pens`.
+Each verb forms its **own regular phase family** using the already canonical
+prefixes, with no borrowed idiomatic senses:
+
+| Base | Begin (`ad-`) | Continue (`in-`) | Cease (`de-`) | Resume (`re-`) |
+|---|---|---|---|---|
+| `fer` | `adfer` | `infer` | `defer` | `refer` |
+| `port` | `adport` | `inport` | `deport` | `report` |
+| `kap` | `adkap` | `inkap` | `dekap` | `rekap` |
+| `sap` | `adsap` | `insap` | `desap` | `resap` |
+| `pens` | `adpens` | `inpens` | `depens` | `repens` |
+
+For example, `deport` means cease carrying, not deport in the ordinary
+Italian/English sense; `report` means resume carrying, not report.
+Phase readings of stative cognition (`kap`, `sap`) are subject to the
+ordinary meaning of a state; they are not a new lexical sense.

@@ -213,3 +213,11 @@ The transparent compounds are also canonical:
 They encode direction and must not be confused with phase-derived `admov`
 (begin moving) or `demov` (cease moving).
 
+
+## 11. Ratified physical and cognitive verb roots (2026-10-25)
+
+`fer` = take/grasp physically; `port` = carry/transport; `kap` =
+understand (no longer take/capture); `sap` = know; `pens` = think.
+These roots have distinct event/state meanings. Their phase derivatives
+are defined by the regular `ad-/in-/de-/re-` operators in
+[derivation.md](derivation.md), not by Latin or modern homonyms.

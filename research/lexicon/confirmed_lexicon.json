@@ -29,11 +29,12 @@
     },
     {
       "form": "kap",
-      "category": "root",
-      "meaning_it": "prendere; catturare",
-      "meaning_en": "take; capture",
-      "source": "Latin capere",
-      "decision": "Canonical replacement for legacy cap."
+      "category": "verb_root",
+      "meaning_it": "capire; cogliere cognitivamente un significato",
+      "meaning_en": "understand; cognitively grasp meaning",
+      "source": "Author revision 2026-10-25; Latin capere > Italian capire",
+      "decision": "Replaces former take/capture sense; kap is exclusively cognitive understanding. Physical taking is fer, physical carrying is port.",
+      "status": "confirmed"
     },
     {
       "form": "sentr",
@@ -780,11 +781,29 @@
     {
       "form": "sap",
       "category": "verb_root",
-      "meaning_it": "capire; comprendere cognitivamente",
-      "meaning_en": "understand; grasp meaning",
+      "meaning_it": "sapere; possedere una conoscenza",
+      "meaning_en": "know; possess knowledge",
       "status": "confirmed",
-      "source": "Author ratification 2026-10-25",
-      "decision": "Understanding differs from thinking and knowing."
+      "source": "Author revision 2026-10-25; Latin sapere",
+      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions."
+    },
+    {
+      "form": "fer",
+      "category": "verb_root",
+      "meaning_it": "prendere; afferrare fisicamente",
+      "meaning_en": "take; grasp physically",
+      "status": "confirmed",
+      "source": "Author ratification 2026-10-25; Latin ferre (historically carry; semantic assignment deliberate)",
+      "decision": "Physical acquisition/grasp, distinct from transporting (port). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words."
+    },
+    {
+      "form": "port",
+      "category": "verb_root",
+      "meaning_it": "portare; trasportare",
+      "meaning_en": "carry; transport",
+      "status": "confirmed",
+      "source": "Author ratification 2026-10-25; Latin portare",
+      "decision": "Physical carrying/transporting, distinct from taking (fer). Phase derivatives adport/inport/deport/report retain canonical in-/ad-/de-/re- meanings."
     }
   ]
 }
