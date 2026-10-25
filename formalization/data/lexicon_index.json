@@ -804,6 +804,18 @@
     },
     {
       "categories": [
+        "functional_word"
+      ],
+      "decision": "Invariant independent pronounced token before a clause connector. In approved connector chains closes the preceding sequence as left argument of the following connector; commas do not encode scope. Right association without lim. Not a sentence terminator; subordinate nesting remains open.",
+      "form": "lim",
+      "meaning_en": "explicit propositional scope boundary marker",
+      "meaning_it": "marcatore esplicito di chiusura dell'ambito proposizionale",
+      "origin": "Author ratification 2026-10-25; Latin limes, limitis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "root"
       ],
       "decision": "Canonical replacement for legacy loc.",
