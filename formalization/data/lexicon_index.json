@@ -487,6 +487,18 @@
     },
     {
       "categories": [
+        "verb_root"
+      ],
+      "decision": "Physical acquisition/grasp, distinct from transporting (port). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words.",
+      "form": "fer",
+      "meaning_en": "take; grasp physically",
+      "meaning_it": "prendere; afferrare fisicamente",
+      "origin": "Author ratification 2026-10-25; Latin ferre (historically carry; semantic assignment deliberate)",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "noun"
       ],
       "decision": "Canonize fil as the inverse one-generation relation to gen: offspring/child of a parent, irrespective of age or sex. It does not mean a young person.",
@@ -690,11 +702,11 @@
       "categories": [
         "verb"
       ],
-      "decision": "Canonical replacement for legacy cap.",
+      "decision": "Replaces former take/capture sense; kap is exclusively cognitive understanding. Physical taking is fer, physical carrying is port.",
       "form": "kap",
-      "meaning_en": "take; capture",
-      "meaning_it": "prendere; catturare",
-      "origin": "Latin capere",
+      "meaning_en": "understand; cognitively grasp meaning",
+      "meaning_it": "capire; cogliere cognitivamente un significato",
+      "origin": "Author revision 2026-10-25; Latin capere > Italian capire",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -772,6 +784,18 @@
     },
     {
       "categories": [
+        "lexical_compound"
+      ],
+      "decision": "Documented lexical specialization of associative kun- + hold ten. General productive kun- only adds jointness/association; physical containment does not follow for arbitrary roots.",
+      "form": "kunten",
+      "meaning_en": "physically contain; keep within spatial bounds",
+      "meaning_it": "contenere fisicamente; mantenere entro confini fisici",
+      "origin": "Author ratification 2026-10-25; specialized kun- + ten",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "decision": "Canonical replacement for legacy/source cur from Latin cura. Chosen as kurar to avoid collision with the former WHY question word; WHY is now ker.",
@@ -801,6 +825,18 @@
       "form": "likwid",
       "source": "language/noun_case_system.md",
       "status": "example_only"
+    },
+    {
+      "categories": [
+        "functional_word"
+      ],
+      "decision": "Invariant independent pronounced token before a clause connector. In approved connector chains closes the preceding sequence as left argument of the following connector; commas do not encode scope. Right association without lim. Not a sentence terminator; subordinate nesting remains open.",
+      "form": "lim",
+      "meaning_en": "explicit propositional scope boundary marker",
+      "meaning_it": "marcatore esplicito di chiusura dell'ambito proposizionale",
+      "origin": "Author ratification 2026-10-25; Latin limes, limitis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -1068,6 +1104,18 @@
     },
     {
       "categories": [
+        "noun"
+      ],
+      "decision": "Part-whole relationship; genitive can identify the whole.",
+      "form": "part",
+      "meaning_en": "part; component of a whole",
+      "meaning_it": "parte; componente di un tutto",
+      "origin": "Author ratification 2026-10-25",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "decision": "Canonical force/manner verb for push. It describes exerting force in a pushing relation and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame.",
@@ -1075,6 +1123,18 @@
       "meaning_en": "push",
       "meaning_it": "spingere",
       "origin": "Latin pellere / international propel-repel family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Thinking does not entail understanding.",
+      "form": "pens",
+      "meaning_en": "think; mentally process",
+      "meaning_it": "pensare; elaborare mentalmente",
+      "origin": "Author ratification 2026-10-25",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1111,6 +1171,18 @@
       "meaning_en": "slightly; to a small degree",
       "meaning_it": "poco; in misura debole",
       "origin": "Author ratification 2026-10-24: absolute intensity scale A",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Physical carrying/transporting, distinct from taking (fer). Phase derivatives adport/inport/deport/report retain canonical in-/ad-/de-/re- meanings.",
+      "form": "port",
+      "meaning_en": "carry; transport",
+      "meaning_it": "portare; trasportare",
+      "origin": "Author ratification 2026-10-25; Latin portare",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1161,6 +1233,18 @@
       "form": "san",
       "source": "language/copula.md",
       "status": "example_only"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions.",
+      "form": "sap",
+      "meaning_en": "know; possess knowledge",
+      "meaning_it": "sapere; possedere una conoscenza",
+      "origin": "Author revision 2026-10-25; Latin sapere",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -1291,6 +1375,18 @@
       "meaning_en": "during; at the time of",
       "meaning_it": "durante; nel tempo di",
       "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Distinct from fer acquisition, port transport, and ines persistence of a state. Standard phase prefix family adten/inten/deten/reten.",
+      "form": "ten",
+      "meaning_en": "hold; maintain a constraint or control relation over time",
+      "meaning_it": "tenere; mantenere un vincolo o controllo nel tempo",
+      "origin": "Author ratification 2026-10-25",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },

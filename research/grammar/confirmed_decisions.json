@@ -218,6 +218,10 @@
     {
       "id": "coordination_e_o_20261024",
       "decision": "The author explicitly ratifies free standalone e as additive conjunction AND, and free standalone o as disjunctive conjunction OR. The words are separate tokens and do not replace or alter bound verbal aspect markers -e (progressive) or -o (perfect/completive). This decision establishes the lexical meanings only; detailed coordination scope, precedence, comma conventions, and whether OR is inclusive/exclusive have not yet been independently specified. Author ratification dated 2026-10-24."
+    },
+    {
+      "id": "explicit_scope_lim_20261025",
+      "decision": "Author ratified invariant standalone lim as explicitly spoken/written propositional scope boundary before a clause connector. Mixed connective chains have uniform right association absent lim, and lim closes the preceding sequence as the left operand of the next connective. No connector precedence hierarchy and no syntactic scope force for commas. Restrict to licensed ordinary connector chains; deeper subordinate nesting, disjunction semantics and full parser behavior remain future decisions. Keep fail-closed Phase 1 parser unchanged. Approved 2026-10-25."
     }
   ]
 }
