@@ -225,5 +225,6 @@ Free `kun NOUN_PHRASE` introduces an associate/accompaniment as a
 relational complement. Bound `kun-` is an event-modifying derivational
 prefix ('jointly/together'), not a replacement for a participant phrase.
 `kunten` is a specialized lexical compound meaning physical containment;
-it does not mean abstract inclusion by default. The legacy `ko-` prefix
-awaits separate clarification.
+it does not mean abstract inclusion by default. The historical associative prefix `ko-` is retired in favor of the
+productive bound `kun-` (ratified 2026-10-25). The old nominal
+comitative suffix `-ko` remains retired separately.
