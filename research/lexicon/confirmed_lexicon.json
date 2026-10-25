@@ -758,6 +758,33 @@
       "meaning_en": "or; disjunctive coordination",
       "source": "Explicit author ratification 2026-10-24",
       "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified."
+    },
+    {
+      "form": "part",
+      "category": "noun",
+      "meaning_it": "parte; componente di un tutto",
+      "meaning_en": "part; component of a whole",
+      "status": "confirmed",
+      "source": "Author ratification 2026-10-25",
+      "decision": "Part-whole relationship; genitive can identify the whole."
+    },
+    {
+      "form": "pens",
+      "category": "verb_root",
+      "meaning_it": "pensare; elaborare mentalmente",
+      "meaning_en": "think; mentally process",
+      "status": "confirmed",
+      "source": "Author ratification 2026-10-25",
+      "decision": "Thinking does not entail understanding."
+    },
+    {
+      "form": "sap",
+      "category": "verb_root",
+      "meaning_it": "capire; comprendere cognitivamente",
+      "meaning_en": "understand; grasp meaning",
+      "status": "confirmed",
+      "source": "Author ratification 2026-10-25",
+      "decision": "Understanding differs from thinking and knowing."
     }
   ]
 }
