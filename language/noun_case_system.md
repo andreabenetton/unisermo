@@ -218,3 +218,12 @@ structural, and informational wholes. Use existing genitive `-s/-es` to
 name the whole: `part doms` = part of the house; `kin part doms` = five
 parts of the house. No new case is introduced, and numerals do not require
 nominal plural `wi`. This does not assert physical containment or cognition.
+
+## Associative bound prefix versus comitative free relator (ratified 2026-10-25)
+
+Free `kun NOUN_PHRASE` introduces an associate/accompaniment as a
+relational complement. Bound `kun-` is an event-modifying derivational
+prefix ('jointly/together'), not a replacement for a participant phrase.
+`kunten` is a specialized lexical compound meaning physical containment;
+it does not mean abstract inclusion by default. The legacy `ko-` prefix
+awaits separate clarification.
