@@ -91,6 +91,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "629747935badd04fdefc58a1d171833f61adc6829dd4f6fc82ddde12115c3256",
+      "id": "grammar.explicit_scope_lim_20261025",
+      "source": "research/grammar/confirmed_decisions.json#decisions/explicit_scope_lim_20261025",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "88c13e466b8ec4a89c005e022d3fc261c0b4948b7a2ec209a14b304716a2d511",
       "id": "grammar.explicit_state_transition_traes",
       "source": "research/grammar/confirmed_decisions.json#decisions/explicit_state_transition_traes",
