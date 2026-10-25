@@ -131,3 +131,25 @@ In connector chains within the licensed propositional-scope subset, mixed connec
 `lim` must immediately precede the connector whose left operand it delimits; it cannot be sentence-initial, sentence-final, or placed between a connective and its complement. Thus `P e lim Q`, `lim P e Q`, and `P e Q lim` are invalid in this subset.
 
 These examples establish the approved **ordinary connector-chain convention**; they do **not** authorize arbitrary combinations of subordinate forms, unrestricted nesting, or a general clause grammar. Existing ratified semantic distinctions of `due`, `nam`, `ergo`, `etsi`, `etsise`, and `eksese` are preserved; their subordinate boundaries and scope constraints await separate formalization. The inclusive/exclusive semantics of `o` remain undecided. Authors and LLM generators should prefer short, linear periods to deep nested structures. The current Phase 1 clause parser **does not implement** these connective-chain constructions and must continue to fail closed rather than infer undocumented structures.
+
+
+## Anteposed subordinate scope and generalized `alor` (author ratification 25 October 2026)
+
+This section ratifies the nine-part subordinate-scope design, as amended by the author to generalize `alor`. This is a **syntactic extension** of ratified `alor`: in an explicitly marked anteposed subordinate construction it separates the subordinate operand from the matrix/main proposition. The opening connector determines the semantic relation; `alor` itself does **not** convert a factual concession, hypothetical concession, or exception into a conditional inference.
+
+Canonical explicit anteposed templates (P = subordinate clause, Q = matrix clause):
+
+- `se P alor Q` — condition; if P, then Q.
+- `etsi P alor Q` — factual concession; although P, Q, with P presented as factual/accepted.
+- `etsise P alor Q` — hypothetical concession; even if P, Q, without asserting P's truth or falsity.
+- `eksese P alor Q` — conditional exception; Q unless P, with the normative exception-to-expectation reading, **not** the simple logical equivalent of `se no P alor Q`.
+
+The explicit `alor` separator is required for the above *anteposed canonical templates*. This does not revoke already ratified postposed orders `Q etsi P`, `Q etsise P`, or `Q eksese P`, nor previously attested factual causal clause orders. It also does not retroactively declare every illustrated comma-delimited historical example invalid; those historical illustrations are superseded **as canonical boundary notation**, not erased.
+
+The scope of the opening subordinate extends to its matching `alor`. In a nested sequence, delimiters are paired recursively from the innermost currently open antecedent to the outer one. Thus `se se P alor Q alor R` represents `se (se P alor Q) alor R`; `se P alor se Q alor R` represents `se P alor (se Q alor R)`; and `se etsi P alor Q alor R` represents `se (etsi P alor Q) alor R`. Here capital P/Q/R are schematic **complete propositions**, not Unisermo words.
+
+This subordinate relation is separate from the already ratified ordinary connector-chain right association and `lim`. `lim` still closes the prior clause-chain segment immediately before a subsequent connector; it is **not** a substitute for `alor`, and comma punctuation does not delimit grammatical scope. Subordinate openers and scope separators have structural roles, not an arbitrary precedence hierarchy.
+
+The grammar distinguishes a simple clause, a connector-linked compound clause, and subordinate relation nodes with typed antecedent/matrix operands. It permits composition and finite recursion as a linguistic rule; actual parser depth limits may be implementation safeguards, not new grammatical prohibitions. Authors and LLM generators should favor short linear periods and avoid unnecessarily deep nesting.
+
+**Explicitly still open:** exact parsing and delimitation of fronted `due` causes and other `nam` epistemic explanations in arbitrary compound clauses; interaction of complex postposed subordinate arguments with following connectors; mixed subordinate/coordination scope outside the templates above; disjunction inclusivity, wide-scope negation, and modality. These are not implied by this ratification. The existing Phase 1 clause parser does **not** yet recognize general compound or nested subordinate ASTs and must fail closed pending a separately reviewed implementation.

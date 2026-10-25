@@ -222,6 +222,10 @@
     {
       "id": "explicit_scope_lim_20261025",
       "decision": "Author ratified invariant standalone lim as explicitly spoken/written propositional scope boundary before a clause connector. Mixed connective chains have uniform right association absent lim, and lim closes the preceding sequence as the left operand of the next connective. No connector precedence hierarchy and no syntactic scope force for commas. Restrict to licensed ordinary connector chains; deeper subordinate nesting, disjunction semantics and full parser behavior remain future decisions. Keep fail-closed Phase 1 parser unchanged. Approved 2026-10-25."
+    },
+    {
+      "id": "subordinate_scope_generalized_alor_20261025",
+      "decision": "Author ratification 2026-10-25 of nine-point subordinate-scope design with modification: alor is an explicit spoken separator of an anteposed subordinate and matrix clause after se, etsi, etsise and eksese. The subordinate opener preserves conditional, factual concessive, hypothetical concessive or conditional-exception semantics; alor itself imposes no conditional meaning on non-conditionals. Canonical templates se P alor Q, etsi P alor Q, etsise P alor Q, eksese P alor Q. Nested paired alor matches innermost open subordinate first; se se P alor Q alor R differs from se P alor se Q alor R. Preserve postposed previously approved forms, ordinary lim scope, and no grammatical comma. Do not assert full parser coverage, unrestricted fronted due/nam syntax, mixed scope, wide-scope negation or modal rules."
     }
   ]
 }
