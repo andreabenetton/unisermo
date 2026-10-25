@@ -114,3 +114,20 @@ The invariant **single-word** compound `etsise` = `etsi` (concessive) + `se` (hy
 ## Ratified free coordination (24 October 2026)
 
 `e` AND and `o` OR are free conjunction words, not bound verbal aspect vowels `-e` or `-o`. Mixed-connective scope and precedence are not yet specified.
+
+
+## Explicit propositional scope marker `lim` (ratified 25 October 2026)
+
+The standalone invariant word `lim` is a **spoken and written propositional scope-boundary marker**, etymologically motivated by Latin *limes, limitis* (boundary). It is not a sentence terminator or a lexical verb. Every syntactically present `lim` is pronounced and written as a separate token; ordinary comma punctuation has **no scope-changing grammatical force**.
+
+In connector chains within the licensed propositional-scope subset, mixed connectors have **no precedence hierarchy**: absent a boundary they associate to the right. Immediately before a following clause-connecting operator, `lim` closes the preceding sequence into the operator's left argument. Illustrative metalanguage (P,Q,R,S denote complete propositions):
+
+- `P ma Q ergo R` = `P ma (Q ergo R)`.
+- `P ma Q lim ergo R` = `(P ma Q) ergo R`.
+- `P e Q o R` = `P e (Q o R)`.
+- `P e Q lim o R` = `(P e Q) o R`.
+- `P e Q lim o R lim ma S` = `((P e Q) o R) ma S`.
+
+`lim` must immediately precede the connector whose left operand it delimits; it cannot be sentence-initial, sentence-final, or placed between a connective and its complement. Thus `P e lim Q`, `lim P e Q`, and `P e Q lim` are invalid in this subset.
+
+These examples establish the approved **ordinary connector-chain convention**; they do **not** authorize arbitrary combinations of subordinate forms, unrestricted nesting, or a general clause grammar. Existing ratified semantic distinctions of `due`, `nam`, `ergo`, `etsi`, `etsise`, and `eksese` are preserved; their subordinate boundaries and scope constraints await separate formalization. The inclusive/exclusive semantics of `o` remain undecided. Authors and LLM generators should prefer short, linear periods to deep nested structures. The current Phase 1 clause parser **does not implement** these connective-chain constructions and must continue to fail closed rather than infer undocumented structures.
