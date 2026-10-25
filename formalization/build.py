@@ -32,7 +32,7 @@ def build_indexes() -> dict[str, str]:
     entries: dict[str, dict] = {}
     for record in core:
         lemma = record["form"]
-        role_list = [k for k, forms in roles.items() if lemma in forms]
+        role_list = [k for k, forms in roles.items() if isinstance(forms, list) and lemma in forms]
         if not role_list:
             role_list = [record["category"]]
         entries[lemma] = {"form": lemma, "status": "confirmed_lexicon", "source": "research/lexicon/confirmed_lexicon.json",
@@ -41,18 +41,23 @@ def build_indexes() -> dict[str, str]:
                           "origin": record.get("source", ""), "decision": record.get("decision", "")}
     for record in attested:
         lemma = record["form"]
-        if lemma in entries:
-            raise ValueError(f"attested duplicate of confirmed core: {lemma}")
         if not (ROOT / record["source"]).is_file():
             raise ValueError(f"attestation document is absent: {record['source']}")
         text = (ROOT / record["source"]).read_text(encoding="utf-8")
         if lemma not in text:
             raise ValueError(f"missing textual attestation of {lemma} in {record['source']}")
+        if lemma in entries:
+            # Preserve attestation in source registry; current confirmed lexeme wins.
+            continue
         entries[lemma] = {"form": lemma, "status": record["status"], "source": record["source"],
                           "categories": [record["category"]]}
     accepted_alphabet = set(read("formalization/data/morphology.json")["alphabet"])
-    for lemma in entries:
-        if not set(lemma) <= accepted_alphabet:
+    for lemma, record in entries.items():
+        # Lexicon convention writes a productive prefix with a terminal hyphen.
+        # The hyphen is a notation boundary, not a phoneme in its surface.
+        is_prefix = any(x["form"] == lemma and x["category"] == "derivational_prefix" for x in core)
+        phonemes = lemma[:-1] if is_prefix and lemma.endswith("-") else lemma
+        if not phonemes or not set(phonemes) <= accepted_alphabet:
             raise ValueError(f"illegal grapheme in {lemma}")
     generated = {"formalization/data/rule_registry.json": canonical({"schema": "unisermo/rule-registry@1", "entries": registry}),
                  "formalization/data/lexicon_index.json": canonical({"schema": "unisermo/lexicon-index@1", "entries": [entries[k] for k in sorted(entries)]}),
