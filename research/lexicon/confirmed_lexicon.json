@@ -785,6 +785,33 @@
       "status": "confirmed",
       "source": "Author ratification 2026-10-25",
       "decision": "Understanding differs from thinking and knowing."
+    },
+    {
+      "form": "part",
+      "category": "noun",
+      "meaning_it": "parte; componente di un tutto",
+      "meaning_en": "part; component of a whole",
+      "source": "Explicit author ratification 2026-10-25; Latin pars, partis",
+      "decision": "Structural part-of relationship, including abstract/informational wholes. Existing genitive marks the whole; no novel case.",
+      "status": "confirmed"
+    },
+    {
+      "form": "pens",
+      "category": "verb_root",
+      "meaning_it": "pensare; elaborare mentalmente",
+      "meaning_en": "think; engage in mental processing",
+      "source": "Explicit author ratification 2026-10-25",
+      "decision": "Thinking does not entail understanding; regular phase prefixes apply.",
+      "status": "confirmed"
+    },
+    {
+      "form": "sap",
+      "category": "verb_root",
+      "meaning_it": "capire; cogliere il significato",
+      "meaning_en": "understand; grasp meaning",
+      "source": "Explicit author ratification 2026-10-25",
+      "decision": "Cognitive comprehension, distinct from pens, knowing (not yet selected), and structural part-whole inclusion. Phase: adsap, insap, desap, resap.",
+      "status": "confirmed"
     }
   ]
 }
