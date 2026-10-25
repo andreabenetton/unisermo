@@ -96,3 +96,22 @@ Schematic illustrations (not claims of complete parser support): `se P, alor Q` 
 ## Order of causal clauses (ratified 24 October 2026)
 
 Both `P due Q` (effect followed by its causal explanation) and `due Q, P` (fronted causal clause followed by effect) are accepted. In either order Q is the cause and P the effect. `Q, ergo P` instead presents P as an inference/conclusion. General subordinate nesting and delimiter rules are not yet implemented in the restricted Phase 1 parser; no silent acceptance of unparsed forms is implied.
+
+
+## Factual concessive `etsi` (ratified 24 October 2026)
+
+`etsi` introduces an accepted/factual concession: `etsi P, Q` ('although P, Q') and `Q etsi P` ('Q, although P') are both permitted, with P the conceded proposition and Q the contrasting outcome. Distinguish conditional `se` (IF) and adversative `ma` (BUT). The hypothetical reading 'even if P were to happen' is not automatically ratified. The restricted Phase 1 parser does not yet implement compound concessive clauses.
+
+
+## Hypothetical concessive `etsise` (ratified 24 October 2026)
+
+The invariant **single-word** compound `etsise` = `etsi` (concessive) + `se` (hypothetical condition) denotes hypothetical **EVEN IF / EVEN SHOULD**. Both `etsise P, Q` ('even if P, Q') and `Q etsise P` ('Q, even if P') are grammatical. The speaker does **not assert that P is true or false**, unlike `etsi` which presents P as factual or accepted. The consequent Q is asserted to hold even in the eventuality P, not in all imaginable circumstances. `etsise` is a specifically licensed compound, **not** evidence that arbitrary connective strings may be fused. Complex subordinate-scope parsing remains outside the current restricted parser.
+
+
+## Exception and conditional exception (ratified 24 October 2026)
+
+`ekse` is a free invariant EXCEPT/EXCLUDING operator. The fused single-word `eksese` = `ekse` + `se` introduces a conditional exception, UNLESS / EXCEPT IF. The two clause orders `eksese P, Q` ('unless P, Q') and `Q eksese P` ('Q, unless P') are both valid. Unlike simple `se no P, Q` ('if not P, Q'), `eksese` signals that P is an exception to an expectation/rule associated with Q; it does not generally entail that Q must happen whenever P is false. Full syntactic handling of the general exclusion operator and nested subordinate clauses remains future parser work. The fused compound is specifically licensed and does not make arbitrary fusion productive.
+
+## Ratified free coordination (24 October 2026)
+
+`e` AND and `o` OR are free conjunction words, not bound verbal aspect vowels `-e` or `-o`. Mixed-connective scope and precedence are not yet specified.
