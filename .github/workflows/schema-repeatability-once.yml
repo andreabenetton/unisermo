@@ -1,0 +1,46 @@
+name: One-shot schema repeatability (32 OpenRouter requests)
+on:
+  push:
+    branches: [research/schema-repeatability-20261024]
+    paths:
+      - '.github/workflows/schema-repeatability-once.yml'
+permissions:
+  contents: read
+concurrency:
+  group: unisermo-one-shot-schema-repeatability-20261024
+  cancel-in-progress: false
+jobs:
+  experiment:
+    if: >-
+      github.event.head_commit.message == 'ci: execute prospective schema repeatability once'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate preflight and experimental budget
+        run: |
+          python -m unittest discover -s tests -p 'test_schema_repeatability*.py' -v
+          python - <<'PY'
+          from benchmarks.schema_repeatability_runner import make_requests, MAX_COST_USD, MAX_REQUESTS, MODEL
+          requests, docs = make_requests()
+          assert len(requests) == MAX_REQUESTS == 32
+          assert len(docs) == 8
+          assert MAX_COST_USD == 0.02
+          assert MODEL == 'qwen/qwen3-32b'
+          print('preflight validated: development only, 32 requests maximum, USD 0.02 stop limit')
+          PY
+      - name: Execute bounded Qwen3 experiment
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m benchmarks.schema_repeatability_runner --output benchmarks/reports/schema-repeatability-raw.jsonl
+      - name: Archive raw responses and analysis, including partial results on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: schema-repeatability-${{ github.run_id }}
+          path: benchmarks/reports/schema-repeatability-*
+          if-no-files-found: warn
+          retention-days: 30

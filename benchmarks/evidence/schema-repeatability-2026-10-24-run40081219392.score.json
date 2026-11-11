@@ -1,0 +1,1029 @@
+{
+  "schema": "unisermo/schema-prospective-repeatability@1",
+  "experimental_status": "repeated_existing_development_templates_not_independent_validation",
+  "model_requested": "qwen/qwen3-32b",
+  "requests": 32,
+  "docs": 8,
+  "repetitions": 2,
+  "scoring_unit": "document",
+  "conditions": {
+    "generic": {
+      "exact_events": 32,
+      "total_events": 48,
+      "event_accuracy": 0.6666666666666666,
+      "usage": {
+        "prompt_tokens": 3866,
+        "completion_tokens": 3258,
+        "total_tokens": 7124,
+        "cost": 0.00122152
+      },
+      "usd_per_correct_event": 3.81725e-05,
+      "field_errors": {
+        "tense": 8,
+        "interrogative": 6,
+        "aspect": 2
+      }
+    },
+    "strict": {
+      "exact_events": 39,
+      "total_events": 48,
+      "event_accuracy": 0.8125,
+      "usage": {
+        "prompt_tokens": 4874,
+        "completion_tokens": 3374,
+        "total_tokens": 8248,
+        "cost": 0.00133464
+      },
+      "usd_per_correct_event": 3.422153846153846e-05,
+      "field_errors": {
+        "aspect": 6,
+        "tense": 3
+      }
+    }
+  },
+  "rounds": {
+    "1": {
+      "schema": "unisermo/schema-repeatability@1",
+      "unit_of_inference": "document",
+      "documents": 8,
+      "events_per_condition": 24,
+      "exact_events": {
+        "generic": 17,
+        "strict": 20
+      },
+      "difference_strict_minus_generic_events": 3,
+      "document_differences": [
+        -2,
+        1,
+        0,
+        0,
+        -1,
+        3,
+        -1,
+        3
+      ],
+      "exact_sign_flip_p_two_sided": 0.71875,
+      "cluster_bootstrap_difference_fraction_95pct": [
+        -0.25,
+        0.5416666666666666
+      ],
+      "field_errors": {
+        "generic": {
+          "tense": 4,
+          "interrogative": 3
+        },
+        "strict": {
+          "aspect": 3,
+          "tense": 1
+        }
+      },
+      "other_errors": {
+        "generic": {},
+        "strict": {}
+      },
+      "details": [
+        {
+          "document": "H001",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 244,
+            "completion_tokens": 202,
+            "total_tokens": 446,
+            "cost": 7.608e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H001",
+          "condition": "strict",
+          "correct": 1,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 307,
+            "completion_tokens": 211,
+            "total_tokens": 518,
+            "cost": 8.364e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H002",
+          "condition": "generic",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 0,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 244,
+            "completion_tokens": 202,
+            "total_tokens": 446,
+            "cost": 7.608e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H002",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 307,
+            "completion_tokens": 209,
+            "total_tokens": 516,
+            "cost": 8.308e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H003",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 243,
+            "completion_tokens": 205,
+            "total_tokens": 448,
+            "cost": 7.684e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H003",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 306,
+            "completion_tokens": 212,
+            "total_tokens": 518,
+            "cost": 8.384e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H004",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 239,
+            "completion_tokens": 202,
+            "total_tokens": 441,
+            "cost": 7.568e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H004",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 302,
+            "completion_tokens": 209,
+            "total_tokens": 511,
+            "cost": 8.268e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H005",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 241,
+            "completion_tokens": 202,
+            "total_tokens": 443,
+            "cost": 7.584e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H005",
+          "condition": "strict",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 304,
+            "completion_tokens": 210,
+            "total_tokens": 514,
+            "cost": 8.312e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H006",
+          "condition": "generic",
+          "correct": 0,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 0,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 1,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 237,
+            "completion_tokens": 202,
+            "total_tokens": 439,
+            "cost": 7.552e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H006",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 300,
+            "completion_tokens": 209,
+            "total_tokens": 509,
+            "cost": 8.252e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H007",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 242,
+            "completion_tokens": 205,
+            "total_tokens": 447,
+            "cost": 7.676e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H007",
+          "condition": "strict",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "tense": {
+                  "expected": "present",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 305,
+            "completion_tokens": 212,
+            "total_tokens": 517,
+            "cost": 8.376e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H008",
+          "condition": "generic",
+          "correct": 0,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 0,
+              "fields": {
+                "interrogative": {
+                  "expected": false,
+                  "actual": true
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 1,
+              "fields": {
+                "interrogative": {
+                  "expected": false,
+                  "actual": true
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "interrogative": {
+                  "expected": false,
+                  "actual": true
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 243,
+            "completion_tokens": 208,
+            "total_tokens": 451,
+            "cost": 7.768e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H008",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 306,
+            "completion_tokens": 215,
+            "total_tokens": 521,
+            "cost": 8.468e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        }
+      ],
+      "limitations": "Exploratory post-hoc analysis of development data; document clusters are not independent corpus samples. Bootstrap and randomization do not confer holdout status."
+    },
+    "2": {
+      "schema": "unisermo/schema-repeatability@1",
+      "unit_of_inference": "document",
+      "documents": 8,
+      "events_per_condition": 24,
+      "exact_events": {
+        "generic": 15,
+        "strict": 19
+      },
+      "difference_strict_minus_generic_events": 4,
+      "document_differences": [
+        0,
+        1,
+        0,
+        -1,
+        -1,
+        3,
+        -1,
+        3
+      ],
+      "exact_sign_flip_p_two_sided": 0.53125,
+      "cluster_bootstrap_difference_fraction_95pct": [
+        -0.16666666666666666,
+        0.5416666666666666
+      ],
+      "field_errors": {
+        "generic": {
+          "aspect": 2,
+          "tense": 4,
+          "interrogative": 3
+        },
+        "strict": {
+          "aspect": 3,
+          "tense": 2
+        }
+      },
+      "other_errors": {
+        "generic": {},
+        "strict": {}
+      },
+      "details": [
+        {
+          "document": "H001",
+          "condition": "generic",
+          "correct": 1,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 244,
+            "completion_tokens": 204,
+            "total_tokens": 448,
+            "cost": 7.664e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H001",
+          "condition": "strict",
+          "correct": 1,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 307,
+            "completion_tokens": 211,
+            "total_tokens": 518,
+            "cost": 8.364e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H002",
+          "condition": "generic",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 0,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 244,
+            "completion_tokens": 202,
+            "total_tokens": 446,
+            "cost": 7.608e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H002",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 307,
+            "completion_tokens": 209,
+            "total_tokens": 516,
+            "cost": 8.308e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H003",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 243,
+            "completion_tokens": 205,
+            "total_tokens": 448,
+            "cost": 7.684e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H003",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 306,
+            "completion_tokens": 212,
+            "total_tokens": 518,
+            "cost": 8.384e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H004",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 239,
+            "completion_tokens": 202,
+            "total_tokens": 441,
+            "cost": 7.568e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H004",
+          "condition": "strict",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "tense": {
+                  "expected": "present",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 302,
+            "completion_tokens": 209,
+            "total_tokens": 511,
+            "cost": 8.268e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H005",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 241,
+            "completion_tokens": 202,
+            "total_tokens": 443,
+            "cost": 7.584e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H005",
+          "condition": "strict",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "aspect": {
+                  "expected": "simple",
+                  "actual": "progressive"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 304,
+            "completion_tokens": 210,
+            "total_tokens": 514,
+            "cost": 8.312e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H006",
+          "condition": "generic",
+          "correct": 0,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 0,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 1,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "tense": {
+                  "expected": "future",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 237,
+            "completion_tokens": 202,
+            "total_tokens": 439,
+            "cost": 7.552e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H006",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 300,
+            "completion_tokens": 209,
+            "total_tokens": 509,
+            "cost": 8.252e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H007",
+          "condition": "generic",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 242,
+            "completion_tokens": 205,
+            "total_tokens": 447,
+            "cost": 7.676e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H007",
+          "condition": "strict",
+          "correct": 2,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 1,
+              "fields": {
+                "tense": {
+                  "expected": "present",
+                  "actual": "past"
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 305,
+            "completion_tokens": 212,
+            "total_tokens": 517,
+            "cost": 8.376e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H008",
+          "condition": "generic",
+          "correct": 0,
+          "total": 3,
+          "decode_error": null,
+          "failures": [
+            {
+              "event": 0,
+              "fields": {
+                "interrogative": {
+                  "expected": false,
+                  "actual": true
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 1,
+              "fields": {
+                "interrogative": {
+                  "expected": false,
+                  "actual": true
+                }
+              },
+              "category": "feature_error"
+            },
+            {
+              "event": 2,
+              "fields": {
+                "interrogative": {
+                  "expected": false,
+                  "actual": true
+                }
+              },
+              "category": "feature_error"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 243,
+            "completion_tokens": 208,
+            "total_tokens": 451,
+            "cost": 7.768e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        },
+        {
+          "document": "H008",
+          "condition": "strict",
+          "correct": 3,
+          "total": 3,
+          "decode_error": null,
+          "failures": [],
+          "usage": {
+            "prompt_tokens": 306,
+            "completion_tokens": 215,
+            "total_tokens": 521,
+            "cost": 8.468e-05
+          },
+          "provider": "DeepInfra",
+          "returned_model": "qwen/qwen3-32b"
+        }
+      ],
+      "limitations": "Exploratory post-hoc analysis of development data; document clusters are not independent corpus samples. Bootstrap and randomization do not confer holdout status."
+    }
+  },
+  "stability": {
+    "generic": {
+      "equal_feature_vectors": 22,
+      "events_compared": 24,
+      "correct_in_both_repetitions": 15,
+      "differing_examples": [
+        {
+          "doc": "H001",
+          "event": 1,
+          "left": {
+            "lemma": "trak",
+            "object_lemma": "akwa",
+            "tense": "past",
+            "aspect": "simple",
+            "person": 2,
+            "number": "singular",
+            "negative": true,
+            "interrogative": false
+          },
+          "right": {
+            "lemma": "trak",
+            "object_lemma": "akwa",
+            "tense": "past",
+            "aspect": "progressive",
+            "person": 2,
+            "number": "singular",
+            "negative": true,
+            "interrogative": false
+          }
+        },
+        {
+          "doc": "H001",
+          "event": 2,
+          "left": {
+            "lemma": "vid",
+            "object_lemma": "akwa",
+            "tense": "past",
+            "aspect": "simple",
+            "person": 2,
+            "number": "singular",
+            "negative": true,
+            "interrogative": false
+          },
+          "right": {
+            "lemma": "vid",
+            "object_lemma": "akwa",
+            "tense": "past",
+            "aspect": "progressive",
+            "person": 2,
+            "number": "singular",
+            "negative": true,
+            "interrogative": false
+          }
+        }
+      ]
+    },
+    "strict": {
+      "equal_feature_vectors": 23,
+      "events_compared": 24,
+      "correct_in_both_repetitions": 19,
+      "differing_examples": [
+        {
+          "doc": "H004",
+          "event": 1,
+          "left": {
+            "lemma": "trak",
+            "object_lemma": "frat",
+            "tense": "present",
+            "aspect": "simple",
+            "person": 1,
+            "number": "singular",
+            "negative": true,
+            "interrogative": false
+          },
+          "right": {
+            "lemma": "trak",
+            "object_lemma": "frat",
+            "tense": "past",
+            "aspect": "simple",
+            "person": 1,
+            "number": "singular",
+            "negative": true,
+            "interrogative": false
+          }
+        }
+      ]
+    }
+  },
+  "paired_doc_strict_minus_generic": [
+    -2,
+    2,
+    0,
+    -1,
+    -2,
+    6,
+    -2,
+    6
+  ],
+  "combined_event_difference": 7,
+  "exact_cluster_sign_flip_p_two_sided_exploratory": 0.53125,
+  "cluster_bootstrap_accuracy_difference_95pct": [
+    -0.20833333333333334,
+    0.5416666666666666
+  ],
+  "call_controls": {
+    "max_requests": 32,
+    "max_output_tokens": 450,
+    "max_cost_usd": 0.02,
+    "seed": 23,
+    "temperature": 0.7,
+    "reasoning_enabled": false,
+    "no_think_suffix": true,
+    "provider_fallbacks": false,
+    "provider_pinned": false
+  },
+  "limitations": "Repeated responses to familiar highly templated development clauses, not independent semantic comprehension. Provider selection can vary. Underpowered exploratory inference; do not choose a canonical grammar or schema from this alone.",
+  "observed_provider_cost_usd": 0.00255616,
+  "corpus_path": "benchmarks/corpus/schema-replication-003.jsonl",
+  "corpus_digest_sha256": "724f02e8fb9fb437dd80f772c5fd418d0eae8baf8bca2cfd02dbb65eabacc6b0",
+  "response_digest_sha256": "1cc3b41c5e946a1292da428194461dfe66ed4e7dbdf3d16a45e2f5f565296b2c"
+}
