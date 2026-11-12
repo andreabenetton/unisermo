@@ -319,6 +319,12 @@
       "status": "confirmed"
     },
     {
+      "id": "grammar.short_servile_roots_and_negation_scope_20261112",
+      "status": "confirmed",
+      "source": "research/grammar/confirmed_decisions.json#decisions/short_servile_roots_and_negation_scope_20261112",
+      "content_sha256": "1f99afc87486e9b35b4ec5bb6f581d4d12f264d797740ad42ba9a33fb1c1efe6"
+    },
+    {
       "content_sha256": "75c289f909b5d3bb5a7cfc702ca3dc2d7c1746ff7d0d393e241f4508ef8b3fc9",
       "id": "grammar.state_phase_family_es",
       "source": "research/grammar/confirmed_decisions.json#decisions/state_phase_family_es",
