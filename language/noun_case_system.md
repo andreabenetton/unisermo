@@ -320,5 +320,6 @@ stacking, modal-domain interactions beyond a single simple
 Punctuation does not carry grammatical scope. The existing
 temporal relator `tem` remains canonical for "during/at a
 time"; `-in` is not automatically a temporal case. The
-Phase 1 parser does **not** implement abstract-domain frames
-and must fail closed rather than infer them.
+typed parser identifies preposed locatives while leaving their
+event-domain versus proposition-domain attachment **unresolved**;
+it does **not** infer abstract domain truth solely from word order.
