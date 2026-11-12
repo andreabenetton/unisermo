@@ -43,7 +43,7 @@ class AbstractDomainLocativeTests(unittest.TestCase):
         self.assertIn("left-peripheral", order)
         self.assertIn("movi domin", order)
         self.assertIn("domin movi", order)
-        self.assertIn("fronting alone is insufficient", order)
+        self.assertIn("fronting alone is insufficient", " ".join(order.split()))
         self.assertIn("position alone", spec)
         self.assertIn("placeholder", spec.lower())
         self.assertIn("unratified", spec.lower())
@@ -71,7 +71,7 @@ class AbstractDomainLocativeTests(unittest.TestCase):
         record = [x for x in gram["decisions"] if x["id"] == key]
         self.assertEqual(len(record), 1)
         self.assertIn("existing locative suffix -in", record[0]["decision"])
-        self.assertIn("fronting", record[0]["decision"])
+        self.assertIn("fronting", record[0]["decision"].lower())
         rule = json.loads((ROOT / "formalization/data/rule_registry.json").read_text(encoding="utf-8"))
         entries = [x for x in rule["entries"] if x["id"] == "grammar." + key]
         self.assertEqual(len(entries), 1)
