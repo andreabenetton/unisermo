@@ -16,7 +16,7 @@ The synthetic case inventory is closed to seven values:
 | `-s` / `-es` | genitive | possessive / of |
 | `-ad` | dative / allative | to / toward / recipient |
 | `-de` | ablative | from / source / origin |
-| `-in` | locative | in / at / location |
+| `-in` | locative | in / at / within a physical or abstract domain |
 | `-da` | resultative predicative / transformative | as / into the resulting state or role |
 
 The former comitative suffix `-ko` is retired. The former extended case
@@ -248,3 +248,77 @@ The ablative remains "from/source/origin" elsewhere. This does
 **not** create a universally productive "authority-source" meaning
 for every `-de` phrase, nor does it decide how to mark an abstract
 regulatory or social domain with `-in`; that is a separate question.
+
+## Abstract-domain extension of locative `-in` (ratified 2026-11-12)
+
+The **same existing locative case `-in`** expresses *in/at/within a
+domain of reference*, whether the domain is physical or abstract. No
+additional case, suffix, or compulsory new free relator is introduced.
+The licensed semantic classes include **physical space**, **normative
+rules**, **institutional frameworks**, **academic/technical disciplines**,
+**software/computational environments**, and **simulated or fictional
+worlds**. This is a productive semantic extension of one case, not a
+lexical synonym for `due`, `fin`, `tem`, `mod`, `per` or `-de`.
+
+The distinction to preserve is the **syntactic level of attachment**:
+
+1. **Event/predicate adjunct:** a `LOCATION-NP-in` within a simple
+   predicate supplies the location or local domain of *the event*.
+   Canonical ordinary example: `movi domin` = I move in the house.
+2. **Proposition-level domain frame:** an abstract `DOMAIN-NP-in`
+   is a **left-peripheral adjunct of an entire simple proposition P**,
+   constraining the frame in which P is asserted, assessed or valid.
+   Canonical unmarked schema is `[DOMAIN-NP-in] [SIMPLE PROPOSITION P]`
+   with the domain phrase **before the subject**, if explicit, or
+   **before the finite predicate**, if pro-drop applies. It scopes over
+   that one whole simple proposition, including its local negation
+   and ordinary predicate dependents; the domain phrase is not itself
+   negated simply because a predicate is negated.
+
+Schematic examples below use uppercase placeholders **only for
+unratified nominal roots**, not newly approved Unisermo lexemes:
+
+- `[NORMA]-in auti umande mov` = within the framework of that norm,
+  I am permitted by a person to move (domain = NORMA, grant source =
+  `uman-de`).
+- `[NORMA]-in no auti umande mov` = under that norm, I lack permission
+  from that person to move; the `no` negates `aut`, not the domain.
+- `[SISTEMA]-in faki` = I act/make something within that system,
+  as evaluated in its system context; the root `fak` is already
+  canonical and `[SISTEMA]` is a semantic placeholder.
+- `[SIMULAZIONE]-in movi` = within that simulation, I move (this
+  does **not** assert movement outside the simulation).
+
+The **surface position alone does not always prove scope**:
+Unisermo already permits topicalization and fronting of ordinary
+case-marked event complements. In particular, `domin movi` may
+still be a fronted **spatial** event-locative ("in the house, I
+move") and MUST NOT automatically become a proposition-domain
+reading just because it is initial. A noun that can refer both to
+an institution and a physical location likewise may have more
+than one reading; its nominal semantics and explicitly expressed
+frame determine the intended attachment. When ambiguous, preserve
+that ambiguity or restructure for clarity. A leading `-in` is
+the **preferred unmarked presentation** of a proposition-level
+domain, **not** an automatic override of existing fronting rules.
+Do not claim guaranteed disambiguation from word order alone.
+
+With an `aut` frame, a proposition-domain `-in` and a permission
+source `-de` remain distinct arguments:
+`[NORMA]-in auti umande mov` locates the assertion within the
+normative domain; `uman-de` identifies who granted the permission.
+A norm-domain is not automatically the source granting the permit;
+nor is the norm necessarily the cause, purpose or time of the action.
+
+**Scope limit of this ratification:** only the spatial/local
+baseline and the illustrated *single simple proposition* domain
+frame are accepted. It does **not** decide how far `-in` scopes
+over `P e Q`, `P o Q`, `ma`, `due`, `nam`, `ergo`,
+`se P alor Q` or nested clauses, nor does it decide multi-domain
+stacking, modal-domain interactions beyond a single simple
+`aut` frame, or arbitrary movement of the domain adjunct.
+Punctuation does not carry grammatical scope. The existing
+temporal relator `tem` remains canonical for "during/at a
+time"; `-in` is not automatically a temporal case. The
+Phase 1 parser does **not** implement abstract-domain frames
+and must fail closed rather than infer them.
