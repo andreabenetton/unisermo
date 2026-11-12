@@ -31,7 +31,9 @@
               "cardinal_numeral",
               "iteration_counter",
               "ordinal_numeral",
-              "multiplicative_factor"
+              "multiplicative_factor",
+              "genitive_pronoun",
+              "focus_enclitic"
             ]
           },
           "lemma": {
@@ -102,6 +104,9 @@
             "type": "integer",
             "minimum": 1,
             "maximum": 999999999999
+          },
+          "focus": {
+            "type": "string"
           }
         },
         "additionalProperties": false
