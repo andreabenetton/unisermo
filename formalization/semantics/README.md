@@ -1,40 +1,55 @@
-# Semantics boundary
+# Typed parser and semantic interpretation boundary
 
-The current `formalization.parser` returns morphology and a restricted SVO clause AST.
-It is **not** a complete semantic interpreter. Ambiguity is preserved at word level.
+The deterministic `formalization.parser.proposition` now emits a
+**source-constrained typed proposition AST** in a bounded subset of the
+accepted grammar. The ordinary Phase 1 SVO analysis remains stable for
+previously supported sentences. See
+[GRAMMAR_COVERAGE.md](../GRAMMAR_COVERAGE.md).
 
-A future owner-approved LDR must define referent tracking, negation scope,
-quantification, presuppositions, valency and logical-form serialization.
-No LLM-efficiency claim may imply semantic equivalence from morphology alone.
+## Grammar structures currently represented
 
-The author-ratified `no lim` wide-scope grammatical construction covers a
-restricted truth-conditional `e/o` clause subset (see `language/negation.md`).
-This remains **a normative documentary rule, not executable parser support**.
-The current Phase 1 sentence parser must continue to reject unsupported
-compound or wide-negation input; LDR-0010 tracks the decision boundary.
+- Ordinary `no` is local; `no lim` negates the whole licensed
+  truth-conditional `e/o` expression; a later `lim` closes the
+  current operand before the next connector.
+- `e` AND, inclusive `o` OR, adversative `ma`, and
+  initial-`o` n-ary **exactly-one** choice have distinct node types
+  and roles. Three-way exclusive choice is not binary XOR parity.
+- `due` is factual cause, `nam` evidence or justification,
+  and `ergo` an inference. They remain different typed relations
+  rather than a Boolean connector with guessed truth conditions.
+- Anteposed `se/etsi/etsise/eksese ... alor ...` and selected
+  postposed concessives/exceptions are represented with subordinate
+  and matrix operands. Nested explicit `alor` pairing is supported.
+- One finite servile (`pos/deb/vol/pot/sap/aut`) takes one
+  uninflected verbal action, with negation stored either on the head
+  or the dependent action. `aut SOURCE-de ROOT` retains a separate
+  source-of-permission slot.
+- Local event locatives are distinguished from a preposed locative
+  that **might** frame a whole proposition: the latter is marked
+  `attachment: undetermined` instead of claiming semantic clarity
+  that the spoken surface does not supply.
 
-Servile verbs use an accepted finite modal/know-how head plus a bare root.
-The 2026-11-12 ratification distinguishes `no [finite servile] ROOT`
-(negation of the modal/know-how relation) from `[finite servile] no ROOT`
-(modality of a negated dependent action). This remains a normative grammar
-rule and is **not** implemented by the restricted Phase 1 parser; see
-LDR-0011 and `language/verb_specification.md`.
+The typed implementation supports a small simple-clause set of
+explicit cases, free relators, WH questions, stative zero copulas
+and imperatives.
 
-LDR-0012 ratifies `aut` as an ordinary permission/authorization servile
-with an optional `-de` granting-source phrase immediately after the finite
-head and before the bare dependent verb. This is a **grammatical valency
-rule** and is not implemented in the Phase 1 parser. The possible
-abstract-domain use of `-in` is separately ratified for a single
-simple proposition by LDR-0013. Both the domain frame and the
-`aut` source slot remain outside the current Phase 1 parser.
+## Semantics that are NOT yet implemented
 
-LDR-0013 preserves the distinction between an event/predicate-attached
-locative and a left-peripheral proposition-domain adjunct. In the
-restricted simple-clause subset, `DOMAIN-NP-in P` sets a context of
-assessment for P while `P LOCATION-NP-in` describes an event's
-location. Because previously ratified word-order freedom permits
-fronting a spatial event locative, a leading `NP-in` alone does **not**
-prove domain-wide scope. Domain semantics and syntactic attachment
-must be distinguished; ambiguous dual-use NPs remain ambiguous.
-Full semantic parsing, mixed connectors, temporal extensions, and
-nested domains are not implemented or ratified by this LDR.
+No unrestricted lexical valency, world-model truth evaluation, referent
+tracking, discourse-pragmatic inference, modal accessibility-world
+reasoning, deontic authority resolution, institutional-domain
+disambiguation, presupposition engine, unrestricted subordinate and
+coordination interaction, full typed logical-form serialization, or
+guarantee of English paraphrase equivalence is present.
+
+The parser cannot infer that a `due`-related event really caused
+another event; it can **only preserve the operator chosen by the
+speaker**. Likewise, `nam` marks a stated reason, not necessarily
+a true or valid proof. `aut` encodes that a permission relation was
+asserted, not that an actual authority legally granted permission.
+
+The four accepted grammatical records (LDR-0010 through LDR-0013)
+remain normative unchanged. These executable additions do not
+ratify unsupported nested modal negation, broad `no lim` over
+discourse operators, question-wide compound scope, or arbitrary
+domain/locative inference.

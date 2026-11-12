@@ -94,12 +94,12 @@ Schematic illustrations (not claims of complete parser support): `se P, alor Q` 
 
 ## Order of causal clauses (ratified 24 October 2026)
 
-Both `P due Q` (effect followed by its causal explanation) and `due Q, P` (fronted causal clause followed by effect) are accepted. In either order Q is the cause and P the effect. `Q, ergo P` instead presents P as an inference/conclusion. General subordinate nesting and delimiter rules are not yet implemented in the restricted Phase 1 parser; no silent acceptance of unparsed forms is implied.
+Both `P due Q` (effect followed by its causal explanation) and `due Q, P` (fronted causal clause followed by effect) are accepted. In either order Q is the cause and P the effect. `Q, ergo P` instead presents P as an inference/conclusion. The typed parser recognizes postposed finite-clause `P due Q`; the fronted `due Q, P` construction remains canonical but is still outside executable scope until its boundary can be parsed without relying solely on punctuation.
 
 
 ## Factual concessive `etsi` (ratified 24 October 2026)
 
-`etsi` introduces an accepted/factual concession: `etsi P, Q` ('although P, Q') and `Q etsi P` ('Q, although P') are both permitted, with P the conceded proposition and Q the contrasting outcome. Distinguish conditional `se` (IF) and adversative `ma` (BUT). The hypothetical reading 'even if P were to happen' is not automatically ratified. The restricted Phase 1 parser does not yet implement compound concessive clauses.
+`etsi` introduces an accepted/factual concession: `etsi P, Q` ('although P, Q') and `Q etsi P` ('Q, although P') are both permitted, with P the conceded proposition and Q the contrasting outcome. Distinguish conditional `se` (IF) and adversative `ma` (BUT). The hypothetical reading 'even if P were to happen' is not automatically ratified. The typed parser recognizes postposed simple concessives and the canonical explicitly paired `etsi P alor Q`; arbitrary mixed-subordinate scope remains unsupported.
 
 
 ## Hypothetical concessive `etsise` (ratified 24 October 2026)
@@ -130,7 +130,7 @@ In connector chains within the licensed propositional-scope subset, mixed connec
 
 In this established **closing-boundary** use, `lim` must immediately precede the connector whose left operand it delimits; it cannot be sentence-initial, sentence-final, or placed between a connective and its complement. The separately ratified `no lim` opening construction (see `negation.md`) is a narrow exception and does not license bare `lim` before a clause. Thus `P e lim Q`, `lim P e Q`, and `P e Q lim` are invalid in this subset.
 
-These examples establish the approved **ordinary connector-chain convention**; they do **not** authorize arbitrary combinations of subordinate forms, unrestricted nesting, or a general clause grammar. Existing ratified semantic distinctions of `due`, `nam`, `ergo`, `etsi`, `etsise`, and `eksese` are preserved; their subordinate boundaries and scope constraints await separate formalization. The inclusive/exclusive semantics of `o` are ratified in the later section below: ordinary infix `o` is inclusive, while an initial `o` introduces an exactly-one exclusive choice. Authors and LLM generators should prefer short, linear periods to deep nested structures. The current Phase 1 clause parser **does not implement** these connective-chain constructions and must continue to fail closed rather than infer undocumented structures.
+These examples establish the approved **ordinary connector-chain convention**; they do **not** authorize arbitrary combinations of subordinate forms, unrestricted nesting, or a general clause grammar. Existing ratified semantic distinctions of `due`, `nam`, `ergo`, `etsi`, `etsise`, and `eksese` are preserved; their subordinate boundaries and scope constraints await separate formalization. The inclusive/exclusive semantics of `o` are ratified in the later section below: ordinary infix `o` is inclusive, while an initial `o` introduces an exactly-one exclusive choice. Authors and LLM generators should prefer short, linear periods to deep nested structures. The typed proposition parser implements the listed bounded connective-chain constructions, retaining distinct operator nodes and rejecting undocumented combinations.
 
 
 ## Anteposed subordinate scope and generalized `alor` (author ratification 25 October 2026)
@@ -152,7 +152,7 @@ This subordinate relation is separate from the already ratified ordinary connect
 
 The grammar distinguishes a simple clause, a connector-linked compound clause, and subordinate relation nodes with typed antecedent/matrix operands. It permits composition and finite recursion as a linguistic rule; actual parser depth limits may be implementation safeguards, not new grammatical prohibitions. Authors and LLM generators should favor short linear periods and avoid unnecessarily deep nesting.
 
-**Explicitly still open:** exact parsing and delimitation of fronted `due` causes and other `nam` epistemic explanations in arbitrary compound clauses; interaction of complex postposed subordinate arguments with following connectors; mixed subordinate/coordination scope outside the templates above; wide-scope negation beyond the separately licensed `no lim` truth-conditional subset and modality. These are not implied by this ratification. The existing Phase 1 clause parser does **not** yet recognize general compound or nested subordinate ASTs and must fail closed pending a separately reviewed implementation.
+**Explicitly still open:** exact parsing and delimitation of fronted `due` causes and other `nam` epistemic explanations in arbitrary compound clauses; interaction of complex postposed subordinate arguments with following connectors; mixed subordinate/coordination scope outside the templates above; wide-scope negation beyond the separately licensed `no lim` truth-conditional subset and modality. These are not implied by this ratification. The typed parser recognizes the explicitly paired `alor` subordinate trees and their finite nesting under safeguards; arbitrary mixed subordinate/coordination scope remains unsupported and fails closed.
 
 
 ## Inclusive and exclusive `o` (author ratification 25 October 2026)
@@ -169,7 +169,7 @@ In the licensed ordinary connector-chain subset, existing right association is r
 
 For all n >= 2, an exclusive-choice expression is true iff **exactly one** alternative is true; it is false if none or two or more alternatives are true. The inclusive `o` requires at least one true alternative. These are truth-conditional propositional semantics; they do not automatically impose a real-world obligation, make alternatives mutually physically possible, or settle any previously open question about modality or conversational implicature.
 
-Detailed interactions with nested subordinate scope, postposed subordinate clauses, whole-proposition negation outside the separately licensed `no lim` subset, and unrestricted connector grammars remain outside this ratification and the current Phase 1 parser, which must fail closed for unsupported compound constructions.
+Detailed interactions with nested subordinate scope, postposed subordinate clauses, whole-proposition negation outside the separately licensed `no lim` subset, and unrestricted connector grammars remain outside this ratification; the typed parser fails closed for these unsupported compound constructions.
 
 
 ## Wide negation cross-reference (author ratification 12 November 2026)
@@ -209,5 +209,6 @@ remains the **source of permission**.
 Neither connector-chain scope nor subordinate scope, stacked
 domains, or lexical roots for hypothetical domains are
 ratified here. Unisermo punctuation carries no grammatical
-scope and its Phase 1 parser does not yet recognize this
-whole-proposition frame. See [noun_case_system.md](noun_case_system.md).
+scope. Its typed parser recognizes a preposed locative phrase but
+**preserves unresolved event/domain attachment** rather than declaring
+whole-proposition scope from initial placement alone. See [noun_case_system.md](noun_case_system.md).

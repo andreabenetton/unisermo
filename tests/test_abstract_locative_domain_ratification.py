@@ -47,7 +47,7 @@ class AbstractDomainLocativeTests(unittest.TestCase):
         self.assertIn("position alone", spec)
         self.assertIn("placeholder", spec.lower())
         self.assertIn("unratified", spec.lower())
-        self.assertIn("Phase 1 parser", spec)
+        self.assertIn("typed parser identifies preposed locatives", spec)
         self.assertIn("not automatically", spec)
 
     def test_sources_not_domains_and_no_scope_leaks(self):
@@ -61,9 +61,9 @@ class AbstractDomainLocativeTests(unittest.TestCase):
         self.assertIn("P e Q", cases)
         self.assertIn("temporal", cases)
         self.assertIn("tem", cases)
-        self.assertIn("does **not**", semantic)
-        self.assertIn("remain ambiguous", semantic)
-        self.assertIn("not implemented", semantic.lower())
+        self.assertIn("undetermined", semantic)
+        self.assertIn("undetermined", semantic)
+        self.assertIn("not yet implemented", semantic.lower())
 
     def test_generated_indexes_and_ldr_hash(self):
         gram = json.loads((ROOT / "research/grammar/confirmed_decisions.json").read_text(encoding="utf-8"))

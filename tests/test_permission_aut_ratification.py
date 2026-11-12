@@ -1,7 +1,7 @@
 """Documentary regression for the author-ratified permission verb aut.
 
-The current Phase 1 parser cannot parse compound servile frames, and these
-tests do not misrepresent documentation as executable semantic parsing.
+The normative record and generated index remain checked here; the
+bounded executable aut frame is checked in test_proposition_parser.py.
 """
 from hashlib import sha256
 from pathlib import Path
@@ -41,7 +41,7 @@ class PermissionAutRatificationTests(unittest.TestCase):
         self.assertIn("The separately approved abstract-domain extension", verb)
         self.assertIn("[NORMA]-in auti umande mov", verb)
         semantics = (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8")
-        self.assertIn("not implemented in the Phase 1 parser", semantics)
+        self.assertIn("source-of-permission slot", semantics)
 
     def test_permission_is_not_opportunity_or_obligation(self):
         # Truth-conditional examples only: the three relations are distinct.

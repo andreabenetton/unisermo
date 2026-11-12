@@ -28,5 +28,5 @@
   },
   "syntax": {"canonical_order": "SVO", "subject_pro_drop": true, "polar_marker": "ka", "negator": "no", "optional_indefinite": "uno"},
   "non_finite": {"participle_resultative": "it"},
-  "not_implemented": ["full_clausal_reordering", "enclitic_focus_scope", "wh_interrogatives", "zero_copula", "servile_complement_frames", "full_lexical_valency", "general_productive_compounding", "decimals_signed_numbers_beyond_giga", "passive_clauses", "phonetic_allophony"]
+  "not_implemented": ["full_clausal_reordering","enclitic_focus_scope","unrestricted_wh_interrogative_composition","unrestricted_zero_copula_predication","nested_servile_and_mixed_modal_scope","full_lexical_valency","general_productive_compounding","unrestricted_domain_attachment_disambiguation","mixed_subordinate_coordination_scope","unrestricted_fronted_due_boundary_inference","general_exception_ekse_exclusion","decimals_signed_numbers_beyond_giga","passive_clauses","phonetic_allophony","full_semantic_interpretation"]
 }

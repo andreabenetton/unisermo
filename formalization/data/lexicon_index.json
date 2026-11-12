@@ -161,7 +161,7 @@
     },
     {
       "categories": [
-        "property_root"
+        "predicate_property"
       ],
       "decision": "Stative physical property (model B). Does not mean start/initiate; causal change uses traes OBJECT-em aper-da, entry uses ades aper.",
       "form": "aper",
@@ -173,7 +173,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Functional fitness only; separate from efficiency, effectiveness, and general quality.",
       "form": "apt",
@@ -234,7 +234,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Restrict to the aesthetic domain, including aesthetic judgment of sounds and experiences; not a general synonym for bon.",
       "form": "bel",
@@ -267,7 +267,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "General goodness only: not lexical synonym of aesthetic bel, moral prob or functional apt.",
       "form": "bon",
@@ -463,7 +463,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Distinguish from prob: ethical conformity is not necessarily a global evaluation of a person's moral goodness.",
       "form": "etik",
@@ -511,7 +511,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Sacred norm rather than positive law or generic morality.",
       "form": "fas",
@@ -704,7 +704,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "A specific moral dimension (justice/fairness), not all moral goodness.",
       "form": "just",
@@ -784,7 +784,7 @@
     },
     {
       "categories": [
-        "property_root"
+        "predicate_property"
       ],
       "decision": "Selected over proposed klud; stative physical property (model B). Does not mean end/finish; transitions use ades klus or causative traes OBJECT-em klus-da.",
       "form": "klus",
@@ -832,7 +832,7 @@
     },
     {
       "categories": [
-        "lexical_compound"
+        "verb"
       ],
       "decision": "Documented lexical specialization of associative kun- + hold ten. General productive kun- only adds jointness/association; physical containment does not follow for arbitrary roots.",
       "form": "kunten",
@@ -856,7 +856,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Positive-law domain; distinct from just and fas.",
       "form": "legal",
@@ -924,7 +924,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Descriptive midpoint or intermediate degree, not intrinsically mediocre or negative.",
       "form": "medi",
@@ -1004,7 +1004,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Descriptive domain adjective, not necessarily positive: moral actions or moral issues are not by definition good.",
       "form": "moral",
@@ -1080,7 +1080,7 @@
     },
     {
       "categories": [
-        "derived_lexeme"
+        "predicate_property"
       ],
       "decision": "Contrary to sacred permissibility, not merely negated no fas.",
       "form": "nefas",
@@ -1092,7 +1092,7 @@
     },
     {
       "categories": [
-        "derived_lexeme"
+        "predicate_property"
       ],
       "decision": "Contrary to legal, not merely negated no legal.",
       "form": "nelegal",
@@ -1112,7 +1112,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Social and figurative senses should be distinguished contextually; nobl is not a generic equivalent of prob.",
       "form": "nobl",
@@ -1284,7 +1284,7 @@
     },
     {
       "categories": [
-        "root"
+        "predicate_property"
       ],
       "decision": "Denotes positive moral character or conduct, not generic goodness, proof/probability or merely adherence to a moral code.",
       "form": "prob",

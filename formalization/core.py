@@ -21,16 +21,25 @@ from .parser.word import WordParser
 from .parser.clause import ClauseParser
 from .parser.kinship import KinshipParser
 from .parser.numeral import NumeralParser
+from .parser.proposition import PropositionParser
 
 
-class Unisermo(MorphologyGenerator, WordParser, NumeralParser, KinshipParser, ClauseParser):
+class Unisermo(MorphologyGenerator, WordParser, NumeralParser, KinshipParser, PropositionParser, ClauseParser):
     def __init__(self) -> None:
         self.morph = load("morphology.json")
         index = load("lexicon_index.json")
         self.lexicon = {entry["form"]: entry for entry in index["entries"]}
-        self.verbs = {form for form, entry in self.lexicon.items() if "verb" in entry["categories"]}
+        # Explicit canonical lexical role categories supplement legacy roles.
+        # Never infer all untyped "root" entries to be verbs or nouns.
+        self.verbs = {form for form, entry in self.lexicon.items()
+                      if {"verb", "verb_root"} & set(entry["categories"])}
         self.nouns = {form for form, entry in self.lexicon.items()
-                      if "noun" in entry["categories"] or "nominal_predicate" in entry["categories"]}
+                      if {"noun", "noun_root", "nominal_predicate"} & set(entry["categories"])}
+        # Curated parser roles are source-linked in lexical_roles.json;
+        # no blanket coercion of untyped roots into quality predicates.
+        self.properties = {form for form, entry in self.lexicon.items()
+                           if {"predicate_property", "property_root",
+                               "nominal_predicate"} & set(entry["categories"])}
         self.person_to_form = {("singular", 1): "i", ("singular", 2): "u", ("singular", 3): "a",
                                ("plural", 1): "in", ("plural", 2): "un", ("plural", 3): "an"}
         self.pronoun_to_person = {v: k for k, v in self.person_to_form.items()}
