@@ -103,8 +103,9 @@ does **not** create new lexemes or a new possessive suffix.
 
 ## Recommended continuation
 
-Prioritize **controlled focus enclitics**, **typed possessive
-and genitive noun phrases**, **reusable productive derivation** and
-**non-ambiguous argument/valency schemas**. Each addition should
-extend this matrix and add positive/negative executable tests;
-no new lexemes or grammatical rules should be silently introduced.
+The first focus/genitive subset is now implemented. Next prioritize
+**reusable productive derivation** and **non-ambiguous argument/valency
+schemas**, followed by explicitly specified focus interactions with
+serviles and complex clauses. Each addition should extend this matrix
+and add positive/negative executable tests; no new lexemes or
+grammatical rules should be silently introduced.
