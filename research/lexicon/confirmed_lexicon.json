@@ -894,6 +894,15 @@
       "source": "Author approval 2026-11-12; Latin potere/potentia; international potent/potency",
       "decision": "Short finite servile root plus bare infinitive. Ability/capacity of the actor, distinct from external situational possibility pos and procedural knowledge sap. no poti V denies capacity; poti no V expresses capacity to refrain. Does not entail permission or opportunity.",
       "status": "confirmed"
+    },
+    {
+      "form": "aut",
+      "category": "verb_root",
+      "meaning_it": "avere il permesso; essere autorizzato a compiere un'azione",
+      "meaning_en": "be permitted or authorized to perform an action",
+      "source": "Author ratification 2026-11-12; Latin auctoritas and international authority (canonical /a.u.t/, no h)",
+      "status": "confirmed",
+      "decision": "Short finite servile root with dependent uninflected lexical verb/root. Unifies general permission and formal authorization; source is optional and expressed by the EXISTING ablative -de in the narrowly specified post-modal/pre-infinitive valency slot: auti umande mov = permitted by a person to move. auti umande mov domde distinguishes grant-source umande from movement-source domde. pos opportunity/feasibility is not normative permission, nor does aut entail execution. no auti V denies permission; auti no V permits refraining; neither lack of permission nor lack of obligation automatically entails an explicit prohibition (debi no V). Source-qualified denial applies only to the cited grantor. The spelling auth with h and generic bound aut- are not ratified. Extending -in to normative or other abstract domains remains open; Phase 1 parser does not implement this frame."
     }
   ]
 }
