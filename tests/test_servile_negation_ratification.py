@@ -45,7 +45,7 @@ class ServileNegationRatificationTests(unittest.TestCase):
         self.assertIn("pro-drop", verbs)
         self.assertIn("does not assert legal permission", verbs)
         self.assertIn("does", neg)
-        self.assertIn("one uninflected verbal action", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
+        self.assertIn("one uninflected verbal action", " ".join((ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8").split()))
 
     def test_scope_meanings_not_equivalent(self):
         # An ordinary modal model can assign distinct statuses to action
