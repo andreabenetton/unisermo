@@ -226,6 +226,10 @@
     {
       "id": "subordinate_scope_generalized_alor_20261025",
       "decision": "Author ratification 2026-10-25 of nine-point subordinate-scope design with modification: alor is an explicit spoken separator of an anteposed subordinate and matrix clause after se, etsi, etsise and eksese. The subordinate opener preserves conditional, factual concessive, hypothetical concessive or conditional-exception semantics; alor itself imposes no conditional meaning on non-conditionals. Canonical templates se P alor Q, etsi P alor Q, etsise P alor Q, eksese P alor Q. Nested paired alor matches innermost open subordinate first; se se P alor Q alor R differs from se P alor se Q alor R. Preserve postposed previously approved forms, ordinary lim scope, and no grammatical comma. Do not assert full parser coverage, unrestricted fronted due/nam syntax, mixed scope, wide-scope negation or modal rules."
+    },
+    {
+      "id": "disjunction_inclusive_exclusive_initial_o_20261025",
+      "decision": "Author ratification 2026-10-25 D1-D4: free infix P o Q is inclusive OR (at least one); prefix-led o P o Q is an exclusive choice (exactly one). For three or more alternatives o P o Q o R means exactly one true alternative, not chained binary XOR parity. In ordinary connective-chain scope, o P o Q e R = exactly-one(P,(Q e R)); o P o Q lim e R = (exactly-one(P,Q)) e R. Spoken standalone lim retains its earlier scope-closing function and commas are never grammatical delimiters. The exclusive-choice construction has at least two complete alternative propositions. Detailed mixed subordination and unrestricted compound parser handling remain unresolved; Phase 1 parser unchanged."
     }
   ]
 }
