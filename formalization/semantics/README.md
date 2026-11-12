@@ -24,4 +24,17 @@ LDR-0012 ratifies `aut` as an ordinary permission/authorization servile
 with an optional `-de` granting-source phrase immediately after the finite
 head and before the bare dependent verb. This is a **grammatical valency
 rule** and is not implemented in the Phase 1 parser. The possible
-abstract-domain use of `-in` remains under review and is not implied.
+abstract-domain use of `-in` is separately ratified for a single
+simple proposition by LDR-0013. Both the domain frame and the
+`aut` source slot remain outside the current Phase 1 parser.
+
+LDR-0013 preserves the distinction between an event/predicate-attached
+locative and a left-peripheral proposition-domain adjunct. In the
+restricted simple-clause subset, `DOMAIN-NP-in P` sets a context of
+assessment for P while `P LOCATION-NP-in` describes an event's
+location. Because previously ratified word-order freedom permits
+fronting a spatial event locative, a leading `NP-in` alone does **not**
+prove domain-wide scope. Domain semantics and syntactic attachment
+must be distinguished; ambiguous dual-use NPs remain ambiguous.
+Full semantic parsing, mixed connectors, temporal extensions, and
+nested domains are not implemented or ratified by this LDR.
