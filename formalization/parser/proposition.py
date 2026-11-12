@@ -46,7 +46,30 @@ class PropositionParser:
             raise ValueError("empty sentence")
         terminal = raw[-1] if raw[-1] in ".?!" else ""
         body = raw[:-1] if terminal else raw
-        # A comma is prosodic; it never closes grammatical scope.
+        # Historical clause-initial 'due Q, P' is explicitly licensed.
+        # The comma separates two finite *simple* clauses in this one
+        # construction; it cannot replace lim/alor elsewhere.
+        if body.lower().lstrip().startswith("due "):
+            if terminal in ("?", "!") or body.count(",") != 1:
+                raise ValueError("fronted finite due requires the attested simple-clause comma boundary")
+            cause, effect = body.split(",", 1)
+            cause_tokens = cause.strip().lower().split()[1:]
+            effect_tokens = effect.strip().lower().split()
+            if not cause_tokens or not effect_tokens:
+                raise ValueError("fronted due requires cause and effect")
+            if not any(self._finite(w) for w in cause_tokens):
+                raise ValueError("fronted due NP is not a full causal proposition")
+            if any(self._is_clause_connector(part, i)
+                   for part in (cause_tokens, effect_tokens)
+                   for i in range(len(part))):
+                raise ValueError("fronted due with mixed clause coordination is not defined")
+            if any(w in SUBORDINATES | {"lim", "alor", "ka"} for w in cause_tokens + effect_tokens):
+                raise ValueError("fronted due does not accept nested subordinate scope")
+            return {"kind": "causal_relation", "operator": "due",
+                    "placement": "fronted",
+                    "cause": self._atom(cause_tokens),
+                    "effect": self._atom(effect_tokens)}
+        # Ordinary commas are prosodic and never create lim/alor scope.
         body = body.replace(",", " ")
         words = body.lower().split()
         if not words or len(words) > MAX_TOKENS:
@@ -64,7 +87,9 @@ class PropositionParser:
             if polar:
                 raise ValueError("imperative cannot also be a polar question")
             return self._imperative(words)
-        if polar and any(w in SUBORDINATES | CONNECTORS | {"lim"} for w in words):
+        if polar and (any(w in SUBORDINATES | {"lim"} for w in words)
+                      or any(self._is_clause_connector(words, i)
+                             for i in range(len(words)))):
             raise ValueError("question-wide connective and subordinate scope is not ratified")
         ast = self._expression(words, 0)
         is_wh = ast.get("question", {}).get("kind") == "wh"
@@ -83,6 +108,23 @@ class PropositionParser:
 
     def _finite(self, token: str) -> list[dict]:
         return [x for x in self.analyze_word(token)["analyses"] if x["kind"] == "finite_verb"]
+
+    def _is_clause_connector(self, words: list[str], index: int) -> bool:
+        """Distinguish due + NP from due + finite causal proposition.
+
+        A nominal due belongs to its immediately following NP; finite
+        verbs after a *later* connector do not retroactively turn it
+        into a clausal linker.
+        """
+        word = words[index]
+        if word not in CONNECTORS:
+            return False
+        if word != "due":
+            return True
+        stop = next((i for i in range(index + 1, len(words))
+                     if words[i] in CONNECTORS | SUBORDINATES | {"lim", "alor"}),
+                    len(words))
+        return any(self._finite(w) for w in words[index + 1:stop])
 
     def _expression(self, words: list[str], depth: int) -> dict:
         if depth >= MAX_DEPTH or not words:
@@ -105,8 +147,11 @@ class PropositionParser:
             operand = words[2:]
             if not operand:
                 raise ValueError("no lim requires an operand")
-            if any(w in {"ma", "ergo", "nam", "due", "alor", "se",
-                         "etsi", "etsise", "eksese"} for w in operand):
+            if (any(w in {"alor", "se", "etsi", "etsise", "eksese"}
+                    for w in operand)
+                    or any(self._is_clause_connector(operand, i) and
+                           operand[i] not in BOOLEAN_CONNECTORS
+                           for i in range(len(operand)))):
                 raise ValueError("wide negation is ratified only for e/o truth-conditional chains")
             if operand[:2] == ["no", "lim"]:
                 raise ValueError("stacked wide negation not ratified")
@@ -134,7 +179,8 @@ class PropositionParser:
         # connectors; mixed coordination + postposition is not settled.
         post = [i for i, w in enumerate(words) if i > 0 and w in POSTPOSED]
         if post:
-            if len(post) != 1 or any(w in CONNECTORS for w in words):
+            if len(post) != 1 or any(self._is_clause_connector(words, j)
+                                     for j in range(len(words))):
                 raise ValueError("mixed postposed subordinate scope is not ratified")
             i = post[0]
             return {"kind": "subordinate", "operator": words[i],
@@ -146,9 +192,7 @@ class PropositionParser:
         # 'P due Q' by the existence of a finite clause in Q.
         for i in range(1, len(words)):
             op = words[i]
-            if op not in CONNECTORS:
-                continue
-            if op == "due" and not any(self._finite(w) for w in words[i + 1:]):
+            if not self._is_clause_connector(words, i):
                 continue
             left = self._expression(words[:i], depth + 1)
             right = self._expression(words[i + 1:], depth + 1)
@@ -189,7 +233,8 @@ class PropositionParser:
         main = words[match + 1:]
         # Mixed connective/subordinate scoping is explicitly still open;
         # fully recursive subordinate chains are approved.
-        if any(w in CONNECTORS for w in inner + main):
+        if any(self._is_clause_connector(part, i)
+               for part in (inner, main) for i in range(len(part))):
             raise ValueError("mixed subordinate and coordination scope is not ratified")
         return {"kind": "subordinate", "operator": words[0],
                 "placement": "anteposed",
