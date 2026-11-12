@@ -14,9 +14,6 @@ class ClauseParser:
         if not choices:
             raise ValueError(f"unrecognized {required_case} nominal head: {head}")
         modifiers = words[:-1]
-        if not (len(modifiers) == len(set(modifiers)) and
-                all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None or self.parse_ordinal(x) is not None for x in modifiers)):
-            raise ValueError(f"unsupported noun modifiers: {modifiers}")
         factors = [self.parse_multiplicative(x) for x in modifiers]
         parsed_factors = [x for x in factors if x is not None]
         if len(parsed_factors) > 1:
@@ -36,6 +33,9 @@ class ClauseParser:
                 "numerical_value": None,
                 "multiplicative_factor": parsed_factors[0]["factor"],
             }
+        if not (len(modifiers) == len(set(modifiers)) and
+                all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None or self.parse_ordinal(x) is not None for x in modifiers)):
+            raise ValueError(f"unsupported noun modifiers: {modifiers}")
         ordinal_analyses = [self.parse_ordinal(x) for x in modifiers]
         ordinals = [x for x in ordinal_analyses if x is not None]
         # Mixed ordinal + other modifiers needs its own ratified scope/order rule.
