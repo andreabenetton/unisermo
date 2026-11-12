@@ -15,6 +15,8 @@ def main() -> None:
     word.add_argument("word")
     sentence = sub.add_parser("sentence", help="parse supported SVO sentence; fail closed outside subset")
     sentence.add_argument("text")
+    proposition = sub.add_parser("proposition", help="parse a ratified proposition to typed AST; fail closed")
+    proposition.add_argument("text")
     verb = sub.add_parser("generate", help="generate a finite verb")
     verb.add_argument("lemma")
     verb.add_argument("--tense", default="present")
@@ -88,7 +90,7 @@ def main() -> None:
             if result is None:
                 p.error("unknown, unsupported or ambiguous kinship relation")
         elif args.command == "analyze": result = language.analyze_word(args.word)
-        elif args.command == "sentence": result = language.parse_sentence(args.text)
+        elif args.command in {"sentence", "proposition"}: result = language.parse_proposition(args.text)
         elif args.command == "generate": result = language.generate_verb(args.lemma, args.tense, args.aspect, args.person, args.number)
         elif args.command == "noun": result = language.generate_noun(args.lemma, args.case)
         else: result = language.generate_participle(args.lemma)
