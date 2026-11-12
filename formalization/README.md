@@ -13,6 +13,42 @@ from proposal and alternatives through evidence to explicit acceptance. The
 weighted lexical objective in LDR-0002 remains **Experimental**, not an
 established language rule.
 
+## Canonical proposition AST (implementation, 2026-11-12)
+
+The public `parse_sentence` API preserves the previous `svo_clause`
+shape for legacy supported SVO sentences, but now returns a **typed
+syntactic AST** for additional ratified constructions. The explicit
+`parse_proposition` API and CLI `proposition` command expose the same
+parser:
+
+```sh
+python3 -m formalization proposition 'no debi mov'
+python3 -m formalization proposition 'debi no mov'
+python3 -m formalization proposition 'auti umande mov domde'
+python3 -m formalization proposition 'no lim vidi e movi'
+python3 -m formalization proposition 'o vidi o movi o faki'
+python3 -m formalization proposition 'se vidi alor movi'
+```
+
+Narrowly supported typed nodes include `servile_clause`,
+`wide_negation`, `coordination` (`e/o/ma`),
+`exclusive_choice` (n-ary exactly-one, **not** parity XOR),
+`causal_relation` (`due`), `evidential_relation` (`nam`),
+`inference_relation` (`ergo`), and `subordinate` for
+explicit paired `alor` constructions. A simple-clause subset
+recognizes typed case complements, selected relators, bounded
+WH-fronting, stative zero copulas and bare imperatives.
+
+`aut` permits one governed `SOURCE-de` phrase **between** its
+finite head and bare dependent action; a final ablative after the
+dependent action remains its own possible source. Preposed locative
+`NP-in` is **attachment-undetermined** rather than automatically
+equated to proposition-wide abstract domain scope.
+
+This is syntactic analysis, **not** truth evaluation, modal/deontic
+reasoning or referent resolution. The maintained coverage and
+exclusions are in [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md).
+
 ## Ratified scalar factors, ordinals and fractions (2026-10-24)
 
 The following author-approved numeral constructions are supported in the
@@ -134,9 +170,12 @@ Ambiguous or malformed segmentations fail closed; the parser returns
 See [normative kinship](../language/kinship.md) and
 [`tests/test_kinship_parser.py`](../tests/test_kinship_parser.py).
 
-Not yet implemented: full lexical valency, focus enclitic scope, all free
-relator constructions, general (non-kinship) derivational compounding, passives, optional word-order
-variants, all wh-questions, zero copula and non-canonical phonetic realizations.
+Not yet fully implemented: unrestricted lexical valency, focus enclitic
+scope, all case-relative modifier combinations, non-kinship derivational
+compounding, passives, unrestricted topicalization and wh composition,
+zero-copula predication outside confirmed quality roots, fronted causal
+boundary resolution, mixed subordinate/coordination scopes, nested modals,
+and semantic truth/domain evaluation.
 These remain legitimate language phenomena even when unsupported by this
 **reference subset**.
 
