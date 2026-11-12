@@ -38,6 +38,10 @@ class WideNegationRatificationTests(unittest.TestCase):
         self.assertIn("no lim", order)
         self.assertIn("Bare `lim P`", negation)
         self.assertIn("Phase 1", negation)
+        lexicon = json.loads((ROOT / "research/lexicon/confirmed_lexicon.json").read_text(encoding="utf-8"))
+        lim_entries = [entry for entry in lexicon["entries"] if entry["form"] == "lim"]
+        self.assertEqual(len(lim_entries), 1)
+        self.assertIn("no lim", lim_entries[0]["decision"])
         self.assertIn("not executable parser support", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
 
     def test_boolean_truth_conditions(self):
@@ -63,7 +67,11 @@ class WideNegationRatificationTests(unittest.TestCase):
             self.assertEqual(not exactly_one(p, q, r), sum((p, q, r)) != 1)
         self.assertTrue(right_association_matters)
         self.assertTrue(closing_boundary_matters)
-        self.assertTrue(not exactly_one(True, True, False))
+        # Odd-parity XOR would accept three true alternatives; exactly-one does not.
+        all_true = (True, True, True)
+        self.assertFalse(exactly_one(*all_true))
+        self.assertTrue(bool(all_true[0] ^ all_true[1] ^ all_true[2]))
+        self.assertNotEqual(not exactly_one(*all_true), not bool(all_true[0] ^ all_true[1] ^ all_true[2]))
 
     def test_source_and_generated_registry_are_synchronized(self):
         source = json.loads((ROOT / "research/grammar/confirmed_decisions.json").read_text(encoding="utf-8"))
