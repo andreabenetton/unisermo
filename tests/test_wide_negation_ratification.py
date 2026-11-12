@@ -1,7 +1,7 @@
 """Documentary checks for author-ratified no lim wide-scope negation.
 
-The Phase 1 parser does not yet implement compound clauses; these are
-source/logic regressions, not claims of executable clause parsing.
+Documentary checks are retained; executable AST behavior is tested
+separately in test_proposition_parser.py.
 """
 from hashlib import sha256
 from itertools import product
@@ -37,12 +37,12 @@ class WideNegationRatificationTests(unittest.TestCase):
             self.assertIn(phrase, negation)
         self.assertIn("no lim", order)
         self.assertIn("Bare `lim P`", negation)
-        self.assertIn("Phase 1", negation)
+        self.assertIn("typed proposition parser", negation)
         lexicon = json.loads((ROOT / "research/lexicon/confirmed_lexicon.json").read_text(encoding="utf-8"))
         lim_entries = [entry for entry in lexicon["entries"] if entry["form"] == "lim"]
         self.assertEqual(len(lim_entries), 1)
         self.assertIn("no lim", lim_entries[0]["decision"])
-        self.assertIn("not executable parser support", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
+        self.assertIn("source-constrained typed proposition AST", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
 
     def test_boolean_truth_conditions(self):
         local_and_wide_differ = False
