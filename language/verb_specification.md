@@ -240,10 +240,17 @@ mean an absence of obligation (`no debi V`). An explicit
 `SOURCE-de` restricts the denial or permission to that source;
 it does not make claims about all possible other authorities.
 
-The use of **locative `-in` for an abstract normative domain** is
-deliberately **not** approved here. It will be evaluated as part of
-a separate cross-domain study of abstract locatives, without changing
-the spatial or local uses already ratified.
+The separately approved abstract-domain extension of locative `-in`
+(LDR-0013, 2026-11-12) allows a *left-peripheral* proposition-level
+`DOMAIN-NP-in` ahead of a **simple proposition** containing `aut`.
+For example, `[NORMA]-in auti umande mov` distinguishes the
+normative **domain** from the granting **source** `uman-de`. The
+normative domain and granting source need not be identical. All
+abstract-domain noun labels shown in brackets are *unratified
+placeholders*, not lexemes. This extension is deliberately limited
+to simple propositions; no mixed subordination, connector scope or
+multiple domain operators is implied. See
+[noun_case_system.md](noun_case_system.md).
 
 This is a normative grammatical decision, not a claim that the Phase 1
 sentence parser supports modal complement frames, optional source

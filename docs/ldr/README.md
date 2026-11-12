@@ -68,3 +68,4 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0010: Wide-scope negation with `no lim`](LDR-0010-wide-scope-negation.md) — Accepted
 - [LDR-0011: Short servile roots and negative scope](LDR-0011-servile-negation.md) — Accepted
 - [LDR-0012: Unified permission `aut` and source `-de`](LDR-0012-aut-permission-source.md) — Accepted
+- [LDR-0013: Locative `-in` for abstract domains](LDR-0013-abstract-domain-locative.md) — Accepted

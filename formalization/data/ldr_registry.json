@@ -119,6 +119,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Unified permission and authorization with aut and ablative source"
+    },
+    {
+      "date": "2026-11-12",
+      "domain": "grammar",
+      "id": "LDR-0013",
+      "path": "docs/ldr/LDR-0013-abstract-domain-locative.md",
+      "sha256": "b9ed35fe55aafdf0f4c3207ec5d2422720dc19aad82c10312183120bf36b1652",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Extend the locative -in to abstract proposition domains"
     }
   ],
   "schema": "unisermo/ldr-registry@1"

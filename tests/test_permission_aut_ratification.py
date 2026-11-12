@@ -38,8 +38,8 @@ class PermissionAutRatificationTests(unittest.TestCase):
         self.assertIn("auti umande mov domde", cases)
         self.assertIn("**not** create", cases)
         self.assertIn("Neither **lack of permission** nor **lack of obligation**", negation)
-        self.assertIn("abstract normative domain", verb)
-        self.assertIn("not** approved", verb)
+        self.assertIn("The separately approved abstract-domain extension", verb)
+        self.assertIn("[NORMA]-in auti umande mov", verb)
         semantics = (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8")
         self.assertIn("not implemented in the Phase 1 parser", semantics)
 

@@ -199,6 +199,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "514e127fc96c3f41e529f2a7aa269f646dbf930d72d9c4bf6f72881bb0a1865a",
+      "id": "grammar.locative_in_abstract_domain_simple_proposition_20261112",
+      "source": "research/grammar/confirmed_decisions.json#decisions/locative_in_abstract_domain_simple_proposition_20261112",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "386b091b758b2d2c44635e22fb444104a0425ca0bd61d0794951504fa9e8ea3a",
       "id": "grammar.mi_unassigned",
       "source": "research/grammar/confirmed_decisions.json#decisions/mi_unassigned",

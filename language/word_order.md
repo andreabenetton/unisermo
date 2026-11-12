@@ -175,3 +175,39 @@ Detailed interactions with nested subordinate scope, postposed subordinate claus
 ## Wide negation cross-reference (author ratification 12 November 2026)
 
 The separately ratified two-token **`no lim`** opener negates an entire truth-conditional `e/o` expression (including initial-`o` exactly-one choice), rather than a single local predicate. For schematic complete simple clauses P, Q, and R: `no P e Q` = (NOT P) AND Q; `no lim P e Q` = NOT(P AND Q); `no lim P e Q lim o R` = NOT(P AND Q) OR R. The opener does not change ordinary right association, the already ratified closing-boundary use of `lim`, or the distinct discourse meaning of `ma`. The exact licensed scope and exclusions are specified in [negation.md](negation.md); compound-clause parsing remains unimplemented in Phase 1.
+
+## Proposition-domain frames versus event locatives (ratified 2026-11-12)
+
+The single locative suffix `-in` may mark either a spatial/event
+location or an abstract *domain of reference*. The approved
+**unmarked, scope-explicit writing convention** for a *simple
+proposition* is `[DOMAIN-NP-in] [P]` (domain left-peripheral,
+before the overt subject or finite verb), contrasted with an
+event-attached locative inside the predicate such as
+`movi domin` ("I move in the house").
+
+Crucially, this is a **difference in syntactic attachment**,
+not an unconditional rule that every initial `NP-in` takes
+whole-proposition scope. Existing case-based fronting of a
+spatial/event locative remains legal: `domin movi` is not
+automatically an assertion in the institutional or hypothetical
+domain of the house. For semantically dual-use noun phrases
+(e.g., a physical institution versus its legal regime), fronting
+alone is insufficient for disambiguation; preserve ambiguity
+until the semantic frame is stated or the sentence rewritten.
+The domain operator limits the evaluation context of the simple
+proposition rather than changing a local predicate into a
+different truth-conditional claim about the world outside that
+context.
+
+Schematic, placeholder-bearing illustration:
+`[NORMA]-in auti umande mov` = under that normative framework
+a person grants me permission to move; the preposed `-in`
+defines the domain, while governed `uman-de` after `aut`
+remains the **source of permission**.
+
+Neither connector-chain scope nor subordinate scope, stacked
+domains, or lexical roots for hypothetical domains are
+ratified here. Unisermo punctuation carries no grammatical
+scope and its Phase 1 parser does not yet recognize this
+whole-proposition frame. See [noun_case_system.md](noun_case_system.md).
