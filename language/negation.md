@@ -108,3 +108,25 @@ truth-conditional clause-chain domain. Multiple `no` tokens in one
 servile frame, modal negation of subordinate clauses, and a full parser
 for servile complements are outside this decision. See
 [verb_specification.md](verb_specification.md).
+
+## 8. Negation of permission `aut` (ratified 2026-11-12)
+
+The same already ratified local positional distinction applies to
+the newly accepted permission verb `aut`:
+
+- `no auti mov` — I lack permission/authorization to move.
+- `auti no mov` — I have permission to refrain from moving.
+- `debi no mov` — I am obliged not to move (a prohibition).
+- `no debi mov` — I am not obliged to move (no obligation).
+
+Neither **lack of permission** nor **lack of obligation** is
+automatically a positive prohibition or a permission to refrain.
+`no auti umande mov` narrows the denial to the stated granting
+source `uman-de`, rather than all possible grantors. See
+[verb_specification.md](verb_specification.md) and
+[noun_case_system.md](noun_case_system.md).
+
+`aut` is not a synonym for physical feasibility `pos`; it marks
+a normative permission, including authorization where an authority
+is specified. No new negation operator or `no lim` interaction is
+ratified.
