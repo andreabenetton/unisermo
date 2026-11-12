@@ -23,7 +23,7 @@ class ServileNegationRatificationTests(unittest.TestCase):
         self.assertIn("procedural know-how", records["sap"]["decision"])
         self.assertIn("circumstantial possibility", records["pos"]["decision"])
         self.assertIn("capacity", records["pot"]["decision"])
-        self.assertIn("obligation", records["deb"]["decision"])
+        self.assertIn("Obligation", records["deb"]["decision"])
         self.assertIn("Volition", records["vol"]["decision"])
 
     def test_analytical_frame_and_negation_minimal_pairs(self):
