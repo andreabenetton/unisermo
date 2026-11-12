@@ -228,3 +228,23 @@ prefix ('jointly/together'), not a replacement for a participant phrase.
 it does not mean abstract inclusion by default. The historical associative prefix `ko-` is retired in favor of the
 productive bound `kun-` (ratified 2026-10-25). The old nominal
 comitative suffix `-ko` remains retired separately.
+
+## Source of permission with `-de` (author ratification 2026-11-12)
+
+The existing ablative `-de` means source/origin; it may therefore
+express the **granting source** of the servile permission verb `aut`,
+without a new case or relator. The **canonical unmarked valency frame**
+is `AUT-FINITE [SOURCE-NP-de] VERB-ROOT`, where the optional source
+phrase immediately follows `aut` and precedes the uninflected action.
+See [verb_specification.md](verb_specification.md) for scope and
+negation. Thus `auti umande mov` is "I am permitted by a person
+to move", whereas in `auti umande mov domde` the first ablative
+(`umande`) is permission source, and the later `domde` is the
+origin of the movement. The latter is an example of two **different
+argument relations**, not two meanings conflated into one case.
+
+This rule is specifically a lexical valency construction for `aut`.
+The ablative remains "from/source/origin" elsewhere. This does
+**not** create a universally productive "authority-source" meaning
+for every `-de` phrase, nor does it decide how to mark an abstract
+regulatory or social domain with `-in`; that is a separate question.
