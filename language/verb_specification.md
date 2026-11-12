@@ -175,8 +175,9 @@ before the predicate it negates; no new negative morpheme is introduced.
 proposition** scope opener and is not automatically applied to modal frames.
 Negation stacking, agent-control exceptions, nested serviles, alternative
 complement subjects and general modal scope with clause connectors or
-subordinates are not decided here. The Phase 1 parser **does not**
-implement servile complement frames; it must fail closed.
+subordinates are not decided here. The typed proposition parser now
+implements the single-head shared-subject servile subset and continues
+to fail closed on unratified stacked or nested modal scopes.
 
 This construction is productive: no special synthetic suffix is added to
 the dependent lexical verb for modal meanings.
@@ -252,9 +253,11 @@ to simple propositions; no mixed subordination, connector scope or
 multiple domain operators is implied. See
 [noun_case_system.md](noun_case_system.md).
 
-This is a normative grammatical decision, not a claim that the Phase 1
-sentence parser supports modal complement frames, optional source
-slots, or general modal scope. Unsupported parsing must fail closed.
+The typed proposition parser now supports one finite `aut` head, an
+optional governed source `-de` and one bare verbal complement; this
+remains a restricted syntactic implementation, not an authorization
+reasoner or unrestricted modal-scope interpreter. Unsupported parsing
+must fail closed.
 
 
 ## 5. Participial/resultative `-it`
