@@ -230,6 +230,10 @@
     {
       "id": "disjunction_inclusive_exclusive_initial_o_20261025",
       "decision": "Author ratification 2026-10-25 D1-D4: free infix P o Q is inclusive OR (at least one); prefix-led o P o Q is an exclusive choice (exactly one). For three or more alternatives o P o Q o R means exactly one true alternative, not chained binary XOR parity. In ordinary connective-chain scope, o P o Q e R = exactly-one(P,(Q e R)); o P o Q lim e R = (exactly-one(P,Q)) e R. Spoken standalone lim retains its earlier scope-closing function and commas are never grammatical delimiters. The exclusive-choice construction has at least two complete alternative propositions. Detailed mixed subordination and unrestricted compound parser handling remain unresolved; Phase 1 parser unchanged."
+    },
+    {
+      "id": "propositional_wide_negation_no_lim_20261112",
+      "decision": "Author ratification 2026-11-12: preserve ordinary free no immediately before its negated verb/predicate as local negation (no P e Q = (NOT P) AND Q for the licensed simple clause subset). License two pronounced standalone words no lim as a special wide-scope propositional negation introducer for truth-conditional e (AND) and o (inclusive OR) connector chains and initial-o exactly-one exclusive choices, preserving existing right association and pro-drop: no lim P e Q = NOT(P AND Q), no lim P o Q = NOT(P OR Q), no lim o P o Q = NOT(exactly-one(P,Q)). Scope extends to the end of the enclosing expression unless a closing lim immediately before a subsequent connector first closes the negated expression: no lim P e Q lim o R = NOT(P AND Q) OR R. Bare lim P remains invalid. This narrow extension does not make lim a general prefix or establish wide negation of ma/due/nam/ergo/se/etsi/etsise/eksese/alor, arbitrary recursive nesting, question scope, negative focus or modal scope. No change to existing local negation, no new lexeme and no Phase 1 compound parser support. Distinguish truth conditions from the discourse contrast signaled by ma."
     }
   ]
 }
