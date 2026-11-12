@@ -277,6 +277,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "f90dd21204268b6bded5f7f2aa05a2a487ab18d4c937ba5c354296fd81f2bcab",
+      "id": "grammar.permission_aut_optional_ablative_source_20261112",
+      "source": "research/grammar/confirmed_decisions.json#decisions/permission_aut_optional_ablative_source_20261112",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "93637f21150d327f8c5f5902e65eda3c60510166063a4d404936bb124ad02eb8",
       "id": "grammar.personal_possessives_as_genitives",
       "source": "research/grammar/confirmed_decisions.json#decisions/personal_possessives_as_genitives",
