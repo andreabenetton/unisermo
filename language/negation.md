@@ -57,3 +57,23 @@ contrary in domains where a semantic opposite exists:
 A neutral or indeterminate status need not instantiate the contrary. In a
 context with a genuinely exhaustive binary distinction the extension may
 coincide, but the grammatical and lexical operations remain separate.
+
+## 6. Wide-scope propositional negation with `no lim` (author ratification 2026-11-12)
+
+Ordinary free `no` remains the **local pre-predicate negator**: it immediately precedes the verb or predicate it negates. Its scope does not silently extend to following coordinated clauses. For simple pro-drop propositions P = `vidi` (I see) and Q = `movi` (I move):
+
+- `no vidi e movi` = (NOT P) AND Q: I do not see and I move.
+- `no vidi ma movi` = I do not see, but I move; `ma` contributes an adversative relation not supplied by `e` or by `lim`.
+
+The two **separate, pronounced words** `no lim` are a specially licensed *wide-scope negation introducer*. Unlike local `no`, this construction takes the following complete **truth-conditional propositional expression** as its negated operand, including a right-associated chain built using ordinary `e` (AND), inclusive `o` (OR), or an initial-`o` exclusive choice (exactly one). No explicit subject is required: normal pro-drop is preserved.
+
+- `no lim vidi e movi` = NOT (P AND Q): it is not true that I both see and move.
+- `no lim vidi o movi` = NOT (P OR Q): I neither see nor move; here `o` is inclusive inside the negation.
+- `no lim o vidi o movi` = NOT (exactly-one(P, Q)): either both propositions are true or both are false. For three or more exclusive alternatives, negation means zero or at least two alternatives are true.
+- `no lim P e Q o R` = NOT (P AND (Q OR R)): the already ratified right-association convention is unchanged.
+
+The operand of `no lim` extends to the end of the enclosing propositional expression **unless** a subsequent *closing* `lim`, immediately before a following clause connector, first closes it. Thus `no lim P e Q lim o R` = (NOT (P AND Q)) OR R. The closing `lim` retains its prior boundary function; the `lim` **immediately after `no`** has the new, narrowly licensed opening function. Bare `lim P`, `P e lim Q`, and sentence-final `P lim` remain invalid. Commas do not open or close grammatical scope.
+
+The single-clause `no lim P` need not be preferred when local `no P` expresses the same truth conditions; the marked construction exists for scope precision, not stylistic duplication. Logical equivalences (including De Morgan laws) do not erase distinct connective/discourse meaning, especially `e` versus `ma`.
+
+**Scope boundary:** this ratification defines wide negation only for truth-conditional `e` / `o` clause combinations, including the already ratified exactly-one construction and the explicitly illustrated `lim` boundary. It does **not** define negation of a contrast relation (`ma`), factual cause (`due`), evidential justification (`nam`), inference (`ergo`), or conditional/concessive/exception relations (`se`, `etsi`, `etsise`, `eksese`, `alor`); nor does it ratify arbitrary recursive scope, multiple negations, `-no` focus interactions, or question-wide negation. Those cases require separate work. The Phase 1 sentence parser remains restricted to local pre-verbal `no` and must reject unsupported compound constructions rather than invent an interpretation. No new word, affix, or parser capability is introduced.
