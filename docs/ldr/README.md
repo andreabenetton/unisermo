@@ -63,3 +63,6 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0005: Repository boundaries](LDR-0005-repository-boundaries.md) — Accepted
 - [LDR-0006: Tokenizer benchmark protocol](LDR-0006-tokenizer-benchmark-protocol.md) — Experimental
 - [LDR-0007: Tokenization diagnostic baseline](LDR-0007-tokenization-diagnostic-baseline.md) — Experimental
+- [LDR-0008: Contemporary recognizability](LDR-0008-lexical-recognizability.md) — Experimental
+- [LDR-0009: Alternative roots](LDR-0009-alternative-roots-dir-konstru.md) — Experimental
+- [LDR-0010: Wide-scope negation with `no lim`](LDR-0010-wide-scope-negation.md) — Accepted
