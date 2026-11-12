@@ -77,3 +77,34 @@ The operand of `no lim` extends to the end of the enclosing propositional expres
 The single-clause `no lim P` need not be preferred when local `no P` expresses the same truth conditions; the marked construction exists for scope precision, not stylistic duplication. Logical equivalences (including De Morgan laws) do not erase distinct connective/discourse meaning, especially `e` versus `ma`.
 
 **Scope boundary:** this ratification defines wide negation only for truth-conditional `e` / `o` clause combinations, including the already ratified exactly-one construction and the explicitly illustrated `lim` boundary. It does **not** define negation of a contrast relation (`ma`), factual cause (`due`), evidential justification (`nam`), inference (`ergo`), or conditional/concessive/exception relations (`se`, `etsi`, `etsise`, `eksese`, `alor`); nor does it ratify arbitrary recursive scope, multiple negations, `-no` focus interactions, or question-wide negation. Those cases require separate work. The Phase 1 sentence parser remains restricted to local pre-verbal `no` and must reject unsupported compound constructions rather than invent an interpretation. No new word, affix, or parser capability is introduced.
+
+## 7. Negating servile modality versus the dependent action (author ratification 2026-11-12)
+
+The confirmed analytic frame is `[finite SERVILE] + [bare lexical root]`.
+The ratified roots are `pos` (situational possibility), `deb`
+(obligation), `vol` (volition), `pot` (capacity), plus existing
+`sap` with a bare infinitive for practical know-how. The two ordinary
+positions of the invariant free word `no` are semantically distinct:
+
+- `no debi mov` — I am not obliged to move: NOT OBLIGATED(move).
+- `debi no mov` — I am obliged not to move: OBLIGATED(NOT move).
+- `no posi mov` — moving is not possible for me under the circumstances.
+- `posi no mov` — not moving is possible for me.
+- `no voli mov` / `voli no mov` — do not want to move / want not to move.
+- `no poti mov` / `poti no mov` — cannot move due to inability / am able to refrain.
+- `no sapi mov` / `sapi no mov` — do not know how to move / know how not to move.
+
+In the first position `no` negates the **finite modal head** and thus
+denies the modality with respect to the given action. In the second
+position it negates the **dependent action** while leaving the modal
+head affirmative. The bare infinitive/root stays uninflected with either
+placement, so ordinary subject pro-drop and finite TAM remain intact.
+
+In particular, `no debi mov` does **not** mean prohibition; `debi no mov`
+does. These distinctions are **not** interchangeable even if contexts
+make speakers infer similar consequences. This is not a second use of
+`no lim`; that previously accepted opener has a separate, limited
+truth-conditional clause-chain domain. Multiple `no` tokens in one
+servile frame, modal negation of subordinate clauses, and a full parser
+for servile complements are outside this decision. See
+[verb_specification.md](verb_specification.md).
