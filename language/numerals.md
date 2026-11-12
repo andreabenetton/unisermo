@@ -150,6 +150,52 @@ In the now-confirmed [kinship system](kinship.md), applying `gen` (parent) twice
 
 ---
 
+## 4a. Productive multiplicative factor: `NUMfol` (approved 24 October 2026)
+
+The author explicitly approves **`-fol`** for a *multiplicative
+factor*, inspired by the internationally recognizable English suffix
+*-fold* (e.g., twofold, fourfold). It is semantically distinct from
+`NUMjer` (number of iterations/repetitions). The form is a
+**single fused word**:
+
+| Value | Multiplicative | Meaning |
+| ---: | --- | --- |
+| 1 | `unofol` | single factor, ×1 |
+| 2 | `bisfol` | double, ×2 |
+| 3 | `terfol` | triple, ×3 |
+| 4 | `forfol` | quadruple, ×4 |
+| 5 | `kinfol` | quintuple, ×5 |
+| 8 | `otofol` | eightfold, ×8 |
+| 10 | `dekfol` | tenfold, ×10 |
+| 100 | `senfol` | hundredfold, ×100 |
+| 1,000 | `milafol` | thousandfold, ×1,000 |
+| 1,000,000 | `megafol` | millionfold, ×1,000,000 |
+
+For any **positive** cardinal NUM supported by the current decimal
+system, `NUMfol` expresses a scalar multiplication factor NUM:
+`NUMfol(X) = NUM × X`. A factor does not by itself assert that an event
+occurs NUM times, nor that NUM objects exist.
+
+**Morphotactics:** attach `fol` to the **full cardinal form** without
+changing its last letter. Thus `unofol`, not `unfol`; `otofol`, not
+`otfol`. The retired candidate `-mul` is **not** canonical.
+`forfol` avoids the unwanted lexical resemblance of `formul`
+to *formula*, while preserving canonical `for` = four.
+
+The zero-factor term `nulfol` is not yet ratified; the current
+productive subset recognizes factors **1 through 999,999,999,999**.
+This does not decide whether a zero factor might later be needed in
+mathematical speech.
+
+The output is a scalar/relational **invariant modifier**. In the
+reference SVO parser, one `NUMfol` may precede a noun by itself;
+its exact referential comparison baseline depends on context, and
+the modifier does not mark nominal plurality or take case. That
+restricted implementation **does not yet infer the scope** of
+`NUMfol` combined with a cardinal, determiner, or other modifier.
+
+---
+
 ## 5. Use with Nouns
 
 The numeral **precedes the noun**. Because the numeral already conveys plurality, the noun normally remains in its bare (number-neutral) form (see [`noun_number_system.md`](noun_number_system.md) §7):
@@ -198,3 +244,40 @@ Numerals themselves do not inflect for case or number.
 ```
 
 Write positive integers as descending three-digit groups with `giga`, `mega`, `mila`, then a bare 0..999 units group. Omit all zero groups and the coefficient `uno` before each power. After a numeral the noun remains bare; case suffixes attach to the noun, never to a numeral. The whole numerical word is fused.
+
+---
+
+## 8. Positive ordinal numbers: `-im` (24 October 2026)
+
+Author-approved invariant ordinal suffix: `-im` follows the entire canonical positive cardinal word (not individual thousand groups). When the cardinal ends in `o` (its final digit is `uno` or `oto`), delete only that final `o` before `im`. Canonical writing is a single fused word. Ordinary cardinal forms remain unchanged.
+
+| Cardinal | Canonical ordinal | Interpretation |
+|---|---|---|
+| `uno` | `unim` | first |
+| `bis` | `bisim` | second |
+| `ter` | `terim` | third |
+| `for` | `forim` | fourth |
+| `oto` | `otim` | eighth |
+| `dek` | `dekim` | tenth |
+| `dekuno` | `dekunim` | eleventh |
+| `bisdekuno` | `bisdekunim` | twenty-first |
+| `mila` | `milaim` | thousandth |
+
+Ordinal values are 1..999,999,999,999. `nulim` has **not** been approved. Full analytic forms such as `unoim`, `otoim` and compound-final `dekunoim` were explicitly accepted by the author on 24 October 2026 as valid **noncanonical variants**. The parser recognizes them and normalizes them to `unim`, `otim`, `dekunim` respectively; the generator emits only contracted canonical forms.
+
+Ordinals act as invariant pre-nominal modifiers, like adjectives: `bisim dom` is the second house; `bisim domem` marks accusative on the noun, not on the ordinal. The restricted SVO reference parser handles a *single* ordinal modifier; combining one with quantifiers, demonstratives, plural particles, or other modifiers awaits separate scope and ordering rules. Fused `NUMim` is not a fraction by itself. The two-word numerator/ordinal-denominator fraction syntax is independently ratified in the following section (§9).
+
+
+---
+
+## 9. Rational fractions (author ratification, 24 October 2026)
+
+The numerator is an invariant canonical cardinal (0..999,999,999,999), followed by exactly one space and a positive ordinal denominator (2..999,999,999,999). Orthographic form is **two separate words**: `CARDINAL ORDINAL`. The ordinal denotes the number of equal parts of a unit; `uno bisim` = 1/2 (no special root for 'half'); `bis terim` = 2/3, `ter forim` = 3/4, `kin senim` = 5/100, `nul bisim` = 0/2 and `kin terim` = 5/3. Improper fractions are valid; no normalization of arithmetic values or simplification of written fractions is performed. `bis forim` (2/4) remains distinct in representation from `uno bisim` (1/2).
+
+The ratified noncanonical analytic variants of ordinal denominators, such as `uno otoim`, may be parsed and normalized to canonical `uno otim`. The *generator* always uses the canonical contracted ordinal denominator. Denominator 1 or 0 and negative numerator/denominator are not licensed by this rule. Parsing a pair of tokens as a fraction requires the explicit grammatical numeric-expression context; a multiword numeral must not be silently reinterpreted as a prenominal modifier sequence inside the restricted clause parser. Numerators must be cardinal values rather than `NUMjer`, `NUMfol` or ordinals. See the standalone `parse_fraction` API.
+
+---
+
+## 10. Percentages: hundredths without a new morpheme (24 October 2026)
+
+The author explicitly ratifies the regular fractional construction with denominator `senim` for percentages. No independent percent particle, suffix, or root is introduced: `kin senim` = 5/100 = 5%; `sen senim` = 100/100 = 100%; `nul senim` = 0%. The expression is written as two words, using the already confirmed cardinal + ordinal fraction rule (§9). This does not ratify decimal notation or a separate % glyph as part of Unisermo orthography. Noninteger percentage values can already be stated as ordinary rational fractions (2.5% = 25/1000, `bisdekkin milaim`), though a decimal percentage spelling needs separate ratification. The parser uses its existing `parse_fraction` method; a percentage is identifiable when its denominator equals 100.
