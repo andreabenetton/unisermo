@@ -1,6 +1,7 @@
 """Source-level regression for ratified generalized alor subordinate grammar.
 
-The Phase 1 parser intentionally has no compound subordinate implementation.
+The previously documented accepted templates now have a bounded
+executable typed AST, tested in test_proposition_parser.py.
 """
 import json
 import unittest
@@ -22,7 +23,7 @@ class GeneralizedAlorRatificationTests(unittest.TestCase):
         ):
             self.assertIn(fragment, spec)
         self.assertIn("2026-10-25", entries[0]["decision"])
-        self.assertIn("The existing Phase 1 clause parser", spec)
+        self.assertIn("The typed parser recognizes the explicitly paired", spec)
         self.assertIn("not** yet recognize general compound", spec)
 
     def test_derived_rule_has_matching_source_hash(self):
