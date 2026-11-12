@@ -15,8 +15,32 @@ class ClauseParser:
             raise ValueError(f"unrecognized {required_case} nominal head: {head}")
         modifiers = words[:-1]
         if not (len(modifiers) == len(set(modifiers)) and
-                all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None for x in modifiers)):
+                all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None or self.parse_ordinal(x) is not None for x in modifiers)):
             raise ValueError(f"unsupported noun modifiers: {modifiers}")
+        factors = [self.parse_multiplicative(x) for x in modifiers]
+        parsed_factors = [x for x in factors if x is not None]
+        if len(parsed_factors) > 1:
+            raise ValueError("more than one multiplicative factor per noun phrase")
+        if parsed_factors:
+            # A factor is a scalar multiplier/modifier, not an explicit
+            # count of referents (NUM) or repetition count (NUMjer).
+            # Phase 1 does not attempt combined NUM + NUMfol scope.
+            if len(modifiers) != 1:
+                raise ValueError("NUMfol with other modifiers is outside the supported subset")
+            if len(choices) != 1:
+                raise ValueError(f"ambiguous nominal head {head}: {choices}")
+            return {
+                "kind": "noun_phrase", "lemma": choices[0]["lemma"],
+                "case": required_case, "modifiers": modifiers,
+                "lexical_status": choices[0]["status"],
+                "numerical_value": None,
+                "multiplicative_factor": parsed_factors[0]["factor"],
+            }
+        ordinal_analyses = [self.parse_ordinal(x) for x in modifiers]
+        ordinals = [x for x in ordinal_analyses if x is not None]
+        # Mixed ordinal + other modifiers needs its own ratified scope/order rule.
+        if ordinals and len(modifiers) != 1:
+            raise ValueError("combined ordinal modifier scope is not yet ratified")
         demonstratives = [x for x in modifiers if x in self.demonstratives]
         numerals = [x for x in modifiers if x in self.quantifiers or self.parse_numeral(x) is not None]
         if len(demonstratives) > 1 or len(numerals) > 1 or ("wi" in modifiers and numerals):
@@ -29,8 +53,11 @@ class ClauseParser:
             raise ValueError(f"ambiguous nominal head {head}: {choices}")
         parsed_cardinals = [self.parse_numeral(x) for x in numerals]
         values = [x["value"] for x in parsed_cardinals if x is not None]
-        return {"kind": "noun_phrase", "lemma": choices[0]["lemma"], "case": required_case, "modifiers": modifiers,
-                "lexical_status": choices[0]["status"], "numerical_value": values[0] if values else None}
+        result = {"kind": "noun_phrase", "lemma": choices[0]["lemma"], "case": required_case, "modifiers": modifiers,
+                  "lexical_status": choices[0]["status"], "numerical_value": values[0] if values else None}
+        if ordinals:
+            result["ordinal_value"] = ordinals[0]["value"]
+        return result
 
     def parse_sentence(self, sentence: str) -> dict:
         """Subset: [ka] [S-NP] [no] finite-V [OBJ-NP]. Unsupported syntax fails closed."""
