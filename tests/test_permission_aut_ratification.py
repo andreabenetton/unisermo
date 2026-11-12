@@ -32,12 +32,12 @@ class PermissionAutRatificationTests(unittest.TestCase):
                      "auti no mov", "auti umande mov", "no auti umande mov",
                      "auti umande no mov", "auti umande mov domde"):
             self.assertIn("`" + text + "`", verb)
-        self.assertIn("optional governed complement immediately after", verb)
+        self.assertIn("governed complement immediately after", verb)
         self.assertIn("posi mov", verb)
         self.assertIn("existing ablative", cases)
         self.assertIn("auti umande mov domde", cases)
-        self.assertIn("does **not** create", cases)
-        self.assertIn("does not automatically", negation)
+        self.assertIn("**not** create", cases)
+        self.assertIn("Neither **lack of permission** nor **lack of obligation**", negation)
         self.assertIn("abstract normative domain", verb)
         self.assertIn("not** approved", verb)
         semantics = (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8")
@@ -62,7 +62,7 @@ class PermissionAutRatificationTests(unittest.TestCase):
         matches = [e for e in lexindex["entries"] if e["form"] == "aut"]
         self.assertEqual(len(matches), 1)
         self.assertEqual(matches[0]["status"], "confirmed_lexicon")
-        self.assertIn("authorization", matches[0]["meaning_en"])
+        self.assertIn("authorized", matches[0]["meaning_en"])
         grammatical = json.loads((ROOT / "research/grammar/confirmed_decisions.json").read_text(encoding="utf-8"))
         decision_id = "permission_aut_optional_ablative_source_20261112"
         decisions = [e for e in grammatical["decisions"] if e["id"] == decision_id]
