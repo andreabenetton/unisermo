@@ -142,7 +142,7 @@ class PropositionParser:
             i = closed[-1]
             left = self._expression(words[:i], depth + 1)
             right = self._expression(words[i + 2:], depth + 1)
-            return self._combine(words[i + 1], left, right)
+            return self._combine(words[i + 1], left, right, closing_lim=True)
         if len(words) >= 2 and words[:2] == ["no", "lim"]:
             operand = words[2:]
             if not operand:
@@ -170,9 +170,13 @@ class PropositionParser:
             pieces.append(words[splits[-1] + 1:])
             if any(not p for p in pieces):
                 raise ValueError("exclusive o needs nonempty alternatives")
+            alternatives = [self._expression(p, depth + 1) for p in pieces]
+            if any(x["kind"] in {"subordinate", "causal_relation",
+                                 "evidential_relation", "inference_relation",
+                                 "wide_negation"} for x in alternatives):
+                raise ValueError("exclusive alternatives with subordinate or discourse scope are not settled")
             return {"kind": "exclusive_choice", "operator": "o",
-                    "semantics": "exactly_one",
-                    "alternatives": [self._expression(p, depth + 1) for p in pieces]}
+                    "semantics": "exactly_one", "alternatives": alternatives}
         if "lim" in words:
             raise ValueError("bare or misplaced lim")
         # Postposed concessives/exception are distinct from ordinary
@@ -199,7 +203,25 @@ class PropositionParser:
             return self._combine(op, left, right)
         return self._atom(words)
 
-    def _combine(self, op: str, left: dict, right: dict) -> dict:
+    def _combine(self, op: str, left: dict, right: dict,
+                 closing_lim: bool = False) -> dict:
+        # Coordinating an explicit subordinate/cause with another connector
+        # is not yet ratified. In particular a source-clause 'due'
+        # is NOT an unrestricted Boolean function.
+        mixed = {"subordinate", "causal_relation"}
+        if left["kind"] in mixed or right["kind"] in mixed:
+            raise ValueError("mixed causal/subordinate and coordination scope is not ratified")
+        if right["kind"] == "wide_negation" or (
+                left["kind"] == "wide_negation" and not closing_lim):
+            raise ValueError("nested no lim without a closing boundary is not ratified")
+        if op == "due" and (
+                left["kind"] in {"coordination", "exclusive_choice",
+                                  "wide_negation", "evidential_relation",
+                                  "inference_relation"}
+                or right["kind"] in {"coordination", "exclusive_choice",
+                                     "wide_negation", "evidential_relation",
+                                     "inference_relation"}):
+            raise ValueError("mixed causal and connective scope is not ratified")
         if op == "due":
             return {"kind": "causal_relation", "operator": "due",
                     "effect": left, "cause": right}
