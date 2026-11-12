@@ -1,6 +1,6 @@
 {
   "schema": "unisermo/lexical-roles@1",
-  "note": "Parser subset categories supported by examples or explicit lexical decisions. Not a claim that other roots cannot perform those roles.",
+  "note": "Parser subset categories supported by examples or explicit lexical decisions. Not a claim that other roots cannot perform those roles. Stative predicate roots are explicitly source-attested in language/negation.md, language/copula.md and research/lexicon/confirmed_lexicon.json; these roles do not make arbitrary roots predicative.",
   "verb": [
     "ager",
     "kad",
@@ -14,7 +14,8 @@
     "pel",
     "trak",
     "altmov",
-    "basmov"
+    "basmov",
+    "kunten"
   ],
   "noun": [
     "adel",
@@ -65,5 +66,22 @@
     "eksese",
     "e",
     "o"
+  ],
+  "predicate_property": [
+    "bon",
+    "bel",
+    "prob",
+    "etik",
+    "moral",
+    "nobl",
+    "just",
+    "apt",
+    "legal",
+    "fas",
+    "medi",
+    "nelegal",
+    "nefas",
+    "aper",
+    "klus"
   ]
 }
