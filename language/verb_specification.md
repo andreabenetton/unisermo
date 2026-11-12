@@ -117,17 +117,61 @@ meanings are expressed by an ordinary finite servile verb followed by the bare
 infinitive/root of the lexical verb. The servile verb carries aspect, time,
 person and number; the dependent infinitive remains uninflected.
 
-Schematic examples (the lexical roots for individual servile meanings are
-decided separately):
+The four **author-ratified short servile roots** (12 November 2026) are
+`pos` (situational or circumstantial possibility/opportunity),
+`deb` (normative obligation/duty), `vol` (volition/wanting), and
+`pot` (ability or capacity of the participant). The independently
+confirmed ordinary knowledge verb `sap` additionally admits a
+**procedural-knowledge** frame `sap + bare infinitive` ("know how to"),
+without implying ability, opportunity or actual performance. These meanings
+must not be collapsed: feasible need not mean capable; capable need not mean
+knowledgeable; know-how need not guarantee the practical capacity to act.
+`pos` alone does not assert legal permission or authorization; permission
+and necessity outside the four described types remain separate open issues.
 
-```text
-[SERVILE]-i dik      = I can/must/want/know-how-to say
-[SERVILE]-di dik     = I could/had-to/wanted/knew-how-to say
-[SERVILE]-efin dik   = we will be progressively able/obliged/willing to say
-```
+All five heads are ordinary inflectable verbs with the canonical
+root + aspect + time + person vowel + optional N pattern. In the
+servile/know-how construction each head takes one dependent lexical verb
+in its uninflected bare-root form, sharing the head's subject (pro-drop
+is retained). No extra modal affix or dependent-person agreement occurs.
 
-This construction is productive: no special synthetic suffix is added to the
-lexical verb for modal meanings.
+| Construction | First-person meaning |
+|---|---|
+| `posi mov` | it is possible for me to move (opportunity) |
+| `debi mov` | I must move (obligation) |
+| `voli mov` | I want to move |
+| `poti mov` | I am able to move (capacity) |
+| `sapi mov` | I know how to move (procedural knowledge) |
+| `debdi mov` | I had to move (past obligation) |
+| `volfi mov` | I will want to move (future volition) |
+| `potin mov` | we are able to move |
+
+**Local negation of servile frames (same 2026-11-12 ratification):**
+free `no` immediately before the conjugated servile denies the modal
+relation; free `no` immediately before its uninflected lexical complement
+negates the **action inside** the modal relation:
+
+- `no debi mov` = NOT obligated(move): I do not have to move.
+- `debi no mov` = obligated(NOT move): I must not move.
+- `no posi mov` = NOT possible(move): I cannot move under the circumstances.
+- `posi no mov` = possible(NOT move): I can choose not to move.
+- `no voli mov` = NOT want(move); `voli no mov` = want(NOT move).
+- `no poti mov` = NOT able(move); `poti no mov` = able(NOT move).
+- `no sapi mov` = NOT know-how(move); `sapi no mov` = know-how(NOT move).
+
+These are **distinct semantic scopes**, not evidence that "not obliged"
+means "forbidden", nor that inability equals lack of opportunity or lack
+of procedural knowledge. Each free `no` occupies an existing position
+before the predicate it negates; no new negative morpheme is introduced.
+`no lim` remains the separately ratified, restricted **coordinated
+proposition** scope opener and is not automatically applied to modal frames.
+Negation stacking, agent-control exceptions, nested serviles, alternative
+complement subjects and general modal scope with clause connectors or
+subordinates are not decided here. The Phase 1 parser **does not**
+implement servile complement frames; it must fail closed.
+
+This construction is productive: no special synthetic suffix is added to
+the dependent lexical verb for modal meanings.
 
 ## 5. Participial/resultative `-it`
 
