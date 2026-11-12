@@ -49,6 +49,22 @@ This is syntactic analysis, **not** truth evaluation, modal/deontic
 reasoning or referent resolution. The maintained coverage and
 exclusions are in [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md).
 
+### Focus enclitics and possessive NPs
+
+The parser now identifies NP-edge focus `-si/-no` on
+simple-clause subjects and objects, including multiword NPs.
+`-no` carries negative polarity and is retained as
+`negative_additive_focus`, not treated as an ordinary
+preverbal `no`. Focus scope with modal, wide negation or
+whole questions is outside the executable subset.
+
+Prenominal genitive possessors (`is dom`,
+`tik umans dom`) retain typed `genitive_relation`
+information; the separately approved postposed part-whole
+frame `part doms` has a distinct node. Case always
+remains on its own nominal head. See
+[GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md).
+
 ## Ratified scalar factors, ordinals and fractions (2026-10-24)
 
 The following author-approved numeral constructions are supported in the
