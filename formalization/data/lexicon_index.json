@@ -1,1578 +1,1578 @@
 {
   "entries": [
     {
-      "form": "adel",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonize adel as neutral sibling root. This August 10 author-approved choice was omitted from the saved lexicon; explicitly restored by author October 24, replacing obsolete frat.",
+      "form": "adel",
       "meaning_en": "sibling (brother or sister, gender-neutral)",
       "meaning_it": "fratello o sorella (non specificato)",
       "origin": "Author-confirmed choice, original ChatGPT conversation 2026-08-10 16:11:23 UTC; restored at author's instruction 2026-10-24",
-      "decision": "Canonize adel as neutral sibling root. This August 10 author-approved choice was omitted from the saved lexicon; explicitly restored by author October 24, replacing obsolete frat."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "adele",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonize adele = female sibling/sister, derived from neutral adel plus kinship-family ending -e. Do not generalize this pattern to unconfirmed kinship candidates.",
+      "form": "adele",
       "meaning_en": "sister (female sibling)",
       "meaning_it": "sorella",
       "origin": "Author-confirmed 2026-08-10 adel + -e feminine sibling formation; restoration 2026-10-24",
-      "decision": "Canonize adele = female sibling/sister, derived from neutral adel plus kinship-family ending -e. Do not generalize this pattern to unconfirmed kinship candidates."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "adelgen",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonize adelgen = sibling of a parent. Composition A+B means A relative to B, keeping left and right relation roles distinct.",
+      "form": "adelgen",
       "meaning_en": "uncle or aunt (parent's sibling, gender-neutral)",
       "meaning_it": "zio o zia (non specificato)",
       "origin": "2026-08-10 author proposal adel+gen; expressly ratified 2026-10-24",
-      "decision": "Canonize adelgen = sibling of a parent. Composition A+B means A relative to B, keeping left and right relation roles distinct."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "adelo",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonize adelo = male sibling/brother, derived from neutral adel plus kinship-family ending -o. Replaces retired frat. Not evidence of a universal gender rule across all nouns.",
+      "form": "adelo",
       "meaning_en": "brother (male sibling)",
       "meaning_it": "fratello",
       "origin": "Author-confirmed 2026-08-10 adel + -o masculine sibling formation; restoration 2026-10-24",
-      "decision": "Canonize adelo = male sibling/brother, derived from neutral adel plus kinship-family ending -o. Replaces retired frat. Not evidence of a universal gender rule across all nouns."
-    },
-    {
-      "form": "ades",
-      "status": "decision_attested_not_indexed",
-      "source": "language/copula.md",
-      "categories": [
-        "verb"
-      ]
-    },
-    {
-      "form": "admov",
-      "status": "decision_attested_not_indexed",
-      "source": "language/verb_specification.md",
-      "categories": [
-        "verb"
-      ]
-    },
-    {
-      "form": "aer",
-      "status": "confirmed_lexicon",
       "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "ades",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "form": "admov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
       "categories": [
         "root"
       ],
+      "decision": "Canonical root for air. Preserves the classical/international aer- family in canonical Unisermo spelling.",
+      "form": "aer",
       "meaning_en": "air",
       "meaning_it": "aria",
       "origin": "Latin aer / Greek aer",
-      "decision": "Canonical root for air. Preserves the classical/international aer- family in canonical Unisermo spelling."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "aerplan",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonical transparent compound aer+plan for airplane/aeroplane. Preferred over aeroplan; the lexical structure is explicitly aer + plan.",
+      "form": "aerplan",
       "meaning_en": "airplane; aeroplane",
       "meaning_it": "aeroplano; aereo",
       "origin": "productive compound aer + plan; international aeroplane family",
-      "decision": "Canonical transparent compound aer+plan for airplane/aeroplane. Preferred over aeroplan; the lexical structure is explicitly aer + plan."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ager",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy act.",
+      "form": "ager",
       "meaning_en": "act; do",
       "meaning_it": "agire",
       "origin": "Latin agere",
-      "decision": "Canonical replacement for legacy act."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "akwa",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonical water root. Chosen as akwa rather than akva or akua: w represents the canonical /w/ glide, preserving the international aqua /akwa/ shape without substituting /v/ or introducing a vowel hiatus.",
+      "form": "akwa",
       "meaning_en": "water",
       "meaning_it": "acqua",
       "origin": "Latin aqua / international aqua- family",
-      "decision": "Canonical water root. Chosen as akwa rather than akva or akua: w represents the canonical /w/ glide, preserving the international aqua /akwa/ shape without substituting /v/ or introducing a vowel hiatus."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "alor",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Use alor for THEN in condition-consequence constructions, distinct from ergo inferential THEREFORE. Not obligatory by this lexical ratification; its precise omission rules and nested scopes await detailed conditional syntax.",
+      "form": "alor",
       "meaning_en": "then; conditional consequent marker",
       "meaning_it": "allora; correlativo della conseguenza condizionale",
       "origin": "Explicit author ratification 2026-10-24; Italian allora and French alors",
-      "decision": "Use alor for THEN in condition-consequence constructions, distinct from ergo inferential THEREFORE. Not obligatory by this lexical ratification; its precise omission rules and nested scopes await detailed conditional syntax."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "alt",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "nominal_predicate"
       ],
+      "decision": "Canonical vertical-axis root for high/upper/up. With allative -ad, altad marks upward direction/toward a higher position. It may compound transparently with mov: altmov = ascend/go up.",
+      "form": "alt",
       "meaning_en": "high; upper; up",
       "meaning_it": "alto; superiore; su",
       "origin": "Latin altus / international alt- family",
-      "decision": "Canonical vertical-axis root for high/upper/up. With allative -ad, altad marks upward direction/toward a higher position. It may compound transparently with mov: altmov = ascend/go up."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "altmov",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "verb"
       ],
+      "decision": "Canonical transparent motion compound alt+mov for upward motion/ascending. Equivalent directional paraphrase: mov altad. It is distinct from phase-derived admov, which means begin moving.",
+      "form": "altmov",
       "meaning_en": "ascend; go up",
       "meaning_it": "salire; andare in su",
       "origin": "productive compound alt + mov",
-      "decision": "Canonical transparent motion compound alt+mov for upward motion/ascending. Equivalent directional paraphrase: mov altad. It is distinct from phase-derived admov, which means begin moving."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "amik",
-      "status": "example_only",
-      "source": "language/word_order.md",
       "categories": [
         "noun"
-      ]
+      ],
+      "form": "amik",
+      "source": "language/word_order.md",
+      "status": "example_only"
     },
     {
-      "form": "aper",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "property_root"
       ],
+      "decision": "Stative physical property (model B). Does not mean start/initiate; causal change uses traes OBJECT-em aper-da, entry uses ades aper.",
+      "form": "aper",
       "meaning_en": "open; physical configuration of opening",
       "meaning_it": "aperto; configurazione fisica di apertura",
       "origin": "Latin apertus; Romance aperto/abierto/aberto/ouvert",
-      "decision": "Stative physical property (model B). Does not mean start/initiate; causal change uses traes OBJECT-em aper-da, entry uses ades aper."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "apt",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Functional fitness only; separate from efficiency, effectiveness, and general quality.",
+      "form": "apt",
       "meaning_en": "apt; fit or suitable for a purpose",
       "meaning_it": "adatto; idoneo a una funzione o uno scopo",
       "origin": "Author selection in 2026-10-24 discussion preceding this ratification; record as provisional rather than author-ratified",
-      "decision": "Functional fitness only; separate from efficiency, effectiveness, and general quality."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ase",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "degree_modifier"
       ],
+      "decision": "Analytic degree modifier preceding a gradable quality; not threshold sufficiency.",
+      "form": "ase",
       "meaning_en": "fairly; rather; moderately positive degree",
       "meaning_it": "abbastanza; piuttosto; grado moderatamente elevato, senza implicare sufficienza",
       "origin": "Author ratification 2026-10-24",
-      "decision": "Analytic degree modifier preceding a gradable quality; not threshold sufficiency."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "bas",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "nominal_predicate"
       ],
+      "decision": "Canonical vertical-axis root for low/lower/down. With allative -ad, basad marks downward direction/toward a lower position. It may compound transparently with mov: basmov = descend/go down.",
+      "form": "bas",
       "meaning_en": "low; lower; down",
       "meaning_it": "basso; inferiore; giu",
       "origin": "international bas-/base family; Romance basso/bas",
-      "decision": "Canonical vertical-axis root for low/lower/down. With allative -ad, basad marks downward direction/toward a lower position. It may compound transparently with mov: basmov = descend/go down."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "basmov",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "verb"
       ],
+      "decision": "Canonical transparent motion compound bas+mov for downward motion/descending. Equivalent directional paraphrase: mov basad. It is distinct from phase-derived demov, which means cease moving.",
+      "form": "basmov",
       "meaning_en": "descend; go down",
       "meaning_it": "scendere; andare in giu",
       "origin": "productive compound bas + mov",
-      "decision": "Canonical transparent motion compound bas+mov for downward motion/descending. Equivalent directional paraphrase: mov basad. It is distinct from phase-derived demov, which means cease moving."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "bel",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Restrict to the aesthetic domain, including aesthetic judgment of sounds and experiences; not a general synonym for bon.",
+      "form": "bel",
       "meaning_en": "beautiful; aesthetically pleasing",
       "meaning_it": "bello; di qualità estetica positiva",
       "origin": "Author ratification 2026-10-24",
-      "decision": "Restrict to the aesthetic domain, including aesthetic judgment of sounds and experiences; not a general synonym for bon."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "bis",
-      "status": "decision_attested_not_indexed",
-      "source": "language/numerals.md",
       "categories": [
         "quantifier"
-      ]
+      ],
+      "form": "bis",
+      "source": "language/numerals.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "bisjergen",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonize bisjergen = two successive gen (parent) relations: parent of parent. bisjer counts two relational steps. No claim that bisjergeno/bisjergene have resolved male/female endpoint scope.",
+      "form": "bisjergen",
       "meaning_en": "grandparent (parent's parent, gender-neutral)",
       "meaning_it": "nonno o nonna (genitore di un genitore, neutro)",
       "origin": "2026-08-10 original genealogical NUMjer design, author reaffirmation 2026-10-24",
-      "decision": "Canonize bisjergen = two successive gen (parent) relations: parent of parent. bisjer counts two relational steps. No claim that bisjergeno/bisjergene have resolved male/female endpoint scope."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "bon",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "General goodness only: not lexical synonym of aesthetic bel, moral prob or functional apt.",
+      "form": "bon",
       "meaning_en": "good; context-dependent generally positive evaluation",
       "meaning_it": "buono; valutazione positiva generale dipendente dal contesto",
       "origin": "Already attested in language/copula.md and language/adjectives.md; author clarification 2026-10-24",
-      "decision": "General goodness only: not lexical synonym of aesthetic bel, moral prob or functional apt."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "deb",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Short finite servile root plus bare infinitive. The head bears ordinary tense/aspect/person/number. Distinguish no debi V (not obligated to V) from debi no V (obligated not to V). Obligation here is normative; external necessity or inevitability is not automatically identical.",
+      "form": "deb",
       "meaning_en": "must; be under an obligation or duty",
       "meaning_it": "dovere; avere un obbligo normativo",
       "origin": "Author approval 2026-11-12; Latin debere; Romance deber/devoir",
-      "decision": "Short finite servile root plus bare infinitive. The head bears ordinary tense/aspect/person/number. Distinguish no debi V (not obligated to V) from debi no V (obligated not to V). Obligation here is normative; external necessity or inevitability is not automatically identical."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "dees",
-      "status": "decision_attested_not_indexed",
-      "source": "language/copula.md",
       "categories": [
         "verb"
-      ]
+      ],
+      "form": "dees",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "dek",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy dec.",
+      "form": "dek",
       "meaning_en": "ten; decimal",
       "meaning_it": "dieci; decimale",
       "origin": "Latin decem",
-      "decision": "Canonical replacement for legacy dec."
-    },
-    {
-      "form": "demov",
-      "status": "decision_attested_not_indexed",
-      "source": "language/verb_specification.md",
-      "categories": [
-        "verb"
-      ]
-    },
-    {
-      "form": "dik",
-      "status": "confirmed_lexicon",
       "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
       "categories": [
         "verb"
       ],
+      "form": "demov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical verbal root replacing legacy dict; regular participial/resultative dikit.",
+      "form": "dik",
       "meaning_en": "say; tell; express",
       "meaning_it": "dire; esprimere",
       "origin": "Latin dicere",
-      "decision": "Canonical verbal root replacing legacy dict; regular participial/resultative dikit."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "dirig",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy direct.",
+      "form": "dirig",
       "meaning_en": "direct; guide",
       "meaning_it": "dirigere",
       "origin": "Latin dirigere",
-      "decision": "Canonical replacement for legacy direct."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "dok",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy doc and former dots. Source Latin docere means teach; Latin doctor is its agent noun. The k adaptation preserves the doc-/doct-/doctor family transparently under the canonical alphabet, giving regular dok + -or -> dokor (teacher).",
+      "form": "dok",
       "meaning_en": "teach",
       "meaning_it": "insegnare",
       "origin": "Latin docere",
-      "decision": "Canonical replacement for legacy doc and former dots. Source Latin docere means teach; Latin doctor is its agent noun. The k adaptation preserves the doc-/doct-/doctor family transparently under the canonical alphabet, giving regular dok + -or -> dokor (teacher)."
-    },
-    {
-      "form": "doktor",
-      "status": "example_only",
-      "source": "language/noun_case_system.md",
-      "categories": [
-        "noun"
-      ]
-    },
-    {
-      "form": "dom",
-      "status": "example_only",
-      "source": "language/noun_case_system.md",
-      "categories": [
-        "noun"
-      ]
-    },
-    {
-      "form": "due",
-      "status": "confirmed_lexicon",
       "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "form": "doktor",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "form": "dom",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
+    },
+    {
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired. Author ratified on 2026-10-24 extension to complete causal clause in both P due Q and due Q, P, distinct from inferential ergo.",
+      "form": "due",
       "meaning_en": "because of (nominal); because/since (causal clause)",
       "meaning_it": "a causa di; perché/poiché/siccome (introduce anche una proposizione causale)",
       "origin": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free causal relator, pronounced with canonical hiatus /du.e/. Former suffix -due is retired. Author ratified on 2026-10-24 extension to complete causal clause in both P due Q and due Q, P, distinct from inferential ergo."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "e",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "e as a free-standing conjunction AND; distinct from bound progressive aspect -e.",
+      "form": "e",
       "meaning_en": "and; additive coordination",
       "meaning_it": "e; congiunzione coordinante additiva",
       "origin": "Explicit author ratification 2026-10-24",
-      "decision": "e as a free-standing conjunction AND; distinct from bound progressive aspect -e."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ekse",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Free invariant ekse marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma.",
+      "form": "ekse",
       "meaning_en": "except, excluding; general exception operator",
       "meaning_it": "eksetto, tranne, salvo; operatore generale di esclusione",
       "origin": "Explicit author ratification 2026-10-24; international except/exception family, distinct from Latin ekse ('behold')",
-      "decision": "Free invariant ekse marks nominal/general exclusion or exception. Its nominal scope and distribution await further parser formalization. Not equivalent to ordinary conjunction ma."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "eksese",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical single-word compound ekse+se marks conditional exception (UNLESS). Both eksese P, Q and Q eksese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms.",
+      "form": "eksese",
       "meaning_en": "unless; except if (conditional exception)",
       "meaning_it": "a meno che, salvo che; eksezione condizionale",
       "origin": "Explicit author ratification 2026-10-24; fused ekse + se",
-      "decision": "Canonical single-word compound ekse+se marks conditional exception (UNLESS). Both eksese P, Q and Q eksese P are permitted. Distinct from se no P, Q, which expresses only a negative condition and need not imply an exception to an expectation or rule. Not blanket permission to fuse arbitrary connective forms."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ekstrem",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "degree_modifier"
       ],
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "form": "ekstrem",
       "meaning_en": "extremely; to an extreme degree",
       "meaning_it": "estremamente; in misura estrema",
       "origin": "Author ratification 2026-10-24: absolute intensity scale A",
-      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ekwal",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/.",
+      "form": "ekwal",
       "meaning_en": "equal; equally; as ... as",
       "meaning_it": "uguale; ugualmente; come ... come",
       "origin": "Latin aequalis / international equal family",
-      "decision": "Canonical replacement for legacy ekual. With current w=/w/, canonical pronunciation is /e.kwal/."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ergo",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Use ergo to introduce inferential conclusions, distinct from conditional-correlative alor and ordinary adversative ma.",
+      "form": "ergo",
       "meaning_en": "therefore; thus; inferential conclusion marker",
       "meaning_it": "quindi; dunque; pertanto",
       "origin": "Explicit author ratification 2026-10-24; Latin ergo",
-      "decision": "Use ergo to introduce inferential conclusions, distinct from conditional-correlative alor and ordinary adversative ma."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "es",
-      "status": "decision_attested_not_indexed",
-      "source": "language/copula.md",
       "categories": [
         "verb"
-      ]
+      ],
+      "form": "es",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "etik",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Distinguish from prob: ethical conformity is not necessarily a global evaluation of a person's moral goodness.",
+      "form": "etik",
       "meaning_en": "ethical; pertaining to ethics or aligned with ethical principles",
       "meaning_it": "etico; relativo all'etica; conforme a principi etici",
       "origin": "Author ratification 2026-10-24; Greek ethikos via international ethical vocabulary",
-      "decision": "Distinguish from prob: ethical conformity is not necessarily a global evaluation of a person's moral goodness."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "etsi",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Concessive conjunction allowing etsi P, Q and Q etsi P. Factual or contextually accepted P contrasted with Q; hypothetical even-if semantics remain unresolved.",
+      "form": "etsi",
       "meaning_en": "although; even though (factual concessive)",
       "meaning_it": "sebbene, benché, nonostante il fatto che",
       "origin": "Explicit author ratification 2026-10-24; Latin etsi",
-      "decision": "Concessive conjunction allowing etsi P, Q and Q etsi P. Factual or contextually accepted P contrasted with Q; hypothetical even-if semantics remain unresolved."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "etsise",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion.",
+      "form": "etsise",
       "meaning_en": "even if; hypothetical concessive",
       "meaning_it": "anche qualora; anche se (concessione ipotetica)",
       "origin": "Explicit author ratification 2026-10-24; compound etsi + se",
-      "decision": "Canonical fused invariant compound etsi+se = hypothetical EVEN IF. Unlike factual concessive etsi, this construction does not assert the truth or falsity of P. Both etsise P, Q and Q etsise P are accepted. Not a general license for arbitrary connective fusion."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "fak",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy fac.",
+      "form": "fak",
       "meaning_en": "do; make",
       "meaning_it": "fare; creare; produrre",
       "origin": "Latin facere",
-      "decision": "Canonical replacement for legacy fac."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "fas",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Sacred norm rather than positive law or generic morality.",
+      "form": "fas",
       "meaning_en": "permitted under a sacred or religious normative order",
       "meaning_it": "lecito secondo la norma sacra o religiosa",
       "origin": "Latin fas; author ratification 2026-10-24",
-      "decision": "Sacred norm rather than positive law or generic morality."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "fer",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Physical acquisition/grasp, distinct from transporting (portar). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words.",
+      "form": "fer",
       "meaning_en": "take; grasp physically",
       "meaning_it": "prendere; afferrare fisicamente",
       "origin": "Author ratification 2026-10-25; Latin ferre (historically carry; semantic assignment deliberate)",
-      "decision": "Physical acquisition/grasp, distinct from transporting (portar). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "fil",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonize fil as the inverse one-generation relation to gen: offspring/child of a parent, irrespective of age or sex. It does not mean a young person.",
+      "form": "fil",
       "meaning_en": "offspring; child of a parent (relational, gender-neutral)",
       "meaning_it": "figlio o figlia in quanto discendente diretto; prole",
       "origin": "Direct author ratification, 2026-10-24; prior kinship design discussion",
-      "decision": "Canonize fil as the inverse one-generation relation to gen: offspring/child of a parent, irrespective of age or sex. It does not mean a young person."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "filadelgen",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonical transparent kinship compound filadelgen = fil + (adel + gen), offspring of parent's sibling = first cousin. Components compose as A relative to B and are evaluated from right to left. Not a gender-specific or more distant cousin.",
+      "form": "filadelgen",
       "meaning_en": "first cousin (offspring of a parent's sibling, gender-neutral)",
       "meaning_it": "cugino o cugina di primo grado (figlio o figlia di uno zio/zia)",
       "origin": "Productive relational composition fil + adel + gen following direct approval of fil, 2026-10-24",
-      "decision": "Canonical transparent kinship compound filadelgen = fil + (adel + gen), offspring of parent's sibling = first cousin. Components compose as A relative to B and are evaluated from right to left. Not a gender-specific or more distant cousin."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "fin",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical invariant free purposive relator. Former suffix -fin is retired.",
+      "form": "fin",
       "meaning_en": "for the purpose of",
       "meaning_it": "allo scopo di",
       "origin": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free purposive relator. Former suffix -fin is retired."
-    },
-    {
-      "form": "frat",
-      "status": "example_only",
-      "source": "language/MIGRATION_HISTORY.md",
-      "categories": [
-        "noun"
-      ]
-    },
-    {
-      "form": "gen",
-      "status": "confirmed_lexicon",
       "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
       "categories": [
         "noun"
       ],
+      "form": "frat",
+      "source": "language/MIGRATION_HISTORY.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Canonize gen as neutral parent relation, base for geno (father) and gene (mother).",
+      "form": "gen",
       "meaning_en": "parent (gender-neutral)",
       "meaning_it": "genitore",
       "origin": "Author-approved 2026-08-10 parent system, reaffirmed explicitly 2026-10-24",
-      "decision": "Canonize gen as neutral parent relation, base for geno (father) and gene (mother)."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "gene",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonize gene = mother, female parent. Sex suffix applies to the immediate parent relation in this confirmed form.",
+      "form": "gene",
       "meaning_en": "mother",
       "meaning_it": "madre",
       "origin": "2026-08-10 parent family gen+e, author-approved 2026-10-24",
-      "decision": "Canonize gene = mother, female parent. Sex suffix applies to the immediate parent relation in this confirmed form."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "genegene",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonize genegene = gene + gene: mother of mother; trace relational path from ego right to left. Explicit link sex is part of each parent root, not a floating word-final gender suffix.",
+      "form": "genegene",
       "meaning_en": "maternal grandmother (mother of mother)",
       "meaning_it": "nonna materna",
       "origin": "Author-requested genealogical path feature, 2026-10-24; compose gene + gene",
-      "decision": "Canonize genegene = gene + gene: mother of mother; trace relational path from ego right to left. Explicit link sex is part of each parent root, not a floating word-final gender suffix."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "genegeno",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonize genegeno = gene + geno: mother of father; traverse rightmost geno (father), then leftmost gene (his mother).",
+      "form": "genegeno",
       "meaning_en": "paternal grandmother (mother of father)",
       "meaning_it": "nonna paterna",
       "origin": "Author-requested genealogical path feature, 2026-10-24; compose gene + geno",
-      "decision": "Canonize genegeno = gene + geno: mother of father; traverse rightmost geno (father), then leftmost gene (his mother)."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "geno",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonize geno = father, male parent. Sex suffix applies to the immediate parent relation in this confirmed form.",
+      "form": "geno",
       "meaning_en": "father",
       "meaning_it": "padre",
       "origin": "2026-08-10 parent family gen+o, author-approved 2026-10-24",
-      "decision": "Canonize geno = father, male parent. Sex suffix applies to the immediate parent relation in this confirmed form."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "genogene",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonize genogene = geno + gene: father of mother; traverse rightmost gene (mother), then leftmost geno (her father).",
+      "form": "genogene",
       "meaning_en": "maternal grandfather (father of mother)",
       "meaning_it": "nonno materno",
       "origin": "Author-requested genealogical path feature, 2026-10-24; compose geno + gene",
-      "decision": "Canonize genogene = geno + gene: father of mother; traverse rightmost gene (mother), then leftmost geno (her father)."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "genogeno",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound",
         "noun"
       ],
+      "decision": "Canonize genogeno = geno + geno: father of father; both links specify male parent. Not a general label for all grandfathers.",
+      "form": "genogeno",
       "meaning_en": "paternal grandfather (father of father)",
       "meaning_it": "nonno paterno",
       "origin": "Author-requested genealogical path feature, 2026-10-24; compose geno + geno",
-      "decision": "Canonize genogeno = geno + geno: father of father; both links specify male parent. Not a general label for all grandfathers."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "giga",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "numeral"
       ],
+      "decision": "Ratify giga as the numerical power 1000000000 (short-scale billion, Italian miliardo), with a fused 1..999 group coefficient, not as an abbreviation gig.",
+      "form": "giga",
       "meaning_en": "billion (10^9 decimal group power)",
       "meaning_it": "miliardo; potenza numerica 10^9",
       "origin": "Author ratification 2026-10-24; international giga- power prefix",
-      "decision": "Ratify giga as the numerical power 1000000000 (short-scale billion, Italian miliardo), with a fused 1..999 group coefficient, not as an abbreviation gig."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
+      "categories": [
+        "verb"
+      ],
       "form": "ines",
-      "status": "decision_attested_not_indexed",
       "source": "language/copula.md",
-      "categories": [
-        "verb"
-      ]
+      "status": "decision_attested_not_indexed"
     },
     {
+      "categories": [
+        "verb"
+      ],
       "form": "inmov",
-      "status": "decision_attested_not_indexed",
       "source": "language/verb_specification.md",
-      "categories": [
-        "verb"
-      ]
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "jer",
-      "status": "decision_attested_not_indexed",
-      "source": "language/numerals.md",
       "categories": [
         "counter"
-      ]
+      ],
+      "form": "jer",
+      "source": "language/numerals.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "just",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "A specific moral dimension (justice/fairness), not all moral goodness.",
+      "form": "just",
       "meaning_en": "just; fair; aligned with justice",
       "meaning_it": "giusto; conforme alla giustizia",
       "origin": "Author ratification 2026-10-24; Latin iustus",
-      "decision": "A specific moral dimension (justice/fairness), not all moral goodness."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ka",
-      "status": "decision_attested_not_indexed",
-      "source": "language/questions.md",
       "categories": [
         "particle"
-      ]
+      ],
+      "form": "ka",
+      "source": "language/questions.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "kad",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy cad.",
+      "form": "kad",
       "meaning_en": "fall",
       "meaning_it": "cadere",
       "origin": "Latin cadere",
-      "decision": "Canonical replacement for legacy cad."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kap",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Replaces former take/capture sense; kap is exclusively cognitive understanding. Physical taking is fer, physical carrying is port.",
+      "form": "kap",
       "meaning_en": "understand; cognitively grasp meaning",
       "meaning_it": "capire; cogliere cognitivamente un significato",
       "origin": "Author revision 2026-10-25; Latin capere > Italian capire",
-      "decision": "Replaces former take/capture sense; kap is exclusively cognitive understanding. Physical taking is fer, physical carrying is port."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ker",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical WH-word WHY, replacing legacy kur to avoid collision with the care/cure lexical family.",
+      "form": "ker",
       "meaning_en": "why?",
       "meaning_it": "perche?",
       "origin": "revised Unisermo question system",
-      "decision": "Canonical WH-word WHY, replacing legacy kur to avoid collision with the care/cure lexical family."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kin",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "numeral"
       ],
+      "decision": "Canonical numeral 5 replacing legacy cin.",
+      "form": "kin",
       "meaning_en": "five",
       "meaning_it": "cinque",
       "origin": "Latin quinque / Romance cinque-cinq family",
-      "decision": "Canonical numeral 5 replacing legacy cin."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "klar",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "nominal_predicate"
       ],
+      "decision": "Canonical replacement for legacy clar.",
+      "form": "klar",
       "meaning_en": "clear; clarity",
       "meaning_it": "chiaro; chiarezza",
       "origin": "Latin clarus",
-      "decision": "Canonical replacement for legacy clar."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "klus",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "property_root"
       ],
+      "decision": "Selected over proposed klud; stative physical property (model B). Does not mean end/finish; transitions use ades klus or causative traes OBJECT-em klus-da.",
+      "form": "klus",
       "meaning_en": "closed; physical configuration of closure",
       "meaning_it": "chiuso; configurazione fisica di chiusura",
       "origin": "Latin clausus/clusus; Romance Italian chiuso and French clos",
-      "decision": "Selected over proposed klud; stative physical property (model B). Does not mean end/finish; transitions use ades klus or causative traes OBJECT-em klus-da."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kom",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical WH-word HOW. Retained after moving Latin cum/com- lexical root to kun.",
+      "form": "kom",
       "meaning_en": "how?",
       "meaning_it": "come?",
       "origin": "legacy Unisermo question system",
-      "decision": "Canonical WH-word HOW. Retained after moving Latin cum/com- lexical root to kun."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kred",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy cred.",
+      "form": "kred",
       "meaning_en": "believe; credit",
       "meaning_it": "credere; credito",
       "origin": "Latin credere",
-      "decision": "Canonical replacement for legacy cred."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kun",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical replacement for legacy/source com from Latin cum/com-. Chosen as kun to avoid collision with canonical question word kom = HOW. Also canonical invariant free comitative relator in kun + noun phrase; the former comitative suffix -ko is retired.",
+      "form": "kun",
       "meaning_en": "with; together",
       "meaning_it": "con-; insieme",
       "origin": "Latin cum / com-",
-      "decision": "Canonical replacement for legacy/source com from Latin cum/com-. Chosen as kun to avoid collision with canonical question word kom = HOW. Also canonical invariant free comitative relator in kun + noun phrase; the former comitative suffix -ko is retired."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kunten",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "lexical_compound"
       ],
+      "decision": "Documented lexical specialization of associative kun- + hold ten. General productive kun- only adds jointness/association; physical containment does not follow for arbitrary roots.",
+      "form": "kunten",
       "meaning_en": "physically contain; keep within spatial bounds",
       "meaning_it": "contenere fisicamente; mantenere entro confini fisici",
       "origin": "Author ratification 2026-10-25; specialized kun- + ten",
-      "decision": "Documented lexical specialization of associative kun- + hold ten. General productive kun- only adds jointness/association; physical containment does not follow for arbitrary roots."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "kurar",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical replacement for legacy/source cur from Latin cura. Chosen as kurar to avoid collision with the former WHY question word; WHY is now ker.",
+      "form": "kurar",
       "meaning_en": "care; cure",
       "meaning_it": "cura; curare",
       "origin": "Latin cura",
-      "decision": "Canonical replacement for legacy/source cur from Latin cura. Chosen as kurar to avoid collision with the former WHY question word; WHY is now ker."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "legal",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Positive-law domain; distinct from just and fas.",
+      "form": "legal",
       "meaning_en": "legal; conforming to applicable positive law",
       "meaning_it": "legale; conforme al diritto positivo applicabile",
       "origin": "Latin legalis; author ratification 2026-10-24",
-      "decision": "Positive-law domain; distinct from just and fas."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "likwid",
-      "status": "example_only",
-      "source": "language/noun_case_system.md",
       "categories": [
         "nominal_predicate"
-      ]
+      ],
+      "form": "likwid",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
     },
     {
-      "form": "lim",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "functional_word"
       ],
+      "decision": "Invariant independent pronounced token: normally closes the preceding propositional sequence immediately before a following connector, keeping its right-association convention. Additional narrowly licensed author ratification 2026-11-12: in the two-token opener no lim, the lim immediately after no opens wide negation of a complete truth-conditional e/o expression (inclusive o or initial-o exactly-one), with an optional later closing lim before the next outer connector; bare lim P remains invalid. The new opener does not extend to negating ma/due/nam/ergo or subordination. Commas do not encode scope; lim is not a sentence terminator. Phase 1 compound parser support is not implied.",
+      "form": "lim",
       "meaning_en": "explicit propositional scope marker: closing before a connector or opening after no",
       "meaning_it": "marcatore esplicito di ambito proposizionale: chiusura prima di un connettivo, apertura dopo no",
       "origin": "Author ratification 2026-10-25; Latin limes, limitis",
-      "decision": "Invariant independent pronounced token: normally closes the preceding propositional sequence immediately before a following connector, keeping its right-association convention. Additional narrowly licensed author ratification 2026-11-12: in the two-token opener no lim, the lim immediately after no opens wide negation of a complete truth-conditional e/o expression (inclusive o or initial-o exactly-one), with an optional later closing lim before the next outer connector; bare lim P remains invalid. The new opener does not extend to negating ma/due/nam/ergo or subordination. Commas do not encode scope; lim is not a sentence terminator. Phase 1 compound parser support is not implied."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "lok",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy loc.",
+      "form": "lok",
       "meaning_en": "place; location",
       "meaning_it": "luogo; locale",
       "origin": "Latin locus",
-      "decision": "Canonical replacement for legacy loc."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ma",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Use standalone ma as ordinary adversative BUT, distinct from simple additive e. Concessive subordinate connectors remain open.",
+      "form": "ma",
       "meaning_en": "but; adversative conjunction",
       "meaning_it": "ma; congiunzione avversativa",
       "origin": "Explicit author ratification 2026-10-24; Italian ma, French mais and Portuguese mas",
-      "decision": "Use standalone ma as ordinary adversative BUT, distinct from simple additive e. Concessive subordinate connectors remain open."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "major",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/.",
+      "form": "major",
       "meaning_en": "more; comparative marker",
       "meaning_it": "piu; comparativo di maggioranza",
       "origin": "Latin maior",
-      "decision": "Keep spelling major. Under the current alphabet j is the glide /j/, so canonical pronunciation is /ma.jor/, not legacy /madzh-or/."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "medi",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Descriptive midpoint or intermediate degree, not intrinsically mediocre or negative.",
+      "form": "medi",
       "meaning_en": "middle; intermediate; central position on a scale",
       "meaning_it": "medio; intermedio; collocato nella parte centrale di una scala",
       "origin": "Author ratification 2026-10-24; Latin medius",
-      "decision": "Descriptive midpoint or intermediate degree, not intrinsically mediocre or negative."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "medibon",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "compound_lexeme"
       ],
+      "decision": "Approved lexical compound medi+bon. Not intrinsically derogatory; may convey mediocre when context implies modest evaluation. Its compounding pattern must be checked against general compound morphology before treating it as productive.",
+      "form": "medibon",
       "meaning_en": "of average quality; ordinary; unexceptional",
       "meaning_it": "di qualita media; ordinario; senza particolare pregio",
       "origin": "Author ratification 2026-10-24; medi + bon",
-      "decision": "Approved lexical compound medi+bon. Not intrinsically derogatory; may convey mediocre when context implies modest evaluation. Its compounding pattern must be checked against general compound morphology before treating it as productive."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "mega",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "numeral"
       ],
+      "decision": "Ratify mega as the numerical power 1000000, with a fused 1..999 coefficient before it, omitting uno for multiplier 1 and omitting zero groups.",
+      "form": "mega",
       "meaning_en": "million (10^6 decimal group power)",
       "meaning_it": "milione; potenza numerica 10^6",
       "origin": "Author ratification 2026-10-24; international mega- power prefix",
-      "decision": "Ratify mega as the numerical power 1000000, with a fused 1..999 coefficient before it, omitting uno for multiplier 1 and omitting zero groups."
-    },
-    {
-      "form": "mil",
-      "status": "example_only",
-      "source": "language/MIGRATION_HISTORY.md",
-      "categories": [
-        "numeral"
-      ]
-    },
-    {
-      "form": "mila",
-      "status": "confirmed_lexicon",
       "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
       "categories": [
         "numeral"
       ],
+      "form": "mil",
+      "source": "language/MIGRATION_HISTORY.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "numeral"
+      ],
+      "decision": "Ratify mila as the sole current numerical power 1000; explicitly retire historical mil as noncanonical. Group coefficient 1..999 precedes mila, omitting uno for coefficient 1. Composites remain fused.",
+      "form": "mila",
       "meaning_en": "thousand (10^3 decimal group power)",
       "meaning_it": "mille; potenza numerica 10^3",
       "origin": "Author ratification 2026-10-24; replaces historical mil; internationally recognizable mila/mille",
-      "decision": "Ratify mila as the sole current numerical power 1000; explicitly retire historical mil as noncanonical. Group coefficient 1..999 precedes mila, omitting uno for coefficient 1. Composites remain fused."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "minu",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "degree_modifier"
       ],
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "form": "minu",
       "meaning_en": "minimally; barely",
       "meaning_it": "in misura minima; appena",
       "origin": "Author ratification 2026-10-24: absolute intensity scale A",
-      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "mod",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical invariant free manner relator. Former suffix -mod is retired.",
+      "form": "mod",
       "meaning_en": "in the manner of",
       "meaning_it": "nel modo di; alla maniera di",
       "origin": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free manner relator. Former suffix -mod is retired."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "moral",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Descriptive domain adjective, not necessarily positive: moral actions or moral issues are not by definition good.",
+      "form": "moral",
       "meaning_en": "moral; pertaining to morality",
       "meaning_it": "morale; relativo alla moralità",
       "origin": "Author ratification 2026-10-24; Latin moralis",
-      "decision": "Descriptive domain adjective, not necessarily positive: moral actions or moral issues are not by definition good."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "mov",
-      "status": "decision_attested_not_indexed",
-      "source": "language/verb_specification.md",
       "categories": [
         "verb"
-      ]
+      ],
+      "form": "mov",
+      "source": "language/verb_specification.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "mult",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "degree_modifier"
       ],
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "form": "mult",
       "meaning_en": "very; to a high degree",
       "meaning_it": "molto; in misura elevata",
       "origin": "Author ratification 2026-10-24: absolute intensity scale A",
-      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "multi",
-      "status": "example_only",
-      "source": "language/noun_number_system.md",
       "categories": [
         "quantifier"
-      ]
+      ],
+      "form": "multi",
+      "source": "language/noun_number_system.md",
+      "status": "example_only"
     },
     {
-      "form": "nam",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "P nam Q indicates that the speaker presents Q as support for asserting P, without claiming that Q caused P or that Q proves P. Distinct from factual causal due and inference-first ergo.",
+      "form": "nam",
       "meaning_en": "for/indeed; introduces an evidential or argumentative reason supporting an assertion",
       "meaning_it": "infatti; introduce una giustificazione o evidenza per un'affermazione",
       "origin": "Explicit author ratification 2026-10-24; Latin nam",
-      "decision": "P nam Q indicates that the speaker presents Q as support for asserting P, without claiming that Q caused P or that Q proves P. Distinct from factual causal due and inference-first ergo."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "nation",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonical replacement for legacy nacion.",
+      "form": "nation",
       "meaning_en": "nation",
       "meaning_it": "nazione",
       "origin": "Latin natio, nationis",
-      "decision": "Canonical replacement for legacy nacion."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ne-",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "derivational_prefix"
       ],
+      "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel.",
+      "form": "ne-",
       "meaning_en": "lexical antonym / semantic opposite of a quality, not simple negation",
       "meaning_it": "opposto semantico di una qualita; polo contrario, non semplice negazione",
       "origin": "Author ratification 2026-10-24",
-      "decision": "Ratify fused ne- for opposite semantic poles of opposable qualities; deprecate historical attached no-. Keep free no for logical predicate negation and anti- for active opposition. Examples bel/nebel versus no bel."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "nefas",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "derived_lexeme"
       ],
+      "decision": "Contrary to sacred permissibility, not merely negated no fas.",
+      "form": "nefas",
       "meaning_en": "impious; sacrilegious",
       "meaning_it": "empio; sacrilego; contrario all'ordine sacro",
       "origin": "ne- + fas; author ratification 2026-10-24",
-      "decision": "Contrary to sacred permissibility, not merely negated no fas."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "nelegal",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "derived_lexeme"
       ],
+      "decision": "Contrary to legal, not merely negated no legal.",
+      "form": "nelegal",
       "meaning_en": "illegal; unlawful",
       "meaning_it": "illegale; contrario al diritto positivo applicabile",
       "origin": "ne- + legal; author ratification 2026-10-24",
-      "decision": "Contrary to legal, not merely negated no legal."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "no",
-      "status": "decision_attested_not_indexed",
-      "source": "language/negation.md",
       "categories": [
         "particle"
-      ]
+      ],
+      "form": "no",
+      "source": "language/negation.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "nobl",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Social and figurative senses should be distinguished contextually; nobl is not a generic equivalent of prob.",
+      "form": "nobl",
       "meaning_en": "noble; socially noble or noble in character depending on context",
       "meaning_it": "nobile; di nobiltà sociale o nobiltà d'animo secondo contesto",
       "origin": "Author ratification 2026-10-24; Latin nobilis",
-      "decision": "Social and figurative senses should be distinguished contextually; nobl is not a generic equivalent of prob."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "nul",
-      "status": "decision_attested_not_indexed",
-      "source": "language/noun_number_system.md",
       "categories": [
         "quantifier"
-      ]
+      ],
+      "form": "nul",
+      "source": "language/noun_number_system.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "o",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified.",
+      "form": "o",
       "meaning_en": "or; disjunctive coordination",
       "meaning_it": "o; congiunzione coordinante disgiuntiva",
       "origin": "Explicit author ratification 2026-10-24",
-      "decision": "o as a free-standing conjunction OR; distinct from bound perfect/completive aspect -o. Inclusive vs exclusive scope is not yet specified."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "omni",
-      "status": "decision_attested_not_indexed",
-      "source": "language/noun_number_system.md",
       "categories": [
         "quantifier"
-      ]
+      ],
+      "form": "omni",
+      "source": "language/noun_number_system.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "part",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Part-whole relationship; genitive can identify the whole.",
+      "form": "part",
       "meaning_en": "part; component of a whole",
       "meaning_it": "parte; componente di un tutto",
       "origin": "Author ratification 2026-10-25",
-      "decision": "Part-whole relationship; genitive can identify the whole."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "pel",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb"
       ],
+      "decision": "Canonical force/manner verb for push. It describes exerting force in a pushing relation and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame.",
+      "form": "pel",
       "meaning_en": "push",
       "meaning_it": "spingere",
       "origin": "Latin pellere / international propel-repel family",
-      "decision": "Canonical force/manner verb for push. It describes exerting force in a pushing relation and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "pens",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Thinking does not entail understanding.",
+      "form": "pens",
       "meaning_en": "think; mentally process",
       "meaning_it": "pensare; elaborare mentalmente",
       "origin": "Author ratification 2026-10-25",
-      "decision": "Thinking does not entail understanding."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "per",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical invariant free instrumental/perlative relator. Former suffix -per is retired.",
+      "form": "per",
       "meaning_en": "through; by means of",
       "meaning_it": "per; attraverso; per mezzo di",
       "origin": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free instrumental/perlative relator. Former suffix -per is retired."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "plan",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical root for plane/flat/level. Used as the second component of transparent compound aerplan.",
+      "form": "plan",
       "meaning_en": "plane; flat; level",
       "meaning_it": "piano; piatto; superficie piana",
       "origin": "Latin planus / planum; international plan-/plane family",
-      "decision": "Canonical root for plane/flat/level. Used as the second component of transparent compound aerplan."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "pok",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "degree_modifier"
       ],
+      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim.",
+      "form": "pok",
       "meaning_en": "slightly; to a small degree",
       "meaning_it": "poco; in misura debole",
       "origin": "Author ratification 2026-10-24: absolute intensity scale A",
-      "decision": "Free preverbal/preadjectival degree modifier; invariant; modifies gradable predicate, not comparison set. Distinct from relative operators major/minor/masim/minim."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "porta",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun_root"
       ],
+      "decision": "Distinct from verbal root portar, whose third-person form is portara. Physical door, not generic access or gate.",
+      "form": "porta",
       "meaning_en": "door; movable physical barrier allowing or blocking passage",
       "meaning_it": "porta; elemento fisico mobile che apre o chiude un passaggio",
       "origin": "Latin porta; contemporary Romance porta/puerta/porte",
-      "decision": "Distinct from verbal root portar, whose third-person form is portara. Physical door, not generic access or gate."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "portar",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Replaces port to avoid collision of 3rd-person finite porta with noun porta. Physical transport distinct from fer. Phases adportar/inportar/deportar/reportar, plus kunportar.",
+      "form": "portar",
       "meaning_en": "carry; transport",
       "meaning_it": "portare; trasportare",
       "origin": "Author ratification 2026-10-25; Latin portare; modern Romance portar",
-      "decision": "Replaces port to avoid collision of 3rd-person finite porta with noun porta. Physical transport distinct from fer. Phases adportar/inportar/deportar/reportar, plus kunportar."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "pos",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Short finite servile root (pos + TAM/person/number) followed by bare infinitive/root. Expresses circumstantial possibility or opportunity, distinct from participant capacity pot, learned know-how sap and deontic obligation deb. Does not by itself assert authorization. Local negation no posi V denies possibility; posi no V asserts possibility of not doing V. Not a synthetic TAM marker.",
+      "form": "pos",
       "meaning_en": "be situationally possible; have the opportunity/feasibility to do an action",
       "meaning_it": "essere possibile; avere l'opportunita concreta o situazionale di compiere un'azione",
       "origin": "Author approval 2026-11-12; Latin posse; internationally recognized possible/posible",
-      "decision": "Short finite servile root (pos + TAM/person/number) followed by bare infinitive/root. Expresses circumstantial possibility or opportunity, distinct from participant capacity pot, learned know-how sap and deontic obligation deb. Does not by itself assert authorization. Local negation no posi V denies possibility; posi no V asserts possibility of not doing V. Not a synthetic TAM marker."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "pot",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Short finite servile root plus bare infinitive. Ability/capacity of the actor, distinct from external situational possibility pos and procedural knowledge sap. no poti V denies capacity; poti no V expresses capacity to refrain. Does not entail permission or opportunity.",
+      "form": "pot",
       "meaning_en": "be able/capable of performing an action",
       "meaning_it": "potere per capacita; essere in grado di compiere un'azione",
       "origin": "Author approval 2026-11-12; Latin potere/potentia; international potent/potency",
-      "decision": "Short finite servile root plus bare infinitive. Ability/capacity of the actor, distinct from external situational possibility pos and procedural knowledge sap. no poti V denies capacity; poti no V expresses capacity to refrain. Does not entail permission or opportunity."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "pro",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical invariant free benefactive relator. Former suffix -pro is retired.",
+      "form": "pro",
       "meaning_en": "for the benefit of",
       "meaning_it": "a favore di; per il beneficio di",
       "origin": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free benefactive relator. Former suffix -pro is retired."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "prob",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Denotes positive moral character or conduct, not generic goodness, proof/probability or merely adherence to a moral code.",
+      "form": "prob",
       "meaning_en": "morally good; upright; morally sound",
       "meaning_it": "moralmente buono; retto; di integrità morale",
       "origin": "Author ratification 2026-10-24; Latin probus",
-      "decision": "Denotes positive moral character or conduct, not generic goodness, proof/probability or merely adherence to a moral code."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
+      "categories": [
+        "verb"
+      ],
       "form": "rees",
-      "status": "decision_attested_not_indexed",
       "source": "language/copula.md",
-      "categories": [
-        "verb"
-      ]
+      "status": "decision_attested_not_indexed"
     },
     {
+      "categories": [
+        "verb"
+      ],
       "form": "remov",
-      "status": "decision_attested_not_indexed",
       "source": "language/verb_specification.md",
-      "categories": [
-        "verb"
-      ]
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "san",
-      "status": "example_only",
-      "source": "language/copula.md",
       "categories": [
         "nominal_predicate"
-      ]
+      ],
+      "form": "san",
+      "source": "language/copula.md",
+      "status": "example_only"
     },
     {
-      "form": "sap",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions. Author-approved 2026-11-12: sap also licenses a finite sap + bare lexical infinitive/root frame meaning procedural know-how (sapi mov = I know how to move). Know-how alone does not entail pot capacity, pos opportunity or realized action; no sapi V negates the know-how relation, sapi no V is know-how of refraining from V. Other lexical knowing senses remain intact.",
+      "form": "sap",
       "meaning_en": "know; possess knowledge",
       "meaning_it": "sapere; possedere una conoscenza",
       "origin": "Author revision 2026-10-25; Latin sapere",
-      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions. Author-approved 2026-11-12: sap also licenses a finite sap + bare lexical infinitive/root frame meaning procedural know-how (sapi mov = I know how to move). Know-how alone does not entail pot capacity, pos opportunity or realized action; no sapi V negates the know-how relation, sapi no V is know-how of refraining from V. Other lexical knowing senses remain intact."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "se",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Ratify standalone se as IF, distinct from confirmed si YES and no NO/NOT. No automatic ratification of then/tum, ergo, nisi, sin, sed or other connective forms.",
+      "form": "se",
       "meaning_en": "if; condition introducer",
       "meaning_it": "se; introduce una condizione",
       "origin": "Explicit author ratification 2026-10-24, Latin si adapted to distinguish si=yes",
-      "decision": "Ratify standalone se as IF, distinct from confirmed si YES and no NO/NOT. No automatic ratification of then/tum, ergo, nisi, sin, sed or other connective forms."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "sentr",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy centr. The bare root sentr is preferred over former sentrum to preserve a compact derivational base and avoid an unnecessary nominal ending.",
+      "form": "sentr",
       "meaning_en": "center; central",
       "meaning_it": "centro; centrale",
       "origin": "Latin centrum / international centr- family",
-      "decision": "Canonical replacement for legacy centr. The bare root sentr is preferred over former sentrum to preserve a compact derivational base and avoid an unnecessary nominal ending."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "sert",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy cert.",
+      "form": "sert",
       "meaning_en": "certain; certainty",
       "meaning_it": "certo; certezza",
       "origin": "Latin certus",
-      "decision": "Canonical replacement for legacy cert."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "sirkul",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy circul. User-supplied sircul is normalized to sirkul because c is not in the canonical alphabet.",
+      "form": "sirkul",
       "meaning_en": "circle; circular",
       "meaning_it": "cerchio; circolare",
       "origin": "Latin circulus",
-      "decision": "Canonical replacement for legacy circul. User-supplied sircul is normalized to sirkul because c is not in the canonical alphabet."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "siv",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy civ.",
+      "form": "siv",
       "meaning_en": "citizen; civic",
       "meaning_it": "cittadino; civile",
       "origin": "Latin civis",
-      "decision": "Canonical replacement for legacy civ."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "solid",
-      "status": "example_only",
-      "source": "language/noun_case_system.md",
       "categories": [
         "nominal_predicate"
-      ]
+      ],
+      "form": "solid",
+      "source": "language/noun_case_system.md",
+      "status": "example_only"
     },
     {
-      "form": "spets",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonical replacement for legacy spec.",
+      "form": "spets",
       "meaning_en": "look; observe; aspect",
       "meaning_it": "guardare; osservare; aspetto",
       "origin": "Latin specere",
-      "decision": "Canonical replacement for legacy spec."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "stru",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy struct.",
+      "form": "stru",
       "meaning_en": "build; structure",
       "meaning_it": "costruire; struttura",
       "origin": "Latin struere",
-      "decision": "Canonical replacement for legacy struct."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "student",
-      "status": "example_only",
-      "source": "language/copula.md",
       "categories": [
         "noun"
-      ]
+      ],
+      "form": "student",
+      "source": "language/copula.md",
+      "status": "example_only"
     },
     {
-      "form": "suf",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "degree_modifier"
       ],
+      "decision": "Analytic sufficiency operator: reaches contextual requirement; not a fixed degree or synonym of mult.",
+      "form": "suf",
       "meaning_en": "sufficiently; enough relative to a purpose or threshold",
       "meaning_it": "sufficientemente; quanto basta rispetto a uno scopo o una soglia",
       "origin": "Author ratification 2026-10-24",
-      "decision": "Analytic sufficiency operator: reaches contextual requirement; not a fixed degree or synonym of mult."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "tan",
-      "status": "example_only",
-      "source": "language/demonstratives.md",
       "categories": [
         "demonstrative"
-      ]
+      ],
+      "form": "tan",
+      "source": "language/demonstratives.md",
+      "status": "example_only"
     },
     {
-      "form": "tem",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "function_word"
       ],
+      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired.",
+      "form": "tem",
       "meaning_en": "during; at the time of",
       "meaning_it": "durante; nel tempo di",
       "origin": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "ten",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Distinct from fer acquisition, portar transport, and ines persistence of a state. Standard phase prefix family adten/inten/deten/reten.",
+      "form": "ten",
       "meaning_en": "hold; maintain a constraint or control relation over time",
       "meaning_it": "tenere; mantenere un vincolo o controllo nel tempo",
       "origin": "Author ratification 2026-10-25",
-      "decision": "Distinct from fer acquisition, portar transport, and ines persistence of a state. Standard phase prefix family adten/inten/deten/reten."
-    },
-    {
-      "form": "ter",
-      "status": "example_only",
-      "source": "language/numerals.md",
-      "categories": [
-        "quantifier"
-      ]
-    },
-    {
-      "form": "tes",
-      "status": "example_only",
-      "source": "language/demonstratives.md",
-      "categories": [
-        "demonstrative"
-      ]
-    },
-    {
-      "form": "tik",
-      "status": "example_only",
-      "source": "language/demonstratives.md",
-      "categories": [
-        "demonstrative"
-      ]
-    },
-    {
-      "form": "tot",
-      "status": "decision_attested_not_indexed",
-      "source": "research/grammar/nominal_number_and_quantification.md",
-      "categories": [
-        "quantifier"
-      ]
-    },
-    {
-      "form": "traes",
-      "status": "decision_attested_not_indexed",
-      "source": "language/copula.md",
-      "categories": [
-        "verb"
-      ]
-    },
-    {
-      "form": "trak",
-      "status": "confirmed_lexicon",
       "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "ter",
+      "source": "language/numerals.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "demonstrative"
+      ],
+      "form": "tes",
+      "source": "language/demonstratives.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "demonstrative"
+      ],
+      "form": "tik",
+      "source": "language/demonstratives.md",
+      "status": "example_only"
+    },
+    {
+      "categories": [
+        "quantifier"
+      ],
+      "form": "tot",
+      "source": "research/grammar/nominal_number_and_quantification.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
       "categories": [
         "verb"
       ],
+      "form": "traes",
+      "source": "language/copula.md",
+      "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "verb"
+      ],
+      "decision": "Canonical force/manner verb for pull. It describes traction/pulling and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame.",
+      "form": "trak",
       "meaning_en": "pull; draw; drag",
       "meaning_it": "tirare; trascinare",
       "origin": "Latin trahere / tract-; international traction-tractor family",
-      "decision": "Canonical force/manner verb for pull. It describes traction/pulling and does not by itself entail successful displacement; actual caused motion is expressed by the mov-family valency frame."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "uman",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "noun"
       ],
+      "decision": "Canonical human/person root replacing earlier om. Optional referential specificity gives umano (male person/man) and umane (female person/woman); explicit plural is wi uman. Abstract humanity is regularly umanitat via -itat.",
+      "form": "uman",
       "meaning_en": "person; human being",
       "meaning_it": "persona; essere umano",
       "origin": "Latin humanus / homo family",
-      "decision": "Canonical human/person root replacing earlier om. Optional referential specificity gives umano (male person/man) and umane (female person/woman); explicit plural is wi uman. Abstract humanity is regularly umanitat via -itat."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "uno",
-      "status": "decision_attested_not_indexed",
-      "source": "language/articles.md",
       "categories": [
         "quantifier"
-      ]
+      ],
+      "form": "uno",
+      "source": "language/articles.md",
+      "status": "decision_attested_not_indexed"
     },
     {
-      "form": "vid",
-      "status": "example_only",
-      "source": "language/verb_specification.md",
       "categories": [
         "verb"
-      ]
+      ],
+      "form": "vid",
+      "source": "language/verb_specification.md",
+      "status": "example_only"
     },
     {
-      "form": "vok",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "root"
       ],
+      "decision": "Canonical replacement for legacy voc.",
+      "form": "vok",
       "meaning_en": "voice; call",
       "meaning_it": "voce; chiamare",
       "origin": "Latin vox",
-      "decision": "Canonical replacement for legacy voc."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "vol",
-      "status": "confirmed_lexicon",
-      "source": "research/lexicon/confirmed_lexicon.json",
       "categories": [
         "verb_root"
       ],
+      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition alone does not entail action or ability.",
+      "form": "vol",
       "meaning_en": "want; desire/intend to perform an action",
       "meaning_it": "volere; desiderare o avere intenzione di compiere un'azione",
       "origin": "Author approval 2026-11-12; Latin velle/volo; Romance volere and international volition",
-      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition alone does not entail action or ability."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
-      "form": "wi",
-      "status": "decision_attested_not_indexed",
-      "source": "language/noun_number_system.md",
       "categories": [
         "particle"
-      ]
+      ],
+      "form": "wi",
+      "source": "language/noun_number_system.md",
+      "status": "decision_attested_not_indexed"
     }
   ],
   "schema": "unisermo/lexicon-index@1"
