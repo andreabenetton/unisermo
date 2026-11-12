@@ -36,7 +36,7 @@ class WideNegationRatificationTests(unittest.TestCase):
         ):
             self.assertIn(phrase, negation)
         self.assertIn("no lim", order)
-        self.assertIn("bare `lim P`", negation)
+        self.assertIn("Bare `lim P`", negation)
         self.assertIn("Phase 1", negation)
         self.assertIn("not executable parser support", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
 
@@ -49,13 +49,21 @@ class WideNegationRatificationTests(unittest.TestCase):
             self.assertEqual(not (p or q), (not p) and (not q))
             self.assertEqual(not exactly_one(p, q), exactly_one(not p, q))
         self.assertTrue(local_and_wide_differ)
+        right_association_matters = False
+        closing_boundary_matters = False
         for p, q, r in product((False, True), repeat=3):
-            # Under right association: NOT(P AND (Q OR R)).
-            self.assertEqual(not (p and (q or r)), not (p and (q or r)))
-            # A closing lim before the next connector: NOT(P AND Q) OR R.
-            self.assertEqual((not (p and q)) or r, (not (p and q)) or r)
-            # Three-way exclusive means exactly one, not odd parity.
+            # `no lim P e Q o R` = NOT(P AND (Q OR R)).
+            wide_right = not (p and (q or r))
+            # A closing `lim` before `o` excludes R from the negation.
+            closed = (not (p and q)) or r
+            unclosed_left = not ((p and q) or r)
+            right_association_matters |= wide_right != unclosed_left
+            closing_boundary_matters |= wide_right != closed
+            # Exactly-one and odd parity differ for three alternatives.
             self.assertEqual(not exactly_one(p, q, r), sum((p, q, r)) != 1)
+        self.assertTrue(right_association_matters)
+        self.assertTrue(closing_boundary_matters)
+        self.assertTrue(not exactly_one(True, True, False))
 
     def test_source_and_generated_registry_are_synchronized(self):
         source = json.loads((ROOT / "research/grammar/confirmed_decisions.json").read_text(encoding="utf-8"))
