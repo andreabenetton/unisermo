@@ -1,7 +1,7 @@
 """Regression for accepted short servile roots and positional modal negation.
 
-Documentary rules only. The Phase 1 reference parser does not yet parse
-servile + infinitive frames, so no parser capability is asserted here.
+Documentary decision checks remain alongside the executable
+modal scope conformance suite in test_proposition_parser.py.
 """
 from hashlib import sha256
 from pathlib import Path
@@ -45,7 +45,7 @@ class ServileNegationRatificationTests(unittest.TestCase):
         self.assertIn("pro-drop", verbs)
         self.assertIn("does not assert legal permission", verbs)
         self.assertIn("does", neg)
-        self.assertIn("not executable parser support", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
+        self.assertIn("one uninflected verbal action", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
 
     def test_scope_meanings_not_equivalent(self):
         # An ordinary modal model can assign distinct statuses to action
