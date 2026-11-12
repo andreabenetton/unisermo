@@ -33,18 +33,13 @@ class Unisermo(MorphologyGenerator, WordParser, NumeralParser, KinshipParser, Pr
         # Never infer all untyped "root" entries to be verbs or nouns.
         self.verbs = {form for form, entry in self.lexicon.items()
                       if {"verb", "verb_root"} & set(entry["categories"])}
-        # This confirmed lexical compound denotes physical containing.
-        if self.lexicon.get("kunten", {}).get("status") == "confirmed_lexicon":
-            self.verbs.add("kunten")
         self.nouns = {form for form, entry in self.lexicon.items()
                       if {"noun", "noun_root", "nominal_predicate"} & set(entry["categories"])}
-        # Quality roots are lexical predicate heads, not arbitrary nouns.
-        predicate_roots = {"bon", "bel", "prob", "etik", "moral",
-                           "nobl", "just", "apt", "legal", "fas",
-                           "medi", "nelegal", "nefas"}
+        # Curated parser roles are source-linked in lexical_roles.json;
+        # no blanket coercion of untyped roots into quality predicates.
         self.properties = {form for form, entry in self.lexicon.items()
-                           if {"property_root", "nominal_predicate"} & set(entry["categories"])
-                           or (form in predicate_roots and entry["status"] == "confirmed_lexicon")}
+                           if {"predicate_property", "property_root",
+                               "nominal_predicate"} & set(entry["categories"])}
         self.person_to_form = {("singular", 1): "i", ("singular", 2): "u", ("singular", 3): "a",
                                ("plural", 1): "in", ("plural", 2): "un", ("plural", 3): "an"}
         self.pronoun_to_person = {v: k for k, v in self.person_to_form.items()}
