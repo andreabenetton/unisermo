@@ -19,3 +19,9 @@ The 2026-11-12 ratification distinguishes `no [finite servile] ROOT`
 (modality of a negated dependent action). This remains a normative grammar
 rule and is **not** implemented by the restricted Phase 1 parser; see
 LDR-0011 and `language/verb_specification.md`.
+
+LDR-0012 ratifies `aut` as an ordinary permission/authorization servile
+with an optional `-de` granting-source phrase immediately after the finite
+head and before the bare dependent verb. This is a **grammatical valency
+rule** and is not implemented in the Phase 1 parser. The possible
+abstract-domain use of `-in` remains under review and is not implied.

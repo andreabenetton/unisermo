@@ -109,6 +109,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Short servile roots and local modal negation scope"
+    },
+    {
+      "date": "2026-11-12",
+      "domain": "grammar",
+      "id": "LDR-0012",
+      "path": "docs/ldr/LDR-0012-aut-permission-source.md",
+      "sha256": "456cc6280504c295b4af9b50b413a4ec9d617296c460800fe80d01eca7fa2337",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Unified permission and authorization with aut and ablative source"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
