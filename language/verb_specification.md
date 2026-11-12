@@ -146,6 +146,11 @@ is retained). No extra modal affix or dependent-person agreement occurs.
 | `volfi mov` | I will want to move (future volition) |
 | `potin mov` | we are able to move |
 
+The same lexical action gives three different statements: `posi dok`
+(I have the opportunity to teach), `poti dok` (I have the capacity to
+teach), and `sapi dok` (I know how to teach). None alone asserts
+that I actually teach. The differences are semantic, not stylistic.
+
 **Local negation of servile frames (same 2026-11-12 ratification):**
 free `no` immediately before the conjugated servile denies the modal
 relation; free `no` immediately before its uninflected lexical complement
@@ -154,10 +159,13 @@ negates the **action inside** the modal relation:
 - `no debi mov` = NOT obligated(move): I do not have to move.
 - `debi no mov` = obligated(NOT move): I must not move.
 - `no posi mov` = NOT possible(move): I cannot move under the circumstances.
-- `posi no mov` = possible(NOT move): I can choose not to move.
+- `posi no mov` = possible(NOT move): it is possible for me not to move (no voluntary choice implied).
 - `no voli mov` = NOT want(move); `voli no mov` = want(NOT move).
 - `no poti mov` = NOT able(move); `poti no mov` = able(NOT move).
 - `no sapi mov` = NOT know-how(move); `sapi no mov` = know-how(NOT move).
+
+These constructions express relations to an action; none by itself
+asserts that the action takes place or fails to take place.
 
 These are **distinct semantic scopes**, not evidence that "not obliged"
 means "forbidden", nor that inability equals lack of opportunity or lack
