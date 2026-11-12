@@ -357,3 +357,14 @@ singular of `portar` is `portara`, avoiding the former collision where
 `adportar`, `inportar`, `deportar`, `reportar`, and productive
 `kunportar` means transport jointly; none inherit unrelated Romance
 lexical meanings.
+
+## Numeric ordinal marker `-im` (author ratification 24 October 2026)
+
+The ordinal `NUMim` is an invariant, productive **numeral modifier**,
+not a general-purpose derivational suffix on arbitrary roots. It
+attaches to an entire positive cardinal. When the cardinal ends in
+`o`, only that final vowel contracts (`uno` -> `unim`,
+`oto` -> `otim`, `dekuno` -> `dekunim`).
+Accepted noncanonical analytic spellings (`unoim` / `otoim`)
+normalize to the contracted canonical form. `nulim` is not
+ratified. See [numerals](numerals.md) section 8.
