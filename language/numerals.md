@@ -124,7 +124,7 @@ When a coefficient is exactly one, omit `uno` before its power. Omit every zero 
 
 The formal cardinal range is **0 through 999,999,999,999**. Every value has exactly one canonical fused spelling. `nul` alone denotes zero; no silent zero place becomes an overt `nul` component. The power words `giga`, `mega`, `mila`, `sen`, `dek` must appear in descending order, with no duplicates or redundant `uno` multiplier. `mil` is no longer a legal contemporary cardinal component.
 
-The parser is **compositional**, indexing only 999 possible three-digit group coefficients. It does not enumerate a trillion integers. The signed integers, fractions, decimals, ordinals, measures and powers larger than `giga` need separate explicit approval; they are not inferred from this rule.
+The parser is **compositional**, indexing only 999 possible three-digit group coefficients. It does not enumerate a trillion integers. Signed integers, decimals, measures and powers larger than `giga` still need separate explicit approval; the independently ratified ordinals, fractions, percentages and multiplicative factors are documented in the later sections.
 
 The numeral still precedes an uninflected number-neutral noun; nominal case is marked on the noun, not on the numeral. The accepted `NUMjer` general iteration counter automatically inherits the larger **positive** numerical domain; the separate kinship parser retains its own smaller safe bound on path expansion.
 
