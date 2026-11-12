@@ -181,6 +181,75 @@ implement servile complement frames; it must fail closed.
 This construction is productive: no special synthetic suffix is added to
 the dependent lexical verb for modal meanings.
 
+### Permission and authorization: `aut` (author ratification 12 November 2026)
+
+`aut` is one short, ordinary, inflectable **servile verb root** meaning
+*be permitted/authorized to perform an action*. The lexical root does
+not distinguish informal permission from a formal authorization or
+license. Context and an optional source complement make the distinction.
+`aut` is derived from the international *auctoritas/authority* family
+with the official graphemes only; `auth` with `h` is **not** Unisermo.
+`aut` is a root, **not** a newly ratified productive prefix `aut-`.
+
+Its basic frame is regular:
+
+- `auti mov` — I am permitted to move.
+- `autdi mov` — I was permitted to move.
+- `autin mov` — we are permitted to move.
+- `no auti mov` — I am not permitted/authorized to move.
+- `auti no mov` — I am permitted to refrain from moving.
+
+The distinction with `posi mov` (circumstances make moving possible)
+is essential: I may have an opportunity without permission, or
+permission without an opportunity. `pot` still marks participant
+capacity, `sap` practical know-how, `vol` desire, and `deb` duty.
+Neither `aut` nor `pos` asserts that the action actually occurs.
+
+**Permission source (existing ablative `-de`):** a granting
+person, body, or normative source may be specified as an **optional
+governed complement immediately after the finite `aut` head**, and
+before the dependent bare verb. The canonical unmarked sequence is:
+
+```text
+[SUBJECT] [no] AUT-FINITE [SOURCE-NP-de] [no] VERB-ROOT [VERB ARGUMENTS...]
+```
+
+For example, with existing `uman` (person) and `dom` (house):
+
+- `auti umande mov` — I have permission **from a person** to move.
+- `no auti umande mov` — I am **not** permitted by that person to move.
+- `auti umande no mov` — that person permits me **not** to move.
+- `auti umande mov domde` — I have permission **from a person** to move
+  **from a house**.
+
+The last sentence illustrates why source attachment matters. The
+`SOURCE-de` phrase in the **head slot immediately after `aut`**
+denotes the origin of the permission; a later `-de` phrase inside
+the dependent action may denote the origin of the movement. Without
+this positional distinction, `auti mov domde` cannot automatically
+be read as permission **from** the house: the `domde` may belong to
+the movement. No new ablative suffix or general change to cases is
+implied. This head-specific source slot is the narrow exception to
+immediate `finite servile + bare infinitive` adjacency; both the
+finite verb and dependent verb retain their ordinary morphology.
+
+`no auti V` denies that the relevant permission exists; it does
+not itself assert an explicit prohibition (`debi no V`). Likewise
+`auti no V` affirms permission to refrain and does not automatically
+mean an absence of obligation (`no debi V`). An explicit
+`SOURCE-de` restricts the denial or permission to that source;
+it does not make claims about all possible other authorities.
+
+The use of **locative `-in` for an abstract normative domain** is
+deliberately **not** approved here. It will be evaluated as part of
+a separate cross-domain study of abstract locatives, without changing
+the spatial or local uses already ratified.
+
+This is a normative grammatical decision, not a claim that the Phase 1
+sentence parser supports modal complement frames, optional source
+slots, or general modal scope. Unsupported parsing must fail closed.
+
+
 ## 5. Participial/resultative `-it`
 
 `-it` is the productive non-finite participial/resultative suffix:
