@@ -29,6 +29,14 @@ previously supported sentences. See
   `attachment: undetermined` instead of claiming semantic clarity
   that the spoken surface does not supply.
 
+- NP-final focus `-si/-no` is stored with explicit focused
+  constituent attachment; negative-additive `-no` supplies
+  negative clause polarity without becoming an ordinary free
+  `no` predicate negator. Typed personal genitives and the
+  explicitly ratified `part WHOLE-s` relation preserve
+  possession and part-whole structures without inferring legal
+  or physical ownership.
+
 The typed implementation supports a small simple-clause set of
 explicit cases, free relators, WH questions, stative zero copulas
 and imperatives.
