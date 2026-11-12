@@ -267,6 +267,18 @@
     },
     {
       "categories": [
+        "verb_root"
+      ],
+      "decision": "Short finite servile root plus bare infinitive. The head bears ordinary tense/aspect/person/number. Distinguish no debi V (not obligated to V) from debi no V (obligated not to V). Obligation here is normative; external necessity or inevitability is not automatically identical.",
+      "form": "deb",
+      "meaning_en": "must; be under an obligation or duty",
+      "meaning_it": "dovere; avere un obbligo normativo",
+      "origin": "Author approval 2026-11-12; Latin debere; Romance deber/devoir",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "form": "dees",
@@ -1224,6 +1236,30 @@
     },
     {
       "categories": [
+        "verb_root"
+      ],
+      "decision": "Short finite servile root (pos + TAM/person/number) followed by bare infinitive/root. Expresses circumstantial possibility or opportunity, distinct from participant capacity pot, learned know-how sap and deontic obligation deb. Does not by itself assert authorization. Local negation no posi V denies possibility; posi no V asserts possibility of not doing V. Not a synthetic TAM marker.",
+      "form": "pos",
+      "meaning_en": "be situationally possible; have the opportunity/feasibility to do an action",
+      "meaning_it": "essere possibile; avere l'opportunita concreta o situazionale di compiere un'azione",
+      "origin": "Author approval 2026-11-12; Latin posse; internationally recognized possible/posible",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Short finite servile root plus bare infinitive. Ability/capacity of the actor, distinct from external situational possibility pos and procedural knowledge sap. no poti V denies capacity; poti no V expresses capacity to refrain. Does not entail permission or opportunity.",
+      "form": "pot",
+      "meaning_en": "be able/capable of performing an action",
+      "meaning_it": "potere per capacita; essere in grado di compiere un'azione",
+      "origin": "Author approval 2026-11-12; Latin potere/potentia; international potent/potency",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "function_word"
       ],
       "decision": "Canonical invariant free benefactive relator. Former suffix -pro is retired.",
@@ -1274,7 +1310,7 @@
       "categories": [
         "verb_root"
       ],
-      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions.",
+      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions. Author-approved 2026-11-12: sap also licenses a finite sap + bare lexical infinitive/root frame meaning procedural know-how (sapi mov = I know how to move). Know-how alone does not entail pot capacity, pos opportunity or realized action; no sapi V negates the know-how relation, sapi no V is know-how of refraining from V. Other lexical knowing senses remain intact.",
       "form": "sap",
       "meaning_en": "know; possess knowledge",
       "meaning_it": "sapere; possedere una conoscenza",
@@ -1515,6 +1551,18 @@
       "meaning_en": "voice; call",
       "meaning_it": "voce; chiamare",
       "origin": "Latin vox",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition alone does not entail action or ability.",
+      "form": "vol",
+      "meaning_en": "want; desire/intend to perform an action",
+      "meaning_it": "volere; desiderare o avere intenzione di compiere un'azione",
+      "origin": "Author approval 2026-11-12; Latin velle/volo; Romance volere and international volition",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },

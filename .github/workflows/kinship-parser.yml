@@ -10,6 +10,7 @@ on:
       - 'tests/test_formalization.py'
       - 'tests/test_lexicon_decisions.py'
       - 'tests/test_wide_negation_ratification.py'
+      - 'tests/test_servile_negation_ratification.py'
       - '.github/workflows/kinship-parser.yml'
   push:
     branches:
@@ -43,3 +44,4 @@ jobs:
           python tests/test_lexicon_decisions.py
           python tests/test_recent_grammar_decisions.py
           python tests/test_wide_negation_ratification.py
+          python tests/test_servile_negation_ratification.py

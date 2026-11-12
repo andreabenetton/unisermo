@@ -99,6 +99,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Negate coordinated propositions with no lim"
+    },
+    {
+      "date": "2026-11-12",
+      "domain": "grammar",
+      "id": "LDR-0011",
+      "path": "docs/ldr/LDR-0011-servile-negation.md",
+      "sha256": "bbf80a2def636d0c3b8d4da0398b8ec92280a0e874b37ccea26e4208b90fff09",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Short servile roots and local modal negation scope"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
