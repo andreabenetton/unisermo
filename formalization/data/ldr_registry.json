@@ -89,6 +89,16 @@
       "status": "Experimental",
       "supersedes": "none",
       "title": "Evaluate dir and konstru as lexical root replacements"
+    },
+    {
+      "date": "2026-11-12",
+      "domain": "grammar",
+      "id": "LDR-0010",
+      "path": "docs/ldr/LDR-0010-wide-scope-negation.md",
+      "sha256": "9df81a04bedbb6287a4ca61025bfc40bd87dc1a3a4f5cd068d49000e3c19278c",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Negate coordinated propositions with no lim"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
