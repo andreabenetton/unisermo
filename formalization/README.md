@@ -173,8 +173,8 @@ See [normative kinship](../language/kinship.md) and
 Not yet fully implemented: unrestricted lexical valency, focus enclitic
 scope, all case-relative modifier combinations, non-kinship derivational
 compounding, passives, unrestricted topicalization and wh composition,
-zero-copula predication outside confirmed quality roots, fronted causal
-boundary resolution, mixed subordinate/coordination scopes, nested modals,
+zero-copula predication outside confirmed quality roots, unrestricted fronted-causal
+boundary recovery, mixed subordinate/coordination scopes, nested modals,
 and semantic truth/domain evaluation.
 These remain legitimate language phenomena even when unsupported by this
 **reference subset**.
