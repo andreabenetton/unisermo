@@ -316,11 +316,17 @@ class PropositionParser:
         if not words:
             raise ValueError("question lacks a predicate")
         if question is None:
-            # Keep every old simple-SVO AST stable for benchmark consumers.
-            try:
-                return ClauseParser.parse_sentence(self, " ".join(words))
-            except ValueError:
-                pass
+            # Preserve the old AST only where the old SVO parser has a
+            # licensed valency model. Strict serviles and traes must be
+            # parsed structurally, not mistaken for arbitrary transitive
+            # predicates with a lone nominal object.
+            provisional = [a for w in words for a in self._finite(w)]
+            special = {"pos", "deb", "vol", "pot", "aut", "traes"}
+            if not any(a["lemma"] in special for a in provisional):
+                try:
+                    return ClauseParser.parse_sentence(self, " ".join(words))
+                except ValueError:
+                    pass
         finite = [(i, analyses) for i, word in enumerate(words)
                   if (analyses := self._finite(word))]
         if len(finite) == 0:
@@ -382,6 +388,18 @@ class PropositionParser:
             if source is not None or (head in MODALS and head != "sap"):
                 raise ValueError("servile requires a bare verbal complement")
             obj, complements = self._args(rest, head)
+            frame = None
+            if head == "traes":
+                cases = [c["case"] for c in complements
+                         if c["kind"] == "case_complement"]
+                if obj is None:
+                    if sorted(cases) != ["ablative", "dative_allative"] or len(complements) != 2:
+                        raise ValueError("traes transition requires DEST-ad and SOURCE-de")
+                    frame = "state_transition"
+                else:
+                    if cases != ["resultative"] or len(complements) != 1:
+                        raise ValueError("causative traes requires OBJ-em and RESULT-da")
+                    frame = "causative_transformation"
             if question is not None and question["role"] in {"object", "destination"}:
                 if question["role"] == "object" and obj is not None:
                     raise ValueError("wh object duplicates explicit object")
@@ -394,6 +412,8 @@ class PropositionParser:
                    "limitations": "typed deterministic subset, not referent or truth evaluation"}
             if question:
                 out["question"] = question
+            if frame is not None:
+                out["valency"] = frame
         if front is not None:
             out["preposed_locative"] = front
         return out
