@@ -1,6 +1,6 @@
 {
   "schema": "unisermo/confirmed-lexicon@1",
-  "confirmed_on": "2026-10-24",
+  "confirmed_on": "2026-11-12",
   "status": "confirmed_core_lexicon",
   "entries": [
     {
@@ -785,7 +785,7 @@
       "meaning_en": "know; possess knowledge",
       "status": "confirmed",
       "source": "Author revision 2026-10-25; Latin sapere",
-      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions."
+      "decision": "Possession of knowledge, distinct from kap understanding and pens thinking. Regular phase morphology applies, with contextual aspectual restrictions. Author-approved 2026-11-12: sap also licenses a finite sap + bare lexical infinitive/root frame meaning procedural know-how (sapi mov = I know how to move). Know-how alone does not entail pot capacity, pos opportunity or realized action; no sapi V negates the know-how relation, sapi no V is know-how of refraining from V. Other lexical knowing senses remain intact."
     },
     {
       "form": "fer",
@@ -857,6 +857,42 @@
       "meaning_en": "closed; physical configuration of closure",
       "source": "Latin clausus/clusus; Romance Italian chiuso and French clos",
       "decision": "Selected over proposed klud; stative physical property (model B). Does not mean end/finish; transitions use ades klus or causative traes OBJECT-em klus-da.",
+      "status": "confirmed"
+    },
+    {
+      "form": "pos",
+      "category": "verb_root",
+      "meaning_it": "essere possibile; avere l'opportunita concreta o situazionale di compiere un'azione",
+      "meaning_en": "be situationally possible; have the opportunity/feasibility to do an action",
+      "source": "Author approval 2026-11-12; Latin posse; internationally recognized possible/posible",
+      "decision": "Short finite servile root (pos + TAM/person/number) followed by bare infinitive/root. Expresses circumstantial possibility or opportunity, distinct from participant capacity pot, learned know-how sap and deontic obligation deb. Does not by itself assert authorization. Local negation no posi V denies possibility; posi no V asserts possibility of not doing V. Not a synthetic TAM marker.",
+      "status": "confirmed"
+    },
+    {
+      "form": "deb",
+      "category": "verb_root",
+      "meaning_it": "dovere; avere un obbligo normativo",
+      "meaning_en": "must; be under an obligation or duty",
+      "source": "Author approval 2026-11-12; Latin debere; Romance deber/devoir",
+      "decision": "Short finite servile root plus bare infinitive. The head bears ordinary tense/aspect/person/number. Distinguish no debi V (not obligated to V) from debi no V (obligated not to V). Obligation here is normative; external necessity or inevitability is not automatically identical.",
+      "status": "confirmed"
+    },
+    {
+      "form": "vol",
+      "category": "verb_root",
+      "meaning_it": "volere; desiderare o avere intenzione di compiere un'azione",
+      "meaning_en": "want; desire/intend to perform an action",
+      "source": "Author approval 2026-11-12; Latin velle/volo; Romance volere and international volition",
+      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition alone does not entail action or ability.",
+      "status": "confirmed"
+    },
+    {
+      "form": "pot",
+      "category": "verb_root",
+      "meaning_it": "potere per capacita; essere in grado di compiere un'azione",
+      "meaning_en": "be able/capable of performing an action",
+      "source": "Author approval 2026-11-12; Latin potere/potentia; international potent/potency",
+      "decision": "Short finite servile root plus bare infinitive. Ability/capacity of the actor, distinct from external situational possibility pos and procedural knowledge sap. no poti V denies capacity; poti no V expresses capacity to refrain. Does not entail permission or opportunity.",
       "status": "confirmed"
     }
   ]
