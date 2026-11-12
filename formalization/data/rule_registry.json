@@ -301,6 +301,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "4c7cb236a5aeb78e31bedea8b68321f2a0e1ccffba07afccf2522df4d34cae5e",
+      "id": "grammar.propositional_wide_negation_no_lim_20261112",
+      "source": "research/grammar/confirmed_decisions.json#decisions/propositional_wide_negation_no_lim_20261112",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "8f91d7ef1e6b9d33b22c8b2596bc94c62ec06fc42973de590bb4c20175e0dc6a",
       "id": "grammar.question_words_kom_ker",
       "source": "research/grammar/confirmed_decisions.json#decisions/question_words_kom_ker",
