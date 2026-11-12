@@ -3,9 +3,37 @@ from __future__ import annotations
 
 class WordParser:
     def analyze_word(self, surface: str) -> dict:
-        if not surface.isascii() or not surface.isalpha() or surface != surface.lower() or not set(surface) <= set(self.morph["alphabet"]):
+        if not isinstance(surface, str) or not surface.isascii() or surface != surface.lower():
+            return {"surface": surface, "analyses": []}
+        if "-" in surface:
+            # A bound focus enclitic is a single hyphenated surface token.
+            # The whole nominal constituent's scope is identified in _np,
+            # NOT by analysing its final word in isolation.
+            host, separator, suffix = surface.rpartition("-")
+            if (separator != "-" or suffix not in {"si", "no"} or not host
+                    or "-" in host or not host.isalpha()):
+                return {"surface": surface, "analyses": []}
+            host_analyses = self.analyze_word(host)["analyses"]
+            if (host not in self.pronoun_to_person and
+                    not any(a["kind"] in {"nominal_case", "genitive_pronoun"}
+                            for a in host_analyses)):
+                return {"surface": surface, "analyses": []}
+            status = (self.lexicon[host]["status"] if host in self.lexicon else
+                      next((a["status"] for a in host_analyses if a["kind"] in
+                            {"nominal_case", "genitive_pronoun"}), "canonical_by_rule"))
+            return {"surface": surface, "analyses": [{
+                "kind": "focus_enclitic", "lemma": host, "status": status,
+                "suffix": suffix, "focus": "negative_additive" if suffix == "no" else "additive"
+            }]}
+        if not surface.isalpha() or not set(surface) <= set(self.morph["alphabet"]):
             return {"surface": surface, "analyses": []}
         out: list[dict] = []
+        if surface in self.PERSONAL_GENITIVES:
+            source, number, person = self.PERSONAL_GENITIVES[surface]
+            out.append({"kind": "genitive_pronoun", "lemma": source,
+                        "status": "canonical_by_rule", "case": "genitive",
+                        "person": person, "number": number})
+
         for lemma, entry in self.lexicon.items():
             if surface == lemma:
                 out.append({"kind": "lexical_form", "lemma": lemma, "status": entry["status"],

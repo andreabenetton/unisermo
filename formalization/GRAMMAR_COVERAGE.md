@@ -37,7 +37,7 @@ numeral, kinship and corpus tests still run.
 | Cause vs evidence vs inference | `P due Q` (Q finite), simple explicit `due Q, P` with comma, and nominal `due + NP` recognized as distinct constructs; `P nam Q` and `Q ergo P` retain different nodes | Fronted due without an explicit reliable simple-clause boundary, mixed or nested causal chains, causal truth and evidential validity | `language/noun_case_system.md`, `language/word_order.md` |
 | Concessive/conditional | Explicit `se/etsi/etsise/eksese P alor Q`, bounded recursive pairing, simple postposed `etsi/etsise/eksese` | Subordination mixed with coordination, general `ekse` lexical exclusion, omitted `alor` for fronted templates | `language/word_order.md` |
 | Purpose | `fin` + bare verb + simple object, or free relator + nominal NP | Other purpose-structure combinations and sufficiency thresholds `suf` | `language/noun_case_system.md` |
-| Possession and focus | Existing normal case and basic pronouns; word-level focus clitic meaning is ratified but not parsed | Focus enclitic `-si/-no` scope and unrestricted prenominal genitive association | `language/negation.md`, `language/noun_case_system.md` |
+| Possession and focus | Typed personal genitives `is/us/as/ins/uns/ans` and referentially specific `aos/aes/anos/anes`, bounded prenominal genitive NPs, licensed postposed `part WHOLE-s`, NP-final `-si/-no` with distinct clause-negative focus | Nested/multiple possessor ambiguity, mixed focus + servile/whole-question/`no lim` scope, multiple focus per clause, postposed-genitive focus attachment | `language/negation.md`, `research/grammar/polarity_and_focus_clitics.md`, `language/noun_case_system.md`, `research/grammar/case_and_possession.md` |
 | Comparison and degree | Some roots in lexicon; no complex degree parser | `major/minor/masim/minus`, `suf` threshold, manner of comparison | `language/comparison.md` |
 | Productive derivation | Explicit confirmed root/compound lexemes and existing nominalized participles | General recursive derivation; phase `ad-/de-/in-/re-`, agent `-or`, instrument `-il`, abstract `-itat` as freely generated parses | `language/derivation.md` |
 | Full semantics | **Not implemented**: typed syntax only | Referent identity, truth tables, deontic authorization worlds, pragmatic entailments, causal verification, LLM interpretation | `formalization/semantics/README.md` |
@@ -66,10 +66,46 @@ numeral, kinship and corpus tests still run.
    `ka i no diki domem?`, `vidi bisim domem`, etc. retain
    their original outer node shapes and fields for benchmarks.
 
+## Focus and possession executable scope (2026-11-12)
+
+The parser now records both the **focused constituent** and the **polarity**:
+`i-si vidi` is additive focus without negation, while
+`i-no vidi` is negative-additive focus with clause negative
+polarity and `negation_type: negative_additive_focus`.
+The latter is **not** the same AST as a free pre-verbal `no`,
+and `i-no no vidi` is rejected as unratified stacking.
+
+The hyphenated enclitic attaches to the last token of the entire
+NP, e.g. `tik omni uman-no`; the nominal AST's `focus`
+targets the complete constituent, not simply the head noun.
+A lexical `analyze_word` analysis identifies the host token but
+does **not** infer the full constituent's scope without parsing.
+The implementation supports at most one focused NP in an ordinary
+simple clause. Focus on modal, question-wide or wide-negation
+structures remains **unimplemented**: these combinations are
+rejected, not silently assigned semantics.
+
+Personal possessives are parsed as genitive pronouns, not
+independent gender-agreeing adjectives: `is domem` = my
+house as a direct object; `tik umans domem` = the house of
+this person as direct object. The new `possessor` subtree
+preserves the genitive constituent separately from the possessed
+noun's **own case**. The independently ratified part-whole
+construction `part doms` places the genitive of the whole
+after `part`, with its own `part_whole` relation node.
+Only this explicitly attested part-whole frame is accepted
+postnominally. Nested possessors, unspecified attachment and
+postposed-genitive + focus are deliberately not yet resolved.
+
+Positive and negative fixtures live in
+`tests/test_focus_genitive_parser.py`. Parser implementation
+does **not** create new lexemes or a new possessive suffix.
+
 ## Recommended continuation
 
-Prioritize **controlled focus enclitics**, **typed possessive
-and genitive noun phrases**, **reusable productive derivation** and
-**non-ambiguous argument/valency schemas**. Each addition should
-extend this matrix and add positive/negative executable tests;
-no new lexemes or grammatical rules should be silently introduced.
+The first focus/genitive subset is now implemented. Next prioritize
+**reusable productive derivation** and **non-ambiguous argument/valency
+schemas**, followed by explicitly specified focus interactions with
+serviles and complex clauses. Each addition should extend this matrix
+and add positive/negative executable tests; no new lexemes or
+grammatical rules should be silently introduced.

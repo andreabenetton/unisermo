@@ -74,7 +74,7 @@ class PropositionParser:
         words = body.lower().split()
         if not words or len(words) > MAX_TOKENS:
             raise ValueError("empty or excessively long proposition")
-        if any(re.fullmatch(r"[a-z]+", token) is None for token in words):
+        if any(re.fullmatch(r"[a-z]+(?:-(?:si|no))?", token) is None for token in words):
             raise ValueError("unsupported spelling or punctuation in proposition")
         if "ka" in words[1:]:
             raise ValueError("polar marker ka is licensed only clause-initially")
@@ -87,6 +87,8 @@ class PropositionParser:
             if polar:
                 raise ValueError("imperative cannot also be a polar question")
             return self._imperative(words)
+        if (polar or terminal == "?") and any("-" in w for w in words):
+            raise ValueError("question scope with bound focus remains outside this subset")
         if polar and (any(w in SUBORDINATES | {"lim"} for w in words)
                       or any(self._is_clause_connector(words, i)
                              for i in range(len(words)))):
@@ -145,6 +147,8 @@ class PropositionParser:
             return self._combine(words[i + 1], left, right, closing_lim=True)
         if len(words) >= 2 and words[:2] == ["no", "lim"]:
             operand = words[2:]
+            if any("-" in w for w in operand):
+                raise ValueError("focus interactions with no lim are not yet ratified")
             if not operand:
                 raise ValueError("no lim requires an operand")
             if (any(w in {"alor", "se", "etsi", "etsise", "eksese"}
@@ -382,7 +386,7 @@ class PropositionParser:
             words = original
         if not words:
             raise ValueError("question lacks a predicate")
-        if question is None:
+        if question is None and not any("-" in w for w in words):
             # Preserve the old AST only where the old SVO parser has a
             # licensed valency model. Strict serviles and traes must be
             # parsed structurally, not mistaken for arbitrary transitive
@@ -399,7 +403,7 @@ class PropositionParser:
         if len(finite) == 0:
             if question is not None:
                 raise ValueError("wh question requires a finite predicate in this subset")
-            return self._zero_copula(words)
+            return self._annotate_focus(self._zero_copula(words))
         if len(finite) != 1 or len(finite[0][1]) != 1:
             raise ValueError("expected exactly one unambiguous finite predicate")
         idx, analyses = finite[0]
@@ -483,7 +487,7 @@ class PropositionParser:
                 out["valency"] = frame
         if front is not None:
             out["preposed_locative"] = front
-        return out
+        return self._annotate_focus(out)
 
     def _zero_copula(self, words: list[str]) -> dict:
         predicate = words[-1]
@@ -498,10 +502,49 @@ class PropositionParser:
             prefix = prefix[:-1]
         if not prefix or "no" in prefix:
             raise ValueError("zero copula requires an explicit subject in this subset")
-        subject = self._subject(prefix, 3 if prefix[0] in self.demonstratives else
-                                self.pronoun_to_person.get(prefix[0], ("singular", 3))[1],
-                                self.pronoun_to_person.get(prefix[0], ("singular", 3))[0])
+        first = prefix[0].split("-", 1)[0]
+        subject = self._subject(prefix, 3 if first in self.demonstratives else
+                                self.pronoun_to_person.get(first, ("singular", 3))[1],
+                                self.pronoun_to_person.get(first, ("singular", 3))[0])
         return {"kind": "zero_copula", "subject": subject,
                 "predicate": {"lemma": predicate,
                               "status": "confirmed_lexicon" if lexical else "productive_from_confirmed"},
                 "negative": negative, "interrogative": False}
+
+    def _annotate_focus(self, ast: dict) -> dict:
+        """Attach one overt NP focus; do not conflate -no and local no."""
+        sites = []
+
+        def check(np: dict | None, role: str) -> None:
+            if isinstance(np, dict) and np.get("focus"):
+                sites.append((role, np["focus"]))
+
+        check(ast.get("subject"), "subject")
+        check(ast.get("object"), "object")
+        check(ast.get("source"), "permission_source")
+        if ast.get("preposed_locative"):
+            front = ast["preposed_locative"].get("phrase")
+            if isinstance(front, dict) and front.get("focus"):
+                raise ValueError("focus on unresolved fronted domain has no licensed attachment")
+        for node in ast.get("complements", []):
+            check(node.get("nominal"), "complement")
+        if ast.get("kind") == "servile_clause":
+            dependent = ast["dependent"]
+            check(dependent.get("object"), "dependent_object")
+            for node in dependent.get("complements", []):
+                check(node.get("nominal"), "dependent_complement")
+        if len(sites) > 1:
+            raise ValueError("multiple focal constituents need explicit scope rules")
+        if not sites:
+            return ast
+        role, focus = sites[0]
+        if ast.get("kind") == "servile_clause":
+            raise ValueError("focus with servile scope needs a separate ratification")
+        if focus["clause_negative"]:
+            if ast.get("negative"):
+                raise ValueError("focus -no already carries negative polarity; no stacking")
+            ast["negative"] = True
+            ast["negation_type"] = "negative_additive_focus"
+        ast["focus"] = {"kind": focus["kind"], "marker": focus["marker"],
+                        "scope": "entire_constituent", "target_role": role}
+        return ast
