@@ -119,3 +119,75 @@ class NumeralParser:
             "count": number["value"],
             "status": "canonical_by_rule", "source": "language/numerals.md",
         }
+
+    def generate_ordinal(self, value: int) -> str:
+        """Canonical positive ordinal: cardinal + im; final uno/oto lose o."""
+        base = self.generate_numeral(value)
+        if value == 0:
+            raise ValueError("zero ordinal has not been ratified")
+        return (base[:-1] if base.endswith(("uno", "oto")) else base) + "im"
+
+    def parse_ordinal(self, surface: str) -> dict | None:
+        """Decode only ratified canonical ordinals, without guessing variants."""
+        if (not isinstance(surface, str) or not surface.endswith("im")
+                or len(surface) > MAX_NUMERAL_CHARS + 2
+                or not surface.isascii() or not surface.isalpha()
+                or surface != surface.lower()):
+            return None
+        stem = surface[:-2]
+        for cardinal_form in (stem, stem + "o"):
+            cardinal = self.parse_numeral(cardinal_form)
+            if cardinal is None or cardinal["value"] == 0:
+                continue
+            value = cardinal["value"]
+            canonical = self.generate_ordinal(value)
+            if canonical == surface or (cardinal_form.endswith("o") and cardinal_form + "im" == surface and canonical != surface):
+                return {
+                    "kind": "ordinal_numeral", "form": surface,
+                    "value": value, "status": "canonical_by_rule" if canonical == surface else "accepted_analytic_variant",
+                    "canonical_form": canonical, "source": "language/numerals.md",
+                }
+        return None
+
+    def generate_fraction(self, numerator: int, denominator: int) -> str:
+        """Ratified analytic fraction: positive denominator >=2, numerator >=0."""
+        if isinstance(denominator, bool) or not isinstance(denominator, int) or denominator < 2 or denominator > MAX_CARDINAL:
+            raise ValueError("denominator must be an integer in 2..999999999999")
+        return self.generate_numeral(numerator) + " " + self.generate_ordinal(denominator)
+
+    def parse_fraction(self, surface: str) -> dict | None:
+        """Preserve exact numerator/denominator, without simplifying fractions."""
+        if not isinstance(surface, str) or len(surface) > 2 * (MAX_NUMERAL_CHARS + 2) + 1:
+            return None
+        parts = surface.split(" ")
+        if len(parts) != 2:
+            return None
+        numerator = self.parse_numeral(parts[0])
+        denominator = self.parse_ordinal(parts[1])
+        if numerator is None or denominator is None or denominator["value"] < 2:
+            return None
+        num, den = numerator["value"], denominator["value"]
+        return {"kind": "fraction", "form": surface, "numerator": num,
+                "denominator": den, "canonical_form": self.generate_fraction(num, den),
+                "status": "canonical_by_rule" if surface == self.generate_fraction(num, den) else "accepted_analytic_variant",
+                "source": "language/numerals.md"}
+
+    def generate_multiplicative(self, value: int) -> str:
+        """Generate NUMfol as a factor, distinct from NUMjer repetition."""
+        if isinstance(value, bool) or not isinstance(value, int) or not 1 <= value <= MAX_CARDINAL:
+            raise ValueError("multiplicative factor must be an integer in 1..999999999999")
+        return _cardinal(value) + "fol"
+
+    def parse_multiplicative(self, surface: str) -> dict | None:
+        """Recognize only positive, canonically spelled NUMfol factors."""
+        if not isinstance(surface, str) or not surface.endswith("fol"):
+            return None
+        cardinal = self.parse_numeral(surface[:-3])
+        if cardinal is None or cardinal["value"] == 0:
+            return None
+        return {
+            "kind": "multiplicative_factor", "form": surface,
+            "factor": cardinal["value"], "status": "canonical_by_rule",
+            "source": "language/numerals.md",
+        }
+

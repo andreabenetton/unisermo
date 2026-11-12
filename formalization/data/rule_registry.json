@@ -145,6 +145,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "bfeb0e9803c72279a1422608c43a36f9bec4543b9c656c9efb70643adefb763b",
+      "id": "grammar.fraction_cardinal_ordinal_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/fraction_cardinal_ordinal_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "9ee18bf839f93269b2de643680f5731d5576953e579bd225360d29cd3ba691b8",
       "id": "grammar.genitive_allomorph_s_es",
       "source": "research/grammar/confirmed_decisions.json#decisions/genitive_allomorph_s_es",
@@ -265,6 +271,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "3f56822cadd6ffa2e848e9e2cb578648c42946cbdddeba1d47112843f45e78de",
+      "id": "grammar.numeral_multiplicative_suffix_fol",
+      "source": "research/grammar/confirmed_decisions.json#decisions/numeral_multiplicative_suffix_fol",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "84f01254119d09b2cb2dd8b1e739f507069c0d26fd6d2f5efe2d7d0d25035ee3",
       "id": "grammar.numeral_two_bis",
       "source": "research/grammar/confirmed_decisions.json#decisions/numeral_two_bis",
@@ -277,9 +289,21 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "3db4f881ebb38792f1effd0abd60629c592163a3ba8448572d8d65dee6012dd3",
+      "id": "grammar.ordinal_im_positive_contraction_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/ordinal_im_positive_contraction_20261024",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "d565ed4ea5d3812b1c964ab8bbf86c0e90d843ed7b2a351c2734497b07d21a8e",
       "id": "grammar.participial_resultative_it",
       "source": "research/grammar/confirmed_decisions.json#decisions/participial_resultative_it",
+      "status": "confirmed"
+    },
+    {
+      "content_sha256": "f968e29b727c38188f1ab3a1c44f82f3ed29afdfd4a3e26eb9d52e7a9647f391",
+      "id": "grammar.percentages_as_senim_20261024",
+      "source": "research/grammar/confirmed_decisions.json#decisions/percentages_as_senim_20261024",
       "status": "confirmed"
     },
     {

@@ -13,6 +13,40 @@ from proposal and alternatives through evidence to explicit acceptance. The
 weighted lexical objective in LDR-0002 remains **Experimental**, not an
 established language rule.
 
+## Ratified scalar factors, ordinals and fractions (2026-10-24)
+
+The following author-approved numeral constructions are supported in the
+deterministic reference implementation, without inventing new roots:
+
+- `NUMfol` (positive scalar factor) differs from `NUMjer` repetition;
+  e.g. `bisfol` = ×2, `terfol` = ×3, `forfol` = ×4. The
+  contracted `unfol`, zero `nulfol`, and historical `-mul`
+  are not ratified.
+- Positive ordinal `NUMim` applies to an entire cardinal and
+  contracts terminal `-o` (`unim`, `otim`, `dekunim`).
+  Full `unoim` / `otoim` forms remain valid **noncanonical**
+  accepted variants, normalized by the parser.
+- Two-word fraction `CARDINAL ORDINAL`, with numerator 0..999999999999
+  and denominator 2..999999999999, retains unreduced values;
+  `bis forim` = 2/4, `uno bisim` = 1/2.
+- Percentages are ordinary fractions with denominator `senim`:
+  `kin senim` means 5%. There is no separate percentage lexeme.
+
+```sh
+python3 -m formalization factor 4
+python3 -m formalization multiplicative forfol
+python3 -m formalization order 21
+python3 -m formalization ordinal bisdekunim
+python3 -m formalization ratio 2 4
+python3 -m formalization fraction 'kin senim'
+```
+
+The restricted SVO noun-phrase parser permits **one** ordinal modifier
+or **one** scalar factor modifier, but does not infer the scope of
+mixed modifier sequences or parse standalone fractional NPs as
+ordinary nominal modifiers. Numeric generators are deterministic;
+there is no claim of new semantic interpreter support.
+
 ## Cardinal numerals and iteration (0–999,999,999,999)
 
 The `formalization/parser/numeral.py` module now generates and parses **every canonical number 0–999,999,999,999**. It composes groups of three digits using only a 999-entry coefficient index and rejects variants with explicit zero-place components, redundant `uno` before a power, repeated powers and unknown spellings. It also recognizes positive `NUMjer` counters and passes the same normalized `_cardinal` generator to the kinship parser (whose *path expansion* independently remains limited to 128).
@@ -28,7 +62,7 @@ python3 -m formalization sentence 'vidi tersenbisdekuno domem'
 
 Numerals act as **prenomial quantifiers** and are never case-inflected; case remains on the following noun. `nul` means zero. Redundant `wi` is rejected in the supported SVO subset when quantity is specified by any canonical numeral. The ordinary confirmed-lexicon and historical-example provenance of words is retained independently from the newly computed `cardinal_numeral` analysis (`status: canonical_by_rule`). No implication of new canonical words or empirical efficiency is intended.
 
-See [normative numerals](../language/numerals.md). Powers beyond giga, negative numbers, fractions, decimals and ordinals are **outside this approved reference range**.
+See [normative numerals](../language/numerals.md). Powers beyond giga, signed numbers and decimals remain **outside this approved reference range**; ordinal, fraction and scalar-factor extensions are documented above.
 
 ## Commands
 
@@ -69,7 +103,7 @@ unimplemented logical-form layer and must not be mistaken for a real semantic pa
 
 ## Capabilities and deliberate limits
 
-The reference parser recognizes fused canonical cardinals through 9,999 as prenominal quantifiers, positive NUMjer counters, finite tense/aspect/person/number, case-marked
+The reference parser recognizes canonical cardinals through 999,999,999,999 as prenominal quantifiers, positive NUMjer counters, ratified positive ordinals and NUMfol factors, and separately parsed two-word fractions, finite tense/aspect/person/number, case-marked
 nominals, the `-it` resultative/participle, and a small SVO sentence pattern
 with optional pronoun subject, pro-drop, `ka` questions, and pre-verbal `no`.
 Multiple analyses are preserved for ambiguous forms; unsupported syntax is
