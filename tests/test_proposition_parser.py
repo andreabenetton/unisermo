@@ -123,6 +123,14 @@ class TypedPropositionTests(unittest.TestCase):
         self.assertEqual(self.u.parse_sentence("no lim vidi o movi")["operand"]["relation"], "inclusive_or")
         with self.assertRaises(ValueError):
             self.u.parse_sentence("no lim vidi ma movi")
+        # Nominal due is an argument of the first simple clause, not a
+        # discourse connector, even when a Boolean scope encloses it.
+        x = self.u.parse_sentence("no lim faki due fakit e movi")
+        self.assertEqual(x["kind"], "wide_negation")
+        self.assertEqual(x["operand"]["left"]["complements"][0]["relator"], "due")
+        q = self.u.parse_sentence("ka faki due fakit?")
+        self.assertTrue(q["interrogative"])
+        self.assertEqual(q["complements"][0]["relator"], "due")
 
     def test_right_association_and_explicit_lim(self):
         unmarked = self.u.parse_sentence("vidi e movi o faki")
@@ -169,6 +177,15 @@ class TypedPropositionTests(unittest.TestCase):
         self.assertIs(evidence["causal_implication"], False)
         np = self.u.parse_sentence("vidi domem due fakit")
         self.assertEqual(np["complements"][0]["relator"], "due")
+        fronted = self.u.parse_sentence("due movi, vidi")
+        self.assertEqual(fronted["kind"], "causal_relation")
+        self.assertEqual(fronted["placement"], "fronted")
+        self.assertEqual(fronted["cause"]["predicate"]["lemma"], "mov")
+        self.assertEqual(fronted["effect"]["predicate"]["lemma"], "vid")
+        with self.assertRaises(ValueError):
+            self.u.parse_sentence("due movi vidi")  # no licensed explicit boundary
+        with self.assertRaises(ValueError):
+            self.u.parse_sentence("due fakit, vidi")  # nominal due, not a finite cause
 
     def test_subordinate_anteposed_postposed_and_nesting(self):
         for opener in ("se", "etsi", "etsise", "eksese"):
