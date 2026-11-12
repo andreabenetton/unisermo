@@ -67,6 +67,9 @@ class TypedPropositionTests(unittest.TestCase):
             self.u.parse_sentence("no debi no mov")
         with self.assertRaises(ValueError):
             self.u.parse_sentence("auti umande")  # no dependent action
+        for bad in ("auti domem", "posi domem", "debi umanem", "poti"):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                self.u.parse_sentence(bad)
 
     def test_arguments_relators_and_purpose(self):
         q = self.u.parse_sentence("movi domin")
@@ -81,6 +84,21 @@ class TypedPropositionTests(unittest.TestCase):
                         "vidi kun", "faki kun umanem"):
             with self.subTest(invalid=invalid), self.assertRaises(ValueError):
                 self.u.parse_sentence(invalid)
+
+    def test_two_ratified_traes_valencies(self):
+        change = self.u.parse_sentence("traesi solidad likwidde")
+        self.assertEqual(change["valency"], "state_transition")
+        self.assertIsNone(change["object"])
+        self.assertEqual([x["case"] for x in change["complements"]],
+                         ["dative_allative", "ablative"])
+        causal = self.u.parse_sentence("traesi akwaem aperda")
+        self.assertEqual(causal["valency"], "causative_transformation")
+        self.assertEqual(causal["object"]["lemma"], "akwa")
+        self.assertEqual(causal["complements"][0]["case"], "resultative")
+        for bad in ("traesi domem", "traesi aperda",
+                    "traesi domad", "traesi akwaem domad"):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                self.u.parse_sentence(bad)
 
     def test_locative_fronting_preserves_ambiguity(self):
         q = self.u.parse_sentence("domin movi")
