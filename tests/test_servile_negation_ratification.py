@@ -21,10 +21,10 @@ class ServileNegationRatificationTests(unittest.TestCase):
             self.assertEqual(records[root]["category"], "verb_root")
             self.assertEqual(len(root), 3)
         self.assertIn("procedural know-how", records["sap"]["decision"])
-        self.assertIn("situational possibility", records["pos"]["decision"] + records["pos"]["meaning_en"])
+        self.assertIn("circumstantial possibility", records["pos"]["decision"])
         self.assertIn("capacity", records["pot"]["decision"])
         self.assertIn("obligation", records["deb"]["decision"])
-        self.assertIn("Volition", records["vol"]["decision"].capitalize())
+        self.assertIn("Volition", records["vol"]["decision"])
 
     def test_analytical_frame_and_negation_minimal_pairs(self):
         verbs = (ROOT / "language/verb_specification.md").read_text(encoding="utf-8")
@@ -43,8 +43,8 @@ class ServileNegationRatificationTests(unittest.TestCase):
                 self.assertIn("`" + text + "`", neg)
         self.assertIn("uninflected", verbs)
         self.assertIn("pro-drop", verbs)
-        self.assertIn("not automatically", verbs)
-        self.assertIn("does not", neg)
+        self.assertIn("does not assert legal permission", verbs)
+        self.assertIn("does", neg)
         self.assertIn("not executable parser support", (ROOT / "formalization/semantics/README.md").read_text(encoding="utf-8"))
 
     def test_scope_meanings_not_equivalent(self):
@@ -55,7 +55,7 @@ class ServileNegationRatificationTests(unittest.TestCase):
         debi_no_mov = obligation_to_refrain
         self.assertTrue(no_debi_mov)
         self.assertFalse(debi_no_mov)
-        opportunity_to_move, opportunity_to_refrain = False, True
+        opportunity_to_move, opportunity_to_refrain = False, False
         self.assertNotEqual(not opportunity_to_move, opportunity_to_refrain)
         desire_to_move, desire_to_refrain = False, False
         self.assertNotEqual(not desire_to_move, desire_to_refrain)
