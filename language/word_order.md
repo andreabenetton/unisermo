@@ -128,7 +128,7 @@ In connector chains within the licensed propositional-scope subset, mixed connec
 - `P e Q lim o R` = `(P e Q) o R`.
 - `P e Q lim o R lim ma S` = `((P e Q) o R) ma S`.
 
-`lim` must immediately precede the connector whose left operand it delimits; it cannot be sentence-initial, sentence-final, or placed between a connective and its complement. Thus `P e lim Q`, `lim P e Q`, and `P e Q lim` are invalid in this subset.
+In this established **closing-boundary** use, `lim` must immediately precede the connector whose left operand it delimits; it cannot be sentence-initial, sentence-final, or placed between a connective and its complement. The separately ratified `no lim` opening construction (see `negation.md`) is a narrow exception and does not license bare `lim` before a clause. Thus `P e lim Q`, `lim P e Q`, and `P e Q lim` are invalid in this subset.
 
 These examples establish the approved **ordinary connector-chain convention**; they do **not** authorize arbitrary combinations of subordinate forms, unrestricted nesting, or a general clause grammar. Existing ratified semantic distinctions of `due`, `nam`, `ergo`, `etsi`, `etsise`, and `eksese` are preserved; their subordinate boundaries and scope constraints await separate formalization. The inclusive/exclusive semantics of `o` are ratified in the later section below: ordinary infix `o` is inclusive, while an initial `o` introduces an exactly-one exclusive choice. Authors and LLM generators should prefer short, linear periods to deep nested structures. The current Phase 1 clause parser **does not implement** these connective-chain constructions and must continue to fail closed rather than infer undocumented structures.
 
@@ -152,7 +152,7 @@ This subordinate relation is separate from the already ratified ordinary connect
 
 The grammar distinguishes a simple clause, a connector-linked compound clause, and subordinate relation nodes with typed antecedent/matrix operands. It permits composition and finite recursion as a linguistic rule; actual parser depth limits may be implementation safeguards, not new grammatical prohibitions. Authors and LLM generators should favor short linear periods and avoid unnecessarily deep nesting.
 
-**Explicitly still open:** exact parsing and delimitation of fronted `due` causes and other `nam` epistemic explanations in arbitrary compound clauses; interaction of complex postposed subordinate arguments with following connectors; mixed subordinate/coordination scope outside the templates above; wide-scope negation and modality. These are not implied by this ratification. The existing Phase 1 clause parser does **not** yet recognize general compound or nested subordinate ASTs and must fail closed pending a separately reviewed implementation.
+**Explicitly still open:** exact parsing and delimitation of fronted `due` causes and other `nam` epistemic explanations in arbitrary compound clauses; interaction of complex postposed subordinate arguments with following connectors; mixed subordinate/coordination scope outside the templates above; wide-scope negation beyond the separately licensed `no lim` truth-conditional subset and modality. These are not implied by this ratification. The existing Phase 1 clause parser does **not** yet recognize general compound or nested subordinate ASTs and must fail closed pending a separately reviewed implementation.
 
 
 ## Inclusive and exclusive `o` (author ratification 25 October 2026)
@@ -169,4 +169,9 @@ In the licensed ordinary connector-chain subset, existing right association is r
 
 For all n >= 2, an exclusive-choice expression is true iff **exactly one** alternative is true; it is false if none or two or more alternatives are true. The inclusive `o` requires at least one true alternative. These are truth-conditional propositional semantics; they do not automatically impose a real-world obligation, make alternatives mutually physically possible, or settle any previously open question about modality or conversational implicature.
 
-Detailed interactions with nested subordinate scope, postposed subordinate clauses, negation of whole propositions, and unrestricted connector grammars remain outside this ratification and the current Phase 1 parser, which must fail closed for unsupported compound constructions.
+Detailed interactions with nested subordinate scope, postposed subordinate clauses, whole-proposition negation outside the separately licensed `no lim` subset, and unrestricted connector grammars remain outside this ratification and the current Phase 1 parser, which must fail closed for unsupported compound constructions.
+
+
+## Wide negation cross-reference (author ratification 12 November 2026)
+
+The separately ratified two-token **`no lim`** opener negates an entire truth-conditional `e/o` expression (including initial-`o` exactly-one choice), rather than a single local predicate. For schematic complete simple clauses P, Q, and R: `no P e Q` = (NOT P) AND Q; `no lim P e Q` = NOT(P AND Q); `no lim P e Q lim o R` = NOT(P AND Q) OR R. The opener does not change ordinary right association, the already ratified closing-boundary use of `lim`, or the distinct discourse meaning of `ma`. The exact licensed scope and exclusions are specified in [negation.md](negation.md); compound-clause parsing remains unimplemented in Phase 1.
