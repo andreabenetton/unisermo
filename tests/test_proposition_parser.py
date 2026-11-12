@@ -201,7 +201,9 @@ class TypedPropositionTests(unittest.TestCase):
             x = self.u.parse_sentence("movi " + opener + " vidi")
             self.assertEqual(x["placement"], "postposed")
         for bad in ("se vidi, movi", "se vidi alor",
-                    "movi alor vidi", "se vidi e movi alor faki"):
+                    "movi alor vidi", "se vidi e movi alor faki",
+                    "vidi e se movi alor faki", "o vidi o se movi alor faki",
+                    "vidi e movi due faki", "vidi due movi e faki"):
             with self.subTest(bad=bad), self.assertRaises(ValueError):
                 self.u.parse_sentence(bad)
 
@@ -231,6 +233,7 @@ class TypedPropositionTests(unittest.TestCase):
     def test_fail_closed_and_size_guards(self):
         for invalid in ("", "xyzzy", "autin unknown", "vidi e",
                         "movi ma", "vidi ma no lim movi",
+                        "vidi e no lim movi o faki",
                         "se vidi alor movi e faki", "vidi lim movi",
                         "ka ka vidi?", "autii mov"):
             with self.subTest(invalid=invalid), self.assertRaises(ValueError):
