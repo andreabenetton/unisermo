@@ -370,3 +370,8 @@ These constructions can quantify nominal counts (`sirka setdek uman` = approxima
 ## 19. Quantitative operators on unit-bearing measures (ratified 2026-11-13; LDR-0028)
 
 The quantity-first rule allows the already confirmed numeric operators to apply to a whole measured value: `sirka setdek gram` = about 70 grams, `major sen gram` = more than 100 grams, `no minor dek sekun` = at least 10 seconds. The interval `inter dek gram e bisdek gram` can be shortened by shared-unit ellipsis to `inter dek e bisdek gram`. Both endpoints are measured in grams; the parser records whether the first unit is omitted and must not guess conversions across different units. The only unit roots ratified in this step are `gram` and `sekun`; the principle is reusable for units ratified later.
+
+
+## 20. Prefixes in measured comparisons (LDR-0029, 2026-11-13)
+
+Universal quantitative operators continue to precede a number and a **single prefixed unit**: `sirka kin millisekun` (about 5 milliseconds), `major dek kilogram` (more than 10 kilograms). For unit intervals, both `inter dek kilogram e bisdek kilogram` and the elliptic `inter dek e bisdek kilogram` are licensed. The entire prefix+root unit is inherited. No automatic conversion between unlike surface units is inferred by the bounded parser, even if a later conversion scheme could show physical equivalence.
