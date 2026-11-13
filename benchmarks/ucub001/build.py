@@ -113,7 +113,7 @@ GROUPS = [
     ("L4", "discourse_recall_polarity", [
         ("i vidi akwaem. i no peli akwaem. u traku akwaem.", "I see water. I do not push water. You pull water.", "I do not push water.", "entailed"),
         ("i vidi akwaem. i peli akwaem. u traku akwaem.", "I see water. I push water. You pull water.", "I do not push water.", "contradicted"),
-        ("i vidi akwaem. u peli akwaem. u traku akwaem.", "I see water. You push water. You pull water.", "I do not push water.", "undetermined"),
+        ("i vidi akwaem. u pelu akwaem. u traku akwaem.", "I see water. You push water. You pull water.", "I do not push water.", "undetermined"),
         ("i vidi akwaem. i traki akwaem. u traku akwaem.", "I see water. I pull water. You pull water.", "I do not push water.", "undetermined"),
     ]),
     ("L4", "discourse_tense", [
