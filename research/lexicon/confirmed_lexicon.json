@@ -916,8 +916,8 @@
     {
       "form": "admov",
       "category": "verb_root",
-      "meaning_it": "muoversi verso; iniziare movimento diretto",
-      "meaning_en": "move toward; directed movement",
+      "meaning_it": "iniziare a muoversi; mettere in movimento",
+      "meaning_en": "begin moving; set in motion",
       "source": "language/verb_specification.md",
       "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
       "status": "confirmed"
@@ -943,8 +943,8 @@
     {
       "form": "demov",
       "category": "verb_root",
-      "meaning_it": "muoversi via da; allontanarsi",
-      "meaning_en": "move away from",
+      "meaning_it": "smettere di muoversi; fermare il movimento",
+      "meaning_en": "stop moving; bring movement to a stop",
       "source": "language/verb_specification.md",
       "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
       "status": "confirmed"
@@ -970,8 +970,8 @@
     {
       "form": "inmov",
       "category": "verb_root",
-      "meaning_it": "muoversi verso l'interno; entrare in movimento",
-      "meaning_en": "move inward; move into",
+      "meaning_it": "continuare a muoversi; mantenere in movimento",
+      "meaning_en": "continue moving; keep in motion",
       "source": "language/verb_specification.md",
       "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
       "status": "confirmed"
@@ -1042,8 +1042,8 @@
     {
       "form": "remov",
       "category": "verb_root",
-      "meaning_it": "muoversi di nuovo; tornare",
-      "meaning_en": "move again; return",
+      "meaning_it": "riprendere a muoversi; rimettere in movimento",
+      "meaning_en": "resume movement; set in motion again",
       "source": "language/verb_specification.md",
       "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
       "status": "confirmed"
