@@ -72,3 +72,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0014: Physical-action valency `fer/portar/ten/kunten`](LDR-0014-physical-action-valency.md) — Accepted
 - [LDR-0019: Knowledge acquisition via `sap` phase family](LDR-0019-sap-knowledge-family.md) — Accepted
 - [LDR-0018: Exchange semantics and candidate `kambi`](LDR-0018-exchange-kambi-semantics.md) — Proposed
+
+- [LDR-0020: Goal-directed attempt servile `tent`](LDR-0020-attempt-servile-tent.md) — Accepted
