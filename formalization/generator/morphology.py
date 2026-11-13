@@ -7,6 +7,11 @@ class MorphologyGenerator:
             return
         if domain == "noun" and self.parse_kinship(lemma) is not None:
             return  # Licensed productive composition of individually confirmed relations.
+        derivation = self.parse_derivation(lemma)
+        if derivation is not None and (
+                (domain == "verb" and derivation["category"] == "verb")
+                or (domain == "noun" and derivation["category"] == "noun")):
+            return  # Morphologically licensed, not silently lexicalized.
         raise ValueError(
             f"unsupported {domain} lemma: {lemma!r}; "
             "documentary attestations are not automatically canonical"
@@ -28,8 +33,9 @@ class MorphologyGenerator:
                  nominal["genitive_alternate_after"]) else nominal["case"]["genitive"])
 
     def generate_noun(self, lemma: str, case: str = "nominative") -> str:
-        if lemma.endswith("it") and lemma[:-2] in self.verbs:
-            # Nominalized resultatives are licensed in the live verb specification.
+        if lemma.endswith("it") and (
+                lemma[:-2] in self.verbs or self.is_derived_verb(lemma[:-2])):
+            # Nominalized resultatives of approved verb roots/phase verbs.
             pass
         else:
             self.check_lemma(lemma, "noun")
