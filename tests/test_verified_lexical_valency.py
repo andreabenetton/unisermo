@@ -96,12 +96,14 @@ class VerifiedLexicalValencyTests(unittest.TestCase):
 
     def test_unratified_lexical_valency_remains_explicitly_undetermined(self):
         for lemma in ("pens", "kap", "dik", "vid", "dok",
-                      "fak", "sap"):
+                      "fak"):
             with self.subTest(lemma=lemma):
                 evidence = self.u.valency_evidence(lemma)
                 self.assertEqual(evidence["status"], "undetermined")
                 self.assertIsNone(evidence["source"])
                 self.assertIsNone(evidence["family"])
+        self.assertEqual(self.u.valency_evidence("sap")["family"], "knowledge")
+        self.assertEqual(self.u.valency_evidence("adsap")["status"], "documented")
         self.assertEqual(self.u.parse_sentence("feri domem")["object"]["lemma"],
                          "dom")
         self.assertEqual(self.u.parse_sentence("vidi domem")["object"]["lemma"],
