@@ -1,0 +1,96 @@
+name: UCUB-001 one-off Qwen Gemma smoke
+on:
+  pull_request:
+    types: [opened]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    if: github.head_ref == 'benchmarks/ucub001-oneoff-smoke-20261113'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - model_name: qwen
+            model_id: qwen/qwen3-32b
+            condition: cold
+          - model_name: qwen
+            model_id: qwen/qwen3-32b
+            condition: lexicon
+          - model_name: qwen
+            model_id: qwen/qwen3-32b
+            condition: grammar
+          - model_name: qwen
+            model_id: qwen/qwen3-32b
+            condition: english
+          - model_name: gemma
+            model_id: google/gemma-3-27b-it
+            condition: cold
+          - model_name: gemma
+            model_id: google/gemma-3-27b-it
+            condition: lexicon
+          - model_name: gemma
+            model_id: google/gemma-3-27b-it
+            condition: grammar
+          - model_name: gemma
+            model_id: google/gemma-3-27b-it
+            condition: english
+    name: ${{ matrix.model_name }} / ${{ matrix.condition }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      MODEL_ID: ${{ matrix.model_id }}
+      TEST_CONDITION: ${{ matrix.condition }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Confirm secret and read-only frozen corpus
+        shell: bash
+        run: |
+          test -n "$OPENROUTER_API_KEY" || { echo "Repository OpenRouter secret is unavailable; zero paid requests made"; exit 1; }
+          python -m benchmarks.ucub001.build --check
+          python -m unittest discover -s tests -p test_ucub001.py -q
+      - name: Execute exactly four bounded development calls
+        shell: bash
+        run: |
+          python -m benchmarks.ucub001.runner run \
+            --condition "$TEST_CONDITION" \
+            --split development \
+            --limit 4 \
+            --model "$MODEL_ID" \
+            --max-calls 4 \
+            --allow-unreviewed \
+            --output /tmp/ucub001-responses.jsonl
+      - name: Score exploratory answers against unreviewed gold
+        shell: bash
+        run: |
+          python -m benchmarks.ucub001.runner score \
+            --responses /tmp/ucub001-responses.jsonl \
+            --split development \
+            --allow-partial \
+            --allow-unreviewed \
+            --output /tmp/ucub001-score.json
+          python - <<'PY'
+          import json
+          p = json.load(open('/tmp/ucub001-score.json'))
+          print('EXPLORE_ONLY_NOT_VALIDATED', json.dumps({
+            'condition': p['condition'], 'count': p['count'],
+            'correct': p['correct'], 'accuracy': p['accuracy'],
+            'invalid_outputs': p['invalid_outputs'],
+            'usage_totals': p['usage_totals'],
+            'items': p['items'],
+          }, sort_keys=True))
+          PY
+      - name: Save billed responses and scores even after partial failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ucub001-${{ matrix.model_name }}-${{ matrix.condition }}-${{ github.run_id }}
+          path: |
+            /tmp/ucub001-responses.jsonl
+            /tmp/ucub001-score.json
+          retention-days: 14
+          if-no-files-found: ignore
