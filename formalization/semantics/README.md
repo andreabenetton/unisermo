@@ -113,3 +113,8 @@ Syntax: `SUBJECT [no] SERVILE_ROOT FINITE_PROPOSITION`, with an overt subject of
 ## Propositional operator tense and necessity, LDR-0024 (ratified 2026-11-13)
 
 The propositional servile frame permits `ROOT + time(Ø/d/f)` while omitting person and number. AST fields `assessment_tense` and `embedded_tense_anchor: relative_to_assessment` mark the new independent temporal layer; no present/past/future suffix is inferred from the dependent verb. Impersonal `deb P` expresses necessity under contextual premises, distinct from the finite personal normative `debi V`. `no deb P` is NOT-NECESSARY(P), not IMPOSSIBLE(P). `deb no P` is NECESSARY(NOT P). Personless aspectual variants, generic nested modality and numerical likelihood semantics remain open.
+
+
+## Gradable probability property, author ratifications 2026-11-13 (LDR-0025)
+
+`lik` is a confirmed **single** scalar probability property over a finite proposition P. Its many target-language translations do not produce different underlying Unisermo senses. The typed node `propositional_degree_property` stores property=`lik`, scale=`probability`, optional independently licensed qualitative degree (`minu/pok/ase/mult/ekstrem/suf`) and the bounded finite proposition operand. It carries **no fixed numeric percentage threshold**, and none of the likelihood assertions entails P. The separate numeric-value attachment syntax is still open; existing fractions remain canonical numeric expressions but cannot yet be attached to `lik P` without further design. `lik P` remains distinct from epistemic `pos P`, necessary `deb P`, personal `kred P` and moral quality `prob`.
