@@ -21,7 +21,7 @@ SUBORDINATES = {"se", "etsi", "etsise", "eksese"}
 POSTPOSED = {"etsi", "etsise", "eksese"}
 RELATORS = {"kun", "per", "pro", "due", "fin", "tem", "mod"}
 CASES = ("accusative", "dative_allative", "ablative", "locative", "resultative")
-MODALS = {"pos", "deb", "vol", "pot", "sap", "adsap", "insap", "desap", "resap", "aut"}
+MODALS = {"pos", "deb", "vol", "pot", "tent", "sap", "adsap", "insap", "desap", "resap", "aut"}
 WH_WORDS = {
     "kis": "subject", "kidem": "object", "kidad": "destination",
     "kid": "unmarked_thing", "kos": "location", "kud": "origin",
@@ -420,7 +420,7 @@ class PropositionParser:
             # parsed structurally, not mistaken for arbitrary transitive
             # predicates with a lone nominal object.
             provisional = [a for w in words for a in self._finite(w)]
-            special = {"pos", "deb", "vol", "pot", "aut", "traes"}
+            special = {"pos", "deb", "vol", "pot", "tent", "aut", "traes"}
             if not any(a["lemma"] in special or
                        self.has_documented_valency(a["lemma"])
                        for a in provisional):
@@ -496,6 +496,10 @@ class PropositionParser:
                                  "negative": neg_embedded, "object": obj,
                                  "complements": complements},
                    "interrogative": question is not None}
+            if head == "tent":
+                out["attempt_frame"] = "attempt_goal_directed"
+                out["entails_attempt"] = True
+                out["entails_success"] = False
             if self.is_knowledge_verb(head):
                 out["knowledge_frame"] = "procedural_knowledge"
                 out["knowledge_phase"] = head
