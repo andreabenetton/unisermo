@@ -1,0 +1,118 @@
+{
+  "schema": "unisermo/kambi-exchange-contrast@1",
+  "status": "english_scenarios_only_not_parser_gold",
+  "cases": [
+    {
+      "id": "KX01",
+      "english_scenario": "A transfers X to B",
+      "expected": "one_transfer",
+      "distinction": "No implied compensation",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX02",
+      "english_scenario": "A gives X to B; B independently gives Y to A",
+      "expected": "two_transfers_unlinked",
+      "distinction": "No evidence of a bargained exchange",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX03",
+      "english_scenario": "A gives X to B in return for Y; B gives Y to A",
+      "expected": "completed_barter",
+      "distinction": "Mutual consideration and both transfers",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX04",
+      "english_scenario": "A offers X for Y but B refuses",
+      "expected": "offer_only",
+      "distinction": "No concluded exchange",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX05",
+      "english_scenario": "A and B agree to exchange X and Y tomorrow",
+      "expected": "agreement_only",
+      "distinction": "No completed transfers",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX06",
+      "english_scenario": "A delivers X to B; B promises to supply Y later",
+      "expected": "partial_exchange",
+      "distinction": "Consideration due, not performed",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX07",
+      "english_scenario": "A offers X for money; B agrees and pays; X has not been delivered",
+      "expected": "paid_not_delivered",
+      "distinction": "Payment does not entail goods delivery",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX08",
+      "english_scenario": "A delivers X to B; B transfers agreed money to A",
+      "expected": "completed_sale",
+      "distinction": "Barter-like exchange with monetary countervalue",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX09",
+      "english_scenario": "A temporarily gives X to B, who is obliged to return X",
+      "expected": "loan",
+      "distinction": "Same item expected to be returned, not two distinct reciprocal goods",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX10",
+      "english_scenario": "A takes X from a table and carries it toward B",
+      "expected": "acquire_and_transport",
+      "distinction": "No transfer of availability to B established",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX11",
+      "english_scenario": "A sends a message to B; B does not understand its content",
+      "expected": "communication_without_comprehension",
+      "distinction": "No understanding entailment",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX12",
+      "english_scenario": "A transfers ownership of X to B but a courier carries X",
+      "expected": "ownership_vs_carry",
+      "distinction": "Ownership transfer does not entail A physically transporting X",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX13",
+      "english_scenario": "A and B each send a payment to one another without agreement",
+      "expected": "reciprocal_payments_unlinked",
+      "distinction": "Two transfers do not entail coordinated exchange",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX14",
+      "english_scenario": "B receives X in return for providing Y to A",
+      "expected": "completed_exchange_reverse_view",
+      "distinction": "Switching viewpoint preserves the same underlying event",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX15",
+      "english_scenario": "A is authorized to exchange X but never performs it",
+      "expected": "permission_only",
+      "distinction": "Permission does not entail exchange",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    },
+    {
+      "id": "KX16",
+      "english_scenario": "A begins moving X to B, then stops without delivering it",
+      "expected": "failed_delivery",
+      "distinction": "Movement phase does not entail transfer completion",
+      "status": "unreviewed_scenario_not_unisermo_gold"
+    }
+  ]
+}
