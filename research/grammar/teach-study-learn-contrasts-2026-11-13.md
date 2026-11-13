@@ -51,6 +51,67 @@ Prefer **H1** if `adsap` and ordinary aspect/phase morphology express both the l
 11. B learned a skill but currently cannot execute it due to injury. Procedural knowledge `sap` may persist while physical capacity `pot` fails.
 12. B has permission to teach but has never taught. `aut` does not entail `dok`.
 
+## Sap-first family: owner-requested re-analysis (2026-11-13)
+
+The owner asked that the existing `sap` family and its grammatical constructions be evaluated in the spirit of `don`, `mov` and other compositional roots *before* adopting any `lern` primitive. This is an analysis request, not acceptance of new valency.
+
+### Confirmed phases, proposed knowledge-state interpretations
+
+The phase prefix family already exists in `language/derivation.md`: `sap`, `adsap`, `insap`, `desap`, `resap`. Lexical phase semantics remain invariant: knowing, entering knowing, remaining in knowing, ceasing knowing, returning to knowing. Suggested Italian glosses such as `imparare`, `dimenticare`, `ricordare` are **context-dependent** and must not become unconditional lexical equations. In particular:
+- `desap` asserts cessation of a knowledge state, but not the psychological process or cause of forgetting.
+- `resap` asserts knowledge restoration, not whether retrieval, renewed instruction or repeated study caused it.
+- `insap` means persistence of the knowing state, not necessarily active memorization, rehearsal or attention.
+- `adsap` refers to the **entry into knowledge**, not automatically every stage of a learning attempt.
+
+### Forms under existing TAM
+
+- `sapi` = I know.
+- `adsapi` = I enter the knowing state / come to know.
+- `adsapei` = I am entering/coming to know (progressive aspect; completion is not entailed while ongoing).
+- `adsapdi` = I entered knowing in the past (simple past; not automatically the English perfect form).
+- `insapi` = I continue to know.
+- `desapi` = I cease knowing.
+- `resapi` = I come to know again.
+
+**Do not conflate** verbal phase onset with progressive aspect, or say that simple past `adsapdi` is necessarily an English present-perfect without independent aspect analysis.
+
+### Reusing the already ratified procedural complement
+
+`sap` already permits `sap + bare lexical verb` with same-subject procedural knowledge:
+- `sapi mov` = I know how to move.
+- **Candidate compositional extension** `adsapi mov` = I acquire the know-how to move; `adsapei mov` = I am acquiring that know-how.
+- `resapi mov` = I regain that know-how.
+- `desapi mov` = I cease to possess that know-how.
+
+This extension to *phase-derived* knowledge heads requires explicit validation: existing grammar ratifies the `sap + bare verb` frame, not necessarily every phase derivative as a servile head. Do not mark as already licensed or parser-tested.
+
+### Sap content and external learner/causer are different roles
+
+The `mov` intransitive/transitive subject-causation alternation is **root-specific**. It cannot be copied automatically onto `sap`:
+- `X sap CONTENT` means X knows the content, not 'X teaches the content'.
+- `X adsap CONTENT` means X comes to know the content, not 'X makes the content know'.
+- `Y adsap PERSON-em` could be intended as caused learning, but if accusative denotes the *knowledge topic*, the same surface is ambiguous. A causative knowledge-acquisition frame is not yet ratified.
+- `dok` stays independently necessary for **teaching activity**, which can occur without any successful knowledge acquisition. `stud` stays necessary for **studying activity**, which likewise may fail.
+
+Prefer separate propositions for the teacher's action and learner's resulting knowledge state over an illicit `sap` causative. If a compact generic causative construction is wanted, study it across *all* state roots (`sap`, `kap`, `es`, `san`) before licensing a one-off meaning.
+
+### Minimal semantic tests
+
+1. T teaches S but S gains no knowledge: `dok` true, `adsap` false.
+2. S studies repeatedly and eventually learns nothing: `stud` true, `adsap` false.
+3. S involuntarily realizes a fact: `adsap` true, `stud` false.
+4. S begins learning a complex skill and is interrupted: a **progressive** onset/acquisition event may hold while completed know-how does not.
+5. S has previously known a fact, forgets it, then relearns: `sap` -> `desap` -> `resap` (phase contrasts, with context).
+6. S recalls a fact without any additional study: `resap` possible, `stud` false.
+7. S continues to know a concept while not actively rehearsing: `insap` true, `stud` false.
+8. S learns how to teach but has never taught: candidate `adsap dok` true while `dok` action is false.
+9. Teacher knows a subject but cannot teach effectively: `sap` content true, `dok` success not entailed.
+10. S has procedural knowledge but cannot physically perform due to constraints: `sap + bare V` true, `pot` or `pos` may fail.
+11. S understands a message but does not retain the content: `kap` in-the-moment true, enduring `sap` not necessary.
+12. S knows facts about a subject without grasping underlying meaning: `sap` true, `kap` false possible.
+
+**Provisional recommendation:** do NOT add `lern` now. Test whether `adsap` + TAM plus procedural complement cover ordinary *acquisition of knowledge/skills*. Preserve the possibility that a distinct root is needed for **learning activity/process regardless of success**, but do not preemptively invent it. Avoid claiming that `adsapei` always means an extended learning process: onset of a state can be punctual, and an aspectual coercion/extended transition analysis needs deliberate review.
+
 ## Role / valency proposals pending owner review
 
 Do **not** assume that `dok X-em Y-ad` is canonical without an approved frame. Define teacher, learner and content roles separately, and specify which arguments may be omitted.
