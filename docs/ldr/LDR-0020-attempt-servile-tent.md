@@ -32,7 +32,7 @@ Contrast `voli mov` (want to move), `tenti mov` (try to move), `movi` (move). `n
 
 Positive executable cases include: `tenti mov`, `tentdi mov`, `tentei mov`, `tenti portar akwaem`, `no tenti mov`, `tenti no mov`, `tenti adkap`. Reject bare `tenti`, unsupported dependent arguments, and stacked serviles such as `tenti voli mov` in the current parser subset. These are syntax/AST checks, not empirical proof of success or failure of real events.
 
-The finite `tent` head contributes a recorded attempt event to the semantic AST, with `entails_attempt=true` and `entails_success=false`. The existing `no` before the head negates the attempt itself; the flag refers to the **positive lexical operator** and should not be interpreted as truth-conditional entailment in a *negated clause*. The truth-conditional interpretation still depends on head polarity.
+The finite `tent` head contributes a recorded attempt event to the semantic AST, with `entails_attempt=true` in positive clauses, `entails_attempt=false` and `denies_attempt=true` in clauses that negate the attempt head, and `entails_success=false` in either case. These AST annotations express consequences of the entire scoped construction, not merely the positive lexical operator.
 
 ## Consequences and compatibility
 
