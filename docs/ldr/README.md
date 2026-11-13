@@ -76,3 +76,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0020: Goal-directed attempt servile `tent`](LDR-0020-attempt-servile-tent.md) — Accepted
 
 - [LDR-0021: Desire vs intention, `vol` vs `int`](LDR-0021-vol-intention-gap.md) — Accepted
+
+- [LDR-0022: Bare propositional serviles and `pos P`](LDR-0022-bare-propositional-serviles.md) — Accepted
