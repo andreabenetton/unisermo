@@ -1,7 +1,7 @@
 ---
 id: LDR-0024
 title: Proposal for personless modal tense and propositional necessity
-status: Proposed
+status: Accepted
 date: 2026-11-13
 domain: grammar
 supersedes: none
@@ -11,18 +11,18 @@ supersedes: none
 
 ## Context and problem
 
-The owner accepted (LDR-0023) explicit subject plus invariant bare head plus independently finite clause, e.g. `i vol u movu`, and confirmed impersonal epistemic `pos P` (LDR-0022). Open questions were whether `posd` and `vold` should take regular tense without person and whether `deb P` should provide a concise necessity construction instead of `no pos no P`. The owner instructed further investigation, **not explicit ratification of these proposals**.
+The owner accepted (LDR-0023) explicit subject plus invariant bare head plus independently finite clause, e.g. `i vol u movu`, and confirmed impersonal epistemic `pos P` (LDR-0022). Open questions were whether `posd` and `vold` should take regular tense without person and whether `deb P` should provide a concise necessity construction instead of `no pos no P`. The author has now explicitly ratified the three proposals: a concise necessity reading for `deb P`, temporal suffixes on personless propositional heads, and tense anchoring of the embedded proposition relative to the assessment time.
 
 ## Alternatives
 
 1. Use `no pos no P` exclusively for necessity. Logical duality holds under a shared modal accessibility domain, but frequent doubly negated speech is cumbersome. Unacceptable as the sole everyday necessity expression.
-2. Use `deb P` for non-deontic propositional necessity, retaining `deb-FIN BARE_VERB` for subject obligation. No new root; distinct syntactic valency and modal domain, but ambiguity may persist unless sources/conditions are explicit. **Recommended for ratification** as a constrained distinct sense.
+2. Use `deb P` for non-deontic propositional necessity, retaining `deb-FIN BARE_VERB` for subject obligation. No new root; distinct syntactic valency and modal domain, but ambiguity may persist unless sources/conditions are explicit. **Ratified** as a constrained distinct sense.
 3. Add a separate short necessity root. Semantically explicit but increases lexical inventory. Hold pending evidence that `deb P` leads to unacceptable polysemy.
 4. Express past assessment through a finite third-person head (`posda P`): invents a fictitious personal subject; not preferred.
-5. Extend `ROOT + TENSE` without person for propositional serviles (`posd`, `vold`, `sapd`). Productive morphological economy with clear syntactic cues. **Recommended for ratification**, initially only tense Ø/d/f, not aspect.
-6. Make dependent tense absolute relative to speech-time vs relative to modal assessment-time. **Recommend relative evaluation-time interpretation** for complement finite TAM in this frame. This needs explicit examples and semantic specification, because ordinary root-level tenses elsewhere continue to use their previously established anchoring rules.
+5. Extend `ROOT + TENSE` without person for propositional serviles (`posd`, `vold`, `sapd`). Productive morphological economy with clear syntactic cues. **Ratified**, initially only tense Ø/d/f, not aspect.
+6. Make dependent tense absolute relative to speech-time vs relative to modal assessment-time. **Ratified relative evaluation-time interpretation** for complement finite TAM in this frame. Ordinary root-level tenses elsewhere continue to use their established anchoring rules.
 
-## Decision or hypothesis (proposed only)
+## Decision or hypothesis
 
 Personless propositional servile head:
 
@@ -60,7 +60,7 @@ See `research/grammar/personless-servile-tense-necessity-cases-2026-11-13.json` 
 - Non-factivity of `pos/deb/kred/vol` and positive factivity of `sap`.
 - Interactions with explicit time phrases and independently ratified locative domain extension without silently broadening the parser.
 
-All examples are **proposed, not executable canonical grammar**. The main parser must continue to reject `posd`, `vold` and bare `deb P` until explicit owner ratification.
+The cited forms are now canonical in the explicitly bounded subset. The parser supports `posd`, `vold`, `sapd`, and `deb P`, and rejects unsupported aspect or other personless heads. Tests check temporal AST flags, negative scope, knowledge factivity, and regression of existing personal serviles.
 
 ## Consequences and compatibility
 
@@ -68,7 +68,7 @@ No new root or particle is needed for proposed past/future or necessity. A new o
 
 ## Decision authority
 
-This is a design proposal in response to 'procediamo' on 2026-11-13, following the merge of LDR-0023. The owner previously proposed 'usare pos+suffisso passato ?' and expressed a preference for a short necessity servile, but did **not** explicitly ratify the exact temporal reference convention or new `deb` propositional semantics. This LDR remains **Proposed** until approval.
+Owner on 2026-11-13: 'ratificato. ma che radici propone per probabilita ? va inoltre definiti i quantitativi, forse ci avevamo ragionato per altro in passato', in direct response to the three enumerated choices: (1) `deb P` necessity; (2) personless `Ø/d/f` modal tense; (3) embedded tense relative to the assessment time. This is explicit acceptance of those three choices and **not** ratification of a new probability head, degree system, or aspect morphology.
 
 ## References
 
