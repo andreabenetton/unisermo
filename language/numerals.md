@@ -291,3 +291,12 @@ A fraction `CARDINAL ORDINAL` may immediately follow `lik` to specify the degree
 ## 12. Universal numeric operators (ratified 2026-11-13; LDR-0027)
 
 The general numerical relation syntax reuses `major` (>), `minor` (<), `ekwal` (=) with local `no` for inclusive complementary relations (`no minor` >=, `no major` <=, `no ekwal` !=). Two new invariant roots are `sirka` (approximately) and `inter` (between), the latter with the construction `inter A e B`. A/B may each be a canonical cardinal or already ratified two-word fraction. The internal `e` is not a proposition connector. An approximate value does not assert fixed tolerance. The same numeric operators are reusable with nominal counts and the quantitative degree of `lik`, preserving both percent expressions and hyperbole (no upper-bound filter).
+
+
+## 13. Simple measures and ellipsis of shared units (ratified 2026-11-13; LDR-0028)
+
+A measurement combines a canonical numeric expression with one invariant unit: `QUANTITY UNIT`, for example `kin gram` (five grams) or `no minor dek sekun` (at least ten seconds). The confirmed unit roots are `gram` (mass) and `sekun` (duration). Ordinary number formation, fractions, quantitative comparisons and `sirka` retain their meanings. No syntactic number agreement is introduced for units.
+
+In a homogeneous interval the unit may be repeated at both endpoints, `inter dek gram e bisdek gram`, or appear once after the second endpoint, `inter dek e bisdek gram`. The shorter expression has exactly the same quantity-domain meaning: both endpoints refer to grams. The second unit is compulsory in the ellipsis form; mixed explicit units are not implicitly converted. The interval-internal `e` is a structural numeric connector, not a separate assertion. This is a scoped ellipsis rule, not general unit omission.
+
+The SI-prefix system, other measurement units, compound dimensions, negative values and external currency identifier syntax remain separate implementation/lexical decisions. Numerical extremes and hyperbole remain grammatical and must not be silently capped by the parser.

@@ -128,3 +128,8 @@ The accepted `lik CARDINAL ORDINAL FINITE_PROPOSITION` frame attaches an existin
 ## Universal quantity operators (LDR-0027, 2026-11-13)
 
 `parse_quantitative_expression` returns a typed AST for existing numerical forms extended with `major/minor/ekwal`, local comparator `no`, newly confirmed `sirka` (contextually approximate) and `inter A e B` (two endpoints, contextual inclusion). The same AST is attachable to a bounded `lik` numerical degree and basic noun counts. Internal `e` in an interval is distinct from the clause connective. No probability-specific upper bound, no coercion from approximation into speaker uncertainty and no general measurement-unit grammar have been added. Mathematical semantics, unit compatibility and rhetorical status are distinct from parsing.
+
+
+## Homogeneous measurement and unit ellipsis (LDR-0028, 2026-11-13)
+
+A measured scalar comprises a quantitative expression and a **confirmed typed unit**. Initial units `gram` = mass and `sekun` = duration. The dedicated `parse_measurement_expression` returns a typed measure AST; full `inter Q1 UNIT e Q2 UNIT` and elliptical `inter Q1 e Q2 UNIT` resolve to the same unit for both endpoints, while an explicit `unit_ellipsis` flag preserves what was actually said. Do not perform implicit conversion between unlike units. Mathematical plausibility is not a syntactic restriction. Prefixes, derived units, external codes and full predicate attachment are later design decisions.

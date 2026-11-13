@@ -239,6 +239,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "General quantitative comparisons, approximation and intervals"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "semantics-grammar",
+      "id": "LDR-0028",
+      "path": "docs/ldr/LDR-0028-basic-measures-ellipsis.md",
+      "sha256": "40abb03c2ae22b3124f8c8849db8747711a110744b86f75a0886c330afcd53c1",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Basic measures with shared-unit interval ellipsis and gram/sekun"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
