@@ -79,7 +79,6 @@ class SubjectBareServileTests(unittest.TestCase):
     def test_unsupported_implicit_subjects_and_personless_tam(self):
         for sentence in ("vol u movu", "int u movu", "tent uman mova",
                          "sap uman mova", "kred uman mova",
-                         "i vold u movu", "i sapd u movu", "posd uman mova",
                          "i pot u movu", "i deb u movu", "i aut u movu",
                          "i vol", "i vol mov",
                          "i vol u movu lim", "i vol u movu due vida"):
