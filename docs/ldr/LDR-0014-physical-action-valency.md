@@ -9,7 +9,7 @@ supersedes: none
 
 # LDR-0014 - Physical taking, transport, constraint and containment
 
-## Context and motivation
+## Context and problem
 
 The 2026-10-25 lexicon already defined four non-interchangeable
 physical-action roots: `fer` physically takes/grasp; `portar`
@@ -25,7 +25,7 @@ The author requested analysis, reviewed RFC #64, then expressly
 ratified its four proposed patterns and requested merge of
 recent approved PRs on 2026-11-13.
 
-## Ratified frames
+## Decision or hypothesis
 
 | Verb | Canonical overt frame | Argument roles |
 |---|---|---|
@@ -74,7 +74,7 @@ not** be analyzed compositionally as an ordinary
 `kun-` + `ten` joint-holding event. No general
 stacked-prefix valency inheritance is ratified.
 
-## Implementation limit and open issues
+## Consequences and compatibility
 
 The **bounded parser** requires an overt object `X-em`
 in each of these four frames, including modal complements.
@@ -96,7 +96,7 @@ held entity, container/physical contents. That metadata
 records the user's asserted relation, **not** a validated
 fact about the world.
 
-## Alternatives considered
+## Alternatives
 
 1. Collapse `fer` and `portar` into "take/carry":
    rejected as contrary to existing semantics.
@@ -111,7 +111,7 @@ fact about the world.
 5. Require no overt patient in the reference parser:
    deferred; object omission needs a separate decision.
 
-## Evidence and authority
+## Evaluation and evidence
 
 - Author's explicit approval 2026-11-13:
   "ratifica e fai merge delle PR recenti"
@@ -125,6 +125,17 @@ fact about the world.
 This accepted record is normative together with the three
 current language specifications. It is not itself a semantic
 world-model, nor a human comprehension evaluation.
+
+## Decision authority
+
+The owner explicitly approved these four candidate frames on
+2026-11-13 by instructing: "ratifica e fai merge delle PR recenti".
+The approval followed the detailed physical-action RFC and its
+distinctions among physical origin, transport destination,
+constraint and containment. Only the four overt-object frames,
+their optional selected spatial complements and single-prefix
+inheritance are accepted here. Discourse-conditioned omission,
+unrestricted argument order and broader composition remain open.
 
 ## References
 
