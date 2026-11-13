@@ -21,7 +21,7 @@ SUBORDINATES = {"se", "etsi", "etsise", "eksese"}
 POSTPOSED = {"etsi", "etsise", "eksese"}
 RELATORS = {"kun", "per", "pro", "due", "fin", "tem", "mod"}
 CASES = ("accusative", "dative_allative", "ablative", "locative", "resultative")
-MODALS = {"pos", "deb", "vol", "pot", "sap", "aut"}
+MODALS = {"pos", "deb", "vol", "pot", "sap", "adsap", "insap", "desap", "resap", "aut"}
 WH_WORDS = {
     "kis": "subject", "kidem": "object", "kidad": "destination",
     "kid": "unmarked_thing", "kos": "location", "kud": "origin",
@@ -482,6 +482,8 @@ class PropositionParser:
             else:
                 obj, complements = self._args(rest[1:], dependent)
                 dependent_frame = self.validate_valency(dependent, obj, complements)
+            if self.is_knowledge_verb(head):
+                self.validate_knowledge_procedure(head, obj, complements)
             if question is not None and question["role"] in {"object", "destination"}:
                 if question["role"] == "object" and obj is not None:
                     raise ValueError("wh object duplicates explicit object")
@@ -494,6 +496,10 @@ class PropositionParser:
                                  "negative": neg_embedded, "object": obj,
                                  "complements": complements},
                    "interrogative": question is not None}
+            if self.is_knowledge_verb(head):
+                out["knowledge_frame"] = "procedural_knowledge"
+                out["knowledge_phase"] = head
+                out["entails_performance"] = False
             if self.is_state_copula(dependent):
                 out["dependent"]["state"] = state
                 out["dependent"]["valency"] = (
