@@ -957,6 +957,24 @@
       "source": "Ratified comparison specification language/comparison.md; author extended numeric valency 2026-11-13",
       "decision": "Preserve existing comparative minor ADJ dan B and extend to direct quantitative value: minor NUM means less than NUM; no minor NUM means at least NUM. No new negative morpheme.",
       "status": "confirmed"
+    },
+    {
+      "form": "gram",
+      "category": "measurement_unit",
+      "meaning_it": "grammo; unità di massa",
+      "meaning_en": "gram; unit of mass",
+      "source": "Explicit author ratification 2026-11-13; international gram",
+      "decision": "Confirmed unit root gram, in a single-value measure and bounded interval measure; invariant after numeric quantity. Does not itself license every unreviewed dimensional unit.",
+      "status": "confirmed"
+    },
+    {
+      "form": "sekun",
+      "category": "measurement_unit",
+      "meaning_it": "secondo; unità di durata",
+      "meaning_en": "second; unit of time duration",
+      "source": "Explicit author ratification 2026-11-13; international second/seconde adapted to Unisermo",
+      "decision": "Confirmed unit root sekun for seconds, invariant after numeric quantity. This denotes duration units, not the ordinal second (bisim).",
+      "status": "confirmed"
     }
   ]
 }
