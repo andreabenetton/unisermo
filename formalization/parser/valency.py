@@ -53,8 +53,8 @@ class ValencyParser:
         """Knowledge heads are not generic modals or causatives."""
         if not self.is_knowledge_verb(lemma):
             raise ValueError("unsupported knowledge-procedure head")
-        if obj is not None or complements:
-            raise ValueError("procedural knowledge with dependent arguments is not yet in parser subset")
+        # The dependent verb is validated independently with its OWN valency.
+        # Keep previously ratified sap + V + V-arguments (e.g. sapi kunten akwaem).
         return "procedural_knowledge"
 
     def physical_action_base(self, lemma: str) -> str | None:
