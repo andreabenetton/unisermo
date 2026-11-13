@@ -680,6 +680,18 @@
     },
     {
       "categories": [
+        "measurement_unit"
+      ],
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon",
+      "form": "gram",
+      "meaning_it": "grammo; unità di massa",
+      "meaning_en": "gram; unit of mass",
+      "origin": "Explicit author ratification 2026-11-13; international gram",
+      "decision": "Confirmed unit root gram, in a single-value measure and bounded interval measure; invariant after numeric quantity. Does not itself license every unreviewed dimensional unit."
+    },
+    {
+      "categories": [
         "verb"
       ],
       "form": "ines",
@@ -1389,6 +1401,18 @@
       "origin": "Explicit author ratification 2026-10-24, Latin si adapted to distinguish si=yes",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "measurement_unit"
+      ],
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon",
+      "form": "sekun",
+      "meaning_it": "secondo; unità di durata",
+      "meaning_en": "second; unit of time duration",
+      "origin": "Explicit author ratification 2026-11-13; international second/seconde adapted to Unisermo",
+      "decision": "Confirmed unit root sekun for seconds, invariant after numeric quantity. This denotes duration units, not the ordinal second (bisim)."
     },
     {
       "categories": [
