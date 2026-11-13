@@ -1083,6 +1083,114 @@
       "source": "language/noun_number_system.md",
       "decision": "Existing documented decision synchronized from language/noun_number_system.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
       "status": "confirmed"
+    },
+    {
+      "form": "amik",
+      "category": "noun",
+      "meaning_it": "amico; persona amica",
+      "meaning_en": "friend; friendly person",
+      "source": "language/word_order.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/word_order.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "dom",
+      "category": "noun",
+      "meaning_it": "casa; edificio abitativo",
+      "meaning_en": "house; dwelling",
+      "source": "language/noun_case_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_case_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "likwid",
+      "category": "property_root",
+      "meaning_it": "liquido; stato liquido",
+      "meaning_en": "liquid; liquid state",
+      "source": "language/noun_case_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_case_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "multi",
+      "category": "quantifier",
+      "meaning_it": "molti; numerosi",
+      "meaning_en": "many; numerous",
+      "source": "language/noun_number_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_number_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "san",
+      "category": "property_root",
+      "meaning_it": "sano; in buona salute",
+      "meaning_en": "healthy; in good health",
+      "source": "language/copula.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/copula.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "solid",
+      "category": "property_root",
+      "meaning_it": "solido; stato solido",
+      "meaning_en": "solid; solid state",
+      "source": "language/noun_case_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_case_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tan",
+      "category": "demonstrative",
+      "meaning_it": "quello lontano da entrambi gli interlocutori",
+      "meaning_en": "that (far from both speaker and listener)",
+      "source": "language/demonstratives.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/demonstratives.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ter",
+      "category": "numeral",
+      "meaning_it": "tre",
+      "meaning_en": "three",
+      "source": "language/numerals.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/numerals.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tes",
+      "category": "demonstrative",
+      "meaning_it": "codesto; quello vicino all'interlocutore",
+      "meaning_en": "that (near listener)",
+      "source": "language/demonstratives.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/demonstratives.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tik",
+      "category": "demonstrative",
+      "meaning_it": "questo vicino al parlante",
+      "meaning_en": "this (near speaker)",
+      "source": "language/demonstratives.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/demonstratives.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "vid",
+      "category": "verb_root",
+      "meaning_it": "vedere",
+      "meaning_en": "see",
+      "source": "language/verb_specification.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/verb_specification.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "stud",
+      "category": "verb_root",
+      "meaning_it": "studiare; dedicarsi allo studio",
+      "meaning_en": "study; engage in learning by systematic attention",
+      "source": "Author approval 2026-11-13; international study / Italian studio / Latin studium",
+      "decision": "Canonical activity root 'study', distinct from knowledge sap, thinking pens, and understanding kap. Agentive studor = person who studies, not necessarily an enrolled student.",
+      "status": "confirmed"
     }
   ]
 }
