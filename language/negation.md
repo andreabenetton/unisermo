@@ -162,3 +162,15 @@ In `pos FINITE_PROPOSITION`, the invariant bare `pos` has no subject or personal
 - `no pos uman mova lim e vida` = NOT POSSIBLE(person moves) AND person sees: `lim` closes the operator before `e`.
 
 This is **not** an instance of the two-token wide-negation operator `no lim`. Neither `no pos P` nor `pos no P` entails P by itself. Probability grades and necessity from independent normative premises are not implied by these forms.
+
+
+## Outer-subject bare serviles with finite propositions (ratified 2026-11-13)
+
+The subject precedes an uninflected propositional servile, so negation immediately before the **bare head** denies the attitude/attempt/knowledge relation, while negation before the embedded **finite verb** denies the embedded event:
+
+- `i no vol u movu` = I do not want you to move.
+- `i vol u no movu` = I want you not to move.
+- `i no sap u movu` = I do not know that you move; this does not assert you do or do not move.
+- `i sap u no movu` = I know you do not move; the positive knowledge assertion commits to its embedded negative content.
+
+The pre-head negative must not be confused with grammatical `no lim` sentential-negation scope. No new negative particle is introduced.
