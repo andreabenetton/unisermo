@@ -7,13 +7,13 @@ domain: grammar
 supersedes: none
 ---
 
-# LDR-0023 — Explicit subject, bare servile, finite proposition
+# LDR-0023 Explicit subject, bare servile, finite proposition
 
-## Context
+## Context and problem
 
 After ratifying bare `pos FINITE_PROPOSITION` in LDR-0022, the author rejected putting personal agreement on a propositional attitude head. Instead the person or nominal subject appears before the invariant servile root: `i vol u movu`, with two independently identifiable subjects.
 
-## Accepted decision
+## Decision or hypothesis
 
 ```
 SUBJECT [no] SERVILE-ROOT FINITE_PROPOSITION
@@ -38,6 +38,10 @@ A shared-subject finite-head structure remains legal, including `voli mov`, `int
 
 As in LDR-0022, the bare root governs the complete following Boolean proposition until existing closing `lim` before a connective. Unmarked `i vol u movu e vida` scopes `vol` over both finite clauses; `i vol u movu lim e vida` asserts the right finite clause outside the desire.
 
+## Consequences and compatibility
+
+This construction preserves explicit independent subjects and the established head/operand boundary without inferring an action's success. In this first parser implementation it is intentionally bounded to simple finite, Boolean-coordinated clauses and `lim` closure; other subordinate and temporal-operator constructions remain open.
+
 ## Alternatives
 
 - `voli [u movu]`: rejected for this frame because the author explicitly chose bare `vol` preceded by `i`.
@@ -46,7 +50,7 @@ As in LDR-0022, the bare root governs the complete following Boolean proposition
 - Giving every existing servile the same propositional valency: not licensed semantically.
 - Personless TAM (`vold`, `sapd`): deferred, not ratified by this decision.
 
-## Parser conformance
+## Evaluation and evidence
 
 Supports canonical subject NP/pronoun, bare head with finite operand, simple embedded predicates, Boolean e/o clauses and closing lim, and outer/inner negative scope. Does not infer agent identity from an omitted matrix subject; refuses unsupported nested/modally ambiguous scope. A bare `sap` knowledge frame is truth-entailing only under a positive outer head assertion, not under outer negation.
 
