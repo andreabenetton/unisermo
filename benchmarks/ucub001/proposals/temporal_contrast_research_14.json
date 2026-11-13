@@ -20,10 +20,10 @@
     {
       "id": "UTR-02",
       "meaning_it": "Il tecnico ha riavviato il server dopo aver salvato i dati.",
-      "contrast_type": "after_via_inverse",
-      "intended_semantics_en": "saving completes before restart begins; invert event order with a single BEFORE relation",
-      "do_not_infer_en": "Do not force a separate 'after' root before usability screening.",
-      "design_status": "candidate_ante",
+      "contrast_type": "strict_after",
+      "intended_semantics_en": "server restart takes place after data saving is finished; use direct proposed AFTER relation rather than requiring clause inversion",
+      "do_not_infer_en": "AFTER is independently lexicalized as a candidate; no inferred approval of the spelling or unrestricted event boundaries.",
+      "design_status": "candidate_post",
       "unisermo": null,
       "parser_verified": false,
       "independent_semantic_review": "not_started",
@@ -173,5 +173,6 @@
       "independent_semantic_review": "not_started",
       "benchmark_admitted": false
     }
-  ]
+  ],
+  "design_revision": "2026-11-13 explicit conceptual BEFORE and AFTER, provisional ante/post; not ratified"
 }
