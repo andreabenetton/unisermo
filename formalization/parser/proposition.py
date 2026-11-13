@@ -603,14 +603,14 @@ class PropositionParser:
         if negative:
             prefix = prefix[:-1]
         if "no" in prefix:
-            # 'no minor N noun' is a quantifier over the SUBJECT, not
-            # negative polarity of the finite predicate.  Recognize only
-            # the ratified complement-of-comparator local no.
-            if not (len(prefix) >= 4 and prefix[0] == "no"
-                    and prefix[1] in {"major", "minor", "ekwal"}
-                    and self._quantitative_prefix(prefix) is not None
-                    and (lambda q: q[1] == len(prefix)-1)(
-                        self._quantitative_prefix(prefix[:-1]))):
+            # A leftmost 'no minor N noun' is a quantified subject, not
+            # negation of the finite verb.  Do not let any other 'no'
+            # elsewhere in a subject silently change the scope.
+            quantity = (self._quantitative_prefix(prefix[:-1])
+                        if len(prefix) >= 4 and prefix[0] == "no"
+                        and prefix[1] in {"major", "minor", "ekwal"}
+                        else None)
+            if quantity is None or quantity[1] != len(prefix) - 1:
                 raise ValueError("ambiguous or repeated local negation")
         if question is not None and question["role"] == "subject":
             if prefix or verb["person"] != 3 or verb["number"] != "singular":
