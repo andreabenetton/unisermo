@@ -103,3 +103,8 @@ The ordinary finite servile `int` is a shared-subject adopted-intention head. In
 ## Bare propositional possibility `pos P` (2026-11-13)
 
 The root-only (uninflected) `pos` governs a complete finite proposition, without any personal subject of its own. It means the embedded proposition is epistemically possible, not that its subject has situational opportunity (`posi V`). With `e`/`o` right-associated connectors, `pos` includes the entire following expression until explicit existing closing `lim` before a connector. `no pos P` is NOT POSSIBLE(P), whereas `pos no P` is POSSIBLE(NOT P); `no pos no P` derives necessity of P under the same modal possibility domain. The AST is a `propositional_servile` node with an embedded proposition tree, not a truth evaluation. Not licensed: `posd P` (personless past assessment) or arbitrary bare-root reinterpretations for other serviles.
+
+
+## Subject-bearing bare propositional serviles (ratified 2026-11-13)
+
+Syntax: `SUBJECT [no] SERVILE_ROOT FINITE_PROPOSITION`, with an overt subject of the head and an independently inflected embedded proposition. Valid initial propositional heads `vol/int/tent/sap/kred` express desire, adopted goal, real goal-directed attempt, factual knowledge, and belief, respectively. They do not automatically cause the embedded event. `sap` positive knowledge is factive (subject knows P implies P), while `kred` belief is not. Negation of the outer knowledge assertion does not carry a truth entailment. The impersonal `pos P` frame remains separate. `lim` delimits scoped operands before following connectors.
