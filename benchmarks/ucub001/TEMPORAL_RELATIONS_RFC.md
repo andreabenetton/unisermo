@@ -1,5 +1,7 @@
 # UCUB-v2 — Temporal relations and reference: research RFC
 
+> **SUPERSEDED RESEARCH DIRECTION (13 November 2026):** The author has rejected the `ante/post` and endpoint-concatenation approaches. The current candidate design is the seven-family system `pretem / tem / postem / sim / solap / simpre / simpost`, documented in [ALLEN_TEMPORAL_RELATIONS_SEVEN_FAMILIES.md](ALLEN_TEMPORAL_RELATIONS_SEVEN_FAMILIES.md). The rest of this RFC remains as a historical record, **not the active recommendation**. No canonical ratification or parser support is implied.
+
 **Status: PROPOSAL / UNRATIFIED. 13 November 2026.** This document contributes a design candidate to PR #86. No new word, syntax, temporal semantics, parser rule, or benchmark translation is canonized here. All examples containing `ante`, `post`, or clausal `tem` below are **schematic and MUST NOT be treated as accepted Unisermo or parser fixtures**. The capital letters P/Q/R are metalanguage, not words.
 
 ## 1. What already exists
