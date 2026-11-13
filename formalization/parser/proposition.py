@@ -176,10 +176,22 @@ class PropositionParser:
             "sap": "knowledge_that",
             "kred": "belief_that",
         }
+        # Only propositional heads carry personless tense Ø / d / f.
+        # An ordinary finite lexical verb still requires person agreement.
+        propositional_tenses = {"": "present", "d": "past", "f": "future"}
+
+        def parse_head(token, licensed):
+            for lemma, interpretation in licensed.items():
+                for suffix, tense in propositional_tenses.items():
+                    if token == lemma + suffix:
+                        return lemma, interpretation, tense
+            return None
+
         for i in range(1, min(len(words), 8)):
-            head = words[i]
-            if head not in propositional_subject_heads:
+            parsed_head = parse_head(words[i], propositional_subject_heads)
+            if parsed_head is None:
                 continue
+            head, interpretation, assessment_tense = parsed_head
             prefix = words[:i]
             negated = bool(prefix and prefix[-1] == "no")
             if negated:
@@ -204,8 +216,10 @@ class PropositionParser:
                                        "coordination", "exclusive_choice"}:
                 raise ValueError("unsupported embedded proposition kind")
             return {"kind": "propositional_servile",
-                    "operator": head, "operator_form": "bare_root",
-                    "interpretation": propositional_subject_heads[head],
+                    "operator": head, "operator_form": "personless_tensed_head",
+                    "assessment_tense": assessment_tense,
+                    "embedded_tense_anchor": "relative_to_assessment",
+                    "interpretation": interpretation,
                     "subject": subject, "negative": negated,
                     "operand": operand, "operand_finite": True,
                     "entails_operand_truth": head == "sap" and not negated,
@@ -217,28 +231,37 @@ class PropositionParser:
         # plus a complete *finite* proposition. Only epistemic pos is
         # semantically licensed in this parser subset; other heads need an
         # explicit, independently ratified propositional reading.
-        modal_negative = len(words) >= 2 and words[:2] == ["no", "pos"]
-        modal_positive = words[0] == "pos"
-        if modal_negative or modal_positive:
-            scope_words = words[2:] if modal_negative else words[1:]
+        impersonal_heads = {
+            "pos": "epistemic_possibility",
+            "deb": "propositional_necessity",
+        }
+        negated_impersonal = len(words) >= 2 and words[0] == "no"
+        impersonal_index = 1 if negated_impersonal else 0
+        impersonal = (parse_head(words[impersonal_index], impersonal_heads)
+                      if len(words) > impersonal_index else None)
+        if impersonal is not None:
+            head, interpretation, assessment_tense = impersonal
+            scope_words = words[impersonal_index + 1:]
             if not scope_words or not any(self._finite(w) for w in scope_words):
-                raise ValueError("bare propositional pos needs a finite proposition")
-            if scope_words[0] in {"pos", "no"} and (
-                    scope_words[0] == "pos" or
-                    scope_words[:2] == ["no", "pos"]):
+                raise ValueError("bare propositional servile needs a finite proposition")
+            if (parse_head(scope_words[0], impersonal_heads) is not None
+                    or (len(scope_words) >= 2 and scope_words[0] == "no"
+                        and parse_head(scope_words[1], impersonal_heads) is not None)):
                 raise ValueError("stacked bare epistemic modals are not ratified")
             if any(w in SUBORDINATES | {"alor", "lim", "ka", "ma", "ergo", "nam", "due"}
                    for w in scope_words):
-                raise ValueError("bare pos with non-Boolean/mixed subordinate scope is not ratified")
+                raise ValueError("bare modal with non-Boolean/mixed subordinate scope is not ratified")
             operand = self._expression(scope_words, depth + 1)
             if operand["kind"] not in {"svo_clause", "servile_clause",
                                        "zero_copula", "copular_clause",
                                        "coordination", "exclusive_choice"}:
                 raise ValueError("unsupported proposition kind under bare pos")
             return {"kind": "propositional_servile",
-                    "operator": "pos", "operator_form": "bare_root",
-                    "interpretation": "epistemic_possibility",
-                    "negative": modal_negative,
+                    "operator": head, "operator_form": "personless_tensed_head",
+                    "assessment_tense": assessment_tense,
+                    "embedded_tense_anchor": "relative_to_assessment",
+                    "interpretation": interpretation,
+                    "negative": negated_impersonal,
                     "operand": operand, "operand_finite": True,
                     "entails_operand_truth": False}
         if words[0] == "o":
