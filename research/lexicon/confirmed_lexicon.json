@@ -1,6 +1,6 @@
 {
   "schema": "unisermo/confirmed-lexicon@1",
-  "confirmed_on": "2026-11-12",
+  "confirmed_on": "2026-11-13",
   "status": "confirmed_core_lexicon",
   "entries": [
     {
@@ -903,6 +903,294 @@
       "source": "Author ratification 2026-11-12; Latin auctoritas and international authority (canonical /a.u.t/, no h)",
       "status": "confirmed",
       "decision": "Short finite servile root with dependent uninflected lexical verb/root. Unifies general permission and formal authorization; source is optional and expressed by the EXISTING ablative -de in the narrowly specified post-modal/pre-infinitive valency slot: auti umande mov = permitted by a person to move. auti umande mov domde distinguishes grant-source umande from movement-source domde. pos opportunity/feasibility is not normative permission, nor does aut entail execution. no auti V denies permission; auti no V permits refraining; neither lack of permission nor lack of obligation automatically entails an explicit prohibition (debi no V). Source-qualified denial applies only to the cited grantor. The spelling auth with h and generic bound aut- are not ratified. Extending -in to normative or other abstract domains remains open; Phase 1 parser does not implement this frame."
+    },
+    {
+      "form": "ades",
+      "category": "verb_root",
+      "meaning_it": "diventare; entrare in uno stato",
+      "meaning_en": "become; enter a state",
+      "source": "language/copula.md",
+      "decision": "Existing documented decision synchronized from language/copula.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "admov",
+      "category": "verb_root",
+      "meaning_it": "iniziare a muoversi; mettere in movimento",
+      "meaning_en": "begin moving; set in motion",
+      "source": "language/verb_specification.md",
+      "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "bis",
+      "category": "numeral",
+      "meaning_it": "due",
+      "meaning_en": "two",
+      "source": "language/numerals.md",
+      "decision": "Existing documented decision synchronized from language/numerals.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "dees",
+      "category": "verb_root",
+      "meaning_it": "cessare di essere; uscire da uno stato",
+      "meaning_en": "cease to be; leave a state",
+      "source": "language/copula.md",
+      "decision": "Existing documented decision synchronized from language/copula.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "demov",
+      "category": "verb_root",
+      "meaning_it": "smettere di muoversi; fermare il movimento",
+      "meaning_en": "stop moving; bring movement to a stop",
+      "source": "language/verb_specification.md",
+      "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "es",
+      "category": "verb_root",
+      "meaning_it": "essere; esistere",
+      "meaning_en": "be; exist",
+      "source": "language/copula.md",
+      "decision": "Existing documented decision synchronized from language/copula.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ines",
+      "category": "verb_root",
+      "meaning_it": "rimanere; continuare a essere",
+      "meaning_en": "remain; continue to be",
+      "source": "language/copula.md",
+      "decision": "Existing documented decision synchronized from language/copula.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "inmov",
+      "category": "verb_root",
+      "meaning_it": "continuare a muoversi; mantenere in movimento",
+      "meaning_en": "continue moving; keep in motion",
+      "source": "language/verb_specification.md",
+      "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "jer",
+      "category": "counter",
+      "meaning_it": "volta; iterazione (come elemento morfologico numerico)",
+      "meaning_en": "times; count of iterations",
+      "source": "language/numerals.md",
+      "decision": "Existing documented decision synchronized from language/numerals.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ka",
+      "category": "function_word",
+      "meaning_it": "marcatore interrogativo polare",
+      "meaning_en": "polar question particle",
+      "source": "language/questions.md",
+      "decision": "Existing documented decision synchronized from language/questions.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "mov",
+      "category": "verb_root",
+      "meaning_it": "muoversi; spostarsi",
+      "meaning_en": "move",
+      "source": "language/verb_specification.md",
+      "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "no",
+      "category": "function_word",
+      "meaning_it": "no; negazione grammaticale",
+      "meaning_en": "no; grammatical negation",
+      "source": "language/negation.md",
+      "decision": "Existing documented decision synchronized from language/negation.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "nul",
+      "category": "numeral",
+      "meaning_it": "zero; nessuno come quantificatore",
+      "meaning_en": "zero; no/none as quantifier",
+      "source": "language/noun_number_system.md",
+      "decision": "Existing documented decision synchronized from language/noun_number_system.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "omni",
+      "category": "quantifier",
+      "meaning_it": "ogni; tutti",
+      "meaning_en": "every; all",
+      "source": "language/noun_number_system.md",
+      "decision": "Existing documented decision synchronized from language/noun_number_system.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "rees",
+      "category": "verb_root",
+      "meaning_it": "tornare a essere; riprendere uno stato",
+      "meaning_en": "be again; resume a state",
+      "source": "language/copula.md",
+      "decision": "Existing documented decision synchronized from language/copula.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "remov",
+      "category": "verb_root",
+      "meaning_it": "riprendere a muoversi; rimettere in movimento",
+      "meaning_en": "resume movement; set in motion again",
+      "source": "language/verb_specification.md",
+      "decision": "Existing documented decision synchronized from language/verb_specification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tot",
+      "category": "quantifier",
+      "meaning_it": "totalita; tutto",
+      "meaning_en": "totality; all",
+      "source": "research/grammar/nominal_number_and_quantification.md",
+      "decision": "Existing documented decision synchronized from research/grammar/nominal_number_and_quantification.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "traes",
+      "category": "verb_root",
+      "meaning_it": "passare da uno stato a un altro; trasformare",
+      "meaning_en": "transition between states; transform",
+      "source": "language/copula.md",
+      "decision": "Existing documented decision synchronized from language/copula.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "uno",
+      "category": "numeral",
+      "meaning_it": "uno; indeterminativo singolare facoltativo",
+      "meaning_en": "one; optional indefinite singular",
+      "source": "language/articles.md",
+      "decision": "Existing documented decision synchronized from language/articles.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "wi",
+      "category": "function_word",
+      "meaning_it": "particella di pluralita nominale esplicita",
+      "meaning_en": "explicit nominal plural particle",
+      "source": "language/noun_number_system.md",
+      "decision": "Existing documented decision synchronized from language/noun_number_system.md; semantic detail remains governed by the cited canonical specification. No new lexical rule is introduced.",
+      "status": "confirmed"
+    },
+    {
+      "form": "amik",
+      "category": "noun",
+      "meaning_it": "amico; persona amica",
+      "meaning_en": "friend; friendly person",
+      "source": "language/word_order.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/word_order.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "dom",
+      "category": "noun",
+      "meaning_it": "casa; edificio abitativo",
+      "meaning_en": "house; dwelling",
+      "source": "language/noun_case_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_case_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "likwid",
+      "category": "property_root",
+      "meaning_it": "liquido; stato liquido",
+      "meaning_en": "liquid; liquid state",
+      "source": "language/noun_case_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_case_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "multi",
+      "category": "quantifier",
+      "meaning_it": "molti; numerosi",
+      "meaning_en": "many; numerous",
+      "source": "language/noun_number_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_number_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "san",
+      "category": "property_root",
+      "meaning_it": "sano; in buona salute",
+      "meaning_en": "healthy; in good health",
+      "source": "language/copula.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/copula.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "solid",
+      "category": "property_root",
+      "meaning_it": "solido; stato solido",
+      "meaning_en": "solid; solid state",
+      "source": "language/noun_case_system.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/noun_case_system.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tan",
+      "category": "demonstrative",
+      "meaning_it": "quello lontano da entrambi gli interlocutori",
+      "meaning_en": "that (far from both speaker and listener)",
+      "source": "language/demonstratives.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/demonstratives.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ter",
+      "category": "numeral",
+      "meaning_it": "tre",
+      "meaning_en": "three",
+      "source": "language/numerals.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/numerals.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tes",
+      "category": "demonstrative",
+      "meaning_it": "codesto; quello vicino all'interlocutore",
+      "meaning_en": "that (near listener)",
+      "source": "language/demonstratives.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/demonstratives.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tik",
+      "category": "demonstrative",
+      "meaning_it": "questo vicino al parlante",
+      "meaning_en": "this (near speaker)",
+      "source": "language/demonstratives.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/demonstratives.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "vid",
+      "category": "verb_root",
+      "meaning_it": "vedere",
+      "meaning_en": "see",
+      "source": "language/verb_specification.md",
+      "decision": "Previously example-attested form accepted by author 2026-11-13; meaning anchored to language/verb_specification.md.",
+      "status": "confirmed"
+    },
+    {
+      "form": "stud",
+      "category": "verb_root",
+      "meaning_it": "studiare; dedicarsi allo studio",
+      "meaning_en": "study; engage in learning by systematic attention",
+      "source": "Author approval 2026-11-13; international study / Italian studio / Latin studium",
+      "decision": "Canonical activity root 'study', distinct from knowledge sap, thinking pens, and understanding kap. Agentive studor = person who studies, not necessarily an enrolled student.",
+      "status": "confirmed"
     }
   ]
 }

@@ -74,7 +74,7 @@ In present-simple adjectival, nominal, and locative predicates, zero copula
 remains the compact default when no overt verb is required.
 
 - `dom bon` — the house is good
-- `uman doktor` — the person is a doctor
+- `uman kuraror` — the person is a caregiver / someone who cures
 
 When the copula is needed explicitly, the current person-number form is used:
 
@@ -135,7 +135,7 @@ existing ablative `-de`. No new transition case or free relator is introduced.
 Examples:
 
 - `traes solidad likwidde` — pass from liquid to solid
-- `traes doktorad studentde` — pass from student to doctor
+- `traes kurarorad studorde` — pass from being someone who studies to being someone who cures (a role transition, not automatic professional certification)
 - `ades solid` — become solid, with no source state asserted
 
 `traes` is an ordinary verbal root for finite TAM and person-number inflection.
@@ -159,7 +159,7 @@ and the resulting predicative complement takes resultative/transformative
 Examples:
 
 - `Y traes akwaem solidda` — Y makes/transforms the water solid
-- `Y traes umanem doktorda` — Y makes/transforms/trains the person into a doctor
+- `Y traes umanem kurarorda` — Y transforms the person's role into that of a caregiver (no professional credential is implied)
 
 This frame is distinct from both `ades X` and the intransitive two-pole frame
 `traes DEST-ad SOURCE-de`. The three constructions therefore encode:

@@ -70,3 +70,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0012: Unified permission `aut` and source `-de`](LDR-0012-aut-permission-source.md) — Accepted
 - [LDR-0013: Locative `-in` for abstract domains](LDR-0013-abstract-domain-locative.md) — Accepted
 - [LDR-0014: Physical-action valency `fer/portar/ten/kunten`](LDR-0014-physical-action-valency.md) — Accepted
+- [LDR-0015: Confirmed lexicon synchronization](LDR-0015-confirmed-lexicon-sync.md) — Accepted
+- [LDR-0016: Example lexicon and compositional agent roles](LDR-0016-example-lexicon-and-agent-roles.md) — Accepted
