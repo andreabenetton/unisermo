@@ -255,7 +255,7 @@
       "domain": "semantics-grammar",
       "id": "LDR-0029",
       "path": "docs/ldr/LDR-0029-all-24-si-prefixes.md",
-      "sha256": "02cbe6d2166f36f13bb0354b05741865c00905ae3a848af075400223f5e930a9",
+      "sha256": "ad2cece53044e391335f363f6153c8653b82a82f9ea21eb7c665fbd8cc3e8481",
       "status": "Accepted",
       "supersedes": "none",
       "title": "All 24 SI decimal prefixes with milli double-l and typed unit attachment"
