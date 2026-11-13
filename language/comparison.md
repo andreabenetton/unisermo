@@ -313,3 +313,20 @@ for N people" and does not reinterpret `pro` as quantitative capacity.
 The exact verb for lodging/hosting people remains unratified, so a fully
 canonical translation of "large enough to accommodate five people"
 is pending that lexical choice.
+
+
+## 16. One scalar meaning, qualitative and numerical degree (author ratification 2026-11-13; LDR-0025)
+
+An inherently gradable property has **one** underlying lexical meaning; translations such as 'P is probable' and 'P has a degree of probability' do not warrant two roots or independently defined meanings. Invariant analytic modifiers `minu`, `pok`, `ase`, `mult`, `ekstrem` and threshold `suf` qualify the *same property*, while a numerical specification of that same scale is possible **where a meaningful and validated measurement convention exists**. No universal numerical unit is implied for nonmeasurable gradable qualities.
+
+`lik` is a separately and explicitly **ratified** root for the gradable **probability of a finite proposition** (author approval, 2026-11-13). It is not a synonym of `pos` (logical/epistemic possibility), `deb` (necessity), `kred` (belief) or `prob` (morally upright). The bounded propositional constructions are:
+
+- `lik uman mova` — it is probable that the person moves; no fixed 50% numerical threshold is lexicalized.
+- `minu lik uman mova` — minimally probable that the person moves.
+- `pok lik uman mova` — low probability of the person's movement.
+- `ase lik uman mova` — moderate likelihood of the movement.
+- `mult lik uman mova` — high probability of the movement.
+- `ekstrem lik uman mova` — extremely high probability of the movement.
+- `suf lik uman mova` — probable enough relative to the relevant decision threshold.
+
+The modifier precedes `lik`, which takes the following complete finite Boolean proposition as its argument. A specific numeric probability may ultimately be expressed using **existing** fractions/percentages such as `kin senim` = 5%, but a scoped composition of number and `lik P` is **not yet ratified**; such sentences must not be generated as canonical grammar. Likewise no independently ratified personless `likd/likf` operator tense, nested `lik pos P`, or generic scalar comparison over two propositions is introduced by this decision. Unmodified `lik` has a context-dependent threshold for idiomatic translation only, never an automatic precise percentage cutoff.

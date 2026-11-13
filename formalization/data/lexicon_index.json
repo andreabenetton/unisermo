@@ -880,6 +880,18 @@
     },
     {
       "categories": [
+        "proposition_probability_property"
+      ],
+      "decision": "One gradable probability property, not separate meanings for 'is likely' and 'has a probability'. Propositional lik P has context-dependent unquantified interpretation, no fixed >50% threshold. Existing qualitative degree modifiers minu, pok, ase, mult, ekstrem and sufficiency suf apply to the same scale. Numeric probability values may be represented by existing fractions/percentages but their scoped syntactic attachment is not yet approved. Distinct from pos possibility, deb necessity, kred belief, and prob moral good.",
+      "form": "lik",
+      "meaning_en": "likelihood; probability of a proposition on a gradable scale",
+      "meaning_it": "probabilita; probabilmente; proprieta scalare che una proposizione si verifichi",
+      "origin": "Author explicit ratification 2026-11-13; English likely / likelihood, with international lik form",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "nominal_predicate"
       ],
       "form": "likwid",
