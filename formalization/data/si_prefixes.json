@@ -1,0 +1,151 @@
+{
+  "schema": "unisermo/si-prefixes@1",
+  "status": "confirmed",
+  "reference": "BIPM SI Brochure 9th edition v3.02 table 7",
+  "entries": [
+    {
+      "form": "kwetta",
+      "si_name": "quetta",
+      "si_symbol": "Q",
+      "exponent": 30
+    },
+    {
+      "form": "ronna",
+      "si_name": "ronna",
+      "si_symbol": "R",
+      "exponent": 27
+    },
+    {
+      "form": "jotta",
+      "si_name": "yotta",
+      "si_symbol": "Y",
+      "exponent": 24
+    },
+    {
+      "form": "zetta",
+      "si_name": "zetta",
+      "si_symbol": "Z",
+      "exponent": 21
+    },
+    {
+      "form": "eksa",
+      "si_name": "exa",
+      "si_symbol": "E",
+      "exponent": 18
+    },
+    {
+      "form": "peta",
+      "si_name": "peta",
+      "si_symbol": "P",
+      "exponent": 15
+    },
+    {
+      "form": "tera",
+      "si_name": "tera",
+      "si_symbol": "T",
+      "exponent": 12
+    },
+    {
+      "form": "giga",
+      "si_name": "giga",
+      "si_symbol": "G",
+      "exponent": 9
+    },
+    {
+      "form": "mega",
+      "si_name": "mega",
+      "si_symbol": "M",
+      "exponent": 6
+    },
+    {
+      "form": "kilo",
+      "si_name": "kilo",
+      "si_symbol": "k",
+      "exponent": 3
+    },
+    {
+      "form": "ekto",
+      "si_name": "hecto",
+      "si_symbol": "h",
+      "exponent": 2
+    },
+    {
+      "form": "deka",
+      "si_name": "deca",
+      "si_symbol": "da",
+      "exponent": 1
+    },
+    {
+      "form": "desi",
+      "si_name": "deci",
+      "si_symbol": "d",
+      "exponent": -1
+    },
+    {
+      "form": "senti",
+      "si_name": "centi",
+      "si_symbol": "c",
+      "exponent": -2
+    },
+    {
+      "form": "milli",
+      "si_name": "milli",
+      "si_symbol": "m",
+      "exponent": -3
+    },
+    {
+      "form": "mikro",
+      "si_name": "micro",
+      "si_symbol": "µ",
+      "exponent": -6
+    },
+    {
+      "form": "nano",
+      "si_name": "nano",
+      "si_symbol": "n",
+      "exponent": -9
+    },
+    {
+      "form": "piko",
+      "si_name": "pico",
+      "si_symbol": "p",
+      "exponent": -12
+    },
+    {
+      "form": "femto",
+      "si_name": "femto",
+      "si_symbol": "f",
+      "exponent": -15
+    },
+    {
+      "form": "atto",
+      "si_name": "atto",
+      "si_symbol": "a",
+      "exponent": -18
+    },
+    {
+      "form": "zepto",
+      "si_name": "zepto",
+      "si_symbol": "z",
+      "exponent": -21
+    },
+    {
+      "form": "jokto",
+      "si_name": "yocto",
+      "si_symbol": "y",
+      "exponent": -24
+    },
+    {
+      "form": "ronto",
+      "si_name": "ronto",
+      "si_symbol": "r",
+      "exponent": -27
+    },
+    {
+      "form": "kwekto",
+      "si_name": "quecto",
+      "si_symbol": "q",
+      "exponent": -30
+    }
+  ]
+}
