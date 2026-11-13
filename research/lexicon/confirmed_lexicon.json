@@ -903,6 +903,15 @@
       "source": "Author ratification 2026-11-12; Latin auctoritas and international authority (canonical /a.u.t/, no h)",
       "status": "confirmed",
       "decision": "Short finite servile root with dependent uninflected lexical verb/root. Unifies general permission and formal authorization; source is optional and expressed by the EXISTING ablative -de in the narrowly specified post-modal/pre-infinitive valency slot: auti umande mov = permitted by a person to move. auti umande mov domde distinguishes grant-source umande from movement-source domde. pos opportunity/feasibility is not normative permission, nor does aut entail execution. no auti V denies permission; auti no V permits refraining; neither lack of permission nor lack of obligation automatically entails an explicit prohibition (debi no V). Source-qualified denial applies only to the cited grantor. The spelling auth with h and generic bound aut- are not ratified. Extending -in to normative or other abstract domains remains open; Phase 1 parser does not implement this frame."
+    },
+    {
+      "form": "tent",
+      "category": "verb_root",
+      "meaning_it": "tentare; compiere un tentativo effettivo e orientato a uno scopo",
+      "meaning_en": "attempt; undertake an actual goal-directed effort to realize a dependent event",
+      "source": "Author ratification 2026-11-13; Latin tentare",
+      "decision": "Ordinary finite servile root governing one uninflected dependent lexical verb with shared subject and existing verb-governed arguments. Attempt entails a real goal-directed effort but not successful completion, opportunity, capacity or permission. no tenti V denies attempting; tenti no V means try to refrain from V. Not a generic intentionality marker or an aspect. Distinct from ten and does not itself retire stud.",
+      "status": "confirmed"
     }
   ]
 }
