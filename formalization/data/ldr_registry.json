@@ -179,6 +179,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Separate volitional desire from intended action"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "grammar",
+      "id": "LDR-0022",
+      "path": "docs/ldr/LDR-0022-bare-propositional-serviles.md",
+      "sha256": "78a37d6b8476f9f3c7f43051da9cdd8580cb8110e84a758a15e8dc860b593cc2",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Bare servile heads governing finite propositions, first instance pos"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
