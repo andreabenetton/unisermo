@@ -165,8 +165,37 @@ class PropositionParser:
             return {"kind": "wide_negation", "operator": "no lim",
                     "operand": self._expression(operand, depth + 1),
                     "scope": "complete_truth_conditional_operand"}
+        # Ratified shared-subject serviles are finite heads plus bare V.
+        # The separate proposition-level frame is an invariant bare head
+        # plus a complete *finite* proposition. Only epistemic pos is
+        # semantically licensed in this parser subset; other heads need an
+        # explicit, independently ratified propositional reading.
+        modal_negative = len(words) >= 2 and words[:2] == ["no", "pos"]
+        modal_positive = words[0] == "pos"
+        if modal_negative or modal_positive:
+            scope_words = words[2:] if modal_negative else words[1:]
+            if not scope_words or not any(self._finite(w) for w in scope_words):
+                raise ValueError("bare propositional pos needs a finite proposition")
+            if scope_words[0] in {"pos", "no"} and (
+                    scope_words[0] == "pos" or
+                    scope_words[:2] == ["no", "pos"]):
+                raise ValueError("stacked bare epistemic modals are not ratified")
+            if any(w in SUBORDINATES | {"alor", "lim", "ka", "ma", "ergo", "nam", "due"}
+                   for w in scope_words):
+                raise ValueError("bare pos with non-Boolean/mixed subordinate scope is not ratified")
+            operand = self._expression(scope_words, depth + 1)
+            if operand["kind"] not in {"svo_clause", "servile_clause",
+                                       "zero_copula", "copular_clause",
+                                       "coordination", "exclusive_choice"}:
+                raise ValueError("unsupported proposition kind under bare pos")
+            return {"kind": "propositional_servile",
+                    "operator": "pos", "operator_form": "bare_root",
+                    "interpretation": "epistemic_possibility",
+                    "negative": modal_negative,
+                    "operand": operand, "operand_finite": True,
+                    "entails_operand_truth": False}
         if words[0] == "o":
-            # Initial o is exactly-one, not binary parity XOR. All later o
+            # Initial o is exactly-one, not binary XOR. All later o
             # tokens in this licensed flat group separate alternatives.
             splits = [i for i in range(1, len(words)) if words[i] == "o"]
             if not splits:
