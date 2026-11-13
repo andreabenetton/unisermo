@@ -216,7 +216,8 @@ class PropositionParser:
                                        "coordination", "exclusive_choice"}:
                 raise ValueError("unsupported embedded proposition kind")
             return {"kind": "propositional_servile",
-                    "operator": head, "operator_form": "personless_tensed_head",
+                    "operator": head, "operator_form": ("bare_root" if assessment_tense == "present"
+                                      else "personless_tensed_head"),
                     "assessment_tense": assessment_tense,
                     "embedded_tense_anchor": "relative_to_assessment",
                     "interpretation": interpretation,
@@ -257,7 +258,8 @@ class PropositionParser:
                                        "coordination", "exclusive_choice"}:
                 raise ValueError("unsupported proposition kind under bare pos")
             return {"kind": "propositional_servile",
-                    "operator": head, "operator_form": "personless_tensed_head",
+                    "operator": head, "operator_form": ("bare_root" if assessment_tense == "present"
+                                      else "personless_tensed_head"),
                     "assessment_tense": assessment_tense,
                     "embedded_tense_anchor": "relative_to_assessment",
                     "interpretation": interpretation,
