@@ -22,7 +22,8 @@ numeral, kinship and corpus tests still run.
 | Seven nominal cases | Confirmed noun heads, nominalized participles, limited arguments with `-em/-ad/-de/-in` and special `-da` result | General lexical valency, all case stacking/order permutations | `language/noun_case_system.md` |
 | Quantification | Existing canonical cardinal, ordinal, factor, fraction and percentage parser; one simple modifier at noun phrase level | Mixed numerals and modifiers without explicit rule; fraction NPs inside ordinary clauses | `language/numerals.md` |
 | Kinship | Existing typed relation path, licensed `NUMjer` repetition | Arbitrarily deep or ambiguous kinship paths outside guarded subset | `language/kinship.md` |
-| Simple sentences | Preserves original SVO AST, finite agreement, accusative object, pronoun pro-drop, `ka`; adds selected cases and invariant relators | General SOV/OSV/topicalization and arbitrary valency | `language/word_order.md` |
+| Simple sentences | Preserves original SVO AST, finite agreement, accusative object, pronoun pro-drop, `ka`; adds selected cases and invariant relators | General SOV/OSV/topicalization and unrestricted lexical valency | `language/word_order.md` |
+| Lexically constrained valency | Source-linked frames for the intransitive/causative `mov` family (including approved phase/directional variants) and exact `traes` state-transition/causative-result frames; shared in modal complements | Unspecified argument frames of other verbs, competing valency readings, mixed/stacked cases with unclear attachment | `language/derivation.md`, `language/noun_case_system.md`, `formalization/data/valency_frames.json` |
 | Modal/servile complements | Single finite `pos/deb/vol/pot/sap/aut` + one bare verb root; distinct `no HEAD ROOT` and `HEAD no ROOT` | Nested serviles, stacked negation, independent subordinate subjects or unratified permission operators | `language/verb_specification.md`, `language/negation.md` |
 | Source of permission | `aut SOURCE-de VERB`, source precedes action; action's own later source stays separate | More than one granting source; authority verification and normative domain inference | LDR-0012 |
 | Zero copula | Limited stative quality head and explicit subject, including `tik no bel` | Full predicate noun-class system, adverbial comparatives and other copular argument frames | `language/copula.md` |
@@ -39,7 +40,7 @@ numeral, kinship and corpus tests still run.
 | Purpose | `fin` + bare verb + simple object, or free relator + nominal NP | Other purpose-structure combinations and sufficiency thresholds `suf` | `language/noun_case_system.md` |
 | Possession and focus | Typed personal genitives `is/us/as/ins/uns/ans` and referentially specific `aos/aes/anos/anes`, bounded prenominal genitive NPs, licensed postposed `part WHOLE-s`, NP-final `-si/-no` with distinct clause-negative focus | Nested/multiple possessor ambiguity, mixed focus + servile/whole-question/`no lim` scope, multiple focus per clause, postposed-genitive focus attachment | `language/negation.md`, `research/grammar/polarity_and_focus_clitics.md`, `language/noun_case_system.md`, `research/grammar/case_and_possession.md` |
 | Comparison and degree | Some roots in lexicon; no complex degree parser | `major/minor/masim/minus`, `suf` threshold, manner of comparison | `language/comparison.md` |
-| Productive derivation | Explicit confirmed root/compound lexemes and existing nominalized participles | General recursive derivation; phase `ad-/de-/in-/re-`, agent `-or`, instrument `-il`, abstract `-itat` as freely generated parses | `language/derivation.md` |
+| Productive derivation | Single-layer agent `-or`, instrument `-il`, domain `-ia`, abstract `-itat`, relational adjective `-al`, and bounded phase `in-/ad-/de-/re-`, joint-event `kun-`, restricted contrary `ne-`; case follows derived nouns, finite TAM follows derived verbs | Unlimited derivational stacking, lexicalized semantic reinterpretation, unratified roots and other prefixes | `language/derivation.md` |
 | Full semantics | **Not implemented**: typed syntax only | Referent identity, truth tables, deontic authorization worlds, pragmatic entailments, causal verification, LLM interpretation | `formalization/semantics/README.md` |
 
 ## Safety and compatibility invariants
@@ -101,11 +102,45 @@ Positive and negative fixtures live in
 `tests/test_focus_genitive_parser.py`. Parser implementation
 does **not** create new lexemes or a new possessive suffix.
 
+## Derivation and valency implementation (2026-11-13)
+
+`generate_verb`, `generate_noun` and `analyze_word` now
+share a bounded derivative resolver:
+
+- `fakor`, `fakil`, `fakia`, `klaritat`,
+  `umanitat` are productive **nominal** lexemes; the
+  case is attached after derivation: `fakorem`,
+  `fakias`, `klaritatem`.
+- `fakal` is a relational **adjective**, not a noun or
+  finite verb, and may be the only adjectival modifier
+  in a restricted simple NP.
+- `refak`, `adfak`, `infak`, `defak`
+  and `kunfak` are compositional **verbs**;
+  finite and resultative morphology remains regular.
+- `nebel` is a bounded semantic antonym of a
+  confirmed opposable quality. Arbitrary
+  `ne-` + nominal, e.g. `nedom`, is not licensed.
+
+Lexicalized words such as `major`, `kunten` and
+`nelegal` retain indexed lexical meanings. The
+source-derived form's status identifies whether its
+base is a confirmed lexeme or only a normative
+attestation. The lexicon itself is **unchanged**.
+
+A source-linked valency table
+(`formalization/data/valency_frames.json`) formalizes
+the attested `mov` intransitive/causative alternation
+and the two exact `traes` constructions. Other verbs
+still require source-specific valency design.
+`tests/test_productive_derivation_valency.py`
+includes positive and negative executable examples.
+
 ## Recommended continuation
 
-The first focus/genitive subset is now implemented. Next prioritize
-**reusable productive derivation** and **non-ambiguous argument/valency
-schemas**, followed by explicitly specified focus interactions with
-serviles and complex clauses. Each addition should extend this matrix
-and add positive/negative executable tests; no new lexemes or
-grammatical rules should be silently introduced.
+Productive single-layer derivation and the `mov`/`traes`
+valency subsets are implemented. Next prioritize **coverage of
+individually ratified valency frames** and **explicit semantic attachment
+for more complex nominal modifiers**, followed by focus interactions
+with serviles and complex clauses. Each expansion must include
+positive and negative executable tests; no new lexemes, affix
+meanings or grammatical rules should be silently introduced.
