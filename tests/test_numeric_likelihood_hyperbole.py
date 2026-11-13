@@ -51,9 +51,13 @@ class NumericLikelihoodTests(unittest.TestCase):
         self.assertEqual(wide["kind"], "propositional_degree_property")
         self.assertEqual(wide["operand"]["kind"], "coordination")
 
+    def test_quantity_of_subject_is_not_numeric_probability(self):
+        clause = self.lang.parse_sentence("lik setdek uman mova")
+        self.assertIsNone(clause["numeric_measure"])
+        self.assertEqual(clause["kind"], "propositional_degree_property")
+
     def test_do_not_invent_unratified_numerical_constructions(self):
         for sentence in (
-            "lik setdek uman mova",
             "lik setdek senim",
             "mult lik setdek senim uman mova",
             "lik sen nulim uman mova",
