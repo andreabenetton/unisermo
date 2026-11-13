@@ -1,0 +1,31 @@
+name: Propositional tense and necessity
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'docs/ldr/LDR-0024-proposed-personless-modal-tense-necessity.md'
+      - 'tests/test_propositional_tense_necessity.py'
+      - '.github/workflows/propositional-tense-necessity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  modal-tense:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate source indexes and grammar
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Ratified personless tense and necessity regression
+        run: python -m unittest discover -s tests -p 'test_propositional_tense_necessity.py' -v
+      - name: Earlier modal form regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_bare_propositional_servile.py' -v
+          python -m unittest discover -s tests -p 'test_subject_bare_servile.py' -v
