@@ -15,5 +15,15 @@
   "source_hypothesis_gold_included": false,
   "one_english_gloss_collision": "lik sirka setdek senim uman mova. (same meaning, two paraphrases)",
   "stage": "proposed Italian meaning equivalence only, no entailment judgments",
-  "notes": "Owner requested each distinct Unisermo passage appear once only. Maintain old UCUB entailment corpus unchanged; this is a separate review dataset."
+  "notes": "Owner requested each distinct Unisermo passage appear once only. Maintain old UCUB entailment corpus unchanged; this is a separate review dataset.",
+  "tally_forms": {
+    "L1": "https://tally.so/r/DqkEyX",
+    "L2": "https://tally.so/r/zEyRoZ",
+    "L3": "https://tally.so/r/5XjgDv",
+    "L4": "https://tally.so/r/dba41D"
+  },
+  "published": true,
+  "form_language": "it",
+  "form_questions": "one unique passage + one proposed Italian meaning + choice (yes/no/ambiguous/unable) + optional correction",
+  "legacy_submissions_on_rebuild": 0
 }
