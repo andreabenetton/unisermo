@@ -377,9 +377,11 @@ inventory and are distinguished by the action root:
 necessarily a former owner. `kunten` remains a **lexicalized
 compound**; productive associative `kun-` does not
 mean containment on other verbs. A regular single phase
-prefix or associative event prefix preserves the base
-frame's arguments while applying its already-approved
-event-phase or jointness meaning. A separate locative
+prefix preserves the base's arguments; a productive
+associative event prefix does so for `fer`, `portar`
+and `ten`, without adding an obligatory co-agent.
+A further `kun-` on lexicalized `kunten`
+(`kunkunten`) is outside the bounded approved subset. A separate locative
 `-in` or normal invariant relator may act as a
 nonselected adjunct, not a new patient argument.
 
