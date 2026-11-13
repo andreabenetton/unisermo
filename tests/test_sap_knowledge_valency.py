@@ -55,8 +55,16 @@ class SapFamilyValencyTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     self.lang.parse_sentence(sentence)
 
+    def test_procedural_dependent_preserves_its_own_valency(self):
+        for finite in ("sapi", "adsapi", "resapi"):
+            with self.subTest(finite=finite):
+                ast = self.lang.parse_sentence(finite + " kunten akwaem")
+                self.assertEqual(ast["knowledge_frame"], "procedural_knowledge")
+                self.assertEqual(ast["dependent"]["valency"], "spatial_containment")
+                self.assertEqual(ast["dependent"]["object"]["lemma"], "akwa")
+
     def test_reject_unlicensed_procedural_objects(self):
-        for sentence in ("adsapi dok domem", "desapi dok umanad"):
+        for sentence in ("adsapi dok umanad", "desapi kunten domde"):
             with self.subTest(sentence=sentence):
                 with self.assertRaises(ValueError):
                     self.lang.parse_sentence(sentence)
