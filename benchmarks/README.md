@@ -118,3 +118,8 @@ The analysis lists worst and best samples only for the development split;
 holdout gets aggregate metrics, not ranked examples. Every pilot translation
 is pending independent semantic review. LDR-0007 specifies balanced 1,000-pair
 quotas; no fabricated or unreviewed 1,000-pair corpus is presented as evidence.
+
+
+## UCUB-001 — complex LLM comprehension (new experimental suite)
+
+See [`ucub001/README.md`](ucub001/README.md). A new deterministic 80-case, four-level, four-arm semantic reasoning suite has been prepared independently of the historical 78-pair tokenization pilot. The suite exposes `cold`, `lexicon`, `grammar` and `english` conditions, frozen development/holdout group splits, a typed manual gold draft, offline prompt preparation/scoring and an optional manual OpenRouter workflow for Qwen/Gemma. **Gold labels and English equivalences are not independently human-reviewed**; no accuracy measurements are claimed. No tokenization pilot or historical corpus has been overwritten.
