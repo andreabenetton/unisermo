@@ -58,7 +58,7 @@ class IntentionServileTests(unittest.TestCase):
     def test_index_and_lexical_distinction(self):
         self.assertIn("int",self.lang.verbs)
         self.assertEqual(self.lang.lexicon["int"]["status"],"confirmed_lexicon")
-        self.assertIn("adopted",self.lang.lexicon["int"]["decision"])
+        self.assertIn("settled present intention",self.lang.lexicon["int"]["decision"])
         self.assertEqual(self.lang.valency_evidence("int")["status"],"undetermined")
 
 
