@@ -1,10 +1,14 @@
 # RFC — Physical action valency: fer, portar, ten, kunten
 
-> **Status: PROPOSAL / NOT RATIFIED.** Prepared 2026-11-13 for the
-> language owner's next explicit decision. This document is a design
-> candidate, **not** a source of canonical grammar. Do not update
-> `language/`, `research/grammar/confirmed_decisions.json`, the
-> valency registry or executable parser from this RFC until approval.
+> **Status: HISTORICAL RFC — CORE ACCEPTED 2026-11-13 in LDR-0014.**
+> The author ratified the four overt-object physical valency frames,
+> with fer physical source, portar physical source/destination, ten
+> maintained constraint, kunten physical containment, and regular
+> single-prefix inheritance. The authoritative grammar is now
+> `language/derivation.md`, `language/verb_specification.md` and
+> `docs/ldr/LDR-0014-physical-action-valency.md`.
+> This RFC preserves the original deliberation and questions; any
+> alternative readings or object omission remain **unratified**.
 
 ## Established source constraints
 
@@ -35,7 +39,7 @@ The existing parser reports these lexical roots as
 generic SVO support is a **syntax subset**, not an accepted lexical
 valency inventory for these roots.
 
-## Recommended four minimum frames (require author ratification)
+## Four selected minimum frames (ratified; historical discussion)
 
 ### A. Physical taking: fer
 
@@ -61,9 +65,8 @@ Illustrations (all example nouns are already attested or indexed):
 - `i feri portaem umande` = I take the door from a person
   (not necessarily that person's property).
 
-**Open choice A:** Does `SOURCE-de` belong to the ordinary
-`fer` frame as proposed, or should it remain an untyped
-independent ablative adjunct until explicitly validated?
+**Resolved A (2026-11-13):** `SOURCE-de` is an optional physical
+source argument of `fer`, never a necessary previous owner.
 
 ### B. Physical carrying: portar
 
@@ -89,10 +92,9 @@ Examples:
 - `i portari portaem domde umanad` = I carry the
   door from the house toward the person.
 
-**Open choice B:** Are the two spatial arguments both
-licensed as optional governed complements (proposed), or should
-their syntax remain generic spatial adjuncts, with only `X-em`
-approved as an obligatory lexical argument?
+**Resolved B (2026-11-13):** optional spatial `SOURCE-de` and
+`DEST-ad` are accepted in the canonical `portar` frame, without
+requiring successful arrival.
 
 ### C. Holding/maintaining a constraint: ten
 
@@ -139,10 +141,9 @@ CONTAINER-NOM KUNTEN-FIN CONTENTS-em
 Example: `dom kuntena akwaem` = the house contains water
 physically.
 
-**Open choice C:** Should `kunten` require an explicit
-accusative contents NP in the parser subset (proposed), or
-license bare existential 'contain something' without one?
-Neither choice follows automatically from lexical meaning.
+**Resolved C (2026-11-13):** the parser subset requires an overt
+accusative contents NP. Object omission remains a separate
+unresolved grammatical decision rather than a permanent ban.
 
 ## Derived verbs and prefix inheritance
 
@@ -166,7 +167,7 @@ Proposed safe default:
 - Valency inheritance for *all* derivational combinations
   is **not** implied; no silent unrestricted inheritance.
 
-## Proposed parser contract, pending approval
+## Accepted bounded parser contract
 
 ```text
 fer     object=required; X-em=taken_theme; source-de=optional
@@ -206,8 +207,9 @@ ACCEPTED.
 
 ## Authorization boundary
 
-This RFC responds to an instruction to **proceed with
-analysis of the four verb families**, not an explicit
-ratification of the particular new argument mappings.
-It should remain a **draft PR**, unmerged, until the
-language owner confirms or amends the proposals.
+The owner subsequently **explicitly ratified** the proposed
+four overt-object frames on 2026-11-13 and requested integration
+of recent approved PRs. LDR-0014 governs the accepted scope.
+This RFC is historical evidence only. Its extra questions
+about discourse-driven object omission, type systems and
+mixed/stacked cases remain open until separately decided.
