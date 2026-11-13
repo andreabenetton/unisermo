@@ -48,19 +48,19 @@ class UCUB001Tests(unittest.TestCase):
             self.assertIn("Unisermo grammar:", prompt(row, "grammar")["messages"][0]["content"])
 
     def test_markdown_fence_is_separately_scored_not_silently_accepted_as_raw_json(self):
-        fenced = '```json\\n{"label": "entailed"}\\n```'
+        fenced = '```json\n{"label": "entailed"}\n```'
         self.assertIsNone(parse_label(fenced))
         self.assertEqual(parse_label_with_format(fenced), ("entailed", "fenced_json"))
         self.assertEqual(parse_label_with_format('{"label": "entailed"}'), ("entailed", "raw_json"))
         self.assertEqual(parse_label_with_format("entailed"), (None, "invalid"))
         self.assertEqual(parse_label_with_format('Answer: {"label":"entailed"}'), (None, "invalid"))
-        self.assertEqual(parse_label_with_format('```json\\n{"label": "entailed", "other": 1}\\n```'), (None, "invalid"))
-        self.assertEqual(parse_label_with_format('```json\\n{"label": "entailed"}\\n``` trailing'), (None, "invalid"))
-        self.assertEqual(parse_label_with_format('```json\\n{"label": "entailed"}\\n```\\n```json\\n{"label": "contradicted"}\\n```'), (None, "invalid"))
+        self.assertEqual(parse_label_with_format('```json\n{"label": "entailed", "other": 1}\n```'), (None, "invalid"))
+        self.assertEqual(parse_label_with_format('```json\n{"label": "entailed"}\n``` trailing'), (None, "invalid"))
+        self.assertEqual(parse_label_with_format('```json\n{"label": "entailed"}\n```\n```json\n{"label": "contradicted"}\n```'), (None, "invalid"))
         chosen = select(self.rows, "development", 4)
         predictions = [
             {"id": r["id"], "condition": "cold",
-             "answer": "```json\\n" + json.dumps({"label": r["gold"]}) + "\\n```",
+             "answer": "```json\n" + json.dumps({"label": r["gold"]}) + "\n```",
              "usage": {"prompt_tokens": 10, "completion_tokens": 5}}
             for r in chosen
         ]
