@@ -108,3 +108,8 @@ The root-only (uninflected) `pos` governs a complete finite proposition, without
 ## Subject-bearing bare propositional serviles (ratified 2026-11-13)
 
 Syntax: `SUBJECT [no] SERVILE_ROOT FINITE_PROPOSITION`, with an overt subject of the head and an independently inflected embedded proposition. Valid initial propositional heads `vol/int/tent/sap/kred` express desire, adopted goal, real goal-directed attempt, factual knowledge, and belief, respectively. They do not automatically cause the embedded event. `sap` positive knowledge is factive (subject knows P implies P), while `kred` belief is not. Negation of the outer knowledge assertion does not carry a truth entailment. The impersonal `pos P` frame remains separate. `lim` delimits scoped operands before following connectors.
+
+
+## Propositional operator tense and necessity, LDR-0024 (ratified 2026-11-13)
+
+The propositional servile frame permits `ROOT + time(Ø/d/f)` while omitting person and number. AST fields `assessment_tense` and `embedded_tense_anchor: relative_to_assessment` mark the new independent temporal layer; no present/past/future suffix is inferred from the dependent verb. Impersonal `deb P` expresses necessity under contextual premises, distinct from the finite personal normative `debi V`. `no deb P` is NOT-NECESSARY(P), not IMPOSSIBLE(P). `deb no P` is NECESSARY(NOT P). Personless aspectual variants, generic nested modality and numerical likelihood semantics remain open.
