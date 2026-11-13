@@ -22,9 +22,10 @@ from .parser.clause import ClauseParser
 from .parser.kinship import KinshipParser
 from .parser.numeral import NumeralParser
 from .parser.proposition import PropositionParser
+from .parser.derivation import DerivationParser
 
 
-class Unisermo(MorphologyGenerator, WordParser, NumeralParser, KinshipParser, PropositionParser, ClauseParser):
+class Unisermo(DerivationParser, MorphologyGenerator, WordParser, NumeralParser, KinshipParser, PropositionParser, ClauseParser):
     def __init__(self) -> None:
         self.morph = load("morphology.json")
         index = load("lexicon_index.json")
