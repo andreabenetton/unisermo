@@ -212,3 +212,14 @@ ratified here. Unisermo punctuation carries no grammatical
 scope. Its typed parser recognizes a preposed locative phrase but
 **preserves unresolved event/domain attachment** rather than declaring
 whole-proposition scope from initial placement alone. See [noun_case_system.md](noun_case_system.md).
+
+
+## Propositional bare serviles and `lim` scope (author ratification 2026-11-13)
+
+The **root-only** propositional servile frame `SERVILE_ROOT FINITE_PROPOSITION` takes a finite clause, not a bare infinitive. Its initial semantically licensed instance is epistemic `pos`:
+
+- `pos uman mova` — It is possible that the person moves.
+- `pos uman mova e vida` — It is possible that the person moves **and** sees: `pos` scopes over both finite clauses.
+- `pos uman mova lim e vida` — It is possible that the person moves, **and** the person sees: the already ratified `lim` closes the left proposition before `e`, keeping `vida` outside modal scope.
+
+A preposed `no pos` negates the propositional modal, while `no` before a finite verb inside the operand negates that verb. This extends the uses of the already ratified closing `lim`, not the inventory of markers. Bare-root modal scope across `due`, `nam`, `ergo` or subordinate operators is not decided. The personal `posi mov` frame remains separate.
