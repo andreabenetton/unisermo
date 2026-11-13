@@ -1,0 +1,33 @@
+name: Tent attempt-servile regression
+
+on:
+  pull_request:
+    paths:
+      - 'language/**'
+      - 'research/lexicon/confirmed_lexicon.json'
+      - 'formalization/**'
+      - 'docs/ldr/LDR-0020-attempt-servile-tent.md'
+      - 'tests/test_tent_servile.py'
+      - '.github/workflows/tent-servile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tent-servile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify generated indexes
+        run: python -m formalization build --check
+      - name: Validate grammar sources
+        run: python -m formalization validate
+      - name: Attempt servile regression
+        run: python -m unittest discover -s tests -p 'test_tent_servile.py' -v
+      - name: Existing servile regression
+        run: python -m unittest discover -s tests -p 'test_servile_negation_ratification.py' -v
