@@ -9,7 +9,7 @@ supersedes: none
 
 # LDR-0018 — Exchange semantics and the candidate root `kambi`
 
-## Context
+## Context and problem
 
 The author established a design preference for general compositional verbs instead of two opaque roots for converse descriptions of the same event: prospective `don` for giving/receiving and transmission of physical or informational objects. A further candidate is `kambi` (exchange), intended to make buy/sell, barter and other reciprocal transfers describable without individual 'buy' and 'sell' roots.
 
@@ -22,6 +22,10 @@ The author established a design preference for general compositional verbs inste
 3. Adopt a generic `kambi` = participate in a reciprocal exchange. Base event semantics are useful independently of exactly which goods are exchanged, but the full two-theme frame requires specification.
 4. Overload existing `per`, `kun`, `pro` or nominal `-de/-ad` to encode consideration. **Reject as an implicit default:** `per` is means/instrument, `kun` is comitative, `pro` benefactive, and `-ad/-de` destinations/sources. A payment-for relation is not automatically one of these.
 5. Add a dedicated countervalue relator or a tightly constrained valency construction. A possible later solution, **not adopted here**, is an explicit reciprocal-theme operator. Its morphology should be decided only after examples and ambiguity analysis.
+
+## Decision or hypothesis
+
+The author-preferred proposal is a prospective exchange verb with two independently typed theme roles; acceptance of parser implementation is deferred. See the detailed owner-selected syntax below.
 
 ## Proposed event semantics
 
@@ -167,6 +171,10 @@ To avoid false conclusions, this example expresses a **1:1 nominal amount exchan
 
 A globally *canonical* case-bearing monetary noun phrase should be defined in one place. The prefix-head pattern chosen here is intentionally scoped to the ISO-currency namespace; whether other standardized identifiers should use a related schema requires a later LDR, rather than automatic generalization.
 
+## Evaluation and evidence
+
+The prospective frames have been analyzed with English-level semantic contrast scenarios and typed-money fixtures. No successful grammar/parser validation is yet claimed. The scenario files are not gold-standard Unisermo sentences.
+
 ## Testable questions
 
 1. Does `kambi` without objects convey a reciprocal event rather than mere unilateral giving?
@@ -180,6 +188,10 @@ A globally *canonical* case-bearing monetary noun phrase should be defined in on
 ## Falsification / acceptance criteria
 
 Before ratification, document at least 12 minimal contrast examples, including barter, a paid sale, a failed delivery, a partial exchange, a loan, two unrelated gifts, and a canceled exchange. Independent reviewers should identify actor, counterparty, X and Y identically and separate facts from goals. Exact parser support must be explicitly added and tested after approval; a truth-value gold should be reviewed independently of parser output.
+
+## Consequences and compatibility
+
+Keep the existing seven-case inventory unchanged; introduce no arbitrary new meanings for `kun` or `per`. The currency-code namespace is deliberately bounded, and the parser lacks a ratified executable exchange frame pending implementation and adjudication.
 
 ## Decision authority
 

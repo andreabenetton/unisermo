@@ -10,7 +10,9 @@
     "research/grammar/confirmed_decisions.json#motion_force_roots_pel_trak",
     "language/derivation.md#canonical-physical-action-argument-frames-ratified-2026-11-13",
     "language/verb_specification.md#12-physical-action-valency-fer-portar-ten-kunten-ratified-2026-11-13",
-    "docs/ldr/LDR-0014-physical-action-valency.md"
+    "docs/ldr/LDR-0014-physical-action-valency.md",
+    "language/verb_specification.md#13-knowledge-state-valency-sap-family-ratified-2026-11-13",
+    "docs/ldr/LDR-0019-sap-knowledge-family.md"
   ],
   "motion": {
     "base": "mov",
@@ -166,5 +168,38 @@
         "entails_abstract_inclusion": false
       }
     }
+  },
+  "knowledge": {
+    "source": "docs/ldr/LDR-0019-sap-knowledge-family.md",
+    "status": "ratified",
+    "base": "sap",
+    "phase_verbs": [
+      "adsap",
+      "insap",
+      "desap",
+      "resap"
+    ],
+    "frames": [
+      {
+        "id": "knowledge_content",
+        "kind": "nominal_content",
+        "object": "required",
+        "object_case": "accusative",
+        "object_role": "known_content",
+        "subject_role": "knower",
+        "other_case_complements": false
+      },
+      {
+        "id": "procedural_knowledge",
+        "kind": "bare_verb",
+        "object": "forbidden",
+        "subject_role": "knower",
+        "dependent_role": "known_procedure",
+        "shared_subject": true
+      }
+    ],
+    "entails_performance": false,
+    "entails_teaching": false,
+    "generic_causative": false
   }
 }

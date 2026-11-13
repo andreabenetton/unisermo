@@ -391,3 +391,31 @@ for these constructions. Contextual object omission is
 not a universal grammatical prohibition. See
 [derivation.md](derivation.md) and
 [LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md).
+
+
+## 13. Knowledge-state valency: sap family (ratified 2026-11-13)
+
+The root `sap` describes the subject's state of knowing. Its already ratified phase family `adsap`, `insap`, `desap`, `resap` retains the same **knower** as subject. They respectively express entry into knowledge, continued knowledge, leaving knowledge, and return to previously held knowledge. `desap` does not by itself encode the psychological mechanism of forgetting; `resap` does not select between spontaneous remembering and relearning.
+
+Two non-interchangeable explicit-argument frames are licensed for each member:
+
+| Frame | Syntax | Interpretation |
+|---|---|---|
+| knowledge content | `KNOWER-NOM sap-family CONTENT-em` | Content is what the knower knows / comes to know / retains / loses / regains |
+| procedural knowledge | `KNOWER-NOM sap-family BARE_VERB` | Bare action is what the knower knows how to perform, or comes to know / ceases to know how to perform |
+
+Examples (with ordinary finite morphology):
+
+- `i sapi domem` — I know the house (knowledge/familiarity of a referent; does not assert any particular fact about it).
+- `i adsapi domem` — I come to know / become familiar with the house.
+- `i desapi domem` — I lose my knowledge/familiarity of the house.
+- `i sapi dok` — I know how to teach (previously ratified frame).
+- `i adsapi dok` — I acquire the know-how to teach.
+- `i adsapei dok` — I am acquiring know-how to teach; completed acquisition is not entailed by progressive aspect.
+- `i resapi dok` — I regain know-how to teach.
+
+The procedural complement is a **bare lexical verb**, with the same subject as the knowledge head, and is not a second independently asserted action. `sapi dok` does not entail actual teaching, and `adsapi dok` does not entail that an instructional activity `dok` occurred. This extension **does not** authorize arbitrary bare-verb complements with other roots or new causative valencies.
+
+The accusative of the content frame is **always the content**, never a person induced to learn. Thus `Y adsap PERSON-em` can only mean knowledge *of the person*, not Y teaching that person. A causative for acquiring knowledge is reserved for a general, separately ratified state-causation analysis. Ordinary `dok` (teaching) and `stud` (studying) remain independent and do not entail successful knowledge acquisition. `lern` is not adopted.
+
+A knowledge-content noun does not automatically mean its propositional truth, and propositional subordinate complements require their own syntax. This parser subset implements only explicit nominal content and procedural bare verbs; omissions and mixed knowledge frames are excluded. See `docs/ldr/LDR-0019-sap-knowledge-family.md`.
