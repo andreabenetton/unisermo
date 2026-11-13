@@ -174,3 +174,8 @@ The subject precedes an uninflected propositional servile, so negation immediate
 - `i sap u no movu` = I know you do not move; the positive knowledge assertion commits to its embedded negative content.
 
 The pre-head negative must not be confused with grammatical `no lim` sentential-negation scope. No new negative particle is introduced.
+
+
+## Propositional necessity and personless tense (ratified 2026-11-13)
+
+`deb FINITE_PROPOSITION` is necessary(P) relative to the relevant modal premises, not the personal duty `debi BARE_VERB`. `no deb P` negates necessity, whereas `deb no P` asserts necessity of not-P. A tensed head, e.g. `no debd uman movfa`, retains the same relative scopes while locating the **necessity assessment** in the past and the dependent event later than that assessment. `no posd uman movfa` negates a past possibility judgment; it does not assert P's negation. `no pos no P` and `deb P` are equivalent only under one fixed accessibility domain.
