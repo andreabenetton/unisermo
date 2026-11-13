@@ -249,6 +249,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Basic measures with shared-unit interval ellipsis and gram/sekun"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "semantics-grammar",
+      "id": "LDR-0029",
+      "path": "docs/ldr/LDR-0029-all-24-si-prefixes.md",
+      "sha256": "02cbe6d2166f36f13bb0354b05741865c00905ae3a848af075400223f5e930a9",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "All 24 SI decimal prefixes with milli double-l and typed unit attachment"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
