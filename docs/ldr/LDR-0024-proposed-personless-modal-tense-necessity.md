@@ -35,8 +35,8 @@ Personless propositional servile head:
 - `posd uman movda`: at a past assessment time it was possible that person had moved earlier than that time.
 - `posf uman movda`: at a future assessment time it will be possible that person had moved before that future time.
 - `i vold u movu`: at past time I wanted your movement contemporaneous with that past assessment.
-- `i sapd u movda`: at past time I knew that your movement had already happened earlier. Factive knowledge applies to proposition at evaluated time if asserted positively.
-- `i vold u movfa`: in the past I wanted your movement to take place after that desire.
+- `i sapd u movdu`: at past time I knew that your movement had already happened earlier. Factive knowledge applies to proposition at evaluated time if asserted positively.
+- `i vold u movfu`: in the past I wanted your movement to take place after that desire.
 
 Do **not** automatically extend aspect: `pose/poso` imply an unsolved distinction between ongoing, perfect and punctual modal states. Nor allow omission of an outer subject with `vol/int/tent/sap/kred`; the root-only head remains subjectless only where lexical semantics licenses an impersonal evaluation (`pos`, candidate `deb`).
 
