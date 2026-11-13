@@ -50,6 +50,10 @@ class ValencyParser:
         kun + ten; its patient is a physically contained entity.
         """
         spec = self.valency["physical_action"]
+        if lemma == "kunkunten":
+            # A second kun- on the lexicalized kunten root is not
+            # licensed by the single-layer source ratification.
+            return None
         if lemma in spec["frames"]:
             return lemma
         parsed = self.parse_derivation(lemma)
