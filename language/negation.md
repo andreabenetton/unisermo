@@ -130,3 +130,13 @@ source `uman-de`, rather than all possible grantors. See
 a normative permission, including authorization where an authority
 is specified. No new negation operator or `no lim` interaction is
 ratified.
+
+
+## Attempt servile negation (ratified 2026-11-13)
+
+The regular servile `tent` uses the existing two local negation positions:
+
+- `no tenti mov` — NOT [attempt to move]; does not claim movement occurred or failed.
+- `tenti no mov` — attempt [NOT move]; a purposeful attempt to remain motionless, not simply a failure to move.
+
+Neither expression entails the positive occurrence of `mov`. An attempted action that fails is **not** the same as the denial of an attempt. The attempt is an event asserted by the head `tent`, whereas the dependent event is only a goal. No extra negative morpheme or scope operator is introduced. See `language/verb_specification.md`.

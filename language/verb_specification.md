@@ -182,6 +182,31 @@ to fail closed on unratified stacked or nested modal scopes.
 This construction is productive: no special synthetic suffix is added to
 the dependent lexical verb for modal meanings.
 
+### Attempt servile: `tent` (author ratification 13 November 2026)
+
+`tent` is the regularly inflected **attempt servile**: the subject undertakes a genuine goal-directed attempt to bring about the dependent event. It is **not** a separate aspect, tense or causative marker. Its basic canonical frame uses the established shared-subject servile syntax:
+
+```text
+[SUBJECT] [no] TENT-FINITE [no] BARE_VERB [DEPENDENT ARGUMENTS...]
+```
+
+- `tenti mov` — I attempt to move. A genuine attempt takes place; successful movement is **not** asserted.
+- `tentdi mov` — I attempted to move (past attempt; outcome unspecified).
+- `tentei mov` — I am attempting to move.
+- `tenti adkap` — I attempt to come to understand.
+- `tenti adsap` — I attempt to acquire knowledge; this does not entail that I learned anything.
+- `tenti portar domem` — I attempt to carry the house; the dependent `portar` retains its own object-valency conditions.
+- `no tenti mov` — I do **not** undertake an attempt to move.
+- `tenti no mov` — I attempt **not** to move: purposeful restraint or avoidance, not mere failure to move.
+
+The core lexical commitment is **actual attempted action**, plus a targeted event that need not obtain. It is logically stronger than `vol V` (desire alone) and independent of `pot` (capacity), `pos` (circumstantial opportunity), `deb` (duty), `aut` (permission) and `sap` (know-how). A failed or impossible attempt can still be a genuine attempt; `tent V` therefore does not assert `pot V` or `pos V`. An attempt can succeed, but success is never inferred solely from `tent`.
+
+`tent` normally implies an intentional effort **toward the particular dependent event**; it is not a generic marker that every action of the agent is intentional. Non-intentional outcomes and downstream side effects require separate event- and scope-level statements. An aim `fin V` within a different performed action is not necessarily an attempt of V; `vol V` is not necessarily action. The dependent verb retains its **own** required nominal and relational complements. In this parser subset no nested serviles, separately controlled subjects, or dedicated `tent` source/counterpart cases are licensed.
+
+The spelling is the canonical `tent` (four letters, final /t/), not `ten` (hold / maintain a physical constraint). These are distinct lexical roots. Their phonetic proximity deserves empirical testing but is not morphological ambiguity.
+
+`tent` does **not** by itself replace `stud`. The activity of systematically studying can be an attempt to acquire knowledge (`tent adsap`), but those concepts are not proven equivalent in every context. Neither `stud` retirement nor any other servile root is ratified by this decision.
+
 ### Permission and authorization: `aut` (author ratification 12 November 2026)
 
 `aut` is one short, ordinary, inflectable **servile verb root** meaning

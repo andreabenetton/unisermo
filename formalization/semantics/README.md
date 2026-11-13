@@ -88,3 +88,8 @@ remain normative unchanged. These executable additions do not
 ratify unsupported nested modal negation, broad `no lim` over
 discourse operators, question-wide compound scope, or arbitrary
 domain/locative inference.
+
+
+## Attempt entailment for `tent` (2026-11-13)
+
+The author-ratified attempt servile `tent` is a finite head taking one dependent uninflected action with a shared subject. Unlike pure desire `vol`, it **entails a goal-directed attempt event**. It does **not** entail that the dependent event took place or succeeded, nor that opportunity `pos`, ability `pot`, permission `aut`, or procedural know-how `sap` holds. Negation of the head (`no tenti V`) differs from a negated goal (`tenti no V`). No special stative/result or general causative alternation follows from this entry.

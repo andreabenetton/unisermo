@@ -1476,6 +1476,18 @@
     },
     {
       "categories": [
+        "verb_root"
+      ],
+      "decision": "Ordinary finite servile root governing one uninflected dependent lexical verb with shared subject and existing verb-governed arguments. Attempt entails a real goal-directed effort but not successful completion, opportunity, capacity or permission. no tenti V denies attempting; tenti no V means try to refrain from V. Not a generic intentionality marker or an aspect. Distinct from ten and does not itself retire stud.",
+      "form": "tent",
+      "meaning_en": "attempt; undertake an actual goal-directed effort to realize a dependent event",
+      "meaning_it": "tentare; compiere un tentativo effettivo e orientato a uno scopo",
+      "origin": "Author ratification 2026-11-13; Latin tentare",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "quantifier"
       ],
       "form": "ter",

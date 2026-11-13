@@ -159,6 +159,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Compositional knowledge acquisition via the sap phase family"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "grammar",
+      "id": "LDR-0020",
+      "path": "docs/ldr/LDR-0020-attempt-servile-tent.md",
+      "sha256": "e311c9b1686553a9edf108bb7bc66475637e26e0284bcbebb83b37c365db8b13",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Ratify tent as a goal-directed attempt servile"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
