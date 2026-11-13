@@ -70,5 +70,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0012: Unified permission `aut` and source `-de`](LDR-0012-aut-permission-source.md) — Accepted
 - [LDR-0013: Locative `-in` for abstract domains](LDR-0013-abstract-domain-locative.md) — Accepted
 - [LDR-0014: Physical-action valency `fer/portar/ten/kunten`](LDR-0014-physical-action-valency.md) — Accepted
-- [LDR-0019: Knowledge acquisition via `sap` phase family](LDR-0019-sap-knowledge-family.md) — Proposed
+- [LDR-0019: Knowledge acquisition via `sap` phase family](LDR-0019-sap-knowledge-family.md) — Accepted
 - [LDR-0018: Exchange semantics and candidate `kambi`](LDR-0018-exchange-kambi-semantics.md) — Proposed
