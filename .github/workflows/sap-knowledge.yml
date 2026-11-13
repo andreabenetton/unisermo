@@ -1,0 +1,35 @@
+name: Sap knowledge valency regression
+
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/verb_specification.md'
+      - 'docs/ldr/LDR-0019-sap-knowledge-family.md'
+      - 'tests/test_sap_knowledge_valency.py'
+      - '.github/workflows/sap-knowledge.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sap-knowledge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Rebuild formalization and validate
+        run: |
+          python -m formalization build
+          python -m formalization validate
+      - name: Knowledge-family valency regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_sap_knowledge_valency.py' -v
+      - name: Existing servile and parser regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_servile_negation_ratification.py' -v
+          python -m unittest discover -s tests -p 'test_formalization.py' -v
