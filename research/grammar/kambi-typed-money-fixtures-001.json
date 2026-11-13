@@ -1,0 +1,112 @@
+{
+  "schema": "unisermo/typed-currency-exchange-experimental@1",
+  "status": "research_fixtures_not_parser_gold",
+  "scope": "single kambi command; cardinals uno/bis/ter only; ISO registry validation out of scope",
+  "cases": [
+    {
+      "surface": "kambi kontra mon uno USD monem uno EUR",
+      "out": {
+        "quantity": "uno",
+        "code": "EUR"
+      },
+      "inc": {
+        "quantity": "uno",
+        "code": "USD"
+      },
+      "status": "typed_currency"
+    },
+    {
+      "surface": "kambi kontra mon uno EUR monem uno USD",
+      "out": {
+        "quantity": "uno",
+        "code": "USD"
+      },
+      "inc": {
+        "quantity": "uno",
+        "code": "EUR"
+      },
+      "status": "typed_currency"
+    },
+    {
+      "surface": "kambi monem uno EUR",
+      "out": {
+        "quantity": "uno",
+        "code": "EUR"
+      },
+      "inc": {
+        "quantity": null,
+        "code": null,
+        "implicit": true
+      },
+      "status": "typed_currency"
+    },
+    {
+      "surface": "kambi kontra mon bis GBP monem ter EUR",
+      "out": {
+        "quantity": "ter",
+        "code": "EUR"
+      },
+      "inc": {
+        "quantity": "bis",
+        "code": "GBP"
+      },
+      "status": "typed_currency"
+    },
+    {
+      "surface": "kambi kontra mon uno USD monem uno USD",
+      "out": {
+        "quantity": "uno",
+        "code": "USD"
+      },
+      "inc": {
+        "quantity": "uno",
+        "code": "USD"
+      },
+      "status": "typed_currency"
+    },
+    {
+      "surface": "kambi kontra mon uno EUR monem uno GEL",
+      "out": {
+        "quantity": "uno",
+        "code": "GEL"
+      },
+      "inc": {
+        "quantity": "uno",
+        "code": "EUR"
+      },
+      "status": "typed_currency"
+    },
+    {
+      "surface": "kambi kontra mon uno usd monem uno EUR",
+      "status": "reject_shape_lowercase_code"
+    },
+    {
+      "surface": "kambi kontra mon uno USD uno EURem",
+      "status": "reject_untagged_outgoing_currency"
+    },
+    {
+      "surface": "kambi kontra mon uno USD monem uno EURem",
+      "status": "reject_suffix_on_iso_code"
+    },
+    {
+      "surface": "kambi kontra mon uno XYZ monem uno EUR",
+      "status": "requires_registry_validation"
+    },
+    {
+      "surface": "kambi kontra mon uno USD monem EUR",
+      "status": "reject_missing_quantity"
+    },
+    {
+      "surface": "kambi kontra mon uno USD monem uno EUR kontra mon uno GBP",
+      "status": "reject_multiple_countervalues"
+    },
+    {
+      "surface": "kambi kontra mon uno USD monem uno EUR monem uno GEL",
+      "status": "reject_multiple_outgoing"
+    },
+    {
+      "surface": "kambi kontra mon uno USD monem uno eur",
+      "status": "reject_shape_lowercase_code"
+    }
+  ]
+}
