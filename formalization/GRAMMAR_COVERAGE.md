@@ -23,7 +23,7 @@ numeral, kinship and corpus tests still run.
 | Quantification | Existing canonical cardinal, ordinal, factor, fraction and percentage parser; one simple modifier at noun phrase level | Mixed numerals and modifiers without explicit rule; fraction NPs inside ordinary clauses | `language/numerals.md` |
 | Kinship | Existing typed relation path, licensed `NUMjer` repetition | Arbitrarily deep or ambiguous kinship paths outside guarded subset | `language/kinship.md` |
 | Simple sentences | Preserves original SVO AST, finite agreement, accusative object, pronoun pro-drop, `ka`; adds selected cases and invariant relators | General SOV/OSV/topicalization and unrestricted lexical valency | `language/word_order.md` |
-| Lexically constrained valency | Source-linked frames for the intransitive/causative `mov` family (including approved phase/directional variants) and exact `traes` state-transition/causative-result frames; shared in modal complements | Unspecified argument frames of other verbs, competing valency readings, mixed/stacked cases with unclear attachment | `language/derivation.md`, `language/noun_case_system.md`, `formalization/data/valency_frames.json` |
+| Lexically constrained valency | Source-linked `mov` alternation, exact `traes` transition/result frames, `pel/trak X-em` force/patient frame (without displacement entailment), and explicit `es/ines/ades/dees/rees` quality/nominal-state predication; modal dependents share the validator | Remaining lexical roots lack ratified full valency: only minimal SVO/locative and free-relator syntax is parsed, with non-locative case roles rejected rather than guessed; no all-verb semantic certification | `language/derivation.md`, `language/verb_specification.md`, `language/copula.md`, `formalization/data/valency_frames.json` |
 | Modal/servile complements | Single finite `pos/deb/vol/pot/sap/aut` + one bare verb root; distinct `no HEAD ROOT` and `HEAD no ROOT` | Nested serviles, stacked negation, independent subordinate subjects or unratified permission operators | `language/verb_specification.md`, `language/negation.md` |
 | Source of permission | `aut SOURCE-de VERB`, source precedes action; action's own later source stays separate | More than one granting source; authority verification and normative domain inference | LDR-0012 |
 | Zero copula | Limited stative quality head and explicit subject, including `tik no bel` | Full predicate noun-class system, adverbial comparatives and other copular argument frames | `language/copula.md` |
@@ -135,12 +135,58 @@ still require source-specific valency design.
 `tests/test_productive_derivation_valency.py`
 includes positive and negative executable examples.
 
+## Evidence-based lexical valency, iteration 2 (2026-11-13)
+
+The typed parser now differentiates **documented lexical frames**
+from **unknown lexical frames**, not just syntactically case-marked
+noun phrases. `Unisermo.valency_evidence(lemma)` returns
+`status: documented` and a source for `mov`, `traes`,
+`pel/trak` and the explicit `es` state family, or
+`status: undetermined` for other verbal roots.
+
+Documented constructions in the executable subset:
+
+- `peli domem`, `traki domem`: explicit `X-em` is a
+  force/patient role. Neither statement **entails displacement**.
+  A local `-in` or ordinary free relator may be added as an
+  independent adjunct; an unratified motion destination `-ad`
+  is not inferred from a pushing/pulling verb.
+- `i esi`: explicit existential copula. `dom esa bon`:
+  explicit quality copula; `esi domin`: simple locative
+  predicate. Phase verbs require a state: `adesi aper`,
+  `inesi klus`, `deesi bon`, `reesi uman`. These retain
+  their meaning as entry, persistence, exit, and resumption
+  rather than receiving a new direct object case. The same
+  bounded structure can occur under a servile head:
+  `debi ades aper`.
+- Earlier `mov` and `traes` frames are unchanged and
+  remain checked by the same registry.
+
+For `fer`, `portar`, `pens`, `kap`, `dik`,
+`vid`, `fak`, `dok`, `ten` and similar roots,
+the lexicon defines **meaning**, but a complete per-verb
+argument-role inventory has **not** been ratified. The parser
+preserves previously supported elementary SVO direct objects,
+locative adjuncts and existing free relators, while refusing
+unsupported `DEST-ad`, `SOURCE-de` and special result
+case attachments rather than claiming that any verb licenses
+them. This is a **parser coverage restriction**, not a
+statement that all excluded sentences are ungrammatical
+Unisermo.
+
+All status and source data are in
+`formalization/data/valency_frames.json`, with executable
+positive/negative conformance in
+`tests/test_verified_lexical_valency.py`. No new roots,
+constructions or semantic restrictions have been ratified.
+
 ## Recommended continuation
 
-Productive single-layer derivation and the `mov`/`traes`
-valency subsets are implemented. Next prioritize **coverage of
-individually ratified valency frames** and **explicit semantic attachment
-for more complex nominal modifiers**, followed by focus interactions
-with serviles and complex clauses. Each expansion must include
-positive and negative executable tests; no new lexemes, affix
-meanings or grammatical rules should be silently introduced.
+The attested `pel/trak` force and `es` state frames are
+implemented alongside `mov` and `traes`. Next prioritize
+**author ratification of still-undetermined verbal argument frames**
+before enforcing their valency; then **explicit semantic attachment
+for complex nominal modifiers** and focus interactions with
+serviles and compound clauses. Each addition needs positive and
+negative conformance tests; an executable parser cannot invent
+normative case semantics.
