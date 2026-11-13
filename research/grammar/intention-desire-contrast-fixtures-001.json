@@ -1,0 +1,185 @@
+{
+  "schema": "unisermo/intention-desire-contrasts@1",
+  "status": "research_only",
+  "candidate_int_root_not_ratified": true,
+  "cases": [
+    {
+      "id": "DI01",
+      "contrast": "desire_without_decision",
+      "conditions": {
+        "vol": true,
+        "int": false,
+        "tent": false,
+        "event": false
+      },
+      "interpretation": "Want but decide not to do the action",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI02",
+      "contrast": "intention_without_attempt",
+      "conditions": {
+        "vol": false,
+        "int": true,
+        "tent": false,
+        "event": false
+      },
+      "interpretation": "Commit to future unpleasant action, not yet trying",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI03",
+      "contrast": "attempt_without_success",
+      "conditions": {
+        "int": true,
+        "tent": true,
+        "event": false
+      },
+      "interpretation": "Try but fail",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI04",
+      "contrast": "attempt_with_success",
+      "conditions": {
+        "int": true,
+        "tent": true,
+        "event": true
+      },
+      "interpretation": "Try and succeed",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI05",
+      "contrast": "unplanned_event",
+      "conditions": {
+        "vol": false,
+        "int": false,
+        "tent": false,
+        "event": true
+      },
+      "interpretation": "Accidental or impulsive event",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI06",
+      "contrast": "reluctant_intention",
+      "conditions": {
+        "vol": false,
+        "int": true,
+        "tent": false,
+        "event": false
+      },
+      "interpretation": "Intend despite lack of desire",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI07",
+      "contrast": "obligation_without_intention",
+      "conditions": {
+        "deb": true,
+        "int": false,
+        "tent": false,
+        "event": false
+      },
+      "interpretation": "Duty does not imply plan",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI08",
+      "contrast": "permission_without_intention",
+      "conditions": {
+        "aut": true,
+        "int": false,
+        "tent": false,
+        "event": false
+      },
+      "interpretation": "Permission does not imply plan",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI09",
+      "contrast": "intention_to_refrain",
+      "conditions": {
+        "int_not_v": true,
+        "int_v": false
+      },
+      "interpretation": "Intend not to act",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI10",
+      "contrast": "absence_of_intention",
+      "conditions": {
+        "int_v": false,
+        "int_not_v": false
+      },
+      "interpretation": "No intention to act or refrain",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI11",
+      "contrast": "discontinued_intention",
+      "conditions": {
+        "past_int_v": true,
+        "current_int_v": false,
+        "event": false
+      },
+      "interpretation": "Intention abandoned",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI12",
+      "contrast": "goal_directed_impulsive_attempt",
+      "conditions": {
+        "durable_plan": false,
+        "tent": true,
+        "event": false
+      },
+      "interpretation": "Attempt without stable prior plan",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI13",
+      "contrast": "predict_without_intending",
+      "conditions": {
+        "prediction_v": true,
+        "int_v": false
+      },
+      "interpretation": "Forecast is not intention",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI14",
+      "contrast": "promise_without_desire",
+      "conditions": {
+        "promise_v": true,
+        "vol_v": false
+      },
+      "interpretation": "Promise is not desire",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI15",
+      "contrast": "purpose_without_attempt",
+      "conditions": {
+        "act_a": true,
+        "purpose_v": true,
+        "tent_v": false
+      },
+      "interpretation": "Act A for future V but no attempt at V yet",
+      "status": "research_scenario_not_executable"
+    },
+    {
+      "id": "DI16",
+      "contrast": "incidental_side_effect",
+      "conditions": {
+        "intent_a": true,
+        "causes_b": true,
+        "intent_b": false
+      },
+      "interpretation": "Intentional action with unintended consequence",
+      "status": "research_scenario_not_executable"
+    }
+  ]
+}

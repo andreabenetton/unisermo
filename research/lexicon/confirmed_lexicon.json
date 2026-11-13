@@ -880,10 +880,10 @@
     {
       "form": "vol",
       "category": "verb_root",
-      "meaning_it": "volere; desiderare o avere intenzione di compiere un'azione",
-      "meaning_en": "want; desire/intend to perform an action",
+      "meaning_it": "volere; desiderare che un'azione o evento si realizzi",
+      "meaning_en": "want; desire an event or action",
       "source": "Author approval 2026-11-12; Latin velle/volo; Romance volere and international volition",
-      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition alone does not entail action or ability.",
+      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition/desire alone does not entail a decision or adopted plan, attempted action, action itself, or ability. Separate approved int for committed intention and tent for actual attempt (2026-11-13).",
       "status": "confirmed"
     },
     {
@@ -912,6 +912,15 @@
       "source": "Author ratification 2026-11-13; Latin tentare",
       "decision": "Ordinary finite servile root governing one uninflected dependent lexical verb with shared subject and existing verb-governed arguments. Attempt entails a real goal-directed effort but not successful completion, opportunity, capacity or permission. no tenti V denies attempting; tenti no V means try to refrain from V. Not a generic intentionality marker or an aspect. Distinct from ten and does not itself retire stud.",
       "status": "confirmed"
+    },
+    {
+      "form": "int",
+      "category": "verb_root",
+      "meaning_it": "avere intenzione di; aver adottato l'impegno di compiere un'azione",
+      "meaning_en": "intend; have adopted a genuine plan or commitment to perform an action",
+      "source": "Author ratification 2026-11-13; international intention family",
+      "status": "confirmed",
+      "decision": "Regular finite shared-subject servile int + bare lexical verb with ordinary dependent arguments and existing scoped no. A settled present intention differs from vol desire and tent actual goal-directed effort; it entails neither current effort nor successful action, desire, capacity, permission, or prediction. no inti V denies an intention; inti no V means intend to refrain. Does not control a separate embedded subject."
     }
   ]
 }
