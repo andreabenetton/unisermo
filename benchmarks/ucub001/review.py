@@ -183,7 +183,7 @@ def main() -> None:
                 for r in rows
             ],
         }
-        _write_new(args.output, json.dumps(content, indent=2, ensure_ascii=False, sort_keys=True) + "\\n")
+        _write_new(args.output, json.dumps(content, indent=2, ensure_ascii=False, sort_keys=True) + "\n")
         print("Created BLANK review form for", len(rows),
               "cases; it is NOT an attestation or completed review")
         return
