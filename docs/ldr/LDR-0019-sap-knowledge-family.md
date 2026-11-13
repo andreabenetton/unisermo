@@ -9,7 +9,7 @@ supersedes: none
 
 # LDR-0019 — Knowledge state, acquisition, retention, loss, reacquisition
 
-## Decision context
+## Context and problem
 
 Following exploration of `dok` teach, `stud` study, `sap` know, `kap` understand and a provisional `lern` root, the project owner requested a **sap-first systematic analysis** parallel to the compositional `mov` family. This proposal tests whether `sap` plus pre-existing phase and aspect operators can capture "learn" without adding a primitive.
 
@@ -22,6 +22,16 @@ Following exploration of `dok` teach, `stud` study, `sap` know, `kap` understand
 3. `-e-` progressive and `-o-` completed/perfect are independent TAM slots. `adsapei` parses `ad-sap-e-i`.
 4. The intransitive/transitive **causative** alternation of `mov` is *root-specific*, and must NOT be applied mechanically to `sap`.
 5. `dok` describes teaching activity, not a guaranteed learning result; `stud` describes study activity, not a guaranteed acquisition result.
+
+## Alternatives
+
+1. Introduce an independent `lern` root for learning; defer because the existing `sap` phase family may cover successful acquisition.
+2. Extend content/procedural knowledge frames uniformly to the phase family (accepted).
+3. Reuse `mov` zero-marked causative for `sap` (rejected due to argument ambiguity).
+
+## Decision or hypothesis
+
+The `sap` family licenses nominal knowledge content in accusative and a bare verb as shared-subject know-how complement. The learner/knower remains subject in both frames.
 
 ## Proposed lexical-valency frames
 
@@ -75,6 +85,10 @@ An event of completed acquisition of knowledge is naturally expressible via `ads
 
 No separate verbal morpheme is approved for *learning activity* or a separate `lern` root. The fact that one can construct a derivation does not license all of its proposed argument types. Nothing here should change phase morphology.
 
+## Evaluation and evidence
+
+The approved design is associated with 16 experimental contrast probes; execution of parser tests and formalization validation is tracked separately. No assertion of empirical LLM success is made.
+
 ## Falsifiable contrast criteria
 
 1. `dok` can be true while learner `adsap` is false.
@@ -97,6 +111,10 @@ No separate verbal morpheme is approved for *learning activity* or a separate `l
 - How to express causing another person to know, distinct from teaching?
 - Whether the language allows omission of an overt content complement without ambiguity; baseline proposal requires overt complement in parser tests except canonical `sap V`.
 
+## Consequences and compatibility
+
+This narrows the parser to two knowledge-specific roles without adding a general causative or the root `lern`; it preserves `dok` and `stud` as separate activities and leaves propositional subordinate knowledge complements for a later decision.
+
 ## Implementation / evaluation gates
 
 Before owner acceptance: review semantic frames, consult the existing parser categories for bare verbs vs content NP, ensure collision-free cases, and independently verify 16 contrasts in `research/grammar/sap-family-contrasts-001.json`.
@@ -106,3 +124,10 @@ Implementation includes a normative valency section in `language/verb_specificat
 ## Decision authority
 
 The owner approved proceeding with the five enumerated valency decisions on 2026-11-13. This LDR records their acceptance. The generic causative remains outside the ratification.
+
+## References
+
+- `language/verb_specification.md`
+- `language/derivation.md`
+- `formalization/data/valency_frames.json`
+- `docs/ldr/LDR-0011-servile-negation.md`
