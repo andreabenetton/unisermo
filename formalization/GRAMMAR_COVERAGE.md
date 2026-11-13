@@ -23,7 +23,7 @@ numeral, kinship and corpus tests still run.
 | Quantification | Existing canonical cardinal, ordinal, factor, fraction and percentage parser; one simple modifier at noun phrase level | Mixed numerals and modifiers without explicit rule; fraction NPs inside ordinary clauses | `language/numerals.md` |
 | Kinship | Existing typed relation path, licensed `NUMjer` repetition | Arbitrarily deep or ambiguous kinship paths outside guarded subset | `language/kinship.md` |
 | Simple sentences | Preserves original SVO AST, finite agreement, accusative object, pronoun pro-drop, `ka`; adds selected cases and invariant relators | General SOV/OSV/topicalization and unrestricted lexical valency | `language/word_order.md` |
-| Lexically constrained valency | Source-linked `mov` alternation, exact `traes` transition/result frames, `pel/trak X-em` force/patient frame (without displacement entailment), and explicit `es/ines/ades/dees/rees` quality/nominal-state predication; modal dependents share the validator | Remaining lexical roots lack ratified full valency: only minimal SVO/locative and free-relator syntax is parsed, with non-locative case roles rejected rather than guessed; no all-verb semantic certification | `language/derivation.md`, `language/verb_specification.md`, `language/copula.md`, `formalization/data/valency_frames.json` |
+| Lexically constrained valency | `mov` movement, `traes` transformation, `pel/trak` force, explicit `es` state phases and four physical-action frames: `fer X-em [SOURCE-de]`, `portar X-em [SOURCE-de] [DEST-ad]`, `ten X-em`, `kunten X-em`; bounded single-prefix inheritance with typed roles | Remaining verbs lack ratified per-verb case valency. Explicit physical-action patient required in parser subset; discourse omission remains undecided. Unratified case orders, stacked prefixes, semantic type inference and referent-world validation unsupported | `language/derivation.md`, `language/verb_specification.md`, `language/copula.md`, `docs/ldr/LDR-0014-physical-action-valency.md`, `formalization/data/valency_frames.json` |
 | Modal/servile complements | Single finite `pos/deb/vol/pot/sap/aut` + one bare verb root; distinct `no HEAD ROOT` and `HEAD no ROOT` | Nested serviles, stacked negation, independent subordinate subjects or unratified permission operators | `language/verb_specification.md`, `language/negation.md` |
 | Source of permission | `aut SOURCE-de VERB`, source precedes action; action's own later source stays separate | More than one granting source; authority verification and normative domain inference | LDR-0012 |
 | Zero copula | Limited stative quality head and explicit subject, including `tik no bel` | Full predicate noun-class system, adverbial comparatives and other copular argument frames | `language/copula.md` |
@@ -165,11 +165,11 @@ Documented constructions in the executable subset:
 - Earlier `mov` and `traes` frames are unchanged and
   remain checked by the same registry.
 
-For `fer`, `portar`, `pens`, `kap`, `dik`,
-`vid`, `fak`, `dok`, `ten` and similar roots,
-the lexicon defines **meaning**, but a complete per-verb
-argument-role inventory has **not** been ratified. The parser
-preserves previously supported elementary SVO direct objects,
+For `pens`, `kap`, `dik`, `vid`, `fak`,
+`dok` and similar roots, the lexicon defines **meaning**,
+but a complete per-verb argument-role inventory has **not**
+been ratified. The parser preserves previously supported
+elementary SVO direct objects,
 locative adjuncts and existing free relators, while refusing
 unsupported `DEST-ad`, `SOURCE-de` and special result
 case attachments rather than claiming that any verb licenses
@@ -183,13 +183,44 @@ positive/negative conformance in
 `tests/test_verified_lexical_valency.py`. No new roots,
 constructions or semantic restrictions have been ratified.
 
+## LDR-0014: Physical action valency (2026-11-13)
+
+The author has ratified **four distinct overt-object frames**:
+
+| Root | Typed AST valency | Subject role | Object `X-em` role | Additional selected cases |
+|---|---|---|---|---|
+| `fer` | `physical_acquisition` | taker | physically acquired entity | optional physical `SOURCE-de`, *not previous ownership* |
+| `portar` | `physical_transport` | carrier | cargo | optional `SOURCE-de`, `DEST-ad`; arrival **not** entailed |
+| `ten` | `maintained_constraint` | constraint maintainer | constrained entity | none intrinsic |
+| `kunten` | `spatial_containment` | non-necessarily-volitional container | physically enclosed entity | none intrinsic |
+
+One event-locative `LOCATION-in` or previously approved free
+relators remain independent adjuncts rather than new argument roles.
+The same role validator is used inside servile dependent actions.
+The AST now retains `argument_roles` including source/destination
+roles and carefully limited non-entailment flags.
+
+A single approved phase prefix or associative `kun-` inherits
+the base participant roles but does not add an obligatory
+co-agent. The lexically specialized `kunten` is **not**
+a compositional instance of joint `ten`. The source-linked
+registry is `formalization/data/valency_frames.json`.
+New acceptance and rejection cases are in
+`tests/test_physical_action_valency.py`.
+
+The parser requires an overt `X-em` only for this tested
+**subset**. Omitted objects in ordinary discourse, arbitrary
+mixed case orders, type-system constraints and stacked
+derivations remain unratified/open. This is not a claim
+that every excluded phrase is ungrammatical.
+
 ## Recommended continuation
 
-The attested `pel/trak` force and `es` state frames are
-implemented alongside `mov` and `traes`. Next prioritize
-**author ratification of still-undetermined verbal argument frames**
-before enforcing their valency; then **explicit semantic attachment
-for complex nominal modifiers** and focus interactions with
-serviles and compound clauses. Each addition needs positive and
-negative conformance tests; an executable parser cannot invent
-normative case semantics.
+The `fer/portar/ten/kunten` frames are now ratified and
+implemented alongside motion, force, state and transition valencies.
+Next prioritize **remaining verbs with undocumented argument
+structure**, then **explicit semantic attachment for complex nominal
+modifiers** and focus interactions with serviles/compound clauses.
+Contextual omission of the direct object is still an open
+grammatical decision; do not silently treat parser rejection
+as a language-wide prohibition.
