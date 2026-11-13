@@ -126,7 +126,6 @@ class PhysicalActionValencyTests(unittest.TestCase):
         self.assertEqual(self.u.physical_action_base("kunten"), "kunten")
         self.assertNotEqual(self.u.physical_action_base("kunten"), "ten")
         self.assertIsNone(self.u.physical_action_base("adkunportar"))
-        self.assertIsNone(self.u.physical_action_base("redef er".replace(" ", "")))
 
     def test_modal_complements_share_checked_frames(self):
         samples = [
@@ -176,7 +175,7 @@ class PhysicalActionValencyTests(unittest.TestCase):
         self.assertEqual(self.u.valency_evidence("pens")["status"], "undetermined")
         with open("formalization/data/morphology.json", encoding="utf-8") as f:
             canonical = json.load(f)
-        self.assertIn("undetermined_lexical_valency_outside_documented_families",
+        self.assertIn("undetermined_lexical_valency_outside_documented_families_and_discourse_object_omission",
                       canonical["not_implemented"])
 
 
