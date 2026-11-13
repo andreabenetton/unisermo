@@ -340,6 +340,31 @@ class PropositionParser:
                                       "lemma": name[:-2], "case": "resultative"}, end))
         return valid[-1] if valid else None
 
+    def _state_complement(self, lemma: str, words: list[str]) -> dict | None:
+        """One attested predicative state, not an arbitrary verbal object.
+
+        The overt copula es can stand alone existentially or carry a
+        qualitative/nominal/local predicate. Its phase forms require an
+        explicit predicate in this bounded implementation.
+        """
+        if not words:
+            if lemma == self.valency["copula_state"]["base"]:
+                return None
+            raise ValueError("state-phase verb requires an explicit state predicate")
+        if len(words) != 1:
+            raise ValueError("copula/state phase requires exactly one simple state predicate")
+        state = words[0]
+        if state in self.properties or (
+                (self.parse_derivation(state) or {}).get("category") == "property"):
+            return {"kind": "quality_state", "lemma": state}
+        if state in self.nouns or self.is_derived_noun(state):
+            return {"kind": "nominal_state", "lemma": state}
+        if lemma == "es":
+            candidate = self._read_np(words, 0, "locative")
+            if candidate is not None and candidate[1] == len(words):
+                return {"kind": "locative_state", "phrase": candidate[0]}
+        raise ValueError("unsupported state predicate or illegitimate nominal case")
+
     def _args(self, words: list[str], head: str) -> tuple[dict | None, list[dict]]:
         pos, obj, other = 0, None, []
         while pos < len(words):
@@ -396,7 +421,9 @@ class PropositionParser:
             # predicates with a lone nominal object.
             provisional = [a for w in words for a in self._finite(w)]
             special = {"pos", "deb", "vol", "pot", "aut", "traes"}
-            if not any(a["lemma"] in special for a in provisional):
+            if not any(a["lemma"] in special or
+                       self.has_documented_valency(a["lemma"])
+                       for a in provisional):
                 try:
                     legacy = ClauseParser.parse_sentence(self, " ".join(words))
                     frame = self.validate_valency(
@@ -446,8 +473,15 @@ class PropositionParser:
             if negative and neg_embedded:
                 raise ValueError("stacked modal and dependent negation not ratified")
             dependent = rest[0]
-            obj, complements = self._args(rest[1:], dependent)
-            self.validate_valency(dependent, obj, complements)
+            state = None
+            if self.is_state_copula(dependent):
+                state = self._state_complement(dependent, rest[1:])
+                obj, complements = None, []
+                if question is not None and question["role"] in {"object", "destination"}:
+                    raise ValueError("wh argument with state predication needs separate scope rules")
+            else:
+                obj, complements = self._args(rest[1:], dependent)
+                self.validate_valency(dependent, obj, complements)
             if question is not None and question["role"] in {"object", "destination"}:
                 if question["role"] == "object" and obj is not None:
                     raise ValueError("wh object duplicates explicit object")
@@ -460,6 +494,9 @@ class PropositionParser:
                                  "negative": neg_embedded, "object": obj,
                                  "complements": complements},
                    "interrogative": question is not None}
+            if self.is_state_copula(dependent):
+                out["dependent"]["state"] = state
+                out["dependent"]["valency"] = self.valency["copula_state"]["frame_ids"][dependent]
             if question:
                 out["question"] = question
         else:
@@ -467,6 +504,21 @@ class PropositionParser:
                 raise ValueError("dependent no requires a finite servile head")
             if source is not None or (head in MODALS and head != "sap"):
                 raise ValueError("servile requires a bare verbal complement")
+            if self.is_state_copula(head):
+                state = self._state_complement(head, rest)
+                if question is not None and question["role"] in {"object", "destination"}:
+                    raise ValueError("wh object/destination with state predication is not resolved")
+                copula = {"kind": "copular_clause", "predicate": verb,
+                          "subject": subject, "negative": negative,
+                          "interrogative": question is not None,
+                          "state": state,
+                          "valency": (self.valency["copula_state"]["frame_ids"][head]
+                                      if state is not None else "existential_copula")}
+                if front is not None:
+                    copula["preposed_locative"] = front
+                if question is not None:
+                    copula["question"] = question
+                return self._annotate_focus(copula)
             obj, complements = self._args(rest, head)
             frame = self.validate_valency(head, obj, complements)
             if question is not None and question["role"] in {"object", "destination"}:
