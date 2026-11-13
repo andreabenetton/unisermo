@@ -29,9 +29,59 @@ class ValencyParser:
                     "phase_resume", "joint_event"
                 })
 
+    def is_force_verb(self, lemma: str) -> bool:
+        if lemma in self.valency["force_manner"]["verbs"]:
+            return True
+        phase = self.parse_derivation(lemma)
+        return (phase is not None and phase["base"] in self.valency["force_manner"]["verbs"]
+                and phase["operation"] in {
+                    "phase_begin", "phase_continue",
+                    "phase_cease", "phase_resume"
+                })
+
+    def is_state_copula(self, lemma: str) -> bool:
+        spec = self.valency["copula_state"]
+        return lemma == spec["base"] or lemma in spec["phase_verbs"]
+
+    def has_documented_valency(self, lemma: str) -> bool:
+        return (lemma == "traes" or self.is_motion_verb(lemma)
+                or self.is_force_verb(lemma) or self.is_state_copula(lemma))
+
+    def valency_evidence(self, lemma: str) -> dict:
+        """Expose the evidence boundary for a canonical or productive verb."""
+        if lemma not in self.verbs and not self.is_derived_verb(lemma):
+            raise ValueError("not a canonical or permitted productive verb")
+        source = None
+        family = None
+        if lemma == "traes":
+            source, family = "language/derivation.md#explicit-transition-between-states", "transition"
+        elif self.is_motion_verb(lemma):
+            source, family = "language/derivation.md#mov-valency-alternation", "motion"
+        elif self.is_force_verb(lemma):
+            source, family = self.valency["force_manner"]["source"], "force_manner"
+        elif self.is_state_copula(lemma):
+            source, family = self.valency["copula_state"]["source"], "state_predication"
+        return {"lemma": lemma, "status": "documented" if source else "undetermined",
+                "family": family, "source": source,
+                "note": ("Unspecified lexical valency is NOT automatically grammatical"
+                         if source is None else
+                         "Only explicitly attested frames are parser-supported")}
+
+    def _validate_known_case_adjuncts(self, complements: list[dict],
+                                      permitted: set[str], label: str) -> None:
+        for item in complements:
+            if item["kind"] != "case_complement":
+                # A free relator can introduce an independent adjunct; it
+                # cannot by itself supply an omitted lexical object.
+                continue
+            if item["case"] not in permitted:
+                raise ValueError(f"{label}: unsupported lexical case role " + item["case"])
+
     def validate_valency(self, lemma: str, obj: dict | None,
                          complements: list[dict]) -> str | None:
-        """Return a ratified frame ID or reject malformed known frames."""
+        """Check attested frames; unknown roles remain unlicensed by parser."""
+        if self.is_state_copula(lemma):
+            raise ValueError("state predicates require typed copular complement analysis")
         if lemma == "traes":
             cases = [x["case"] for x in complements
                      if x["kind"] == "case_complement"]
@@ -44,7 +94,20 @@ class ValencyParser:
                     return frame["id"]
             raise ValueError("traes requires DEST-ad SOURCE-de, or OBJ-em RESULT-da")
 
+        if self.is_force_verb(lemma):
+            spec = self.valency["force_manner"]
+            if obj is None:
+                raise ValueError("force/manner frame requires explicit X-em patient")
+            self._validate_known_case_adjuncts(
+                complements, set(spec["allowed_case_adjuncts"]), "force/manner")
+            return spec["frame"]
+
         if not self.is_motion_verb(lemma):
+            # The seven cases are grammatical, but the roles permitted
+            # by a particular verb are not necessarily ratified. Avoid
+            # guessing DEST-ad or SOURCE-de on any arbitrary lexical root.
+            self._validate_known_case_adjuncts(
+                complements, {"locative"}, "undetermined verb valency")
             return None
         spec = self.valency["motion"]
         seen = {}
