@@ -1,0 +1,25 @@
+{
+  "corpus_sha256": "c111dc50f200e9519d60dca91b9d49c8b9bf0554f0230c1e7f724416f6facdc4",
+  "development": 64,
+  "english_controls": "draft, not independently validated",
+  "gold_provenance": "manually authored contrast templates, never parser-derived",
+  "grouping": "four contrasts per group; whole groups held out",
+  "groups": 20,
+  "holdout": 16,
+  "holdout_group_ids": [
+    "G05",
+    "G10",
+    "G15",
+    "G20"
+  ],
+  "levels": {
+    "L1": 20,
+    "L2": 20,
+    "L3": 20,
+    "L4": 20
+  },
+  "schema": "unisermo/ucub-001@1",
+  "status": "draft_pending_independent_semantic_review",
+  "suite": "UCUB-001",
+  "total": 80
+}
