@@ -169,6 +169,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Ratify tent as a goal-directed attempt servile"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "grammar",
+      "id": "LDR-0021",
+      "path": "docs/ldr/LDR-0021-vol-intention-gap.md",
+      "sha256": "46cd3c680cc13443ad2c125891ab425359dd308f8a5c6a7f4d8e115abfb3e39b",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Separate volitional desire from intended action"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
