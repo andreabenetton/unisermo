@@ -517,7 +517,7 @@ class PropositionParser:
         else:
             if neg_embedded:
                 raise ValueError("dependent no requires a finite servile head")
-            if source is not None or (head in MODALS and head != "sap"):
+            if source is not None or (head in MODALS and not self.is_knowledge_verb(head)):
                 raise ValueError("servile requires a bare verbal complement")
             if self.is_state_copula(head):
                 state = self._state_complement(head, rest)
