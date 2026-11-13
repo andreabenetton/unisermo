@@ -1,0 +1,32 @@
+name: Basic measurements and shared-unit ellipsis
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'research/lexicon/confirmed_lexicon.json'
+      - 'docs/ldr/LDR-0028-basic-measures-ellipsis.md'
+      - 'tests/test_basic_measurement_ellipsis.py'
+      - '.github/workflows/basic-measurements.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measurement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check generated indexes and grammar
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Measurement ellipsis regressions
+        run: python -m unittest discover -s tests -p 'test_basic_measurement_ellipsis.py' -v
+      - name: Existing universal quantity and probability regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_universal_quantities.py' -v
+          python -m unittest discover -s tests -p 'test_numeric_likelihood_hyperbole.py' -v
