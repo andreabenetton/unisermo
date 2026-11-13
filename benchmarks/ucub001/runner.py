@@ -119,6 +119,32 @@ def select(rows: list[dict], split: str, limit: int | None) -> list[dict]:
     return selected
 
 
+def balanced_development_sample(rows: list[dict]) -> list[dict]:
+    """Precommitted 16-case development design: one 4-case family per level.
+
+    Family G01 was already used in the initial smoke and is excluded for
+    freshness. Group ordering depends only on names and a fixed seed, not
+    on the expected gold labels or on model outcomes. All pairs remain together.
+    """
+    development = [r for r in rows if r["split"] == "development"]
+    selected_groups = set()
+    for level in ("L1", "L2", "L3", "L4"):
+        options = {r["group"] for r in development if r["level"] == level
+                   and r["group"] != "G01"}
+        if len(options) < 1:
+            raise ValueError("insufficient development groups in " + level)
+        ranked = sorted(options, key=lambda g: (
+            hashlib.sha256(("UCUB001-balanced16-v1:" + g).encode()).hexdigest(), g
+        ))
+        selected_groups.add(ranked[0])
+    selected = [r for r in development if r["group"] in selected_groups]
+    if len(selected) != 16 or len({r["group"] for r in selected}) != 4:
+        raise ValueError("broken balanced development design")
+    if any(r["group"] == "G01" for r in selected):
+        raise ValueError("smoke family was accidentally reselected")
+    return selected
+
+
 def parse_label(text: str) -> str | None:
     if not isinstance(text, str):
         return None
@@ -280,6 +306,7 @@ def main() -> None:
         cmd.add_argument("--condition", required=True, choices=("cold","lexicon","grammar","english"))
         cmd.add_argument("--split", required=True, choices=("development","holdout"))
         cmd.add_argument("--limit", type=int)
+        cmd.add_argument("--sample", choices=("sequential", "balanced16"), default="sequential")
         cmd.add_argument("--allow-unreviewed", action="store_true")
         cmd.add_argument("--unlock-holdout", action="store_true")
         cmd.add_argument("--output", type=Path, required=True)
@@ -291,6 +318,7 @@ def main() -> None:
     score_cmd.add_argument("--responses", type=Path, required=True)
     score_cmd.add_argument("--split", choices=("development","holdout"), default="development")
     score_cmd.add_argument("--allow-partial", action="store_true")
+    score_cmd.add_argument("--sample", choices=("sequential", "balanced16"), default="sequential")
     score_cmd.add_argument("--allow-unreviewed", action="store_true")
     score_cmd.add_argument("--unlock-holdout", action="store_true")
     score_cmd.add_argument("--output", type=Path, required=True)
@@ -302,16 +330,30 @@ def main() -> None:
         p.error("holdout is sealed until review and choices are frozen; requires --unlock-holdout explicitly")
     if args.operation == "score":
         responses = [json.loads(line) for line in args.responses.read_text(encoding="utf-8").splitlines() if line]
-        report = score(responses, select(rows, args.split, None), allow_partial=args.allow_partial)
-        report.update({"corpus_sha256": manifest["corpus_sha256"], "split": args.split})
+        if args.sample == "balanced16":
+            if args.split != "development":
+                p.error("balanced16 is development-only")
+            selected = balanced_development_sample(rows)
+        else:
+            selected = select(rows, args.split, None)
+        report = score(responses, selected, allow_partial=args.allow_partial)
+        report.update({"corpus_sha256": manifest["corpus_sha256"],
+                       "split": args.split, "sample": args.sample,
+                       "selected_ids": [x["id"] for x in selected]})
         write_new(args.output, json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n")
         print("scored unreviewed cases:", report["count"], "accuracy:", report["accuracy"])
         return
-    chosen = select(rows, args.split, args.limit)
+    if args.sample == "balanced16":
+        if args.split != "development" or args.limit not in (None, 16):
+            p.error("balanced16 requires development and exactly 16 complete cases")
+        chosen = balanced_development_sample(rows)
+    else:
+        chosen = select(rows, args.split, args.limit)
     questions = [prompt(r, args.condition) for r in chosen]
     if args.operation == "prepare":
         write_new(args.output, "".join(json.dumps(q, ensure_ascii=False, sort_keys=True) + "\n" for q in questions))
-        print("prepared", len(questions), "offline prompts; status: unreviewed")
+        print("prepared", len(questions), "offline prompts;", args.sample,
+              "groups:", sorted({q["group"] for q in questions}), "status: unreviewed")
         return
     if not re.fullmatch(r"[a-zA-Z0-9_.:-]+/[a-zA-Z0-9_.:-]+", args.model):
         p.error("provide an explicit OpenRouter vendor/model id")
@@ -328,6 +370,7 @@ def main() -> None:
             response = invoke(key, args.model, question, args.provider)
             response["split"] = args.split
             response["corpus_sha256"] = manifest["corpus_sha256"]
+            response["sample"] = args.sample
             response["timestamp_unix"] = int(time.time())
             handle.write(json.dumps(response, ensure_ascii=False, sort_keys=True) + "\n")
             handle.flush()
