@@ -1,0 +1,19 @@
+{
+  "schema": "unisermo/unique-equivalence-review@1",
+  "source_corpus": "UCUB-001",
+  "source_sha256": "44fafa067cea9f32d383c21e37d388fae673f1848e827afb2330b4e69f7ce3e8",
+  "status": "candidate_meanings_pending_human_review",
+  "unit": "unique full Unisermo surface string",
+  "count": 63,
+  "level_counts": {
+    "L1": 14,
+    "L2": 16,
+    "L3": 14,
+    "L4": 19
+  },
+  "source_cases": 80,
+  "source_hypothesis_gold_included": false,
+  "one_english_gloss_collision": "lik sirka setdek senim uman mova. (same meaning, two paraphrases)",
+  "stage": "proposed Italian meaning equivalence only, no entailment judgments",
+  "notes": "Owner requested each distinct Unisermo passage appear once only. Maintain old UCUB entailment corpus unchanged; this is a separate review dataset."
+}
