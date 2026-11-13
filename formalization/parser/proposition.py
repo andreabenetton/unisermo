@@ -95,7 +95,7 @@ class PropositionParser:
             raise ValueError("question-wide connective and subordinate scope is not ratified")
         ast = self._expression(words, 0)
         is_wh = ast.get("question", {}).get("kind") == "wh"
-        if (polar or terminal == "?") and ast["kind"] not in {"svo_clause", "servile_clause", "zero_copula"}:
+        if (polar or terminal == "?") and ast["kind"] not in {"svo_clause", "servile_clause", "zero_copula", "copular_clause"}:
             raise ValueError("compound question scope is not ratified")
         if terminal == "?" and not polar and not is_wh:
             raise ValueError("content question requires a canonical wh word; polar question requires ka")
@@ -481,7 +481,7 @@ class PropositionParser:
                     raise ValueError("wh argument with state predication needs separate scope rules")
             else:
                 obj, complements = self._args(rest[1:], dependent)
-                self.validate_valency(dependent, obj, complements)
+                dependent_frame = self.validate_valency(dependent, obj, complements)
             if question is not None and question["role"] in {"object", "destination"}:
                 if question["role"] == "object" and obj is not None:
                     raise ValueError("wh object duplicates explicit object")
@@ -496,7 +496,13 @@ class PropositionParser:
                    "interrogative": question is not None}
             if self.is_state_copula(dependent):
                 out["dependent"]["state"] = state
-                out["dependent"]["valency"] = self.valency["copula_state"]["frame_ids"][dependent]
+                out["dependent"]["valency"] = (
+                    self.valency["copula_state"]["frame_ids"][dependent]
+                    if state is not None else "existential_copula")
+            elif dependent_frame is not None:
+                out["dependent"]["valency"] = dependent_frame
+                if dependent_frame == self.valency["force_manner"]["frame"]:
+                    out["dependent"]["entails_successful_displacement"] = False
             if question:
                 out["question"] = question
         else:
@@ -535,6 +541,8 @@ class PropositionParser:
                 out["question"] = question
             if frame is not None:
                 out["valency"] = frame
+                if frame == self.valency["force_manner"]["frame"]:
+                    out["entails_successful_displacement"] = False
         if front is not None:
             out["preposed_locative"] = front
         return self._annotate_focus(out)
