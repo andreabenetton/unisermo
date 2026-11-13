@@ -345,3 +345,23 @@ Examples: `lik kin senim uman mova` = 5% for P, `lik setdek senim uman mova` = 7
 **The grammar/parser MUST NOT constrain a numeric statement about probability to [0,1].** `lik bissen senim uman mova` (200%) is grammatically accepted and retained verbatim as a possible hyperbole, even though it violates ordinary mathematical probability axioms. Syntactic validity and numerical/model feasibility are separate analytical layers. No clamping or invented probabilities. The preexisting fractions allow improper forms such as `kin terim` (5/3); the parser preserves their numerator, denominator and surface form.
 
 Quantitative and qualitative degrees modify the **same** `lik` property, but their **simultaneous syntactic combination** has not been settled. Existing standalone forms `pok lik P`, `mult lik P`, etc. remain valid. General-purpose approximation, range and bound syntax is reserved for an independent language-wide decision; do not invent special-purpose probability terms for them.
+
+
+## 18. Universal quantitative comparisons, approximation and intervals (ratified 2026-11-13; LDR-0027)
+
+The **same** existing comparative operators receive a quantitative-value frame, without changing adjective comparisons `major ADJ dan B`:
+
+```text
+ekwal N      (= N)
+major N      (> N)
+minor N      (< N)
+no minor N   (>= N)
+no major N   (<= N)
+no ekwal N   (!= N)
+sirka N      (approximately N)
+inter A e B  (between A and B)
+```
+
+`sirka` and `inter` are newly ratified roots. `no` modifies the **numeric comparison**, not the surrounding clause. `sirka` has contextual tolerance, not automatically epistemic uncertainty. For `inter`, the `e` between endpoints is an **internal numeric connector**, not proposition coordination; endpoint inclusivity is contextual by default. For precise bounds compose `major/minor/no minor/no major` where those values are measured. The parser preserves numeric claims, including hyperbolic values, without imposing property-specific mathematical ranges.
+
+These constructions can quantify nominal counts (`sirka setdek uman` = approximately seventy people, `inter sesdek e setdek uman` = between sixty and seventy people) and existing scalar probabilities (`lik sirka setdek senim uman mova` = approximately 70% probability of movement; `lik no minor setdek senim uman mova` = at least 70%). Reuse the canonical numeral and fraction grammar; no new percentage or unit morpheme. Restricted parser implementations are not universal licenses for unspecified measurement units, decimals or compound interval calculations.
