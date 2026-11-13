@@ -70,3 +70,4 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0012: Unified permission `aut` and source `-de`](LDR-0012-aut-permission-source.md) — Accepted
 - [LDR-0013: Locative `-in` for abstract domains](LDR-0013-abstract-domain-locative.md) — Accepted
 - [LDR-0014: Physical-action valency `fer/portar/ten/kunten`](LDR-0014-physical-action-valency.md) — Accepted
+- [LDR-0017: Transfer perspective of `don` in UX labels](LDR-0017-don-ux-perspective.md) — Proposed
