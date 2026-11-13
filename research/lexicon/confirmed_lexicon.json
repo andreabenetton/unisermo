@@ -930,6 +930,33 @@
       "source": "Author explicit ratification 2026-11-13; English likely / likelihood, with international lik form",
       "decision": "One gradable probability property, not separate meanings for 'is likely' and 'has a probability'. Propositional lik P has context-dependent unquantified interpretation, no fixed >50% threshold. Existing qualitative degree modifiers minu, pok, ase, mult, ekstrem and sufficiency suf apply to the same scale. Numeric probability values may be represented by existing fractions/percentages but their scoped syntactic attachment is not yet approved. Distinct from pos possibility, deb necessity, kred belief, and prob moral good.",
       "status": "confirmed"
+    },
+    {
+      "form": "sirka",
+      "category": "function_word",
+      "meaning_it": "circa; approssimativamente, per un valore quantitativo",
+      "meaning_en": "approximately; about, applied to a quantitative value",
+      "source": "Author ratification 2026-11-13; Latin circa, written Unisermo with s for /s/",
+      "decision": "Universal approximation operator on a numerical scalar, tolerance contextual. Does not automatically mean epistemic uncertainty. No property-specific arithmetic bound.",
+      "status": "confirmed"
+    },
+    {
+      "form": "inter",
+      "category": "function_word",
+      "meaning_it": "tra due estremi quantitativi; intervallo",
+      "meaning_en": "between two quantitative endpoints; numeric interval",
+      "source": "Author ratification 2026-11-13; Latin inter",
+      "decision": "Universal interval operator inter A e B. Endpoint inclusivity is contextual unless independently expressed through no minor/no major. The internal e joins numeric endpoints rather than independent propositions.",
+      "status": "confirmed"
+    },
+    {
+      "form": "minor",
+      "category": "function_word",
+      "meaning_it": "meno; comparativo di minoranza; minore di",
+      "meaning_en": "less; comparative of minority; less than (numeric)",
+      "source": "Ratified comparison specification language/comparison.md; author extended numeric valency 2026-11-13",
+      "decision": "Preserve existing comparative minor ADJ dan B and extend to direct quantitative value: minor NUM means less than NUM; no minor NUM means at least NUM. No new negative morpheme.",
+      "status": "confirmed"
     }
   ]
 }
