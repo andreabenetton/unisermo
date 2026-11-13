@@ -105,6 +105,68 @@ This is a **proposed typed nominal construction**, NOT an already ratified unive
 
 **Design tension to resolve:** the user originally wrote `kambi monem uno usd kontra uno eur`. Under the owner-selected `kambi kontra Y X-em` semantics, that order and assignment denote giving dollars and receiving euros (the opposite of 'give EUR, receive USD'). It is valuable to preserve the typed `mon` insight while ordering the final recommended exchange sentence as `kambi kontra mon uno USD monem uno EUR` for give EUR / receive USD.
 
+## Bounded typed-currency phrase grammar (implementation proposal)
+
+**Status:** experimental parser-facing specification, not an exception already adopted into the canonical noun-phrase system. The owner explicitly endorsed `mon` as a currency-code namespace to prevent lexical collisions and requested implementation exploration. The more general grammar remains under review.
+
+### Proposed orthography and AST
+
+Use `mon` as a **typed nominal head**, followed by a **quantity** and an **external ISO 4217 identifier**. Unlike ordinary Unisermo NPs, this special construction is *head-initial* and takes the synthetic case suffix on `mon`, not on the ISO code.
+
+```ebnf
+CurrencyPhrase(case) = MoneyHead(case) Quantity ISO4217 ;
+MoneyHead(base)      = "mon" ;
+MoneyHead(accusative)= "monem" ;
+Quantity             = UnisermoCardinal ;  // in initial tests: uno, bis, dek, ...
+ISO4217              = UPPERCASE_ASCII_LETTER UPPERCASE_ASCII_LETTER UPPERCASE_ASCII_LETTER ;
+```
+
+The regular grammar still governs free relator phrases: `kontra` + currency phrase in base form. `monem` marks the *outgoing theme*, while `kontra mon` marks the *incoming consideration*. Proposed core exchange order:
+
+```ebnf
+Exchange        = "kambi" Incoming? Outgoing ;
+Incoming        = "kontra" (CurrencyPhrase(base) | OrdinaryNounPhrase(base)) ;
+Outgoing        = CurrencyPhrase(accusative) | OrdinaryNounPhrase(accusative) ;
+```
+
+Here `kambi` is a schematic root/imperative placeholder; normal finite forms will be needed for declarative sentences. Omitted Incoming defaults to `kontra mon` **semantically** when Outgoing is present. That means the countervalue kind is money but amount and currency are unspecified; the parser MUST NOT synthesize a fictional `uno` or currency code. A typed `mon` without quantity/code should represent a generic money concept and must be separately licensed if needed in full clauses.
+
+**Example:**
+`kambi kontra mon uno USD monem uno EUR`
+= give one euro and receive one US dollar, as reciprocal exchange.
+
+To avoid false conclusions, this example expresses a **1:1 nominal amount exchange**, not a claim that 1 EUR currently equals 1 USD in market value or that a broker would perform the deal at that rate.
+
+### Boundaries / namespace safety
+
+- A code is an external **typed identifier** only in the licensed `mon [quantity] CODE` construction; in other contexts its same letter sequence could be an ordinary lexeme or a parser error.
+- Preserve the standardized three-letter uppercase spelling as external data. Currency codes do **not** become new Unisermo roots and never receive Unisermo case suffixes.
+- `EURem` is not a valid replacement for `monem uno EUR`.
+- A three-letter uppercase shape is only a **lexical precheck**; production validation should verify real ISO 4217 codes from a versioned canonical registry. Do not silently accept arbitrary `XYZ` as a real currency.
+- Provisional surface syntax requires an explicit Unisermo quantity; decimal/fractional money amounts and currency-code validation/version pinning remain open.
+- Keep an ordinary noun whose form matches a currency code distinguishable from the code; a future root `eur` does not alter `mon uno EUR`.
+- Do not introduce global case-after-prefix movement. Ordinary noun phrases remain head-final and case-marked on their usual head.
+- A parser should store outgoing/incoming separately, e.g. `{type:"exchange",outgoing:{type:"money",quantity:"uno",code:"EUR"},incoming:{type:"money",quantity:"uno",code:"USD"}}`. The monetary default is `{type:"money",quantity:null,code:null,implicit:true}`.
+- The `kontra` relator is a *prospective* new lexical item. Test for collisions and decide its general or restricted use before canonization.
+
+### Example and contrast table
+
+| Surface (experimental) | Expected interpretation |
+| --- | --- |
+| `kambi kontra mon uno USD monem uno EUR` | pay 1 EUR, receive 1 USD |
+| `kambi kontra mon uno EUR monem uno USD` | pay 1 USD, receive 1 EUR |
+| `kambi monem uno EUR` | pay euros, receive unspecified money; forex possible |
+| `kambi librem` | give a book for unspecified money; ordinary sale reading |
+| `kambi kontra libr monem uno EUR` | pay 1 EUR to receive book |
+| `kambi kontra mon uno USD monem uno USD` | exchange 1 USD for 1 USD, valid type but economically trivial |
+| `kambi kontra mon uno usd monem uno EUR` | rejected by strict uppercase-code profile |
+| `kambi kontra mon uno XYZ monem uno EUR` | syntactically plausible shape but code registry must confirm XYZ |
+| `kambi kontra mon uno USD uno EURem` | rejected: no typed money head on the outgoing theme |
+
+### Open decision
+
+A globally *canonical* case-bearing monetary noun phrase should be defined in one place. The prefix-head pattern chosen here is intentionally scoped to the ISO-currency namespace; whether other standardized identifiers should use a related schema requires a later LDR, rather than automatic generalization.
+
 ## Testable questions
 
 1. Does `kambi` without objects convey a reciprocal event rather than mere unilateral giving?
