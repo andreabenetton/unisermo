@@ -133,6 +133,29 @@ def parse_label(text: str) -> str | None:
     return data["label"]
 
 
+# A single complete Markdown JSON fence is recoverable without guessing.
+# Free-text replies, multiple code blocks and arbitrary embedded JSON are not.
+FENCED_LABEL = re.compile(
+    r"\\s*```(?:json)?[ \\t]*\\r?\\n(.*?)\\r?\\n```[ \\t]*\\s*",
+    flags=re.IGNORECASE | re.DOTALL,
+)
+
+
+def parse_label_with_format(text: str) -> tuple[str | None, str]:
+    """Distinguish semantic parseability from literal JSON compliance."""
+    strict = parse_label(text)
+    if strict is not None:
+        return strict, "raw_json"
+    if not isinstance(text, str):
+        return None, "invalid"
+    wrapper = FENCED_LABEL.fullmatch(text)
+    if wrapper is not None:
+        recovered = parse_label(wrapper.group(1))
+        if recovered is not None:
+            return recovered, "fenced_json"
+    return None, "invalid"
+
+
 def score(responses: list[dict], rows: list[dict], *, allow_partial: bool = False) -> dict:
     keys = {r["id"]: r for r in rows}
     if len({r["id"] for r in responses}) != len(responses):
@@ -149,13 +172,15 @@ def score(responses: list[dict], rows: list[dict], *, allow_partial: bool = Fals
     results = []
     for response in responses:
         case = keys[response["id"]]
-        predicted = parse_label(response.get("answer", ""))
+        predicted, output_format = parse_label_with_format(response.get("answer", ""))
         expected = case["gold"]
         results.append({"id": case["id"], "level": case["level"],
                         "group": case["group"], "expected": expected,
                         "prediction": predicted,
                         "correct": predicted == expected,
                         "valid": predicted is not None,
+                        "output_format": output_format,
+                        "strict_json": output_format == "raw_json",
                         "usage": response.get("usage") or {}})
     count = len(results)
     breakdown = {}
@@ -172,15 +197,22 @@ def score(responses: list[dict], rows: list[dict], *, allow_partial: bool = Fals
     for key in ("prompt_tokens", "completion_tokens", "total_tokens", "cost"):
         vals = [x["usage"].get(key) for x in results]
         usage[key] = sum(v for v in vals if isinstance(v, (int, float)) and not isinstance(v, bool)) if any(isinstance(v, (int, float)) for v in vals) else None
-    return {"schema": "unisermo/ucub001-score@1",
+    strict_count = sum(x["strict_json"] for x in results)
+    return {"schema": "unisermo/ucub001-score@2",
             "status": "exploratory_unreviewed_semantics",
             "condition": next(iter(conditions)), "count": count,
             "correct": sum(x["correct"] for x in results),
+            # Recovery affects only a whole fenced JSON object; no guesswork.
             "accuracy": sum(x["correct"] for x in results) / count,
             "invalid_outputs": sum(not x["valid"] for x in results),
+            "strict_invalid_outputs": count - strict_count,
+            "raw_json_compliant": strict_count,
+            "raw_json_compliance_rate": strict_count / count,
+            "fenced_json_outputs": sum(x["output_format"] == "fenced_json" for x in results),
+            "strict_contract_correct": sum(x["strict_json"] and x["correct"] for x in results),
             "by_level": breakdown, "confusion": confusion,
             "usage_totals": usage,
-            "items": [{k: r[k] for k in ("id", "correct", "valid", "prediction")} for r in results]}
+            "items": [{k: r[k] for k in ("id", "correct", "valid", "prediction", "output_format", "strict_json")} for r in results]}
 
 
 def invoke(key: str, model: str, question: dict, provider: str | None) -> dict:
