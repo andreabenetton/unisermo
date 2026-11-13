@@ -47,7 +47,7 @@ class PropositionalTenseNecessityTests(unittest.TestCase):
                 self.assertEqual(ast["subject"]["person"],1)
                 self.assertEqual(ast["operand"]["subject"]["person"],2)
         self.assertTrue(self.lang.parse_sentence("i sapd u movdu")["entails_operand_truth"])
-        self.assertFalse(self.lang.parse_sentence("i no sapd u movda")["entails_operand_truth"])
+        self.assertFalse(self.lang.parse_sentence("i no sapd u movdu")["entails_operand_truth"])
 
     def test_necessity_scope_not_equated_with_ability_or_duty(self):
         necessary=self.lang.parse_sentence("deb uman mova")
