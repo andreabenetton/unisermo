@@ -165,7 +165,54 @@ class PropositionParser:
             return {"kind": "wide_negation", "operator": "no lim",
                     "operand": self._expression(operand, depth + 1),
                     "scope": "complete_truth_conditional_operand"}
+        # Subject-explicit propositional serviles are bare heads with an
+        # independent finite complement. No person is encoded on the head.
+        # This is a bounded semantic license, not a blanket coercion of
+        # all intransitive/ordinary predicates into clausal operators.
+        propositional_subject_heads = {
+            "vol": "desire_that",
+            "int": "intention_that",
+            "tent": "attempt_that",
+            "sap": "knowledge_that",
+            "kred": "belief_that",
+        }
+        for i in range(1, min(len(words), 8)):
+            head = words[i]
+            if head not in propositional_subject_heads:
+                continue
+            prefix = words[:i]
+            negated = bool(prefix and prefix[-1] == "no")
+            if negated:
+                prefix = prefix[:-1]
+            if not prefix or "no" in prefix:
+                continue
+            try:
+                # Explicit subject, including pronouns and canonical NPs.
+                # Its person is not tied to the embedded finite predicate.
+                subject = self._np(prefix, "nominative")
+            except ValueError:
+                continue
+            operand_words = words[i + 1:]
+            if not operand_words or not any(self._finite(w) for w in operand_words):
+                raise ValueError("subject-explicit bare servile needs a finite proposition")
+            if any(w in SUBORDINATES | {"alor", "lim", "ka", "ma", "ergo", "nam", "due"}
+                   for w in operand_words):
+                raise ValueError("mixed subject-explicit modal scope not yet ratified")
+            operand = self._expression(operand_words, depth + 1)
+            if operand["kind"] not in {"svo_clause", "servile_clause",
+                                       "zero_copula", "copular_clause",
+                                       "coordination", "exclusive_choice"}:
+                raise ValueError("unsupported embedded proposition kind")
+            return {"kind": "propositional_servile",
+                    "operator": head, "operator_form": "bare_root",
+                    "interpretation": propositional_subject_heads[head],
+                    "subject": subject, "negative": negated,
+                    "operand": operand, "operand_finite": True,
+                    "entails_operand_truth": head == "sap" and not negated,
+                    "entails_attempt": head == "tent" and not negated,
+                    "entails_intention": head == "int" and not negated}
         # Ratified shared-subject serviles are finite heads plus bare V.
+
         # The separate proposition-level frame is an invariant bare head
         # plus a complete *finite* proposition. Only epistemic pos is
         # semantically licensed in this parser subset; other heads need an

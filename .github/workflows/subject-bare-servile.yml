@@ -1,0 +1,32 @@
+name: Subject bare-servile proposition regression
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'docs/ldr/LDR-0023-subject-bare-servile.md'
+      - 'tests/test_subject_bare_servile.py'
+      - '.github/workflows/subject-bare-servile.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  propositional-serviles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check generated indexes and grammar
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Test explicit-subject propositional serviles
+        run: python -m unittest discover -s tests -p 'test_subject_bare_servile.py' -v
+      - name: Confirm existing personal and impersonal serviles
+        run: |
+          python -m unittest discover -s tests -p 'test_bare_propositional_servile.py' -v
+          python -m unittest discover -s tests -p 'test_intention_servile.py' -v
+          python -m unittest discover -s tests -p 'test_tent_servile.py' -v

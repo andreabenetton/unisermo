@@ -189,6 +189,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Bare servile heads governing finite propositions, first instance pos"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "grammar",
+      "id": "LDR-0023",
+      "path": "docs/ldr/LDR-0023-subject-bare-servile.md",
+      "sha256": "4548f5813a37585fb4965a1ae7ebc1b6de4935ac6d3a2fc3cd194957f48d2c4b",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Subject-bearing bare serviles with independent finite propositions"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
