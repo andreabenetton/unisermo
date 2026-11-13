@@ -421,8 +421,10 @@ productive associative `kun-` likewise preserves those roles
 and adds association/jointness without introducing a mandatory
 new co-agent. The separately **lexicalized** `kunten` keeps its
 containment meaning: it is not decoded as a generic
-`kun-` + `ten` event. No general stacked prefix derivation
-is approved by this rule.
+`kun-` + `ten` event. Applying a further associative
+`kun-` to the lexicalized `kunten` (`kunkunten`) is
+outside this bounded single-layer parser subset.
+No general stacked prefix derivation is approved by this rule.
 
 **Important implementation limit:** one explicit accusative
 participant is **required in the currently approved parser
