@@ -1,0 +1,32 @@
+name: Gradable probability lik regression
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/comparison.md'
+      - 'docs/ldr/LDR-0025-unified-gradable-properties.md'
+      - 'research/lexicon/confirmed_lexicon.json'
+      - 'tests/test_gradable_probability_lik.py'
+      - '.github/workflows/gradable-probability-lik.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  likelihood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Build and grammar source verification
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Gradable probability tests
+        run: python -m unittest discover -s tests -p 'test_gradable_probability_lik.py' -v
+      - name: Prior propositional regression
+        run: |
+          python -m unittest discover -s tests -p 'test_propositional_tense_necessity.py' -v
+          python -m unittest discover -s tests -p 'test_bare_propositional_servile.py' -v
