@@ -57,7 +57,12 @@ class DerivationParser:
                     candidates.append((base, "verb", prefix, "phase_" + operation, "prefix"))
         if lemma.startswith("kun"):
             base = lemma[3:]
-            if base in self.verbs and base not in self.MODAL_HEADS:
+            # kunten is already a lexicalized containment root, not
+            # transparent kun + ten. A further kunkunten is an
+            # unratified double associative construction, not a
+            # productive joint-containment verb in this parser subset.
+            if (base in self.verbs and base not in self.MODAL_HEADS
+                    and base != "kunten"):
                 candidates.append((base, "verb", "kun", "joint_event", "prefix"))
         if lemma.startswith("ne"):
             base = lemma[2:]
