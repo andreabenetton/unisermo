@@ -92,6 +92,32 @@ and state transformation. It does not generalize these case frames
 to other verbs. See [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md)
 for limitations and executable tests.
 
+## Source-attested verb valency (2026-11-13)
+
+The parser now checks attested lexical argument frames for the
+`pel/trak` force verbs and `es` state-phase family, in addition
+to the existing `mov` and `traes` cases.
+
+```sh
+python3 -m formalization proposition 'peli domem'
+python3 -m formalization proposition 'dom esa bon'
+python3 -m formalization proposition 'adesi aper'
+python3 -m formalization proposition 'debi ades aper'
+```
+
+Pushing/pulling an accusative patient does **not** assert successful
+motion. The explicit `es` copula also supports existential use
+without an overt state, whereas phase variants take one attested
+predicative state. An arbitrary verb does **not** inherit these
+valencies. Unknown argument structures are recorded as
+`undetermined` by `Unisermo.valency_evidence(lemma)`;
+unsupported `-ad` and `-de` attachments are rejected by
+this restricted parser rather than silently guessed.
+
+See [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md) and the
+source-linked [valency registry](data/valency_frames.json).
+This is not a ratification of new lexical argument frames.
+
 ## Ratified scalar factors, ordinals and fractions (2026-10-24)
 
 The following author-approved numeral constructions are supported in the
