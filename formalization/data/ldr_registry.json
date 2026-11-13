@@ -139,6 +139,26 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Distinct overt-object valencies for fer portar ten and kunten"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "lexical-semantics",
+      "id": "LDR-0018",
+      "path": "docs/ldr/LDR-0018-exchange-kambi-semantics.md",
+      "sha256": "28b711537703bb9ffdc3329ab8311e37f0ef851d19d007350d42592ed9b630cd",
+      "status": "Proposed",
+      "supersedes": "none",
+      "title": "Exchange and commercial transfer without buy/sell lexical duplication"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "semantics-grammar",
+      "id": "LDR-0019",
+      "path": "docs/ldr/LDR-0019-sap-knowledge-family.md",
+      "sha256": "04591b943b0134d1a96a2003192ca27196f337f87b7c536ad9dc834d76769382",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Compositional knowledge acquisition via the sap phase family"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
