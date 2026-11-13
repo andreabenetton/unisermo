@@ -103,6 +103,8 @@ python3 -m formalization proposition 'peli domem'
 python3 -m formalization proposition 'dom esa bon'
 python3 -m formalization proposition 'adesi aper'
 python3 -m formalization proposition 'debi ades aper'
+python3 -m formalization valency pel
+python3 -m formalization valency --all
 ```
 
 Pushing/pulling an accusative patient does **not** assert successful
