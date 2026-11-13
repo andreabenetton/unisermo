@@ -33,7 +33,10 @@
               "ordinal_numeral",
               "multiplicative_factor",
               "genitive_pronoun",
-              "focus_enclitic"
+              "focus_enclitic",
+              "productive_derivation",
+              "derived_adjective",
+              "derived_property"
             ]
           },
           "lemma": {
@@ -107,6 +110,61 @@
           },
           "focus": {
             "type": "string"
+          },
+          "derivation": {
+            "type": "object",
+            "required": [
+              "kind",
+              "lemma",
+              "base",
+              "category",
+              "affix",
+              "affix_position",
+              "operation",
+              "status",
+              "base_status"
+            ],
+            "properties": {
+              "kind": {
+                "const": "productive_derivation"
+              },
+              "lemma": {
+                "type": "string"
+              },
+              "base": {
+                "type": "string"
+              },
+              "category": {
+                "enum": [
+                  "verb",
+                  "noun",
+                  "adjective",
+                  "property"
+                ]
+              },
+              "affix": {
+                "type": "string"
+              },
+              "affix_position": {
+                "enum": [
+                  "prefix",
+                  "suffix"
+                ]
+              },
+              "operation": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "productive_from_confirmed",
+                  "productive_from_attested"
+                ]
+              },
+              "base_status": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
         },
         "additionalProperties": false
