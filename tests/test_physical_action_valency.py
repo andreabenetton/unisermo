@@ -126,6 +126,12 @@ class PhysicalActionValencyTests(unittest.TestCase):
         self.assertEqual(self.u.physical_action_base("kunten"), "kunten")
         self.assertNotEqual(self.u.physical_action_base("kunten"), "ten")
         self.assertIsNone(self.u.physical_action_base("adkunportar"))
+        self.assertIsNone(self.u.physical_action_base("kunkunten"))
+        self.assertIsNone(self.u.parse_derivation("kunkunten"))
+        with self.assertRaises(ValueError):
+            self.u.generate_verb("kunkunten")
+        with self.assertRaises(ValueError):
+            self.u.parse_sentence("kunkunteni akwaem")
 
     def test_modal_complements_share_checked_frames(self):
         samples = [
