@@ -7,7 +7,7 @@ domain: grammar
 supersedes: none
 ---
 
-# LDR-0014 — Physical taking, transport, constraint and containment
+# LDR-0014 - Physical taking, transport, constraint and containment
 
 ## Context and motivation
 
