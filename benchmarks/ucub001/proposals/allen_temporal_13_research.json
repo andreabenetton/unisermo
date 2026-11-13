@@ -1,7 +1,7 @@
 {
   "schema": "ucub-temporal-allen-13-v1",
   "status": "research_only_unratified",
-  "note": "Schematic event-instance operands; not approved Unisermo sentences. ekwal event-interval use and tem strictness unresolved.",
+  "note": "Bounded-event interval semantics of strict tem and temporal-extent temekwal ratified 2026-11-13; all event–event finite-clause syntax and parser verification still unratified.",
   "items": [
     {
       "allen_relation": "before",
@@ -9,7 +9,8 @@
       "inequality": "a1 < b0",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "meets",
@@ -17,7 +18,8 @@
       "inequality": "a1 == b0",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "overlaps",
@@ -25,7 +27,8 @@
       "inequality": "a0 < b0 < a1 < b1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "starts",
@@ -33,7 +36,8 @@
       "inequality": "a0 == b0 and a1 < b1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "during",
@@ -41,7 +45,8 @@
       "inequality": "b0 < a0 and a1 < b1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "ratified_2026_11_13"
     },
     {
       "allen_relation": "finishes",
@@ -49,15 +54,17 @@
       "inequality": "b0 < a0 and a1 == b1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "equals",
-      "abstract_expression": "A ekwal B",
+      "abstract_expression": "A temekwal B",
       "inequality": "a0 == b0 and a1 == b1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "ratified_2026_11_13"
     },
     {
       "allen_relation": "finished_by",
@@ -65,7 +72,8 @@
       "inequality": "a0 < b0 and a1 == b1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "contains",
@@ -73,7 +81,8 @@
       "inequality": "a0 < b0 and b1 < a1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "ratified_2026_11_13"
     },
     {
       "allen_relation": "started_by",
@@ -81,7 +90,8 @@
       "inequality": "a0 == b0 and b1 < a1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "overlapped_by",
@@ -89,7 +99,8 @@
       "inequality": "b0 < a0 < b1 < a1",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "met_by",
@@ -97,7 +108,8 @@
       "inequality": "b1 == a0",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     },
     {
       "allen_relation": "after",
@@ -105,7 +117,8 @@
       "inequality": "b1 < a0",
       "grammar_status": "research_only",
       "parser_verified": false,
-      "benchmark_admitted": false
+      "benchmark_admitted": false,
+      "semantic_status": "candidate_only"
     }
   ]
 }
