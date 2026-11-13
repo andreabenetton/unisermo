@@ -98,3 +98,8 @@ The author-ratified attempt servile `tent` is a finite head taking one dependent
 ## Adopted intention `int` versus desire `vol` and attempt `tent` (2026-11-13)
 
 The ordinary finite servile `int` is a shared-subject adopted-intention head. In positive statements it entails a current intention/plan toward the dependent event, **not** that the event or an effort to realize it has occurred. Scope distinguishes `no inti V` (no adopted intention) from `inti no V` (an intention to refrain). `voli V` represents mere desire and can coexist with `no inti V`; `tenti V` asserts an effort, without success. `int` cannot evaluate epistemic likelihood of arbitrary propositions or control another subject.
+
+
+## Bare propositional possibility `pos P` (2026-11-13)
+
+The root-only (uninflected) `pos` governs a complete finite proposition, without any personal subject of its own. It means the embedded proposition is epistemically possible, not that its subject has situational opportunity (`posi V`). With `e`/`o` right-associated connectors, `pos` includes the entire following expression until explicit existing closing `lim` before a connector. `no pos P` is NOT POSSIBLE(P), whereas `pos no P` is POSSIBLE(NOT P); `no pos no P` derives necessity of P under the same modal possibility domain. The AST is a `propositional_servile` node with an embedded proposition tree, not a truth evaluation. Not licensed: `posd P` (personless past assessment) or arbitrary bare-root reinterpretations for other serviles.
