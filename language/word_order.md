@@ -223,3 +223,10 @@ The **root-only** propositional servile frame `SERVILE_ROOT FINITE_PROPOSITION` 
 - `pos uman mova lim e vida` — It is possible that the person moves, **and** the person sees: the already ratified `lim` closes the left proposition before `e`, keeping `vida` outside modal scope.
 
 A preposed `no pos` negates the propositional modal, while `no` before a finite verb inside the operand negates that verb. This extends the uses of the already ratified closing `lim`, not the inventory of markers. Bare-root modal scope across `due`, `nam`, `ergo` or subordinate operators is not decided. The personal `posi mov` frame remains separate.
+
+
+## Overt subject before a bare propositional servile (ratified 2026-11-13)
+
+An attitude-holder or actor is placed **before** the bare servile root when a subject-bearing servile takes a finite proposition: `SUBJECT [no] SERVILE_ROOT FINITE_PROPOSITION`. For example `i vol u movu` means 'I want you to move'; `u sap i movdi` means 'you know I moved'; `i tent uman mova` means 'I try to bring about the person's moving'. The outer subject does not agree with the inner finite predicate. Pro-drop applies *inside* the subordinate finite clause when its own person marking identifies the subject, but the subject of the bare head is **not omitted**.
+
+The currently licensed bare subject-bearing heads are `vol`, `int`, `tent`, `sap`, and `kred`. Epistemic impersonal `pos P` retains its separate frame. The existing closing `lim` before `e/o` delimits the propositional argument: `i vol u movu lim e vida` = [I want you to move] AND [someone sees], not I want both events. `i vol u movu e vida` applies the desire to the joint embedded expression. The parser remains fail-closed on unratified mixed discourse/subordination and optional personless operator TAM.
