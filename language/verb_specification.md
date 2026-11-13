@@ -183,6 +183,36 @@ to fail closed on unratified stacked or nested modal scopes.
 This construction is productive: no special synthetic suffix is added to
 the dependent lexical verb for modal meanings.
 
+### Bare servile with finite proposition (author ratification 2026-11-13)
+
+A servile can govern **two distinct syntactic complement types** without a new conjunction or person marker:
+
+```text
+[SUBJECT] SERVILE-FINITE BARE_VERB [DEPENDENTS...]
+[no] SERVILE-ROOT FINITE_PROPOSITION
+```
+
+The first (already canonical) frame is personal and shares its subject with the bare dependent lexical verb. The second is a **propositional frame**: the servile is its **uninflected dictionary root**, has **no own subject or person ending**, and takes a complete finite proposition with its own subject and TAM. **Availability of the propositional frame is lexical-semantic, not automatic for every servile**: the first confirmed instantiation is **`pos`**, meaning epistemic/compatibility possibility that the entire asserted proposition P is true. A propositional `pos P` does **not** assert P.
+
+- `posi mov` — I have the opportunity to move (personal; `movi` not asserted).
+- `pos uman mova` — It is possible that the person moves (propositional).
+- `pos movda` — It is possible that I moved (embedded first-person past).
+- `no pos uman mova` — It is **not possible** that the person moves.
+- `pos uman no mova` — It is possible that the person **does not** move.
+- `no pos uman no mova` — It is not possible that the person does not move; under the same epistemic possibility domain, movement is necessary.
+
+The existing free `no` immediately before the bare `pos` negates the modal assessment; `no` inside the finite proposition negates the embedded event. The two positions must never collapse into a single 'unlikely' reading.
+
+**Propositional scope.** A bare propositional servile takes the **following complete propositional expression**, including ordinary `e`/`o` clause coordination, as its argument **unless the already ratified closing `lim`, immediately before the following connective, ends the modal operand**:
+
+- `pos uman mova e vida` — POSSIBLE(P AND Q): it is possible that the person moves and sees (Q is third-person pro-drop).
+- `pos uman mova lim e vida` — POSSIBLE(P) AND Q: the person may move, **and does see**.
+- `no pos uman mova lim e vida` — NOT POSSIBLE(P) AND Q: it is impossible that the person moves, and the person sees.
+
+The last sentence's second-clause subject is pro-drop third person; discourse determines its referent. `lim` is not a new paired bracket or opening particle, and commas do not change scope.
+
+**Bounded executable scope:** `pos` over one or more simple finite clauses combined using `e`/`o`, and `lim` closure before ordinary `e`/`o`; modal operator negation and local embedded negation are supported. Other propositional servile interpretations (`deb`, `sap`, `vol`, `int`, `tent`, `aut`, `pot`), arbitrary subordinate causal scope, nested modal heads, and epistemic assessment time independent of embedded event TAM remain separate semantic/grammatical decisions. In particular **`posd` as a personless past-assessment head is a proposal, not ratified**; current finite verb morphology still requires the person vowel. No assumption that `deb` changes from normative duty to logical necessity is made here.
+
 ### Intention servile: `int` (author ratification 13 November 2026)
 
 `int` is a regular **same-subject servile** for a genuinely adopted intention or commitment to undertake the dependent action, distinguished from `vol` (want/desire) and `tent` (actual attempt). A person can intend an unpleasant obligatory act without desiring it, want to act without resolving to do so, or form an intention without having started an attempt. The intention does not guarantee eventual performance.
