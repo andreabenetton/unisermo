@@ -43,6 +43,20 @@ class ValencyParser:
         spec = self.valency["copula_state"]
         return lemma == spec["base"] or lemma in spec["phase_verbs"]
 
+    def is_knowledge_verb(self, lemma: str) -> bool:
+        """Knowledge phase family shares the knower's two approved frames."""
+        spec = self.valency["knowledge"]
+        return lemma == spec["base"] or lemma in spec["phase_verbs"]
+
+    def validate_knowledge_procedure(self, lemma: str, obj: dict | None,
+                                     complements: list[dict]) -> str:
+        """Knowledge heads are not generic modals or causatives."""
+        if not self.is_knowledge_verb(lemma):
+            raise ValueError("unsupported knowledge-procedure head")
+        if obj is not None or complements:
+            raise ValueError("procedural knowledge with dependent arguments is not yet in parser subset")
+        return "procedural_knowledge"
+
     def physical_action_base(self, lemma: str) -> str | None:
         """Resolve a single licensed phase/associative derivative.
 
@@ -137,7 +151,8 @@ class ValencyParser:
     def has_documented_valency(self, lemma: str) -> bool:
         return (lemma == "traes" or self.is_motion_verb(lemma)
                 or self.is_force_verb(lemma) or self.is_state_copula(lemma)
-                or self.physical_action_base(lemma) is not None)
+                or self.physical_action_base(lemma) is not None
+                or self.is_knowledge_verb(lemma))
 
     def valency_evidence(self, lemma: str) -> dict:
         """Expose the evidence boundary for a canonical or productive verb."""
@@ -155,6 +170,8 @@ class ValencyParser:
             source, family = self.valency["copula_state"]["source"], "state_predication"
         elif self.physical_action_base(lemma) is not None:
             source, family = self.valency["physical_action"]["source"], "physical_action"
+        elif self.is_knowledge_verb(lemma):
+            source, family = self.valency["knowledge"]["source"], "knowledge"
         return {"lemma": lemma, "status": "documented" if source else "undetermined",
                 "family": family, "source": source,
                 "note": ("Unspecified lexical valency is NOT automatically grammatical"
@@ -187,6 +204,11 @@ class ValencyParser:
                          or len(complements) == len(frame["required_cases"]))):
                     return frame["id"]
             raise ValueError("traes requires DEST-ad SOURCE-de, or OBJ-em RESULT-da")
+
+        if self.is_knowledge_verb(lemma):
+            if obj is None or complements:
+                raise ValueError("knowledge content frame requires CONTENT-em and no extra complements")
+            return "knowledge_content"
 
         if self.physical_action_base(lemma) is not None:
             return self._validate_physical_action(lemma, obj, complements)
