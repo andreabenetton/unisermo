@@ -133,3 +133,8 @@ The accepted `lik CARDINAL ORDINAL FINITE_PROPOSITION` frame attaches an existin
 ## Homogeneous measurement and unit ellipsis (LDR-0028, 2026-11-13)
 
 A measured scalar comprises a quantitative expression and a **confirmed typed unit**. Initial units `gram` = mass and `sekun` = duration. The dedicated `parse_measurement_expression` returns a typed measure AST; full `inter Q1 UNIT e Q2 UNIT` and elliptical `inter Q1 e Q2 UNIT` resolve to the same unit for both endpoints, while an explicit `unit_ellipsis` flag preserves what was actually said. Do not perform implicit conversion between unlike units. Mathematical plausibility is not a syntactic restriction. Prefixes, derived units, external codes and full predicate attachment are later design decisions.
+
+
+## All 24 canonical SI decimal prefixes (LDR-0029, 2026-11-13)
+
+`formalization/data/si_prefixes.json` fixes a complete, 24-entry list of adapted SI prefix spellings, original BIPM name and symbol, and **exact decimal exponent**. The measurement parser's `parse_measurement_unit` recovers a typed unit with its root, prefix, dimension and exact rational scale factor. Prefixes are **single and fused** with independently ratified units only; the parser rejects standalone prefixes, stacked prefixes, and `miligram` (the confirmed prefix is `milli-`). `mila` remains a cardinal, not the metric kilo prefix; `mega/giga` have both a numeral and a typed prefixed-unit role. Interval unit ellipsis copies the complete prefixed unit. The original wording is preserved rather than silently converting `mila gram` to `uno kilogram`.
