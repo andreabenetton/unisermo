@@ -83,5 +83,31 @@
     "nefas",
     "aper",
     "klus"
+  ],
+  "measurement_prefix": [
+    "kwetta",
+    "ronna",
+    "jotta",
+    "zetta",
+    "eksa",
+    "peta",
+    "tera",
+    "giga",
+    "mega",
+    "kilo",
+    "ekto",
+    "deka",
+    "desi",
+    "senti",
+    "milli",
+    "mikro",
+    "nano",
+    "piko",
+    "femto",
+    "atto",
+    "zepto",
+    "jokto",
+    "ronto",
+    "kwekto"
   ]
 }
