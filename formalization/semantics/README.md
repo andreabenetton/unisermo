@@ -118,3 +118,8 @@ The propositional servile frame permits `ROOT + time(Ø/d/f)` while omitting per
 ## Gradable probability property, author ratifications 2026-11-13 (LDR-0025)
 
 `lik` is a confirmed **single** scalar probability property over a finite proposition P. Its many target-language translations do not produce different underlying Unisermo senses. The typed node `propositional_degree_property` stores property=`lik`, scale=`probability`, optional independently licensed qualitative degree (`minu/pok/ase/mult/ekstrem/suf`) and the bounded finite proposition operand. It carries **no fixed numeric percentage threshold**, and none of the likelihood assertions entails P. The separate numeric-value attachment syntax is still open; existing fractions remain canonical numeric expressions but cannot yet be attached to `lik P` without further design. `lik P` remains distinct from epistemic `pos P`, necessary `deb P`, personal `kred P` and moral quality `prob`.
+
+
+## Exact numeric likelihood fraction and hyperbole (LDR-0026, 2026-11-13)
+
+The accepted `lik CARDINAL ORDINAL FINITE_PROPOSITION` frame attaches an existing exact two-word fraction to a finite-proposition likelihood property. The AST retains an independently parsed `numeric_measure` with numerator, denominator, canonical spelling and the original `form`. No semantic [0,1] bounds are enforced; claims such as '200%' are grammatical, because linguistic syntax must preserve the speaker's nonliteral/hyperbolic expression. `no lik FRACTION P` negates the asserted numeric degree, whereas `lik FRACTION no P` scopes negation over the embedded proposition. Existing `lim` clauses keep their normal boundary. Approximation, interval and inequality operators remain unratified general constructions.

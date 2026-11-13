@@ -165,16 +165,25 @@ class PropositionParser:
             return {"kind": "wide_negation", "operator": "no lim",
                     "operand": self._expression(operand, depth + 1),
                     "scope": "complete_truth_conditional_operand"}
-        # A single scalar probability property may be qualified by the
-        # existing analytical degrees. Unlike epistemic pos/deb, lik denotes
-        # a gradable scale, not a binary modal; no numeric attachment is
-        # defined by this restricted grammar.
+        # The same gradable likelihood property accepts a qualitative
+        # degree or a ratified two-token CARDINAL ORDINAL numeric fraction.
+        # Do not reject > 1 fractions: rhetorical hyperbole remains valid
+        # syntax and arithmetic/model assessment is a separate layer.
         probability_degrees = {"minu", "pok", "ase", "mult", "ekstrem", "suf"}
+        negative_lik = len(words) >= 2 and words[0] == "no" and words[1] == "lik"
         prob_index = (1 if len(words) >= 2 and words[0] in probability_degrees
-                      else 0)
+                      else (1 if negative_lik else 0))
         if len(words) > prob_index and words[prob_index] == "lik":
-            grade = words[0] if prob_index else None
-            operand_words = words[prob_index + 1:]
+            grade = words[0] if prob_index and not negative_lik else None
+            numeric_measure = None
+            operand_start = prob_index + 1
+            if len(words) >= operand_start + 2:
+                numeric_measure = self.parse_fraction(" ".join(words[operand_start:operand_start+2]))
+                if numeric_measure is not None:
+                    operand_start += 2
+            if numeric_measure is not None and grade is not None:
+                raise ValueError("combined numeric and qualitative likelihood degrees are not ratified")
+            operand_words = words[operand_start:]
             if not operand_words or not any(self._finite(w) for w in operand_words):
                 raise ValueError("lik requires a finite proposition")
             if any(w in SUBORDINATES | {"alor", "lim", "ka", "ma", "ergo", "nam", "due"}
@@ -191,11 +200,12 @@ class PropositionParser:
                     "property": "lik",
                     "scale": "probability",
                     "degree": grade,
+                    "negative": negative_lik,
                     "threshold_relative": grade == "suf",
-                    "numeric_threshold_defined": False,
+                    "numeric_threshold_defined": numeric_measure is not None,
                     "operand": operand,
                     "entails_operand_truth": False,
-                    "numeric_measure": None}
+                    "numeric_measure": numeric_measure}
         # Subject-explicit propositional serviles are bare heads with an
         # independent finite complement. No person is encoded on the head.
         # This is a bounded semantic license, not a blanket coercion of

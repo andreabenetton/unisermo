@@ -330,3 +330,18 @@ An inherently gradable property has **one** underlying lexical meaning; translat
 - `suf lik uman mova` — probable enough relative to the relevant decision threshold.
 
 The modifier precedes `lik`, which takes the following complete finite Boolean proposition as its argument. A specific numeric probability may ultimately be expressed using **existing** fractions/percentages such as `kin senim` = 5%, but a scoped composition of number and `lik P` is **not yet ratified**; such sentences must not be generated as canonical grammar. Likewise no independently ratified personless `likd/likf` operator tense, nested `lik pos P`, or generic scalar comparison over two propositions is introduced by this decision. Unmodified `lik` has a context-dependent threshold for idiomatic translation only, never an automatic precise percentage cutoff.
+
+
+## 17. Exact numeric degree of `lik` (author ratification 2026-11-13; LDR-0026)
+
+The existing two-word rational-fraction construction now directly quantifies the gradable propositional probability property:
+
+```text
+[no] lik CARDINAL ORDINAL FINITE_PROPOSITION
+```
+
+Examples: `lik kin senim uman mova` = 5% for P, `lik setdek senim uman mova` = 70% for P, `lik uno bisim uman mova` = 1/2 for P. `no lik setdek senim uman mova` rejects the **70% valuation**, not P itself; `lik setdek senim uman no mova` assigns 70% to NOT-P. The ordinary `lim` immediately before a following connective closes the measured proposition: `lik setdek senim uman mova lim e vida` = 70% for movement, AND someone sees. Without `lim`, normal following Boolean coordination remains under `lik`.
+
+**The grammar/parser MUST NOT constrain a numeric statement about probability to [0,1].** `lik bissen senim uman mova` (200%) is grammatically accepted and retained verbatim as a possible hyperbole, even though it violates ordinary mathematical probability axioms. Syntactic validity and numerical/model feasibility are separate analytical layers. No clamping or invented probabilities. The preexisting fractions allow improper forms such as `kin terim` (5/3); the parser preserves their numerator, denominator and surface form.
+
+Quantitative and qualitative degrees modify the **same** `lik` property, but their **simultaneous syntactic combination** has not been settled. Existing standalone forms `pok lik P`, `mult lik P`, etc. remain valid. General-purpose approximation, range and bound syntax is reserved for an independent language-wide decision; do not invent special-purpose probability terms for them.

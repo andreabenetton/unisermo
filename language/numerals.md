@@ -281,3 +281,8 @@ The ratified noncanonical analytic variants of ordinal denominators, such as `un
 ## 10. Percentages: hundredths without a new morpheme (24 October 2026)
 
 The author explicitly ratifies the regular fractional construction with denominator `senim` for percentages. No independent percent particle, suffix, or root is introduced: `kin senim` = 5/100 = 5%; `sen senim` = 100/100 = 100%; `nul senim` = 0%. The expression is written as two words, using the already confirmed cardinal + ordinal fraction rule (§9). This does not ratify decimal notation or a separate % glyph as part of Unisermo orthography. Noninteger percentage values can already be stated as ordinary rational fractions (2.5% = 25/1000, `bisdekkin milaim`), though a decimal percentage spelling needs separate ratification. The parser uses its existing `parse_fraction` method; a percentage is identifiable when its denominator equals 100.
+
+
+## 11. Numerical likelihood uses unchanged rational fractions (2026-11-13; LDR-0026)
+
+A fraction `CARDINAL ORDINAL` may immediately follow `lik` to specify the degree of the finite proposition that follows: `lik setdek senim uman mova` = 70% likelihood of the movement. The fraction grammar remains unmodified; its existing support for **improper fractions** is intentional. In particular, `lik bissen senim uman mova` (200%) is grammatically valid even if used hyperbolically. The parser never rejects a numeric likelihood solely for being greater than one; assess physical/mathematical feasibility separately. Estimate intervals and inequality constructions remain general open questions.

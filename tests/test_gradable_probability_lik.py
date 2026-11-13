@@ -37,7 +37,7 @@ class GradableProbabilityTests(unittest.TestCase):
         self.assertEqual(self.lang.parse_sentence("i kred uman mova")["interpretation"], "belief_that")
 
     def test_unratified_numeric_attachment_and_nested_semantics(self):
-        for phrase in ("lik", "lik mov", "lik kin senim uman mova",
+        for phrase in ("lik", "lik mov",
                        "pok lik", "lik pos uman mova",
                        "lik uman mova due vida",
                        "lik uman mova lim",
