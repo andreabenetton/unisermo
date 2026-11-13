@@ -37,6 +37,8 @@ Examples:
 - `fak` → `fakor` — maker / person who makes
 - `fak` → `fakil` — making tool / device
 - `dok` → `dokor` — teacher / person who teaches
+- `kurar` → `kuraror` — caregiver / person who cares or cures (does not itself imply medical licensing)
+- `stud` → `studor` — student / person who studies (does not itself imply enrollment)
 - `vid` → `vidil` — viewing / observation instrument
 
 Derivational parsing is based on a canonical base plus a productive suffix,
