@@ -143,6 +143,9 @@ noun phrases. `Unisermo.valency_evidence(lemma)` returns
 `status: documented` and a source for `mov`, `traes`,
 `pel/trak` and the explicit `es` state family, or
 `status: undetermined` for other verbal roots.
+The executable audit CLI `python3 -m formalization valency --all`
+lists every indexed verbal root with its recorded evidence status;
+`python3 -m formalization valency pel` queries one root.
 
 Documented constructions in the executable subset:
 
