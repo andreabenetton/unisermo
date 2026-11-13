@@ -150,3 +150,15 @@ The new shared-subject servile `int` preserves the existing negation positions:
 - `inti no mov` — I have adopted the intention *not* to move; it does not guarantee that I remain still.
 
 `voli mov` (desire to move) does not entail `inti mov` (adopted intention), and `inti mov` does not entail `tenti mov` (actual effort) or `movi` (movement). All scope markings are ordinary pre-predicate `no`, with no new case or negator.
+
+
+## Propositional epistemic `pos` negation (author ratification 2026-11-13)
+
+In `pos FINITE_PROPOSITION`, the invariant bare `pos` has no subject or personal suffix. The free negator retains its normal positional scope:
+
+- `no pos uman mova` = NOT POSSIBLE(person moves).
+- `pos uman no mova` = POSSIBLE(person does not move).
+- `no pos uman no mova` = NOT POSSIBLE(person does not move), the epistemic necessity of movement relative to the same possibility domain.
+- `no pos uman mova lim e vida` = NOT POSSIBLE(person moves) AND person sees: `lim` closes the operator before `e`.
+
+This is **not** an instance of the two-token wide-negation operator `no lim`. Neither `no pos P` nor `pos no P` entails P by itself. Probability grades and necessity from independent normative premises are not implied by these forms.
