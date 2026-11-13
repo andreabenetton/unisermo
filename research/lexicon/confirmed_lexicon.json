@@ -975,6 +975,204 @@
       "source": "Explicit author ratification 2026-11-13; international second/seconde adapted to Unisermo",
       "decision": "Confirmed unit root sekun for seconds, invariant after numeric quantity. This denotes duration units, not the ordinal second (bisim).",
       "status": "confirmed"
+    },
+    {
+      "form": "kwetta",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico quetta; 10^30",
+      "meaning_en": "SI metric prefix quetta; power 10^30",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ronna",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico ronna; 10^27",
+      "meaning_en": "SI metric prefix ronna; power 10^27",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "jotta",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico yotta; 10^24",
+      "meaning_en": "SI metric prefix yotta; power 10^24",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "zetta",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico zetta; 10^21",
+      "meaning_en": "SI metric prefix zetta; power 10^21",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "eksa",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico exa; 10^18",
+      "meaning_en": "SI metric prefix exa; power 10^18",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "peta",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico peta; 10^15",
+      "meaning_en": "SI metric prefix peta; power 10^15",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "tera",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico tera; 10^12",
+      "meaning_en": "SI metric prefix tera; power 10^12",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "kilo",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico kilo; 10^3",
+      "meaning_en": "SI metric prefix kilo; power 10^3",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ekto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico hecto; 10^2",
+      "meaning_en": "SI metric prefix hecto; power 10^2",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "deka",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico deca; 10^1",
+      "meaning_en": "SI metric prefix deca; power 10^1",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "desi",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico deci; 10^-1",
+      "meaning_en": "SI metric prefix deci; power 10^-1",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "senti",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico centi; 10^-2",
+      "meaning_en": "SI metric prefix centi; power 10^-2",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "milli",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico milli; 10^-3",
+      "meaning_en": "SI metric prefix milli; power 10^-3",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "mikro",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico micro; 10^-6",
+      "meaning_en": "SI metric prefix micro; power 10^-6",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "nano",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico nano; 10^-9",
+      "meaning_en": "SI metric prefix nano; power 10^-9",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "piko",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico pico; 10^-12",
+      "meaning_en": "SI metric prefix pico; power 10^-12",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "femto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico femto; 10^-15",
+      "meaning_en": "SI metric prefix femto; power 10^-15",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "atto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico atto; 10^-18",
+      "meaning_en": "SI metric prefix atto; power 10^-18",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "zepto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico zepto; 10^-21",
+      "meaning_en": "SI metric prefix zepto; power 10^-21",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "jokto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico yocto; 10^-24",
+      "meaning_en": "SI metric prefix yocto; power 10^-24",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ronto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico ronto; 10^-27",
+      "meaning_en": "SI metric prefix ronto; power 10^-27",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "kwekto",
+      "category": "measurement_prefix",
+      "meaning_it": "prefisso metrico quecto; 10^-30",
+      "meaning_en": "SI metric prefix quecto; power 10^-30",
+      "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
+      "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
     }
   ]
 }

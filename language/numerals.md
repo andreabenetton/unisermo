@@ -300,3 +300,12 @@ A measurement combines a canonical numeric expression with one invariant unit: `
 In a homogeneous interval the unit may be repeated at both endpoints, `inter dek gram e bisdek gram`, or appear once after the second endpoint, `inter dek e bisdek gram`. The shorter expression has exactly the same quantity-domain meaning: both endpoints refer to grams. The second unit is compulsory in the ellipsis form; mixed explicit units are not implicitly converted. The interval-internal `e` is a structural numeric connector, not a separate assertion. This is a scoped ellipsis rule, not general unit omission.
 
 The SI-prefix system, other measurement units, compound dimensions, negative values and external currency identifier syntax remain separate implementation/lexical decisions. Numerical extremes and hyperbole remain grammatical and must not be silently capped by the parser.
+
+
+## 14. Complete SI prefix morphology (ratified 2026-11-13; LDR-0029)
+
+The **24 official decimal SI prefixes** are now confirmed, using Unisermo-approved orthography and the source-of-truth `formalization/data/si_prefixes.json`. The complete forms are `kwetta, ronna, jotta, zetta, eksa, peta, tera, giga, mega, kilo, ekto, deka, desi, senti, milli, mikro, nano, piko, femto, atto, zepto, jokto, ronto, kwekto`, with respective powers `30,27,24,21,18,15,12,9,6,3,2,1,-1,-2,-3,-6,-9,-12,-15,-18,-21,-24,-27,-30`.
+
+A prefix and a confirmed measurement unit fuse without hyphen or space: `kilogram` (10^3 gram), `milligram` (10^-3 gram), `millisekun` (10^-3 seconds), `mikrogram` (10^-6 gram). Prefixes are not valid standalone unit words and cannot stack: `kilomilligram` is invalid. **`milli-` with double l** is canonically adopted; `mili-` is not an alternative. The phonology permits written gemination and accent-tolerant realization. Numeral `mila` still denotes 1000, whereas `kilo-` is an SI unit multiplier 10^3; `mega` and `giga` retain their numerals' meanings in numeral position while also being valid typed prefixes before units.
+
+`inter dek e bisdek kilogram` applies previously ratified unit ellipsis to the **entire** prefixed unit, not just `gram`. Exact rational factors are stored without floating-point rounding; a measurement parser preserves source wording. Only independently confirmed unit roots `gram` and `sekun` can currently be prefixed. Unit conversion across different explicit interval units, compound dimensional syntax, currency codes and additional base units remain independent design topics.

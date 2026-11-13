@@ -11,11 +11,15 @@ are indexed. No enumeration of 10^12 numeric values or guesswork.
 from __future__ import annotations
 
 from functools import lru_cache
+import json
+from pathlib import Path
 
 DIGITS = ("nul", "uno", "bis", "ter", "for", "kin", "ses", "set", "oto", "nin")
 SCALES = ((10**9, "giga"), (10**6, "mega"), (10**3, "mila"))
 MAX_CARDINAL = 10**12 - 1
 MAX_NUMERAL_CHARS = 128
+SI_PREFIXES = json.loads((Path(__file__).resolve().parents[1] / "data" / "si_prefixes.json").read_text(encoding="utf-8"))["entries"]
+UNIT_DIMENSIONS = {"gram": "mass", "sekun": "duration"}
 
 
 def _small_cardinal(number: int) -> str:
@@ -249,28 +253,51 @@ class NumeralParser:
                      "value": amount, "scope": "quantitative"}, end)
         return self._quantitative_value(words, pos)
 
-    def parse_measurement_expression(self, surface: str) -> dict | None:
-        """Parse simple measures and ratified shared-unit interval ellipsis.
+    def parse_measurement_unit(self, surface: str) -> dict | None:
+        """A confirmed unit with zero or exactly one officially ratified SI prefix.
 
-        Units are selected from explicitly confirmed unit lexemes only;
-        the numeric component retains the universal quantity AST. This
-        method is NOT a sentence parser or a dimension-conversion engine.
+        All 24 prefixes are data-driven and use integer decimal exponents,
+        so exponents down to -30 never require floating point arithmetic.
+        """
+        if not isinstance(surface, str) or not surface.isascii() or not surface.isalpha():
+            return None
+        if surface in UNIT_DIMENSIONS:
+            return {"kind": "measurement_unit", "form": surface, "root": surface,
+                    "dimension": UNIT_DIMENSIONS[surface], "prefix": None,
+                    "si_name": None, "si_symbol": None, "decimal_exponent": 0,
+                    "scale_numerator": 1, "scale_denominator": 1}
+        for item in SI_PREFIXES:
+            root = surface[len(item["form"]):] if surface.startswith(item["form"]) else None
+            if root not in UNIT_DIMENSIONS:
+                continue
+            exp = item["exponent"]
+            return {"kind": "measurement_unit", "form": surface, "root": root,
+                    "dimension": UNIT_DIMENSIONS[root], "prefix": item["form"],
+                    "si_name": item["si_name"], "si_symbol": item["si_symbol"],
+                    "decimal_exponent": exp,
+                    "scale_numerator": 10**exp if exp >= 0 else 1,
+                    "scale_denominator": 1 if exp >= 0 else 10**(-exp)}
+        return None
+
+    def parse_measurement_expression(self, surface: str) -> dict | None:
+        """Parse prefixed or unprefixed measurements and unit ellipsis.
+
+        Strictly identical explicit surface units are required for full
+        intervals.  Mixed unit conversions and stacked prefixes are deferred.
         """
         if not isinstance(surface, str) or not surface or " ".join(surface.split()) != surface:
             return None
         words = surface.split()
         if len(words) > 12:
             return None
-        units = {"gram": "mass", "sekun": "duration"}
 
         if words[0] == "inter":
             first = self._quantitative_value(words, 1)
             if first is None:
                 return None
             lower, cursor = first
-            lower_unit = None
-            if cursor < len(words) and words[cursor] in units:
-                lower_unit = words[cursor]
+            first_unit = self.parse_measurement_unit(words[cursor]) if cursor < len(words) else None
+            if first_unit is not None:
                 cursor += 1
             if cursor >= len(words) or words[cursor] != "e":
                 return None
@@ -278,22 +305,25 @@ class NumeralParser:
             if second is None:
                 return None
             upper, cursor = second
-            if cursor >= len(words) or words[cursor] not in units or cursor + 1 != len(words):
+            second_unit = self.parse_measurement_unit(words[cursor]) if cursor < len(words) else None
+            if second_unit is None or cursor + 1 != len(words):
                 return None
-            upper_unit = words[cursor]
-            if lower_unit is not None and lower_unit != upper_unit:
-                # Conversions between unlike scales are not yet ratified.
+            if first_unit is not None and first_unit["form"] != second_unit["form"]:
                 return None
+            resolved = second_unit
             return {
-                "kind": "measurement_interval", "unit": upper_unit,
-                "dimension": units[upper_unit],
+                "kind": "measurement_interval", "unit": resolved["form"],
+                "unit_spec": resolved,
+                "dimension": resolved["dimension"],
                 "lower": {"kind": "measurement", "quantity": lower,
-                          "unit": upper_unit, "dimension": units[upper_unit],
-                          "unit_elliptic": lower_unit is None},
+                          "unit": resolved["form"], "unit_spec": resolved,
+                          "dimension": resolved["dimension"],
+                          "unit_elliptic": first_unit is None},
                 "upper": {"kind": "measurement", "quantity": upper,
-                          "unit": upper_unit, "dimension": units[upper_unit],
+                          "unit": resolved["form"], "unit_spec": resolved,
+                          "dimension": resolved["dimension"],
                           "unit_elliptic": False},
-                "unit_ellipsis": lower_unit is None,
+                "unit_ellipsis": first_unit is None,
                 "endpoints": "contextual", "inclusive": None,
                 "source_form": surface
             }
@@ -303,14 +333,13 @@ class NumeralParser:
             return None
         quantity, end = parsed
         if quantity["kind"] == "quantitative_interval":
-            # Intervals must carry their unit at the right edge, with
-            # the full/elliptic endpoint rules above.
             return None
-        if end + 1 != len(words) or words[end] not in units:
+        unit = self.parse_measurement_unit(words[end]) if end < len(words) else None
+        if end + 1 != len(words) or unit is None:
             return None
-        unit = words[end]
-        return {"kind": "measurement", "quantity": quantity, "unit": unit,
-                "dimension": units[unit], "unit_elliptic": False,
+        return {"kind": "measurement", "quantity": quantity,
+                "unit": unit["form"], "unit_spec": unit,
+                "dimension": unit["dimension"], "unit_elliptic": False,
                 "source_form": surface}
 
     def generate_multiplicative(self, value: int) -> str:

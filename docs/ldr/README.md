@@ -90,3 +90,6 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0027: Universal quantitative comparisons, approximation and intervals](LDR-0027-universal-quantitative-operators.md) — Accepted
 
 - [LDR-0028: Basic measurements, gram/sekun, shared-unit ellipsis](LDR-0028-basic-measures-ellipsis.md) — Accepted
+
+
+- [LDR-0029: All 24 official SI prefixes and canonical `milli-`](LDR-0029-all-24-si-prefixes.md) — Accepted
