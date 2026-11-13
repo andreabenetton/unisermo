@@ -85,6 +85,26 @@ Examples **schematic, not canonical**, with `libr` = book, `mon` = money, and `a
 
 The syntax and monetary-default policy were explicitly proposed by the owner; on 2026-11-13 the owner also explicitly affirmed that `kambi monem` covers money-for-money exchange such as forex, with currency identities and amounts to be expressed by further complements. The broader language change is retained as **Proposed** pending complete valency and grammar review.
 
+## Typed currency identifiers: proposed `mon` namespace (owner clarification, 2026-11-13)
+
+The project owner clarified that `mon` is intended not only to mean money but to **disambiguate ISO currency codes from unrelated Unisermo lexemes** (for example, a hypothetical ordinary root `eur`). Do **not** drop `mon` merely because a currency code is internationally recognizable. This differs from the earlier proposal that parsed `uno EUR-em` as an ordinary case-inflected lexeme.
+
+**Experimental typed monetary noun phrase** (case on the head `mon`, not the ISO code; uppercase code treated as an external standardized identifier rather than a Unisermo lexical root):
+
+```text
+mon uno EUR                 = one euro (base)
+mon-em uno EUR              = one euro as direct object
+kontra mon uno USD          = in exchange for one US dollar
+kambi kontra mon uno USD mon-em uno EUR
+                             = exchange one euro for one US dollar
+```
+
+The printed contiguous orthography is `monem uno EUR`; `mon-em` above only illustrates morphology. Currency code may accidentally match an ordinary root without collision because it is syntactically licensed only after `mon`. The participant role is still unambiguous: the `kontra` phrase denotes **incoming countervalue** and the accusative `monem uno EUR` denotes **outgoing money**.
+
+This is a **proposed typed nominal construction**, NOT an already ratified universal exception to the existing head-final noun phrase and case-attachment rules. Its exact parse (type-marker head + quantity + external identifier), numbers other than `uno`, decimals, additional currency modifiers, lowercase spelling, and interaction with ordinary NP word-order rules need explicit grammar and parser design before acceptance. The ISO label is an external code, not a lexical entry, and should not be passed through Unisermo morphology.
+
+**Design tension to resolve:** the user originally wrote `kambi monem uno usd kontra uno eur`. Under the owner-selected `kambi kontra Y X-em` semantics, that order and assignment denote giving dollars and receiving euros (the opposite of 'give EUR, receive USD'). It is valuable to preserve the typed `mon` insight while ordering the final recommended exchange sentence as `kambi kontra mon uno USD monem uno EUR` for give EUR / receive USD.
+
 ## Testable questions
 
 1. Does `kambi` without objects convey a reciprocal event rather than mere unilateral giving?
