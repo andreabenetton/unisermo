@@ -209,6 +209,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Proposal for personless modal tense and propositional necessity"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "semantics-grammar",
+      "id": "LDR-0025",
+      "path": "docs/ldr/LDR-0025-unified-gradable-properties.md",
+      "sha256": "3e7bcee98368627dbfc2d036ffbe2b066b1fb5d60c3d346270acf1af3f22c02e",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Unified gradable property semantics with qualitative or numerical degrees"
     }
   ],
   "schema": "unisermo/ldr-registry@1"
