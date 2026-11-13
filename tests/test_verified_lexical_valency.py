@@ -5,6 +5,9 @@ parseable but lexically unratified argument structure. Rejecting an
 unsupported structure here is not a claim of language-wide ungrammaticality.
 """
 import unittest
+import json
+import subprocess
+import sys
 from formalization.core import Unisermo
 
 
@@ -125,6 +128,24 @@ class VerifiedLexicalValencyTests(unittest.TestCase):
             self.u.parse_sentence("traesi domem")
         with self.assertRaises(ValueError):
             self.u.parse_sentence("movi domin domin")
+
+    def test_cli_valency_inventory_covers_all_indexed_verb_roots(self):
+        completed = subprocess.run(
+            [sys.executable, "-m", "formalization", "valency", "--all"],
+            check=True, capture_output=True, text=True,
+        )
+        rows = json.loads(completed.stdout)
+        self.assertEqual(len(rows), len(self.u.verbs))
+        self.assertEqual([x["lemma"] for x in rows], sorted(self.u.verbs))
+        self.assertTrue(any(x["lemma"] == "pel" and x["status"] == "documented"
+                            for x in rows))
+        self.assertTrue(any(x["lemma"] == "fer" and x["status"] == "undetermined"
+                            for x in rows))
+        single = subprocess.run(
+            [sys.executable, "-m", "formalization", "valency", "trak"],
+            check=True, capture_output=True, text=True,
+        )
+        self.assertEqual(json.loads(single.stdout)["family"], "force_manner")
 
     def test_frame_sources_are_explicit(self):
         registry = self.u.valency
