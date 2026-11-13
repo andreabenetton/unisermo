@@ -17,6 +17,9 @@ def main() -> None:
     sentence.add_argument("text")
     proposition = sub.add_parser("proposition", help="parse a ratified proposition to typed AST; fail closed")
     proposition.add_argument("text")
+    audit = sub.add_parser("valency", help="audit documented versus undetermined lexical verb frames")
+    audit.add_argument("lemma", nargs="?")
+    audit.add_argument("--all", action="store_true", help="report every indexed canonical verb")
     verb = sub.add_parser("generate", help="generate a finite verb")
     verb.add_argument("lemma")
     verb.add_argument("--tense", default="present")
@@ -89,6 +92,16 @@ def main() -> None:
             result = language.parse_kinship(args.word)
             if result is None:
                 p.error("unknown, unsupported or ambiguous kinship relation")
+        elif args.command == "valency":
+            if args.all and args.lemma:
+                p.error("use either a lemma or --all")
+            if args.all:
+                result = [language.valency_evidence(lemma)
+                          for lemma in sorted(language.verbs)]
+            elif args.lemma:
+                result = language.valency_evidence(args.lemma)
+            else:
+                p.error("valency requires a lemma or --all")
         elif args.command == "analyze": result = language.analyze_word(args.word)
         elif args.command in {"sentence", "proposition"}: result = language.parse_proposition(args.text)
         elif args.command == "generate": result = language.generate_verb(args.lemma, args.tense, args.aspect, args.person, args.number)

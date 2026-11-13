@@ -47,6 +47,15 @@ derived noun from an instrument/agent's actual real-world referent.
 The `mov` valency role is not an assertion of physical causation;
 the `traes` frames are typed argument configurations.
 
+The documented force/patient frame `pel/trak X-em`
+explicitly records **no entailment of successful displacement**.
+The typed `es` state predicate is **not** an accusative object:
+a form such as `adesi aper` identifies entry into a state
+without inventing a new argument case. Missing per-verb case
+licensing for other roots is openly classified
+`undetermined`, not inferred from word meaning or affix
+spelling.
+
 ## Semantics that are NOT yet implemented
 
 No unrestricted lexical valency, world-model truth evaluation, referent
