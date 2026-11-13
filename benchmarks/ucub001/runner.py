@@ -136,7 +136,7 @@ def parse_label(text: str) -> str | None:
 # A single complete Markdown JSON fence is recoverable without guessing.
 # Free-text replies, multiple code blocks and arbitrary embedded JSON are not.
 FENCED_LABEL = re.compile(
-    r"\\s*```(?:json)?[ \\t]*\\r?\\n(.*?)\\r?\\n```[ \\t]*\\s*",
+    r"\s*```(?:json)?[ \t]*\r?\n(.*?)\r?\n```[ \t]*\s*",
     flags=re.IGNORECASE | re.DOTALL,
 )
 
