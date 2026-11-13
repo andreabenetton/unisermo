@@ -4,6 +4,7 @@ on:
     paths:
       - 'benchmarks/ucub001/**'
       - 'tests/test_ucub001.py'
+      - 'tests/test_ucub001_review.py'
       - 'formalization/**'
       - '.github/workflows/ucub001-validation.yml'
   workflow_dispatch:
@@ -32,3 +33,26 @@ jobs:
           python -m benchmarks.ucub001.runner prepare --condition lexicon --split development --allow-unreviewed --output /tmp/ucub001-lexicon.jsonl
           python -m benchmarks.ucub001.runner prepare --condition grammar --split development --allow-unreviewed --output /tmp/ucub001-grammar.jsonl
           python -m benchmarks.ucub001.runner prepare --condition english --split development --allow-unreviewed --output /tmp/ucub001-english.jsonl
+      - name: Validate blind human review protocol and level-balanced selection
+        run: |
+          python -m unittest discover -s tests -p 'test_ucub001_review.py' -v
+          python -m benchmarks.ucub001.review packet --stage semantic --output /tmp/ucub001-human-phase1.jsonl
+          python -m benchmarks.ucub001.review packet --stage equivalence --output /tmp/ucub001-human-phase2.jsonl
+          python -m benchmarks.ucub001.review init --reviewer-id blank-reviewer-template --output /tmp/ucub001-human-form.json
+          python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition cold --split development --allow-unreviewed --output /tmp/ucub001-balanced-cold.jsonl
+          python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition lexicon --split development --allow-unreviewed --output /tmp/ucub001-balanced-lexicon.jsonl
+          python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition grammar --split development --allow-unreviewed --output /tmp/ucub001-balanced-grammar.jsonl
+          python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition english --split development --allow-unreviewed --output /tmp/ucub001-balanced-english.jsonl
+      - name: Publish blinded review packets and blank form (NO gold)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ucub001-independent-review-packets
+          path: |
+            /tmp/ucub001-human-phase1.jsonl
+            /tmp/ucub001-human-phase1.jsonl.manifest.json
+            /tmp/ucub001-human-phase2.jsonl
+            /tmp/ucub001-human-phase2.jsonl.manifest.json
+            /tmp/ucub001-human-form.json
+          retention-days: 30
+          if-no-files-found: error

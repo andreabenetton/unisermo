@@ -1,0 +1,167 @@
+{
+  "schema": "unisermo/ucub001-curator-preaudit@1",
+  "status": "preliminary_nonindependent_author_side_review_not_gold_validation",
+  "corpus_sha256": "44fafa067cea9f32d383c21e37d388fae673f1848e827afb2330b4e69f7ce3e8",
+  "policy": "Flags identify plausible ambiguity or translation/scope mismatches; no gold labels are changed. Reviewers receive blinded packets without these flags on the first pass. Cases in holdout must not be used for model prompt tuning.",
+  "flags": [
+    {
+      "ids": [
+        "UCUB-04-4"
+      ],
+      "severity": "high",
+      "category": "referent_overtranslation",
+      "issue": "The third-person pronoun a alone denotes a third-person singular referent; draft English 'That person' adds demonstrative/personhood content not licensed purely by a.",
+      "question": "Does the English control distort comparison or accidentally introduce human/deictic specificity?",
+      "sources": [
+        "language/verb_specification.md",
+        "language/word_order.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-03-3",
+        "UCUB-17-4"
+      ],
+      "severity": "medium",
+      "category": "tense_and_aspect",
+      "issue": "Bare English present 'I see' and past 'I saw' may interact pragmatically (ongoing state vs prior experiential observation). The intended non-entailment requires a reference-time policy.",
+      "question": "Does present see entail an overlapping prior observation under any accepted reading?",
+      "sources": [
+        "language/verb_specification.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-08-4"
+      ],
+      "severity": "medium",
+      "category": "modal_translation",
+      "issue": "Personal posi V indicates situational possibility/opportunity. Draft English 'I can move' may also mean learned capability.",
+      "question": "Should English use 'I have an opportunity to move' to remove capability ambiguity?",
+      "sources": [
+        "docs/ldr/LDR-0022-bare-propositional-serviles.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-09-1",
+        "UCUB-09-2",
+        "UCUB-09-3",
+        "UCUB-09-4"
+      ],
+      "severity": "medium",
+      "category": "modal_domain",
+      "issue": "Propositional deb expresses necessity under a salient modal domain. The English hypothesis 'The person's movement is necessary' can sound normative despite the intended domain-neutral reading.",
+      "question": "Specify or hold constant a necessity domain without inventing universal modal duality.",
+      "sources": [
+        "docs/ldr/LDR-0024-proposed-personless-modal-tense-necessity.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-09-4",
+        "UCUB-13-4"
+      ],
+      "severity": "high",
+      "category": "lik_english_threshold",
+      "issue": "Bare lik P has no ratified numerical threshold (>50% or otherwise). English 'It is probable' can imply such a threshold; the English control risks stronger semantics than the Unisermo source.",
+      "question": "Do the proposed English controls convey a context-dependent gradable likelihood, not a fixed cutoff?",
+      "sources": [
+        "docs/ldr/LDR-0025-unified-gradable-properties.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-10-3"
+      ],
+      "severity": "high",
+      "category": "knowledge_belief_relation",
+      "issue": "sap denotes factive knowledge; whether it necessarily entails kred-belief in Unisermo's lexical theory is not explicitly settled. Some epistemologies treat knowledge as entailing belief.",
+      "question": "Is 'I know P' vs 'I believe P' truly undetermined, or does a normative lexical entailment need an LDR?",
+      "sources": [
+        "docs/ldr/LDR-0019-sap-knowledge-family.md",
+        "docs/ldr/LDR-0023-subject-bare-servile.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-13-3"
+      ],
+      "severity": "high",
+      "category": "modal_duality",
+      "issue": "pos P vs deb NOT P is inconsistent in a fixed shared accessibility domain, but the grammar does not guarantee their domains coincide. Current gold depends on this missing constraint.",
+      "question": "Should the benchmark explicitly specify separate vs shared modal domains to disambiguate contradiction?",
+      "sources": [
+        "docs/ldr/LDR-0024-proposed-personless-modal-tense-necessity.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-14-3"
+      ],
+      "severity": "medium",
+      "category": "approximation_precision",
+      "issue": "sirka setdek gives approximate 70; exact 70 could or could not be included by contextual tolerance and pragmatic expression. The label must not assume a fixed epsilon.",
+      "question": "Is undetermined the intended strict entailment label, even if exact 70 is one admissible case?",
+      "sources": [
+        "docs/ldr/LDR-0027-universal-quantitative-operators.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-15-4"
+      ],
+      "severity": "high",
+      "category": "interval_endpoint",
+      "issue": "inter 60 e 70 has context-sensitive endpoint inclusion; a question asking >=70 is sensitive to whether 70 is allowed.",
+      "question": "Could respondents reasonably classify this as contradicted depending on the interval convention? Should the English explicitly say endpoint inclusion is unspecified?",
+      "sources": [
+        "docs/ldr/LDR-0027-universal-quantitative-operators.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-19-1",
+        "UCUB-19-2",
+        "UCUB-19-3",
+        "UCUB-19-4"
+      ],
+      "severity": "high",
+      "category": "discourse_coreference",
+      "issue": "Two occurrences of bare uman in separate clauses need not refer to the same person without further discourse anchoring. Draft English in one case upgrades the second occurrence to 'The person'.",
+      "question": "Do the premises and hypothesis require an explicit repeated personal pronoun a or a definite anchor, perhaps in a new corpus revision?",
+      "sources": [
+        "language/word_order.md",
+        "language/noun_case_system.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-20-1",
+        "UCUB-20-2",
+        "UCUB-20-3",
+        "UCUB-20-4"
+      ],
+      "severity": "high",
+      "category": "hyperbole_metalinguistics",
+      "issue": "The language accepts 200% as rhetorical syntax without automatically asserting that a third party 'claimed' that percentage. English controls use 'stated'/'claimed' and may conflate denial of a numerical valuation with denial of a speech report.",
+      "question": "Should the hypothesis target the numeric proposition itself instead of an external speech act, preserving that the 200% claim is syntactically legitimate?",
+      "sources": [
+        "docs/ldr/LDR-0026-numerical-likelihood-hyperbole.md"
+      ]
+    },
+    {
+      "ids": [
+        "UCUB-06-3",
+        "UCUB-06-4"
+      ],
+      "severity": "medium",
+      "category": "intention_desire_implicature",
+      "issue": "Intending or attempting an action may pragmatically imply wanting it, but ratified vol/int/tent are not definitionally the same. Reviewers should use strict entailment, not conversational stereotype.",
+      "question": "Is the undetermined label robust to natural-language pragmatic interpretation?",
+      "sources": [
+        "docs/ldr/LDR-0021-vol-intention-gap.md"
+      ]
+    }
+  ]
+}
