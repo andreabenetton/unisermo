@@ -1,6 +1,6 @@
 # UCUB-001 — Unisermo compositional comprehension benchmark (draft)
 
-**Status: executable experiment design; not yet a validated comprehension result.** All 80 authored minimal-contrast cases are syntactically checked by the accepted `Unisermo.parse_sentence` subset. Every semantic gold label and English equivalent is **draft pending independent human review**. No model accuracy has been measured by these files.
+**Status: executable experiment design; not yet a validated comprehension result.** All 80 authored minimal-contrast cases are syntactically checked by the accepted `Unisermo.parse_sentence` subset. Every semantic gold label and English equivalent is **draft pending independent human review**. Only an exploratory four-case model smoke has been measured; no independently validated comprehension accuracy is claimed.
 
 ## Research question
 
@@ -72,8 +72,18 @@ The `@2` scorer retains both metrics separately: `raw_json_compliant`/`strict_in
 
 The original model/provider responses are linked to the GitHub run and archived as 14-day workflow artifacts. A raw-output evidence archive can also be exported separately. No additional paid model requests are required to apply the corrected scorer to those retained responses.
 
-## Independent human semantics gate (new)
+## Current human review: 63 unique phrase–meaning checks (13 November 2026)
 
-See [`REVIEW.md`](REVIEW.md) for a complete **two-stage, answer-blinded review workflow** with independent translation, three-way entailment label, equivalence of authored English, and two distinct human reviewer declarations. [`review.py`](review.py) generates review packets, blank questionnaires and conflict reports. No human reviewers have signed off yet: the benchmark remains **0/80 independently reviewed**. The [`preaudit-flags.json`](preaudit-flags.json) risk register records preliminary non-independent doubts about English article/pronoun specificity, `sap/kred`, `pos/deb` modal domains, implicit reference, `lik` and 200% rhetorical semantics; it changes **zero** corpus labels.
+The user correctly rejected the earlier proposal to show each repeated Unisermo phrase with multiple logical hypotheses. **This is not how humans validate the meaning of a constructed language.** The active human-facing protocol is documented in [`REVIEW.md`](REVIEW.md), while the older 80-question entailment review is archived in [`REVIEW_ENTAILMENT_ARCHIVE.md`](REVIEW_ENTAILMENT_ARCHIVE.md).
 
-To avoid repeating the first smoke's four easy G01 items, the runner accepts `--sample balanced16` on offline preparation and explicit hosted runs. This creates **16 development questions**, preserving one complete four-case contrast group per level (L1–L4), with family selection fixed by ID hashing rather than scores. The exact same selected case IDs are passed to Cold, Lexicon, Grammar and English arms. The held-out 16 cases remain sealed. The sample is prepared and tested offline but **not yet submitted to paid model inference** pending the semantic review gate. A naive `--limit 16` without `--sample balanced16` remains sequential and should not be described as level-balanced.
+The model benchmark remains **80 inference cases** in `corpus.jsonl`. The human review is a distinct `unique_translation_review_63.jsonl` dataset with **63 globally unique complete Unisermo passages** (L1: 14, L2: 16, L3: 14, L4: 19). Each entry contains exactly one candidate **Italian meaning**, derived from the first source English gloss, and maps back through `source_ids` to all original repeated model cases. One passage had two near-equivalent English paraphrases, retained in metadata; only one candidate is shown. The 80 logical gold labels and English controls are neither disclosed nor modified.
+
+Four published [Tally forms](https://tally.so/) retain their original URLs: [L1](https://tally.so/r/DqkEyX), [L2](https://tally.so/r/zEyRoZ), [L3](https://tally.so/r/5XjgDv), [L4](https://tally.so/r/dba41D). In Italian, each asks just **whether a full Unisermo passage means the proposed Italian statement**: yes, no, partial/ambiguous, or unable to judge, plus optional correction. No duplicated passage and **no entailment/contradiction exercise**. Reviewers enter the same pseudonym in all four forms. The forms had no submissions before being rebuilt.
+
+This is a **candidate-equivalence check**, not a blind independent translation: respondents see the proposed Italian meaning. Human reviewers should assess it critically, without assuming it is correct. No human validation or language ratification is claimed from form publication. Formal review requires at least two independent competent assessors and adjudication of disagreement.
+
+The older `review.py` and associated `test_ucub001_review.py` are retained only as historical/optional machinery for logical-answer audits and are **not** the active human translation-review workflow. The active dataset has separate automated regression tests in `test_ucub001_equivalence.py`.
+
+## Next model-level development screening
+
+The runner supports `--sample balanced16` for 16 **distinct inference cases**, preserving one complete four-contrast family per L1–L4: G03, G06, G12 and G16, excluding the original G01 smoke. All four arms (Cold, Lexicon, Grammar and English) receive identical case IDs and no held-out inference cases. This is a pre-registered **model** experiment design, not a human questionnaire. The human translation review is one necessary gate; any claims about **80 logical gold labels** still require appropriate independent adjudication of those logical answers.
