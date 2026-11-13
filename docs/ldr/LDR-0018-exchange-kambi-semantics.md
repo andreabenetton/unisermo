@@ -51,6 +51,40 @@ Typical role mapping: actor A contributes X and receives Y; counterpart B contri
 
 Do not yet introduce `kambi ad` / `kambi de`. Unlike the one-theme `don` flow, the direction of *which theme* matters; exchange is reciprocal in both directions. Bare `kambi` (exchange) might be a more honest single button if the user interface clearly identifies the two offers. `buy` and `sell` labels require a monetary frame and participant viewpoint.
 
+## Owner-selected candidate syntax (2026-11-13)
+
+The project owner selected the **surface order** `kambi kontra Y X-em` over `kambi X-em kontra Y`, and proposed the following monetary ellipsis: when the `kontra Y` countervalue phrase is omitted from a `kambi` clause, interpret it as `kontra mon` (exchange for money / sale). This section records that specific design preference, not unreviewed adoption of all valency/parser details.
+
+Candidate frame:
+```text
+[ACTOR-NOM] kambi-FIN [kun COUNTERPART] [kontra INCOMING_COUNTERVALUE] OUTGOING_THEME-em
+```
+The preferred base order for the two themes is **`kontra Y` before `X-em`**; relative positioning of optional `kun` and full finite-verb complements follows general word order where legal and requires testing. `kontra` is a new **free countervalue relator** (not the existing `anti-` opposition prefix or `per` instrumental); `mon` = money is a *candidate* root, not claimed confirmed.
+
+Semantic roles:
+- Subject = participant giving X and receiving Y.
+- `X-em` = what the subject provides.
+- `kontra Y` = what the subject receives as reciprocal consideration.
+- `kun Z` = exchange counterparty (candidate extension of ordinary comitative).
+
+Examples **schematic, not canonical**, with `libr` = book, `mon` = money, and `akwa` = water:
+- `i kambi kontra akwa librem` — I trade a book for water.
+- `i kambi kontra mon librem` — I sell a book for money.
+- `i kambi librem` — I sell a book; implicit countervalue is money.
+- `i kambi kontra libr monem` — I buy a book by paying money.
+- `i kambi monem` — I exchange money for money (NOT 'I buy'), by the proposed default; unusual but mechanically consistent.
+
+**Default scope and limits:**
+1. The monetary default is a **lexical omission rule specific to `kambi`**, not a generic rule for all missing complements or all exchanges.
+2. The omitted countervalue defaults **only when `X-em` is overt**. Bare `kambi`, `kambi kun Z`, and `kambi kontra Y` do not automatically inherit a complete sell/buy reading until separate ellipsis rules exist.
+3. The default denotes *money as the type of consideration*, not its amount, payment time, or evidence of payment. Exact money amount/price will require further syntax.
+4. A buyer must still explicitly encode both money as outgoing theme and purchased goods as incoming countervalue. The default never converts `kambi monem` into 'buy'.
+5. The plain finite predicate's completed-event interpretation and the distinction between an offer, an agreement, payment and final delivery remain open; do not claim a completed transaction from a UX imperative.
+6. `kontra` and `mon` must pass lexical collision and orthographic validation prior to addition to confirmed lexicon.
+7. Since `kontra Y` is unmarked for nominal case, the syntactic category and NP boundaries must be formally specified; the proposal treats `kontra` as introducing a relator phrase with nominal base form (not a second nominative subject).
+
+The syntax and monetary-default policy were explicitly proposed by the owner; the broader language change is retained as **Proposed** pending complete valency and grammar review.
+
 ## Testable questions
 
 1. Does `kambi` without objects convey a reciprocal event rather than mere unilateral giving?
