@@ -1,0 +1,34 @@
+name: Bare propositional servile regression
+
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'docs/ldr/LDR-0022-bare-propositional-serviles.md'
+      - 'tests/test_bare_propositional_servile.py'
+      - '.github/workflows/bare-propositional-servile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bare-pos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify generated language indexes
+        run: python -m formalization build --check
+      - name: Validate formal grammar
+        run: python -m formalization validate
+      - name: Run bare propositional servile tests
+        run: python -m unittest discover -s tests -p 'test_bare_propositional_servile.py' -v
+      - name: Run existing personal servile regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_intention_servile.py' -v
+          python -m unittest discover -s tests -p 'test_tent_servile.py' -v
