@@ -708,6 +708,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "Universal interval operator inter A e B. Endpoint inclusivity is contextual unless independently expressed through no minor/no major. The internal e joins numeric endpoints rather than independent propositions.",
+      "form": "inter",
+      "meaning_en": "between two quantitative endpoints; numeric interval",
+      "meaning_it": "tra due estremi quantitativi; intervallo",
+      "origin": "Author ratification 2026-11-13; Latin inter",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "counter"
       ],
       "form": "jer",
@@ -999,6 +1011,18 @@
       "meaning_en": "thousand (10^3 decimal group power)",
       "meaning_it": "mille; potenza numerica 10^3",
       "origin": "Author ratification 2026-10-24; replaces historical mil; internationally recognizable mila/mille",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Preserve existing comparative minor ADJ dan B and extend to direct quantitative value: minor NUM means less than NUM; no minor NUM means at least NUM. No new negative morpheme.",
+      "form": "minor",
+      "meaning_en": "less; comparative of minority; less than (numeric)",
+      "meaning_it": "meno; comparativo di minoranza; minore di",
+      "origin": "Ratified comparison specification language/comparison.md; author extended numeric valency 2026-11-13",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1387,6 +1411,18 @@
       "meaning_en": "certain; certainty",
       "meaning_it": "certo; certezza",
       "origin": "Latin certus",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Universal approximation operator on a numerical scalar, tolerance contextual. Does not automatically mean epistemic uncertainty. No property-specific arithmetic bound.",
+      "form": "sirka",
+      "meaning_en": "approximately; about, applied to a quantitative value",
+      "meaning_it": "circa; approssimativamente, per un valore quantitativo",
+      "origin": "Author ratification 2026-11-13; Latin circa, written Unisermo with s for /s/",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
