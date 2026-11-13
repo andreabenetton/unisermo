@@ -323,3 +323,26 @@ time"; `-in` is not automatically a temporal case. The
 typed parser identifies preposed locatives while leaving their
 event-domain versus proposition-domain attachment **unresolved**;
 it does **not** infer abstract domain truth solely from word order.
+
+## Physical action frames with existing cases (ratified 2026-11-13)
+
+The accusative `-em` marks the direct participant for
+`fer`, `portar`, `ten`, and `kunten`, but the
+**semantic role is verb-dependent**: acquired entity,
+cargo, held/controlled entity, or contents, respectively.
+In `fer X-em SOURCE-de`, ablative `-de` is the
+*physical origin* of taking, not the object's owner
+or authorization source. In `portar X-em SOURCE-de DEST-ad`,
+ablative and allative locate transport origin and
+destination, not the fact of arrival. The movement cases
+do not automatically belong to non-motion `ten` or
+spatial-containment `kunten`. Ordinary event-local
+`LOCATION-in` remains a freely interpretable adjunct,
+not a second contents argument.
+
+These distinctions are encoded as **lexical valency**
+rather than as extra nominal cases or morphological
+agreement. Object omission is an open separate decision;
+the typed parser subset requires explicit `X-em`.
+See [derivation.md](derivation.md) and
+[LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md).
