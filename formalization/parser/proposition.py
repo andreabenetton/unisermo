@@ -165,6 +165,37 @@ class PropositionParser:
             return {"kind": "wide_negation", "operator": "no lim",
                     "operand": self._expression(operand, depth + 1),
                     "scope": "complete_truth_conditional_operand"}
+        # A single scalar probability property may be qualified by the
+        # existing analytical degrees. Unlike epistemic pos/deb, lik denotes
+        # a gradable scale, not a binary modal; no numeric attachment is
+        # defined by this restricted grammar.
+        probability_degrees = {"minu", "pok", "ase", "mult", "ekstrem", "suf"}
+        prob_index = (1 if len(words) >= 2 and words[0] in probability_degrees
+                      else 0)
+        if len(words) > prob_index and words[prob_index] == "lik":
+            grade = words[0] if prob_index else None
+            operand_words = words[prob_index + 1:]
+            if not operand_words or not any(self._finite(w) for w in operand_words):
+                raise ValueError("lik requires a finite proposition")
+            if any(w in SUBORDINATES | {"alor", "lim", "ka", "ma", "ergo", "nam", "due"}
+                   for w in operand_words):
+                raise ValueError("mixed likelihood and discourse scope not ratified")
+            if operand_words[0] in {"pos", "deb", "lik"}:
+                raise ValueError("nested probability or modal scope not ratified")
+            operand = self._expression(operand_words, depth + 1)
+            if operand["kind"] not in {"svo_clause", "servile_clause",
+                                       "zero_copula", "copular_clause",
+                                       "coordination", "exclusive_choice"}:
+                raise ValueError("lik requires a licensed finite proposition")
+            return {"kind": "propositional_degree_property",
+                    "property": "lik",
+                    "scale": "probability",
+                    "degree": grade,
+                    "threshold_relative": grade == "suf",
+                    "unquantified_numeric_threshold": True,
+                    "operand": operand,
+                    "entails_operand_truth": False,
+                    "numeric_measure": None}
         # Subject-explicit propositional serviles are bare heads with an
         # independent finite complement. No person is encoded on the head.
         # This is a bounded semantic license, not a blanket coercion of
