@@ -140,3 +140,13 @@ The regular servile `tent` uses the existing two local negation positions:
 - `tenti no mov` — attempt [NOT move]; a purposeful attempt to remain motionless, not simply a failure to move.
 
 Neither expression entails the positive occurrence of `mov`. An attempted action that fails is **not** the same as the denial of an attempt. The attempt is an event asserted by the head `tent`, whereas the dependent event is only a goal. No extra negative morpheme or scope operator is introduced. See `language/verb_specification.md`.
+
+
+## Committed-intention servile negation (ratified 2026-11-13)
+
+The new shared-subject servile `int` preserves the existing negation positions:
+
+- `no inti mov` — I have no adopted intention to move; not a positive intention to refrain.
+- `inti no mov` — I have adopted the intention *not* to move; it does not guarantee that I remain still.
+
+`voli mov` (desire to move) does not entail `inti mov` (adopted intention), and `inti mov` does not entail `tenti mov` (actual effort) or `movi` (movement). All scope markings are ordinary pre-predicate `no`, with no new case or negator.
