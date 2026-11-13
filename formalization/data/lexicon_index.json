@@ -696,6 +696,18 @@
     },
     {
       "categories": [
+        "verb_root"
+      ],
+      "decision": "Regular finite shared-subject servile int + bare lexical verb with ordinary dependent arguments and existing scoped no. A settled present intention differs from vol desire and tent actual goal-directed effort; it entails neither current effort nor successful action, desire, capacity, permission, or prediction. no inti V denies an intention; inti no V means intend to refrain. Does not control a separate embedded subject.",
+      "form": "int",
+      "meaning_en": "intend; have adopted a genuine plan or commitment to perform an action",
+      "meaning_it": "avere intenzione di; aver adottato l'impegno di compiere un'azione",
+      "origin": "Author ratification 2026-11-13; international intention family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "counter"
       ],
       "form": "jer",
@@ -1582,10 +1594,10 @@
       "categories": [
         "verb_root"
       ],
-      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition alone does not entail action or ability.",
+      "decision": "Short finite servile root plus bare infinitive. no voli V denies desire to act; voli no V expresses desire that one not act. Volition/desire alone does not entail a decision or adopted plan, attempted action, action itself, or ability. Separate approved int for committed intention and tent for actual attempt (2026-11-13).",
       "form": "vol",
-      "meaning_en": "want; desire/intend to perform an action",
-      "meaning_it": "volere; desiderare o avere intenzione di compiere un'azione",
+      "meaning_en": "want; desire an event or action",
+      "meaning_it": "volere; desiderare che un'azione o evento si realizzi",
       "origin": "Author approval 2026-11-12; Latin velle/volo; Romance volere and international volition",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
