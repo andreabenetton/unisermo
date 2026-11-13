@@ -682,13 +682,13 @@
       "categories": [
         "measurement_unit"
       ],
-      "source": "research/lexicon/confirmed_lexicon.json",
-      "status": "confirmed_lexicon",
+      "decision": "Confirmed unit root gram, in a single-value measure and bounded interval measure; invariant after numeric quantity. Does not itself license every unreviewed dimensional unit.",
       "form": "gram",
-      "meaning_it": "grammo; unità di massa",
       "meaning_en": "gram; unit of mass",
+      "meaning_it": "grammo; unità di massa",
       "origin": "Explicit author ratification 2026-11-13; international gram",
-      "decision": "Confirmed unit root gram, in a single-value measure and bounded interval measure; invariant after numeric quantity. Does not itself license every unreviewed dimensional unit."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
@@ -1406,13 +1406,13 @@
       "categories": [
         "measurement_unit"
       ],
-      "source": "research/lexicon/confirmed_lexicon.json",
-      "status": "confirmed_lexicon",
+      "decision": "Confirmed unit root sekun for seconds, invariant after numeric quantity. This denotes duration units, not the ordinal second (bisim).",
       "form": "sekun",
-      "meaning_it": "secondo; unità di durata",
       "meaning_en": "second; unit of time duration",
+      "meaning_it": "secondo; unità di durata",
       "origin": "Explicit author ratification 2026-11-13; international second/seconde adapted to Unisermo",
-      "decision": "Confirmed unit root sekun for seconds, invariant after numeric quantity. This denotes duration units, not the ordinal second (bisim)."
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
