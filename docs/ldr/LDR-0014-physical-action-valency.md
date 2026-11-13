@@ -71,8 +71,12 @@ extra co-agent**. This applies to `fer`, `portar`
 and `ten`, and to the lexicalized `kunten` where a
 single phase affix is licensed. `kunten` itself **must
 not** be analyzed compositionally as an ordinary
-`kun-` + `ten` joint-holding event. No general
-stacked-prefix valency inheritance is ratified.
+`kun-` + `ten` joint-holding event. A further
+`kun-` prefix on lexicalized `kunten`
+(`kunkunten`) is **not licensed in this bounded
+single-layer parser subset**; that composition would
+require separate review. No general stacked-prefix
+valency inheritance is ratified.
 
 ## Consequences and compatibility
 
