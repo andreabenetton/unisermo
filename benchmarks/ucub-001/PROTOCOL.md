@@ -76,3 +76,25 @@ Expected scored matrix per single pass: 80 cases × 4 conditions × 2 models = *
 ## Deliberately deferred
 
 No fabricated 80-item corpus, no inferred gold from unratified sentences, no API runs before data and scoring readiness, no parser feature expansion, and no normative grammar changes in this protocol PR.
+
+## Model cohorts (amended 2026-11-13)
+
+The original Qwen3 32B and Gemma 3 27B IT are **historical baselines, not current family flagships**. Use three cohorts, with exact provider model IDs verified at preflight:
+
+| Cohort | Model | Rationale |
+|---|---|---|
+| Historical | `qwen/qwen3-32b` | Compare with October pilot |
+| Historical | `google/gemma-3-27b-it` | Compare with older Gemma experiments |
+| Current comparable open-weight | Qwen3.8-27B | Same approximate size as prior Qwen 32B |
+| Current comparable open-weight | Gemma 4 31B | Current full-size Gemma generation |
+| Current Qwen flagship | Qwen3.8-Max snapshot `qwen3.8-max-0902` | Strongest stable current generation; provider availability needs verification |
+| Frontier generalist | Claude Opus 5.5 | Main Anthropic production comparator |
+| Frontier high-reasoning | Claude Fable 5.2 | Frontier capability ceiling; different mandatory thinking/sampling regime |
+| Frontier OpenAI | GPT-6 Astra (`gpt-6-astra`) | OpenAI high-reasoning capability ceiling |
+| Optional restricted-preview | Qwen4-Max Preview | Announced 2026-11-11; Token Plan preview only; separately labeled |
+
+Provider and API model identifiers are not interchangeable. For Fable 5.2 on Bedrock, adaptive thinking is always on and temperature must be 1 or unset; do not force a shared `temperature=0` setting that an API rejects. Record thinking effort and output budget and **stratify analyses by reasoning mode**. Frontier comparisons are not inherently matched on compute/test-time reasoning. Pin snapshots where supported and audit the actual returned model IDs.
+
+Run smoke (development only) and cap financial exposure before expanding the matrix. With eight primary models, 80 cases and four conditions, a single complete pass is **2,560 requests** (excluding retries). The original 640-request two-model cohort remains a reproducible subset. Do not treat a model as available until the requested endpoint and permission have been validated.
+
+Sources verified 2026-11-13: https://ai.google.dev/gemma/docs/releases ; https://docs.qwencloud.com/changelog/models ; https://www.anthropic.com/claude-fable-and-mythos-5-2 ; https://platform.claude.com/docs/en/models/overview ; https://developers.openai.com/api/docs/models .
