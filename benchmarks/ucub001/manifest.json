@@ -1,5 +1,5 @@
 {
-  "corpus_sha256": "c111dc50f200e9519d60dca91b9d49c8b9bf0554f0230c1e7f724416f6facdc4",
+  "corpus_sha256": "1d58fc5e6b9fd721cb1cd74da4127d02319b24527aa86c886f6b41fabfd3de8c",
   "development": 64,
   "english_controls": "draft, not independently validated",
   "gold_provenance": "manually authored contrast templates, never parser-derived",
