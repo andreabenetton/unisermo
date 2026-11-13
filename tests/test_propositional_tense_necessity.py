@@ -30,11 +30,11 @@ class PropositionalTenseNecessityTests(unittest.TestCase):
     def test_subject_bearing_tense_and_knowledge(self):
         for surface, head, tense, meaning in (
             ("i vold u movu","vol","past","desire_that"),
-            ("i volf u movfa","vol","future","desire_that"),
-            ("i sapd u movda","sap","past","knowledge_that"),
+            ("i volf u movfu","vol","future","desire_that"),
+            ("i sapd u movdu","sap","past","knowledge_that"),
             ("i sapf u movu","sap","future","knowledge_that"),
-            ("i intd u movfa","int","past","intention_that"),
-            ("i tentd u movfa","tent","past","attempt_that"),
+            ("i intd u movfu","int","past","intention_that"),
+            ("i tentd u movfu","tent","past","attempt_that"),
             ("i kredd u movu","kred","past","belief_that"),
         ):
             with self.subTest(surface=surface):
@@ -46,7 +46,7 @@ class PropositionalTenseNecessityTests(unittest.TestCase):
                 self.assertEqual(ast["embedded_tense_anchor"],"relative_to_assessment")
                 self.assertEqual(ast["subject"]["person"],1)
                 self.assertEqual(ast["operand"]["subject"]["person"],2)
-        self.assertTrue(self.lang.parse_sentence("i sapd u movda")["entails_operand_truth"])
+        self.assertTrue(self.lang.parse_sentence("i sapd u movdu")["entails_operand_truth"])
         self.assertFalse(self.lang.parse_sentence("i no sapd u movda")["entails_operand_truth"])
 
     def test_necessity_scope_not_equated_with_ability_or_duty(self):
