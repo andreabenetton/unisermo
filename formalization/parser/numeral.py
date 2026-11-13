@@ -249,6 +249,70 @@ class NumeralParser:
                      "value": amount, "scope": "quantitative"}, end)
         return self._quantitative_value(words, pos)
 
+    def parse_measurement_expression(self, surface: str) -> dict | None:
+        """Parse simple measures and ratified shared-unit interval ellipsis.
+
+        Units are selected from explicitly confirmed unit lexemes only;
+        the numeric component retains the universal quantity AST. This
+        method is NOT a sentence parser or a dimension-conversion engine.
+        """
+        if not isinstance(surface, str) or not surface or " ".join(surface.split()) != surface:
+            return None
+        words = surface.split()
+        if len(words) > 12:
+            return None
+        units = {"gram": "mass", "sekun": "duration"}
+
+        if words[0] == "inter":
+            first = self._quantitative_value(words, 1)
+            if first is None:
+                return None
+            lower, cursor = first
+            lower_unit = None
+            if cursor < len(words) and words[cursor] in units:
+                lower_unit = words[cursor]
+                cursor += 1
+            if cursor >= len(words) or words[cursor] != "e":
+                return None
+            second = self._quantitative_value(words, cursor + 1)
+            if second is None:
+                return None
+            upper, cursor = second
+            if cursor >= len(words) or words[cursor] not in units or cursor + 1 != len(words):
+                return None
+            upper_unit = words[cursor]
+            if lower_unit is not None and lower_unit != upper_unit:
+                # Conversions between unlike scales are not yet ratified.
+                return None
+            return {
+                "kind": "measurement_interval", "unit": upper_unit,
+                "dimension": units[upper_unit],
+                "lower": {"kind": "measurement", "quantity": lower,
+                          "unit": upper_unit, "dimension": units[upper_unit],
+                          "unit_elliptic": lower_unit is None},
+                "upper": {"kind": "measurement", "quantity": upper,
+                          "unit": upper_unit, "dimension": units[upper_unit],
+                          "unit_elliptic": False},
+                "unit_ellipsis": lower_unit is None,
+                "endpoints": "contextual", "inclusive": None,
+                "source_form": surface
+            }
+
+        parsed = self._quantitative_prefix(words)
+        if parsed is None:
+            return None
+        quantity, end = parsed
+        if quantity["kind"] == "quantitative_interval":
+            # Intervals must carry their unit at the right edge, with
+            # the full/elliptic endpoint rules above.
+            return None
+        if end + 1 != len(words) or words[end] not in units:
+            return None
+        unit = words[end]
+        return {"kind": "measurement", "quantity": quantity, "unit": unit,
+                "dimension": units[unit], "unit_elliptic": False,
+                "source_form": surface}
+
     def generate_multiplicative(self, value: int) -> str:
         """Generate NUMfol as a factor, distinct from NUMjer repetition."""
         if isinstance(value, bool) or not isinstance(value, int) or not 1 <= value <= MAX_CARDINAL:
