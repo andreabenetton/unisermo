@@ -172,6 +172,83 @@ class NumeralParser:
                 "status": "canonical_by_rule" if surface == self.generate_fraction(num, den) else "accepted_analytic_variant",
                 "source": "language/numerals.md"}
 
+    def parse_quantitative_expression(self, surface: str) -> dict | None:
+        """General-purpose bounded scalar range/estimate/limit grammar.
+
+        No property-specific bounds: even a hyperbolic 200% expression is
+        grammatical. Parse every numeric subvalue as the existing cardinal
+        or two-token fraction (with its original numerator and denominator).
+        """
+        if not isinstance(surface, str) or not surface:
+            return None
+        words = surface.split()
+        if not words or len(words) > 8 or " ".join(words) != surface:
+            return None
+        out = self._quantitative_prefix(words)
+        return out[0] if out is not None and out[1] == len(words) else None
+
+    def _quantitative_value(self, words: list[str], start: int) -> tuple[dict, int] | None:
+        """Recognize a positive integer cardinal or analytic fraction."""
+        if start >= len(words):
+            return None
+        if start + 1 < len(words):
+            fraction = self.parse_fraction(" ".join(words[start:start+2]))
+            if fraction is not None:
+                return fraction, start + 2
+        cardinal = self.parse_numeral(words[start])
+        return (cardinal, start + 1) if cardinal is not None else None
+
+    def _quantitative_prefix(self, words: list[str], start: int = 0) -> tuple[dict, int] | None:
+        """Return a typed quantity and its end offset, never guess a clause."""
+        if start >= len(words):
+            return None
+        markers = {"major": ("greater", False), "minor": ("less", False),
+                   "ekwal": ("equal", True)}
+        pos = start
+        if words[pos] == "inter":
+            left = self._quantitative_value(words, pos + 1)
+            if left is None:
+                return None
+            first, end = left
+            if end >= len(words) or words[end] != "e":
+                return None
+            right = self._quantitative_value(words, end + 1)
+            if right is None:
+                return None
+            second, end = right
+            return ({"kind": "quantitative_interval", "lower": first, "upper": second,
+                     "endpoints": "contextual", "inclusive": None,
+                     "semantics": "between", "scope": "quantitative"}, end)
+        if words[pos] == "sirka":
+            val = self._quantitative_value(words, pos + 1)
+            if val is None:
+                return None
+            amount, end = val
+            return ({"kind": "quantitative_approximation", "operator": "sirka",
+                     "value": amount, "tolerance": "contextual",
+                     "scope": "quantitative"}, end)
+        negated = words[pos] == "no"
+        if negated:
+            pos += 1
+            if pos >= len(words) or words[pos] not in markers:
+                return None
+        if words[pos] in markers:
+            operator = words[pos]
+            val = self._quantitative_value(words, pos + 1)
+            if val is None:
+                return None
+            amount, end = val
+            relations = {("major", False): "greater_than",
+                         ("minor", False): "less_than",
+                         ("ekwal", False): "equal_to",
+                         ("major", True): "less_than_or_equal",
+                         ("minor", True): "greater_than_or_equal",
+                         ("ekwal", True): "not_equal_to"}
+            return ({"kind": "quantitative_comparison", "operator": operator,
+                     "negative": negated, "relation": relations[(operator, negated)],
+                     "value": amount, "scope": "quantitative"}, end)
+        return self._quantitative_value(words, pos)
+
     def generate_multiplicative(self, value: int) -> str:
         """Generate NUMfol as a factor, distinct from NUMjer repetition."""
         if isinstance(value, bool) or not isinstance(value, int) or not 1 <= value <= MAX_CARDINAL:

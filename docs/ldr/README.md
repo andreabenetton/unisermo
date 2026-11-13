@@ -86,3 +86,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0025: Unified gradable properties and probability `lik`](LDR-0025-unified-gradable-properties.md) — Accepted
 
 - [LDR-0026: Quantified likelihood fractions and hyperbole](LDR-0026-numerical-likelihood-hyperbole.md) — Accepted
+
+- [LDR-0027: Universal quantitative comparisons, approximation and intervals](LDR-0027-universal-quantitative-operators.md) — Accepted

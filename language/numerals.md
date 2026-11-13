@@ -286,3 +286,8 @@ The author explicitly ratifies the regular fractional construction with denomina
 ## 11. Numerical likelihood uses unchanged rational fractions (2026-11-13; LDR-0026)
 
 A fraction `CARDINAL ORDINAL` may immediately follow `lik` to specify the degree of the finite proposition that follows: `lik setdek senim uman mova` = 70% likelihood of the movement. The fraction grammar remains unmodified; its existing support for **improper fractions** is intentional. In particular, `lik bissen senim uman mova` (200%) is grammatically valid even if used hyperbolically. The parser never rejects a numeric likelihood solely for being greater than one; assess physical/mathematical feasibility separately. Estimate intervals and inequality constructions remain general open questions.
+
+
+## 12. Universal numeric operators (ratified 2026-11-13; LDR-0027)
+
+The general numerical relation syntax reuses `major` (>), `minor` (<), `ekwal` (=) with local `no` for inclusive complementary relations (`no minor` >=, `no major` <=, `no ekwal` !=). Two new invariant roots are `sirka` (approximately) and `inter` (between), the latter with the construction `inter A e B`. A/B may each be a canonical cardinal or already ratified two-word fraction. The internal `e` is not a proposition connector. An approximate value does not assert fixed tolerance. The same numeric operators are reusable with nominal counts and the quantitative degree of `lik`, preserving both percent expressions and hyperbole (no upper-bound filter).

@@ -96,6 +96,20 @@ class ClauseParser:
             if possessor.get("possessor"):
                 raise ValueError("nested genitives are outside the typed subset")
             modifiers = modifiers[i + 1:]
+        # Quantitative restrictions on a nominal count use the very same
+        # scalar grammar as all numerical values, not new noun-specific
+        # words or semantic limits.  Mixed adjective/demonstrative ordering
+        # is still unratified and therefore not guessed.
+        if modifiers and modifiers[0] in {"sirka", "inter", "major", "minor", "ekwal", "no"}:
+            numeric = self._quantitative_prefix(modifiers)
+            if numeric is not None and numeric[1] == len(modifiers):
+                if len(choices) != 1:
+                    raise ValueError("ambiguous noun under quantitative constraint")
+                return {"kind": "noun_phrase", "lemma": choices[0]["lemma"],
+                        "case": required_case, "modifiers": modifiers,
+                        "lexical_status": choices[0]["status"],
+                        "numerical_value": None,
+                        "quantitative_constraint": numeric[0]}
         factors = [self.parse_multiplicative(x) for x in modifiers]
         parsed_factors = [x for x in factors if x is not None]
         if len(parsed_factors) > 1:

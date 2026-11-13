@@ -1,0 +1,32 @@
+name: Universal quantitative relations
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'language/**'
+      - 'research/lexicon/confirmed_lexicon.json'
+      - 'docs/ldr/LDR-0027-universal-quantitative-operators.md'
+      - 'tests/test_universal_quantities.py'
+      - '.github/workflows/universal-quantities.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  universal-quantities:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Confirm generated indexes and spec
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Universal quantitative relation regressions
+        run: python -m unittest discover -s tests -p 'test_universal_quantities.py' -v
+      - name: Lik and numeral prior regressions
+        run: |
+          python -m unittest discover -s tests -p 'test_numeric_likelihood_hyperbole.py' -v
+          python -m unittest discover -s tests -p 'test_gradable_probability_lik.py' -v
