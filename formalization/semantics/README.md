@@ -123,3 +123,8 @@ The propositional servile frame permits `ROOT + time(Ø/d/f)` while omitting per
 ## Exact numeric likelihood fraction and hyperbole (LDR-0026, 2026-11-13)
 
 The accepted `lik CARDINAL ORDINAL FINITE_PROPOSITION` frame attaches an existing exact two-word fraction to a finite-proposition likelihood property. The AST retains an independently parsed `numeric_measure` with numerator, denominator, canonical spelling and the original `form`. No semantic [0,1] bounds are enforced; claims such as '200%' are grammatical, because linguistic syntax must preserve the speaker's nonliteral/hyperbolic expression. `no lik FRACTION P` negates the asserted numeric degree, whereas `lik FRACTION no P` scopes negation over the embedded proposition. Existing `lim` clauses keep their normal boundary. Approximation, interval and inequality operators remain unratified general constructions.
+
+
+## Universal quantity operators (LDR-0027, 2026-11-13)
+
+`parse_quantitative_expression` returns a typed AST for existing numerical forms extended with `major/minor/ekwal`, local comparator `no`, newly confirmed `sirka` (contextually approximate) and `inter A e B` (two endpoints, contextual inclusion). The same AST is attachable to a bounded `lik` numerical degree and basic noun counts. Internal `e` in an interval is distinct from the clause connective. No probability-specific upper bound, no coercion from approximation into speaker uncertainty and no general measurement-unit grammar have been added. Mathematical semantics, unit compatibility and rhetorical status are distinct from parsing.
