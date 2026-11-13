@@ -1,7 +1,7 @@
 ---
 id: LDR-0019
 title: Compositional knowledge acquisition via the sap phase family
-status: Proposed
+status: Accepted
 date: 2026-11-13
 domain: semantics-grammar
 supersedes: none
@@ -13,7 +13,7 @@ supersedes: none
 
 Following exploration of `dok` teach, `stud` study, `sap` know, `kap` understand and a provisional `lern` root, the project owner requested a **sap-first systematic analysis** parallel to the compositional `mov` family. This proposal tests whether `sap` plus pre-existing phase and aspect operators can capture "learn" without adding a primitive.
 
-**Owner has approved proceeding with analysis**, not explicitly ratified new knowledge-content valencies or the phase-derived procedural frame. This record remains **Proposed** until the acceptance gate.
+**Owner subsequently instructed implementation of the five recommended extensions in the 2026-11-13 conversation. This constitutes explicit approval of frames A/B, phase-acquisition readings, independent dok/stud, and deferral of lern; the generic causative remains unratified.
 
 ## Observations from normative specification
 
@@ -101,8 +101,8 @@ No separate verbal morpheme is approved for *learning activity* or a separate `l
 
 Before owner acceptance: review semantic frames, consult the existing parser categories for bare verbs vs content NP, ensure collision-free cases, and independently verify 16 contrasts in `research/grammar/sap-family-contrasts-001.json`.
 
-After explicit owner acceptance: add a normative valency section to `language/verb_specification.md`, implement machine-readable frames in `formalization/data/valency_frames.json`, update parser tests, and then run full build/validation. No normative changes are made by this LDR alone.
+Implementation after owner acceptance: add a normative valency section to `language/verb_specification.md`, implement machine-readable frames in `formalization/data/valency_frames.json`, update parser tests, and then run full build/validation. No normative changes are made by this LDR alone.
 
 ## Decision authority
 
-The owner requested sap-family exploration and approved proceeding. The lexical-valency extension of this LDR **awaits explicit ratification**.
+The owner approved proceeding with the five enumerated valency decisions on 2026-11-13. This LDR records their acceptance. The generic causative remains outside the ratification.
