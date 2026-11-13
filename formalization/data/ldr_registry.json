@@ -205,8 +205,8 @@
       "domain": "grammar",
       "id": "LDR-0024",
       "path": "docs/ldr/LDR-0024-proposed-personless-modal-tense-necessity.md",
-      "sha256": "4e38953ff97b870a986185b66bf8a816eb9f5fc418a55de826a2a6ba327400aa",
-      "status": "Proposed",
+      "sha256": "f639b466746273f63342ca94cac502d75f4c578794ef765bf404070c07a22ed2",
+      "status": "Accepted",
       "supersedes": "none",
       "title": "Proposal for personless modal tense and propositional necessity"
     }
