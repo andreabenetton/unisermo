@@ -23,7 +23,7 @@ The official source is the BIPM International System of Units, 9th edition, vers
 4. Translate external SI symbols directly as standalone words: rejected; symbols are standards-based typed notation, not automatically Unisermo roots.
 5. Permit stacked prefixes: rejected as contrary to the SI rule forbidding compound prefixes.
 
-## Decision
+## Decision or hypothesis
 
 The complete **24-form** invariant Unisermo prefix inventory is:
 
