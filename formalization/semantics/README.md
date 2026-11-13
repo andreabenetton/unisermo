@@ -93,3 +93,8 @@ domain/locative inference.
 ## Attempt entailment for `tent` (2026-11-13)
 
 The author-ratified attempt servile `tent` is a finite head taking one dependent uninflected action with a shared subject. Unlike pure desire `vol`, it **entails a goal-directed attempt event**. It does **not** entail that the dependent event took place or succeeded, nor that opportunity `pos`, ability `pot`, permission `aut`, or procedural know-how `sap` holds. Negation of the head (`no tenti V`) differs from a negated goal (`tenti no V`). No special stative/result or general causative alternation follows from this entry.
+
+
+## Adopted intention `int` versus desire `vol` and attempt `tent` (2026-11-13)
+
+The ordinary finite servile `int` is a shared-subject adopted-intention head. In positive statements it entails a current intention/plan toward the dependent event, **not** that the event or an effort to realize it has occurred. Scope distinguishes `no inti V` (no adopted intention) from `inti no V` (an intention to refrain). `voli V` represents mere desire and can coexist with `no inti V`; `tenti V` asserts an effort, without success. `int` cannot evaluate epistemic likelihood of arbitrary propositions or control another subject.
