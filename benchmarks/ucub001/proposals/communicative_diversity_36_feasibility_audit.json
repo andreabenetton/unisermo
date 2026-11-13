@@ -1,0 +1,547 @@
+{
+  "schema": "unisermo/ucub-v2-feasibility-audit@1",
+  "status": "research_only_unratified_static_audit",
+  "date": "2026-11-13",
+  "source": "benchmarks/ucub001/proposals/communicative_diversity_36.json",
+  "language_authority": [
+    "language/",
+    "research/lexicon/confirmed_lexicon.json",
+    "docs/ldr/LDR-0023-subject-bare-servile.md",
+    "docs/ldr/LDR-0024-proposed-personless-modal-tense-necessity.md",
+    "docs/ldr/LDR-0026-numerical-likelihood-hyperbole.md",
+    "docs/ldr/LDR-0027-universal-quantitative-operators.md",
+    "docs/ldr/LDR-0028-basic-measures-ellipsis.md"
+  ],
+  "parser_evidence": "formalization/GRAMMAR_COVERAGE.md (static documentation, not run on these meanings)",
+  "method": "Interpretive, non-executable audit. grammar=documented / needs_semantic_review / requires_design; parser=documented_subset_likely / partial_or_unverified / outside_documented_subset. Categories are provisional, never parser success/failure results.",
+  "cases": [
+    {
+      "id": "UCD2-01",
+      "lexical_audit": "ready_or_attested",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [
+        "vid",
+        "dom"
+      ],
+      "missing_concepts": [],
+      "reason_it": "Genitivi annidati (mia madre; casa di mio fratello) e attacco del possessore; `vid` e `dom` sono `example_only`, non voci confermate. Il parser dichiara non risolti i possessori annidati.",
+      "next_action_it": "decidere l'annidamento dei possessivi e chiarire la provenienza delle attestazioni"
+    },
+    {
+      "id": "UCD2-02",
+      "lexical_audit": "ready_or_attested",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [],
+      "reason_it": "`genegene`, `portar`, `akwa`, `adele`, dativo e possessivi sono disponibili. Il referente di «sua» va fissato nel gold; il parser non risolve la coreferenza.",
+      "next_action_it": "redigere con referente esplicito e sottoporre a revisione semantica"
+    },
+    {
+      "id": "UCD2-03",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "arrivare",
+        "quando subordinante"
+      ],
+      "reason_it": "`fil`+`adelgen` e `vok` coprono parentela e chiamata vocale, ma «quando» subordinante non è `kan` interrogativo. «È arrivato» ha soggetto potenzialmente ambiguo.",
+      "next_action_it": "specificare temporalità e referente prima della traduzione"
+    },
+    {
+      "id": "UCD2-04",
+      "lexical_audit": "ready_or_attested",
+      "grammar_audit": "documented",
+      "parser_audit": "documented_subset_likely",
+      "parser_executed": false,
+      "attested_only": [
+        "dom",
+        "amik"
+      ],
+      "missing_concepts": [],
+      "reason_it": "`portar X-em SOURCE-de DEST-ad` è ratificato e implementato; `akwa` è confermato. `dom` e `amik` compaiono solo come esempi. Il trasporto verso un amico non garantisce consegna.",
+      "next_action_it": "verificare l'equivalenza fisica e regolarizzare lo stato dei nomi attestati"
+    },
+    {
+      "id": "UCD2-05",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "documented",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "stazione",
+        "ospedale",
+        "vicinanza"
+      ],
+      "reason_it": "Il confronto `major ... dan ...` è ratificato, ma mancano i referenti e la qualità di prossimità; il parser non copre comparativi complessi.",
+      "next_action_it": "selezionare parole riusabili e implementare il confronto nel parser"
+    },
+    {
+      "id": "UCD2-06",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "treno",
+        "partire",
+        "ritardo",
+        "arrivare",
+        "tramonto",
+        "dopo temporale"
+      ],
+      "reason_it": "`se P alor Q` e il futuro sono ratificati. «Dopo il tramonto» richiede ordinamento temporale, non il semplice `tem` (durante).",
+      "next_action_it": "definire relazioni temporali riutilizzabili e lessico di viaggio"
+    },
+    {
+      "id": "UCD2-07",
+      "lexical_audit": "ready_or_attested",
+      "grammar_audit": "documented",
+      "parser_audit": "documented_subset_likely",
+      "parser_executed": false,
+      "attested_only": [
+        "tik",
+        "tes"
+      ],
+      "missing_concepts": [],
+      "reason_it": "`porta`, `aper`, `klus` sono confermati; `tik`/`tes` sono normativi nelle specifiche e rendono la deissi vicino a chi parla/chi ascolta. `ma` connette il contrasto.",
+      "next_action_it": "redigere e testare la struttura copulare zero a due predicati"
+    },
+    {
+      "id": "UCD2-08",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "lasciare",
+        "chiave",
+        "tavolo",
+        "borsa",
+        "sopra"
+      ],
+      "reason_it": "`-in` copre 'in' ma non 'sopra'; `no` pre-predicato non fornisce automaticamente negazione focalizzata del solo luogo («non nella borsa»).",
+      "next_action_it": "definire posizione superficiale e portata contrastiva del complemento"
+    },
+    {
+      "id": "UCD2-09",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "finestra",
+        "freddo"
+      ],
+      "reason_it": "`klus` è stato; una chiusura causata può essere descritta con `traes X-em klus-da`. Da precisare la predicazione impersonale «faceva freddo» e il suo legame `due`.",
+      "next_action_it": "valutare il frame causativo e la forma meteorologica"
+    },
+    {
+      "id": "UCD2-10",
+      "lexical_audit": "ready_or_attested",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [
+        "student",
+        "ter"
+      ],
+      "missing_concepts": [],
+      "reason_it": "`dok` e derivato `dokor` coprono insegnamento/docente; `student` e `ter` sono attestazioni delle specifiche. La valenza di `dok` con destinatario non è ratificata nel registro dei ruoli.",
+      "next_action_it": "documentare il ruolo degli studenti come destinatari"
+    },
+    {
+      "id": "UCD2-11",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "spiegare",
+        "regola",
+        "applicare"
+      ],
+      "reason_it": "`sap-FIN BARE_VERB` esprime già sapere come fare e `ma` il contrasto; rimane da fissare l'oggetto ripreso da «la» e la valenza delle nuove radici.",
+      "next_action_it": "ratificare verbi distinti e validare l'anafora"
+    },
+    {
+      "id": "UCD2-12",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "correggere",
+        "documento",
+        "inviare",
+        "collega",
+        "dopo temporale"
+      ],
+      "reason_it": "«Dopo aver corretto» colloca un evento prima dell'invio; il solo perfettivo non codifica necessariamente la relazione temporale. Manca la coreferenza garantita dell'oggetto.",
+      "next_action_it": "definire ordine degli eventi e identità del documento"
+    },
+    {
+      "id": "UCD2-13",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "medico",
+        "paziente"
+      ],
+      "reason_it": "`kurar` esprime curare; `kuraror` (agente di cura) non significa automaticamente medico qualificato, né esiste una designazione ovvia del paziente. Valenza da documentare.",
+      "next_action_it": "distinguere professione, ruolo dell'agente e paziente"
+    },
+    {
+      "id": "UCD2-14",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "aiutare"
+      ],
+      "reason_it": "`pot` (capacità) e `aut` (permesso) sono distinti; `pos` non è capacità. «Farlo» rimanda alla stessa azione e «la» a una persona; evitare di confondere oggetto e referente.",
+      "next_action_it": "preferire inizialmente ripetizione lessicale controllata, poi anafora"
+    },
+    {
+      "id": "UCD2-15",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "dolore",
+        "camminare",
+        "continuare un'attività"
+      ],
+      "reason_it": "`etsi` connette proposizioni, non è automaticamente un «nonostante + sintagma nominale»; `ines` conserva uno stato, non ogni attività; `mov` non specifica camminare.",
+      "next_action_it": "decidere concessione nominale e persistenza di un evento"
+    },
+    {
+      "id": "UCD2-16",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "inviare",
+        "messaggio",
+        "mattina"
+      ],
+      "reason_it": "`tem` introduce tempo generico ma non determina «stamattina» senza un ancoraggio deittico; `portar` codifica trasporto fisico e non ogni invio di informazione.",
+      "next_action_it": "distinguere trasferimento informativo e deissi temporale"
+    },
+    {
+      "id": "UCD2-17",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "documented",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "risposta",
+        "domanda",
+        "ambiguo"
+      ],
+      "reason_it": "`klar` e passato `es` sono disponibili; «non chiaro» non equivale necessariamente ad «ambiguo», quindi serve una qualità distinta.",
+      "next_action_it": "ratificare nomi comunicativi e qualità di ambiguità"
+    },
+    {
+      "id": "UCD2-18",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "venire/arrivare"
+      ],
+      "reason_it": "`dik` e `kred` esistono e `kred` ammette proposizioni finite; non è automaticamente ratificata la stessa valenza di discorso riferito per `dik`. «Non sarebbe venuto» richiede ancoraggio futuro-nel-passato e referente coerente.",
+      "next_action_it": "definire `dik` proposizionale e la sequenza temporale"
+    },
+    {
+      "id": "UCD2-19",
+      "lexical_audit": "ready_or_attested",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [],
+      "reason_it": "`nelegal` è confermato; `deb P` è necessità proposizionale ratificata da LDR-0024, distinta da `debi V` obbligo. L'equivalente preciso di «immorale» (`neprob` vs altra qualità) e il dominio della necessità richiedono giudizio; combinazione con `ma` non pienamente coperta dal parser.",
+      "next_action_it": "testare esplicitamente necessità epistemica e polarità morale, senza introdurre un nuovo modal"
+    },
+    {
+      "id": "UCD2-20",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "aspettare",
+        "entrare",
+        "prima temporale"
+      ],
+      "reason_it": "`deb-FIN V` è obbligo ratificato; «prima di entrare» richiede precedenza tra eventi, non il mero tempo `tem`. `inmov` significa mantenere in movimento, non entrare.",
+      "next_action_it": "definire ordinamento di eventi e radice dell'ingresso"
+    },
+    {
+      "id": "UCD2-21",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "responsabile",
+        "negare autorizzazione",
+        "atto di autorizzare"
+      ],
+      "reason_it": "`aut` descrive essere autorizzato e può indicare fonte con `-de`, ma non un evento di concessione/rifiuto da parte del responsabile. Distinguere diritto allo stato e decisione dell'autorità.",
+      "next_action_it": "progettare evento di autorizzazione/rifiuto senza sovraccaricare `aut`"
+    },
+    {
+      "id": "UCD2-22",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "documented",
+      "parser_audit": "documented_subset_likely",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "risultato",
+        "corretto"
+      ],
+      "reason_it": "`kred` con soggetto espresso e proposizione finita è ratificato (LDR-0023). `sert` (certo) e `just` (giusto in senso di giustizia) non codificano automaticamente correttezza fattuale.",
+      "next_action_it": "individuare una qualità di correttezza fattuale indipendente"
+    },
+    {
+      "id": "UCD2-23",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "documento",
+        "cambiare/modificare"
+      ],
+      "reason_it": "`sap P` è ratificato come conoscenza fattiva, ma «non so chi...» è interrogativa indiretta: il `kis` diretto non basta automaticamente. Causare modifica non coincide con `traes` verso stato dichiarato.",
+      "next_action_it": "specificare interrogative incorporate e cambiamento generico"
+    },
+    {
+      "id": "UCD2-24",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "risposta",
+        "sbagliato",
+        "ora"
+      ],
+      "reason_it": "`pens` non è tra gli atteggiamenti ratificati con complemento proposizionale; `sap` e `kap` esistono ma «perché era sbagliata» richiede interrogativa causale indiretta (`ker` da solo è diretto).",
+      "next_action_it": "progettare pensiero proposizionale e interrogative indirette"
+    },
+    {
+      "id": "UCD2-25",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "piovere",
+        "tornare"
+      ],
+      "reason_it": "`due` può legare causa reale; `remov` significa rimettere in movimento, NON tornare al luogo precedente. La pioggia richiede predicazione meteorologica.",
+      "next_action_it": "non usare `remov` come sinonimo di ritorno"
+    },
+    {
+      "id": "UCD2-26",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "entrare"
+      ],
+      "reason_it": "`porta klus` è disponibile e `se P alor Q` per proposizioni finite; conseguente imperativo negativo «non entrare» sotto condizione non è coperto dal parser.",
+      "next_action_it": "decidere la subordinazione con imperativo e l'evento di ingresso"
+    },
+    {
+      "id": "UCD2-27",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "problema",
+        "soluzione",
+        "semplice",
+        "facile"
+      ],
+      "reason_it": "`etsi` fattuale e `no deb P` non-necessità sono ratificati separatamente. La loro combinazione con `alor`, comparativi e portata modale deve essere controllata; semplice e facile non sono sinonimi.",
+      "next_action_it": "verificare composizione concessiva + necessità e lessico delle qualità"
+    },
+    {
+      "id": "UCD2-28",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "documented",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [
+        "ter"
+      ],
+      "missing_concepts": [
+        "aspettare",
+        "stanza"
+      ],
+      "reason_it": "`ter` è attestato nei numerali e `uman` confermato; `-in` copre localizzazione. `aspettare` e `stanza` non compaiono nel lessico confermato.",
+      "next_action_it": "lessico di vita quotidiana e frase semplice di calibrazione"
+    },
+    {
+      "id": "UCD2-29",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "pacco",
+        "pesare",
+        "altri"
+      ],
+      "reason_it": "`part WHOLE-s` è parte-di-un-tutto, non una formalizzazione automatica di «due elementi fra cinque». Peso, classe degli altri, confronto e sottoinsieme vanno disambiguati.",
+      "next_action_it": "decidere partitivo insiemistico e comparazioni quantitative"
+    },
+    {
+      "id": "UCD2-30",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "veicolo",
+        "arrivare",
+        "entro una scadenza"
+      ],
+      "reason_it": "`lik setdek senim P` codifica già il 70% (LDR-0026) e `sekun` è unità ratificata. Manca il vincolo temporale «arriva entro dieci minuti»; dieci minuti non è il semplice predicato «dieci secondi».",
+      "next_action_it": "definire la scadenza sull'evento prima della frase probabilistica"
+    },
+    {
+      "id": "UCD2-31",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "libro",
+        "acquistare/scambiare con denaro"
+      ],
+      "reason_it": "`kot` interrogativo quantitativo è normativo; `kambi` e il frame monetario sono ancora una proposta in LDR-0018, non un verbo di acquisto ratificato. `fer` (prendere) non implica comprare.",
+      "next_action_it": "separare benchmark da decisione lessicale commerciale aperta"
+    },
+    {
+      "id": "UCD2-32",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "partial_or_unverified",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "sedia",
+        "stanza"
+      ],
+      "reason_it": "`ker` (perché) e causativo `mov X-em` esistono; `-de` marca origine, ma la fonte su `mov` causativo non è esplicitamente documentata come frame aggiuntivo nel registro di valenza.",
+      "next_action_it": "verificare frame origine dello spostamento e interrogativa causale"
+    },
+    {
+      "id": "UCD2-33",
+      "lexical_audit": "missing_common",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "trasferimento",
+        "atto di autorizzare"
+      ],
+      "reason_it": "`aut` marca permesso con fonte, non necessariamente «chi ha autorizzato» quale evento passato. Una domanda con `kis` e «in quale momento» richiede una portata interrogativa congiunta non coperta.",
+      "next_action_it": "fissare valenza dell'agente autorizzante e doppia interrogativa"
+    },
+    {
+      "id": "UCD2-34",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [
+        "amik",
+        "dom"
+      ],
+      "missing_concepts": [
+        "incontrare",
+        "ieri",
+        "poi",
+        "tornare"
+      ],
+      "reason_it": "Il passato plurale è regolare, ma «ieri», «poi» e «tornare a casa» aggiungono deissi e ordinamento; `remov` non vale 'ritorno'. `amik` e `dom` sono soltanto attestati in esempi.",
+      "next_action_it": "fissare sequenza e ancoraggio temporali riusabili"
+    },
+    {
+      "id": "UCD2-35",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "needs_semantic_review",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "partire",
+        "stazione",
+        "già",
+        "ancora"
+      ],
+      "reason_it": "`kred` con tempo personless passato e tempo della subordinata relativo è ora ratificato da LDR-0024. «Già» e «ancora» richiedono specifici operatori temporali/aspetto; le due proposizioni hanno referente comune.",
+      "next_action_it": "controllare lettura futuro-nel-passato, progressione e coreferenza"
+    },
+    {
+      "id": "UCD2-36",
+      "lexical_audit": "missing_many",
+      "grammar_audit": "requires_design",
+      "parser_audit": "outside_documented_subset",
+      "parser_executed": false,
+      "attested_only": [],
+      "missing_concepts": [
+        "documento",
+        "mostrare",
+        "inviare",
+        "solo dopo"
+      ],
+      "reason_it": "`fer` e `adele` esistono, ma «l'ho» riprende identico documento in tre eventi; «solo dopo» esprime ordine esclusivo, non mera congiunzione `e`.",
+      "next_action_it": "progettare evento sequenziato e anafora verificabile"
+    }
+  ]
+}
