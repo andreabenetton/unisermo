@@ -192,7 +192,7 @@ class PropositionParser:
                     "scale": "probability",
                     "degree": grade,
                     "threshold_relative": grade == "suf",
-                    "unquantified_numeric_threshold": True,
+                    "numeric_threshold_defined": False,
                     "operand": operand,
                     "entails_operand_truth": False,
                     "numeric_measure": None}
