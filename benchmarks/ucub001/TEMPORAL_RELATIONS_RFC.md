@@ -1,6 +1,6 @@
 # UCUB-v2 — Temporal relations and reference: research RFC
 
-**Status: PROPOSAL / UNRATIFIED. 13 November 2026.** This document contributes a design candidate to PR #86. No new word, syntax, temporal semantics, parser rule, or benchmark translation is canonized here. All examples containing `ante` or clausal `tem` below are **schematic and MUST NOT be treated as accepted Unisermo or parser fixtures**. The capital letters P/Q/R are metalanguage, not words.
+**Status: PROPOSAL / UNRATIFIED. 13 November 2026.** This document contributes a design candidate to PR #86. No new word, syntax, temporal semantics, parser rule, or benchmark translation is canonized here. All examples containing `ante`, `post`, or clausal `tem` below are **schematic and MUST NOT be treated as accepted Unisermo or parser fixtures**. The capital letters P/Q/R are metalanguage, not words.
 
 ## 1. What already exists
 
@@ -21,7 +21,7 @@ Checked against `language/verb_specification.md`, `language/noun_case_system.md`
 
 The verb root `pos` already means situational possibility, and the written `pos-` is also a listed bound derivational prefix: **do not reuse bare `pos` for after**. The historical mention of `pre-/pos-` among derivational prefixes does not license independent temporal connectives. `tem` is ratified as a free **nominal** relator, not a free clause connector. The parser's present support is narrower than the canonical language in other areas; do not conflate parser rejection with language impossibility.
 
-## 2. Semantic goals: three relations, at most one new primitive initially
+## 2. Semantic goals: three conceptual relations with explicit BEFORE and AFTER
 
 The purpose is to relate event times rather than add a tense/aspect slot. Abstract event clauses `P` and `Q` have their own actor, verbal aspect and tense.
 
@@ -29,17 +29,24 @@ The purpose is to relate event times rather than add a tense/aspect slot. Abstra
 
 **Preferred initial design**: `P ante Q` = the salient event denoted by P precedes the salient event denoted by Q. For a first precise, bounded subset **where both events have known start/end boundaries**, use `end(P) < start(Q)` (strict non-overlap); simultaneous boundaries and overlap are not silently "before".
 
-The converse requires **no new primitive**:
-- `P ante Q`: P happens before Q.
-- `Q ante P`: P happens after Q.
-
-This counts as a *single relational lexical candidate*, not a commitment to add an obligatory `after` synonym. `ante` is a candidate orthography derived from the international/Latin *ante* family; exact lexical and phonetic collision checks and author approval are still necessary. It is not present in the current 138-entry confirmed lexicon.
+`ante` is a candidate orthography derived from the international/Latin *ante* family. This preserves an explicit, independent BEFORE relation in the everyday vocabulary. The speaker should not be forced to invert the narrative just to say AFTER. The logically equivalent converse exists but does not replace a lexical AFTER expression.
 
 **Important limitations**: natural-language "before" often targets *onset* rather than *completion*. For "I started reading before the phone rang", the P operand must denote **starting to read**, not the entire reading interval. This can be represented with independently specified event-phase semantics where available. Do not generalize `end(P) < start(Q)` to open-ended states, negated non-events, modal possibilities, or all discourse contexts until reviewed. Temporal anchoring of future/non-actual events is evaluated in the same modal/discourse world, not automatically asserted to have already occurred in reality.
 
-A competing ergonomic candidate is a separate free relation such as `poste` ("after") with `P poste Q`; that **adds one root** and must be tested for cross-accent contrast to existing `pos` (and for interaction with bound `pos-`). Exact `post` differs from `pos` by final `t` only, so it is not recommended without phonological screening. Default recommendation: defer a second root, measure whether operand inversion is inconvenient for people.
+### B. STRICT-AFTER: proposed free relation `post`
 
-### B. DURING/OVERLAP: extend **existing** `tem` to clauses
+**Updated owner direction (13 November 2026):** retain BEFORE and AFTER as two independently accessible human concepts; do not make the listener/speaker reverse operands to express one of them. Suggested spellings: `ante` / `post`. This direction favors a **two-word symmetric temporal design** over the earlier one-primitive economy argument, but the interrogative suggestion `ante e post ?` is **not an explicit ratification of either spelling or syntax**.
+
+Proposed `P post Q` = event P occurs after event Q; in the same restricted bounded-event interpretation, `end(Q) < start(P)`. Both forms are strict temporal relations for the initial design:
+- `P ante Q` = P before Q.
+- `Q post P` = Q after P (equivalent truth conditions, different preferred conceptual framing).
+- `Q ante P` = Q before P, **not** the same as `Q post P`.
+
+**Phonological/lexical caution:** `post` is orthographically permitted and internationally recognizable, but is just one final /t/ away from confirmed `pos` (situational possibility) and one /s/ away from confirmed `pot` (capacity). Some accents may reduce final /st/ clusters. These are **near-collisions**, not exact orthographic homonyms, and syntactic position often disambiguates, but a high-frequency temporal connector deserves explicit spoken-perception testing. `poste` (/pos.te/) is a candidate fallback if `post` proves too fragile. Neither is confirmed. Existing `pos` and bound `pos-` retain their original meanings. No proposal should rename the confirmed modal.
+
+No new final consonant-cluster prohibition is inferred from the alphabet specification; review of intelligibility under accent variants is still required.
+
+### C. DURING/OVERLAP: extend **existing** `tem` to clauses
 
 Existing, canonical: `P ... tem TIME_NP` or `tem TIME_NP` as an adjunct, with nominal time expression.
 
@@ -74,18 +81,18 @@ These are separate gaps: **temporal order (before/after)**, **temporal overlap**
 **Schematic forms; P and Q are single event-bearing finite clauses**:
 
 ```text
-P ante Q     -- strict precedence: P fully before Q (bounded-event subset)
-Q ante P     -- the same fact described as P after Q
+P ante Q     -- P precedes Q (bounded-event subset)
+Q post P     -- Q follows P (same ordering; independently available wording)
 P tem Q      -- event/state intervals of P and Q overlap (new clausal tem)
 ```
 
-The bare `P ante Q` is an **infix** temporal relation, unlike the existing **prenominal** `tem NP`; clausal `tem` is a proposed extension by analogy with dual nominal/clausal `due`. In a future syntax, choose a single explicit relationship node rather than giving `ante` arbitrary precedence over `e`, `o`, `ma`, `due`, `se`, etc.
+The bare `P ante Q` is an **infix** temporal relation, unlike the existing **prenominal** `tem NP`; clausal `tem` is a proposed extension by analogy with dual nominal/clausal `due`. In a future syntax, choose a single explicit relationship node rather than giving `ante` or `post` arbitrary precedence over `e`, `o`, `ma`, `due`, `se`, etc.
 
 Suggested AST model only after ratification:
 ```json
 {
   "type": "temporal_relation",
-  "relation": "strict_before | overlap",
+  "relation": "strict_before | strict_after | overlap",
   "left": "<finite-clause-ast>",
   "right": "<finite-clause-ast>",
   "reference_semantics": "bounded-events-only for strict_before",
@@ -96,7 +103,8 @@ Suggested AST model only after ratification:
 **Fail-closed initial subset**: single finite clauses with independently identifiable event referents. Do not silently accept `P ante Q e R`, nested `se/etsi` + temporal expressions, bare wide `no lim` across temporal operators, negated *absence* clauses as event anchors, embedded interrogatives, conditional imperatives, or `ante` + a bare nominal time point unless distinct operand typing/scope is specified. Event–event temporal syntax and event–time-NP syntax are *not* interchangeable by assumption. A parser success should report structural acceptability, not that an event occurred or a natural-language 'already' implication is correct.
 
 **Positive contrasts to eventually test** (metalanguage, not valid Unisermo sentences):
-- P before Q vs Q before P should be distinct and mutually inconsistent for single non-overlapping bounded event **instances**.
+- P before Q vs P after Q should be distinct and mutually inconsistent for single non-overlapping bounded event **instances**.
+- P before Q and Q after P should be truth-conditionally equivalent, while retaining distinct lexical/conceptual viewpoints.
 - P during Q is compatible with P beginning before Q finishes; it doesn't force strict precedence.
 - "P happened, and Q happened" does not entail an ordering.
 - Both past-tense P and past-tense Q do not entail which happened first.
@@ -110,34 +118,36 @@ Suggested AST model only after ratification:
 | UCD2 | Need | What the proposed basic relations would fix | Remaining issues |
 | --- | --- | --- | --- |
 | 03 | "called when he arrived" | `tem` overlap **if** the intended anchor is co-occurrence | identify actor; arrival root; point/boundary sense of when |
-| 06 | "arrive after sunset" | `sunset-event ante arrival-event` in event/event formulation | lexical sunset/train/delay; time-noun syntax if using a noun; future and conditional scope |
-| 12 | "after correcting, sent document" | `correcting-event ante sending-event` if correction completed first | document/informational send; object identity |
+| 06 | "arrive after sunset" | `arrival-event post sunset-event` in event/event formulation | lexical sunset/train/delay; time-noun syntax if using a noun; future and conditional scope |
+| 12 | "after correcting, sent document" | `sending-event post correcting-event` if correction completed first | document/informational send; object identity |
 | 16 | "sent this morning" | nominal `tem` may be relevant | current-day morning as a temporal anchor; informative transfer |
 | 18 | "said he wouldn't come" | none directly | reported speech, future relative to past speech, referents |
-| 20 | "wait before entering" | wait-event precedes entry-event conceptually | obligation over event sequence, wait/enter roots |
+| 20 | "wait before entering" | wait-event `ante` entry-event conceptually | obligation over event sequence, wait/enter roots |
 | 24 | "now understands" | none directly | `now` deictic anchor, knowledge/causal indirect question |
 | 30 | "within ten minutes" | none directly | elapsed-time deadline and unit, arrival |
-| 34 | "met friend yesterday, then returned" | meet-event before return-event | yesterday/return/information roles |
+| 34 | "met friend yesterday, then returned" | return-event `post` meet-event | yesterday/return/information roles |
 | 35 | "already left, still at station" | persistence phase may cover a subset | already expectation, still reference, station/depart |
-| 36 | "took, showed, and only after sent" | take-before-show, show-before-send | triple coreference, **only after**, lexical transfer |
+| 36 | "took, showed, and only after sent" | take `ante` show; send `post` show | triple coreference, **only after**, lexical transfer |
 
 This proposal reduces several structural gaps but does **not** make all 36 scenarios currently expressible, and does not imply complete model comprehension.
 
-## 6. Choice architecture and recommendation
+## 6. Updated choice architecture and recommendation
 
-| Design | New roots | New grammatical valencies | Benefits | Risks |
+The owner explicitly prefers **two conceptually distinct ways of expressing temporal order**: BEFORE and AFTER. Although AFTER is the logical inverse of BEFORE, that logical redundancy is not a linguistic defect. Speaker and listener can choose the event as the grammatical anchor without mental operand inversion.
+
+| Design | New lexical candidates | New proposed clausal relations | Benefits | Risks |
 | --- | ---: | ---: | --- | --- |
-| **A (recommended trial)** `ante` and clause-level `tem` | 1 | 2 temporal clause frames | small grammar, reversibility for after, reuses `tem` | operand inversion, bounded-event choice, need nominal-anchor design later |
-| B: `ante`, `poste`, and clausal `tem` | 2 | 3 | direct before/after in spoken order | `pos` confusion, extra lexeme |
-| C: reuse `-d`/`-o`/`in-` for sequencing, no clause relation | 0 | ad hoc/polysemous | initially shorter | cannot encode independent ordering reliably; rejected recommendation |
-| D: generalized time-of-event function + existing numeric inequalities | ≥1 structural function | extensive | algebraically general | complex and likely too abstract for common prose |
+| **A (preferred on owner direction)** `ante` + `post` + clausal `tem` | 2 | 3 | natural direct before/after wording; structurally symmetric; maintains clausal overlap | `post` near `pos`/`pot`; test accent robustness |
+| B: `ante` + `poste` + clausal `tem` | 2 | 3 | retains both perspectives; safer phonetic distance from `pos` | extra syllable; less terse |
+| C: `ante` + clausal `tem` only | 1 | 2 | one fewer word | rejected as default: requires reversing operands to say after |
+| D: use TAM and phase as event order | 0 | ad hoc | briefly appears concise | does not specify independent ordering |
 
-**Recommended first ratification unit for a later owner decision**: (a) one typed event-precedence relation with candidate `ante`, (b) existing `tem` extended to finite-clause overlap, (c) strict restriction to unambiguous **bounded-event** references, (d) keep after by argument reversal and evaluate readability before adding a synonym. Accepting the current document is **not** ratification.
+**Recommendation pending explicit form ratification**: adopt conceptually independent BEFORE and AFTER (owner preference), screen `ante` and `post` for lexical and spoken collisions, and extend `tem` to clausal overlap only after semantic review. Keep bounded-event strict semantics as the initial hypothesis, not a universal meaning for every natural-language before/after sentence.
 
 ### Open decisions that should be settled deliberately
 
 1. Is strict `end(P) < start(Q)` the preferred **unmarked** event-order semantics, or should before attach only to a pragmatically selected landmark (e.g., onset)? Strong default avoids ambiguity but forces explicit onset framing when events overlap.
-2. Should a direct after word be ratified for readability, despite logical redundancy? Compare with comprehension data, not intuition alone.
+2. Direct AFTER is now the user's stated design preference; decide whether the surface root `post` remains sufficiently distinct from `pos` and `pot` in spoken use, or select `poste` after screening.
 3. How do event-time **nominal anchors** ("after sunset") compose with clauses without an unwarranted new general nominalized-event suffix?
 4. How do temporal expressions take scope under `no`, `pos/deb`, `se`, conditionals and `lim`?
 5. Do we need an optional relation for immediate succession ('as soon as') distinct from ordinary before?
