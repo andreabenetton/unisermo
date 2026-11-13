@@ -494,3 +494,29 @@ The procedural complement is a **bare lexical verb**, with the same subject as t
 The accusative of the content frame is **always the content**, never a person induced to learn. Thus `Y adsap PERSON-em` can only mean knowledge *of the person*, not Y teaching that person. A causative for acquiring knowledge is reserved for a general, separately ratified state-causation analysis. Ordinary `dok` (teaching) and `stud` (studying) remain independent and do not entail successful knowledge acquisition. `lern` is not adopted.
 
 A knowledge-content noun does not automatically mean its propositional truth, and propositional subordinate complements require their own syntax. This parser subset implements only explicit nominal content and procedural bare verbs; omissions and mixed knowledge frames are excluded. See `docs/ldr/LDR-0019-sap-knowledge-family.md`.
+
+
+### Explicit-subject, bare-head propositional serviles (author ratification 2026-11-13)
+
+In addition to the shared-subject personal frame `SERVILE-FINITE BARE_VERB` and the already established impersonal epistemic `pos FINITE_PROPOSITION`, a **subject-bearing servile may take a full finite proposition while itself remaining in its bare dictionary form**:
+
+```text
+SUBJECT [no] SERVILE-ROOT FINITE_PROPOSITION
+```
+
+The outer subject is **obligatorily explicit** (pronoun or nominative nominal phrase), is the experiencer/attitude-holder/attempting actor, and does **not** control or agree with the embedded finite verb. The embedded proposition bears its **own** ordinary finite person, time, aspect, number and optional explicit subject. The bare servile has no person ending, no implicit third-person subject and no newly introduced complementizer. Unlike the finite shared-subject servile construction, it does not force the two participants to coincide.
+
+The initial **semantically licensed** explicit-subject bare heads are `vol` (desire that P), `int` (intend that P), `tent` (undertake an effort aimed at P), `sap` (know that P), and `kred` (believe that P; an independently confirmed ordinary cognition verb now receives this clausal frame). The remaining servile roots are not automatically given a personal propositional reading: `pot`, `aut`, `deb` and other candidates require distinct licensing. The previously ratified impersonal `pos P` is unchanged.
+
+- `i vol u movu` — I want you to move (desire, not a command or an achieved action).
+- `i int u movu` — I intend that you move (an adopted goal; not evidence you do).
+- `i tent uman mova` — I make a real attempt to bring about the person's movement, **without** entailing that I caused it or that the person moved.
+- `i sap uman mova` — I know that the person moves; unlike mere belief, knowledge is factive in the ordinary asserted positive construction.
+- `i kred uman mova` — I believe that the person moves (not necessarily true).
+- `u sap i movdi` — You know that I moved.
+- `i no vol u movu` — I do not want you to move.
+- `i vol u no movu` — I want you **not** to move (the negation belongs to the embedded proposition).
+
+The uninflected head marks this **propositional valency**, not a different imperative, subjectless infinitive or general-purpose causative. Personal `voli mov` remains the preferred compact construction for a shared subject. `i vol i movi` is formally possible as an explicit attitude toward a self-referential proposition but is not automatically synonymous in discourse structure with the shared-subject frame. No new temporal `vold/sapd/posd` operator suffix is ratified: these remain explicitly open.
+
+**Scope:** as with `pos P`, a bare propositional head takes the following complete Boolean expression by default; the ratified **closing** `lim` before a following connective separates the proposition under the servile from a later matrix clause. For example `i vol u movu e vida` = I want [you move AND he/she sees], while `i vol u movu lim e vida` = [I want you to move] AND [he/she sees]. Complex mixed causal/subordinate scope, clausal argument attachment and subject-control interactions beyond this subset require future design.
