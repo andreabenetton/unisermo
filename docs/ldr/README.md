@@ -78,3 +78,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0021: Desire vs intention, `vol` vs `int`](LDR-0021-vol-intention-gap.md) — Accepted
 
 - [LDR-0022: Bare propositional serviles and `pos P`](LDR-0022-bare-propositional-serviles.md) — Accepted
+
+- [LDR-0023: Explicit-subject bare propositional serviles](LDR-0023-subject-bare-servile.md) — Accepted
