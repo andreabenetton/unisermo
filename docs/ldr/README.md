@@ -88,3 +88,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0026: Quantified likelihood fractions and hyperbole](LDR-0026-numerical-likelihood-hyperbole.md) — Accepted
 
 - [LDR-0027: Universal quantitative comparisons, approximation and intervals](LDR-0027-universal-quantitative-operators.md) — Accepted
+
+- [LDR-0028: Basic measurements, gram/sekun, shared-unit ellipsis](LDR-0028-basic-measures-ellipsis.md) — Accepted
