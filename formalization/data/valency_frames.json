@@ -7,7 +7,10 @@
     "language/derivation.md#explicit-transition-between-states",
     "language/verb_specification.md#force-manner-verbs-pel-and-trak",
     "language/copula.md#state-phase-family-built-on-es",
-    "research/grammar/confirmed_decisions.json#motion_force_roots_pel_trak"
+    "research/grammar/confirmed_decisions.json#motion_force_roots_pel_trak",
+    "language/derivation.md#canonical-physical-action-argument-frames-ratified-2026-11-13",
+    "language/verb_specification.md#12-physical-action-valency-fer-portar-ten-kunten-ratified-2026-11-13",
+    "docs/ldr/LDR-0014-physical-action-valency.md"
   ],
   "motion": {
     "base": "mov",
@@ -102,5 +105,66 @@
     "policy": "syntax_only_for_single_accusative_or_locative; indirect/allative/ablative/special_result roles require a lexical frame before parser acceptance",
     "canonical_verbs_not_wildcard": "all other indexed or productive verb roots",
     "notes": "not a ban in the language: fail-closed restriction on the executable subset pending source ratification"
+  },
+  "physical_action": {
+    "source": "docs/ldr/LDR-0014-physical-action-valency.md",
+    "status": "ratified",
+    "object_required_in_parser": true,
+    "omitted_objects": "undecided_for_discourse",
+    "phase_prefixes": [
+      "ad",
+      "in",
+      "de",
+      "re"
+    ],
+    "associative_prefix": "kun",
+    "lexicalized_containment": "kunten",
+    "allowed_independent_adjunct_cases": [
+      "locative"
+    ],
+    "allow_existing_free_relators": true,
+    "maximum_each_case": 1,
+    "frames": {
+      "fer": {
+        "id": "physical_acquisition",
+        "subject_role": "taker",
+        "object_role": "physically_acquired_entity",
+        "case_roles": {
+          "ablative": "physical_origin"
+        },
+        "entails_transport": false,
+        "entails_ownership_transfer": false,
+        "entails_permission": false
+      },
+      "portar": {
+        "id": "physical_transport",
+        "subject_role": "carrier",
+        "object_role": "cargo",
+        "case_roles": {
+          "ablative": "transport_origin",
+          "dative_allative": "transport_destination"
+        },
+        "entails_arrival": false,
+        "entails_ownership_transfer": false
+      },
+      "ten": {
+        "id": "maintained_constraint",
+        "subject_role": "constraint_maintainer",
+        "object_role": "constrained_entity",
+        "case_roles": {},
+        "entails_acquisition": false,
+        "entails_displacement": false,
+        "entails_containment": false
+      },
+      "kunten": {
+        "id": "spatial_containment",
+        "subject_role": "physical_container",
+        "object_role": "physically_contained_entity",
+        "case_roles": {},
+        "requires_volitional_subject": false,
+        "entails_ownership": false,
+        "entails_abstract_inclusion": false
+      }
+    }
   }
 }
