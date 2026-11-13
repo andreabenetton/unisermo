@@ -1,0 +1,32 @@
+name: Intention servile regression
+on:
+  pull_request:
+    paths:
+      - 'formalization/**'
+      - 'research/lexicon/confirmed_lexicon.json'
+      - 'language/**'
+      - 'docs/ldr/LDR-0021-vol-intention-gap.md'
+      - 'tests/test_intention_servile.py'
+      - '.github/workflows/intention-servile.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  intention:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Generated indexes and grammar validation
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Dedicated intention regression
+        run: python -m unittest discover -s tests -p 'test_intention_servile.py' -v
+      - name: Established tentative and servile frames
+        run: |
+          python -m unittest discover -s tests -p 'test_tent_servile.py' -v
+          python -m unittest discover -s tests -p 'test_servile_negation_ratification.py' -v
