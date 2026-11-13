@@ -95,8 +95,8 @@ class VerifiedLexicalValencyTests(unittest.TestCase):
                 self.u.parse_sentence(text)
 
     def test_unratified_lexical_valency_remains_explicitly_undetermined(self):
-        for lemma in ("fer", "portar", "pens", "kap", "dik", "vid", "dok",
-                      "ten", "kunten", "fak", "sap"):
+        for lemma in ("pens", "kap", "dik", "vid", "dok",
+                      "fak", "sap"):
             with self.subTest(lemma=lemma):
                 evidence = self.u.valency_evidence(lemma)
                 self.assertEqual(evidence["status"], "undetermined")
@@ -139,7 +139,9 @@ class VerifiedLexicalValencyTests(unittest.TestCase):
         self.assertEqual([x["lemma"] for x in rows], sorted(self.u.verbs))
         self.assertTrue(any(x["lemma"] == "pel" and x["status"] == "documented"
                             for x in rows))
-        self.assertTrue(any(x["lemma"] == "fer" and x["status"] == "undetermined"
+        self.assertTrue(any(x["lemma"] == "fer" and x["status"] == "documented"
+                            for x in rows))
+        self.assertTrue(any(x["lemma"] == "pens" and x["status"] == "undetermined"
                             for x in rows))
         single = subprocess.run(
             [sys.executable, "-m", "formalization", "valency", "trak"],
