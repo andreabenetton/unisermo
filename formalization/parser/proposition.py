@@ -124,6 +124,15 @@ class PropositionParser:
         word = words[index]
         if word not in CONNECTORS:
             return False
+        # The 'e' between two numeric endpoints belongs to 'inter A e B',
+        # not to proposition coordination.  Keep later e connectors intact.
+        if word == "e":
+            for j in range(index):
+                if words[j] != "inter":
+                    continue
+                parsed = self._quantitative_prefix(words, j)
+                if parsed is not None and j < index < parsed[1]:
+                    return False
         if word != "due":
             return True
         stop = next((i for i in range(index + 1, len(words))
@@ -177,10 +186,14 @@ class PropositionParser:
             grade = words[0] if prob_index and not negative_lik else None
             numeric_measure = None
             operand_start = prob_index + 1
-            if len(words) >= operand_start + 2:
-                numeric_measure = self.parse_fraction(" ".join(words[operand_start:operand_start+2]))
-                if numeric_measure is not None:
-                    operand_start += 2
+            quantitative = self._quantitative_prefix(words, operand_start)
+            if quantitative is not None:
+                possible_measure, end = quantitative
+                # Unmarked cardinal alone may instead be the subject
+                # quantifier, e.g. 'lik setdek uman movan'.
+                if possible_measure["kind"] != "cardinal_numeral":
+                    numeric_measure = possible_measure
+                    operand_start = end
             if numeric_measure is not None and grade is not None:
                 raise ValueError("combined numeric and qualitative likelihood degrees are not ratified")
             operand_words = words[operand_start:]
