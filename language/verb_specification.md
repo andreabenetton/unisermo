@@ -119,7 +119,7 @@ person and number; the dependent infinitive remains uninflected.
 
 The four **author-ratified short servile roots** (12 November 2026) are
 `pos` (situational or circumstantial possibility/opportunity),
-`deb` (normative obligation/duty), `vol` (volition/wanting), and
+`deb` (normative obligation/duty), `vol` (desire/wanting), and
 `pot` (ability or capacity of the participant). The independently
 confirmed ordinary knowledge verb `sap` additionally admits a
 **procedural-knowledge** frame `sap + bare infinitive` ("know how to"),
@@ -139,7 +139,8 @@ is retained). No extra modal affix or dependent-person agreement occurs.
 |---|---|
 | `posi mov` | it is possible for me to move (opportunity) |
 | `debi mov` | I must move (obligation) |
-| `voli mov` | I want to move |
+| `voli mov` | I want to move (no committed intention implied) |
+| `inti mov` | I intend to move (no attempt implied) |
 | `poti mov` | I am able to move (capacity) |
 | `sapi mov` | I know how to move (procedural knowledge) |
 | `debdi mov` | I had to move (past obligation) |
@@ -181,6 +182,25 @@ to fail closed on unratified stacked or nested modal scopes.
 
 This construction is productive: no special synthetic suffix is added to
 the dependent lexical verb for modal meanings.
+
+### Intention servile: `int` (author ratification 13 November 2026)
+
+`int` is a regular **same-subject servile** for a genuinely adopted intention or commitment to undertake the dependent action, distinguished from `vol` (want/desire) and `tent` (actual attempt). A person can intend an unpleasant obligatory act without desiring it, want to act without resolving to do so, or form an intention without having started an attempt. The intention does not guarantee eventual performance.
+
+```text
+[SUBJECT] [no] INT-FINITE [no] BARE_VERB [DEPENDENT ARGUMENTS...]
+```
+
+- `inti mov` — I intend to move; no present attempt or movement is entailed.
+- `intdi mov` — I intended to move (past intention; no claim it occurred).
+- `intei mov` — My intention to move is ongoing/being maintained (progressive aspect of the intention state, not progressive movement).
+- `inti portar akwaem` — I intend to transport water; `portar` preserves its own object valency.
+- `no inti mov` — I do not intend to move; not equivalent to an intention to remain still.
+- `inti no mov` — I intend **not** to move (intention to refrain).
+
+`int V` entails the **current intention toward V**, but does not entail V, `tent V`, `vol V`, `pot V`, `pos V`, `aut V` or `sap V`. Deliberate `tent V` may express an event-local intention, but need not imply a durable pre-existing plan; grammatical `int` is not a required prefix for `tent`. Neither `int` nor any other current servile licenses arbitrary complements with different embedded subjects, chains of two serviles, or a prediction about another person's event.
+
+As part of this decision, the primary lexical sense of `vol` is **desire/wanting**, not an already adopted intention: `voli mov` is compatible with `no inti mov`. The lexical head `int` expresses commitment, not a speech-act promise, sure prediction, objective necessity, or success. No new TAM, case or negator is introduced.
 
 ### Attempt servile: `tent` (author ratification 13 November 2026)
 
