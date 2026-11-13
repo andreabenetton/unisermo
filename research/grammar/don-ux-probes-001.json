@@ -1,0 +1,147 @@
+{
+  "schema": "unisermo/don-ux-probes@1",
+  "status": "experimental_unreviewed_not_gold",
+  "version": "001",
+  "cases": [
+    {
+      "id": "UX-001",
+      "surface": "don ad",
+      "expected": "send_outward",
+      "meaning": "UX imperative with context-resolved theme and actor=source",
+      "status": "candidate"
+    },
+    {
+      "id": "UX-002",
+      "surface": "don de",
+      "expected": "receive_inward",
+      "meaning": "UX imperative with context-resolved theme and actor=recipient",
+      "status": "candidate"
+    },
+    {
+      "id": "UX-003",
+      "surface": "don",
+      "expected": "unspecified_perspective",
+      "meaning": "Bare imperative alone does not uniquely select incoming or outgoing",
+      "status": "baseline"
+    },
+    {
+      "id": "UX-004",
+      "surface": "addon",
+      "expected": "begin_transfer",
+      "meaning": "Bound ad- is phase onset, not outgoing direction",
+      "status": "inferred_phase_if_don_accepted"
+    },
+    {
+      "id": "UX-005",
+      "surface": "dedon",
+      "expected": "cease_transfer",
+      "meaning": "Bound de- is phase cessation, not incoming direction",
+      "status": "inferred_phase_if_don_accepted"
+    },
+    {
+      "id": "UX-006",
+      "surface": "donad",
+      "expected": "not_licensed",
+      "meaning": "No ratified verb derivation in -ad meaning send",
+      "status": "negative"
+    },
+    {
+      "id": "UX-007",
+      "surface": "donde",
+      "expected": "not_licensed",
+      "meaning": "No ratified verb derivation in -de meaning receive",
+      "status": "negative"
+    },
+    {
+      "id": "UX-008",
+      "surface": "portar ad",
+      "expected": "not_licensed",
+      "meaning": "No free directional perspective particle on transport root",
+      "status": "negative"
+    },
+    {
+      "id": "UX-009",
+      "surface": "fer de",
+      "expected": "not_licensed",
+      "meaning": "Do not automatically license transfer perspective on take/grasp",
+      "status": "negative"
+    },
+    {
+      "id": "UX-010",
+      "surface": "aut ad",
+      "expected": "not_licensed",
+      "meaning": "Permission verb's ablative source is unrelated",
+      "status": "negative"
+    },
+    {
+      "id": "UX-011",
+      "surface": "dok de",
+      "expected": "not_licensed",
+      "meaning": "Teaching is not learning by participant reversal",
+      "status": "negative"
+    },
+    {
+      "id": "UX-012",
+      "surface": "i doni ad",
+      "expected": "not_licensed",
+      "meaning": "The minimum proposal covers root/imperative UX labels only",
+      "status": "negative"
+    },
+    {
+      "id": "UX-013",
+      "surface": "addon ad",
+      "expected": "not_licensed",
+      "meaning": "Phase-prefix plus UX-tag stacking not yet proposed",
+      "status": "negative"
+    },
+    {
+      "id": "UX-014",
+      "surface": "don X-em Y-ad",
+      "expected": "giver_source",
+      "meaning": "Full clause: giver as subject, Y recipient; X is a schematic variable",
+      "status": "schematic"
+    },
+    {
+      "id": "UX-015",
+      "surface": "don X-em Y-de",
+      "expected": "recipient_destination",
+      "meaning": "Full clause: recipient as subject, Y source; X is a schematic variable",
+      "status": "schematic"
+    },
+    {
+      "id": "UX-016",
+      "surface": "don X-em A-de B-ad",
+      "expected": "underspecified",
+      "meaning": "Both endpoints present; do not infer role of subject",
+      "status": "schematic"
+    },
+    {
+      "id": "UX-017",
+      "surface": "don MESSAGE-em PERSON-ad",
+      "expected": "giver_source",
+      "meaning": "Material/informational theme does not change transfer roles",
+      "status": "schematic"
+    },
+    {
+      "id": "UX-018",
+      "surface": "don MESSAGE-em PERSON-de",
+      "expected": "recipient_destination",
+      "meaning": "Receiving message does not assert reading or comprehension",
+      "status": "schematic"
+    },
+    {
+      "id": "UX-019",
+      "surface": "admov",
+      "expected": "begin_motion",
+      "meaning": "Previously ratified phase prefix remains unchanged",
+      "status": "canonical_control"
+    },
+    {
+      "id": "UX-020",
+      "surface": "demov",
+      "expected": "cease_motion",
+      "meaning": "Previously ratified phase prefix remains unchanged",
+      "status": "canonical_control"
+    }
+  ]
+}
