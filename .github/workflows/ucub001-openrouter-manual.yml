@@ -1,0 +1,85 @@
+name: UCUB-001 OpenRouter smoke/development (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Hosted model (OpenRouter)"
+        required: true
+        default: "qwen/qwen3-32b"
+        type: choice
+        options:
+          - "qwen/qwen3-32b"
+          - "google/gemma-3-27b-it"
+      condition:
+        description: "Controlled Unisermo/English arm"
+        required: true
+        default: "cold"
+        type: choice
+        options:
+          - cold
+          - lexicon
+          - grammar
+          - english
+      limit:
+        description: "Number of development cases (4 for smoke, 64 for full dev)"
+        required: true
+        default: "4"
+        type: choice
+        options:
+          - "4"
+          - "16"
+          - "64"
+permissions:
+  contents: read
+concurrency:
+  group: ucub001-${{ github.ref }}-${{ inputs.model }}-${{ inputs.condition }}
+  cancel-in-progress: false
+jobs:
+  ucub001:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      BENCH_MODEL: ${{ inputs.model }}
+      BENCH_CONDITION: ${{ inputs.condition }}
+      BENCH_LIMIT: ${{ inputs.limit }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify secret and frozen benchmark
+        shell: bash
+        run: |
+          test -n "$OPENROUTER_API_KEY" || { echo 'OPENROUTER_API_KEY secret is not configured' >&2; exit 1; }
+          python -m benchmarks.ucub001.build --check
+          python -m unittest discover -s tests -p 'test_ucub001.py' -v
+      - name: Isolated non-retrying OpenRouter calls (development only)
+        run: |
+          python -m benchmarks.ucub001.runner run \
+            --condition "$BENCH_CONDITION" \
+            --split development \
+            --limit "$BENCH_LIMIT" \
+            --model "$BENCH_MODEL" \
+            --max-calls "$BENCH_LIMIT" \
+            --allow-unreviewed \
+            --output /tmp/ucub001-responses.jsonl
+      - name: Score exploratory unreviewed predictions
+        if: success()
+        run: |
+          python -m benchmarks.ucub001.runner score \
+            --responses /tmp/ucub001-responses.jsonl \
+            --split development \
+            --allow-partial \
+            --allow-unreviewed \
+            --output /tmp/ucub001-score.json
+      - name: Preserve charged raw results even after partial model failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ucub001-${{ inputs.condition }}-${{ github.run_id }}
+          path: |
+            /tmp/ucub001-responses.jsonl
+            /tmp/ucub001-score.json
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,34 @@
+name: UCUB-001 comprehension benchmark validation
+on:
+  pull_request:
+    paths:
+      - 'benchmarks/ucub001/**'
+      - 'tests/test_ucub001.py'
+      - 'formalization/**'
+      - '.github/workflows/ucub001-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-ucub001:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate core canonical syntax
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Rebuild frozen 80-case corpus without drift
+        run: python -m benchmarks.ucub001.build --check
+      - name: Validate semantic protocol and offline prompt isolation
+        run: python -m unittest discover -s tests -p 'test_ucub001.py' -v
+      - name: Dry-run development prompts; never call external LLMs
+        run: |
+          python -m benchmarks.ucub001.runner prepare --condition cold --split development --allow-unreviewed --output /tmp/ucub001-cold.jsonl
+          python -m benchmarks.ucub001.runner prepare --condition lexicon --split development --allow-unreviewed --output /tmp/ucub001-lexicon.jsonl
+          python -m benchmarks.ucub001.runner prepare --condition grammar --split development --allow-unreviewed --output /tmp/ucub001-grammar.jsonl
+          python -m benchmarks.ucub001.runner prepare --condition english --split development --allow-unreviewed --output /tmp/ucub001-english.jsonl
