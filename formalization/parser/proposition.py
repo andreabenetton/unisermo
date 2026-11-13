@@ -498,7 +498,8 @@ class PropositionParser:
                    "interrogative": question is not None}
             if head == "tent":
                 out["attempt_frame"] = "attempt_goal_directed"
-                out["entails_attempt"] = True
+                out["entails_attempt"] = not negative
+                out["denies_attempt"] = negative
                 out["entails_success"] = False
             if self.is_knowledge_verb(head):
                 out["knowledge_frame"] = "procedural_knowledge"
