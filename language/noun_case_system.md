@@ -62,7 +62,7 @@ predicative complement.
 Examples:
 
 - `Y traes akwaem solidda` - Y transforms the water, making it solid
-- `Y traes umanem doktorda` - Y transforms/trains the person into a doctor
+- `Y traes umanem kurarorda` - Y changes the person's role to caregiver (not necessarily a credentialed physician)
 
 `-da` is not an allative destination. Compare `solidad` "toward/to the solid
 state" in the two-pole intransitive transition `traes solidad likwidde` with
