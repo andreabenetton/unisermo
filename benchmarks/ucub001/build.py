@@ -93,7 +93,7 @@ GROUPS = [
         ("i vidi akwaem o peli akwaem.", "I see water or I push water, inclusively.", "I push water.", "undetermined"),
     ]),
     ("L3", "propositional_scope_negative", [
-        ("deb no uman mova.", "It is necessary that a person does not move.", "It is necessary that a person does not move.", "entailed"),
+        ("deb uman no mova.", "It is necessary that a person does not move.", "It is necessary that a person does not move.", "entailed"),
         ("no deb uman mova.", "It is not necessary that a person moves.", "It is necessary that a person moves.", "contradicted"),
         ("pos uman mova.", "It is possible that a person moves.", "It is necessary that a person does not move.", "undetermined"),
         ("lik uman mova.", "It is probable that a person moves.", "It is necessary that a person does not move.", "undetermined"),
@@ -154,7 +154,10 @@ def build() -> list[dict]:
         for variant, (unisermo, english, hypothesis, gold) in enumerate(examples):
             clauses = [x.strip() for x in unisermo.split(".") if x.strip()]
             for clause in clauses:
-                lang.parse_sentence(clause + ".")  # structural validation ONLY
+                try:
+                    lang.parse_sentence(clause + ".")  # structural validation ONLY
+                except ValueError as exc:
+                    raise ValueError(f"UCUB G{index+1:02d} variant {variant+1}: {clause!r}: {exc}") from exc
             assert gold in LABELS
             assert len([x for x in english.split(".") if x.strip()]) == len(clauses)
             rows.append({
