@@ -13,7 +13,7 @@ supersedes: none
 
 Following exploration of `dok` teach, `stud` study, `sap` know, `kap` understand and a provisional `lern` root, the project owner requested a **sap-first systematic analysis** parallel to the compositional `mov` family. This proposal tests whether `sap` plus pre-existing phase and aspect operators can capture "learn" without adding a primitive.
 
-**Owner subsequently instructed implementation of the five recommended extensions in the 2026-11-13 conversation. This constitutes explicit approval of frames A/B, phase-acquisition readings, independent dok/stud, and deferral of lern; the generic causative remains unratified.
+**Decision authority:** On 2026-11-13, the owner instructed implementation of the five recommended extensions. This approves frames A/B, phase-acquisition readings, the independence of `dok` and `stud`, and deferral of `lern`. The generic causative remains unratified.
 
 ## Observations from normative specification
 
@@ -101,7 +101,7 @@ No separate verbal morpheme is approved for *learning activity* or a separate `l
 
 Before owner acceptance: review semantic frames, consult the existing parser categories for bare verbs vs content NP, ensure collision-free cases, and independently verify 16 contrasts in `research/grammar/sap-family-contrasts-001.json`.
 
-Implementation after owner acceptance: add a normative valency section to `language/verb_specification.md`, implement machine-readable frames in `formalization/data/valency_frames.json`, update parser tests, and then run full build/validation. No normative changes are made by this LDR alone.
+Implementation includes a normative valency section in `language/verb_specification.md`, machine-readable frames in `formalization/data/valency_frames.json`, and a bounded parser extension with regression tests. Full build/validation is required before claiming executable verification.
 
 ## Decision authority
 
