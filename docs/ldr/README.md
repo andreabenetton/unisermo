@@ -81,4 +81,4 @@ LDRs only after reviewing the associated studies or historical conversation.
 
 - [LDR-0023: Explicit-subject bare propositional serviles](LDR-0023-subject-bare-servile.md) — Accepted
 
-- [LDR-0024: Personless modal tense and propositional necessity](LDR-0024-proposed-personless-modal-tense-necessity.md) — Proposed
+- [LDR-0024: Personless modal tense and propositional necessity](LDR-0024-proposed-personless-modal-tense-necessity.md) — Accepted
