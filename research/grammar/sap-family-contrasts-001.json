@@ -1,0 +1,118 @@
+{
+  "schema": "unisermo/sap-family-contrast@1",
+  "status": "proposed_semantics_not_ratified",
+  "cases": [
+    {
+      "id": "SP01",
+      "surface": "sapi dok",
+      "expected": "know_how_to_teach",
+      "distinction": "does_not_entail_teaching",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP02",
+      "surface": "adsapi dok",
+      "expected": "acquire_know_how_to_teach",
+      "distinction": "does_not_entail_actual_teaching",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP03",
+      "surface": "adsapei dok",
+      "expected": "ongoing_acquisition_of_teaching_knowhow",
+      "distinction": "does_not_entail_completion",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP04",
+      "surface": "insapi dok",
+      "expected": "continues_knowing_how_to_teach",
+      "distinction": "not_necessarily_studying",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP05",
+      "surface": "desapi dok",
+      "expected": "ceases_knowing_how_to_teach",
+      "distinction": "not_necessarily_forgetting_mechanism",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP06",
+      "surface": "resapi dok",
+      "expected": "regains_knowing_how_to_teach",
+      "distinction": "prior_knowledge_and_interruption",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP07",
+      "surface": "sapi mov",
+      "expected": "know_how_to_move",
+      "distinction": "does_not_entail_capacity",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP08",
+      "surface": "adsapi mov",
+      "expected": "acquire_know_how_to_move",
+      "distinction": "does_not_entail_actual_movement",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP09",
+      "surface": "adsapei mov",
+      "expected": "ongoing_acquisition_of_movement_knowhow",
+      "distinction": "no_completed_learning_entailment",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP10",
+      "surface": "sap X-em",
+      "expected": "know_content_X",
+      "distinction": "proposed_content_valency_not_ratified",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP11",
+      "surface": "adsap X-em",
+      "expected": "acquire_content_X",
+      "distinction": "proposed_content_valency_not_ratified",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP12",
+      "surface": "insap X-em",
+      "expected": "continue_knowing_content_X",
+      "distinction": "proposed_content_valency_not_ratified",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP13",
+      "surface": "desap X-em",
+      "expected": "lose_knowledge_of_X",
+      "distinction": "proposed_content_valency_not_ratified",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP14",
+      "surface": "resap X-em",
+      "expected": "reacquire_knowledge_of_X",
+      "distinction": "proposed_content_valency_not_ratified",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP15",
+      "surface": "Y adsap PERSON-em",
+      "expected": "reject_causative_person",
+      "distinction": "accusative_is_content_not_learner",
+      "status": "experimental_not_parser_gold"
+    },
+    {
+      "id": "SP16",
+      "surface": "Y dok PERSON-ad",
+      "expected": "teacher_action_not_learning_success",
+      "distinction": "teacher_action_does_not_guarantee_acquisition",
+      "status": "experimental_not_parser_gold"
+    }
+  ]
+}
