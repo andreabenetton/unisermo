@@ -72,7 +72,7 @@ Examples **schematic, not canonical**, with `libr` = book, `mon` = money, and `a
 - `i kambi kontra mon librem` — I sell a book for money.
 - `i kambi librem` — I sell a book; implicit countervalue is money.
 - `i kambi kontra libr monem` — I buy a book by paying money.
-- `i kambi monem` — I exchange money for money (NOT 'I buy'), by the proposed default; unusual but mechanically consistent.
+- `i kambi monem` — I exchange money for money (NOT 'I buy'): **ordinary currency exchange / forex** is a concrete valid instance. The monetary-default reading is meaningful, not an anomaly.
 
 **Default scope and limits:**
 1. The monetary default is a **lexical omission rule specific to `kambi`**, not a generic rule for all missing complements or all exchanges.
@@ -83,7 +83,7 @@ Examples **schematic, not canonical**, with `libr` = book, `mon` = money, and `a
 6. `kontra` and `mon` must pass lexical collision and orthographic validation prior to addition to confirmed lexicon.
 7. Since `kontra Y` is unmarked for nominal case, the syntactic category and NP boundaries must be formally specified; the proposal treats `kontra` as introducing a relator phrase with nominal base form (not a second nominative subject).
 
-The syntax and monetary-default policy were explicitly proposed by the owner; the broader language change is retained as **Proposed** pending complete valency and grammar review.
+The syntax and monetary-default policy were explicitly proposed by the owner; on 2026-11-13 the owner also explicitly affirmed that `kambi monem` covers money-for-money exchange such as forex, with currency identities and amounts to be expressed by further complements. The broader language change is retained as **Proposed** pending complete valency and grammar review.
 
 ## Testable questions
 
