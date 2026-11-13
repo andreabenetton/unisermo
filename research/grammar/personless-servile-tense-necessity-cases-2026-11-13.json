@@ -1,0 +1,102 @@
+{
+  "schema": "unisermo/personless-modal-tense-necessity-research@1",
+  "status": "research_only",
+  "cases": [
+    {
+      "id": "T01",
+      "example": "pos uman mova",
+      "reading": "possible(P) with present assessment and present embedded event",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T02",
+      "example": "posd uman movfa",
+      "reading": "past assessment of then-future movement",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T03",
+      "example": "posd uman movda",
+      "reading": "past assessment of an even-earlier movement",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T04",
+      "example": "posf uman movda",
+      "reading": "future assessment of an earlier movement",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T05",
+      "example": "i vold u movu",
+      "reading": "I desired your movement at a past time",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T06",
+      "example": "i vold u movfa",
+      "reading": "I desired your movement after that past time",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T07",
+      "example": "i sapd u movda",
+      "reading": "At a past time I knew you had already moved",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "T08",
+      "example": "i vol u movu",
+      "reading": "present attitude without extra suffix",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N01",
+      "example": "deb uman mova",
+      "reading": "necessary(P) under contextual premises",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N02",
+      "example": "no deb uman mova",
+      "reading": "not necessary(P) is not impossible(P)",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N03",
+      "example": "deb uman no mova",
+      "reading": "necessary(not P)",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N04",
+      "example": "no pos uman no mova",
+      "reading": "necessity(P) by possibility duality with same domain",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N05",
+      "example": "debi mov",
+      "reading": "I must move normatively, not equivalent to universal necessity(P)",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N06",
+      "example": "pos uman mova",
+      "reading": "possible(P) does not entail probable(P)",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N07",
+      "example": "i kred uman mova",
+      "reading": "I believe(P) does not independently assert probable(P)",
+      "status": "research_only_not_ratified_or_executable"
+    },
+    {
+      "id": "N08",
+      "example": "prob uman mova",
+      "reading": "INVALID as probability: prob confirmed ethical/moral-good property",
+      "status": "research_only_not_ratified_or_executable"
+    }
+  ]
+}

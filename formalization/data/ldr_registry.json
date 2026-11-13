@@ -199,6 +199,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Subject-bearing bare serviles with independent finite propositions"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "grammar",
+      "id": "LDR-0024",
+      "path": "docs/ldr/LDR-0024-proposed-personless-modal-tense-necessity.md",
+      "sha256": "a56aabeb197fe3d68fc47eb1aab9684a72473902cb8aa7946bb014e0a6c38b93",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Proposal for personless modal tense and propositional necessity"
     }
   ],
   "schema": "unisermo/ldr-registry@1"

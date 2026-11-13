@@ -211,7 +211,7 @@ The existing free `no` immediately before the bare `pos` negates the modal asses
 
 The last sentence's second-clause subject is pro-drop third person; discourse determines its referent. `lim` is not a new paired bracket or opening particle, and commas do not change scope.
 
-**Bounded executable scope:** `pos` over one or more simple finite clauses combined using `e`/`o`, and `lim` closure before ordinary `e`/`o`; modal operator negation and local embedded negation are supported. Other propositional servile interpretations (`deb`, `sap`, `vol`, `int`, `tent`, `aut`, `pot`), arbitrary subordinate causal scope, nested modal heads, and epistemic assessment time independent of embedded event TAM remain separate semantic/grammatical decisions. In particular **`posd` as a personless past-assessment head is a proposal, not ratified**; current finite verb morphology still requires the person vowel. No assumption that `deb` changes from normative duty to logical necessity is made here.
+**Bounded executable scope:** `pos` over one or more simple finite clauses combined using `e`/`o`, and `lim` closure before ordinary `e`/`o`; modal operator negation and local embedded negation are supported. Other propositional servile interpretations depend on their lexical semantics (see LDR-0023 and LDR-0024); arbitrary subordinate causal scope and nested modal heads remain open. **LDR-0024 (2026-11-13) supersedes the earlier deferral of personless `posd` and of necessity `deb P`**: both are now ratified in the bounded propositional frame.
 
 ### Intention servile: `int` (author ratification 13 November 2026)
 
@@ -517,6 +517,22 @@ The initial **semantically licensed** explicit-subject bare heads are `vol` (des
 - `i no vol u movu` — I do not want you to move.
 - `i vol u no movu` — I want you **not** to move (the negation belongs to the embedded proposition).
 
-The uninflected head marks this **propositional valency**, not a different imperative, subjectless infinitive or general-purpose causative. Personal `voli mov` remains the preferred compact construction for a shared subject. `i vol i movi` is formally possible as an explicit attitude toward a self-referential proposition but is not automatically synonymous in discourse structure with the shared-subject frame. No new temporal `vold/sapd/posd` operator suffix is ratified: these remain explicitly open.
+The uninflected head marks this **propositional valency**, not a different imperative, subjectless infinitive or general-purpose causative. Personal `voli mov` remains the preferred compact construction for a shared subject. `i vol i movi` is formally possible as an explicit attitude toward a self-referential proposition but is not automatically synonymous in discourse structure with the shared-subject frame. **LDR-0024** subsequently ratified personless `Ø/d/f` tense for precisely these propositional heads, without adding an aspect marker or a personal ending.
 
 **Scope:** as with `pos P`, a bare propositional head takes the following complete Boolean expression by default; the ratified **closing** `lim` before a following connective separates the proposition under the servile from a later matrix clause. For example `i vol u movu e vida` = I want [you move AND he/she sees], while `i vol u movu lim e vida` = [I want you to move] AND [he/she sees]. Complex mixed causal/subordinate scope, clausal argument attachment and subject-control interactions beyond this subset require future design.
+
+
+### Personless propositional tense and necessity (author ratification 2026-11-13; LDR-0024)
+
+The operator's `root + time(Ø/d/f)` is now the canonical **propositional** head morphology, used with an explicit outer subject for `vol/int/tent/sap/kred`, and with no outer subject for impersonal `pos/deb`. Ordinary shared-subject finite heads still use `root + aspect + time + person + number`, e.g. `posdi mov` = 'I had the opportunity to move', distinct from `posd mova` = 'at a past assessment time it was possible that someone moved.' No personless aspect is defined; bare `pose`/`poso` remain unsupported. A bare-root present head `pos` and `vol` is the zero-tense member of the very same paradigm.
+
+| Propositional head | Reading |
+|---|---|
+| `pos P` / `posd P` / `posf P` | P possible now / possible at past evaluation / possible at future evaluation |
+| `deb P` / `debd P` / `debf P` | P necessary now / necessary at past evaluation / necessary at future evaluation |
+| `i vol P` / `i vold P` / `i volf P` | I desire P now / desired P / will desire P |
+| `i sap P` / `i sapd P` / `i sapf P` | I know P now / knew P / will know P |
+
+`deb P` expresses **necessity under the relevant possible-world/condition domain**, not automatically an agent's duty. It is semantically distinguished from normative `debi V`. `no deb P` means 'not necessary P' (can be false); `deb no P` means 'necessary not-P'. The logical equivalence `deb P` = `no pos no P` is valid **only when the same possibility domain** is held fixed. Neither bare `pos` nor bare `deb` asserts that the evaluated proposition is true just by occurring as a modal assertion.
+
+Embedded verbal tense is **relative to the operator evaluation time** (assessment/attitude time), not independently assumed to be relative to utterance time. `posd uman movfa` means that at the past assessment time it was possible the person would move *later than that past time*. `i sapd u movdu` means that at a past attitude time I knew you had moved *earlier than that past time*. To disambiguate calendar-time reference, supply an independently valid temporal phrase; no new absolute-time morpheme is introduced. The operator's personless tense does not license recursive modal stacking or non-Boolean discourse mixing.

@@ -69,8 +69,8 @@ class BarePropositionalServileTests(unittest.TestCase):
 
     def test_open_semantic_or_tam_extensions_fail_closed(self):
         for sentence in (
-            "pos", "no pos", "pos mov", "posd uman mova",
-            "deb uman mova", "vol uman mova", "tent uman mova",
+            "pos", "no pos", "pos mov",
+            "vol uman mova", "tent uman mova",
             "pot uman mova", "sap uman mova",
             "pos uman mova lim", "pos uman mova lim vida",
             "pos uman mova e", "pos uman mova due vida",
