@@ -57,6 +57,51 @@ class WordParser:
                     source_lemma = lemma[:-2] if lemma.endswith("it") and lemma[:-2] in self.verbs else lemma
                     out.append({"kind": "nominal_case", "lemma": lemma, "status": self.lexicon[source_lemma]["status"],
                                 "case": case, "suffix": self.genitive_suffix(lemma) if case == "genitive" else self.morph["nominal"]["case"][case]})
+        # One productive derivation per lemma; original lexical analyses
+        # retain priority and do not get silently reinterpreted by endings.
+        derived = self.parse_derivation(surface)
+        if derived is not None:
+            if derived["category"] == "adjective":
+                out.append({"kind": "derived_adjective", "lemma": surface,
+                            "status": derived["status"], "derivation": derived})
+            elif derived["category"] == "property":
+                out.append({"kind": "derived_property", "lemma": surface,
+                            "status": derived["status"], "derivation": derived})
+            else:
+                out.append({"kind": "productive_derivation", "lemma": surface,
+                            "status": derived["status"], "derivation": derived})
+        out.extend(self.finite_derived_analyses(surface))
+        out.extend(self.nominal_derived_analyses(surface))
+
+        # Participial -it is inflection of an event root; it follows a
+        # productive phase prefix but is not a second lexical derivation.
+        if surface.endswith("it"):
+            event_lemma = surface[:-2]
+            event = self.parse_derivation(event_lemma)
+            if event is not None and event["category"] == "verb":
+                out.append({"kind": "participle", "lemma": event_lemma,
+                            "status": event["status"], "derivation": event})
+                out.append({"kind": "nominal_case", "lemma": surface,
+                            "status": event["status"], "case": "nominative",
+                            "suffix": "", "derivation": event})
+        for case, suffix in self.morph["nominal"]["case"].items():
+            if case == "nominative":
+                continue
+            for ending in ((suffix, self.morph["nominal"]["genitive_alternate"])
+                           if case == "genitive" else (suffix,)):
+                if not surface.endswith(ending) or len(surface) <= len(ending):
+                    continue
+                stem = surface[:-len(ending)]
+                if not stem.endswith("it"):
+                    continue
+                event = self.parse_derivation(stem[:-2])
+                if event is None or event["category"] != "verb":
+                    continue
+                expected = self.genitive_suffix(stem) if case == "genitive" else suffix
+                if ending == expected:
+                    out.append({"kind": "nominal_case", "lemma": stem,
+                                "status": event["status"], "case": case,
+                                "suffix": ending, "derivation": event})
         # Surface-transparent genealogical compounds are licensed by the
         # confirmed relation inventory, even if their *whole* lemma is not
         # explicitly indexed. Keep the structural path separate from lexical

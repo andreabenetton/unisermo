@@ -22,11 +22,14 @@ from .parser.clause import ClauseParser
 from .parser.kinship import KinshipParser
 from .parser.numeral import NumeralParser
 from .parser.proposition import PropositionParser
+from .parser.derivation import DerivationParser
+from .parser.valency import ValencyParser
 
 
-class Unisermo(MorphologyGenerator, WordParser, NumeralParser, KinshipParser, PropositionParser, ClauseParser):
+class Unisermo(DerivationParser, ValencyParser, MorphologyGenerator, WordParser, NumeralParser, KinshipParser, PropositionParser, ClauseParser):
     def __init__(self) -> None:
         self.morph = load("morphology.json")
+        self.valency = load("valency_frames.json")
         index = load("lexicon_index.json")
         self.lexicon = {entry["form"]: entry for entry in index["entries"]}
         # Explicit canonical lexical role categories supplement legacy roles.

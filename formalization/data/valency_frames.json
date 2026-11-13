@@ -1,0 +1,57 @@
+{
+  "schema": "unisermo/valency-frames@1",
+  "status": "parser-subset-of-ratified-grammar",
+  "sources": [
+    "language/derivation.md#mov-valency-alternation",
+    "language/noun_case_system.md#resultative-predicative--transformative--da",
+    "language/derivation.md#explicit-transition-between-states"
+  ],
+  "motion": {
+    "base": "mov",
+    "directional_lexical": [
+      "altmov",
+      "basmov"
+    ],
+    "phase_prefixes": [
+      "in",
+      "ad",
+      "de",
+      "re"
+    ],
+    "event_prefixes": [
+      "kun"
+    ],
+    "object": "optional",
+    "roles": {
+      "absent": "motion_intransitive",
+      "present": "motion_causative"
+    },
+    "allowed_cases": [
+      "dative_allative",
+      "ablative",
+      "locative"
+    ],
+    "maximum_each_case": 1
+  },
+  "traes": {
+    "frames": [
+      {
+        "id": "state_transition",
+        "object": "absent",
+        "required_cases": [
+          "dative_allative",
+          "ablative"
+        ],
+        "other_complements": false
+      },
+      {
+        "id": "causative_transformation",
+        "object": "required",
+        "required_cases": [
+          "resultative"
+        ],
+        "other_complements": false
+      }
+    ]
+  }
+}

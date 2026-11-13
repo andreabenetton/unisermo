@@ -111,6 +111,9 @@ class PropositionParser:
     def _finite(self, token: str) -> list[dict]:
         return [x for x in self.analyze_word(token)["analyses"] if x["kind"] == "finite_verb"]
 
+    def _bare_verb(self, token: str) -> bool:
+        return token in self.verbs or self.is_derived_verb(token)
+
     def _is_clause_connector(self, words: list[str], index: int) -> bool:
         """Distinguish due + NP from due + finite causal proposition.
 
@@ -272,7 +275,7 @@ class PropositionParser:
             raise ValueError("this subset supports a single imperative root")
         negative = words[0] == "no"
         root = words[1] if negative and len(words) == 2 else words[0]
-        if (negative and len(words) != 2) or root not in self.verbs:
+        if (negative and len(words) != 2) or not self._bare_verb(root):
             raise ValueError("imperative requires a licensed bare verb")
         return {"kind": "imperative", "verb": root, "negative": negative}
 
@@ -342,7 +345,7 @@ class PropositionParser:
         while pos < len(words):
             word = words[pos]
             if word in RELATORS:
-                if word == "fin" and pos + 1 < len(words) and words[pos + 1] in self.verbs:
+                if word == "fin" and pos + 1 < len(words) and self._bare_verb(words[pos + 1]):
                     purpose = words[pos + 1]
                     subobj, extras = self._args(words[pos + 2:], purpose)
                     if extras:
@@ -395,7 +398,12 @@ class PropositionParser:
             special = {"pos", "deb", "vol", "pot", "aut", "traes"}
             if not any(a["lemma"] in special for a in provisional):
                 try:
-                    return ClauseParser.parse_sentence(self, " ".join(words))
+                    legacy = ClauseParser.parse_sentence(self, " ".join(words))
+                    frame = self.validate_valency(
+                        legacy["predicate"]["lemma"], legacy.get("object"), [])
+                    if frame is not None:
+                        legacy["valency"] = frame
+                    return legacy
                 except ValueError:
                     pass
         finite = [(i, analyses) for i, word in enumerate(words)
@@ -428,17 +436,18 @@ class PropositionParser:
             if source_read is not None:
                 candidate, end = source_read
                 upcoming = rest[end:]
-                if upcoming and (upcoming[0] in self.verbs or
-                                 (len(upcoming) >= 2 and upcoming[0] == "no" and upcoming[1] in self.verbs)):
+                if upcoming and (self._bare_verb(upcoming[0]) or
+                                 (len(upcoming) >= 2 and upcoming[0] == "no" and self._bare_verb(upcoming[1]))):
                     source, rest = candidate, upcoming
         neg_embedded = bool(rest and rest[0] == "no")
         if neg_embedded:
             rest = rest[1:]
-        if head in MODALS and rest and rest[0] in self.verbs:
+        if head in MODALS and rest and self._bare_verb(rest[0]):
             if negative and neg_embedded:
                 raise ValueError("stacked modal and dependent negation not ratified")
             dependent = rest[0]
             obj, complements = self._args(rest[1:], dependent)
+            self.validate_valency(dependent, obj, complements)
             if question is not None and question["role"] in {"object", "destination"}:
                 if question["role"] == "object" and obj is not None:
                     raise ValueError("wh object duplicates explicit object")
@@ -459,18 +468,7 @@ class PropositionParser:
             if source is not None or (head in MODALS and head != "sap"):
                 raise ValueError("servile requires a bare verbal complement")
             obj, complements = self._args(rest, head)
-            frame = None
-            if head == "traes":
-                cases = [c["case"] for c in complements
-                         if c["kind"] == "case_complement"]
-                if obj is None:
-                    if sorted(cases) != ["ablative", "dative_allative"] or len(complements) != 2:
-                        raise ValueError("traes transition requires DEST-ad and SOURCE-de")
-                    frame = "state_transition"
-                else:
-                    if cases != ["resultative"] or len(complements) != 1:
-                        raise ValueError("causative traes requires OBJ-em and RESULT-da")
-                    frame = "causative_transformation"
+            frame = self.validate_valency(head, obj, complements)
             if question is not None and question["role"] in {"object", "destination"}:
                 if question["role"] == "object" and obj is not None:
                     raise ValueError("wh object duplicates explicit object")

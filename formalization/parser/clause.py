@@ -115,8 +115,17 @@ class ClauseParser:
                 "multiplicative_factor": parsed_factors[0]["factor"],
             }
         else:
+            # A single productive -al adjective may modify a noun.
+            # Ordering/scope against quantifiers or other adjectives is not
+            # defined by the current parser and therefore rejected.
+            adjectives = [x for x in modifiers if self.is_derived_adjective(x)]
+            if adjectives and len(modifiers) != 1:
+                raise ValueError("mixed derived adjectives and other nominal modifiers are not in this subset")
             if not (len(modifiers) == len(set(modifiers)) and
-                    all(x in self.demonstratives | self.quantifiers | {"wi"} or self.parse_numeral(x) is not None or self.parse_ordinal(x) is not None for x in modifiers)):
+                    all(x in self.demonstratives | self.quantifiers | {"wi"}
+                        or self.parse_numeral(x) is not None
+                        or self.parse_ordinal(x) is not None
+                        or self.is_derived_adjective(x) for x in modifiers)):
                 raise ValueError(f"unsupported noun modifiers: {modifiers}")
             ordinal_analyses = [self.parse_ordinal(x) for x in modifiers]
             ordinals = [x for x in ordinal_analyses if x is not None]
@@ -142,6 +151,10 @@ class ClauseParser:
             }
             if ordinals:
                 result["ordinal_value"] = ordinals[0]["value"]
+            if adjectives:
+                result["relational_adjectives"] = [
+                    self.parse_derivation(x) for x in adjectives
+                ]
         if possessor is not None:
             result["possessor"] = {"kind": "genitive_relation", "phrase": possessor}
         if marker:

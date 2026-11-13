@@ -65,6 +65,33 @@ frame `part doms` has a distinct node. Case always
 remains on its own nominal head. See
 [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md).
 
+## Productive morphology and documented valency (2026-11-13)
+
+Accepted simple derivations can be generated and parsed without
+entering the confirmed lexicon:
+
+```sh
+python3 -m formalization analyze fakor
+python3 -m formalization noun fakor --case accusative
+python3 -m formalization noun klaritat --case accusative
+python3 -m formalization generate refak --tense past
+python3 -m formalization proposition 'movi domem umanad'
+python3 -m formalization proposition 'traesi solidad likwidde'
+```
+
+The generator uses known lexical bases and **one productive operation**
+for the approved suffixes `-or/-il/-ia/-itat/-al` and bounded phase/event
+prefixes. Suffix shape alone never licenses a root. Case follows
+a derived noun; regular TAM follows a derived verb; resulting
+participles retain nominal cases. Lexicalized forms preserve their
+independent meanings.
+
+The source-linked registry `data/valency_frames.json` validates
+the ratified `mov` and `traes` frames, including controlled movement
+and state transformation. It does not generalize these case frames
+to other verbs. See [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md)
+for limitations and executable tests.
+
 ## Ratified scalar factors, ordinals and fractions (2026-10-24)
 
 The following author-approved numeral constructions are supported in the

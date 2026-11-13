@@ -41,6 +41,12 @@ The typed implementation supports a small simple-clause set of
 explicit cases, free relators, WH questions, stative zero copulas
 and imperatives.
 
+The source-constrained morphology parser also retains a derived
+form's lexical base, affix and operation, distinguishing a productively
+derived noun from an instrument/agent's actual real-world referent.
+The `mov` valency role is not an assertion of physical causation;
+the `traes` frames are typed argument configurations.
+
 ## Semantics that are NOT yet implemented
 
 No unrestricted lexical valency, world-model truth evaluation, referent
