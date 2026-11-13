@@ -1,17 +1,15 @@
-# Agent nouns: caregiver, teacher, student — lexical clarification
+# Compositional professions and study root — ratified 2026-11-13
 
-Status: **partial author decision / open study root**, 2026-11-13.
+**Author-approved lexical choice:** the canonical root for studying is `stud`, yielding `studi` (I study), `studa` (the third-person participant studies), and `studor` (person who studies) by the established productive suffix `-or`.
 
-The author confirmed that occupations or participant labels should be compositionally derived from the relevant activity root using the already canonical person/agent suffix `-or`.
-
-| Intended meaning | Canonical activity root | Compositional person | Status |
+| Meaning | Canonical action | Regular derived agent | Semantic boundary |
 |---|---|---|---|
-| caregiver / person who cures (including a physician in context) | `kurar` = care/cure | `kuraror` | Productive derivation from confirmed root and suffix; professional licensing is not implied |
-| teacher | `dok` = teach | `dokor` | Already illustrated in `language/derivation.md` |
-| student / person who studies | NOT YET RATIFIED | `STUDY_ROOT+or` | Root selection pending; `student` is currently example-only |
+| Care, cure | `kurar` | `kuraror` | Person who cares/cures; this *alone* does not assert a licensed medical doctor |
+| Teach | `dok` | `dokor` | Teacher, not automatically a physician despite Latin `doctor` |
+| Study | `stud` | `studor` | Person who studies, not necessarily enrolled in a school |
 
-The Latin etymology of 'doctor' must not license treating `dokor` as a physician: in current Unisermo `dok` means **teach**. Conversely, `kuraror` is compositionally someone who cares/cures, and additional institution/profession credentials would require lexical or contextual specification rather than being entailed by the agent suffix.
+The root `stud` distinguishes the **activity** of studying from `sap` (knowledge), `kap` (understanding) and `pens` (thinking). The ordinary suffix `-ia` can compositionally form `studia` (study-related place/domain), but that derivation alone must not be treated as an institutionally licensed or uniquely specified entity.
 
-Do **not** promote `doktor` or `student` from `example_only` into `research/lexicon/confirmed_lexicon.json` as opaque nouns. The forms appear in legacy/current illustrative text and must not be taken as fresh ratifications. Before replacing examples with `STUDY_ROOT+or`, select and ratify a canonical root for 'study' (distinct from `sap` know, `kap` understand and `pens` think) following `language/vocabulary_design_rules.md`.
+`doktor` and `student` were noncanonical examples, not ratified opaque lexical roots. Current live examples should use `kuraror` and `studor` where they explicitly intend a person who cures and a person who studies. These are semantically clearer but narrower: the corresponding professional status, credentials or enrollment are **not** entailed. Do not rewrite frozen benchmark outputs, legacy historical files, or quote history as though it had originally used the revised forms.
 
-This document records the semantic distinction without silently changing historical examples, frozen corpus materials, grammar, or executable parser behavior. Once a study root is accepted, replace the relevant **live** example forms, regenerate formalization indexes and add tests; keep frozen histories immutable.
+Source of authority: author ratification in conversation 2026-11-13; `language/derivation.md`; `language/verb_specification.md`; `research/lexicon/confirmed_lexicon.json`.
