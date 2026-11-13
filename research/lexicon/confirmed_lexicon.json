@@ -263,10 +263,11 @@
     {
       "form": "tem",
       "category": "function_word",
-      "meaning_it": "durante; nel tempo di",
-      "meaning_en": "during; at the time of",
+      "meaning_it": "durante / nel tempo di (frase nominale); contenimento stretto fra intervalli di eventi delimitati",
+      "meaning_en": "during / at the time of (nominal frame); strict containment between bounded positive-duration event intervals",
       "source": "legacy Unisermo extended case system",
-      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired."
+      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired. Author ratification 2026-11-13: for bounded event-interval operands A tem B, require start(B)<start(A)<end(A)<end(B), excluding shared boundaries; no automatic clausal syntax licensing. Nominal tem dia remains valid.",
+      "status": "confirmed"
     },
     {
       "form": "mod",
@@ -1172,6 +1173,15 @@
       "meaning_en": "SI metric prefix quecto; power 10^-30",
       "source": "Author ratification 2026-11-13; BIPM official SI prefixes adapted to canonical Unisermo alphabet",
       "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",
+      "status": "confirmed"
+    },
+    {
+      "form": "temekwal",
+      "category": "function_word",
+      "meaning_it": "coincidenza esatta degli intervalli temporali di due eventi",
+      "meaning_en": "exact equality of two event temporal extents, without identity of events",
+      "source": "Author ratification 2026-11-13; lexicalized tem + ekwal",
+      "decision": "For bounded event intervals A=[a0,a1], B=[b0,b1], A temekwal B iff a0=b0 and a1=b1. No event identity is entailed. Schematic A/B examples are not approved finite-clause syntax. The form is a lexicalized temporal relation, not blanket productive compounding.",
       "status": "confirmed"
     }
   ]
