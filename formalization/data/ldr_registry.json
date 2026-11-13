@@ -129,6 +129,16 @@
       "status": "Accepted",
       "supersedes": "none",
       "title": "Extend the locative -in to abstract proposition domains"
+    },
+    {
+      "date": "2026-11-13",
+      "domain": "grammar",
+      "id": "LDR-0014",
+      "path": "docs/ldr/LDR-0014-physical-action-valency.md",
+      "sha256": "2acaafe33c3a3550c6c17eac69ea207909be8152c097d01cd21fd0ee14f68a59",
+      "status": "Accepted",
+      "supersedes": "none",
+      "title": "Distinct overt-object valencies for fer portar ten and kunten"
     }
   ],
   "schema": "unisermo/ldr-registry@1"

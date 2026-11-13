@@ -368,3 +368,71 @@ attaches to an entire positive cardinal. When the cardinal ends in
 Accepted noncanonical analytic spellings (`unoim` / `otoim`)
 normalize to the contracted canonical form. `nulim` is not
 ratified. See [numerals](numerals.md) section 8.
+
+### Canonical physical-action argument frames (ratified 2026-11-13)
+
+The distinct meanings of `fer`, `portar`, `ten` and the
+**lexicalized** compound `kunten` also govern distinct thematic roles.
+All four select an accusative `X-em` participant in the canonical
+**overt-argument** construction. No case suffix, morph or lexical root
+is introduced.
+
+| Head | Canonical frame | Semantic roles |
+|---|---|---|
+| `fer` | `Y-NOM fer X-em [SOURCE-de]` | Y **acquirer/taker**, X physically grasped/acquired; optional SOURCE physical origin |
+| `portar` | `Y-NOM portar X-em [SOURCE-de] [DEST-ad]` | Y **carrier**, X transported cargo; optional spatial origin and destination |
+| `ten` | `Y-NOM ten X-em` | Y holder/controller, X the entity constrained or held over time |
+| `kunten` | `CONTAINER-NOM kunten CONTENTS-em` | subject physical **container**, object physical contents |
+
+These are **different semantic relations with the same syntactic
+accusative**. `fer` does not imply transport, ownership transfer
+or permission. `portar` entails a transporting/carrying event, but
+`DEST-ad` marks direction **toward** a destination, never proof
+of arrival. `ten` specifies maintained physical/control constraint
+without acquisition or displacement. `kunten` specifies spatial
+containment; its subject need not be animate, conscious or volitional.
+Neither `ten` nor `kunten` acquires an inherent motion SOURCE-de
+or DEST-ad argument.
+
+The optional `SOURCE-de` with `fer` names a **physical
+origin/source**, not necessarily a previous owner or permission
+grantor. With `portar`, optional SOURCE-de and DEST-ad
+describe the spatial transport event, not ownership transfer.
+Ordinary free relators and an event-location `LOCATION-in`
+remain independent adjuncts, not additional lexical participants.
+A locative `-in` does not become a second contents argument
+of `kunten`.
+
+Examples with existing attested roots:
+
+- `i feri portaem` — I physically take/grasp the door.
+- `i feri portaem umande` — I take the door from a person's
+  physical location, with no ownership assertion.
+- `i portari portaem domad` — I carry the door toward a house.
+- `i portari portaem domde umanad` — I carry the door
+  from a house toward a person.
+- `i teni portaem` — I hold the door / maintain control of it.
+- `dom kuntena akwaem` — the house physically contains water.
+
+A **single** regular phase prefix `ad-/in-/de-/re-` on
+these verbs preserves the participant roles of its base frame
+while changing the phase of that event; the already ratified
+productive associative `kun-` likewise preserves those roles
+and adds association/jointness without introducing a mandatory
+new co-agent. The separately **lexicalized** `kunten` keeps its
+containment meaning: it is not decoded as a generic
+`kun-` + `ten` event. Applying a further associative
+`kun-` to the lexicalized `kunten` (`kunkunten`) is
+outside this bounded single-layer parser subset.
+No general stacked prefix derivation is approved by this rule.
+
+**Important implementation limit:** one explicit accusative
+participant is **required in the currently approved parser
+subset** for these four frames. Whether Unisermo licenses
+contextual or discourse-conditioned omission of this participant
+is a **separate unresolved grammatical question**. Do not
+infer that it is universally forbidden in the language.
+
+See [verb_specification.md](verb_specification.md),
+[LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md) and
+[formalization/data/valency_frames.json](../formalization/data/valency_frames.json).

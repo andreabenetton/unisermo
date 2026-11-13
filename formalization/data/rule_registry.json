@@ -325,6 +325,12 @@
       "status": "confirmed"
     },
     {
+      "content_sha256": "9d24f05aa3c6422fb0ab2d03ffaf54accc1ef4bb903f212ba529f0ae843fe641",
+      "id": "grammar.physical_action_valency_fer_portar_ten_kunten_20261113",
+      "source": "research/grammar/confirmed_decisions.json#decisions/physical_action_valency_fer_portar_ten_kunten_20261113",
+      "status": "confirmed"
+    },
+    {
       "content_sha256": "d0db7ed68125c465dd90dd2ee6adcc50b0dd12787e299e9fc1d9638a31469e36",
       "id": "grammar.plural_redundancy",
       "source": "research/grammar/confirmed_decisions.json#decisions/plural_redundancy",

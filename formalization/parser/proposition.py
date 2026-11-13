@@ -503,6 +503,9 @@ class PropositionParser:
                 out["dependent"]["valency"] = dependent_frame
                 if dependent_frame == self.valency["force_manner"]["frame"]:
                     out["dependent"]["entails_successful_displacement"] = False
+                physical_roles = self.physical_argument_roles(dependent, complements)
+                if physical_roles is not None:
+                    out["dependent"]["argument_roles"] = physical_roles
             if question:
                 out["question"] = question
         else:
@@ -543,6 +546,9 @@ class PropositionParser:
                 out["valency"] = frame
                 if frame == self.valency["force_manner"]["frame"]:
                     out["entails_successful_displacement"] = False
+                physical_roles = self.physical_argument_roles(head, complements)
+                if physical_roles is not None:
+                    out["argument_roles"] = physical_roles
         if front is not None:
             out["preposed_locative"] = front
         return self._annotate_focus(out)

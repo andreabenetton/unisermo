@@ -120,6 +120,38 @@ See [GRAMMAR_COVERAGE.md](GRAMMAR_COVERAGE.md) and the
 source-linked [valency registry](data/valency_frames.json).
 This is not a ratification of new lexical argument frames.
 
+## Four ratified physical-action frames (2026-11-13)
+
+The physical-action valency families `fer`, `portar`,
+`ten` and `kunten` have **separate semantic roles**
+despite sharing the ordinary accusative `-em`.
+
+```sh
+python3 -m formalization proposition 'i feri portaem umande'
+python3 -m formalization proposition 'i portari portaem domde umanad'
+python3 -m formalization proposition 'i teni portaem'
+python3 -m formalization proposition 'dom kuntena akwaem'
+python3 -m formalization valency kunten
+```
+
+`fer` optionally selects a *physical* `SOURCE-de`;
+`portar` optionally selects a spatial `SOURCE-de` and
+`DEST-ad`, without implying arrival; `ten` means
+maintained physical/control constraint; `kunten`
+means actual physical enclosure, **not** generalized
+associative joint holding. One approved phase or
+associative prefix inherits the base's participant roles.
+The parsed AST contains `argument_roles`, not
+undocumented claims of ownership, authorization,
+arrival or voluntary agency.
+
+The supported subset requires an explicit object
+`X-em`; whether contextual omission should be
+accepted by the **language** remains open. See
+[Accepted LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md),
+[source-linked valency data](data/valency_frames.json) and
+[coverage matrix](GRAMMAR_COVERAGE.md).
+
 ## Ratified scalar factors, ordinals and fractions (2026-10-24)
 
 The following author-approved numeral constructions are supported in the

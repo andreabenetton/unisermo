@@ -352,3 +352,42 @@ understand (no longer take/capture); `sap` = know; `pens` = think.
 These roots have distinct event/state meanings. Their phase derivatives
 are defined by the regular `ad-/in-/de-/re-` operators in
 [derivation.md](derivation.md), not by Latin or modern homonyms.
+
+## 12. Physical-action valency: `fer`, `portar`, `ten`, `kunten` (ratified 2026-11-13)
+
+The canonical overt-argument patterns use the **existing** case
+inventory and are distinguished by the action root:
+
+- `Y fer X-em [SOURCE-de]`: Y physically takes/grasp X,
+  optionally from a *physical* source. This does **not**
+  entail carrying, ownership, permission or continued holding.
+- `Y portar X-em [SOURCE-de] [DEST-ad]`: Y physically carries
+  X; the optional ablative source and allative destination
+  belong to the transport event. `DEST-ad` does **not**
+  entail arrival.
+- `Y ten X-em`: Y maintains physical/control constraint
+  over X through time. This is **not** acquisition,
+  movement or automatically physical enclosure.
+- `CONTAINER kunten CONTENTS-em`: a physical entity
+  spatially contains CONTENTS. The subject **need not**
+  be a volitional agent; no ownership or abstract
+  part-whole claim follows from this verb.
+
+`SOURCE-de` attached to `fer` is an origin, *not*
+necessarily a former owner. `kunten` remains a **lexicalized
+compound**; productive associative `kun-` does not
+mean containment on other verbs. A regular single phase
+prefix preserves the base's arguments; a productive
+associative event prefix does so for `fer`, `portar`
+and `ten`, without adding an obligatory co-agent.
+A further `kun-` on lexicalized `kunten`
+(`kunkunten`) is outside the bounded approved subset. A separate locative
+`-in` or normal invariant relator may act as a
+nonselected adjunct, not a new patient argument.
+
+The bounded reference parser **requires an overt `X-em`**
+for these constructions. Contextual object omission is
+**not ratified here**: it remains a future question,
+not a universal grammatical prohibition. See
+[derivation.md](derivation.md) and
+[LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md).

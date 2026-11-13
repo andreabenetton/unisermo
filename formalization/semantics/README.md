@@ -56,6 +56,18 @@ licensing for other roots is openly classified
 `undetermined`, not inferred from word meaning or affix
 spelling.
 
+Accepted LDR-0014 distinguishes the roles of direct
+`X-em` participants in `fer`, `portar`, `ten`
+and `kunten`. The parser emits `argument_roles`
+for taking from a physical source, carrying toward a
+destination, maintaining constraint and spatial
+containment. These are **speaker-asserted roles**, not
+a verified model of possession, authority, successful
+arrival or physical plausibility. `kunten` explicitly
+retains its specialized lexical containment rather
+than generic joint `ten`. Contextual object omission
+is not inferred and remains an open design decision.
+
 ## Semantics that are NOT yet implemented
 
 No unrestricted lexical valency, world-model truth evaluation, referent
