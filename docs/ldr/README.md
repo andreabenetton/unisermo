@@ -74,3 +74,5 @@ LDRs only after reviewing the associated studies or historical conversation.
 - [LDR-0018: Exchange semantics and candidate `kambi`](LDR-0018-exchange-kambi-semantics.md) — Proposed
 
 - [LDR-0020: Goal-directed attempt servile `tent`](LDR-0020-attempt-servile-tent.md) — Accepted
+
+- [LDR-0021: Desire vs intention, `vol` vs `int`](LDR-0021-vol-intention-gap.md) — Accepted
