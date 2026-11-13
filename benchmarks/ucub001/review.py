@@ -152,6 +152,9 @@ def main() -> None:
     packets.add_argument("--stage", required=True, choices=("semantic", "equivalence"))
     packets.add_argument("--split", default="all", choices=("all", "development", "holdout"))
     packets.add_argument("--output", type=Path, required=True)
+    starter = sub.add_parser("init")
+    starter.add_argument("--reviewer-id", required=True)
+    starter.add_argument("--output", type=Path, required=True)
     aggregate = sub.add_parser("aggregate")
     aggregate.add_argument("--review-a", type=Path, required=True)
     aggregate.add_argument("--review-b", type=Path, required=True)
@@ -163,6 +166,26 @@ def main() -> None:
         _write_new(args.output.with_suffix(args.output.suffix + ".manifest.json"),
                    json.dumps(info, indent=2, ensure_ascii=False, sort_keys=True) + "\n")
         print(f"Blinded {args.stage} review packet: {info['count']} items, no gold")
+        return
+    if args.action == "init":
+        rows, manifest = load_corpus()
+        content = {
+            "schema": REVIEW_SCHEMA,
+            "corpus_sha256": manifest["corpus_sha256"],
+            "reviewer_id": args.reviewer_id,
+            "review_method": "human",
+            "independent_of_corpus_author": False,
+            "reviewed_at_utc": "",
+            "annotations": [
+                {"id": r["id"], "label": "uncertain", "own_translation": "",
+                 "english_equivalence": "uncertain", "confidence": 1,
+                 "rationale": "", "ambiguity": ""}
+                for r in rows
+            ],
+        }
+        _write_new(args.output, json.dumps(content, indent=2, ensure_ascii=False, sort_keys=True) + "\\n")
+        print("Created BLANK review form for", len(rows),
+              "cases; it is NOT an attestation or completed review")
         return
     rows, manifest = load_corpus()
     ids = {r["id"] for r in rows}
