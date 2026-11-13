@@ -12,6 +12,13 @@ class ValencyParser:
         spec = self.valency["motion"]
         if lemma == spec["base"] or lemma in spec["directional_lexical"]:
             return True
+        # Approved phase forms may already appear in the source-derived
+        # lexicon as decision-attested entries; preserve the family even
+        # when lexical-index precedence prevents re-segmentation.
+        if (lemma in self.verbs and any(
+                lemma == prefix + spec["base"]
+                for prefix in spec["phase_prefixes"])):
+            return True
         # Phase prefixes modify the base motion event. A single productive
         # associative kun- prefix is permitted on the event too.
         parsed = self.parse_derivation(lemma)
