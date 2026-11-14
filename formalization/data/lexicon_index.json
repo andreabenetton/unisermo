@@ -2045,6 +2045,18 @@
       "status": "confirmed_lexicon"
     },
     {
+      "form": "tren",
+      "categories": [
+        "noun"
+      ],
+      "meaning_it": "treno; veicolo ferroviario composto da uno o più elementi destinati a muoversi sui binari",
+      "meaning_en": "train; railway vehicle or connected set of railway vehicles",
+      "origin": "Explicit author ratification 2026-11-14",
+      "decision": "Canonical common noun for train, used in transport and motion constructions. No special motion semantics: the noun itself does not assert movement.",
+      "status": "confirmed_lexicon",
+      "source": "research/lexicon/confirmed_lexicon.json"
+    },
+    {
       "categories": [
         "noun"
       ],
