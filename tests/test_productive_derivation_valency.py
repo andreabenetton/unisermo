@@ -188,6 +188,50 @@ class ProductiveDerivationAndValencyTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     self.u.parse_sentence(unratified_surface)
 
+    def test_free_da_ad_de_state_markers(self):
+        self.assertTrue({"da", "ad", "de"} <= self.u.lexicon.keys())
+        for w in ("da", "ad", "de"):
+            self.assertIn("function_word", self.u.lexicon[w]["categories"])
+        made = self.u.parse_sentence("i traesi umanem da pot mov")
+        self.assertEqual(made["valency"], "causative_modal_capacity")
+        self.assertEqual(made["object"]["lemma"], "uman")
+        self.assertEqual(made["state_result"]["head"], "pot")
+        self.assertEqual(made["state_result"]["controller"], "accusative_patient")
+        self.assertEqual(made["state_result"]["action"]["lemma"], "mov")
+        self.assertTrue(made["state_result"]["entails_capacity_acquired"])
+        self.assertFalse(made["state_result"]["entails_action"])
+        change = self.u.parse_sentence("uman traesa ad pot mov de no pot mov")
+        self.assertEqual(change["valency"], "state_transition")
+        a = change["state_transition"]
+        self.assertEqual(a["controller"], "matrix_subject")
+        self.assertEqual(a["destination"]["head"], "pot")
+        self.assertFalse(a["destination"]["negative"])
+        self.assertTrue(a["source"]["negative"])
+        simple = self.u.parse_sentence("uman traesa ad bon de nebon")
+        self.assertEqual(simple["state_transition"]["destination"]["lemma"], "bon")
+        self.assertEqual(simple["state_transition"]["source"]["lemma"], "nebon")
+        previous = self.u.parse_sentence("traesi solidad likwidde")
+        self.assertEqual(previous["valency"], "state_transition")
+        previous2 = self.u.parse_sentence("traesi akwaem aperda")
+        self.assertEqual(previous2["valency"], "causative_transformation")
+        self.assertEqual(self.u.generate_verb("pot", "past", person=3), "potda")
+
+    def test_free_state_markers_do_not_authorize_general_modal_scope(self):
+        for text in (
+            "i traesi umanem da aut mov",
+            "i traesi umanem da pos mov",
+            "i traesi umanem da no pot mov",
+            "i traesi umanem da potda mov",
+            "i traesi umanem da pot pot mov",
+            "uman traesa ad pot mov",
+            "uman traesa de no pot mov ad pot mov",
+            "uman traesa ad pot mov de aut mov",
+            "uman traesa ad pot mov de pot mov de pot mov",
+            "i faki umanem da pot mov",
+        ):
+            with self.subTest(text=text), self.assertRaises(ValueError):
+                self.u.parse_sentence(text)
+
     def test_boundaries_and_provenance(self):
         frames = self.u.valency
         self.assertEqual(frames["schema"], "unisermo/valency-frames@1")
