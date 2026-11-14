@@ -17,6 +17,12 @@ from .clause import ClauseParser
 
 CONNECTORS = {"e", "o", "ma", "ergo", "nam", "due"}
 BOOLEAN_CONNECTORS = {"e", "o"}
+TEMPORAL_RELATIONS = {
+    "pretem": "before", "postem": "after", "tem": "during",
+    "sim": "meets", "solap": "overlaps", "simpre": "starts",
+    "simpost": "finishes", "simtem": "equals",
+}
+TEMPORAL_OPERANDS = {"svo_clause", "servile_clause", "copular_clause"}
 SUBORDINATES = {"se", "etsi", "etsise", "eksese"}
 POSTPOSED = {"etsi", "etsise", "eksese"}
 RELATORS = {"kun", "per", "pro", "due", "fin", "tem", "mod"}
@@ -171,8 +177,11 @@ class PropositionParser:
                 raise ValueError("wide negation is ratified only for e/o truth-conditional chains")
             if operand[:2] == ["no", "lim"]:
                 raise ValueError("stacked wide negation not ratified")
+            inner = self._expression(operand, depth + 1)
+            if inner["kind"] == "temporal_relation":
+                raise ValueError("wide negation of a temporal relation is not yet defined")
             return {"kind": "wide_negation", "operator": "no lim",
-                    "operand": self._expression(operand, depth + 1),
+                    "operand": inner,
                     "scope": "complete_truth_conditional_operand"}
         # The same gradable likelihood property accepts a qualitative
         # degree or a ratified two-token CARDINAL ORDINAL numeric fraction.
@@ -353,6 +362,39 @@ class PropositionParser:
                     "placement": "postposed",
                     "matrix": self._expression(words[:i], depth + 1),
                     "subordinate": self._expression(words[i + 1:], depth + 1)}
+        # A temporal relation links exactly two independent finite event
+        # clauses in this initial subset.  Nominal `tem NP` remains an
+        # adjunct, not a second finite clause.  Never guess mixed scope.
+        temporal = []
+        for i, word in enumerate(words):
+            if i == 0 or i == len(words) - 1 or word not in TEMPORAL_RELATIONS:
+                continue
+            # Prevent nominal `tem dia` from capturing a later finite
+            # verb across an independent clause connector.
+            right_end = next((j for j in range(i + 1, len(words))
+                              if words[j] in CONNECTORS | SUBORDINATES | {"alor", "lim"}),
+                             len(words))
+            if word != "tem" or any(self._finite(w) for w in words[i + 1:right_end]):
+                temporal.append(i)
+        if temporal:
+            if (len(temporal) != 1 or any(
+                    self._is_clause_connector(words, j)
+                    for j in range(len(words)))
+                    or any(w in SUBORDINATES | {"alor", "lim", "ka"} for w in words)):
+                raise ValueError("mixed or nested temporal scope is not defined")
+            i = temporal[0]
+            left = self._atom(words[:i])
+            right = self._atom(words[i + 1:])
+            if left["kind"] not in TEMPORAL_OPERANDS or right["kind"] not in TEMPORAL_OPERANDS:
+                raise ValueError("temporal relation requires two simple finite event clauses")
+            if left.get("question") or right.get("question"):
+                raise ValueError("temporal questions need explicit future scoping rules")
+            return {"kind": "temporal_relation", "operator": words[i],
+                    "relation": TEMPORAL_RELATIONS[words[i]],
+                    "left": left, "right": right,
+                    "interval_semantics": "bounded_positive_duration",
+                    "asserts_event_occurrence": False,
+                    "limitations": "structure only; no inferred event reference, bounds or truth"}
         # Right-associative connector chains, without an implicit
         # precedence hierarchy. Distinguish nominal 'due NP' from
         # 'P due Q' by the existence of a finite clause in Q.
