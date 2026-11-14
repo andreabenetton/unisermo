@@ -22,6 +22,10 @@ instrument suffix. It applies **only to positive canonical cardinals**:
 confuse it with the separate `NUMjer` iteration operator. The earlier
 candidate `-mul` was **not ratified**.
 
+### Capacity and design-purpose suffixes: not yet ratified (2026-11-14)
+
+No productive suffix currently means **“capable of being X-ed”**, **“able to X”**, or **“designed/intended to be X-ed”**. The productive `-al` only means *relating to X*, `-il` means an instrumental artifact for X, and `-it` marks a participial/resultative form; none of these entails potentiality or design purpose. The independent verbal root `pot` expresses the capacity of an actor, not an adjectival derivation. `apt` is separately recorded as **proposed pending explicit ratification**, not an authorized solution to either suffix function. Thus `moval` (“related to movement”) must not automatically be glossed as “mobile/transportable.” A future proposal should separate capacity to undergo an action from being designed for that action.
+
 ## 2. Agent and instrumental derivation
 
 The productive suffix **`-or`** derives a person whose characteristic role or
