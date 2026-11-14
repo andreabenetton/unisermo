@@ -173,7 +173,22 @@ The existing `tem` remains an invariant prenominal temporal relator in establish
 
 **New approved temporal relation `simtem` (author replacement ratified 2026-11-14; supersedes `temekwal`):** `A simtem B` means the **time intervals** coincide exactly: `a0 = b0` and `a1 = b1`. It does *not* assert that A and B are the same event, have the same cause, or have the same participants. `simtem` is a whole lexicalized temporal relation using familiar `tem` + `ekwal`, **not** a newly productive compounding rule. Existing `ekwal` retains general equality/comparison meanings, without implicit event-time interpretation.
 
-Both formulas use A and B as **semantic placeholders**, not verified Unisermo utterances. The narrow event–event interpretation does not silently replace ordinary nominal `tem` with a claim about strict endpoint inequality for point-time nouns. Point events, unbounded/habitual/modal/negated events and finite-proposition connective syntax remain under design. The seven-family proposal and 13-case Allen matrix are research companions; only the two decisions above are ratified here.
+**Additional ratification (2026-11-14): six directional temporal interval relations.** For two positive-duration bounded events A=[a0,a1] and B=[b0,b1], the following words are now confirmed. Their distinct semantics are exhaustive together with `tem` and `simtem` and converse argument order:
+
+| Relation | Exact bounded-interval semantics |
+| --- | --- |
+| `A pretem B` | a1 < b0 (strictly before) |
+| `A postem B` | b1 < a0 (strictly after) |
+| `A sim B` | a1 = b0 (A meets B; *not* general simultaneity) |
+| `A solap B` | a0 < b0 < a1 < b1 (directed partial overlap) |
+| `A simpre B` | a0 = b0 and a1 < b1 (shared start, A finishes earlier) |
+| `A simpost B` | b0 < a0 and a1 = b1 (shared finish, A starts later) |
+| `A tem B` | b0 < a0 and a1 < b1 (strict containment; ratified earlier) |
+| `A simtem B` | a0 = b0 and a1 = b1 (coextensive intervals, not identical events; ratified earlier) |
+
+The inverses of `sim`, `solap`, `simpre`, `simpost`, and `tem` are expressed by **reversing A and B**; `postem` is the independently ratified converse of `pretem`. These are **lexicalized functional words**, not evidence that free `sim-`, `pre-`, or `pos-` may automatically derive any functional word. The user rejected endpoint concatenation. For full finite propositions, clause boundary and precedence remain to be specified; do not interpret schematic A and B as proof of parser implementation. `tem dia` retains the nominal time-frame meaning, distinct from strict **event-interval versus event-interval** containment.
+
+Both formulas use A and B as **semantic placeholders**, not verified Unisermo utterances. The narrow event–event interpretation does not silently replace ordinary nominal `tem` with a claim about strict endpoint inequality for point-time nouns. Point events, unbounded/habitual/modal/negated events and finite-proposition connective syntax remain under design. The seven-family design and 13-case Allen matrix have now been lexically ratified; however, clause-level surface syntax, parser implementation, and unbounded/point-event semantics remain outside this decision.
 
 ## 9. Design principle
 
