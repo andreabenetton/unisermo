@@ -1,0 +1,37 @@
+name: Expressivity-100 semantic and parser audit
+on:
+  pull_request:
+    paths:
+      - 'benchmarks/expressivity100/**'
+      - '.github/workflows/expressivity100.yml'
+      - 'formalization/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  expressivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify canonical formalization sources
+        run: |
+          python -m formalization build --check
+          python -m formalization validate
+      - name: Audit 100 Italian scenarios against current parser
+        run: |
+          python -m benchmarks.expressivity100.run --output /tmp/expressivity100.md --json /tmp/expressivity100.json
+          cat /tmp/expressivity100.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Review existing roots and potential constructions without changing grammar
+        run: python -m benchmarks.expressivity100.review_probes
+      - name: Archive full benchmark results
+        uses: actions/upload-artifact@v4
+        with:
+          name: expressivity100-results
+          path: |
+            /tmp/expressivity100.md
+            /tmp/expressivity100.json
+          retention-days: 30
