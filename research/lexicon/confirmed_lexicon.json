@@ -1255,6 +1255,33 @@
       "source": "Latin immediatus, Romance immediate/immediato; author ratification 2026-11-14",
       "decision": "Licensed as a premodifier in `imedi pretem` and `imedi postem` for bounded event-event temporal relations. Preserves strict before/after ordering while imposing a context-sensitive small nonzero gap, without choosing a numerical threshold. Does not entail exact endpoint contact (`sim`), and is not licensed as an arbitrary temporal relation or free adverb in this initial grammar subset.",
       "status": "confirmed"
+    },
+    {
+      "form": "fon",
+      "category": "noun",
+      "meaning_it": "telefono; dispositivo della famiglia dei telefoni, con funzioni e tecnologia dipendenti dall'epoca",
+      "meaning_en": "telephone; device in the historically evolving telephone category, irrespective of being fixed, mobile, or multifunctional",
+      "source": "Author ratification 2026-11-14",
+      "decision": "Technology-neutral across historical telephone generations: today a bare fon usually refers to a modern mobile phone in ordinary context, in historical contexts it can refer to a fixed telephone. fiks fon specifies a fixed telephone; smart fon specifies a smartphone. Fon is not lexically restricted to mobility or to voice calling.",
+      "status": "confirmed"
+    },
+    {
+      "form": "fiks",
+      "category": "property_root",
+      "meaning_it": "fisso; stabilmente collocato o vincolato a una posizione",
+      "meaning_en": "fixed; stationary or tied to a fixed location",
+      "source": "Author ratification 2026-11-14; orthographic ks (Unisermo has no x)",
+      "decision": "A general property, not a telephone-specific subtype: fiks fon identifies a fixed telephone. Do not equate fixed with inability to move in principle.",
+      "status": "confirmed"
+    },
+    {
+      "form": "smart",
+      "category": "property_root",
+      "meaning_it": "intelligente in senso tecnologico; dotato di funzioni informatiche avanzate",
+      "meaning_en": "smart (technology); equipped with advanced computing functions beyond a basic version",
+      "source": "Author ratification 2026-11-14; widespread international smart",
+      "decision": "Technological qualification, not human intelligence. smart fon identifies a smartphone; smart can qualify other technological devices. The noun fon remains broad enough to include historic fixed telephones.",
+      "status": "confirmed"
     }
   ]
 }
