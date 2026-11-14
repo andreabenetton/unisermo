@@ -15,6 +15,7 @@ on:
       - 'tests/test_concept_kon.py'
       - 'tests/test_kon_noun.py'
       - 'tests/test_semantic_specificity_policy.py'
+      - 'tests/test_cognitive_reuse_audit.py'
       - '.github/workflows/canonical-proposition-parser.yml'
   push:
     branches: [main]
@@ -60,6 +61,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_concept_kon.py' -v
           python -m unittest discover -s tests -p 'test_kon_noun.py' -v
           python -m unittest discover -s tests -p 'test_semantic_specificity_policy.py' -v
+          python -m unittest discover -s tests -p 'test_cognitive_reuse_audit.py' -v
           python -m unittest discover -s tests -p 'test_formalization.py' -v
           python -m unittest discover -s tests -p 'test_multiplicative_parser.py' -v
           python -m unittest discover -s tests -p 'test_ordinal_parser.py' -v
