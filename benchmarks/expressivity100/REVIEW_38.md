@@ -6,7 +6,7 @@
 
 Questo documento ricontrolla **tutte le 38** frasi originariamente classificate parziali (13) o lacunose (25). Distinguere il **significato linguistico** da un fatto di **implementazione del parser** è necessario: l'accettazione del parser non verifica che la traduzione sia equivalente, e una radice con significato attestato non è automaticamente tipizzata per tutte le funzioni.
 
-**Due casi sono stati corretti a 'fedele' senza alcuna nuova radice né grammatica:** E074 (genitivo e quantità delle ruote) ed E091 (ripetizione esplicita dello stesso treno). Il quadro aggiornato è **64 fedeli, 11 parziali, 25 lacune**, quindi **36 casi ancora problematici**.
+**Due casi sono stati riclassificati come fedeli:** E074 grazie al genitivo e al conteggio delle ruote; E091 era già esprimibile ripetendo il predicato e ora usa la nuova ellissi contrastiva ratificata nella PR #97. Il quadro aggiornato è **64 fedeli, 11 parziali, 25 lacune**, quindi **36 casi ancora problematici**.
 
 Le altre 36 voci non vanno confuse con 36 nuove radici necessarie: molte condividono un singolo problema riutilizzabile, per esempio la valenza di `dok`, un predicato di misura o la nozione di durata. Classificazione primaria e non esclusiva:
 
@@ -69,7 +69,7 @@ Le altre 36 voci non vanno confuse con 36 nuove radici necessarie: molte condivi
 | E087 | Lacuna | L | `fil` significa discendente e non bambino per età; felicità non è una qualità ratificata. | Nominazione dell'età infantile e proprietà emotiva felice. |
 | E088 | Lacuna | L | `dirig` = dirigere, non necessariamente guidare un veicolo; nervosismo manca. | Verbo guidare/condurre con `-or` per autista e proprietà nervoso. |
 | E089 | Lacuna | L | `nelegal` esprime illegalità, non rischio/pericolo. | Qualità pericoloso o base rischio con derivazione semanticamente adeguata. |
-| E091 | Risolto | R | Ripetere `trenem` nel secondo membro mantiene il referente e le condizioni di verità. | Nessuna nuova grammatica; anafora più compatta può restare un miglioramento stilistico. |
+| E091 | Risolto | R | La grammatica ora consente `adelo vida trenem ma adele`: il secondo soggetto recupera verbo e oggetto con polarità opposta. | Nessuna radice aggiuntiva; ellissi contrastiva ratificata e implementata con test nella PR #97. |
 | E099 | Lacuna | S | `ekse` è ratificato ma il legame tra quantificatore e insieme delle eccezioni non lo è; `omni` è solo attestato. | Definire `tutti X tranne uno` con ambito preciso, confermando prima lo stato di `omni`. |
 | E100 | Lacuna | M | Mancano guastarsi, passeggero, protestare; il quantificatore universale deve ancora essere chiarito. | Radici per guasto/protesta/ruolo passeggero e frame universale verificato. |
 
@@ -93,7 +93,7 @@ Le altre 36 voci non vanno confuse con 36 nuove radici necessarie: molte condivi
 | Tre minuti | `senotodek sekun` = 180 secondi | legame di durata dell'evento |
 | Cento tonnellate metriche | `sen megagram` = 100 Mg | predicato di massa e suo frame |
 | Proprietà di sedili | genitivo del minibus + esistenziale | radice sedile |
-| 'Lo' riferito al treno | ripetizione `trenem` | nessuno per proposizione equivalente; anafora elegante opzionale |
+| 'Lo' riferito al treno | ellissi `adelo vida trenem ma adele` | nessuna lacuna: predicato e oggetto recuperati con polarità invertita |
 
 ## Decisioni ancora da sottoporre all'autore
 
