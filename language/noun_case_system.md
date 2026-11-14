@@ -188,6 +188,15 @@ The existing `tem` remains an invariant prenominal temporal relator in establish
 
 The inverses of `sim`, `solap`, `simpre`, `simpost`, and `tem` are expressed by **reversing A and B**; `postem` is the independently ratified converse of `pretem`. These are **lexicalized functional words**, not evidence that free `sim-`, `pre-`, or `pos-` may automatically derive any functional word. The user rejected endpoint concatenation. For full finite propositions, clause boundary and precedence remain to be specified; do not interpret schematic A and B as proof of parser implementation. `tem dia` retains the nominal time-frame meaning, distinct from strict **event-interval versus event-interval** containment.
 
+### Instants and contextual temporal immediacy (author ratification 2026-11-14)
+
+- **`instan` (noun):** one durationless temporal point (`t`), distinct from a brief interval. It can name an endpoint conceptually, but a point `t` cannot be supplied as a zero-duration Allen event interval; the 13 proper interval relations require `start < end`. Point-to-interval temporal semantics is a separate future decision.
+- **`imedi` (temporal modifier):** no contextually significant delay. A small strictly positive gap may exist; this is **not** the mathematical endpoint equality expressed by directed `sim`.
+- **`A imedi postem B`**: the bounded event A begins strictly after the end of B, and the intervening delay is contextually negligible (`end(B) < start(A)`). **`A imedi pretem B`**: A ends strictly before B begins with contextually negligible delay (`end(A) < start(B)`). The context supplies a qualitative tolerance, *not* a canonical unit or fixed numerical threshold.
+- The two collocations are authorized as a simple event–event modifier immediately preceding `postem` or `pretem`. This does not authorize a free `imedi` adverb, `imedi sim`, arbitrary modifiers, a special instant interval, or automatic application to nominal time expressions. The already ratified construction `A sim B` remains *exact endpoint contact*, not "a tiny time later".
+
+The original Italian target **«Subito dopo la telefonata mi hanno chiamato»** needs a nominal-event reference to the call as well as a finite predicate and an overt temporal attachment. The bare interval schematic `A imedi postem B` alone is **not** a verified full translation of this sentence; noun-to-event binding, argument roles, and nominal temporal frames need independent checks.
+
 Both formulas use A and B as **semantic placeholders**, not verified Unisermo utterances. The narrow event–event interpretation does not silently replace ordinary nominal `tem` with a claim about strict endpoint inequality for point-time nouns. Point events, unbounded/habitual/modal/negated events and finite-proposition connective syntax remain under design. The seven-family design and 13-case Allen matrix have now been lexically ratified; however, clause-level surface syntax, parser implementation, and unbounded/point-event semantics remain outside this decision.
 
 ## 9. Design principle
