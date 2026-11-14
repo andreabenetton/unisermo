@@ -607,6 +607,18 @@
     },
     {
       "categories": [
+        "predicate_property"
+      ],
+      "decision": "A general property, not a telephone-specific subtype: fiks fon identifies a fixed telephone. Do not equate fixed with inability to move in principle.",
+      "form": "fiks",
+      "meaning_en": "fixed; stationary or tied to a fixed location",
+      "meaning_it": "fisso; stabilmente collocato o vincolato a una posizione",
+      "origin": "Author ratification 2026-11-14; orthographic ks (Unisermo has no x)",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "noun"
       ],
       "decision": "Canonize fil as the inverse one-generation relation to gen: offspring/child of a parent, irrespective of age or sex. It does not mean a young person.",
@@ -639,6 +651,18 @@
       "meaning_en": "for the purpose of",
       "meaning_it": "allo scopo di",
       "origin": "legacy Unisermo extended case system",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Technology-neutral across historical telephone generations: today a bare fon usually refers to a modern mobile phone in ordinary context, in historical contexts it can refer to a fixed telephone. fiks fon specifies a fixed telephone; smart fon specifies a smartphone. Fon is not lexically restricted to mobility or to voice calling.",
+      "form": "fon",
+      "meaning_en": "telephone; device in the historically evolving telephone category, irrespective of being fixed, mobile, or multifunctional",
+      "meaning_it": "telefono; dispositivo della famiglia dei telefoni, con funzioni e tecnologia dipendenti dall'epoca",
+      "origin": "Author ratification 2026-11-14",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1797,6 +1821,18 @@
       "meaning_en": "citizen; civic",
       "meaning_it": "cittadino; civile",
       "origin": "Latin civis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "predicate_property"
+      ],
+      "decision": "Technological qualification, not human intelligence. smart fon identifies a smartphone; smart can qualify other technological devices. The noun fon remains broad enough to include historic fixed telephones.",
+      "form": "smart",
+      "meaning_en": "smart (technology); equipped with advanced computing functions beyond a basic version",
+      "meaning_it": "intelligente in senso tecnologico; dotato di funzioni informatiche avanzate",
+      "origin": "Author ratification 2026-11-14; widespread international smart",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
