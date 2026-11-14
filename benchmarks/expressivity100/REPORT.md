@@ -1,61 +1,56 @@
-# Unisermo — Expressivity-100
+# Unisermo — Benchmark di espressività generale (100 frasi)
 
-**Data:** 14 novembre 2026. **Baseline canonica:** `main` al commit `708d186337b8ac77dfc78e73d0fc299a839ab9de`.
+**Data:** 14 novembre 2026. **Baseline canonica:** `main` commit `708d186337b8ac77dfc78e73d0fc299a839ab9de`.
 
-## Metodo
+## Disegno sperimentale
 
-100 frasi italiane distinte, distribuite in dieci domini da 10 casi ciascuno. Nessuna radice o regola non ratificata è stata introdotta per costruire le traduzioni.
-Giudizio semantico proposto dall'analista: **fedele**, **parziale** oppure **lacuna**. La sintassi delle espressioni proposte viene verificata indipendentemente con il parser ufficiale.
-Non è una prova di comprensione umana e non è un campione casuale rappresentativo: le percentuali sono descrittive del corpus, non della lingua nel suo complesso.
+100 frasi italiane **distinte**, dieci per dominio, selezionate intenzionalmente; il campione non è casuale né rappresentativo della frequenza d'uso. L'esercizio misura **copertura espressiva proposta**, non comprensione spontanea di parlanti o LLM.
 
-## Risultato
+**Fedeltà** è un giudizio dell'analista sui contenuti, non un risultato del parser. **Parziale** indica perdita di informazione o un significato più forte/diverso. **Lacuna** indica che non è stata prodotta una traduzione fedele con le forme ratificate esaminate. Occorrono giudizi indipendenti prima di usare queste percentuali come statistica pubblicabile.
 
-| Semantica proposta | Casi |
+Il **parser** riconosce o rifiuta la sintassi delle proposte; non garantisce che il significato italiano sia identico. Le proposte sono state riviste dopo gli esiti CI iniziali: il risultato finale non è una valutazione cieca.
+
+## Risultati aggiornati dopo revisione critica
+
+| Esito semantico proposto | Numero |
 |---|---:|
-| Fedele | 62 |
-| Parziale | 13 |
+| Fedele | 64 |
+| Parziale | 11 |
 | Lacuna | 25 |
 
-**Parser:** 75/75 proposte accettate, nessuna analisi tentata per le lacune. [CI verificata — GitHub Actions 43596418583](https://github.com/andreabenetton/unisermo/actions/runs/43596418583). L'accettazione grammaticale non dimostra fedeltà semantica.
+**Parser:** 75/75 forme candidate accettate, zero rigetti nell'esecuzione successiva alle correzioni ([CI #43597515871](https://github.com/andreabenetton/unisermo/actions/runs/43597515871)). Le 25 lacune non hanno una candidata da analizzare.
+
+**Revisione approfondita:** [`REVIEW_38.md`](REVIEW_38.md) documenta le 38 criticità originarie, due delle quali risolte riutilizzando genitivo/quantità e riferimento nominale. Rimangono **36** casi problematici, non 36 radici mancanti.
 
 ## Distribuzione per dominio
 
-| Dominio | Fedele | Parziale | Lacuna |
-|---|---:|---:|---:|
-| Trasporto e mobilità | 5 | 4 | 1 |
-| Oggetti e azioni quotidiane | 7 | 2 | 1 |
-| Spazio e direzione | 6 | 1 | 3 |
-| Tempo e sequenza | 6 | 1 | 3 |
-| Famiglia e relazioni sociali | 5 | 2 | 3 |
-| Conoscenza e comunicazione | 6 | 0 | 4 |
-| Volontà, possibilità e obbligo | 9 | 0 | 1 |
-| Quantità e misure | 4 | 2 | 4 |
-| Qualità, stati ed emozioni | 7 | 0 | 3 |
-| Logica, causa e astrazione | 7 | 1 | 2 |
+| Dominio | Fedele | Parziale | Lacuna | Candidati accettati dal parser |
+|---|---:|---:|---:|---:|
+| Trasporto e mobilità | 5 | 4 | 1 | 9 |
+| Oggetti e azioni quotidiane | 7 | 2 | 1 | 9 |
+| Spazio e direzione | 6 | 1 | 3 | 7 |
+| Tempo e sequenza | 6 | 1 | 3 | 7 |
+| Famiglia e relazioni sociali | 5 | 2 | 3 | 7 |
+| Conoscenza e comunicazione | 6 | 0 | 4 | 6 |
+| Volontà, possibilità e obbligo | 9 | 0 | 1 | 9 |
+| Quantità e misure | 5 | 1 | 4 | 6 |
+| Qualità, stati ed emozioni | 7 | 0 | 3 | 7 |
+| Logica, causa e astrazione | 8 | 0 | 2 | 8 |
 
-## Risultati qualitativi
+## Principali conclusioni
 
-**Punti forti:** coniugazione e tempi, movimento e forza fisica, negazioni, domande dirette, sapere/credere, intenzione, obbligo, permesso, condizionali, coordinazioni e causalità. Le costruzioni proposte sono state verificate senza modifiche alla grammatica.
+1. **Esistono soluzioni composizionali trascurate.** `biks bis roda esan` collega due ruote alla bicicletta tramite il genitivo e la copula; E074 passa a fedele. In E091 la ripetizione di `trenem` conserva il referente e il contenuto, pur differendo stilisticamente dall'anafora italiana.
+2. **Alcuni problemi sono di classificazione/valenza, non di nuovi lessemi.** `stru` già significa costruire ma manca il ruolo verbale nell'inventario eseguibile; `dok` insegna ma il ruolo dell'allievo come argomento necessita specificazione.
+3. **La parentela produttiva evita un nuovo nome.** `filadel` = figlio di fratello/sorella (nipote nel senso di nephew/niece) è già parsato.
+4. **Unità di misura e composizione numerica sono più forti di quanto apparisse.** 3 minuti = `senotodek sekun` (180 secondi); 100 tonnellate metriche = `sen megagram` (100 Mg). Mancano i frame che associano durata o massa alla proposizione, non necessariamente le unità.
+5. **Attestazione non equivale a ratifica.** `amik` è `example_only`; `omni` è `decision_attested_not_indexed`. Evitare di usarli come vocaboli pienamente canonici in test di fedeltà.
+6. **Le lacune semantiche rilevanti** riguardano direzione relativa, ritorno/arrivo a destinazione, stato persistente di immobilità, collegamento tra misure e oggetti, quantificazione con eccezioni, complemento interrogativo indiretto e reciprocità.
 
-**Lacune prioritarie:**
-
-- **Trasporto e servizi:** fermata, stazione, conducente, passeggero, guidare, traffico, biglietto, ritardo, sosta/parcheggio.
-- **Vita quotidiana:** riparare, ascoltare, messaggio e alcune relazioni topologiche precise.
-- **Tempo e misure:** ieri, mattina, frequenza calendariale, attribuzione di massa, distanze percorse.
-- **Relazioni ed emozioni:** amicizia, aiutare reciprocamente, ringraziare, felicità, nervosismo e pericolosità.
-- **Distinguere lessico e categoria/valenza:** `stru` è una radice canonica col senso di costruire/struttura, ma non è classificata come verbo nel parser. E014/E017 adottano `fak` con perdita semantica; non serve necessariamente un'altra radice.
-- **Possesso, anafora e parti:** E074 riproduce soltanto l'esistenza di due ruote, E091 ripete il nome anziché usare il pronome italiano 'lo'. Verificare come sfruttare genitivo e sintassi delle parti prima di creare nuovi lessemi.
-
-## Limiti di interpretazione
-
-La selezione è intenzionale, e le valutazioni sono formulate da un solo analista. Gli esempi coerenti con il lessico conosciuto sono sovrarappresentati rispetto a un dialogo spontaneo. Il 75/75 è stato ottenuto anche correggendo alcune formulazioni candidate dopo il primo controllo: non è un risultato cieco né una misura dell'accuratezza su input arbitrari.
-Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ruolo tematico sottinteso o equivalenza italiano/Unisermo.
-
-## Corpus completo
+## Corpus integrale
 
 ### Trasporto e mobilità
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E001 | Il treno si muove. | `tren mova` | Fedele | mov intransitivo. |
 | E002 | L'autobus non si muove. | `bus no mova` | Fedele | Negazione dell'evento. |
@@ -70,7 +65,7 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 
 ### Oggetti e azioni quotidiane
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E011 | Vedo un telefono. | `i vidi fonem` | Fedele | Vedere con accusativo. |
 | E012 | Prendo fisicamente dell'acqua. | `i feri akwaem` | Fedele | fer non implica possesso. |
@@ -85,7 +80,7 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 
 ### Spazio e direzione
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E021 | Salgo. | `altmovi` | Fedele | altmov indica moto ascendente, senza specificare meta. |
 | E022 | La bicicletta scende. | `bik basmova` | Fedele | basmov per movimento discendente. |
@@ -100,7 +95,7 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 
 ### Tempo e sequenza
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E031 | Ho visto un treno. | `viddi trenem` | Fedele | Passato semplice di vid con oggetto. |
 | E032 | Prenderai un telefono. | `ferfu fonem` | Fedele | Futuro di fer in seconda persona. |
@@ -110,27 +105,27 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 | E036 | L'autobus si muove ogni mattina. | — | Lacuna | Mattina e frequenza calendariale assenti. |
 | E037 | Il movimento del treno finisce prima che inizi quello dell'autobus. | `tren mova pretem bus mova` | Fedele | pretem richiede intervalli non sovrapposti. |
 | E038 | La madre ha visto un telefono e il padre vedrà un treno. | `gene vidda fonem e geno vidfa trenem` | Fedele | Due clausole coordinate con tempi diversi. |
-| E039 | Il conducente parcheggia per tre minuti. | — | Lacuna | Conducente, parcheggiare e minuto mancanti. |
+| E039 | Il conducente parcheggia per tre minuti. | — | Lacuna | Il conducente e parcheggiare non sono canonici. Tre minuti possono essere misurati come senotodek sekun (180 s); manca però un frame di durata dell'evento. |
 | E040 | Il volo arriva alle dieci del mattino. | — | Lacuna | Volo-servizio, arrivo e fascia oraria mancanti. |
 
 ### Famiglia e relazioni sociali
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E041 | Il padre vede la madre. | `geno vida geneem` | Fedele | Nomi familiari e accusativo. |
-| E042 | La madre insegna al proprio figlio. | `gene doka filem` | Parziale | Il destinatario e il possesso non sono codificati esattamente. |
+| E042 | La madre insegna al proprio figlio. | `gene doka genes filem` | Parziale | Il genitivo genes specifica 'il figlio della madre'; resta da ratificare la valenza di dok verso l'allievo/beneficiario (accusativo diretto non prova equivalenza a 'insegnare a'). |
 | E043 | Il fratello vede la sorella. | `adelo vida adeleem` | Fedele | Due radici familiari canoniche. |
 | E044 | La nonna materna vede il padre. | `genegene vida genoem` | Fedele | Genegene è nonna materna. |
 | E045 | La sorella insegna al cugino. | `adele doka filadelgenem` | Parziale | La valenza 'insegnare a' rimane distinta dall'accusativo. |
 | E046 | Il padre sa che il figlio si muove. | `geno sap fil mova` | Fedele | sap con proposizione finita. |
 | E047 | La madre vede un treno e il padre prende un telefono. | `gene vida trenem e geno fera fonem` | Fedele | Coordinazione con due soggetti e verbi diversi. |
-| E048 | Un nipote ringrazia una zia. | — | Lacuna | Ringraziare e rapporto nipote insufficienti. |
+| E048 | Un nipote ringrazia una zia. | — | Lacuna | La relazione nipote di zia/zio è già derivabile come filadel (figlio del fratello o della sorella), verificato dal parser; manca il verbo ringraziare. |
 | E049 | Due fratelli si aiutano reciprocamente. | — | Lacuna | Aiutare e reciproco mancanti. |
-| E050 | Due amici conversano. | — | Lacuna | Amico e conversare mancanti. |
+| E050 | Due amici conversano. | — | Lacuna | amik è presente come attestazione example_only, non come lemma ratificato; manca una costruzione canonica per conversare reciprocamente (kundik significherebbe solo dire insieme). |
 
 ### Conoscenza e comunicazione
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E051 | Penso. | `pensi` | Fedele | Attività pensare intransitiva. |
 | E052 | So che l'autobus si muove. | `i sap bus mova` | Fedele | sap proposizionale, fattivo. |
@@ -145,7 +140,7 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 
 ### Volontà, possibilità e obbligo
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E061 | Posso muovermi perché ne ho la capacità. | `poti mov` | Fedele | pot è capacità, non opportunità. |
 | E062 | Voglio vedere il treno. | `voli vid trenem` | Fedele | vol con azione dipendente e accusativo. |
@@ -160,22 +155,22 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 
 ### Quantità e misure
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E071 | Due autobus trasportano persone. | `bis bus portaran wi umanem` | Fedele | Numerale nel soggetto, verbo plurale e oggetto plurale. |
 | E072 | Cinque persone vedono un treno. | `kin uman vidan trenem` | Fedele | Soggetto quantificato con verbo plurale e oggetto. |
 | E073 | Tre ruote cadono. | `ter roda kadan` | Fedele | Numerale ter con evento plurale. |
-| E074 | La bicicletta possiede due ruote. | `bis roda esan` | Parziale | Due ruote esistono: quantità espressa, ma manca il vincolo di appartenenza alla bicicletta. |
+| E074 | La bicicletta possiede due ruote. | `biks bis roda esan` | Fedele | Genitivo biks + bis roda + copula es plurale: esistono due ruote appartenenti alla bicicletta; sintassi e possesso analizzati dal parser. Non implica un vincolo esclusivo 'esattamente due'. |
 | E075 | Il camion trasporta due carichi. | `kam portara bis kargem` | Fedele | Numerale nel sintagma accusativo. |
-| E076 | Il carico ha massa di un chilogrammo. | — | Lacuna | Unità nota, predicazione della massa non attestata. |
-| E077 | Il treno pesa cento tonnellate. | — | Lacuna | Peso e misura di tonnellata mancanti. |
-| E078 | Quattro biciclette si muovono e due auto restano ferme. | `for bik movan e bis kar esan fiks` | Parziale | fiks è fissità, non solo assenza di movimento. |
+| E076 | Il carico ha massa di un chilogrammo. | — | Lacuna | La misura uno kilogram è già disponibile (unità di massa). Manca un predicato stabile di massa e il frame che associa misura e oggetto; non introdurre una nuova unità. |
+| E077 | Il treno pesa cento tonnellate. | — | Lacuna | La massa di cento tonnellate metriche è esprimibile come sen megagram in una misura (equivalenza 100 Mg); manca il predicato 'pesare/avere massa' e la sintassi per applicare la misura al treno. Non serve una nuova unità tonnellata. |
+| E078 | Quattro biciclette si muovono e due auto restano ferme. | `for bik movan e bis kar no movan` | Parziale | Esprime correttamente 'quattro bici si muovono e due auto non si muovono', ma omette la persistenza implicata da 'restano ferme'. Evita il più forte fiks ('fisso'). |
 | E079 | L'automobile percorre cinque chilometri. | — | Lacuna | Distanza e percorso non definiti. |
-| E080 | Il minibus possiede quindici sedili. | — | Lacuna | Sedile e dotazione non definiti. |
+| E080 | Il minibus possiede quindici sedili. | — | Lacuna | Mancano il nome 'sedile' e un frame possessivo/dotazione; kunten descrive contenimento fisico attuale, non posti installati o capacità omologata. |
 
 ### Qualità, stati ed emozioni
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
 | E081 | La porta è aperta. | `porta aper` | Fedele | Predicato qualitativo presente. |
 | E082 | Il telefono è fisso. | `fon fiks` | Fedele | Proprietà fisica ratificata. |
@@ -190,9 +185,9 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 
 ### Logica, causa e astrazione
 
-| ID | Italiano | Unisermo proposto | Esito | Motivazione |
+| ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
-| E091 | Il fratello vede il treno e la sorella non lo vede. | `adelo vida trenem e adele no vida trenem` | Parziale | La seconda proposizione ripete 'treno' invece di riprendere il referente con 'lo'; significato pragmatico sostanzialmente simile, ma l'anafora non è codificata. |
+| E091 | Il fratello vede il treno e la sorella non lo vede. | `adelo vida trenem e adele no vida trenem` | Fedele | Ripetere trenem in entrambe le proposizioni conserva le condizioni di verità con lo stesso referente definito; differisce solo l'economia anaforica dell'italiano ('lo'), non il contenuto proposizionale. |
 | E092 | La madre vede un'auto oppure il padre vede un camion. | `gene vida karem o geno vida kamem` | Fedele | Disgiunzione inclusiva tra due osservazioni. |
 | E093 | Se il camion si muove, allora il carico si muove. | `se kam mova alor karg mova` | Fedele | Condizionale di due eventi fisici, non causalità asserita. |
 | E094 | Voglio muovermi, ma non posso muovermi. | `voli mov ma no poti mov` | Fedele | Desiderio coordinato avversativamente con mancanza di capacità. |
@@ -200,11 +195,11 @@ Il parser è un riconoscitore strutturale; non valuta verità, plausibilità, ru
 | E096 | È necessario che la porta sia aperta. | `deb porta esa aper` | Fedele | Necessità proposizionale su uno stato espresso da una proposizione con copula finita. |
 | E097 | Non è necessario che tu insegni. | `no deb u doku` | Fedele | Negazione della necessità proposizionale. |
 | E098 | Il camion trasporta un carico perché il treno non si muove. | `kam portara kargem due tren no mova` | Fedele | Causalità fattuale; il mancato movimento del treno spiega il trasporto alternativo. |
-| E099 | Tutti gli autobus tranne uno si muovono. | — | Lacuna | Quantificazione con eccezione di insieme non dimostrata. |
+| E099 | Tutti gli autobus tranne uno si muovono. | — | Lacuna | L'operatore ekse è confermato, omni ('tutti') è solo decision_attested_not_indexed; non esiste ancora sintassi ratificata per legare l'eccezione a un insieme quantificato ('tutti tranne uno'). |
 | E100 | Se l'autobus si guasta, tutti i passeggeri protestano. | — | Lacuna | Guasto, passeggeri e protesta non ratificati. |
 
 ## Riproduzione
 
-Dal checkout del repository: `python -m benchmarks.expressivity100.run`. Il corpus è in [`cases.json`](cases.json), il runner in [`run.py`](run.py), l'esecuzione nella workflow [Expressivity-100](../../.github/workflows/expressivity100.yml).
+Dalla root del repository: `python -m benchmarks.expressivity100.run`. Sorgente: [`cases.json`](cases.json). Parser probe: [`review_probes.py`](review_probes.py). Esecuzione automatizzata: [workflow](../../.github/workflows/expressivity100.yml).
 
-**Stato:** benchmark proposto in PR draft; nessuna modifica a lessico, grammatica, parser o altri test.
+**Nessuna nuova ratifica grammaticale o lessicale discende dal benchmark.** I cambiamenti nella PR riguardano esclusivamente i materiali di analisi.
