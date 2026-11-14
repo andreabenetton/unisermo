@@ -189,12 +189,58 @@ Y-NOM traes X-em [pot V]-da     (typed metasyntax; NOT a surface sentence)
 - This does not ratify a standalone verb/root `abil`: `-abil` remains the
   productive passive-potential adjective suffix; `pot` remains the separate
   active-ability servile root.
-- This ratification concerns **typed semantics and argument control only**.
-  Brackets, the placement of `-da` on a whole modal predicate, and the
-  syntactic realization of `[pot V]-da` are **metanotation**, not approved
-  surface orthography. The current parser must continue to reject such
-  unformalized syntax; no arbitrary modal-head result is licensed.
+- The semantic decision was originally typed without surface syntax. Section 9
+  now licenses the bounded analytic realization `da pot V` for this result;
+  the historical bracketed `[pot V]-da` remains metanotation, not spelling.
 
 A future grammar decision may generalize modal-state results to `pos`,
 `aut` or other heads individually, with explicit scope and control rules;
 none is approved by this `pot`-only decision.
+
+## 9. Free state-relation markers `da`, `ad`, `de` (ratified 2026-11-14)
+
+The preposed **invariant autonomous** state markers `da`, `ad`, `de` extend
+existing nominal case relations to **complex predicative complements**. They
+are separate written tokens, not bare suffixes detached from a word:
+
+| Free marker | Semantic role | Nominal counterpart |
+|---|---|---|
+| `da` | resulting predicate of an explicitly transformed patient | `-da` |
+| `ad` | target/destination state of a transition | `-ad` |
+| `de` | departure/source state of a transition | `-de` |
+
+The first closed, executable frames are:
+
+```text
+Y traes X-em da pot V [V-ARGS]   = Y causes X to acquire ability to V
+X traes ad STATE de STATE        = X transitions from SOURCE to DESTINATION
+```
+
+`STATE` in the second frame is initially a single attested property, or a
+modal capacity predicate `pot V` / `no pot V` whose controller is the
+transition subject X. `pot V` and its dependent action are **uninflected**;
+`no pot V` means lack of the capacity, not permission or opportunity. In
+both frames the matrix finite `traes` carries normal TAM and person.
+For `da`, the controller of `pot V` is **the accusative patient X**, not
+matrix subject Y. It entails acquisition of ability but not that V happened.
+For `ad ... de ...`, the **destination precedes the source**, preserving the
+canonical `DEST-ad SOURCE-de` order. The transition asserts the source and
+destination states of the same subject without separately asserting V happened.
+Examples of the bounded new surface grammar:
+
+- `i traesi umanem da pot mov` — I make a person capable of moving.
+- `uman traesa ad pot mov de no pot mov` — the person passes from being unable
+  to move to being able to move (the change is asserted, not movement itself).
+
+These tokens have **no automatic general-purpose clausal scope**. No arbitrary
+finite sentence may appear after them; arbitrary serviles (`aut`, `pos`, etc.)
+and recursive nesting are not approved. The bare finite form `potda` remains
+`pot-d-a` (third-person past): it is **never** parsed as `pot + -da`.
+
+This complements rather than replaces existing nominal cases, including
+`traes solidad likwidde` and `traes akwaem aperda`. Separate prefixed
+`ad-`, `de-` and `in-` continue to form lexical phase verbs and do not
+become free relators in other contexts. Broadening these autonomous markers to
+other matrix verbs requires a separately ratified **valency** and precise
+operand boundary rules. The new `ad` / `de` are state-transition relators,
+not general replacements for allative/ablative noun marking.
