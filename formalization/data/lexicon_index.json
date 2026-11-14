@@ -1322,6 +1322,18 @@
     },
     {
       "categories": [
+        "semantic_root"
+      ],
+      "decision": "Bound semantic root, not a standalone noun or verb. Special licensed derivations: admemor encode a content as retained memory; inmemor maintain its retention; dememor cease retaining/loss of mnemonic trace; rememor retrieve to current awareness a previously accessible still-retained trace, without erasure, reacquisition of knowledge, or implication of new storage. These four derived verbs govern mnemonic content in accusative. The -ia nominal derivative memoria names the memory storage domain; the licensing is restricted to memor, not a universal extension of -ia to arbitrary roots. Distinct from sap knowledge and resap renewed knowledge.",
+      "form": "memor",
+      "meaning_en": "bound memory-domain root: retained trace and potential retrieval; not independently a noun or verb",
+      "meaning_it": "radice mnemonica: conservazione di una traccia e possibilità di recuperarla; non parola autonoma",
+      "origin": "Author ratification 2026-11-14; international memory/memoria family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "measurement_prefix"
       ],
       "decision": "Bound measurement prefix, exactly one per confirmed unit, fused without separator; distinct from cardinal numeral mila. Preserve original magnitude and name, do not stack prefixes.",

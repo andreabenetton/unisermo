@@ -76,6 +76,37 @@ class DerivationParser:
                 if inner is not None:
                     result["base_derivation"] = inner
                 return result
+        # Author-ratified bound semantic root memor. Unlike ordinary verb
+        # families, memor is neither a free verb nor a standalone noun.
+        # Special interpretations are licensed only for the four indicated
+        # mnemonic operations; no arbitrary phase prefixes on roots.
+        if lemma == "memoria" and self.lexicon.get("memor", {}).get("status") == "confirmed_lexicon":
+            return {
+                "kind": "productive_derivation",
+                "lemma": lemma, "base": "memor", "category": "noun",
+                "affix": "ia", "affix_position": "suffix",
+                "operation": "mnemonic_domain",
+                "status": "productive_from_confirmed",
+                "base_status": "confirmed_lexicon",
+                "denotation": "memory_domain_not_single_trace",
+            }
+        for phase, operation in (
+            ("ad", "mnemonic_encode"),
+            ("in", "mnemonic_retain"),
+            ("de", "mnemonic_lose_trace"),
+            ("re", "mnemonic_retrieve"),
+        ):
+            if lemma == phase + "memor" and self.lexicon.get("memor", {}).get("status") == "confirmed_lexicon":
+                return {
+                    "kind": "productive_derivation",
+                    "lemma": lemma, "base": "memor", "category": "verb",
+                    "affix": phase, "affix_position": "prefix",
+                    "operation": operation,
+                    "status": "productive_from_confirmed",
+                    "base_status": "confirmed_lexicon",
+                    "denotation": ("retained_trace_presupposed_no_erasure"
+                                   if phase == "re" else "mnemonic_content"),
+                }
         candidates = []
         for ending, (category, operation) in self.DERIVATIONAL_SUFFIXES.items():
             if not lemma.endswith(ending) or len(lemma) <= len(ending):

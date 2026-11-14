@@ -515,3 +515,63 @@ These distinctions preserve the original motivation: e.g. `bonitat` names goodne
 - `bonitat` = goodness as quality; `bonitatkon` = the concept of goodness.
 
 The Italian word *idea* can refer to a **concept**, but also to an **original proposal**, **plan**, **mental image**, **belief/hypothesis**, or **new insight**. `kon` denotes only its concept sense, not every sense of *idea*. An *intuition* may be sudden recognition/inference without explicit step-by-step reasoning, an anticipatory hunch, or a spontaneous creative insight; those are not automatically `kon` either. The lexical mapping of idea and intuition is a future separate decision; **no new roots are ratified here**.
+
+
+## Bound mnemonic root `memor` and its family (author ratification 2026-11-14)
+
+The canonical root **`memor`** denotes mnemonic retention and potential
+access to a retained informational trace. It is a **bound semantic root**,
+not a free verb or standalone noun. A root's acceptance therefore does
+not automatically confer nominal or finite verbal syntax.
+
+The four **specifically licensed** phase-family verbs are:
+
+| Form | Exact mnemonic predicate | Distinguishing entailment |
+| --- | --- | --- |
+| `admemor CONTENT-em` | encode/store CONTENT in the subject's memory | entry into retention; not necessarily understanding or knowledge |
+| `inmemor CONTENT-em` | keep CONTENT retained in memory | persistence of retention; not proof of conscious retrieval |
+| `dememor CONTENT-em` | CONTENT ceases to be retained as a mnemonic trace | loss of storage, **not** a temporary failed recall |
+| `rememor CONTENT-em` | recall/re-access a **still retained** CONTENT previously accessible | return of access to an extant trace; no deletion and no relearning implied |
+
+The **memory domain noun** is `memoria` (bound `memor` + `-ia`);
+`memoriaem`, `memorias`, `memoriain` follow normal nominal case.
+This is one **specifically licensed non-verbal base for `-ia`**,
+not permission to attach `-ia` freely to every non-verbal root.
+The noun denotes memory as a *storage domain*, not an individual trace.
+
+**Semantic type restriction:** ordinary `ad-/in-/de-/re-` phase families
+on attested state/event verbs remain unchanged:
+`adsap` knowledge acquisition, `desap` loss of knowledge,
+`resap` renewed knowledge; `adkap` entry into understanding,
+`remov` movement resumed. The bound `memor` root makes
+*retention* and *retrieval accessibility* distinct typed relations:
+`rememor` is an **explicitly ratified mnemonic specialization**
+of the return/re-entry operator `re-`, restoring access to a trace
+that has remained stored. It must not be decoded as restoration of
+a fully erased trace or silently generalized to `re-` derivatives
+of unrelated roots. Thus `rememor` and `resap` are not synonyms.
+
+The shared explicit argument frame is
+`MEMORY_HOLDER-NOM MEMOR-DERIVED-FINITE CONTENT-em`; the holder of
+memory is the subject, while CONTENT is what is stored, retained, lost,
+or recalled. The four derived verbs require an explicit object in
+the implemented parser subset. No free `SOURCE-de`/`DEST-ad` or
+arbitrary bare-verb complement is granted by this ratification.
+Case `-de` means source/from and **never** lexically means forgetting;
+bound `de-` means exit/cessation in the relevant typed family.
+An attempted recall that fails is **not** `dememor`; it is the
+non-occurrence of a successful recall and requires independently
+licensed negation/attempt syntax.
+
+Contrasts:
+- One can `admemor` a sequence without understanding it (`kap`) or
+  having propositional knowledge (`sap`).
+- One may fail to `rememor` while `inmemor` still applies;
+  absence of retrieval is not evidence of erased storage.
+- `dememor` is a loss of mnemonic retention; `resap` is a
+  return to knowledge and does not assert how that return happened.
+- `rememor` entails access to a pre-existing retained trace, not
+  discovery of a new fact or acquisition of a completely erased trace.
+
+This family is licensed **only for `memor`**; it does not
+ratify arbitrary non-verbal semantic-root phase morphology.
