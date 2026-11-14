@@ -55,7 +55,12 @@ class CognitiveReuseAudit(unittest.TestCase):
     def test_known_propositional_attitudes_differ(self):
         belief = self.u.parse_sentence("i kred uman mova")
         knowledge = self.u.parse_sentence("i sap uman mova")
-        self.assertNotEqual(belief.get("head"), knowledge.get("head"))
+        self.assertEqual(belief["kind"], "propositional_servile")
+        self.assertEqual(knowledge["kind"], "propositional_servile")
+        self.assertEqual(belief["operator"], "kred")
+        self.assertEqual(knowledge["operator"], "sap")
+        self.assertFalse(belief["entails_operand_truth"])
+        self.assertTrue(knowledge["entails_operand_truth"])
         # These frames do not assert that belief is knowledge.
 
     def test_information_source_is_not_automatically_licensed_by_case(self):
