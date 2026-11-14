@@ -504,3 +504,14 @@ The **bound nominal suffix `-kon`** creates a noun naming **the concept denoted 
 **Productivity bounds:** attach `-kon` to an already recognized lexical noun, lexical verb or property (including a nominal-predicate root), or to **one** licensed `-itat` abstract-quality derivation. No concatenation with free function words, numeral names, standalone modal heads, arbitrary strings, or open stacking such as `bonkonkon` is ratified. The parser keeps productive analyses separate from lexical entries: generation never silently canonizes a new dictionary headword.
 
 These distinctions preserve the original motivation: e.g. `bonitat` names goodness itself while `bonitatkon` names its concept. `i kapi rodakonem` = 'I understand the concept of a wheel'. The example `i doki rodakonem` = 'I teach the concept of a wheel' is **provisional for the still-unratified argument valency of `dok`**; ratifying `-kon` does not determine the teaching predicate's complement roles.
+
+
+## Independent noun `kon` (author ratification 2026-11-14)
+
+`kon` is the **independent common noun meaning concept**, an abstract mental/semantic representation, distinct from any material instance or from an abstract quality. The productive bound suffix `-kon`, previously ratified, names the concept **of its base**; its identical shape does not make the free noun and bound suffix interchangeable in syntax.
+
+- `kon` = concept; `konem` = concept (accusative); `kons` = of the concept.
+- `rodakon` = concept of wheel, distinct from a concrete `roda`.
+- `bonitat` = goodness as quality; `bonitatkon` = the concept of goodness.
+
+The Italian word *idea* can refer to a **concept**, but also to an **original proposal**, **plan**, **mental image**, **belief/hypothesis**, or **new insight**. `kon` denotes only its concept sense, not every sense of *idea*. An *intuition* may be sudden recognition/inference without explicit step-by-step reasoning, an anticipatory hunch, or a spontaneous creative insight; those are not automatically `kon` either. The lexical mapping of idea and intuition is a future separate decision; **no new roots are ratified here**.

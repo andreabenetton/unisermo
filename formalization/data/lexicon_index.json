@@ -1121,6 +1121,18 @@
     },
     {
       "categories": [
+        "noun"
+      ],
+      "decision": "Independent noun kon for a concept, aligning with productive suffix -kon (concept of X). It does not by itself mean a spontaneous insight, proposal, invention, mental image, plan, or conjecture; these senses of Italian idea/intuizione remain distinct and unratified.",
+      "form": "kon",
+      "meaning_en": "concept; abstract mental or semantic representation",
+      "meaning_it": "concetto; rappresentazione astratta mentale o semantica",
+      "origin": "Author ratification 2026-11-14; concept/concepto/concetto international family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "decision": "Canonical replacement for legacy cred.",
