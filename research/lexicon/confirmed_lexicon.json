@@ -1176,12 +1176,12 @@
       "status": "confirmed"
     },
     {
-      "form": "temekwal",
+      "form": "simtem",
       "category": "function_word",
       "meaning_it": "coincidenza esatta degli intervalli temporali di due eventi",
       "meaning_en": "exact equality of two event temporal extents, without identity of events",
-      "source": "Author ratification 2026-11-13; lexicalized tem + ekwal",
-      "decision": "For bounded event intervals A=[a0,a1], B=[b0,b1], A temekwal B iff a0=b0 and a1=b1. No event identity is entailed. Schematic A/B examples are not approved finite-clause syntax. The form is a lexicalized temporal relation, not blanket productive compounding.",
+      "source": "Author ratification 2026-11-14: simtem replaces prior confirmed temekwal; sim- temporal family",
+      "decision": "For bounded event intervals A=[a0,a1], B=[b0,b1], A simtem B iff a0=b0 and a1=b1. No event identity is entailed. Schematic A/B examples are not approved finite-clause syntax. The form is a lexicalized temporal relation, not blanket productive compounding. `temekwal` retired as the former spelling; `ekwal` remains the independent general equality term.",
       "status": "confirmed"
     }
   ]
