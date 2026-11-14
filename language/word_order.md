@@ -235,3 +235,17 @@ The currently licensed bare subject-bearing heads are `vol`, `int`, `tent`, `sap
 ## Personless propositional tense and necessity (ratified 2026-11-13)
 
 The already accepted propositional-head slot extends regularly to `ROOT + TENSE(Ø/d/f)` for lexically licensed modal heads, without outer person/number suffix. The finite subordinate retains its own tense/aspect/person with its time reference anchored **relative to the outer assessment time**. `posd uman movfa` asserts a past possibility evaluation about a subsequent movement; `i vold u movu` expresses past desire toward contemporaneous movement. The newly licensed impersonally interpreted `deb P` means necessary(P) under the salient domain; `debi V` remains normative duty for the subject. `lim` continues to close the scoped operand before a following connective.
+
+## Subject-only predicate ellipsis after `e` and `ma` (author approval 2026-11-14)
+
+The compact pattern is **`S1 FINITE-V [ARGUMENTS] e|ma S2`**, where S1 and S2 are overt nominative subjects, the first clause is a simple finite declarative SVO clause, and S2 is a bare nominative subject phrase **without a spoken predicate**. The second clause inherits the same verb meaning, tense, aspect, and arguments as the first, with person/number controlled by S2.
+
+- `adelo vida trenem e adele` = the brother sees the train **and the sister sees it too**; `e` copies polarity.
+- `adelo vida trenem ma adele` = the brother sees the train, **but the sister does not**; `ma` reverses polarity **only within this licensed ellipsis**.
+- `adelo no vida trenem ma adele` = the brother does not see the train, but the sister does.
+- `adelo no vida trenem e adele` = neither the brother nor the sister sees the train.
+- `i vidi trenem ma u` = I see the train, but you do not; the unspoken predicate agrees with `u`.
+
+**Boundary:** `ma` remains an **adversative conjunction**, not a general negator, when joining complete clauses. Bare-subject polarity inversion is a special convention of contrastive predicate ellipsis. `e` never flips polarity. No omitted negative can be inferred merely from a different subject in an independently complete clause.
+
+This rule is restricted to **one simple antecedent plus one bare second subject**, not arbitrary clause chains, fragment questions, omitted arguments without a second subject, negation at the end of a subject, or constituent extraction across conditionals. The typed parser exposes an `elliptical_clause` with recovered predicate/arguments and explicit polarity. Its number is left contextual when the nominal subject is unmarked. Punctuation has no grammatical scope effect.
