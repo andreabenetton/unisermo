@@ -242,5 +242,42 @@
     "entails_performance": false,
     "entails_teaching": false,
     "generic_causative": false
+  },
+  "mnemonic": {
+    "source": "language/derivation.md#bound-mnemonic-root-memor-and-its-family",
+    "status": "ratified",
+    "semantic_root": "memor",
+    "root_is_independent_verb": false,
+    "root_is_independent_noun": false,
+    "derived_noun": "memoria",
+    "frames": {
+      "admemor": {
+        "id": "mnemonic_encode",
+        "entails_storage": true,
+        "entails_prior_storage": false
+      },
+      "inmemor": {
+        "id": "mnemonic_retain",
+        "entails_storage": true,
+        "entails_retrieval": false
+      },
+      "dememor": {
+        "id": "mnemonic_trace_loss",
+        "entails_storage_after": false,
+        "entails_retrieval": false
+      },
+      "rememor": {
+        "id": "mnemonic_recall",
+        "requires_retained_trace": true,
+        "presupposes_prior_access": true,
+        "entails_deletion": false,
+        "entails_new_learning": false
+      }
+    },
+    "subject_role": "memory_holder",
+    "object_role": "mnemonic_content",
+    "required_object": "CONTENT-em",
+    "case_complements": [],
+    "note": "rememor restores accessibility of retained content, not prior knowledge after loss; no extra source/destination frame automatically licensed"
   }
 }
