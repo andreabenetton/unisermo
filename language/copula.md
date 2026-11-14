@@ -170,3 +170,31 @@ This frame is distinct from both `ades X` and the intransitive two-pole frame
 
 `-da` marks the **resulting predicate of the transformed object**; it is not an
 ordinary copular predicate marker and does not replace `-ad` or `-de`.
+
+## 8. Causation of modal capacity (ratified 2026-11-14)
+
+A restricted semantic extension of `traes` is ratified for causing an
+explicit patient to **acquire the ability** to perform an action. The result
+is a **modal state** whose controller/actor is exactly the affected patient:
+
+```text
+Y-NOM traes X-em [pot V]-da     (typed metasyntax; NOT a surface sentence)
+```
+
+- Y causes X to gain the ability to V; a successful capacity transition is asserted.
+- X, not Y, is the understood subject of `pot V`; the subordinate event V
+  is **not** asserted to have occurred.
+- The result is ability/capacity (`pot`), **not** authorization (`aut`),
+  circumstantial opportunity (`pos`), knowledge (`sap`), or intention (`int`).
+- This does not ratify a standalone verb/root `abil`: `-abil` remains the
+  productive passive-potential adjective suffix; `pot` remains the separate
+  active-ability servile root.
+- This ratification concerns **typed semantics and argument control only**.
+  Brackets, the placement of `-da` on a whole modal predicate, and the
+  syntactic realization of `[pot V]-da` are **metanotation**, not approved
+  surface orthography. The current parser must continue to reject such
+  unformalized syntax; no arbitrary modal-head result is licensed.
+
+A future grammar decision may generalize modal-state results to `pos`,
+`aut` or other heads individually, with explicit scope and control rules;
+none is approved by this `pot`-only decision.
