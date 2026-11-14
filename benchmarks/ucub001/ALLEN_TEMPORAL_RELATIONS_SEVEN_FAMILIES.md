@@ -1,10 +1,10 @@
-# Temporal interval relations: seven-family design (proposed)
+# Temporal interval relations: seven-family design (ratified semantics)
 
-**Status (updated 2026-11-14): strict event-interval `tem` and exact-interval `simtem` RATIFIED in canonical grammar/lexicon; other proposed temporal forms and finite-clause syntax NOT YET RATIFIED.** Research on PR #86. This design supersedes the `ante/post` and endpoint-concatenation proposals; no parser acceptance is implied.
+**Status (2026-11-14): all eight named temporal relators are RATIFIED for bounded positive-duration event-interval semantics; finite-clause syntax and parser support remain unresolved.**
 
 ## Choice and motivation
 
-User-selected forms: `pretem`, `tem`, `postem`, `sim`, `solap`, `simpre`, `simpost`, plus now-ratified `simtem` for exact temporal equality. The long endpoint compounds (`postpretempre` etc.) are **abandoned**. Both BEFORE and AFTER remain independently expressible. `pretem` and `postem` are proposed derivations involving listed `pre-` and `pos-`; **productive derivation on function words is not canonically licensed**. Their acceptance would be a specific lexical decision, not a blanket grammar rule. The free word `tem` remains confirmed as *at/during + nominal time phrase*; **strict containment between bounded event intervals is now ratified**. How finite clauses denote event operands remains outside this lexical/semantic decision.
+Author-ratified forms: `pretem`, `tem`, `postem`, `sim`, `solap`, `simpre`, `simpost`, `simtem`.
 
 Assume two distinct, **bounded positive-duration event instances** A=[a0,a1], B=[b0,b1], a0<a1, b0<b1. Event instances must be identifiable and occur in a compatible temporal frame. Propositions with negation, hypotheticals, habituals, unbounded states, point events, modality and nested coordination require separate design. Each syntactic expression below is **metalanguage**: `A REL B` is not yet a licensed Unisermo sentence.
 
@@ -51,7 +51,7 @@ Assume two distinct, **bounded positive-duration event instances** A=[a0,a1], B=
 
 ## Lexical screening: confirmed lexicon (138 entries)
 
-No exact matches were found for `sim`, `solap`, `simpre`, `simpost`, `pretem`, `postem` in `research/lexicon/confirmed_lexicon.json` as of 2026-11-13. Existing `tem` and `pos` are confirmed; `simtem` is confirmed for temporal equality (replacing earlier `temekwal`); `ekwal` remains the general equality/comparison word. No spoken comprehension or grammar/parser test has been run. Not having an exact match is **not** sufficient for final lexical ratification; investigate spoken confusability of `sim` and whether `solap` is accessible beyond Romance speakers.
+Before ratification, no exact lexical collisions were found for `sim`, `solap`, `simpre`, `simpost`, `pretem`, `postem` in the confirmed lexicon; these six forms are now confirmed as of 2026-11-14. Existing `tem` and `pos` are confirmed; `simtem` is confirmed for temporal equality (replacing earlier `temekwal`); `ekwal` remains the general equality/comparison word. No spoken comprehension or grammar/parser test has been run. Not having an exact match is **not** sufficient for final lexical ratification; investigate spoken confusability of `sim` and whether `solap` is accessible beyond Romance speakers.
 
 ## Next ratification decisions
 
@@ -61,8 +61,12 @@ No exact matches were found for `sim`, `solap`, `simpre`, `simpost`, `pretem`, `
 4. Specify the syntax and precedence for `P REL Q` where P/Q are finite propositions, rather than treating letters A/B or Italian descriptions as valid Unisermo.
 5. Test the word set orally and against parser capabilities before adding translations to UCUB-v2.
 
-Canonical grammar and confirmed lexicon now reflect **only** the two author-ratified semantic decisions (`tem` strict event-interval containment; `simtem` exact interval equality). Parser and benchmark-gold translations are unchanged, and other temporal forms remain research candidates.
+Canonical grammar and confirmed lexicon now reflect **only** all eight author-ratified interval relations (`pretem`, `postem`, `tem`, `sim`, `solap`, `simpre`, `simpost`, `simtem`). Parser and benchmark-gold translations are unchanged, and other temporal forms remain research candidates.
 
 ## Lexical replacement (author ratification 2026-11-14)
 
-The previously confirmed interval-equality form `temekwal` is **retired** and replaced by `simtem`. Its semantic truth condition remains `start(A)=start(B) and end(A)=end(B)`; the events need not be identical. The replacement is not a parser implementation or a general license to compose arbitrary `sim-` function words. `simpre` and `simpost` remain candidates until separate ratification.
+The previously confirmed interval-equality form `temekwal` is **retired** and replaced by `simtem`. Its semantic truth condition remains `start(A)=start(B) and end(A)=end(B)`; the events need not be identical. The replacement is not a parser implementation or a general license to compose arbitrary `sim-` function words. `simpre` and `simpost` are now ratified alongside the other temporal relators.
+
+## Ratification completion (2026-11-14)
+
+The author ratified **all six remaining forms** (`pretem`, `postem`, `sim`, `solap`, `simpre`, `simpost`). All eight relations in the table are now confirmed in the lexicon and canonical semantic grammar. Intervals' converses cover all 13 Allen configurations; this does **not** imply that arbitrary finite clauses are already supported by the parser, nor that the 36-item communicative corpus has approved translations.
