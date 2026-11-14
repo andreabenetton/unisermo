@@ -411,11 +411,84 @@ class PropositionParser:
             if not self._is_clause_connector(words, i):
                 continue
             left = self._expression(words[:i], depth + 1)
-            right = self._expression(words[i + 1:], depth + 1)
+            # Explicitly licensed e/ma subject-only predicate ellipsis.
+            right_words = words[i + 1:]
+            if op in {"e", "ma"} and not any(self._finite(w) for w in right_words):
+                return self._subject_predicate_ellipsis(op, left, right_words)
+            right = self._expression(right_words, depth + 1)
             return self._combine(op, left, right)
         if "imedi" in words:
             raise ValueError("imedi must directly modify a temporal pretem/postem relation")
         return self._atom(words)
+
+    def _subject_predicate_ellipsis(self, op: str, left: dict,
+                                    subject_words: list[str]) -> dict:
+        """Recover the omitted predicate/arguments in S1 V [O] {e,ma} S2.
+
+        Only this subject-only ellipsis flips polarity under ma; a full
+        ma-clause remains adversative, not a negation operator.
+        """
+        if (op not in {"e", "ma"} or left["kind"] != "svo_clause"
+                or left.get("interrogative") or left.get("question")
+                or left.get("preposed_locative")
+                or left.get("focus") or left.get("negation_type")
+                or left.get("subject", {}).get("kind") == "pro_drop"
+                or left.get("complements")):
+            raise ValueError("subject ellipsis requires a plain SVO antecedent with explicit subject")
+        if (not subject_words or len(subject_words) > 7
+                or any(w in CONNECTORS | SUBORDINATES | {"lim", "alor", "no", "ka"}
+                       for w in subject_words)
+                or any("-" in w for w in subject_words)):
+            raise ValueError("ellipsis permits only one overt nominative subject NP")
+        right_subject = self._np(subject_words, "nominative")
+        if right_subject["kind"] not in {"pronoun", "noun_phrase"}:
+            raise ValueError("unsupported elided subject type")
+        predicate = left.get("predicate", {})
+        if predicate.get("kind") != "finite_verb":
+            raise ValueError("ellipsis antecedent must have a finite lexical predicate")
+        # The bare noun is number-neutral, unlike pronouns, numerals and wi.
+        if right_subject["kind"] == "pronoun":
+            person, number = right_subject["person"], right_subject["number"]
+        else:
+            person = 3
+            count = right_subject.get("numerical_value")
+            if count is not None:
+                number = "singular" if count == 1 else "plural"
+            elif "wi" in right_subject.get("modifiers", []):
+                number = "plural"
+            else:
+                number = "contextual"
+        inverted = op == "ma"
+        right = {
+            "kind": "elliptical_clause",
+            "subject": right_subject,
+            "negative": bool(left.get("negative", False)) != inverted,
+            "predicate": {
+                "kind": "recovered_finite_predicate",
+                "lemma": predicate["lemma"],
+                "aspect": predicate["aspect"],
+                "tense": predicate["tense"],
+                "person": person,
+                "number": number,
+                "source": "left_clause",
+            },
+            "object": left.get("object"),
+            "complements": [],
+            "ellipsis": {
+                "kind": "subject_contrast_predicate_argument_ellipsis",
+                "unspoken": "finite_predicate_and_arguments",
+                "recover_from": "left_clause",
+                "polarity": "opposite" if inverted else "same",
+            },
+        }
+        return {
+            "kind": "coordination",
+            "operator": op,
+            "relation": "adversative" if inverted else "and",
+            "left": left,
+            "right": right,
+            "subject_ellipsis": True,
+        }
 
     def _combine(self, op: str, left: dict, right: dict,
                  closing_lim: bool = False) -> dict:

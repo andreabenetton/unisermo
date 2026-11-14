@@ -179,3 +179,7 @@ The pre-head negative must not be confused with grammatical `no lim` sentential-
 ## Propositional necessity and personless tense (ratified 2026-11-13)
 
 `deb FINITE_PROPOSITION` is necessary(P) relative to the relevant modal premises, not the personal duty `debi BARE_VERB`. `no deb P` negates necessity, whereas `deb no P` asserts necessity of not-P. A tensed head, e.g. `no debd uman movfa`, retains the same relative scopes while locating the **necessity assessment** in the past and the dependent event later than that assessment. `no posd uman movfa` negates a past possibility judgment; it does not assert P's negation. `no pos no P` and `deb P` are equivalent only under one fixed accessibility domain.
+
+## Elliptical subject contrast with `ma` (author approval 2026-11-14)
+
+The bounded `S1 V [ARGS] ma S2` construction of [word order](word_order.md) recovers the finite predicate and its arguments with **opposite polarity** when S2 is a bare subject without a finite verb. `e S2` recovers the **same polarity**. Thus `adelo vida trenem ma adele` = 'the brother sees the train but the sister does not', whereas `adelo vida trenem e adele` = 'the brother sees the train and so does the sister'. This is **ellipsis recovery**, not a redefinition of `ma` as a grammatical negator; complete clauses still indicate negative polarity with `no`.
