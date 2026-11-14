@@ -2048,6 +2048,18 @@
       "categories": [
         "noun"
       ],
+      "decision": "Canonical common noun for train, used in transport and motion constructions. No special motion semantics: the noun itself does not assert movement.",
+      "form": "tren",
+      "meaning_en": "train; railway vehicle or connected set of railway vehicles",
+      "meaning_it": "treno; veicolo ferroviario composto da uno o più elementi destinati a muoversi sui binari",
+      "origin": "Explicit author ratification 2026-11-14",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
       "decision": "Canonical human/person root replacing earlier om. Optional referential specificity gives umano (male person/man) and umane (female person/woman); explicit plural is wi uman. Abstract humanity is regularly umanitat via -itat.",
       "form": "uman",
       "meaning_en": "person; human being",
