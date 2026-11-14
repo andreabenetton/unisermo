@@ -60,7 +60,26 @@
         ],
         "other_complements": false
       }
-    ]
+    ],
+    "modal_capacity_result": {
+      "id": "causative_modal_capacity",
+      "status": "ratified_semantics_surface_syntax_pending",
+      "causer": "matrix_subject",
+      "patient": "accusative_object",
+      "result": {
+        "kind": "modal_capacity_state",
+        "head": "pot",
+        "action": "dependent_bare_verb",
+        "controller": "accusative_patient",
+        "entails_capacity_acquired": true,
+        "entails_dependent_action": false,
+        "entails_permission": false,
+        "entails_opportunity": false
+      },
+      "surface_syntax": "unratified_typed_metasyntax_only",
+      "parser_enabled": false,
+      "source": "language/copula.md#8-causation-of-modal-capacity-ratified-2026-11-14"
+    }
   },
   "force_manner": {
     "verbs": [
