@@ -270,6 +270,30 @@
     },
     {
       "categories": [
+        "noun"
+      ],
+      "decision": "Standalone bicycle, not a generic pedal device.",
+      "form": "bik",
+      "meaning_en": "bicycle",
+      "meaning_it": "bicicletta",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "bik + via; bicycle-oriented physical path.",
+      "form": "bikvia",
+      "meaning_en": "cycle path; bicycle way",
+      "meaning_it": "pista ciclabile; via per biciclette",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "quantifier"
       ],
       "form": "bis",
@@ -298,6 +322,18 @@
       "meaning_en": "good; context-dependent generally positive evaluation",
       "meaning_it": "buono; valutazione positiva generale dipendente dal contesto",
       "origin": "Already attested in language/copula.md and language/adjectives.md; author clarification 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Standalone road passenger bus; mini- produces minibus.",
+      "form": "bus",
+      "meaning_en": "bus",
+      "meaning_it": "autobus",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -953,6 +989,18 @@
     },
     {
       "categories": [
+        "noun"
+      ],
+      "decision": "Truck independent of karg, which denotes cargo.",
+      "form": "kam",
+      "meaning_en": "truck; lorry",
+      "meaning_it": "camion; autocarro",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "decision": "Replaces former take/capture sense; kap is exclusively cognitive understanding. Physical taking is fer, physical carrying is port.",
@@ -960,6 +1008,42 @@
       "meaning_en": "understand; cognitively grasp meaning",
       "meaning_it": "capire; cogliere cognitivamente un significato",
       "origin": "Author revision 2026-10-25; Latin capere > Italian capire",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Standalone motorcar, not a productive universal suffix for vehicles.",
+      "form": "kar",
+      "meaning_en": "car; automobile",
+      "meaning_it": "automobile; autovettura",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Names cargo, not the vehicle carrying it.",
+      "form": "karg",
+      "meaning_en": "cargo; freight",
+      "meaning_it": "carico; merci trasportate",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "kar + via; characterizes road/physical infrastructure, not a service line.",
+      "form": "karvia",
+      "meaning_en": "road; way suitable for road vehicles",
+      "meaning_it": "strada carrabile",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1270,6 +1354,66 @@
     },
     {
       "categories": [
+        "derivational_prefix"
+      ],
+      "decision": "Bound mini- denotes a smaller or lower-capacity member of an identified vehicle category; no precise size threshold. Restricted to the explicitly licensed vehicle bases; distinct from degree minu and metric mikro.",
+      "form": "mini-",
+      "meaning_en": "relative size/capacity-reduction prefix for vehicle nouns",
+      "meaning_it": "prefisso diminutivo relativo per veicoli",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "mini- + bus. Smaller/capacity-reduced bus; lexicalized licensed formation.",
+      "form": "minibus",
+      "meaning_en": "minibus; small bus",
+      "meaning_it": "minibus; autobus di capacità ridotta",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "mini- + kar; relative size or capacity, not a fixed regulatory vehicle category.",
+      "form": "minikar",
+      "meaning_en": "mini car; small car",
+      "meaning_it": "automobile di dimensioni ridotte; minicar",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "mini- + tren; relative dimensions or capacity.",
+      "form": "minitren",
+      "meaning_en": "small train",
+      "meaning_it": "piccolo treno",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "mini- + van; contextual vehicle-size class.",
+      "form": "minivan",
+      "meaning_en": "small van; minivan",
+      "meaning_it": "piccolo furgone; minivan",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "function_word"
       ],
       "decision": "Preserve existing comparative minor ADJ dan B and extend to direct quantitative value: minor NUM means less than NUM; no minor NUM means at least NUM. No new negative morpheme.",
@@ -1313,6 +1457,18 @@
       "meaning_en": "moral; pertaining to morality",
       "meaning_it": "morale; relativo alla moralità",
       "origin": "Author ratification 2026-10-24; Latin moralis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Standalone name for motorcycle, not a generic motorization modifier.",
+      "form": "moto",
+      "meaning_en": "motorcycle",
+      "meaning_it": "motocicletta",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1473,6 +1629,18 @@
       "meaning_en": "part; component of a whole",
       "meaning_it": "parte; componente di un tutto",
       "origin": "Author ratification 2026-10-25",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Anatomical foot; does not mean bicycle or pedalling.",
+      "form": "ped",
+      "meaning_en": "foot",
+      "meaning_it": "piede",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -2060,6 +2228,18 @@
       "categories": [
         "noun"
       ],
+      "decision": "tren + via; material railway, not by itself the railway service.",
+      "form": "trenvia",
+      "meaning_en": "railway; railway infrastructure",
+      "meaning_it": "ferrovia; infrastruttura ferroviaria",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
       "decision": "Canonical human/person root replacing earlier om. Optional referential specificity gives umano (male person/man) and umane (female person/woman); explicit plural is wi uman. Abstract humanity is regularly umanitat via -itat.",
       "form": "uman",
       "meaning_en": "person; human being",
@@ -2075,6 +2255,30 @@
       "form": "uno",
       "source": "language/articles.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Standalone light cargo van.",
+      "form": "van",
+      "meaning_en": "van; light cargo van",
+      "meaning_it": "furgone",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "Material transit path, distinct from abstract itinerary or scheduled service.",
+      "form": "via",
+      "meaning_en": "way; physical transit path",
+      "meaning_it": "via; percorso fisico destinato al transito",
+      "origin": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
