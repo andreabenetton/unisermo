@@ -1,0 +1,813 @@
+{
+  "schema": "unisermo/expressivity-100@1",
+  "date": "2026-11-14",
+  "reference": "ratified grammar and lexicon on main",
+  "purpose": "Audited human-authored semantic expressivity benchmark, not a learner quiz or a comprehension validation",
+  "grading": {
+    "exact": "Faithfully expressible using ratified constructions; executable parser acceptance is tracked separately",
+    "partial": "Some semantic content omitted or shifted; not a faithful complete translation",
+    "gap": "Essential vocabulary or licensed grammatical construction missing"
+  },
+  "cases": [
+    {
+      "id": "E001",
+      "domain": "Trasporto e mobilità",
+      "italian": "Il treno si muove.",
+      "unisermo": "tren mova",
+      "coverage": "exact",
+      "note": "mov intransitivo."
+    },
+    {
+      "id": "E002",
+      "domain": "Trasporto e mobilità",
+      "italian": "L'autobus non si muove.",
+      "unisermo": "bus no mova",
+      "coverage": "exact",
+      "note": "Negazione dell'evento."
+    },
+    {
+      "id": "E003",
+      "domain": "Trasporto e mobilità",
+      "italian": "La motocicletta si muove verso la strada.",
+      "unisermo": "moto mova karviaad",
+      "coverage": "exact",
+      "note": "-ad indica destinazione, non arrivo."
+    },
+    {
+      "id": "E004",
+      "domain": "Trasporto e mobilità",
+      "italian": "Il treno riprende a muoversi.",
+      "unisermo": "tren remova",
+      "coverage": "exact",
+      "note": "re- indica la ripresa."
+    },
+    {
+      "id": "E005",
+      "domain": "Trasporto e mobilità",
+      "italian": "Il camion trasporta un carico.",
+      "unisermo": "kam portara kargem",
+      "coverage": "exact",
+      "note": "portar con carico accusativo."
+    },
+    {
+      "id": "E006",
+      "domain": "Trasporto e mobilità",
+      "italian": "Il minibus si allontana dalla strada.",
+      "unisermo": "minibus mova karviade",
+      "coverage": "partial",
+      "note": "L'origine non codifica necessariamente l'allontanamento."
+    },
+    {
+      "id": "E007",
+      "domain": "Trasporto e mobilità",
+      "italian": "La bicicletta svolta a sinistra.",
+      "unisermo": "bik mova",
+      "coverage": "partial",
+      "note": "Mancano svolta e sinistra."
+    },
+    {
+      "id": "E008",
+      "domain": "Trasporto e mobilità",
+      "italian": "L'autobus si ferma alla fermata.",
+      "unisermo": "bus demova",
+      "coverage": "partial",
+      "note": "La fermata fisica non è nominata."
+    },
+    {
+      "id": "E009",
+      "domain": "Trasporto e mobilità",
+      "italian": "Il treno parte dalla stazione.",
+      "unisermo": "tren admova",
+      "coverage": "partial",
+      "note": "La stazione d'origine non è nominata."
+    },
+    {
+      "id": "E010",
+      "domain": "Trasporto e mobilità",
+      "italian": "L'automobile rallenta a causa del traffico.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Mancano velocità e traffico."
+    },
+    {
+      "id": "E011",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Vedo un telefono.",
+      "unisermo": "i vidi fonem",
+      "coverage": "exact",
+      "note": "Vedere con accusativo."
+    },
+    {
+      "id": "E012",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Prendo fisicamente dell'acqua.",
+      "unisermo": "i feri akwaem",
+      "coverage": "exact",
+      "note": "fer non implica possesso."
+    },
+    {
+      "id": "E013",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Tieni una ruota.",
+      "unisermo": "u tenu rodaem",
+      "coverage": "exact",
+      "note": "ten come mantenimento del vincolo."
+    },
+    {
+      "id": "E014",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Una persona costruisce una porta.",
+      "unisermo": "uman strua portaem",
+      "coverage": "exact",
+      "note": "stru come costruire."
+    },
+    {
+      "id": "E015",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Una persona spinge una porta.",
+      "unisermo": "uman pela portaem",
+      "coverage": "exact",
+      "note": "pel non implica spostamento riuscito."
+    },
+    {
+      "id": "E016",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "La porta è chiusa.",
+      "unisermo": "porta klus",
+      "coverage": "exact",
+      "note": "Copula zero al presente."
+    },
+    {
+      "id": "E017",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Costruisco una casa.",
+      "unisermo": "i strui domem",
+      "coverage": "exact",
+      "note": "stru con oggetto."
+    },
+    {
+      "id": "E018",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Una persona tira una bicicletta.",
+      "unisermo": "uman traka bikem",
+      "coverage": "exact",
+      "note": "Trazione senza implicare spostamento."
+    },
+    {
+      "id": "E019",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Un telefono cade.",
+      "unisermo": "fon kada",
+      "coverage": "exact",
+      "note": "kad per cadere."
+    },
+    {
+      "id": "E020",
+      "domain": "Oggetti e azioni quotidiane",
+      "italian": "Riparo un telefono guasto.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Mancano riparare e guasto."
+    },
+    {
+      "id": "E021",
+      "domain": "Spazio e direzione",
+      "italian": "Salgo verso l'alto.",
+      "unisermo": "altmovi",
+      "coverage": "exact",
+      "note": "altmov per movimento ascendente."
+    },
+    {
+      "id": "E022",
+      "domain": "Spazio e direzione",
+      "italian": "La bicicletta scende.",
+      "unisermo": "bik basmova",
+      "coverage": "exact",
+      "note": "basmov per movimento discendente."
+    },
+    {
+      "id": "E023",
+      "domain": "Spazio e direzione",
+      "italian": "Il treno si muove dalla ferrovia.",
+      "unisermo": "tren mova trenviade",
+      "coverage": "exact",
+      "note": "Origine fisica marcata con -de."
+    },
+    {
+      "id": "E024",
+      "domain": "Spazio e direzione",
+      "italian": "L'auto si muove verso la strada.",
+      "unisermo": "kar mova karviaad",
+      "coverage": "exact",
+      "note": "Destinazione marcata con -ad."
+    },
+    {
+      "id": "E025",
+      "domain": "Spazio e direzione",
+      "italian": "La porta è dentro la casa.",
+      "unisermo": "porta domin",
+      "coverage": "exact",
+      "note": "Predicato locativo presente."
+    },
+    {
+      "id": "E026",
+      "domain": "Spazio e direzione",
+      "italian": "Una persona si muove insieme al fratello.",
+      "unisermo": "uman mova kun adelo",
+      "coverage": "exact",
+      "note": "Accompagnamento tramite kun."
+    },
+    {
+      "id": "E027",
+      "domain": "Spazio e direzione",
+      "italian": "L'automobile rimane immobile.",
+      "unisermo": "kar inesa fiks",
+      "coverage": "partial",
+      "note": "fiks indica fissità, più forte dell'assenza di moto."
+    },
+    {
+      "id": "E028",
+      "domain": "Spazio e direzione",
+      "italian": "La bicicletta è vicino alla casa.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Manca la relazione 'vicino a'."
+    },
+    {
+      "id": "E029",
+      "domain": "Spazio e direzione",
+      "italian": "La ruota si trova sopra la porta.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Relazione nominale 'sopra' non definita."
+    },
+    {
+      "id": "E030",
+      "domain": "Spazio e direzione",
+      "italian": "Il treno torna alla stazione.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Stazione e ritorno a luogo mancanti."
+    },
+    {
+      "id": "E031",
+      "domain": "Tempo e sequenza",
+      "italian": "Mi sono mosso nel passato.",
+      "unisermo": "movdi",
+      "coverage": "exact",
+      "note": "Passato semplice."
+    },
+    {
+      "id": "E032",
+      "domain": "Tempo e sequenza",
+      "italian": "Ti muoverai.",
+      "unisermo": "movfu",
+      "coverage": "exact",
+      "note": "Futuro seconda persona."
+    },
+    {
+      "id": "E033",
+      "domain": "Tempo e sequenza",
+      "italian": "L'autobus si stava muovendo.",
+      "unisermo": "bus moveda",
+      "coverage": "exact",
+      "note": "Progressivo passato."
+    },
+    {
+      "id": "E034",
+      "domain": "Tempo e sequenza",
+      "italian": "Il treno iniziò a muoversi.",
+      "unisermo": "tren admovda",
+      "coverage": "exact",
+      "note": "Inizio del moto al passato."
+    },
+    {
+      "id": "E035",
+      "domain": "Tempo e sequenza",
+      "italian": "Ieri avevo intenzione di muovermi.",
+      "unisermo": "intdi mov",
+      "coverage": "partial",
+      "note": "Non specifica ieri."
+    },
+    {
+      "id": "E036",
+      "domain": "Tempo e sequenza",
+      "italian": "L'autobus si muove ogni mattina.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Mattina e frequenza calendariale assenti."
+    },
+    {
+      "id": "E037",
+      "domain": "Tempo e sequenza",
+      "italian": "Il movimento del treno finisce prima che inizi quello dell'autobus.",
+      "unisermo": "tren mova pretem bus mova",
+      "coverage": "exact",
+      "note": "pretem richiede intervalli non sovrapposti."
+    },
+    {
+      "id": "E038",
+      "domain": "Tempo e sequenza",
+      "italian": "L'autobus si muove e il camion si è mosso.",
+      "unisermo": "bus mova e kam movda",
+      "coverage": "exact",
+      "note": "Coordinazione con tempi diversi."
+    },
+    {
+      "id": "E039",
+      "domain": "Tempo e sequenza",
+      "italian": "Il conducente parcheggia per tre minuti.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Conducente, parcheggiare e minuto mancanti."
+    },
+    {
+      "id": "E040",
+      "domain": "Tempo e sequenza",
+      "italian": "Il volo arriva alle dieci del mattino.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Volo-servizio, arrivo e fascia oraria mancanti."
+    },
+    {
+      "id": "E041",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "Il padre vede la madre.",
+      "unisermo": "geno vida geneem",
+      "coverage": "exact",
+      "note": "Nomi familiari e accusativo."
+    },
+    {
+      "id": "E042",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "La madre insegna al proprio figlio.",
+      "unisermo": "gene doka filem",
+      "coverage": "partial",
+      "note": "Il destinatario e il possesso non sono codificati esattamente."
+    },
+    {
+      "id": "E043",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "Il fratello vede la sorella.",
+      "unisermo": "adelo vida adeleem",
+      "coverage": "exact",
+      "note": "Due radici familiari canoniche."
+    },
+    {
+      "id": "E044",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "La nonna materna vede il padre.",
+      "unisermo": "genegene vida genoem",
+      "coverage": "exact",
+      "note": "Genegene è nonna materna."
+    },
+    {
+      "id": "E045",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "La sorella insegna al cugino.",
+      "unisermo": "adele doka filadelgenem",
+      "coverage": "partial",
+      "note": "La valenza 'insegnare a' rimane distinta dall'accusativo."
+    },
+    {
+      "id": "E046",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "Il padre sa che il figlio si muove.",
+      "unisermo": "geno sap fil mova",
+      "coverage": "exact",
+      "note": "sap con proposizione finita."
+    },
+    {
+      "id": "E047",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "La madre si muove e il padre vede il treno.",
+      "unisermo": "gene mova e geno vida trenem",
+      "coverage": "exact",
+      "note": "Due soggetti in coordinazione."
+    },
+    {
+      "id": "E048",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "Un nipote ringrazia una zia.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Ringraziare e rapporto nipote insufficienti."
+    },
+    {
+      "id": "E049",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "Due fratelli si aiutano reciprocamente.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Aiutare e reciproco mancanti."
+    },
+    {
+      "id": "E050",
+      "domain": "Famiglia e relazioni sociali",
+      "italian": "Due amici conversano.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Amico e conversare mancanti."
+    },
+    {
+      "id": "E051",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Penso.",
+      "unisermo": "pensi",
+      "coverage": "exact",
+      "note": "Attività pensare intransitiva."
+    },
+    {
+      "id": "E052",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "So che l'autobus si muove.",
+      "unisermo": "i sap bus mova",
+      "coverage": "exact",
+      "note": "sap proposizionale, fattivo."
+    },
+    {
+      "id": "E053",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Credo che il camion si muova.",
+      "unisermo": "i kred kam mova",
+      "coverage": "exact",
+      "note": "kred proposizionale non fattivo."
+    },
+    {
+      "id": "E054",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "So come muovermi.",
+      "unisermo": "sapi mov",
+      "coverage": "exact",
+      "note": "Conoscenza procedurale."
+    },
+    {
+      "id": "E055",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Imparo come insegnare.",
+      "unisermo": "adsapi dok",
+      "coverage": "exact",
+      "note": "Acquisizione della conoscenza procedurale."
+    },
+    {
+      "id": "E056",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Una persona vede il treno.",
+      "unisermo": "uman vida trenem",
+      "coverage": "exact",
+      "note": "Vedere con accusativo."
+    },
+    {
+      "id": "E057",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Vedi una bicicletta?",
+      "unisermo": "u vidu bikem ka",
+      "coverage": "exact",
+      "note": "Domanda polare con ka."
+    },
+    {
+      "id": "E058",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Annuncio che la strada è chiusa.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Annuncio proposizionale e chiusura viaria non definiti."
+    },
+    {
+      "id": "E059",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Chiedi quando partirà l'autobus.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Interrogativa indiretta temporale non definita."
+    },
+    {
+      "id": "E060",
+      "domain": "Conoscenza e comunicazione",
+      "italian": "Il passeggero comprende la spiegazione del conducente.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Ruoli e contenuto della spiegazione mancanti."
+    },
+    {
+      "id": "E061",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Posso muovermi perché ne ho la capacità.",
+      "unisermo": "poti mov",
+      "coverage": "exact",
+      "note": "pot è capacità, non opportunità."
+    },
+    {
+      "id": "E062",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Voglio muovermi.",
+      "unisermo": "voli mov",
+      "coverage": "exact",
+      "note": "Desiderio, non intenzione."
+    },
+    {
+      "id": "E063",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Intendo trasportare acqua.",
+      "unisermo": "inti portar akwaem",
+      "coverage": "exact",
+      "note": "int con azione dipendente e oggetto."
+    },
+    {
+      "id": "E064",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Ho l'obbligo di non muovermi.",
+      "unisermo": "debi no mov",
+      "coverage": "exact",
+      "note": "Obbligo di non muoversi."
+    },
+    {
+      "id": "E065",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Ho il permesso di muovermi.",
+      "unisermo": "auti mov",
+      "coverage": "exact",
+      "note": "Permesso normativo."
+    },
+    {
+      "id": "E066",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "In passato ho tentato di muovermi.",
+      "unisermo": "tentdi mov",
+      "coverage": "exact",
+      "note": "Tentativo passato senza successo implicito."
+    },
+    {
+      "id": "E067",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Non sono obbligato a muovermi.",
+      "unisermo": "no debi mov",
+      "coverage": "exact",
+      "note": "Negazione dell'obbligo."
+    },
+    {
+      "id": "E068",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Voglio che tu ti muova.",
+      "unisermo": "i vol u movu",
+      "coverage": "exact",
+      "note": "Proposizione con soggetto subordinato diverso."
+    },
+    {
+      "id": "E069",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "So che ti sei mosso.",
+      "unisermo": "i sap u movdu",
+      "coverage": "exact",
+      "note": "sap proposizionale con subordinata passata."
+    },
+    {
+      "id": "E070",
+      "domain": "Volontà, possibilità e obbligo",
+      "italian": "Potrei guidare un autobus se avessi la patente.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Guidare, patente e controfattuale non coperti."
+    },
+    {
+      "id": "E071",
+      "domain": "Quantità e misure",
+      "italian": "Due autobus si muovono.",
+      "unisermo": "bis bus movan",
+      "coverage": "exact",
+      "note": "Quantità e verbo plurale."
+    },
+    {
+      "id": "E072",
+      "domain": "Quantità e misure",
+      "italian": "Cinque treni si muovono.",
+      "unisermo": "kin tren movan",
+      "coverage": "exact",
+      "note": "Numerale con accordo."
+    },
+    {
+      "id": "E073",
+      "domain": "Quantità e misure",
+      "italian": "Tre automobili si muovono.",
+      "unisermo": "ter kar movan",
+      "coverage": "exact",
+      "note": "Numerale con accordo."
+    },
+    {
+      "id": "E074",
+      "domain": "Quantità e misure",
+      "italian": "La bicicletta possiede due ruote.",
+      "unisermo": "bis roda",
+      "coverage": "partial",
+      "note": "Quantità preservata, possesso assente."
+    },
+    {
+      "id": "E075",
+      "domain": "Quantità e misure",
+      "italian": "Il camion trasporta due carichi.",
+      "unisermo": "kam portara bis kargem",
+      "coverage": "exact",
+      "note": "Numerale nel sintagma accusativo."
+    },
+    {
+      "id": "E076",
+      "domain": "Quantità e misure",
+      "italian": "Il carico ha massa di un chilogrammo.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Unità nota, predicazione della massa non attestata."
+    },
+    {
+      "id": "E077",
+      "domain": "Quantità e misure",
+      "italian": "Il treno pesa cento tonnellate.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Peso e misura di tonnellata mancanti."
+    },
+    {
+      "id": "E078",
+      "domain": "Quantità e misure",
+      "italian": "Quattro biciclette si muovono e due auto restano ferme.",
+      "unisermo": "for bik movan e bis kar esan fiks",
+      "coverage": "partial",
+      "note": "fiks è fissità, non solo assenza di movimento."
+    },
+    {
+      "id": "E079",
+      "domain": "Quantità e misure",
+      "italian": "L'automobile percorre cinque chilometri.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Distanza e percorso non definiti."
+    },
+    {
+      "id": "E080",
+      "domain": "Quantità e misure",
+      "italian": "Il minibus possiede quindici sedili.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Sedile e dotazione non definiti."
+    },
+    {
+      "id": "E081",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "La porta è aperta.",
+      "unisermo": "porta aper",
+      "coverage": "exact",
+      "note": "Predicato qualitativo presente."
+    },
+    {
+      "id": "E082",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "Il telefono è fisso.",
+      "unisermo": "fon fiks",
+      "coverage": "exact",
+      "note": "Proprietà fisica ratificata."
+    },
+    {
+      "id": "E083",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "Il telefono è intelligente (tecnologicamente).",
+      "unisermo": "fon smart",
+      "coverage": "exact",
+      "note": "smart è funzionalità tecnologica."
+    },
+    {
+      "id": "E084",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "La bicicletta è bella.",
+      "unisermo": "bik bel",
+      "coverage": "exact",
+      "note": "Qualità estetica."
+    },
+    {
+      "id": "E085",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "L'automobile è buona.",
+      "unisermo": "kar bon",
+      "coverage": "exact",
+      "note": "Valutazione generale positiva."
+    },
+    {
+      "id": "E086",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "La madre continua a essere buona.",
+      "unisermo": "gene inesa bon",
+      "coverage": "exact",
+      "note": "ines conserva stato qualitativo."
+    },
+    {
+      "id": "E087",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "Il bambino è felice.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Bambino per età e felicità mancanti."
+    },
+    {
+      "id": "E088",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "L'autista è nervoso.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Autista e nervosismo mancanti."
+    },
+    {
+      "id": "E089",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "La strada è pericolosa.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Pericolo non coperto da nelegal."
+    },
+    {
+      "id": "E090",
+      "domain": "Qualità, stati ed emozioni",
+      "italian": "Una persona è giusta.",
+      "unisermo": "uman just",
+      "coverage": "exact",
+      "note": "Giustizia come predicato."
+    },
+    {
+      "id": "E091",
+      "domain": "Logica, causa e astrazione",
+      "italian": "L'autobus si muove e il treno non si muove.",
+      "unisermo": "bus mova e tren no mova",
+      "coverage": "exact",
+      "note": "Negazione nella seconda proposizione."
+    },
+    {
+      "id": "E092",
+      "domain": "Logica, causa e astrazione",
+      "italian": "La bicicletta si muove oppure l'auto si muove.",
+      "unisermo": "bik mova o kar mova",
+      "coverage": "exact",
+      "note": "Disgiunzione inclusiva."
+    },
+    {
+      "id": "E093",
+      "domain": "Logica, causa e astrazione",
+      "italian": "Se l'autobus si muove, allora il treno si muove.",
+      "unisermo": "se bus mova alor tren mova",
+      "coverage": "exact",
+      "note": "Condizionale senza asserire l'antecedente."
+    },
+    {
+      "id": "E094",
+      "domain": "Logica, causa e astrazione",
+      "italian": "L'autobus si muove ma il treno non si muove.",
+      "unisermo": "bus mova ma tren no mova",
+      "coverage": "exact",
+      "note": "Coordinazione avversativa."
+    },
+    {
+      "id": "E095",
+      "domain": "Logica, causa e astrazione",
+      "italian": "È possibile che l'autobus si muova.",
+      "unisermo": "pos bus mova",
+      "coverage": "exact",
+      "note": "Possibilità proposizionale."
+    },
+    {
+      "id": "E096",
+      "domain": "Logica, causa e astrazione",
+      "italian": "È necessario che l'autobus si muova.",
+      "unisermo": "deb bus mova",
+      "coverage": "exact",
+      "note": "Necessità proposizionale, non obbligo personale."
+    },
+    {
+      "id": "E097",
+      "domain": "Logica, causa e astrazione",
+      "italian": "Non è necessario che l'autobus si muova.",
+      "unisermo": "no deb bus mova",
+      "coverage": "exact",
+      "note": "Negazione della necessità."
+    },
+    {
+      "id": "E098",
+      "domain": "Logica, causa e astrazione",
+      "italian": "L'autobus si muove perché il treno si muove.",
+      "unisermo": "bus mova due tren mova",
+      "coverage": "exact",
+      "note": "Relazione causale, non inferenza ergo."
+    },
+    {
+      "id": "E099",
+      "domain": "Logica, causa e astrazione",
+      "italian": "Tutti gli autobus tranne uno si muovono.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Quantificazione con eccezione di insieme non dimostrata."
+    },
+    {
+      "id": "E100",
+      "domain": "Logica, causa e astrazione",
+      "italian": "Se l'autobus si guasta, tutti i passeggeri protestano.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Guasto, passeggeri e protesta non ratificati."
+    }
+  ]
+}
