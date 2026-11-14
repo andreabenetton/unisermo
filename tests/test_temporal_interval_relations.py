@@ -92,6 +92,39 @@ class TemporalPropositionParserTests(unittest.TestCase):
                 self.assertEqual(ast["right"]["predicate"]["lemma"],
                                  "vid" if reverse else "mov")
 
+    def test_immediate_before_and_after_preserve_strict_direction(self):
+        for op, rel in (("pretem", "before"), ("postem", "after")):
+            with self.subTest(operator=op):
+                ast = self.parser.parse_proposition(f"vidi imedi {op} movi")
+                self.assertEqual(ast["kind"], "temporal_relation")
+                self.assertEqual(ast["operator"], op)
+                self.assertEqual(ast["relation"], rel)
+                self.assertEqual(ast["proximity"], "contextually_immediate")
+                self.assertEqual(ast["proximity_marker"], "imedi")
+                self.assertEqual(ast["left"]["predicate"]["lemma"], "vid")
+                self.assertEqual(ast["right"]["predicate"]["lemma"], "mov")
+                self.assertIsNone(self.parser.parse_proposition(f"vidi {op} movi")["proximity"])
+
+    def test_imedi_does_not_become_sim_or_free_adverb(self):
+        for invalid in (
+            "vidi imedi sim movi", "vidi imedi tem movi",
+            "vidi imedi solap movi", "vidi imedi simtem movi",
+            "vidi imedi simpre movi", "vidi imedi simpost movi",
+            "vidi postem imedi movi", "imedi vidi postem movi",
+            "vidi imedi imedi postem movi", "vidi imedi",
+            "vidi imedi postem movi e faki",
+            "vidi e faki imedi pretem movi",
+        ):
+            with self.subTest(sentence=invalid), self.assertRaises(ValueError):
+                self.parser.parse_proposition(invalid)
+
+    def test_instan_is_a_noun_not_a_zero_length_allen_interval(self):
+        self.assertIn("instan", self.parser.nouns)
+        clause = self.parser.parse_proposition("vidi instanem")
+        self.assertEqual(clause["object"]["lemma"], "instan")
+        with self.assertRaises(ValueError):
+            allen_relation(1, 1, 1, 2)
+
     def test_nominal_tem_stays_nominal(self):
         # Supported event nominalization must remain an ordinary complement,
         # even when followed by an independent e coordination.
