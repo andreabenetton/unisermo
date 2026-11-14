@@ -732,7 +732,7 @@
     {
       "id": "E091",
       "domain": "Logica, causa e astrazione",
-      "italian": "Il fratello vede il treno e la sorella non lo vede.",
+      "italian": "Il fratello vede il treno, ma la sorella non lo vede.",
       "unisermo": "adelo vida trenem ma adele",
       "coverage": "exact",
       "note": "Ellissi contrastiva ratificata nella PR #97: ma + secondo soggetto recupera predicato e oggetto con polarità opposta. La congiunzione e, invece, conserverebbe la polarità positiva."
