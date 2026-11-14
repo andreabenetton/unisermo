@@ -1318,6 +1318,159 @@
       "source": "Explicit author ratification 2026-11-14",
       "decision": "Canonical common noun for train, used in transport and motion constructions. No special motion semantics: the noun itself does not assert movement.",
       "status": "confirmed"
+    },
+    {
+      "form": "kar",
+      "category": "noun",
+      "meaning_it": "automobile; autovettura",
+      "meaning_en": "car; automobile",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Standalone motorcar, not a productive universal suffix for vehicles.",
+      "status": "confirmed"
+    },
+    {
+      "form": "bus",
+      "category": "noun",
+      "meaning_it": "autobus",
+      "meaning_en": "bus",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Standalone road passenger bus; mini- produces minibus.",
+      "status": "confirmed"
+    },
+    {
+      "form": "moto",
+      "category": "noun",
+      "meaning_it": "motocicletta",
+      "meaning_en": "motorcycle",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Standalone name for motorcycle, not a generic motorization modifier.",
+      "status": "confirmed"
+    },
+    {
+      "form": "kam",
+      "category": "noun",
+      "meaning_it": "camion; autocarro",
+      "meaning_en": "truck; lorry",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Truck independent of karg, which denotes cargo.",
+      "status": "confirmed"
+    },
+    {
+      "form": "karg",
+      "category": "noun",
+      "meaning_it": "carico; merci trasportate",
+      "meaning_en": "cargo; freight",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Names cargo, not the vehicle carrying it.",
+      "status": "confirmed"
+    },
+    {
+      "form": "van",
+      "category": "noun",
+      "meaning_it": "furgone",
+      "meaning_en": "van; light cargo van",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Standalone light cargo van.",
+      "status": "confirmed"
+    },
+    {
+      "form": "bik",
+      "category": "noun",
+      "meaning_it": "bicicletta",
+      "meaning_en": "bicycle",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Standalone bicycle, not a generic pedal device.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ped",
+      "category": "noun",
+      "meaning_it": "piede",
+      "meaning_en": "foot",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Anatomical foot; does not mean bicycle or pedalling.",
+      "status": "confirmed"
+    },
+    {
+      "form": "via",
+      "category": "noun",
+      "meaning_it": "via; percorso fisico destinato al transito",
+      "meaning_en": "way; physical transit path",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Material transit path, distinct from abstract itinerary or scheduled service.",
+      "status": "confirmed"
+    },
+    {
+      "form": "mini-",
+      "category": "derivational_prefix",
+      "meaning_it": "prefisso diminutivo relativo per veicoli",
+      "meaning_en": "relative size/capacity-reduction prefix for vehicle nouns",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "Bound mini- denotes a smaller or lower-capacity member of an identified vehicle category; no precise size threshold. Restricted to the explicitly licensed vehicle bases; distinct from degree minu and metric mikro.",
+      "status": "confirmed"
+    },
+    {
+      "form": "minibus",
+      "category": "noun",
+      "meaning_it": "minibus; autobus di capacità ridotta",
+      "meaning_en": "minibus; small bus",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "mini- + bus. Smaller/capacity-reduced bus; lexicalized licensed formation.",
+      "status": "confirmed"
+    },
+    {
+      "form": "minikar",
+      "category": "noun",
+      "meaning_it": "automobile di dimensioni ridotte; minicar",
+      "meaning_en": "mini car; small car",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "mini- + kar; relative size or capacity, not a fixed regulatory vehicle category.",
+      "status": "confirmed"
+    },
+    {
+      "form": "minivan",
+      "category": "noun",
+      "meaning_it": "piccolo furgone; minivan",
+      "meaning_en": "small van; minivan",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "mini- + van; contextual vehicle-size class.",
+      "status": "confirmed"
+    },
+    {
+      "form": "minitren",
+      "category": "noun",
+      "meaning_it": "piccolo treno",
+      "meaning_en": "small train",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "mini- + tren; relative dimensions or capacity.",
+      "status": "confirmed"
+    },
+    {
+      "form": "karvia",
+      "category": "noun",
+      "meaning_it": "strada carrabile",
+      "meaning_en": "road; way suitable for road vehicles",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "kar + via; characterizes road/physical infrastructure, not a service line.",
+      "status": "confirmed"
+    },
+    {
+      "form": "trenvia",
+      "category": "noun",
+      "meaning_it": "ferrovia; infrastruttura ferroviaria",
+      "meaning_en": "railway; railway infrastructure",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "tren + via; material railway, not by itself the railway service.",
+      "status": "confirmed"
+    },
+    {
+      "form": "bikvia",
+      "category": "noun",
+      "meaning_it": "pista ciclabile; via per biciclette",
+      "meaning_en": "cycle path; bicycle way",
+      "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
+      "decision": "bik + via; bicycle-oriented physical path.",
+      "status": "confirmed"
     }
   ]
 }

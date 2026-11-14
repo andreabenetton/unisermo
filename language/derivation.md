@@ -456,3 +456,27 @@ infer that it is universally forbidden in the language.
 See [verb_specification.md](verb_specification.md),
 [LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md) and
 [formalization/data/valency_frames.json](../formalization/data/valency_frames.json).
+
+
+## Vehicle vocabulary and bounded noun compounds (author ratification 2026-11-14)
+
+The vehicle system favors short independent internationally recognizable nouns:
+
+| Word | Canonical meaning |
+| --- | --- |
+| `kar` | car, automobile |
+| `bus` | bus |
+| `tren` | train (unchanged earlier ratification) |
+| `moto` | motorcycle |
+| `kam` | truck/lorry |
+| `van` | light cargo van |
+| `bik` | bicycle |
+| `karg` | cargo/freight, **not** truck |
+| `ped` | foot, **not** bicycle |
+| `via` | physical way/path for travel, not an abstract itinerary |
+
+The **bound** diminutive prefix `mini-` indicates a vehicle relatively smaller or with reduced capacity **within its base category**. No numeric size threshold or legal classification is implied. Ratified lexical results are `minibus`, `minikar`, `minivan`, and `minitren`. It is not a second degree word equivalent to `minu`, and it is not the SI prefix `mikro`. No stacking of `mini-` and no unrestricted application to unrelated nouns follows from this ratification. A hyphen is part of *lexicon notation* for the prefix, not surface spelling of its approved compounds.
+
+Three explicitly licensed noun compounds are `karvia` (road suitable for vehicles), `trenvia` (railway infrastructure) and `bikvia` (cycle path). They follow **vehicle noun + via**, with physical transit infrastructure as the semantic head. These ratified examples do **not** license arbitrary two-noun concatenation or identify a railway as an operating service. `tren` remains the basic noun for train; no `trenvek` or mandatory `-kar` vehicle suffix is adopted. `vek` is not ratified.
+
+The ratified compounds are entered as canonical whole nouns and take nominal case on the **whole word** (`minibusem`, `trenviaem`, `bikviaad`). The current deterministic parser recognizes these licensed nouns; a general compound grammar is intentionally deferred.
