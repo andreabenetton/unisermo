@@ -114,3 +114,37 @@ The single-letter personal pronouns/markers are `i`, `u`, and `a`. Plural adds
 
 No lexical root should be introduced that creates avoidable ambiguity with
 these grammar forms.
+
+## 9. Semantic specificity and exclusion of catch-all roots (author ratification 2026-11-14)
+
+**Lexical roots are not required to provide a word-for-word equivalent to every
+word in an existing natural language.** If a source-language word collects
+different semantic categories, translate the *contextually intended category*,
+not the source-language word as an undifferentiated sign.
+
+A proposed root must have:
+- a positive, testable semantic definition and explicit contrasts to near-neighbours;
+- coherent referents or event frames, including any critical argument roles;
+- evidence it cannot be rendered faithfully using existing roots, derived forms,
+  or already approved grammar, without undue semantic loss;
+- no unnecessary use as a generic placeholder for concept, proposal, plan,
+  opinion, prediction, mental image, discovery or hunch.
+
+**Explicit non-ratification: `ide` and any generic synonym meaning all senses of
+Italian `idea` / English `idea` are excluded from the canonical vocabulary.**
+Do not automatically introduce an equally broad synonym under another spelling.
+A narrowly defined future root for a *specific* notion (e.g. submitted proposal)
+is a separate semantic decision, not a reinstatement of generic "idea".
+
+This principle concerns **heterogeneous polysemy**, not abstraction or useful
+generality as such. Existing coherent roots such as `uman`, `mov`, `kon`,
+`pens`, `kred`, `kap`, `sap` and `int` remain available under their
+approved meanings. `kon` remains the concept noun and `-kon` remains
+productive for concept-of-X; neither means generic idea, inspiration, hunch or
+proposal. The Italian word `intuizione` likewise must be disambiguated by
+epistemic status and process before any new root is adopted.
+
+**Translator/benchmark rule:** Annotate the sense of each polysemous source
+term before choosing a Unisermo realization. Mark unresolved cases as semantic
+gaps rather than filling them with a generic word. A parser recognizing a form
+does not certify its intended meaning.
