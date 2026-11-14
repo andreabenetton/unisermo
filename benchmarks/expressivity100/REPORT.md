@@ -39,7 +39,7 @@ Il **parser** riconosce o rifiuta la sintassi delle proposte; non garantisce che
 
 ## Principali conclusioni
 
-1. **Esistono soluzioni composizionali trascurate.** `biks bis roda esan` collega due ruote alla bicicletta tramite il genitivo e la copula; E074 passa a fedele. In E091 la ripetizione di `trenem` conserva il referente e il contenuto, pur differendo stilisticamente dall'anafora italiana.
+1. **Esistono soluzioni composizionali trascurate.** `biks bis roda esan` collega due ruote alla bicicletta tramite il genitivo e la copula; E074 passa a fedele. In E091 la nuova ellissi contrastiva ratificata usa `ma` seguito dal solo secondo soggetto e recupera il predicato con polarità invertita (PR #97).
 2. **Alcuni problemi sono di classificazione/valenza, non di nuovi lessemi.** `stru` già significa costruire ma manca il ruolo verbale nell'inventario eseguibile; `dok` insegna ma il ruolo dell'allievo come argomento necessita specificazione.
 3. **La parentela produttiva evita un nuovo nome.** `filadel` = figlio di fratello/sorella (nipote nel senso di nephew/niece) è già parsato.
 4. **Unità di misura e composizione numerica sono più forti di quanto apparisse.** 3 minuti = `senotodek sekun` (180 secondi); 100 tonnellate metriche = `sen megagram` (100 Mg). Mancano i frame che associano durata o massa alla proposizione, non necessariamente le unità.
@@ -187,7 +187,7 @@ Il **parser** riconosce o rifiuta la sintassi delle proposte; non garantisce che
 
 | ID | Italiano | Unisermo candidato | Semantica | Motivazione |
 |---|---|---|---|---|
-| E091 | Il fratello vede il treno e la sorella non lo vede. | `adelo vida trenem e adele no vida trenem` | Fedele | Ripetere trenem in entrambe le proposizioni conserva le condizioni di verità con lo stesso referente definito; differisce solo l'economia anaforica dell'italiano ('lo'), non il contenuto proposizionale. |
+| E091 | Il fratello vede il treno, ma la sorella non lo vede. | `adelo vida trenem ma adele` | Fedele | Ellissi contrastiva ratificata nella PR #97: ma + secondo soggetto recupera predicato e oggetto con polarità opposta. La congiunzione e, invece, conserverebbe la polarità positiva. |
 | E092 | La madre vede un'auto oppure il padre vede un camion. | `gene vida karem o geno vida kamem` | Fedele | Disgiunzione inclusiva tra due osservazioni. |
 | E093 | Se il camion si muove, allora il carico si muove. | `se kam mova alor karg mova` | Fedele | Condizionale di due eventi fisici, non causalità asserita. |
 | E094 | Voglio muovermi, ma non posso muovermi. | `voli mov ma no poti mov` | Fedele | Desiderio coordinato avversativamente con mancanza di capacità. |
