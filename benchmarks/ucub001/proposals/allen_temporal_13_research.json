@@ -1,7 +1,7 @@
 {
   "schema": "ucub-temporal-allen-13-v1",
   "status": "research_only_unratified",
-  "note": "Bounded-event interval semantics of strict tem and temporal-extent temekwal ratified 2026-11-13; all event–event finite-clause syntax and parser verification still unratified.",
+  "note": "Bounded-event interval semantics of strict tem and temporal-extent simtem ratified 2026-11-13; all event–event finite-clause syntax and parser verification still unratified.",
   "items": [
     {
       "allen_relation": "before",
@@ -59,7 +59,7 @@
     },
     {
       "allen_relation": "equals",
-      "abstract_expression": "A temekwal B",
+      "abstract_expression": "A simtem B",
       "inequality": "a0 == b0 and a1 == b1",
       "grammar_status": "research_only",
       "parser_verified": false,
