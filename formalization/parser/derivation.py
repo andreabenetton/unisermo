@@ -16,6 +16,7 @@ class DerivationParser:
     # cannot automatically become a nominal head or finite verb.
     DERIVATIONAL_SUFFIXES = {
         "itat": ("noun", "abstract_quality"),
+        "kon": ("noun", "concept_of"),
         "or": ("noun", "agent"),
         "il": ("noun", "instrument"),
         "ia": ("noun", "domain_place"),
@@ -33,18 +34,56 @@ class DerivationParser:
         """Return one unambiguous productive analysis, or None.
 
         Lexicalized forms always retain their own lexical sense.
-        A single suffix or a single approved prefix is supported;
-        productive chaining awaits explicit collision and scope rules.
+        One suffix or approved prefix is generally supported. The one
+        licensed stacking exception is quality -itat followed by -kon.
         """
         if not isinstance(lemma, str) or not lemma.isascii() or not lemma.isalpha():
             return None
         if lemma in self.lexicon or not set(lemma) <= set(self.morph["alphabet"]):
             return None
+        # -kon names the concept denoted by a known content word.
+        # The only approved stacked input is a single -itat nominalization:
+        # bonkon (concept of good) != bonitatkon (concept of goodness).
+        # No free suffix chains, -konkon, or conceptualized function words.
+        if lemma.endswith("kon") and len(lemma) > 3:
+            base = lemma[:-3]
+            eligible_categories = {"noun", "noun_root", "nominal_predicate",
+                                   "predicate_property", "property_root",
+                                   "verb", "verb_root"}
+            parent = self.lexicon.get(base)
+            inner = None
+            if parent is not None and eligible_categories.intersection(parent["categories"]):
+                source_status = parent["status"]
+            else:
+                inner = self.parse_derivation(base) if base.endswith("itat") else None
+                if (inner is None or inner["affix"] != "itat"
+                        or inner["category"] != "noun"):
+                    source_status = None
+                else:
+                    source_status = inner["base_status"]
+            if source_status is not None:
+                result = {
+                    "kind": "productive_derivation",
+                    "lemma": lemma, "base": base, "category": "noun",
+                    "affix": "kon", "affix_position": "suffix",
+                    "operation": "concept_of",
+                    "status": ("productive_from_confirmed"
+                               if source_status == "confirmed_lexicon"
+                               else "productive_from_attested"),
+                    "base_status": source_status,
+                    "denotation": "concept_of_base_not_quality_itself",
+                }
+                if inner is not None:
+                    result["base_derivation"] = inner
+                return result
         candidates = []
         for ending, (category, operation) in self.DERIVATIONAL_SUFFIXES.items():
             if not lemma.endswith(ending) or len(lemma) <= len(ending):
                 continue
             base = lemma[:-len(ending)]
+            if ending == "kon":
+                # Unsupported -kon bases must not fall through to verb-suffix rules.
+                continue
             if ending == "itat":
                 allowed = base in self.properties or base == "uman"
             elif ending == "abil":

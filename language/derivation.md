@@ -13,6 +13,7 @@ phrase rather than attaching inside the derived word.
 | place / institution / field / domain | `-ia` | `fakia` | workshop / making domain |
 | participial / resultative | `-it` | `fakit` | done / made |
 | abstract quality / state / property | `-itat` | `klaritat` | clarity |
+| concept represented by a lexical base | `-kon` | `rodakon` | concept of wheel |
 | relational adjective | `-al` | `fakal` | related to making |
 | passive possibility | `-abil` | `movabil` | capable of being moved |
 
@@ -485,3 +486,21 @@ The ratified compounds are entered as canonical whole nouns and take nominal cas
 ## Wheel noun (author ratification 2026-11-14)
 
 `roda` is the canonical common noun for **wheel** (Italian *ruota*): a generally circular mechanical component turning around an axle, used for rolling, support or motion transmission. The choice favors recognizability across Romance forms (Portuguese/Catalan/Galician *roda* and Latin *rota*) and replaces the unratified candidates `rot` and `rota`. It is an independent noun and takes ordinary nominal cases: `roda`, `rodaem`, `rodas`, `rodaad`, `rodade`, `rodain`, `rodada`. `roda` does not itself assert motion or specify that the wheel belongs to a vehicle. No productive new compounds or wheel-count vehicle subclassifications are ratified by this decision.
+
+
+## Productive concept suffix `-kon` (author ratification 2026-11-14)
+
+The **bound nominal suffix `-kon`** creates a noun naming **the concept denoted by its base**, not a physical instance, the reality of the referent, an opinion, a theory, or the abstract quality itself. It is pronounced and written as part of the word and takes ordinary noun case suffixes **after the whole derivation**.
+
+- `roda` = wheel; `rodakon` = concept of wheel; accusative `rodakonem`.
+- `kar` = automobile; `karkon` = concept of automobile.
+- `uman` = human being; `umankon` = concept of human being.
+- `bon` = good; `bonkon` = concept of good; `bonitat` = goodness (the abstract quality).
+- `bel` = beautiful; `belkon` = concept of beautiful; `belitat` = beauty (the abstract quality).
+- `dok` = teach; `dokkon` = concept of teaching (not an actual act of teaching).
+
+**Approved ordered derivation:** `bon + itat + kon = bonitatkon`, concept of **goodness as an abstract quality**, distinct from `bonkon`, concept of **good**. Likewise `belitatkon` is concept of beauty as a quality. The inner `-itat` is still governed by its existing semantic restrictions; `rodaitat`, `rodaitatkon` and arbitrary `-itat` on every concrete noun do not become licensed. `umanitat` is the separately ratified exception to property-base `-itat`.
+
+**Productivity bounds:** attach `-kon` to an already recognized lexical noun, lexical verb or property (including a nominal-predicate root), or to **one** licensed `-itat` abstract-quality derivation. No concatenation with free function words, numeral names, standalone modal heads, arbitrary strings, or open stacking such as `bonkonkon` is ratified. The parser keeps productive analyses separate from lexical entries: generation never silently canonizes a new dictionary headword.
+
+These distinctions preserve the original motivation: e.g. `bonitat` names goodness itself while `bonitatkon` names its concept. `i kapi rodakonem` = 'I understand the concept of a wheel'. The example `i doki rodakonem` = 'I teach the concept of a wheel' is **provisional for the still-unratified argument valency of `dok`**; ratifying `-kon` does not determine the teaching predicate's complement roles.
