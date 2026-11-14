@@ -174,13 +174,13 @@ class ProductiveDerivationAndValencyTests(unittest.TestCase):
     def test_semantic_ratification_of_modal_capacity_result_without_surface_overreach(self):
         registry = self.u.valency["traes"]["modal_capacity_result"]
         self.assertEqual(registry["id"], "causative_modal_capacity")
-        self.assertEqual(registry["status"], "ratified_semantics_surface_syntax_pending")
+        self.assertEqual(registry["status"], "ratified_analytic_surface")
         self.assertEqual(registry["result"]["head"], "pot")
         self.assertEqual(registry["result"]["controller"], "accusative_patient")
         self.assertTrue(registry["result"]["entails_capacity_acquired"])
         self.assertFalse(registry["result"]["entails_dependent_action"])
         self.assertFalse(registry["result"]["entails_permission"])
-        self.assertFalse(registry["parser_enabled"])
+        self.assertTrue(registry["parser_enabled"])
         for unratified_surface in ("traesi umanem pot movda",
                                    "traesi umanem aut movda",
                                    "traesi umanem pos movda"):
