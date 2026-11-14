@@ -1,7 +1,7 @@
 {
   "schema": "ucub-temporal-allen-13-v1",
-  "status": "research_only_unratified",
-  "note": "Bounded-event interval semantics of strict tem and temporal-extent simtem ratified 2026-11-13; all event–event finite-clause syntax and parser verification still unratified.",
+  "status": "lexical_and_bounded_interval_semantics_ratified__finite_clause_syntax_unverified",
+  "note": "All eight functional forms pretem, postem, tem, sim, solap, simpre, simpost, simtem are lexically ratified. The 13 Allen relations are specified for bounded positive-duration event intervals. Full finite-clause syntactic attachment and parser tests still pending.",
   "items": [
     {
       "allen_relation": "before",
@@ -10,7 +10,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "meets",
@@ -19,7 +19,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "overlaps",
@@ -28,7 +28,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "starts",
@@ -37,7 +37,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "during",
@@ -46,7 +46,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "ratified_2026_11_13"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "finishes",
@@ -55,7 +55,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "equals",
@@ -64,7 +64,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "ratified_2026_11_13"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "finished_by",
@@ -73,7 +73,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "contains",
@@ -82,7 +82,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "ratified_2026_11_13"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "started_by",
@@ -91,7 +91,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "overlapped_by",
@@ -100,7 +100,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "met_by",
@@ -109,7 +109,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     },
     {
       "allen_relation": "after",
@@ -118,7 +118,7 @@
       "grammar_status": "research_only",
       "parser_verified": false,
       "benchmark_admitted": false,
-      "semantic_status": "candidate_only"
+      "semantic_status": "ratified_2026_11_14"
     }
   ]
 }
