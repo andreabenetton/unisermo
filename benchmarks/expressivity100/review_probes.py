@@ -11,7 +11,7 @@ probes = [
     ("nephew_child_of_sibling", "filadel mova"),
     ("one_bicycle_not_moving", "bik no mova"),
     ("two_cars_are_not_moving", "bis kar no movan"),
-    ("two_cars_remain_fixed", "bis kar ines an fiks"),
+    ("two_cars_remain_fixed", "bis kar inesan fiks"),
     ("build_with_stru", "uman strua portaem"),
     ("build_with_fak", "uman faka portaem"),
     ("toward_station_as_unratified", "tren mova stasionad"),
