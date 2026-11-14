@@ -22,7 +22,7 @@ TEMPORAL_RELATIONS = {
     "sim": "meets", "solap": "overlaps", "simpre": "starts",
     "simpost": "finishes", "simtem": "equals",
 }
-TEMPORAL_OPERANDS = {"svo_clause", "servile_clause", "copular_clause", "zero_copula"}
+TEMPORAL_OPERANDS = {"svo_clause", "servile_clause", "copular_clause"}
 SUBORDINATES = {"se", "etsi", "etsise", "eksese"}
 POSTPOSED = {"etsi", "etsise", "eksese"}
 RELATORS = {"kun", "per", "pro", "due", "fin", "tem", "mod"}
@@ -177,8 +177,11 @@ class PropositionParser:
                 raise ValueError("wide negation is ratified only for e/o truth-conditional chains")
             if operand[:2] == ["no", "lim"]:
                 raise ValueError("stacked wide negation not ratified")
+            inner = self._expression(operand, depth + 1)
+            if inner["kind"] == "temporal_relation":
+                raise ValueError("wide negation of a temporal relation is not yet defined")
             return {"kind": "wide_negation", "operator": "no lim",
-                    "operand": self._expression(operand, depth + 1),
+                    "operand": inner,
                     "scope": "complete_truth_conditional_operand"}
         # The same gradable likelihood property accepts a qualitative
         # degree or a ratified two-token CARDINAL ORDINAL numeric fraction.
