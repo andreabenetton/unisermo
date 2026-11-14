@@ -1514,6 +1514,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "For bounded positive-duration event intervals, directional relation A postem B iff end(B)<start(A). A and B are semantic placeholders, not automatically valid finite-clause syntax. Inverse relation is obtained by reversing operands. Lexical form confirmed; parser and finite-clause linking syntax require separate implementation.",
+      "form": "postem",
+      "meaning_en": "A begins strictly after B ends",
+      "meaning_it": "A completamente dopo B",
+      "origin": "Author ratification 2026-11-14; Allen interval-relations design",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb_root"
       ],
       "decision": "Short finite servile root plus bare infinitive. Ability/capacity of the actor, distinct from external situational possibility pos and procedural knowledge sap. no poti V denies capacity; poti no V expresses capacity to refrain. Does not entail permission or opportunity.",
@@ -1521,6 +1533,18 @@
       "meaning_en": "be able/capable of performing an action",
       "meaning_it": "potere per capacita; essere in grado di compiere un'azione",
       "origin": "Author approval 2026-11-12; Latin potere/potentia; international potent/potency",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "For bounded positive-duration event intervals, directional relation A pretem B iff end(A)<start(B). A and B are semantic placeholders, not automatically valid finite-clause syntax. Inverse relation is obtained by reversing operands. Lexical form confirmed; parser and finite-clause linking syntax require separate implementation.",
+      "form": "pretem",
+      "meaning_en": "A finishes strictly before B begins",
+      "meaning_it": "A completamente prima di B",
+      "origin": "Author ratification 2026-11-14; Allen interval-relations design",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1672,6 +1696,54 @@
       "categories": [
         "function_word"
       ],
+      "decision": "For bounded positive-duration event intervals, directional relation A sim B iff end(A)=start(B). A and B are semantic placeholders, not automatically valid finite-clause syntax. Inverse relation is obtained by reversing operands. Lexical form confirmed; parser and finite-clause linking syntax require separate implementation.",
+      "form": "sim",
+      "meaning_en": "directed temporal meeting: A ends exactly as B begins",
+      "meaning_it": "A finisce esattamente quando B comincia",
+      "origin": "Author ratification 2026-11-14; Allen interval-relations design",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "For bounded positive-duration event intervals, directional relation A simpost B iff start(B)<start(A) and end(A)=end(B). A and B are semantic placeholders, not automatically valid finite-clause syntax. Inverse relation is obtained by reversing operands. Lexical form confirmed; parser and finite-clause linking syntax require separate implementation.",
+      "form": "simpost",
+      "meaning_en": "same end; A starts later",
+      "meaning_it": "A e B terminano insieme; A comincia dopo",
+      "origin": "Author ratification 2026-11-14; Allen interval-relations design",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "For bounded positive-duration event intervals, directional relation A simpre B iff start(A)=start(B) and end(A)<end(B). A and B are semantic placeholders, not automatically valid finite-clause syntax. Inverse relation is obtained by reversing operands. Lexical form confirmed; parser and finite-clause linking syntax require separate implementation.",
+      "form": "simpre",
+      "meaning_en": "same start; A ends earlier",
+      "meaning_it": "A e B iniziano insieme; A termina prima",
+      "origin": "Author ratification 2026-11-14; Allen interval-relations design",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "For bounded event intervals A=[a0,a1], B=[b0,b1], A simtem B iff a0=b0 and a1=b1. No event identity is entailed. Schematic A/B examples are not approved finite-clause syntax. The form is a lexicalized temporal relation, not blanket productive compounding. `temekwal` retired as the former spelling; `ekwal` remains the independent general equality term.",
+      "form": "simtem",
+      "meaning_en": "exact equality of two event temporal extents, without identity of events",
+      "meaning_it": "coincidenza esatta degli intervalli temporali di due eventi",
+      "origin": "Author ratification 2026-11-14: simtem replaces prior confirmed temekwal; sim- temporal family",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
       "decision": "Universal approximation operator on a numerical scalar, tolerance contextual. Does not automatically mean epistemic uncertainty. No property-specific arithmetic bound.",
       "form": "sirka",
       "meaning_en": "approximately; about, applied to a quantitative value",
@@ -1701,6 +1773,18 @@
       "meaning_en": "citizen; civic",
       "meaning_it": "cittadino; civile",
       "origin": "Latin civis",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "For bounded positive-duration event intervals, directional relation A solap B iff start(A)<start(B)<end(A)<end(B). A and B are semantic placeholders, not automatically valid finite-clause syntax. Inverse relation is obtained by reversing operands. Lexical form confirmed; parser and finite-clause linking syntax require separate implementation.",
+      "form": "solap",
+      "meaning_en": "directed partial overlap: A begins before B, ends during B",
+      "meaning_it": "A comincia prima di B e termina durante B",
+      "origin": "Author ratification 2026-11-14; Allen interval-relations design",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1768,10 +1852,10 @@
       "categories": [
         "function_word"
       ],
-      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired.",
+      "decision": "Canonical invariant free temporal relator. Former suffix -tem is retired. Author ratification 2026-11-13: for bounded event-interval operands A tem B, require start(B)<start(A)<end(A)<end(B), excluding shared boundaries; no automatic clausal syntax licensing. Nominal tem dia remains valid.",
       "form": "tem",
-      "meaning_en": "during; at the time of",
-      "meaning_it": "durante; nel tempo di",
+      "meaning_en": "during / at the time of (nominal frame); strict containment between bounded positive-duration event intervals",
+      "meaning_it": "durante / nel tempo di (frase nominale); contenimento stretto fra intervalli di eventi delimitati",
       "origin": "legacy Unisermo extended case system",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
