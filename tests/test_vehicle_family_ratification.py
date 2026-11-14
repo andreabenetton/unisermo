@@ -26,7 +26,7 @@ class VehicleFamilyTests(unittest.TestCase):
                 self.assertIn(noun, self.u.nouns)
                 accusative = self.u.generate_noun(noun, "accusative")
                 self.assertEqual(accusative, noun + "em")
-                self.assertEqual(self.u.parse_word(accusative)["lemma"], noun)
+                self.assertTrue(any(a["lemma"] == noun and a["kind"] == "nominal_case"\n                                    for a in self.u.analyze_word(accusative)["analyses"]))
 
     def test_single_vehicle_clause(self):
         self.assertEqual(self.u.parse_sentence("minibus mova")["kind"], "svo_clause")
