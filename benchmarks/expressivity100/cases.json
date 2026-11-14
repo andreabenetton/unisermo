@@ -117,9 +117,9 @@
       "id": "E014",
       "domain": "Oggetti e azioni quotidiane",
       "italian": "Una persona costruisce una porta.",
-      "unisermo": "uman strua portaem",
-      "coverage": "exact",
-      "note": "stru come costruire."
+      "unisermo": "uman faka portaem",
+      "coverage": "partial",
+      "note": "fak indica fare/produrre, non precisamente costruire; stru è attestata ma non tipizzata come verbo nel parser e richiede una decisione di valenza."
     },
     {
       "id": "E015",
@@ -141,9 +141,9 @@
       "id": "E017",
       "domain": "Oggetti e azioni quotidiane",
       "italian": "Costruisco una casa.",
-      "unisermo": "i strui domem",
-      "coverage": "exact",
-      "note": "stru con oggetto."
+      "unisermo": "i faki domem",
+      "coverage": "partial",
+      "note": "fak indica fare/produrre, più generico di costruire; la radice stru non ha ancora ruolo verbale/valenza formalizzati."
     },
     {
       "id": "E018",
@@ -205,9 +205,9 @@
       "id": "E025",
       "domain": "Spazio e direzione",
       "italian": "La porta è dentro la casa.",
-      "unisermo": "porta domin",
+      "unisermo": "porta esa domin",
       "coverage": "exact",
-      "note": "Predicato locativo presente."
+      "note": "Copula esplicita es col predicato locativo domin; la copula zero locativa non è ancora implementata nel parser."
     },
     {
       "id": "E026",
@@ -461,9 +461,9 @@
       "id": "E057",
       "domain": "Conoscenza e comunicazione",
       "italian": "Vedi una bicicletta?",
-      "unisermo": "u vidu bikem ka",
+      "unisermo": "ka u vidu bikem",
       "coverage": "exact",
-      "note": "Domanda polare con ka."
+      "note": "In Unisermo la particella interrogativa ka è iniziale, non finale."
     },
     {
       "id": "E058",
@@ -597,9 +597,9 @@
       "id": "E074",
       "domain": "Quantità e misure",
       "italian": "La bicicletta possiede due ruote.",
-      "unisermo": "bis roda",
+      "unisermo": "bis roda esan",
       "coverage": "partial",
-      "note": "Quantità preservata, possesso assente."
+      "note": "Due ruote esistono: quantità espressa, ma manca il vincolo di appartenenza alla bicicletta."
     },
     {
       "id": "E075",
