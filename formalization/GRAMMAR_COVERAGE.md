@@ -225,3 +225,14 @@ modifiers** and focus interactions with serviles/compound clauses.
 Contextual omission of the direct object is still an open
 grammatical decision; do not silently treat parser rejection
 as a language-wide prohibition.
+
+## Autonomous state-transition markers (ratified 2026-11-14)
+
+The deterministic parser accepts the closed `traes` frames `traes X-em da pot V`
+(caused capacity acquisition) and `traes ad STATE de STATE` (source/destination
+of the same subject's state), where STATE is an attested simple property or
+`[no] pot V`. Complex attached arguments remain bounded by the existing
+bare-verb valency rules. Other matrix verbs, arbitrary serviles, event
+coordination, embedded finite propositions and nested marker scopes are **not**
+covered. The nominal suffix counterparts `-da/-ad/-de`, the fused phase
+prefixes `ad-/de-`, and finite `potda` retain their existing readings.
