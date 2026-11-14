@@ -172,10 +172,10 @@
     {
       "id": "E021",
       "domain": "Spazio e direzione",
-      "italian": "Salgo verso l'alto.",
+      "italian": "Salgo.",
       "unisermo": "altmovi",
       "coverage": "exact",
-      "note": "altmov per movimento ascendente."
+      "note": "altmov indica moto ascendente, senza specificare meta."
     },
     {
       "id": "E022",
@@ -188,10 +188,10 @@
     {
       "id": "E023",
       "domain": "Spazio e direzione",
-      "italian": "Il treno si muove dalla ferrovia.",
-      "unisermo": "tren mova trenviade",
+      "italian": "Sposto una ruota dalla strada.",
+      "unisermo": "movi rodaem karviade",
       "coverage": "exact",
-      "note": "Origine fisica marcata con -de."
+      "note": "mov causativo con oggetto e luogo di origine."
     },
     {
       "id": "E024",
@@ -252,18 +252,18 @@
     {
       "id": "E031",
       "domain": "Tempo e sequenza",
-      "italian": "Mi sono mosso nel passato.",
-      "unisermo": "movdi",
+      "italian": "Ho visto un treno.",
+      "unisermo": "viddi trenem",
       "coverage": "exact",
-      "note": "Passato semplice."
+      "note": "Passato semplice di vid con oggetto."
     },
     {
       "id": "E032",
       "domain": "Tempo e sequenza",
-      "italian": "Ti muoverai.",
-      "unisermo": "movfu",
+      "italian": "Prenderai un telefono.",
+      "unisermo": "ferfu fonem",
       "coverage": "exact",
-      "note": "Futuro seconda persona."
+      "note": "Futuro di fer in seconda persona."
     },
     {
       "id": "E033",
@@ -308,10 +308,10 @@
     {
       "id": "E038",
       "domain": "Tempo e sequenza",
-      "italian": "L'autobus si muove e il camion si è mosso.",
-      "unisermo": "bus mova e kam movda",
+      "italian": "La madre ha visto un telefono e il padre vedrà un treno.",
+      "unisermo": "gene vidda fonem e geno vidfa trenem",
       "coverage": "exact",
-      "note": "Coordinazione con tempi diversi."
+      "note": "Due clausole coordinate con tempi diversi."
     },
     {
       "id": "E039",
@@ -380,10 +380,10 @@
     {
       "id": "E047",
       "domain": "Famiglia e relazioni sociali",
-      "italian": "La madre si muove e il padre vede il treno.",
-      "unisermo": "gene mova e geno vida trenem",
+      "italian": "La madre vede un treno e il padre prende un telefono.",
+      "unisermo": "gene vida trenem e geno fera fonem",
       "coverage": "exact",
-      "note": "Due soggetti in coordinazione."
+      "note": "Coordinazione con due soggetti e verbi diversi."
     },
     {
       "id": "E048",
@@ -452,10 +452,10 @@
     {
       "id": "E056",
       "domain": "Conoscenza e comunicazione",
-      "italian": "Una persona vede il treno.",
-      "unisermo": "uman vida trenem",
-      "coverage": "exact",
-      "note": "Vedere con accusativo."
+      "italian": "Una persona ascolta un messaggio vocale.",
+      "unisermo": null,
+      "coverage": "gap",
+      "note": "Mancano ascoltare e messaggio, distinti da vedere o chiamare."
     },
     {
       "id": "E057",
@@ -500,10 +500,10 @@
     {
       "id": "E062",
       "domain": "Volontà, possibilità e obbligo",
-      "italian": "Voglio muovermi.",
-      "unisermo": "voli mov",
+      "italian": "Voglio vedere il treno.",
+      "unisermo": "voli vid trenem",
       "coverage": "exact",
-      "note": "Desiderio, non intenzione."
+      "note": "vol con azione dipendente e accusativo."
     },
     {
       "id": "E063",
@@ -524,18 +524,18 @@
     {
       "id": "E065",
       "domain": "Volontà, possibilità e obbligo",
-      "italian": "Ho il permesso di muovermi.",
-      "unisermo": "auti mov",
+      "italian": "Ho il permesso di prendere il telefono.",
+      "unisermo": "auti fer fonem",
       "coverage": "exact",
-      "note": "Permesso normativo."
+      "note": "aut con azione fisica dipendente."
     },
     {
       "id": "E066",
       "domain": "Volontà, possibilità e obbligo",
-      "italian": "In passato ho tentato di muovermi.",
-      "unisermo": "tentdi mov",
+      "italian": "In passato ho tentato di trasportare un carico.",
+      "unisermo": "tentdi portar kargem",
       "coverage": "exact",
-      "note": "Tentativo passato senza successo implicito."
+      "note": "Tentativo passato con portare, senza successo implicito."
     },
     {
       "id": "E067",
@@ -572,26 +572,26 @@
     {
       "id": "E071",
       "domain": "Quantità e misure",
-      "italian": "Due autobus si muovono.",
-      "unisermo": "bis bus movan",
+      "italian": "Due autobus trasportano persone.",
+      "unisermo": "bis bus portaran wi umanem",
       "coverage": "exact",
-      "note": "Quantità e verbo plurale."
+      "note": "Numerale nel soggetto, verbo plurale e oggetto plurale."
     },
     {
       "id": "E072",
       "domain": "Quantità e misure",
-      "italian": "Cinque treni si muovono.",
-      "unisermo": "kin tren movan",
+      "italian": "Cinque persone vedono un treno.",
+      "unisermo": "kin uman vidan trenem",
       "coverage": "exact",
-      "note": "Numerale con accordo."
+      "note": "Soggetto quantificato con verbo plurale e oggetto."
     },
     {
       "id": "E073",
       "domain": "Quantità e misure",
-      "italian": "Tre automobili si muovono.",
-      "unisermo": "ter kar movan",
+      "italian": "Tre ruote cadono.",
+      "unisermo": "ter roda kadan",
       "coverage": "exact",
-      "note": "Numerale con accordo."
+      "note": "Numerale ter con evento plurale."
     },
     {
       "id": "E074",
@@ -732,66 +732,66 @@
     {
       "id": "E091",
       "domain": "Logica, causa e astrazione",
-      "italian": "L'autobus si muove e il treno non si muove.",
-      "unisermo": "bus mova e tren no mova",
-      "coverage": "exact",
-      "note": "Negazione nella seconda proposizione."
+      "italian": "Il fratello vede il treno e la sorella non lo vede.",
+      "unisermo": "adelo vida trenem e adele no vida trenem",
+      "coverage": "partial",
+      "note": "La seconda proposizione ripete 'treno' invece di riprendere il referente con 'lo'; significato pragmatico sostanzialmente simile, ma l'anafora non è codificata."
     },
     {
       "id": "E092",
       "domain": "Logica, causa e astrazione",
-      "italian": "La bicicletta si muove oppure l'auto si muove.",
-      "unisermo": "bik mova o kar mova",
+      "italian": "La madre vede un'auto oppure il padre vede un camion.",
+      "unisermo": "gene vida karem o geno vida kamem",
       "coverage": "exact",
-      "note": "Disgiunzione inclusiva."
+      "note": "Disgiunzione inclusiva tra due osservazioni."
     },
     {
       "id": "E093",
       "domain": "Logica, causa e astrazione",
-      "italian": "Se l'autobus si muove, allora il treno si muove.",
-      "unisermo": "se bus mova alor tren mova",
+      "italian": "Se il camion si muove, allora il carico si muove.",
+      "unisermo": "se kam mova alor karg mova",
       "coverage": "exact",
-      "note": "Condizionale senza asserire l'antecedente."
+      "note": "Condizionale di due eventi fisici, non causalità asserita."
     },
     {
       "id": "E094",
       "domain": "Logica, causa e astrazione",
-      "italian": "L'autobus si muove ma il treno non si muove.",
-      "unisermo": "bus mova ma tren no mova",
+      "italian": "Voglio muovermi, ma non posso muovermi.",
+      "unisermo": "voli mov ma no poti mov",
       "coverage": "exact",
-      "note": "Coordinazione avversativa."
+      "note": "Desiderio coordinato avversativamente con mancanza di capacità."
     },
     {
       "id": "E095",
       "domain": "Logica, causa e astrazione",
-      "italian": "È possibile che l'autobus si muova.",
-      "unisermo": "pos bus mova",
+      "italian": "È possibile che il telefono cada.",
+      "unisermo": "pos fon kada",
       "coverage": "exact",
-      "note": "Possibilità proposizionale."
+      "note": "Possibilità proposizionale di caduta."
     },
     {
       "id": "E096",
       "domain": "Logica, causa e astrazione",
-      "italian": "È necessario che l'autobus si muova.",
-      "unisermo": "deb bus mova",
+      "italian": "È necessario che la porta sia aperta.",
+      "unisermo": "deb porta aper",
       "coverage": "exact",
-      "note": "Necessità proposizionale, non obbligo personale."
+      "note": "Necessità proposizionale su un predicato di stato."
     },
     {
       "id": "E097",
       "domain": "Logica, causa e astrazione",
-      "italian": "Non è necessario che l'autobus si muova.",
-      "unisermo": "no deb bus mova",
+      "italian": "Non è necessario che tu insegni.",
+      "unisermo": "no deb u doku",
       "coverage": "exact",
-      "note": "Negazione della necessità."
+      "note": "Negazione della necessità proposizionale."
     },
     {
       "id": "E098",
       "domain": "Logica, causa e astrazione",
-      "italian": "L'autobus si muove perché il treno si muove.",
-      "unisermo": "bus mova due tren mova",
+      "italian": "Il camion trasporta un carico perché il treno non si muove.",
+      "unisermo": "kam portara kargem due tren no mova",
       "coverage": "exact",
-      "note": "Relazione causale, non inferenza ergo."
+      "note": "Causalità fattuale; il mancato movimento del treno spiega il trasporto alternativo."
     },
     {
       "id": "E099",
