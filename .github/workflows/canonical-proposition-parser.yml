@@ -6,6 +6,7 @@ on:
       - 'language/**'
       - 'tests/test_proposition_parser.py'
       - 'tests/test_temporal_interval_relations.py'
+      - 'tests/test_fon_fiks_smart_ratification.py'
       - 'tests/test_productive_derivation_valency.py'
       - 'tests/test_verified_lexical_valency.py'
       - 'tests/test_physical_action_valency.py'
@@ -18,6 +19,7 @@ on:
       - 'language/**'
       - 'tests/test_proposition_parser.py'
       - 'tests/test_temporal_interval_relations.py'
+      - 'tests/test_fon_fiks_smart_ratification.py'
       - 'tests/test_productive_derivation_valency.py'
       - 'tests/test_verified_lexical_valency.py'
       - 'tests/test_physical_action_valency.py'
@@ -45,6 +47,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_proposition_parser.py' -v
           python -m unittest discover -s tests -p 'test_temporal_interval_relations.py' -v
+          python -m unittest discover -s tests -p 'test_fon_fiks_smart_ratification.py' -v
           python -m unittest discover -s tests -p 'test_productive_derivation_valency.py' -v
           python -m unittest discover -s tests -p 'test_verified_lexical_valency.py' -v
           python -m unittest discover -s tests -p 'test_physical_action_valency.py' -v
