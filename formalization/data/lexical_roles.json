@@ -55,7 +55,8 @@
     "minitren",
     "karvia",
     "trenvia",
-    "bikvia"
+    "bikvia",
+    "roda"
   ],
   "nominal_predicate": [
     "alt",
