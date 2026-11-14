@@ -6,6 +6,7 @@ on:
       - 'tests/test_ucub001.py'
       - 'tests/test_ucub001_review.py'
       - 'tests/test_ucub001_equivalence.py'
+      - 'tests/test_ucub_content_diversity_proposal.py'
       - 'formalization/**'
       - '.github/workflows/ucub001-validation.yml'
   workflow_dispatch:
@@ -38,6 +39,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_ucub001_review.py' -v
           python -m unittest discover -s tests -p 'test_ucub001_equivalence.py' -v
+          python -m unittest discover -s tests -p 'test_ucub_content_diversity_proposal.py' -v
           python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition cold --split development --allow-unreviewed --output /tmp/ucub001-balanced-cold.jsonl
           python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition lexicon --split development --allow-unreviewed --output /tmp/ucub001-balanced-lexicon.jsonl
           python -m benchmarks.ucub001.runner prepare --sample balanced16 --condition grammar --split development --allow-unreviewed --output /tmp/ucub001-balanced-grammar.jsonl
