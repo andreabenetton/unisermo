@@ -63,7 +63,7 @@
     ],
     "modal_capacity_result": {
       "id": "causative_modal_capacity",
-      "status": "ratified_semantics_surface_syntax_pending",
+      "status": "ratified_analytic_surface",
       "causer": "matrix_subject",
       "patient": "accusative_object",
       "result": {
@@ -76,9 +76,31 @@
         "entails_permission": false,
         "entails_opportunity": false
       },
-      "surface_syntax": "unratified_typed_metasyntax_only",
-      "parser_enabled": false,
-      "source": "language/copula.md#8-causation-of-modal-capacity-ratified-2026-11-14"
+      "surface_syntax": "Y traes X-em da pot V [V-ARGS]",
+      "parser_enabled": true,
+      "source": "language/copula.md#9-free-state-relation-markers-da-ad-de-ratified-2026-11-14"
+    },
+    "free_state_markers": {
+      "status": "ratified_bounded",
+      "markers": {
+        "da": "caused_result_modal_capacity",
+        "ad": "destination_state",
+        "de": "source_state"
+      },
+      "causative_frame": "Y traes X-em da pot V",
+      "intransitive_frame": "X traes ad STATE de STATE",
+      "state_types": [
+        "predicate_property",
+        "pot_bare_verb",
+        "no_pot_bare_verb"
+      ],
+      "controller": {
+        "da": "accusative_patient",
+        "ad": "matrix_subject",
+        "de": "matrix_subject"
+      },
+      "parser_enabled": true,
+      "source": "language/copula.md#9-free-state-relation-markers-da-ad-de-ratified-2026-11-14"
     }
   },
   "force_manner": {

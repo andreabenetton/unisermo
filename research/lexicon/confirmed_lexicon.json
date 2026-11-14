@@ -1282,6 +1282,33 @@
       "source": "Author ratification 2026-11-14; widespread international smart",
       "decision": "Technological qualification, not human intelligence. smart fon identifies a smartphone; smart can qualify other technological devices. The noun fon remains broad enough to include historic fixed telephones.",
       "status": "confirmed"
+    },
+    {
+      "form": "da",
+      "category": "function_word",
+      "meaning_it": "marcatore autonomo di risultato predicativo complesso",
+      "meaning_en": "autonomous complex-predicate result marker",
+      "source": "Explicit author ratification 2026-11-14",
+      "decision": "Permitted only in ratified traes causative frame before pot V, X patient controls V; independent word distinct from nominal -da and finite -d-a.",
+      "status": "confirmed"
+    },
+    {
+      "form": "ad",
+      "category": "function_word",
+      "meaning_it": "marcatore autonomo di stato destinazione in una transizione",
+      "meaning_en": "autonomous destination-state marker in a transition",
+      "source": "Explicit author ratification 2026-11-14",
+      "decision": "In licensed traes transition frame precedes state predicate; follows destination-before-source order; distinct from phase prefix ad- and nominal -ad.",
+      "status": "confirmed"
+    },
+    {
+      "form": "de",
+      "category": "function_word",
+      "meaning_it": "marcatore autonomo di stato di origine in una transizione",
+      "meaning_en": "autonomous source-state marker in a transition",
+      "source": "Explicit author ratification 2026-11-14",
+      "decision": "In licensed traes transition frame precedes state predicate; follows ad destination state; distinct from phase prefix de- and nominal -de.",
+      "status": "confirmed"
     }
   ]
 }

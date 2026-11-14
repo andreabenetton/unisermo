@@ -2,6 +2,18 @@
   "entries": [
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "In licensed traes transition frame precedes state predicate; follows destination-before-source order; distinct from phase prefix ad- and nominal -ad.",
+      "form": "ad",
+      "meaning_en": "autonomous destination-state marker in a transition",
+      "meaning_it": "marcatore autonomo di stato destinazione in una transizione",
+      "origin": "Explicit author ratification 2026-11-14",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "noun"
       ],
       "decision": "Canonize adel as neutral sibling root. This August 10 author-approved choice was omitted from the saved lexicon; explicitly restored by author October 24, replacing obsolete frat.",
@@ -286,6 +298,30 @@
       "meaning_en": "good; context-dependent generally positive evaluation",
       "meaning_it": "buono; valutazione positiva generale dipendente dal contesto",
       "origin": "Already attested in language/copula.md and language/adjectives.md; author clarification 2026-10-24",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "Permitted only in ratified traes causative frame before pot V, X patient controls V; independent word distinct from nominal -da and finite -d-a.",
+      "form": "da",
+      "meaning_en": "autonomous complex-predicate result marker",
+      "meaning_it": "marcatore autonomo di risultato predicativo complesso",
+      "origin": "Explicit author ratification 2026-11-14",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "function_word"
+      ],
+      "decision": "In licensed traes transition frame precedes state predicate; follows ad destination state; distinct from phase prefix de- and nominal -de.",
+      "form": "de",
+      "meaning_en": "autonomous source-state marker in a transition",
+      "meaning_it": "marcatore autonomo di stato di origine in una transizione",
+      "origin": "Explicit author ratification 2026-11-14",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },

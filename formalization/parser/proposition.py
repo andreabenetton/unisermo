@@ -611,6 +611,64 @@ class PropositionParser:
                 other.append({"kind": "case_complement", "case": case, "nominal": np})
         return obj, other
 
+    def _free_state_operand(self, words: list[str]) -> dict:
+        """Bounded predicate complement: property, pot V, or no pot V.
+
+        The modal controller is supplied by the enclosing transition frame.
+        Never treat a finite modal or a free case relator as the predicate.
+        """
+        if len(words) == 1:
+            w = words[0]
+            derived = self.parse_derivation(w)
+            if w in self.properties or (derived is not None and
+                                        derived["category"] == "property"):
+                return {"kind": "quality_state", "lemma": w}
+        negated = bool(words and words[0] == "no")
+        operand = words[1:] if negated else words
+        if len(operand) < 2 or operand[0] != "pot" or not self._bare_verb(operand[1]):
+            raise ValueError("free state predicate requires property or [no] pot V")
+        verb = operand[1]
+        if verb in MODALS or any(w in {"da", "ad", "de", "lim"} for w in operand[2:]):
+            raise ValueError("nested modal/transition operand not ratified")
+        obj, complements = self._args(operand[2:], verb)
+        frame = self.validate_valency(verb, obj, complements)
+        return {"kind": "modal_capacity_state", "head": "pot",
+                "negative": negated, "action": {"lemma": verb, "object": obj,
+                                              "complements": complements, "valency": frame},
+                "entails_action": False}
+
+    def _free_state_transition(self, words: list[str], verb: dict,
+                               subject: dict, negative: bool) -> dict:
+        """Only the two explicitly ratified traes analytic frames."""
+        if words and words[0] == "ad":
+            if words.count("ad") != 1 or words.count("de") != 1 or "da" in words:
+                raise ValueError("state transition requires one ad and one de")
+            middle = words.index("de")
+            if middle < 2 or middle == len(words) - 1:
+                raise ValueError("transition destination/source states required")
+            destination = self._free_state_operand(words[1:middle])
+            source = self._free_state_operand(words[middle + 1:])
+            return {"kind": "svo_clause", "predicate": verb, "subject": subject,
+                    "negative": negative, "object": None, "complements": [],
+                    "interrogative": False, "valency": "state_transition",
+                    "state_transition": {"kind": "analytic_transition",
+                                         "destination": destination, "source": source,
+                                         "controller": "matrix_subject"}}
+        parsed = self._read_np(words, 0, "accusative")
+        if parsed is None:
+            raise ValueError("causative free result requires explicit accusative patient")
+        obj, end = parsed
+        if words[end:end + 1] != ["da"]:
+            raise ValueError("causative free result requires da")
+        result = self._free_state_operand(words[end + 1:])
+        if result["kind"] != "modal_capacity_state" or result["negative"]:
+            raise ValueError("causative free da result currently licenses positive pot V only")
+        return {"kind": "svo_clause", "predicate": verb, "subject": subject,
+                "negative": negative, "object": obj, "complements": [],
+                "interrogative": False, "valency": "causative_modal_capacity",
+                "state_result": {**result, "controller": "accusative_patient",
+                                 "entails_capacity_acquired": not negative}}
+
     def _atom(self, words: list[str]) -> dict:
         if not words:
             raise ValueError("empty proposition")
@@ -672,6 +730,12 @@ class PropositionParser:
             subject, front = self._front(prefix, verb["person"], verb["number"])
         rest = words[idx + 1:]
         head = verb["lemma"]
+        if head == "traes" and any(w in {"da", "ad", "de"} for w in rest):
+            if question is not None or front is not None:
+                raise ValueError("free state transition with question/fronting is not ratified")
+            # A legitimate explicit NP may contain nominal suffixes but not bare
+            # relational state markers; those belong to this dedicated frame.
+            return self._annotate_focus(self._free_state_transition(rest, verb, subject, negative))
         source = None
         if head == "aut" and rest:
             source_read = self._read_np(rest, 0, "ablative")

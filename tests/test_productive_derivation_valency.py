@@ -174,19 +174,63 @@ class ProductiveDerivationAndValencyTests(unittest.TestCase):
     def test_semantic_ratification_of_modal_capacity_result_without_surface_overreach(self):
         registry = self.u.valency["traes"]["modal_capacity_result"]
         self.assertEqual(registry["id"], "causative_modal_capacity")
-        self.assertEqual(registry["status"], "ratified_semantics_surface_syntax_pending")
+        self.assertEqual(registry["status"], "ratified_analytic_surface")
         self.assertEqual(registry["result"]["head"], "pot")
         self.assertEqual(registry["result"]["controller"], "accusative_patient")
         self.assertTrue(registry["result"]["entails_capacity_acquired"])
         self.assertFalse(registry["result"]["entails_dependent_action"])
         self.assertFalse(registry["result"]["entails_permission"])
-        self.assertFalse(registry["parser_enabled"])
+        self.assertTrue(registry["parser_enabled"])
         for unratified_surface in ("traesi umanem pot movda",
                                    "traesi umanem aut movda",
                                    "traesi umanem pos movda"):
             with self.subTest(unratified_surface=unratified_surface):
                 with self.assertRaises(ValueError):
                     self.u.parse_sentence(unratified_surface)
+
+    def test_free_da_ad_de_state_markers(self):
+        self.assertTrue({"da", "ad", "de"} <= self.u.lexicon.keys())
+        for w in ("da", "ad", "de"):
+            self.assertIn("function_word", self.u.lexicon[w]["categories"])
+        made = self.u.parse_sentence("i traesi umanem da pot mov")
+        self.assertEqual(made["valency"], "causative_modal_capacity")
+        self.assertEqual(made["object"]["lemma"], "uman")
+        self.assertEqual(made["state_result"]["head"], "pot")
+        self.assertEqual(made["state_result"]["controller"], "accusative_patient")
+        self.assertEqual(made["state_result"]["action"]["lemma"], "mov")
+        self.assertTrue(made["state_result"]["entails_capacity_acquired"])
+        self.assertFalse(made["state_result"]["entails_action"])
+        change = self.u.parse_sentence("uman traesa ad pot mov de no pot mov")
+        self.assertEqual(change["valency"], "state_transition")
+        a = change["state_transition"]
+        self.assertEqual(a["controller"], "matrix_subject")
+        self.assertEqual(a["destination"]["head"], "pot")
+        self.assertFalse(a["destination"]["negative"])
+        self.assertTrue(a["source"]["negative"])
+        simple = self.u.parse_sentence("uman traesa ad bon de nebon")
+        self.assertEqual(simple["state_transition"]["destination"]["lemma"], "bon")
+        self.assertEqual(simple["state_transition"]["source"]["lemma"], "nebon")
+        previous = self.u.parse_sentence("traesi solidad likwidde")
+        self.assertEqual(previous["valency"], "state_transition")
+        previous2 = self.u.parse_sentence("traesi akwaem aperda")
+        self.assertEqual(previous2["valency"], "causative_transformation")
+        self.assertEqual(self.u.generate_verb("pot", "past", person=3), "potda")
+
+    def test_free_state_markers_do_not_authorize_general_modal_scope(self):
+        for text in (
+            "i traesi umanem da aut mov",
+            "i traesi umanem da pos mov",
+            "i traesi umanem da no pot mov",
+            "i traesi umanem da potda mov",
+            "i traesi umanem da pot pot mov",
+            "uman traesa ad pot mov",
+            "uman traesa de no pot mov ad pot mov",
+            "uman traesa ad pot mov de aut mov",
+            "uman traesa ad pot mov de pot mov de pot mov",
+            "i faki umanem da pot mov",
+        ):
+            with self.subTest(text=text), self.assertRaises(ValueError):
+                self.u.parse_sentence(text)
 
     def test_boundaries_and_provenance(self):
         frames = self.u.valency
