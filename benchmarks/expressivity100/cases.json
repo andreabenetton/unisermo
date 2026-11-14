@@ -773,9 +773,9 @@
       "id": "E096",
       "domain": "Logica, causa e astrazione",
       "italian": "È necessario che la porta sia aperta.",
-      "unisermo": "deb porta aper",
+      "unisermo": "deb porta esa aper",
       "coverage": "exact",
-      "note": "Necessità proposizionale su un predicato di stato."
+      "note": "Necessità proposizionale su uno stato espresso da una proposizione con copula finita."
     },
     {
       "id": "E097",
