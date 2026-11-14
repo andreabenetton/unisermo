@@ -319,7 +319,7 @@
       "italian": "Il conducente parcheggia per tre minuti.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Conducente, parcheggiare e minuto mancanti."
+      "note": "Il conducente e parcheggiare non sono canonici. Tre minuti possono essere misurati come senotodek sekun (180 s); manca però un frame di durata dell'evento."
     },
     {
       "id": "E040",
@@ -341,9 +341,9 @@
       "id": "E042",
       "domain": "Famiglia e relazioni sociali",
       "italian": "La madre insegna al proprio figlio.",
-      "unisermo": "gene doka filem",
+      "unisermo": "gene doka genes filem",
       "coverage": "partial",
-      "note": "Il destinatario e il possesso non sono codificati esattamente."
+      "note": "Il genitivo genes specifica 'il figlio della madre'; resta da ratificare la valenza di dok verso l'allievo/beneficiario (accusativo diretto non prova equivalenza a 'insegnare a')."
     },
     {
       "id": "E043",
@@ -391,7 +391,7 @@
       "italian": "Un nipote ringrazia una zia.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Ringraziare e rapporto nipote insufficienti."
+      "note": "La relazione nipote di zia/zio è già derivabile come filadel (figlio del fratello o della sorella), verificato dal parser; manca il verbo ringraziare."
     },
     {
       "id": "E049",
@@ -407,7 +407,7 @@
       "italian": "Due amici conversano.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Amico e conversare mancanti."
+      "note": "amik è presente come attestazione example_only, non come lemma ratificato; manca una costruzione canonica per conversare reciprocamente (kundik significherebbe solo dire insieme)."
     },
     {
       "id": "E051",
@@ -597,9 +597,9 @@
       "id": "E074",
       "domain": "Quantità e misure",
       "italian": "La bicicletta possiede due ruote.",
-      "unisermo": "bis roda esan",
-      "coverage": "partial",
-      "note": "Due ruote esistono: quantità espressa, ma manca il vincolo di appartenenza alla bicicletta."
+      "unisermo": "biks bis roda esan",
+      "coverage": "exact",
+      "note": "Genitivo biks + bis roda + copula es plurale: esistono due ruote appartenenti alla bicicletta; sintassi e possesso analizzati dal parser. Non implica un vincolo esclusivo 'esattamente due'."
     },
     {
       "id": "E075",
@@ -615,7 +615,7 @@
       "italian": "Il carico ha massa di un chilogrammo.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Unità nota, predicazione della massa non attestata."
+      "note": "La misura uno kilogram è già disponibile (unità di massa). Manca un predicato stabile di massa e il frame che associa misura e oggetto; non introdurre una nuova unità."
     },
     {
       "id": "E077",
@@ -623,15 +623,15 @@
       "italian": "Il treno pesa cento tonnellate.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Peso e misura di tonnellata mancanti."
+      "note": "La massa di cento tonnellate metriche è esprimibile come sen megagram in una misura (equivalenza 100 Mg); manca il predicato 'pesare/avere massa' e la sintassi per applicare la misura al treno. Non serve una nuova unità tonnellata."
     },
     {
       "id": "E078",
       "domain": "Quantità e misure",
       "italian": "Quattro biciclette si muovono e due auto restano ferme.",
-      "unisermo": "for bik movan e bis kar esan fiks",
+      "unisermo": "for bik movan e bis kar no movan",
       "coverage": "partial",
-      "note": "fiks è fissità, non solo assenza di movimento."
+      "note": "Esprime correttamente 'quattro bici si muovono e due auto non si muovono', ma omette la persistenza implicata da 'restano ferme'. Evita il più forte fiks ('fisso')."
     },
     {
       "id": "E079",
@@ -647,7 +647,7 @@
       "italian": "Il minibus possiede quindici sedili.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Sedile e dotazione non definiti."
+      "note": "Mancano il nome 'sedile' e un frame possessivo/dotazione; kunten descrive contenimento fisico attuale, non posti installati o capacità omologata."
     },
     {
       "id": "E081",
@@ -734,8 +734,8 @@
       "domain": "Logica, causa e astrazione",
       "italian": "Il fratello vede il treno e la sorella non lo vede.",
       "unisermo": "adelo vida trenem e adele no vida trenem",
-      "coverage": "partial",
-      "note": "La seconda proposizione ripete 'treno' invece di riprendere il referente con 'lo'; significato pragmatico sostanzialmente simile, ma l'anafora non è codificata."
+      "coverage": "exact",
+      "note": "Ripetere trenem in entrambe le proposizioni conserva le condizioni di verità con lo stesso referente definito; differisce solo l'economia anaforica dell'italiano ('lo'), non il contenuto proposizionale."
     },
     {
       "id": "E092",
@@ -799,7 +799,7 @@
       "italian": "Tutti gli autobus tranne uno si muovono.",
       "unisermo": null,
       "coverage": "gap",
-      "note": "Quantificazione con eccezione di insieme non dimostrata."
+      "note": "L'operatore ekse è confermato, omni ('tutti') è solo decision_attested_not_indexed; non esiste ancora sintassi ratificata per legare l'eccezione a un insieme quantificato ('tutti tranne uno')."
     },
     {
       "id": "E100",
