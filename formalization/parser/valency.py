@@ -148,11 +148,15 @@ class ValencyParser:
             raise ValueError("noncanonical source/destination order outside parser subset")
         return frame["id"]
 
+    def is_mnemonic_verb(self, lemma: str) -> bool:
+        """Only the four ratified derived verbs from bound memor."""
+        return lemma in self.valency["mnemonic"]["frames"]
+
     def has_documented_valency(self, lemma: str) -> bool:
         return (lemma == "traes" or self.is_motion_verb(lemma)
                 or self.is_force_verb(lemma) or self.is_state_copula(lemma)
                 or self.physical_action_base(lemma) is not None
-                or self.is_knowledge_verb(lemma))
+                or self.is_knowledge_verb(lemma) or self.is_mnemonic_verb(lemma))
 
     def valency_evidence(self, lemma: str) -> dict:
         """Expose the evidence boundary for a canonical or productive verb."""
@@ -172,6 +176,8 @@ class ValencyParser:
             source, family = self.valency["physical_action"]["source"], "physical_action"
         elif self.is_knowledge_verb(lemma):
             source, family = self.valency["knowledge"]["source"], "knowledge"
+        elif self.is_mnemonic_verb(lemma):
+            source, family = self.valency["mnemonic"]["source"], "mnemonic"
         return {"lemma": lemma, "status": "documented" if source else "undetermined",
                 "family": family, "source": source,
                 "note": ("Unspecified lexical valency is NOT automatically grammatical"
@@ -209,6 +215,11 @@ class ValencyParser:
             if obj is None or complements:
                 raise ValueError("knowledge content frame requires CONTENT-em and no extra complements")
             return "knowledge_content"
+
+        if self.is_mnemonic_verb(lemma):
+            if obj is None or complements:
+                raise ValueError("mnemonic frame requires CONTENT-em and no extra complements")
+            return self.valency["mnemonic"]["frames"][lemma]["id"]
 
         if self.physical_action_base(lemma) is not None:
             return self._validate_physical_action(lemma, obj, complements)
