@@ -37,7 +37,8 @@
     "nation",
     "spets",
     "uman",
-    "instan"
+    "instan",
+    "fon"
   ],
   "nominal_predicate": [
     "alt",
@@ -84,7 +85,9 @@
     "nelegal",
     "nefas",
     "aper",
-    "klus"
+    "klus",
+    "fiks",
+    "smart"
   ],
   "measurement_prefix": [
     "kwetta",
