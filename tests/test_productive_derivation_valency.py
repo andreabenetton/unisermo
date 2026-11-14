@@ -59,6 +59,24 @@ class ProductiveDerivationAndValencyTests(unittest.TestCase):
             with self.subTest(text=text), self.assertRaises(ValueError):
                 self.u.parse_sentence(text)
 
+    def test_ratified_passive_abil_suffix(self):
+        for form, root in (("movabil", "mov"), ("vidabil", "vid"),
+                           ("dikabil", "dik"), ("fakabil", "fak"),
+                           ("portarabil", "portar")):
+            with self.subTest(form=form):
+                d = self.u.parse_derivation(form)
+                self.assertIsNotNone(d)
+                self.assertEqual((d["base"], d["affix"], d["category"],
+                                  d["operation"]),
+                                 (root, "abil", "adjective", "passive_potential"))
+                self.assertEqual(self.u.analyze_word(form)["analyses"][0]["kind"],
+                                 "derived_adjective")
+                self.assertNotIn(form, self.u.lexicon)
+        for form in ("abil", "potabil", "debabil", "esabil", "fonabil",
+                     "movabilitat", "refakabil"):
+            with self.subTest(unlicensed=form):
+                self.assertIsNone(self.u.parse_derivation(form))
+
     def test_phase_and_associative_prefixes_are_regular_finite_verbs(self):
         for form, base, op in (
             ("refak", "fak", "phase_resume"),

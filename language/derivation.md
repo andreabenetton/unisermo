@@ -14,6 +14,7 @@ phrase rather than attaching inside the derived word.
 | participial / resultative | `-it` | `fakit` | done / made |
 | abstract quality / state / property | `-itat` | `klaritat` | clarity |
 | relational adjective | `-al` | `fakal` | related to making |
+| passive possibility | `-abil` | `movabil` | capable of being moved |
 
 The independent approved **numeric scalar-factor suffix `-fol`** is
 defined in [numerals](numerals.md), not as a general lexical agent or
@@ -22,9 +23,23 @@ instrument suffix. It applies **only to positive canonical cardinals**:
 confuse it with the separate `NUMjer` iteration operator. The earlier
 candidate `-mul` was **not ratified**.
 
-### Capacity and design-purpose suffixes: not yet ratified (2026-11-14)
+### Passive possibility `-abil` (author ratification 2026-11-14)
 
-No productive suffix currently means **“capable of being X-ed”**, **“able to X”**, or **“designed/intended to be X-ed”**. The productive `-al` only means *relating to X*, `-il` means an instrumental artifact for X, and `-it` marks a participial/resultative form; none of these entails potentiality or design purpose. The independent verbal root `pot` expresses the capacity of an actor, not an adjectival derivation. `apt` is separately recorded as **proposed pending explicit ratification**, not an authorized solution to either suffix function. Thus `moval` (“related to movement”) must not automatically be glossed as “mobile/transportable.” A future proposal should separate capacity to undergo an action from being designed for that action. The canonical state-phase family of `es` (`es`, `ines`, `ades`, `dees`, `rees`) concerns being, persistence, entry, exit, and resumption of states: it does **not** encode potential ability to undergo X or an artifact's design purpose. `ades X` means becoming X, not being designed to become X. `ines X` means staying X, not being able to stay X.
+The productive suffix **`-abil`** creates an adjective from a canonical
+non-modal verbal root whose event can affect a patient: *capable of undergoing
+that action* under relevant circumstances. It does **not** assert that the
+action occurred or that someone intended or designed the patient for it.
+Examples: `movabil` (movable), `vidabil` (visible), `dikabil` (sayable).
+This is a passive potential interpretation; `-abil` is **not** an independent
+lexical root and does not mean 'I enable' or 'to enable'. Existing `pot`
+expresses an actor's capacity, not this passive property.
+
+A general **designed-for** derivation remains unratified. `-al` is relational,
+`-il` is an instrument or device, and `-it` is resultative, not potential.
+The canonical state-phase family `es / ines / ades / dees / rees` concerns
+being, remaining, entering, leaving and returning to a state. None of these
+forms inherently means *able to be X* or *made capable of X*. The provisional
+root `apt` is not authorized as an alternative derivational suffix.
 
 ## 2. Agent and instrumental derivation
 
@@ -91,6 +106,7 @@ suffix.
 - `-or` — person/agent
 - `-il` — tool/instrument/device
 - `-al` — relational adjective
+- `-abil` — passive possibility adjective
 
 ## 7. Prefixes retained from the original system
 

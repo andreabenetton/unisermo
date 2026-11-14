@@ -20,6 +20,7 @@ class DerivationParser:
         "il": ("noun", "instrument"),
         "ia": ("noun", "domain_place"),
         "al": ("adjective", "relational_adjective"),
+        "abil": ("adjective", "passive_potential"),
     }
     PHASE_PREFIXES = {
         "in": "continue", "ad": "begin", "de": "cease", "re": "resume"
@@ -46,6 +47,11 @@ class DerivationParser:
             base = lemma[:-len(ending)]
             if ending == "itat":
                 allowed = base in self.properties or base == "uman"
+            elif ending == "abil":
+                # A passive potential presupposes an affected patient.
+                # Only explicitly identified eligible roots are enabled here;
+                # untyped verbs and modals must not silently acquire one.
+                allowed = base in {"mov", "vid", "dik", "fak", "portar"} and base in self.verbs
             else:
                 allowed = base in self.verbs and base not in self.MODAL_HEADS
             if allowed:
