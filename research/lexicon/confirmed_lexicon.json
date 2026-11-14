@@ -1480,6 +1480,15 @@
       "source": "Explicit author ratification 2026-11-14; Romance roda (Portuguese, Catalan, Galician), Latin rota",
       "decision": "Canonical noun for wheel, including vehicle wheels and other mechanical wheels. Does not entail self-propulsion, current motion, or exclusively road-vehicle use. Roda is preferred to the earlier unratified rot/rota candidates.",
       "status": "confirmed"
+    },
+    {
+      "form": "kon",
+      "category": "noun",
+      "meaning_it": "concetto; rappresentazione astratta mentale o semantica",
+      "meaning_en": "concept; abstract mental or semantic representation",
+      "source": "Author ratification 2026-11-14; concept/concepto/concetto international family",
+      "decision": "Independent noun kon for a concept, aligning with productive suffix -kon (concept of X). It does not by itself mean a spontaneous insight, proposal, invention, mental image, plan, or conjecture; these senses of Italian idea/intuizione remain distinct and unratified.",
+      "status": "confirmed"
     }
   ]
 }
