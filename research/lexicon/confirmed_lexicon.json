@@ -1309,6 +1309,15 @@
       "source": "Explicit author ratification 2026-11-14",
       "decision": "In licensed traes transition frame precedes state predicate; follows ad destination state; distinct from phase prefix de- and nominal -de.",
       "status": "confirmed"
+    },
+    {
+      "form": "tren",
+      "category": "noun",
+      "meaning_it": "treno; veicolo ferroviario composto da uno o più elementi destinati a muoversi sui binari",
+      "meaning_en": "train; railway vehicle or connected set of railway vehicles",
+      "source": "Explicit author ratification 2026-11-14",
+      "decision": "Canonical common noun for train, used in transport and motion constructions. No special motion semantics: the noun itself does not assert movement.",
+      "status": "confirmed"
     }
   ]
 }
