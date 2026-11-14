@@ -1471,6 +1471,15 @@
       "source": "Explicit author ratification 2026-11-14: vehicle family, mini-, via compounds",
       "decision": "bik + via; bicycle-oriented physical path.",
       "status": "confirmed"
+    },
+    {
+      "form": "roda",
+      "category": "noun",
+      "meaning_it": "ruota; elemento generalmente circolare che ruota attorno a un asse, impiegato per rotolamento, sostegno o trasmissione del moto",
+      "meaning_en": "wheel; generally circular component rotating around an axle, used for rolling, support or transmission of motion",
+      "source": "Explicit author ratification 2026-11-14; Romance roda (Portuguese, Catalan, Galician), Latin rota",
+      "decision": "Canonical noun for wheel, including vehicle wheels and other mechanical wheels. Does not entail self-propulsion, current motion, or exclusively road-vehicle use. Roda is preferred to the earlier unratified rot/rota candidates.",
+      "status": "confirmed"
     }
   ]
 }

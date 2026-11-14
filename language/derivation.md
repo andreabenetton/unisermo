@@ -480,3 +480,8 @@ The **bound** diminutive prefix `mini-` indicates a vehicle relatively smaller o
 Three explicitly licensed noun compounds are `karvia` (road suitable for vehicles), `trenvia` (railway infrastructure) and `bikvia` (cycle path). They follow **vehicle noun + via**, with physical transit infrastructure as the semantic head. These ratified examples do **not** license arbitrary two-noun concatenation or identify a railway as an operating service. `tren` remains the basic noun for train; no `trenvek` or mandatory `-kar` vehicle suffix is adopted. `vek` is not ratified.
 
 The ratified compounds are entered as canonical whole nouns and take nominal case on the **whole word** (`minibusem`, `trenviaem`, `bikviaad`). The current deterministic parser recognizes these licensed nouns; a general compound grammar is intentionally deferred.
+
+
+## Wheel noun (author ratification 2026-11-14)
+
+`roda` is the canonical common noun for **wheel** (Italian *ruota*): a generally circular mechanical component turning around an axle, used for rolling, support or motion transmission. The choice favors recognizability across Romance forms (Portuguese/Catalan/Galician *roda* and Latin *rota*) and replaces the unratified candidates `rot` and `rota`. It is an independent noun and takes ordinary nominal cases: `roda`, `rodaem`, `rodas`, `rodaad`, `rodade`, `rodain`, `rodada`. `roda` does not itself assert motion or specify that the wheel belongs to a vehicle. No productive new compounds or wheel-count vehicle subclassifications are ratified by this decision.
