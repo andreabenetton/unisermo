@@ -733,9 +733,9 @@
       "id": "E091",
       "domain": "Logica, causa e astrazione",
       "italian": "Il fratello vede il treno e la sorella non lo vede.",
-      "unisermo": "adelo vida trenem e adele no vida trenem",
+      "unisermo": "adelo vida trenem ma adele",
       "coverage": "exact",
-      "note": "Ripetere trenem in entrambe le proposizioni conserva le condizioni di verità con lo stesso referente definito; differisce solo l'economia anaforica dell'italiano ('lo'), non il contenuto proposizionale."
+      "note": "Ellissi contrastiva ratificata nella PR #97: ma + secondo soggetto recupera predicato e oggetto con polarità opposta. La congiunzione e, invece, conserverebbe la polarità positiva."
     },
     {
       "id": "E092",
