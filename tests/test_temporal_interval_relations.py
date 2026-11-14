@@ -93,9 +93,9 @@ class TemporalPropositionParserTests(unittest.TestCase):
                                  "vid" if reverse else "mov")
 
     def test_nominal_tem_stays_nominal(self):
-        # Known nominal time phrase must remain an ordinary complement,
+        # Supported event nominalization must remain an ordinary complement,
         # even when followed by an independent e coordination.
-        for sentence in ("faki tem dia", "faki tem dia e movi"):
+        for sentence in ("faki tem fakit", "faki tem fakit e movi"):
             with self.subTest(sentence=sentence):
                 ast = self.parser.parse_proposition(sentence)
                 self.assertNotEqual(ast["kind"], "temporal_relation")
