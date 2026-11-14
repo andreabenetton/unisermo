@@ -383,7 +383,13 @@ class PropositionParser:
                     or any(w in SUBORDINATES | {"alor", "lim", "ka"} for w in words)):
                 raise ValueError("mixed or nested temporal scope is not defined")
             i = temporal[0]
-            left = self._atom(words[:i])
+            # `imedi` is licensed only immediately before strict before/after;
+            # it modifies the interval gap, never the events or `sim` contact.
+            immediate = i > 0 and words[i - 1] == "imedi"
+            if "imedi" in words and (not immediate or words[i] not in {"pretem", "postem"}
+                                     or words.count("imedi") != 1):
+                raise ValueError("imedi is licensed only before pretem or postem")
+            left = self._atom(words[:i - 1] if immediate else words[:i])
             right = self._atom(words[i + 1:])
             if left["kind"] not in TEMPORAL_OPERANDS or right["kind"] not in TEMPORAL_OPERANDS:
                 raise ValueError("temporal relation requires two simple finite event clauses")
@@ -391,10 +397,12 @@ class PropositionParser:
                 raise ValueError("temporal questions need explicit future scoping rules")
             return {"kind": "temporal_relation", "operator": words[i],
                     "relation": TEMPORAL_RELATIONS[words[i]],
+                    "proximity": ("contextually_immediate" if immediate else None),
+                    "proximity_marker": ("imedi" if immediate else None),
                     "left": left, "right": right,
                     "interval_semantics": "bounded_positive_duration",
                     "asserts_event_occurrence": False,
-                    "limitations": "structure only; no inferred event reference, bounds or truth"}
+                    "limitations": "structure only; no inferred event reference, bounds, delay threshold or truth"}
         # Right-associative connector chains, without an implicit
         # precedence hierarchy. Distinguish nominal 'due NP' from
         # 'P due Q' by the existence of a finite clause in Q.
@@ -405,6 +413,8 @@ class PropositionParser:
             left = self._expression(words[:i], depth + 1)
             right = self._expression(words[i + 1:], depth + 1)
             return self._combine(op, left, right)
+        if "imedi" in words:
+            raise ValueError("imedi must directly modify a temporal pretem/postem relation")
         return self._atom(words)
 
     def _combine(self, op: str, left: dict, right: dict,

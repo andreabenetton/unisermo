@@ -36,7 +36,8 @@
     "genogeno",
     "nation",
     "spets",
-    "uman"
+    "uman",
+    "instan"
   ],
   "nominal_predicate": [
     "alt",
@@ -65,7 +66,8 @@
     "ekse",
     "eksese",
     "e",
-    "o"
+    "o",
+    "imedi"
   ],
   "predicate_property": [
     "bon",

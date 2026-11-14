@@ -765,6 +765,18 @@
     },
     {
       "categories": [
+        "function_word"
+      ],
+      "decision": "Licensed as a premodifier in `imedi pretem` and `imedi postem` for bounded event-event temporal relations. Preserves strict before/after ordering while imposing a context-sensitive small nonzero gap, without choosing a numerical threshold. Does not entail exact endpoint contact (`sim`), and is not licensed as an arbitrary temporal relation or free adverb in this initial grammar subset.",
+      "form": "imedi",
+      "meaning_en": "immediately; without contextually significant delay",
+      "meaning_it": "immediatamente; senza ritardo significativo rispetto al contesto",
+      "origin": "Latin immediatus, Romance immediate/immediato; author ratification 2026-11-14",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
         "verb"
       ],
       "form": "ines",
@@ -778,6 +790,18 @@
       "form": "inmov",
       "source": "language/verb_specification.md",
       "status": "decision_attested_not_indexed"
+    },
+    {
+      "categories": [
+        "noun"
+      ],
+      "decision": "A mathematical instant is a time point, not a positive-duration event interval. It has no duration. Allen's 13 strict interval relations do not apply directly to zero-duration instants; mixed point/interval relations require a separately typed semantics. It does not imply an arbitrarily small positive duration.",
+      "form": "instan",
+      "meaning_en": "instant; zero-duration point on a time axis",
+      "meaning_it": "istante; punto temporale di durata nulla",
+      "origin": "Latin instans / Italian istante / French instant / Spanish instante; author ratification 2026-11-14",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
     },
     {
       "categories": [
