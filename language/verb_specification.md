@@ -422,18 +422,18 @@ They encode direction and must not be confused with phase-derived `admov`
 
 ## 11. Ratified physical and cognitive verb roots (2026-10-25)
 
-`fer` = take/grasp physically; `portar` = carry/transport; `kap` =
+`prend` = take/grasp physically; `fer` = achieved cross-domain transfer; `portar` = carry/transport; `kap` =
 understand (no longer take/capture); `sap` = know; `pens` = think.
 These roots have distinct event/state meanings. Their phase derivatives
 are defined by the regular `ad-/in-/de-/re-` operators in
 [derivation.md](derivation.md), not by Latin or modern homonyms.
 
-## 12. Physical-action valency: `fer`, `portar`, `ten`, `kunten` (ratified 2026-11-13)
+## 12. Physical-action valency: `prend`, `portar`, `ten`, `kunten` (ratified 2026-11-13)
 
 The canonical overt-argument patterns use the **existing** case
 inventory and are distinguished by the action root:
 
-- `Y fer X-em [SOURCE-de]`: Y physically takes/grasp X,
+- `Y prend X-em [SOURCE-de]`: Y physically takes/grasp X,
   optionally from a *physical* source. This does **not**
   entail carrying, ownership, permission or continued holding.
 - `Y portar X-em [SOURCE-de] [DEST-ad]`: Y physically carries
@@ -448,12 +448,12 @@ inventory and are distinguished by the action root:
   be a volitional agent; no ownership or abstract
   part-whole claim follows from this verb.
 
-`SOURCE-de` attached to `fer` is an origin, *not*
+`SOURCE-de` attached to `prend` is an origin, *not*
 necessarily a former owner. `kunten` remains a **lexicalized
 compound**; productive associative `kun-` does not
 mean containment on other verbs. A regular single phase
 prefix preserves the base's arguments; a productive
-associative event prefix does so for `fer`, `portar`
+associative event prefix does so for `prend`, `portar`
 and `ten`, without adding an obligatory co-agent.
 A further `kun-` on lexicalized `kunten`
 (`kunkunten`) is outside the bounded approved subset. A separate locative
@@ -536,3 +536,21 @@ The operator's `root + time(Ø/d/f)` is now the canonical **propositional** head
 `deb P` expresses **necessity under the relevant possible-world/condition domain**, not automatically an agent's duty. It is semantically distinguished from normative `debi V`. `no deb P` means 'not necessary P' (can be false); `deb no P` means 'necessary not-P'. The logical equivalence `deb P` = `no pos no P` is valid **only when the same possibility domain** is held fixed. Neither bare `pos` nor bare `deb` asserts that the evaluated proposition is true just by occurring as a modal assertion.
 
 Embedded verbal tense is **relative to the operator evaluation time** (assessment/attitude time), not independently assumed to be relative to utterance time. `posd uman movfa` means that at the past assessment time it was possible the person would move *later than that past time*. `i sapd u movdu` means that at a past attitude time I knew you had moved *earlier than that past time*. To disambiguate calendar-time reference, supply an independently valid temporal phrase; no new absolute-time morpheme is introduced. The operator's personless tense does not license recursive modal stacking or non-Boolean discourse mixing.
+
+
+### Domain-transfer `fer` (author ratification 2026-11-15)
+
+The former physical take/grasp sense of `fer` is **retired** and
+replaced by `prend`. The new `fer` expresses an achieved transfer
+of a physical or abstract X into a destination domain:
+`Y fer X-em [SOURCE-de] DEST-ad`.
+SOURCE is optional; DEST is obligatory and denotes accomplished
+availability/presence/attribution, not just direction. The source need
+not lose or retain X. The act does not inherently imply duplication,
+physical carriage, or ownership change. `prend`, `portar`,
+`mov`, `traes`, and mnemonic `memor` keep independent roles.
+The four regular phase derivatives `adfer/infer/defer/refer` modify
+the transfer event; `infer` cannot independently mean cognitive
+deduction. The parser must require explicit X-em and DEST-ad and
+preserve provenance/achievement distinctions. All other frames
+remain fail-closed.
