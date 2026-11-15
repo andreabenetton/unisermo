@@ -46,7 +46,7 @@ class PhysicalActionValencyTests(unittest.TestCase):
         self.assertEqual(x["complements"][0]["nominal"]["lemma"], "uman")
         self.assertEqual(x["argument_roles"]["case_complements"],
                          [{"case": "ablative", "role": "physical_origin"}])
-        self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_ownership_transprend"])
+        self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_ownership_transfer"])
         self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_transport"])
         self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_permission"])
         for bad in ("prendi", "prendi domde", "prendi portaem umanad",
@@ -69,7 +69,7 @@ class PhysicalActionValencyTests(unittest.TestCase):
                 self.assertEqual([z["case"] for z in x["complements"]], cases)
                 self.assertEqual([z["role"] for z in x["argument_roles"]["case_complements"]], roles)
                 self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_arrival"])
-                self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_ownership_transprend"])
+                self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_ownership_transfer"])
         for bad in ("portari", "portari domde", "portari domad",
                     "portari portaem domde domde",
                     "portari portaem domad umande",
