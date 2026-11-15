@@ -669,11 +669,11 @@
       "categories": [
         "verb_root"
       ],
-      "decision": "Physical acquisition/grasp, distinct from transporting (portar). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words.",
+      "decision": "General domain transfer: X-em arrives in or becomes available/attributed to destination DEST-ad; optional SOURCE-de names provenance. Mandatory destination and object; source optional. Achieved destination relation entailed; no necessary physical displacement, original deletion, copying, ownership transfer, or carrier transport; juridical right transfer has independently governed domain semantics. Regular phase adfer/infer/defer/refer remain begin/continue/cease/resume transfer; infer is NOT a cognitive inference verb. Physical take/grasp is now prend.",
       "form": "fer",
-      "meaning_en": "take; grasp physically",
-      "meaning_it": "prendere; afferrare fisicamente",
-      "origin": "Author ratification 2026-10-25; Latin ferre (historically carry; semantic assignment deliberate)",
+      "meaning_en": "transfer an entity across domains, physical, informational, or juridical",
+      "meaning_it": "trasferire un'entità da un dominio di origine a uno di destinazione, anche informativo o giuridico",
+      "origin": "Author semantic replacement 2026-11-15; Latin ferre; supersedes physical-grasp sense",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
@@ -1809,6 +1809,18 @@
       "meaning_en": "be able/capable of performing an action",
       "meaning_it": "potere per capacita; essere in grado di compiere un'azione",
       "origin": "Author approval 2026-11-12; Latin potere/potentia; international potent/potency",
+      "source": "research/lexicon/confirmed_lexicon.json",
+      "status": "confirmed_lexicon"
+    },
+    {
+      "categories": [
+        "verb_root"
+      ],
+      "decision": "Replaces former fer physical acquisition, with Y prend X-em [SOURCE-de]. Requires physical patient; does not entail transport, permission or transfer of ownership. Standard adprend/inprend/deprend/reprend and kunprend are regular phase/associative derivatives.",
+      "form": "prend",
+      "meaning_en": "take; grasp physically",
+      "meaning_it": "prendere; afferrare fisicamente",
+      "origin": "Author ratification 2026-11-15; Italian prendere / Romance prendre",
       "source": "research/lexicon/confirmed_lexicon.json",
       "status": "confirmed_lexicon"
     },
