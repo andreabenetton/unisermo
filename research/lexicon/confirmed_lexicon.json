@@ -791,11 +791,11 @@
     {
       "form": "fer",
       "category": "verb_root",
-      "meaning_it": "prendere; afferrare fisicamente",
-      "meaning_en": "take; grasp physically",
+      "meaning_it": "trasferire un'entità da un dominio di origine a uno di destinazione, anche informativo o giuridico",
+      "meaning_en": "transfer an entity across domains, physical, informational, or juridical",
       "status": "confirmed",
-      "source": "Author ratification 2026-10-25; Latin ferre (historically carry; semantic assignment deliberate)",
-      "decision": "Physical acquisition/grasp, distinct from transporting (portar). Phase derivatives adfer/infer/defer/refer are compositional, not identical to familiar natural-language words."
+      "source": "Author semantic replacement 2026-11-15; Latin ferre; supersedes physical-grasp sense",
+      "decision": "General domain transfer: X-em arrives in or becomes available/attributed to destination DEST-ad; optional SOURCE-de names provenance. Mandatory destination and object; source optional. Achieved destination relation entailed; no necessary physical displacement, original deletion, copying, ownership transfer, or carrier transport; juridical right transfer has independently governed domain semantics. Regular phase adfer/infer/defer/refer remain begin/continue/cease/resume transfer; infer is NOT a cognitive inference verb. Physical take/grasp is now prend."
     },
     {
       "form": "portar",
@@ -1497,6 +1497,15 @@
       "meaning_en": "bound memory-domain root: retained trace and potential retrieval; not independently a noun or verb",
       "source": "Author ratification 2026-11-14; international memory/memoria family",
       "decision": "Bound semantic root, not a standalone noun or verb. Special licensed derivations: admemor encode a content as retained memory; inmemor maintain its retention; dememor cease retaining/loss of mnemonic trace; rememor retrieve to current awareness a previously accessible still-retained trace, without erasure, reacquisition of knowledge, or implication of new storage. These four derived verbs govern mnemonic content in accusative. The -ia nominal derivative memoria names the memory storage domain; the licensing is restricted to memor, not a universal extension of -ia to arbitrary roots. Distinct from sap knowledge and resap renewed knowledge.",
+      "status": "confirmed"
+    },
+    {
+      "form": "prend",
+      "category": "verb_root",
+      "meaning_it": "prendere; afferrare fisicamente",
+      "meaning_en": "take; grasp physically",
+      "source": "Author ratification 2026-11-15; Italian prendere / Romance prendre",
+      "decision": "Replaces former fer physical acquisition, with Y prend X-em [SOURCE-de]. Requires physical patient; does not entail transport, permission or transfer of ownership. Standard adprend/inprend/deprend/reprend and kunprend are regular phase/associative derivatives.",
       "status": "confirmed"
     }
   ]

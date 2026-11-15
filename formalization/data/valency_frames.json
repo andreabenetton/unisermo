@@ -12,7 +12,8 @@
     "language/verb_specification.md#12-physical-action-valency-fer-portar-ten-kunten-ratified-2026-11-13",
     "docs/ldr/LDR-0014-physical-action-valency.md",
     "language/verb_specification.md#13-knowledge-state-valency-sap-family-ratified-2026-11-13",
-    "docs/ldr/LDR-0019-sap-knowledge-family.md"
+    "docs/ldr/LDR-0019-sap-knowledge-family.md",
+    "language/derivation.md#ratified-domain-transfer-fer-versus-physical-taking-prend-2026-11-15"
   ],
   "motion": {
     "base": "mov",
@@ -168,17 +169,6 @@
     "allow_existing_free_relators": true,
     "maximum_each_case": 1,
     "frames": {
-      "fer": {
-        "id": "physical_acquisition",
-        "subject_role": "taker",
-        "object_role": "physically_acquired_entity",
-        "case_roles": {
-          "ablative": "physical_origin"
-        },
-        "entails_transport": false,
-        "entails_ownership_transfer": false,
-        "entails_permission": false
-      },
       "portar": {
         "id": "physical_transport",
         "subject_role": "carrier",
@@ -207,6 +197,17 @@
         "requires_volitional_subject": false,
         "entails_ownership": false,
         "entails_abstract_inclusion": false
+      },
+      "prend": {
+        "id": "physical_acquisition",
+        "subject_role": "taker",
+        "object_role": "physically_acquired_entity",
+        "case_roles": {
+          "ablative": "physical_origin"
+        },
+        "entails_transport": false,
+        "entails_ownership_transfer": false,
+        "entails_permission": false
       }
     }
   },
@@ -279,5 +280,43 @@
     "required_object": "CONTENT-em",
     "case_complements": [],
     "note": "rememor restores accessibility of retained content, not prior knowledge after loss; no extra source/destination frame automatically licensed"
+  },
+  "domain_transfer": {
+    "source": "language/derivation.md#ratified-domain-transfer-fer-versus-physical-taking-prend-2026-11-15",
+    "status": "ratified",
+    "base": "fer",
+    "phase_prefixes": [
+      "ad",
+      "in",
+      "de",
+      "re"
+    ],
+    "associative_prefix": "kun",
+    "object_required": true,
+    "object_role": "transferred_entity",
+    "subject_role": "transfer_initiator",
+    "source_case": "ablative",
+    "source_role": "transfer_origin",
+    "source_optional": true,
+    "destination_case": "dative_allative",
+    "destination_role": "achieved_destination_domain",
+    "destination_required": true,
+    "canonical_case_order": [
+      "ablative",
+      "dative_allative"
+    ],
+    "max_each_case": 1,
+    "allowed_independent_adjunct_cases": [
+      "locative"
+    ],
+    "frame": "domain_transfer",
+    "entails_destination_relation": true,
+    "entails_physical_motion": false,
+    "entails_source_deletion": false,
+    "entails_source_retention": false,
+    "entails_copying": false,
+    "entails_ownership_transfer": false,
+    "entails_carriage": false,
+    "note": "Destination -ad denotes achieved domain presence/access/attribution; do not confuse with portar -ad indicating direction only. The optional source does not imply original is erased, preserved, or copied. Juridical use names resulting attribution without silently licensing transfer of ownership for every transfer; arbitrary propositional arguments excluded."
   }
 }

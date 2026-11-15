@@ -875,6 +875,9 @@ class PropositionParser:
                 physical_roles = self.physical_argument_roles(dependent, complements)
                 if physical_roles is not None:
                     out["dependent"]["argument_roles"] = physical_roles
+                transfer_roles = self.domain_transfer_argument_roles(dependent, complements)
+                if transfer_roles is not None:
+                    out["dependent"]["argument_roles"] = transfer_roles
             if question:
                 out["question"] = question
         else:
@@ -918,6 +921,9 @@ class PropositionParser:
                 physical_roles = self.physical_argument_roles(head, complements)
                 if physical_roles is not None:
                     out["argument_roles"] = physical_roles
+                transfer_roles = self.domain_transfer_argument_roles(head, complements)
+                if transfer_roles is not None:
+                    out["argument_roles"] = transfer_roles
         if front is not None:
             out["preposed_locative"] = front
         return self._annotate_focus(out)

@@ -213,3 +213,9 @@ of recent approved PRs. LDR-0014 governs the accepted scope.
 This RFC is historical evidence only. Its extra questions
 about discourse-driven object omission, type systems and
 mixed/stacked cases remain open until separately decided.
+
+
+> **Later ratification (2026-11-15):** all historical uses of `fer`
+> in this RFC for physical taking are superseded by `prend`.
+> `fer` now means achieved cross-domain transfer. This RFC is retained
+> as historical evidence and is not the current grammar.

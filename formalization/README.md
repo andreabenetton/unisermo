@@ -122,19 +122,19 @@ This is not a ratification of new lexical argument frames.
 
 ## Four ratified physical-action frames (2026-11-13)
 
-The physical-action valency families `fer`, `portar`,
+The physical-action valency families `prend`, `portar`,
 `ten` and `kunten` have **separate semantic roles**
 despite sharing the ordinary accusative `-em`.
 
 ```sh
-python3 -m formalization proposition 'i feri portaem umande'
+python3 -m formalization proposition 'i prendi portaem umande'
 python3 -m formalization proposition 'i portari portaem domde umanad'
 python3 -m formalization proposition 'i teni portaem'
 python3 -m formalization proposition 'dom kuntena akwaem'
 python3 -m formalization valency kunten
 ```
 
-`fer` optionally selects a *physical* `SOURCE-de`;
+`prend` optionally selects a *physical* `SOURCE-de`;
 `portar` optionally selects a spatial `SOURCE-de` and
 `DEST-ad`, without implying arrival; `ten` means
 maintained physical/control constraint; `kunten`
@@ -291,3 +291,14 @@ measuring token savings before those exist would be premature.
 The builder, parser and invariant checks use Python's standard library. When
 `jsonschema` is available, `validate` additionally validates JSON schema
 shapes. It is optional and cannot substitute for the semantic checks.
+
+
+### Ratified cross-domain transfer (2026-11-15)
+
+`prend` now means physical taking/grasping, retaining the former
+`fer` physical-source valency. `fer` now selects explicit
+`X-em` and an achieved destination `DEST-ad`, with optional
+`SOURCE-de` preceding it. This covers physical or informational
+transfer (and typed juridical attribution), without asserting source
+deletion, duplication, ownership transfer, or physical motion.
+`portar` remains physical carriage without arrival entailment.

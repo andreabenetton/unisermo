@@ -148,6 +148,66 @@ class ValencyParser:
             raise ValueError("noncanonical source/destination order outside parser subset")
         return frame["id"]
 
+    def domain_transfer_base(self, lemma: str) -> str | None:
+        """Ratified achieved transfer, distinct from physical transport."""
+        spec = self.valency["domain_transfer"]
+        if lemma == spec["base"]:
+            return lemma
+        parsed = self.parse_derivation(lemma)
+        if (parsed is not None and parsed["category"] == "verb"
+                and parsed["base"] == spec["base"]
+                and parsed["operation"] in {
+                    "phase_begin", "phase_continue",
+                    "phase_cease", "phase_resume", "joint_event"
+                }):
+            return spec["base"]
+        return None
+
+    def domain_transfer_argument_roles(self, lemma: str, complements: list[dict]) -> dict | None:
+        if self.domain_transfer_base(lemma) is None:
+            return None
+        spec = self.valency["domain_transfer"]
+        roles = {
+            spec["source_case"]: spec["source_role"],
+            spec["destination_case"]: spec["destination_role"]
+        }
+        return {
+            "base": spec["base"],
+            "subject": spec["subject_role"],
+            "object": {"case": "accusative", "role": spec["object_role"]},
+            "case_complements": [
+                {"case": part["case"], "role": roles.get(part["case"], "event_location")}
+                for part in complements if part["kind"] == "case_complement"
+            ],
+            "semantic_entailments": {
+                key: value for key, value in spec.items()
+                if key.startswith("entails_")
+            },
+        }
+
+    def _validate_domain_transfer(self, lemma: str, obj: dict | None,
+                                  complements: list[dict]) -> str:
+        spec = self.valency["domain_transfer"]
+        if obj is None:
+            raise ValueError("fer transfer requires transferred entity X-em")
+        roles = []
+        for part in complements:
+            if part["kind"] != "case_complement":
+                continue
+            case = part["case"]
+            if case not in {spec["source_case"], spec["destination_case"],
+                            *spec["allowed_independent_adjunct_cases"]}:
+                raise ValueError("fer transfer: unsupported case " + case)
+            if case in roles:
+                raise ValueError("fer transfer: duplicate case " + case)
+            roles.append(case)
+        if spec["destination_case"] not in roles:
+            raise ValueError("fer transfer requires achieved destination DEST-ad")
+        ordered = [case for case in roles if case in spec["canonical_case_order"]]
+        if ordered != sorted(ordered, key=spec["canonical_case_order"].index):
+            raise ValueError("fer transfer source must precede destination")
+        return spec["frame"]
+
     def is_mnemonic_verb(self, lemma: str) -> bool:
         """Only the four ratified derived verbs from bound memor."""
         return lemma in self.valency["mnemonic"]["frames"]
@@ -156,6 +216,7 @@ class ValencyParser:
         return (lemma == "traes" or self.is_motion_verb(lemma)
                 or self.is_force_verb(lemma) or self.is_state_copula(lemma)
                 or self.physical_action_base(lemma) is not None
+                or self.domain_transfer_base(lemma) is not None
                 or self.is_knowledge_verb(lemma) or self.is_mnemonic_verb(lemma))
 
     def valency_evidence(self, lemma: str) -> dict:
@@ -174,6 +235,8 @@ class ValencyParser:
             source, family = self.valency["copula_state"]["source"], "state_predication"
         elif self.physical_action_base(lemma) is not None:
             source, family = self.valency["physical_action"]["source"], "physical_action"
+        elif self.domain_transfer_base(lemma) is not None:
+            source, family = self.valency["domain_transfer"]["source"], "domain_transfer"
         elif self.is_knowledge_verb(lemma):
             source, family = self.valency["knowledge"]["source"], "knowledge"
         elif self.is_mnemonic_verb(lemma):
@@ -223,6 +286,9 @@ class ValencyParser:
 
         if self.physical_action_base(lemma) is not None:
             return self._validate_physical_action(lemma, obj, complements)
+
+        if self.domain_transfer_base(lemma) is not None:
+            return self._validate_domain_transfer(lemma, obj, complements)
 
         if self.is_force_verb(lemma):
             spec = self.valency["force_manner"]

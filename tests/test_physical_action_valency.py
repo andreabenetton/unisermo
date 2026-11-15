@@ -19,7 +19,7 @@ class PhysicalActionValencyTests(unittest.TestCase):
 
     def test_overt_object_frames_and_distinct_roles(self):
         samples = [
-            ("i feri portaem", "fer", "physical_acquisition", "taker", "physically_acquired_entity"),
+            ("i prendi portaem", "prend", "physical_acquisition", "taker", "physically_acquired_entity"),
             ("i portari portaem", "portar", "physical_transport", "carrier", "cargo"),
             ("i teni portaem", "ten", "maintained_constraint", "constraint_maintainer", "constrained_entity"),
             ("dom kuntena akwaem", "kunten", "spatial_containment", "physical_container", "physically_contained_entity"),
@@ -39,8 +39,8 @@ class PhysicalActionValencyTests(unittest.TestCase):
                 self.assertEqual(self.u.valency_evidence(lemma)["family"], "physical_action")
                 self.assertEqual(node["argument_roles"]["case_complements"], [])
 
-    def test_fer_source_is_physical_not_ownership(self):
-        x = self.u.parse_sentence("i feri portaem umande")
+    def test_prend_source_is_physical_not_ownership(self):
+        x = self.u.parse_sentence("i prendi portaem umande")
         self.assertEqual(x["valency"], "physical_acquisition")
         self.assertEqual(x["complements"][0]["case"], "ablative")
         self.assertEqual(x["complements"][0]["nominal"]["lemma"], "uman")
@@ -49,8 +49,8 @@ class PhysicalActionValencyTests(unittest.TestCase):
         self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_ownership_transfer"])
         self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_transport"])
         self.assertFalse(x["argument_roles"]["semantic_entailments"]["entails_permission"])
-        for bad in ("feri", "feri domde", "feri portaem umanad",
-                    "feri portaem domde umande", "feri portaem aperda"):
+        for bad in ("prendi", "prendi domde", "prendi portaem umanad",
+                    "prendi portaem domde umande", "prendi portaem aperda"):
             with self.subTest(rejected=bad), self.assertRaises(ValueError):
                 self.u.parse_sentence(bad)
 
@@ -100,10 +100,10 @@ class PhysicalActionValencyTests(unittest.TestCase):
 
     def test_regular_single_prefix_and_lexical_specialization(self):
         for lemma, base, frame in (
-            ("adfer", "fer", "physical_acquisition"),
-            ("infer", "fer", "physical_acquisition"),
-            ("defer", "fer", "physical_acquisition"),
-            ("refer", "fer", "physical_acquisition"),
+            ("adprend", "prend", "physical_acquisition"),
+            ("inprend", "prend", "physical_acquisition"),
+            ("deprend", "prend", "physical_acquisition"),
+            ("reprend", "prend", "physical_acquisition"),
             ("adportar", "portar", "physical_transport"),
             ("inportar", "portar", "physical_transport"),
             ("deportar", "portar", "physical_transport"),
@@ -112,7 +112,7 @@ class PhysicalActionValencyTests(unittest.TestCase):
             ("inten", "ten", "maintained_constraint"),
             ("deten", "ten", "maintained_constraint"),
             ("reten", "ten", "maintained_constraint"),
-            ("kunfer", "fer", "physical_acquisition"),
+            ("kunprend", "prend", "physical_acquisition"),
             ("kunportar", "portar", "physical_transport"),
             ("adkunten", "kunten", "spatial_containment"),
         ):
@@ -135,7 +135,7 @@ class PhysicalActionValencyTests(unittest.TestCase):
 
     def test_modal_complements_share_checked_frames(self):
         samples = [
-            ("debi fer portaem", "physical_acquisition", "physically_acquired_entity"),
+            ("debi prend portaem", "physical_acquisition", "physically_acquired_entity"),
             ("auti portar portaem domad", "physical_transport", "cargo"),
             ("poti ten portaem", "maintained_constraint", "constrained_entity"),
             ("sapi kunten akwaem", "spatial_containment", "physically_contained_entity"),
@@ -146,14 +146,14 @@ class PhysicalActionValencyTests(unittest.TestCase):
                 self.assertEqual(node["kind"], "servile_clause")
                 self.assertEqual(node["dependent"]["valency"], frame)
                 self.assertEqual(node["dependent"]["argument_roles"]["object"]["role"], role)
-        for bad in ("debi fer", "auti portar domad", "poti ten",
+        for bad in ("debi prend", "auti portar domad", "poti ten",
                     "sapi kunten", "debi kunten akwaem domad"):
             with self.subTest(rejected=bad), self.assertRaises(ValueError):
                 self.u.parse_sentence(bad)
 
     def test_free_relators_and_local_event_locative_remain_adjuncts(self):
         for phrase, lemma in (
-            ("i feri portaem kun uman", "fer"),
+            ("i prendi portaem kun uman", "prend"),
             ("i portari portaem domin", "portar"),
             ("i teni portaem domin", "ten"),
             ("dom kuntena akwaem kun uman", "kunten"),
@@ -171,10 +171,10 @@ class PhysicalActionValencyTests(unittest.TestCase):
         self.assertEqual(val["status"], "ratified")
         self.assertTrue(val["object_required_in_parser"])
         self.assertEqual(val["omitted_objects"], "undecided_for_discourse")
-        self.assertEqual(set(val["frames"]), {"fer", "portar", "ten", "kunten"})
+        self.assertEqual(set(val["frames"]), {"prend", "portar", "ten", "kunten"})
         self.assertEqual(val["lexicalized_containment"], "kunten")
         self.assertIn("LDR-0014", val["source"])
-        for lemma in ("fer", "portar", "ten", "kunten"):
+        for lemma in ("prend", "portar", "ten", "kunten"):
             p = subprocess.run([sys.executable, "-m", "formalization", "valency", lemma],
                                capture_output=True, text=True, check=True)
             self.assertEqual(json.loads(p.stdout)["status"], "documented")

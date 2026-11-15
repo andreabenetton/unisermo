@@ -57,7 +57,7 @@ licensing for other roots is openly classified
 spelling.
 
 Accepted LDR-0014 distinguishes the roles of direct
-`X-em` participants in `fer`, `portar`, `ten`
+`X-em` participants in `prend`, `portar`, `ten`
 and `kunten`. The parser emits `argument_roles`
 for taking from a physical source, carrying toward a
 destination, maintaining constraint and spatial
@@ -138,3 +138,11 @@ A measured scalar comprises a quantitative expression and a **confirmed typed un
 ## All 24 canonical SI decimal prefixes (LDR-0029, 2026-11-13)
 
 `formalization/data/si_prefixes.json` fixes a complete, 24-entry list of adapted SI prefix spellings, original BIPM name and symbol, and **exact decimal exponent**. The measurement parser's `parse_measurement_unit` recovers a typed unit with its root, prefix, dimension and exact rational scale factor. Prefixes are **single and fused** with independently ratified units only; the parser rejects standalone prefixes, stacked prefixes, and `miligram` (the confirmed prefix is `milli-`). `mila` remains a cardinal, not the metric kilo prefix; `mega/giga` have both a numeral and a typed prefixed-unit role. Interval unit ellipsis copies the complete prefixed unit. The original wording is preserved rather than silently converting `mila gram` to `uno kilogram`.
+
+
+The 2026-11-15 ratification adds `fer` **achieved cross-domain
+transfer**, preserving a separate typed `domain_transfer` frame
+with X-em, optional origin SOURCE-de, and mandatory achieved
+DEST-ad. The former physical take sense moves to `prend`.
+The parser cannot infer source erasure, copied originals, legal
+validity, or physical motion from the transfer frame alone.

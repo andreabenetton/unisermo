@@ -308,10 +308,9 @@ These are not derivational affixes or relative superlatives.
 
 The confirmed root distinctions are: `pens` = think / mentally process;
 `kap` = understand / cognitively grasp meaning; `sap` = know / possess
-knowledge; `fer` = physically take / grasp; `portar` = carry / transport.
+knowledge; `prend` = physically take / grasp; `fer` = achieved transfer between domains; `portar` = carry / transport.
 The former senses `kap` = take/capture and `sap` = understand are retired.
-The etymology of `fer` (Latin *ferre*, 'carry') must not override its explicitly
-ratified Unisermo meaning 'take/grasp'; `portar` denotes carrying/transport.
+Author ratification 2026-11-15 supersedes former `fer` = take/grasp: `prend` is physical taking, `fer` is cross-domain transfer with an achieved destination relation; `portar` denotes physical carriage without guaranteed arrival.
 
 Each verb forms its **own regular phase family** using the already canonical
 prefixes, with no borrowed idiomatic senses:
@@ -319,6 +318,7 @@ prefixes, with no borrowed idiomatic senses:
 | Base | Begin (`ad-`) | Continue (`in-`) | Cease (`de-`) | Resume (`re-`) |
 |---|---|---|---|---|
 | `fer` | `adfer` | `infer` | `defer` | `refer` |
+| `prend` | `adprend` | `inprend` | `deprend` | `reprend` |
 | `portar` | `adportar` | `inportar` | `deportar` | `reportar` |
 | `kap` | `adkap` | `inkap` | `dekap` | `rekap` |
 | `sap` | `adsap` | `insap` | `desap` | `resap` |
@@ -333,8 +333,8 @@ ordinary meaning of a state; they are not a new lexical sense.
 
 `ten` means to hold/maintain a physical or control **constraint over time**,
 not to preserve a property or state as such. State persistence is already
-expressed by `ines` from `es`. `fer` is physical acquisition and
-`portar` carrying/transport. The ordinary phase family is `adten` begin
+expressed by `ines` from `es`. `prend` is physical acquisition, `fer` is achieved domain transfer,
+and `portar` carrying/transport. The ordinary phase family is `adten` begin
 holding, `inten` continue holding, `deten` cease holding/release the
 constraint (without entailing motion), and `reten` resume holding.
 
@@ -392,7 +392,7 @@ ratified. See [numerals](numerals.md) section 8.
 
 ### Canonical physical-action argument frames (ratified 2026-11-13)
 
-The distinct meanings of `fer`, `portar`, `ten` and the
+The distinct physical-action meanings of `prend`, `portar`, `ten` and the
 **lexicalized** compound `kunten` also govern distinct thematic roles.
 All four select an accusative `X-em` participant in the canonical
 **overt-argument** construction. No case suffix, morph or lexical root
@@ -400,13 +400,13 @@ is introduced.
 
 | Head | Canonical frame | Semantic roles |
 |---|---|---|
-| `fer` | `Y-NOM fer X-em [SOURCE-de]` | Y **acquirer/taker**, X physically grasped/acquired; optional SOURCE physical origin |
+| `prend` | `Y-NOM prend X-em [SOURCE-de]` | Y **acquirer/taker**, X physically grasped/acquired; optional SOURCE physical origin |
 | `portar` | `Y-NOM portar X-em [SOURCE-de] [DEST-ad]` | Y **carrier**, X transported cargo; optional spatial origin and destination |
 | `ten` | `Y-NOM ten X-em` | Y holder/controller, X the entity constrained or held over time |
 | `kunten` | `CONTAINER-NOM kunten CONTENTS-em` | subject physical **container**, object physical contents |
 
 These are **different semantic relations with the same syntactic
-accusative**. `fer` does not imply transport, ownership transfer
+accusative**. `prend` does not imply transport, ownership transfer
 or permission. `portar` entails a transporting/carrying event, but
 `DEST-ad` marks direction **toward** a destination, never proof
 of arrival. `ten` specifies maintained physical/control constraint
@@ -415,7 +415,7 @@ containment; its subject need not be animate, conscious or volitional.
 Neither `ten` nor `kunten` acquires an inherent motion SOURCE-de
 or DEST-ad argument.
 
-The optional `SOURCE-de` with `fer` names a **physical
+The optional `SOURCE-de` with `prend` names a **physical
 origin/source**, not necessarily a previous owner or permission
 grantor. With `portar`, optional SOURCE-de and DEST-ad
 describe the spatial transport event, not ownership transfer.
@@ -426,8 +426,8 @@ of `kunten`.
 
 Examples with existing attested roots:
 
-- `i feri portaem` — I physically take/grasp the door.
-- `i feri portaem umande` — I take the door from a person's
+- `i prendi portaem` — I physically take/grasp the door.
+- `i prendi portaem umande` — I take the door from a person's
   physical location, with no ownership assertion.
 - `i portari portaem domad` — I carry the door toward a house.
 - `i portari portaem domde umanad` — I carry the door
@@ -575,3 +575,44 @@ Contrasts:
 
 This family is licensed **only for `memor`**; it does not
 ratify arbitrary non-verbal semantic-root phase morphology.
+
+
+### Ratified domain transfer: `fer` versus physical taking `prend` (2026-11-15)
+
+This decision **supersedes** the historical use of `fer` as physical
+acquisition. `prend` is now the specific physical taking/grasping verb
+and inherits the former `fer` physical patient and optional physical
+origin frames. `fer` is a more general **achieved transfer between
+domains** (physical, informational, or juridical). Neither is synonymous
+with `portar` physical carriage, `mov` movement, `traes` state
+change, nor `memor` mnemonic storage.
+
+**Ratified overt frame:**
+
+```text
+[AGENT] fer CONTENT-em [SOURCE-de] DEST-ad
+```
+
+- CONTENT is the transferred entity, which may be physical or abstract;
+  SOURCE is an optional provenance domain and DEST is an **obligatory
+  achieved destination domain**. Optional SOURCE precedes DEST.
+- `fer` entails that CONTENT has become present, available or attributed
+  at DEST; it does **not** entail physical motion, copying, destruction
+  of the original, retention by the source, transport by the agent, or
+  ownership transfer in all domains.
+- Domain semantics constrain the kind of availability or attribution.
+  For a right transferred in a juridical domain, legal validity requires
+  independent facts not certified by grammatical parsing alone.
+- Physical `prend X-em [SOURCE-de]` entails grasping/taking, but
+  neither an arrival destination nor carriage. `portar` entails the
+  carriage event, but its `DEST-ad` only specifies direction toward
+  the destination, not accomplished arrival.
+- `fer` phase derivatives `adfer/infer/defer/refer` retain **begin,
+  continue, cease, resume** the transfer event, not cognitive inference,
+  return to a former source, report, or deferred action. In particular
+  `infer` is already `in-` + `fer`; it is **not** a separate root
+  for inferential reasoning. `prend` likewise admits regular phase
+  `adprend/inprend/deprend/reprend` and associative `kunprend`.
+- This ratification does **not** create a new nominal case, compel
+  implicit copying in digital contexts, license full finite propositions
+  as CONTENT, or extend `fer` to untyped arbitrary case frames.
