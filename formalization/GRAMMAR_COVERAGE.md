@@ -190,7 +190,7 @@ The author has ratified **four distinct overt-object frames**:
 
 | Root | Typed AST valency | Subject role | Object `X-em` role | Additional selected cases |
 |---|---|---|---|---|
-| `fer` | `physical_acquisition` | taker | physically acquired entity | optional physical `SOURCE-de`, *not previous ownership* |
+| `prend` | `physical_acquisition` | taker | physically acquired entity | optional physical `SOURCE-de`, *not previous ownership* |
 | `portar` | `physical_transport` | carrier | cargo | optional `SOURCE-de`, `DEST-ad`; arrival **not** entailed |
 | `ten` | `maintained_constraint` | constraint maintainer | constrained entity | none intrinsic |
 | `kunten` | `spatial_containment` | non-necessarily-volitional container | physically enclosed entity | none intrinsic |
@@ -236,3 +236,11 @@ bare-verb valency rules. Other matrix verbs, arbitrary serviles, event
 coordination, embedded finite propositions and nested marker scopes are **not**
 covered. The nominal suffix counterparts `-da/-ad/-de`, the fused phase
 prefixes `ad-/de-`, and finite `potda` retain their existing readings.
+
+
+The 2026-11-15 `fer` semantic ratification adds an independently
+documented `domain_transfer` AST valency with mandatory object
+`X-em`, mandatory achieved `DEST-ad`, optional `SOURCE-de`
+(physical/informational/juridical domains). `prend` supersedes
+previous `fer` physical acquisition. Neither source erasure nor
+copying nor physical motion is entailed by `fer`.
