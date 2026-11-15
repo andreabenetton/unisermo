@@ -359,10 +359,10 @@ it does **not** infer abstract domain truth solely from word order.
 ## Physical action frames with existing cases (ratified 2026-11-13)
 
 The accusative `-em` marks the direct participant for
-`fer`, `portar`, `ten`, and `kunten`, but the
+`prend`, `portar`, `ten`, and `kunten`, but the
 **semantic role is verb-dependent**: acquired entity,
 cargo, held/controlled entity, or contents, respectively.
-In `fer X-em SOURCE-de`, ablative `-de` is the
+In `prend X-em SOURCE-de`, ablative `-de` is the
 *physical origin* of taking, not the object's owner
 or authorization source. In `portar X-em SOURCE-de DEST-ad`,
 ablative and allative locate transport origin and
@@ -378,3 +378,14 @@ agreement. Object omission is an open separate decision;
 the typed parser subset requires explicit `X-em`.
 See [derivation.md](derivation.md) and
 [LDR-0014](../docs/ldr/LDR-0014-physical-action-valency.md).
+
+
+### Transfer between domains (author ratification 2026-11-15)
+
+`fer X-em [SOURCE-de] DEST-ad` licenses a source and **required
+achieved destination**; the `-ad` relation differs from the mere
+physical direction conveyed by `portar`'s optional destination.
+No new case suffix or general unrestricted case valency is introduced.
+Original persistence, duplication and erasure are not entailed.
+`prend` now names physical acquisition with optional physical
+`SOURCE-de`; the retired use of `fer` for taking is historical.
