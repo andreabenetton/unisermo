@@ -104,7 +104,7 @@ class VerifiedLexicalValencyTests(unittest.TestCase):
                 self.assertIsNone(evidence["family"])
         self.assertEqual(self.u.valency_evidence("sap")["family"], "knowledge")
         self.assertEqual(self.u.valency_evidence("adsap")["status"], "documented")
-        self.assertEqual(self.u.parse_sentence("feri domem")["object"]["lemma"],
+        self.assertEqual(self.u.parse_sentence("prendi domem")["object"]["lemma"],
                          "dom")
         self.assertEqual(self.u.parse_sentence("vidi domem")["object"]["lemma"],
                          "dom")
@@ -112,7 +112,7 @@ class VerifiedLexicalValencyTests(unittest.TestCase):
                          "locative")
         self.assertEqual(self.u.parse_sentence("faki kun uman")["complements"][0]["relator"],
                          "kun")
-        for text in ("feri umanad", "diki umanad", "portari domde",
+        for text in ("prendi umanad", "diki umanad", "portari domde",
                      "vidi umanad", "faki umanem umande"):
             with self.subTest(text=text), self.assertRaises(ValueError):
                 self.u.parse_sentence(text)
