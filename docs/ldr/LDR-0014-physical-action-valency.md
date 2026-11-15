@@ -12,7 +12,7 @@ supersedes: none
 ## Context and problem
 
 The 2026-10-25 lexicon already defined four non-interchangeable
-physical-action roots: `prend` physically takes/grasp (replacing formerly ratified `fer` on 2026-11-15); `portar`
+physical-action roots: `fer` physically takes/grasp; `portar`
 carries/transports; `ten` maintains a physical/control constraint
 over time; `kunten` is a **lexicalized** spatial containment verb.
 These roots had no complete ratified argument-frame inventory.
@@ -29,13 +29,13 @@ recent approved PRs on 2026-11-13.
 
 | Verb | Canonical overt frame | Argument roles |
 |---|---|---|
-| `prend` | `Y fer X-em [SOURCE-de]` | Y initiator/taker, X physically acquired/grasped, SOURCE physical origin |
+| `fer` | `Y fer X-em [SOURCE-de]` | Y initiator/taker, X physically acquired/grasped, SOURCE physical origin |
 | `portar` | `Y portar X-em [SOURCE-de] [DEST-ad]` | Y carrier, X transported cargo, SOURCE spatial origin, DEST toward-location |
 | `ten` | `Y ten X-em` | Y constraint maintainer, X held or controlled entity |
 | `kunten` | `CONTAINER kunten CONTENTS-em` | subject spatial container; object physically enclosed contents |
 
 `-em` has one grammatical accusative function, but **four
-verb-dependent thematic roles**. `SOURCE-de` on `prend`
+verb-dependent thematic roles**. `SOURCE-de` on `fer`
 denotes a physical source, **not necessarily a previous owner,
 permitting authority or holder**. `portar` denotes an actual
 carrying/transport event, with an optional direction marked
@@ -47,8 +47,8 @@ its subject need not be volitional or animate.
 
 The canonical citation examples are:
 
-- `i prendi portaem`: I physically take/grasp the door
-- `i prendi portaem umande`: I take the door from a person's
+- `i feri portaem`: I physically take/grasp the door
+- `i feri portaem umande`: I take the door from a person's
   physical vicinity, without asserting ownership
 - `i portari portaem domad`: I carry the door toward a house
 - `i portari portaem domde umanad`: I carry the door
@@ -149,13 +149,3 @@ unrestricted argument order and broader composition remain open.
 - `research/grammar/confirmed_decisions.json`
 - `formalization/data/valency_frames.json`
 - `tests/test_physical_action_valency.py`
-
-
-## Supersession of original fer physical-taking sense (2026-11-15)
-
-The author explicitly ratified `prend` for the former physical-grasp
-role of `fer`. The original 2026-11-13 decision has been preserved
-for traceability, but its applicable physical-action lemma is `prend`.
-The new `fer` is separately typed as achieved domain transfer in
-`language/derivation.md`; it does not inherit this LDR's physical
-acquisition role or its optional-destination restriction.
